@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { FaChevronRight, FaUserFriends, FaCog, FaCheck, FaCar } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import { transportation } from '../../data/transportation';
 import TransportationForm from '../../components/booking/TransportationForm';
 
@@ -26,6 +27,7 @@ const TransportationDetails = () => {
             src={vehicle.heroImage || vehicle.image}
             alt={`${t(`data.${vehicle.name}`, vehicle.name)} Hero`} 
             className="w-full h-full object-cover object-center"
+            fetchpriority="high"
           />
           <div 
             className="absolute inset-0" 
@@ -79,7 +81,7 @@ const TransportationDetails = () => {
                 style={{ borderRadius: '16px', boxShadow: '0 0 15px rgba(201,162,39,0.4)' }}
               >
                 <img 
-                  src={vehicle.image} 
+                  src={vehicle.heroImage || vehicle.image} 
                   alt={`${vehicle.name} Interior`} 
                   className="w-full h-full object-cover"
                   style={{ borderRadius: '16px' }}

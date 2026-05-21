@@ -36,7 +36,7 @@ const Blogs = () => {
               <motion.div className="bg-ivory-50 rounded-2xl overflow-hidden shadow-card group h-full flex flex-col" variants={cardHover} initial="rest" whileHover="hover" animate="rest">
                 <Link to={`/blogs/${blog.slug}`} className="relative block" style={{ height: '220px', borderRadius: '12px 12px 0 0', overflow: 'hidden' }}>
                   <div className="absolute top-4 left-4 z-10 bg-gold-500 text-obsidian-900 text-caption uppercase px-3 py-1 rounded-full shadow-md">{t(`blogs.cat.${blog.category}`, blog.category)}</div>
-                  <img src={blog.img.includes('?') ? blog.img : `${blog.img}?auto=compress&cs=tinysrgb&w=800&fit=crop&crop=center`} alt={t(`blogs.${blog.title}`, blog.title)} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" style={{ borderRadius: '12px 12px 0 0' }} />
+                  <img src={blog.img.includes('?') ? blog.img : blog.img} alt={t(`blogs.${blog.title}`, blog.title)} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" style={{ borderRadius: '12px 12px 0 0' }} />
                 </Link>
                 <div className="p-8 flex flex-col flex-grow">
                   <div className="flex justify-between items-center text-caption text-obsidian-300 mb-3">

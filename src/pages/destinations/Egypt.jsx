@@ -22,7 +22,7 @@ const Egypt = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/262780/pexels-photo-262780.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop"
+            src="/imgs/egypt/pharaohs & pyramid.jpg"
             alt="Egypt Pyramids Hero"
             className="w-full h-full object-cover"
             loading="lazy"

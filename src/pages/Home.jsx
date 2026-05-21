@@ -16,13 +16,13 @@ const destinationsData = [
     id: 'egypt',
     name: 'Egypt',
     desc: 'The Land of Pharaohs',
-    image: 'https://images.pexels.com/photos/262780/pexels-photo-262780.jpeg?auto=compress&cs=tinysrgb&w=800&fit=crop'
+    image: '/imgs/egypt/pharaohs & pyramid.jpg'
   },
   {
     id: 'jordan',
     name: 'Jordan',
     desc: 'The Hashemite Kingdom',
-    image: 'https://images.pexels.com/photos/1658967/pexels-photo-1658967.jpeg?auto=compress&cs=tinysrgb&w=800&fit=crop'
+    image: 'https://images.unsplash.com/photo-1580834341580-8c17a3a630ca?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'turkey',
@@ -118,10 +118,10 @@ const Home = () => {
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.pexels.com/photos/2387877/pexels-photo-2387877.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop" 
+            src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=1600&q=80" 
             alt="Luxury Travel Hero" 
             className="w-full h-full object-cover"
-            loading="lazy"
+            fetchpriority="high"
           />
           <div className="absolute inset-0 bg-obsidian-900/60 bg-gradient-to-t from-obsidian-900 via-transparent to-obsidian-900/40"></div>
         </div>
@@ -290,7 +290,7 @@ const Home = () => {
                 whileHover={{ y: -6, boxShadow: "0 0 32px rgba(201,162,39,0.22)", transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } }}
               >
                 <img 
-                  src={`${tData.images[0]}?auto=compress&cs=tinysrgb&w=800&fit=crop&crop=center`} 
+                  src={tData.images[0]}
                   alt={tData.title} 
                   className="w-full h-full object-cover cinematic-transition group-hover:scale-[1.06]"
                   loading="lazy" 
@@ -349,7 +349,7 @@ const Home = () => {
                   <motion.div key={hotel.id} whileHover={{ y: -6, boxShadow: "0 0 32px rgba(201,162,39,0.22)", transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } }} className="flex flex-col sm:flex-row bg-ivory-50 rounded-2xl overflow-hidden shadow-card hover:shadow-lg transition-shadow border border-obsidian-900/5 group">
                     <div className="w-full sm:w-2/5 h-40 sm:h-auto relative overflow-hidden">
                       <div className="absolute top-3 left-3 z-10 bg-gold-500 text-obsidian-900 text-[10px] uppercase font-bold px-2 py-1 rounded shadow-md">{t(`data.${hotel.location}`, hotel.location) || hotel.location}</div>
-                      <img src={`${hotel.images[0]}?auto=compress&cs=tinysrgb&w=800&fit=crop&crop=center`} alt={hotel.title} className="w-full h-full object-cover cinematic-transition group-hover:scale-[1.06]" loading="lazy" />
+                      <img src={hotel.images[0]} alt={hotel.title} className="w-full h-full object-cover cinematic-transition group-hover:scale-[1.06]" loading="lazy" />
                     </div>
                     <div className="w-full sm:w-3/5 p-6 flex flex-col justify-between">
                       <div>
@@ -379,7 +379,7 @@ const Home = () => {
                   <motion.div key={safari.id} whileHover={{ y: -6, boxShadow: "0 0 32px rgba(201,162,39,0.22)", transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } }} className="flex flex-col sm:flex-row bg-ivory-50 rounded-2xl overflow-hidden shadow-card hover:shadow-lg transition-shadow border border-obsidian-900/5 group">
                     <div className="w-full sm:w-2/5 h-40 sm:h-auto relative overflow-hidden">
                       <div className="absolute top-3 left-3 z-10 bg-gold-500 text-obsidian-900 text-[10px] uppercase font-bold px-2 py-1 rounded shadow-md">{t(`data.${safari.location}`, safari.location) || safari.location}</div>
-                      <img src={`${safari.images[0]}?auto=compress&cs=tinysrgb&w=800&fit=crop&crop=center`} alt={safari.title} className="w-full h-full object-cover cinematic-transition group-hover:scale-[1.06]" loading="lazy" />
+                      <img src={safari.images[0]} alt={safari.title} className="w-full h-full object-cover cinematic-transition group-hover:scale-[1.06]" loading="lazy" />
                     </div>
                     <div className="w-full sm:w-3/5 p-6 flex flex-col justify-between">
                       <div>
@@ -483,7 +483,7 @@ const Home = () => {
                   className="flex-shrink-0 flex flex-col rounded-[16px] overflow-hidden group relative w-[280px] h-[220px] md:h-[380px] transition-all duration-[350ms] ease-out hover:scale-[1.08] hover:-translate-y-[12px] hover:shadow-[0_12px_40px_rgba(201,162,39,0.35)] hover:z-10"
                 >
                   <img 
-                    src={vehicle.image} 
+                    src={vehicle.heroImage || vehicle.image} 
                     alt={vehicle.name} 
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"

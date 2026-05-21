@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaCheckCircle, FaTimes, FaStar, FaMapMarkerAlt, FaTimesCircle } from 'react-icons/fa';
 import Button from '../../components/ui/Button';
@@ -9,6 +10,7 @@ import { services } from '../../data/services';
 import InquiryForm from '../../components/booking/InquiryForm';
 
 const ServiceDetails = () => {
+  const { t } = useTranslation();
   const { category, slug } = useParams();
   const service = services.find((s) => s.category === category && s.slug === slug);
   const [activeImage, setActiveImage] = useState(null);
@@ -39,7 +41,7 @@ const ServiceDetails = () => {
       <section className="relative h-[65vh] flex items-end justify-center overflow-hidden pb-16">
         <div className="absolute inset-0 z-0">
           <img
-            src={`${service.images[0]}?w=1600&q=90&fit=crop`}
+            src={service.images[0]}
             alt={t(`data.${service.title}`, service.title)}
             className="w-full h-full object-cover"
             loading="lazy"
@@ -144,7 +146,7 @@ const ServiceDetails = () => {
                     className={`rounded-xl overflow-hidden cursor-pointer group relative ${idx === 0 ? 'col-span-3 h-80' : 'col-span-1 h-40'}`}
                     onClick={() => setActiveImage(img)}
                   >
-                    <img src={`${img}?w=400&q=75&fit=crop`} alt={`${service.title} ${idx + 1}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                    <img src={img} alt={`${service.title} ${idx + 1}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300"></div>
                   </div>
                 ))}
@@ -188,7 +190,7 @@ const ServiceDetails = () => {
                 <div key={relService.id} className="bg-obsidian-50 rounded-2xl overflow-hidden group h-full flex flex-col shadow-sm border border-obsidian-900/5 hover:shadow-card transition-all">
                   <div className="relative h-60 overflow-hidden">
                     <div className="absolute top-4 left-4 z-10 bg-gold-500 text-obsidian-900 text-caption uppercase px-3 py-1 rounded-full">{t(`data.${relService.location}`, relService.location)}</div>
-                    <img src={`${relService.images[0]}?auto=compress&cs=tinysrgb&w=800&fit=crop&crop=center`} alt={t(`data.${relService.title}`, relService.title)} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                    <img src={relService.images[0]} alt={t(`data.${relService.title}`, relService.title)} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                   </div>
                   <div className="p-8 flex flex-col flex-grow">
                     <h3 className="text-display-md text-obsidian-900 mb-3 text-xl line-clamp-1">{t(`data.${relService.title}`, relService.title)}</h3>
@@ -237,7 +239,7 @@ const ServiceDetails = () => {
             <button className="absolute top-6 right-6 text-ivory-50 hover:text-gold-500 z-50">
               <FaTimes size={32} />
             </button>
-            <img src={`${activeImage}?w=1600&q=90&fit=crop`} className="max-w-full max-h-[90vh] object-contain rounded-lg" alt="Gallery preview" />
+            <img src={activeImage} className="max-w-full max-h-[90vh] object-contain rounded-lg" alt="Gallery preview" />
           </motion.div>
         )}
       </AnimatePresence>

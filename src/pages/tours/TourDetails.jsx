@@ -360,7 +360,7 @@ const TourDetails = () => {
             <div key={tData.id} className="min-w-[320px] md:min-w-[400px] snap-center">
               <Link to={`/tours/${tData.slug}`} className="block h-full group">
                 <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-card">
-                  <img src={`${tData.images[0]}?auto=compress&cs=tinysrgb&w=800&fit=crop&crop=center`} alt={tData.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+                  <img src={tData.images[0]} alt={tData.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-obsidian-900/90 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6">
                     <h3 className="text-display-md text-ivory-50 mb-2 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>{t(`data.${tData.title}`, tData.title)}</h3>

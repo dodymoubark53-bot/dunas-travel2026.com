@@ -12,13 +12,13 @@ const destinationsData = [
     id: 'egypt',
     name: 'Egypt',
     tag: 'Cradle of Civilization',
-    image: 'https://images.pexels.com/photos/262780/pexels-photo-262780.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop'
+    image: '/imgs/egypt/pharaohs & pyramid.jpg'
   },
   {
     id: 'jordan',
     name: 'Jordan',
     tag: 'The Hashemite Kingdom',
-    image: 'https://images.pexels.com/photos/1658967/pexels-photo-1658967.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop'
+    image: 'https://images.unsplash.com/photo-1580834341580-8c17a3a630ca?auto=format&fit=crop&w=1600&q=80'
   },
   {
     id: 'turkey',

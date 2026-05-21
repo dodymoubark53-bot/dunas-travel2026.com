@@ -21,7 +21,7 @@ const Jordan = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/1658967/pexels-photo-1658967.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop"
+            src="https://images.unsplash.com/photo-1580834341580-8c17a3a630ca?auto=format&fit=crop&w=1600&q=80"
             alt="Jordan Petra Hero"
             className="w-full h-full object-cover"
             loading="lazy"

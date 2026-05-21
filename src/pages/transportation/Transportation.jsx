@@ -95,7 +95,7 @@ const Transportation = () => {
             >
               <Link to={`/transportation/${vehicle.id}`} className="block relative h-64 overflow-hidden">
                 <img 
-                  src={vehicle.image} 
+                  src={vehicle.heroImage || vehicle.image} 
                   alt={t(`data.${vehicle.name}`, vehicle.name)} 
                   className="w-full h-full object-cover cinematic-transition group-hover:scale-[1.06]"
                 />

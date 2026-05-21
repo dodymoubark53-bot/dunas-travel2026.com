@@ -181,7 +181,7 @@ const Services = () => {
               >
                 <div className="relative h-60 overflow-hidden">
                   <div className="absolute top-4 left-4 z-10 bg-gold-500 text-obsidian-900 text-caption uppercase px-3 py-1 rounded-full shadow-md">{t(`data.${item.location}`, item.location)}</div>
-                  <img src={`${item.images[0]}?auto=compress&cs=tinysrgb&w=800&fit=crop&crop=center`} alt={t(`data.${item.title}`, item.title)} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src={item.images[0]} alt={t(`data.${item.title}`, item.title)} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
                 <div className="p-8 flex flex-col flex-grow">
                   <div className="flex justify-between items-center mb-3">
@@ -224,7 +224,7 @@ const Services = () => {
                 >
                   <div className="relative h-60 overflow-hidden">
                     <div className="absolute top-4 left-4 z-10 bg-gold-500 text-obsidian-900 text-caption uppercase px-3 py-1 rounded-full shadow-md">{t(`transportation.cat.${item.category}`, item.category)}</div>
-                    <img src={`${item.image}?auto=compress&cs=tinysrgb&w=800&fit=crop&crop=center`} alt={t(`data.${item.name}`, item.name)} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                    <img src={item.heroImage || item.image} alt={t(`data.${item.name}`, item.name)} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                   </div>
                   <div className="p-8 flex flex-col flex-grow">
                     <div className="flex justify-between items-center mb-3">

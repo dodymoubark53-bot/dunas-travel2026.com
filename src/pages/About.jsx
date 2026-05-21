@@ -15,7 +15,7 @@ const About = () => {
       </Helmet>
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="https://images.pexels.com/photos/2275955/pexels-photo-2275955.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop" alt="About Us Hero" className="w-full h-full object-cover" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?auto=format&fit=crop&w=1600&q=80" alt="About Us Hero" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-obsidian-900/70"></div>
         </div>
         <motion.div className="relative z-10 text-center" variants={staggerContainer} initial="hidden" animate="visible">

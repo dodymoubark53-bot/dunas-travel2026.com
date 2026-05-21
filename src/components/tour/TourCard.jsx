@@ -36,7 +36,7 @@ const TourCard = ({ tour }) => {
           {t(`data.${tour.type}`, tour.type)} · {t(`data.${tour.duration.split('/')[0].trim()}`, tour.duration.split('/')[0].trim())}
         </div>
         <img
-          src={`${tour.images[0]}?auto=compress&cs=tinysrgb&w=800&fit=crop&crop=center`}
+          src={tour.images[0]}
           alt={`${tour.title} in ${tour.destination}`}
           className="w-full h-full object-cover transform scale-100 group-hover:scale-[1.06] cinematic-transition"
           loading="lazy"
