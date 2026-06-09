@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaFacebook, FaInstagram, FaPhone, FaCommentDots, FaTimes, FaEnvelope } from 'react-icons/fa';
+import { FaFacebook, FaFacebookMessenger, FaPhone, FaCommentDots, FaTimes, FaEnvelope } from 'react-icons/fa';
 
 const FloatingContact = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const socials = [
-    { icon: FaFacebook,  href: 'https://facebook.com/YOUR_PAGE',    label: 'Facebook' },
-    { icon: FaInstagram, href: 'https://instagram.com/YOUR_PROFILE', label: 'Instagram' },
-    { icon: FaPhone,     href: 'tel:+201004146843',                  label: 'Call us' },
-    { icon: FaEnvelope,  href: 'mailto:dinahefny2000@gmail.com',     label: 'Email' },
+    { icon: FaFacebook, href: 'https://www.facebook.com/share/1BnRWtoUdo/', label: 'Facebook' },
+    { icon: FaFacebookMessenger, href: 'https://m.me/Dunas-Travel', label: 'Messenger' },
+    { icon: FaPhone, href: 'tel:+20233746643', label: 'Call us' },
+    { icon: FaEnvelope, href: 'mailto:info@dunas-travel.com', label: 'Email' },
   ];
 
   // Animation variants for the child items to fan out radially
