@@ -374,7 +374,7 @@ export const tours = [
     "price": 1890,
     "rating": 4.8,
     "reviewCount": 402,
-    "images": ["/images/tours/programma-classico.jpg"],
+    "images": ["/imgs/italy/Classic Program.jpg"],
     "highlights": [
       "Piramidi di Giza e Sfinge",
       "Crociera sul Nilo 5 stelle",
@@ -419,7 +419,7 @@ export const tours = [
     "price": 2190,
     "rating": 4.9,
     "reviewCount": 334,
-    "images": ["/images/tours/tutto-compreso.jpg"],
+    "images": ["/imgs/italy/All-Inclusive Program.webp"],
     "highlights": [
       "Tutte le mance generali incluse",
       "4 cene speciali in ristoranti locali incluse",
@@ -464,7 +464,7 @@ export const tours = [
     "price": 2890,
     "rating": 4.8,
     "reviewCount": 267,
-    "images": ["/images/tours/nilo-sharm.jpg"],
+    "images": ["/imgs/italy/Nile and Red Sea with Sharm El Sheikh.jpg"],
     "highlights": [
       "3 notti All-Inclusive a Sharm El Sheikh",
       "Mergulho e Snorkeling sulla barriera corallina",
@@ -512,7 +512,7 @@ export const tours = [
     "price": 2790,
     "rating": 4.7,
     "reviewCount": 319,
-    "images": ["/images/tours/nilo-hurghada.jpg"],
+    "images": ["/imgs/italy/Nile and Red Sea with Hurghada.jpg"],
     "highlights": [
       "Soggiorno All-Inclusive ad Hurghada",
       "Trasferimento panoramico attraverso il deserto",
@@ -560,7 +560,7 @@ export const tours = [
     "price": 2590,
     "rating": 4.6,
     "reviewCount": 182,
-    "images": ["/images/tours/hurghada-classico.jpg"],
+    "images": ["/imgs/italy/Nile and Red Sea with Hurghada — Classic Version.jpg"],
     "highlights": [
       "Massima flessibilità con escursioni opzionali",
       "3 Notti All-Inclusive ad Hurghada",
