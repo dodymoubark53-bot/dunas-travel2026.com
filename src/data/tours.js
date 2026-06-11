@@ -97,7 +97,7 @@ export const tours = [
     "price": 2190,
     "rating": 4.9,
     "reviewCount": 445,
-    "images": ["/imgs/Brazil/Egito Clássico Cairo + Cruzeiro no Nilo.png"],
+    "images": ["/imgs/Brazil/egito-classico-cairo-cruzeiro-no-nilo.jpg"],
     "highlights": [
       "Cruzeiro de 5 estrelas pelo Rio Nilo",
       "Vale dos Reis e Templos de Luxor",
@@ -141,7 +141,7 @@ export const tours = [
     "price": 2490,
     "rating": 4.8,
     "reviewCount": 367,
-    "images": ["/imgs/Brazil/Cairo with Cruise + Sharm El Sheikh.jpg"],
+    "images": ["/imgs/Brazil/cairo-with-cruise-sharm-el-sheikh.jpg"],
     "highlights": [
       "Roteiro invertido Luxor a Aswan",
       "Necrópole de Sakkara Completa",
@@ -186,7 +186,7 @@ export const tours = [
     "price": 2790,
     "rating": 4.7,
     "reviewCount": 289,
-    "images": ["/imgs/Brazil/Cairo + Cruzeiro + Mar Vermelho.jpg"],
+    "images": ["/imgs/Brazil/cairo-cruzeiro-mar-vermelho.jpg"],
     "highlights": [
       "Hospedagem All-Inclusive em Hurghada",
       "Cruzeiro no Nilo completo",
@@ -232,7 +232,7 @@ export const tours = [
     "price": 3090,
     "rating": 4.8,
     "reviewCount": 214,
-    "images": ["/imgs/Brazil/Cairo with Cruise + Sharm El Sheikh.png"],
+    "images": ["/imgs/Brazil/cairo-with-cruise-sharm-el-sheikh-detail.jpg"],
     "highlights": [
       "Paraíso subaquático de Sharm El Sheikh",
       "Roteiro estendido de 11 dias completos",
