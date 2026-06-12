@@ -391,10 +391,10 @@ const Home = () => {
                   ></div>
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
                     <h3 className="text-display-lg text-ivory-50 mb-2">
-                      {t(`data.${dest.name}`, dest.name)}
+                      {t(`nav.${dest.id === 'holy-land' ? 'holyland' : dest.id}`, dest.name)}
                     </h3>
                     <p className="text-body-lg text-gold-500 font-medium mb-4">
-                      {t(`data.${dest.desc}`, dest.desc)}
+                      {t(`dest.${dest.id === 'holy-land' ? 'holyland' : dest.id}.subtitle`, t(`data.${dest.desc}`, dest.desc))}
                     </p>
                     <span className="text-caption text-ivory-300 uppercase tracking-wider bg-obsidian-900/50 backdrop-blur-sm px-4 py-2 rounded-full border border-ivory-50/10">
                       {tourCount} {t("home.toursAvailable")}
@@ -417,9 +417,8 @@ const Home = () => {
                 <div className="pt-12">
                   <h3 className="text-display-md text-ivory-50 mb-8 text-center capitalize">
                     {t(
-                      `data.${activeDestination.charAt(0).toUpperCase() + activeDestination.slice(1)}`,
-                      activeDestination.charAt(0).toUpperCase() +
-                      activeDestination.slice(1),
+                      `nav.${activeDestination === 'holy-land' ? 'holyland' : activeDestination}`,
+                      activeDestination.charAt(0).toUpperCase() + activeDestination.slice(1)
                     )}{" "}
                     {t("nav.tours")}
                   </h3>
@@ -472,7 +471,7 @@ const Home = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian-900/90 via-obsidian-900/20 to-transparent"></div>
 
                 <div className="absolute top-4 left-4 bg-gold-500/90 backdrop-blur-sm text-obsidian-900 text-caption font-bold px-3 py-1 rounded shadow-md uppercase">
-                  {t(`data.${tData.destination}`, tData.destination)}
+                  {t(`nav.${tData.destination === 'holy-land' ? 'holyland' : tData.destination}`, tData.destination)}
                 </div>
 
                 <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col justify-end h-full">

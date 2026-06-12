@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaFacebook, FaFacebookMessenger, FaPhone, FaCommentDots, FaTimes, FaEnvelope } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaPhone, FaCommentDots, FaTimes, FaEnvelope } from 'react-icons/fa';
 
 const FloatingContact = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const socials = [
     { icon: FaFacebook, href: 'https://www.facebook.com/share/1BnRWtoUdo/', label: 'Facebook' },
-    { icon: FaFacebookMessenger, href: 'https://m.me/Dunas-Travel', label: 'Messenger' },
+    { icon: FaInstagram, href: 'https://www.instagram.com/dunas_travel?igsh=bWkyb2FhY2hoNnNo', label: 'Instagram' },
     { icon: FaPhone, href: 'tel:+20233746643', label: 'Call us' },
     { icon: FaEnvelope, href: 'mailto:info@dunas-travel.com', label: 'Email' },
   ];

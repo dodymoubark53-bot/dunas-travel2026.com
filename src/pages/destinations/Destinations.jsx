@@ -89,11 +89,11 @@ const Destinations = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian-900/90 via-obsidian-900/30 to-transparent flex flex-col justify-end p-8 md:p-12">
                   <span className="text-gold-500 uppercase tracking-widest text-caption mb-2">
-                    {t(`data.${dest.tag}`, dest.tag)}
+                    {t(`dest.${dest.id}.subtitle`, t(`data.${dest.tag}`, dest.tag))}
                   </span>
                   <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                     <h2 className="text-display-xl text-ivory-50 m-0 leading-none">
-                      {t(`data.${dest.name}`, dest.name)}
+                      {t(`nav.${dest.id}`, dest.name)}
                     </h2>
                     <Link to={`/destinations/${dest.id}`} className="text-ivory-300 hover:text-gold-500 transition-colors uppercase tracking-widest text-sm font-semibold flex items-center gap-2">
                       {t('destinations.viewGuide', 'View Destination Guide')}

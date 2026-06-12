@@ -1386,12 +1386,16 @@
       "title": "Brasil"
     },
     "italy": {
-      "gridDesc": "Esplora la nostra selezione esclusiva di itinerari di lusso progettati per offrire un'esperienza coinvolgente e premium delle più grandi meraviglie d'Italia.",
-      "gridTitle": "I Nostri Itinerari in Italia",
-      "seoDesc": "Scopri l'Italia. Dalla splendida Costiera Amalfitana ai monumenti storici di Roma e Firenze, imbarcati in un viaggio indimenticabile di lusso.",
-      "seoTitle": "Tour e Vacanze di Lusso in Italia | Viaggi di Lusso",
+      "gridDesc": "Explore nossa seleção exclusiva de itinerários de luxo projetados para oferecer uma experiência premium e imersiva das maiores maravilhas da Itália.",
+      "gridTitle": "Nossos Roteiros na Itália",
+      "seoDesc": "Descubra a Itália. Da bela Costa Amalfitana aos monumentos históricos de Roma e Florença, embarque em uma viagem de luxo inesquecível.",
+      "seoTitle": "Passeios e Férias de Luxo na Itália | Dunas Travel",
       "subtitle": "La Dolce Vita",
-      "title": "Scopri l'Italia"
+      "title": "Descubra a Itália"
+    },
+    "spain": {
+      "seoDesc": "Explore viagens de luxo na Espanha. Roteiros personalizados em breve.",
+      "seoTitle": "Passeios e férias de luxo na Espanha | Dunas Travel"
     },
     "egypt": {
       "title": "Egito",
@@ -1442,11 +1446,6 @@
       "seoDesc": "Explore viagens de luxo à Terra Santa. Roteiros personalizados em breve."
     }
   },
-  "spain": {
-    "seoDesc": "Explore luxury journeys in Spain. Custom itineraries coming soon.",
-    "seoTitle": "Passeios e férias de luxo na Espanha | Dunas Viagens"
-  }
-},
 "destinations": {
   "heading": "Nossos destinos",
   "metaDesc": "Explore nossos passeios de luxo escolhidos a dedo pela Itália, Espanha e Brasil.",

@@ -1363,12 +1363,24 @@
   },
   "dest": {
     "brazil": {
-      "brief": "Un vibrante mix di bellezza naturale, ricca cultura e calda ospitalità. Il Brasile offre esperienze indimenticabili, dall'energia contagiosa di Rio de Janeiro e Salvador alla verde immensità dell'Amazzonia. Ogni momento è pianificato per offrire il massimo comfort, lusso e vera immersione culturale.",
+      "brief": "Un vibrante mix di bellezza naturale, ricca cultura e calda ospitalità. Il Brasile offre esperienze indimenticabili, dall'energia contagiosa di Rio di Janeiro e Salvador alla verde immensità dell'Amazzonia. Ogni momento è pianificato per offrire il massimo comfort, lusso e vera immersione culturale.",
       "desc": "Dal fascino storico di Rio de Janeiro alla bellezza naturale dell'Amazzonia, intraprendi un viaggio di lusso indimenticabile nel cuore del Brasile.",
       "seoDesc": "Scopri il Brasile con stile. Dalle splendide spiagge di Rio de Janeiro al cuore dell'Amazzonia, intraprendi un viaggio indimenticabile nel lusso.",
-      "seoTitle": "Viaggi di lusso e itinerari in Brasile | Viaggio Dunas",
+      "seoTitle": "Viaggi di lusso e itinerari in Brasile | Dunas Travel",
       "subtitle": "Terra del sole e del samba",
       "title": "Brasile"
+    },
+    "italy": {
+      "gridDesc": "Esplora la nostra selezione esclusiva di itinerari di lusso progettati per offrire un'esperienza premium e coinvolgente delle più grandi meraviglie d'Italia.",
+      "gridTitle": "I Nostri Itinerari in Italia",
+      "seoDesc": "Scopri l'Italia. Dalla splendida Costiera Amalfitana ai monumenti storici di Roma e Firenze, imbarcati in un viaggio indimenticabile di lusso.",
+      "seoTitle": "Tour e Vacanze di Lusso in Italia | Dunas Travel",
+      "subtitle": "La Dolce Vita",
+      "title": "Scopri l'Italia"
+    },
+    "spain": {
+      "seoDesc": "Esplora viaggi di lusso in Spagna. Itinerari personalizzati in arrivo.",
+      "seoTitle": "Tour e vacanze di lusso in Spagna | Dunas Travel"
     },
     "egypt": {
       "title": "Egitto",
@@ -1418,18 +1430,6 @@
       "seoTitle": "Tour di lusso in Terra Santa | Dunas Travel",
       "seoDesc": "Scopri viaggi di lusso in Terra Santa. Itinerari personalizzati in arrivo."
     }
-  },
-  "italy": {
-    "gridDesc": "Esplora la nostra selezione esclusiva dell'itinerario degli ultimi piani per offrire un'esperienza premium e coinvolgente delle più grandi meraviglie italiane.",
-    "gridTitle": "I Nostri Itinerari in Italia",
-    "seoDesc": "Scopri l'Italia. Dalla splendida Costiera Amalfitana ai monumenti storici di Roma e Firenze, imbarcati in un viaggio indimenticabile di lusso.",
-    "seoTitle": "Tour e Vacanze di Lusso in Italia | Viaggi di Lusso",
-    "subtitle": "La Dolce Vita",
-    "title": "Scopri l'Italia"
-  },
-  "spain": {
-    "seoDesc": "Esplora viaggi di lusso in Spagna. Itinerari personalizzati in arrivo.",
-    "seoTitle": "Tour e vacanze di lusso in Spagna | Viaggio Dunas"
   },
   "destinations": {
     "heading": "Le nostre destinazioni",
