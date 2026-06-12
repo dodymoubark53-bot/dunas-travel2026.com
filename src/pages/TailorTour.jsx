@@ -20,7 +20,11 @@ const TailorTour = () => {
   const [nationality, setNationality] = useState('');
   const [phone, setPhone] = useState('');
   const [travelDate, setTravelDate] = useState('');
+  const [dateError, setDateError] = useState(false);
   const [budget, setBudget] = useState('');
+
+  // Today's date logic
+  const todayStr = new Date().toISOString().split('T')[0];
 
   // Traveler counts
   const [adults, setAdults] = useState(1);
@@ -30,6 +34,20 @@ const TailorTour = () => {
   // Dynamic names
   const [passengerNames, setPassengerNames] = useState(['']); // initially 1 adult
   const [specialRequests, setSpecialRequests] = useState('');
+
+  // Scroll to top utility for Safari/iOS and generic cross-browser support
+  const scrollToTop = () => {
+    try {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    } catch (err) {
+      window.scrollTo(0, 0);
+    }
+  };
+
+  // Scroll to top on page mount
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
   // Update dynamic passenger names array size
   useEffect(() => {
@@ -80,10 +98,27 @@ const TailorTour = () => {
   const handleBackStep = () => {
     setAnimationState('flying-backward');
     setStep(1);
+    scrollToTop();
+  };
+
+  const handleDateChange = (e) => {
+    const val = e.target.value;
+    setTravelDate(val);
+    if (val && val < todayStr) {
+      setDateError(true);
+    } else {
+      setDateError(false);
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Prevent form submission if dates are in the past
+    if (travelDate && travelDate < todayStr) {
+      setDateError(true);
+      return;
+    }
+
     alert(t('tailor.successAlert', 'Your request has been submitted successfully! We will contact you soon.'));
     // Reset form
     setSelectedDestinations([]);
@@ -92,6 +127,7 @@ const TailorTour = () => {
     setNationality('');
     setPhone('');
     setTravelDate('');
+    setDateError(false);
     setBudget('');
     setAdults(1);
     setChildren(0);
@@ -100,6 +136,7 @@ const TailorTour = () => {
     setSpecialRequests('');
     setAnimationState('parked-1');
     setStep(1);
+    scrollToTop();
   };
 
   // Select plane-icon class dynamically depending on step & language direction
@@ -359,20 +396,19 @@ const TailorTour = () => {
           display: flex;
           justify-content: center;
           padding: 20px 0;
+          width: 100%;
         }
 
-        /* 3D floating submit button */
+        /* Responsive 3D floating submit button */
         .btn-3d-glow {
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 18px 56px;
           border: 3px solid var(--color-gold, #f5a623);
           border-radius: 16px;
           background-color: var(--color-primary, #1e3a8a);
           color: white;
           font-family: var(--font-body, 'Montserrat', sans-serif);
-          font-size: 22px;
           font-weight: 800;
           text-transform: uppercase;
           letter-spacing: 2px;
@@ -383,6 +419,29 @@ const TailorTour = () => {
           transform: rotateX(12deg);
           transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
           animation: float3D 1.8s ease-in-out infinite alternate;
+
+          /* Mobile (< 768px) default layout */
+          width: 100%;
+          font-size: 16px;
+          padding: 14px 24px;
+        }
+
+        /* Tablet (768px - 1024px) layout */
+        @media (min-width: 768px) and (max-width: 1024px) {
+          .btn-3d-glow {
+            width: auto;
+            font-size: 18px;
+            padding: 16px 40px;
+          }
+        }
+
+        /* Desktop (> 1024px) layout */
+        @media (min-width: 1025px) {
+          .btn-3d-glow {
+            width: auto;
+            font-size: 22px;
+            padding: 18px 56px;
+          }
         }
 
         @keyframes float3D {
@@ -729,9 +788,15 @@ const TailorTour = () => {
                         type="date"
                         required
                         value={travelDate}
-                        onChange={(e) => setTravelDate(e.target.value)}
+                        min={todayStr}
+                        onChange={handleDateChange}
                         className="w-full p-4 bg-white border border-obsidian-900/10 rounded-xl focus:border-gold-500 focus:shadow-[0_0_12px_rgba(245,166,35,0.15)] outline-none transition-all text-obsidian-900 cursor-pointer"
                       />
+                      {dateError && (
+                        <p className="text-[#e74c3c] mt-2 font-medium text-body-sm">
+                          {t('tailor.errorPastDate', '⚠️ Please select a future travel date.')}
+                        </p>
+                      )}
                     </div>
                     <div>
                       <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
@@ -871,7 +936,7 @@ const TailorTour = () => {
                     <button
                       type="button"
                       onClick={handleBackStep}
-                      className="px-6 py-3 border border-obsidian-900/20 text-obsidian-700 font-medium rounded-full hover:bg-obsidian-900/5 transition-all animate-none"
+                      className="px-6 py-3 border border-obsidian-900/20 text-obsidian-700 font-medium rounded-full hover:bg-obsidian-900/5 transition-all"
                     >
                       {t('tailor.back', 'Back')}
                     </button>

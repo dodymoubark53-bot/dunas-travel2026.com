@@ -1550,6 +1550,7 @@
     "step1Title": "Where would you like to travel? (You can choose more than one)",
     "step2Title": "Enter Contact & Traveler Info",
     "errorDestination": "⚠️ Please select at least one destination to continue.",
+    "errorPastDate": "⚠️ Please select a future travel date.",
     "next": "Next Step",
     "back": "Back",
     "fullName": "Full Name *",

@@ -1555,6 +1555,7 @@
     "step1Title": "¿A dónde le gustaría viajar? (Puede elegir más de un país)",
     "step2Title": "Ingrese la Información de Contacto y Viajeros",
     "errorDestination": "⚠️ Por favor, seleccione al menos un destino para continuar.",
+    "errorPastDate": "⚠️ Por favor, seleccione una fecha de viaje futura.",
     "next": "Siguiente Paso",
     "back": "Atrás",
     "fullName": "Nombre Completo *",
