@@ -10,7 +10,8 @@ import Logo from '../ui/Logo';
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [activeDropdown, setActiveDropdown] = useState(null); // خاص بالـ Desktop (Hover)
+  const [mobileActiveDropdown, setMobileActiveDropdown] = useState(null); // خاص بالـ Mobile (Click)
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
@@ -29,7 +30,23 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // تعديل: تبديل Services بـ Programs وإضافة الأقسام الستة الجديدة تماماً
+  // تهيئة الحالات عند تغيير حجم الشاشة لمنع التداخل
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setMobileMenuOpen(false);
+        setMobileActiveDropdown(null);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // دالة للتحكم في فتح وإغلاق القوائم في الموبايل عند الضغط
+  const handleMobileDropdownToggle = (name) => {
+    setMobileActiveDropdown(mobileActiveDropdown === name ? null : name);
+  };
+
   const navLinks = [
     { name: t('nav.home'), path: '/' },
     { name: t('nav.blogs'), path: '/blogs' },
@@ -64,32 +81,36 @@ const Navbar = () => {
     { name: t('nav.contact'), path: '/contact' },
   ];
 
+  // أنيميشن القوائم المنسدلة للـ Desktop
   const dropdownVariants = {
     hidden: { opacity: 0, y: 15, scale: 0.95 },
     visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.2, ease: 'easeOut' } },
     exit: { opacity: 0, y: 10, scale: 0.95, transition: { duration: 0.15, ease: 'easeIn' } }
   };
 
+  // أنيميشن فتح وإغلاق القوائم للموبايل بسلاسة (Accordion)
+  const mobileDropdownVariants = {
+    hidden: { opacity: 0, height: 0, marginTop: 0, overflow: 'hidden' },
+    visible: { opacity: 1, height: 'auto', marginTop: 8, transition: { duration: 0.25, ease: 'easeInOut' } },
+    exit: { opacity: 0, height: 0, marginTop: 0, transition: { duration: 0.2, ease: 'easeInOut' } }
+  };
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 h-16 lg:h-20 flex items-center ${scrolled ? 'shadow-lg border-b border-white/5' : ''
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 h-16 lg:h-20 flex items-center ${scrolled ? 'shadow-lg border-b border-white/5 bg-[#1A1A2E]/95' : 'bg-[#1A1A2E]/90'
         }`}
       style={{
-        backgroundColor: 'rgba(26, 26, 46, 0.95)',
         backdropFilter: 'blur(18px)',
         WebkitBackdropFilter: 'blur(18px)'
       }}
     >
-      <div
-        className="container mx-auto px-6 h-full flex justify-between"
-        style={{ alignItems: 'center' }}
-      >
+      <div className="container mx-auto px-6 h-full flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="flex items-center z-50">
+        <Link to="/" className="flex items-center z-50" onClick={() => setMobileMenuOpen(false)}>
           <Logo theme="dark" height={40} />
         </Link>
 
-        {/* Desktop Nav */}
+        {/* Desktop Nav (Hover) */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <div
@@ -99,16 +120,16 @@ const Navbar = () => {
               onMouseLeave={() => link.dropdown && setActiveDropdown(null)}
             >
               {link.dropdown ? (
-                <button className="flex items-center gap-1 text-white hover:text-[#F5A623] transition-colors text-body-md font-medium">
-                  {link.name} <FaChevronDown className="text-xs" />
+                <button className="flex items-center gap-1 text-white hover:text-[#F5A623] transition-colors text-body-md font-medium py-2">
+                  {link.name} <FaChevronDown className={`text-xs transition-transform duration-200 ${activeDropdown === link.name ? 'rotate-180' : ''}`} />
                 </button>
               ) : (
-                <Link to={link.path} className="text-white hover:text-[#F5A623] transition-colors text-body-md font-medium">
+                <Link to={link.path} className="text-white hover:text-[#F5A623] transition-colors text-body-md font-medium py-2">
                   {link.name}
                 </Link>
               )}
 
-              {/* Dropdown Panel */}
+              {/* Dropdown Panel Desktop */}
               <AnimatePresence>
                 {link.dropdown && activeDropdown === link.name && (
                   <motion.div
@@ -116,7 +137,7 @@ const Navbar = () => {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="absolute top-full left-0 mt-4 w-56 bg-[#1A1A2E] border border-white/10 rounded-lg overflow-hidden shadow-xl"
+                    className="absolute top-full left-0 mt-2 w-56 bg-[#1A1A2E] border border-white/10 rounded-lg overflow-hidden shadow-xl"
                   >
                     {link.dropdown.map((item) => (
                       <Link
@@ -134,9 +155,9 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* Actions */}
+        {/* Actions (Desktop) */}
         <div className="hidden lg:flex items-center gap-4 z-50">
-          {/* User Auth */}
+          {/* Profile Dropdown */}
           <div className="relative">
             {user ? (
               <>
@@ -159,10 +180,10 @@ const Navbar = () => {
                         <p className="text-caption text-white font-semibold">{user.name}</p>
                         <p className="text-[10px] text-gray-400 truncate">{user.email}</p>
                       </div>
-                      <Link to="/profile" className="w-full text-left px-4 py-3 text-white hover:text-[#1A1A2E] hover:bg-[#F5A623] transition-colors text-body-md border-b border-white/5 flex items-center gap-2">
+                      <Link to="/profile" onClick={() => setProfileDropdownOpen(false)} className="w-full text-left px-4 py-3 text-white hover:text-[#1A1A2E] hover:bg-[#F5A623] transition-colors text-body-md border-b border-white/5 flex items-center gap-2">
                         <FaUserCircle /> {t('nav.myProfile', 'My Profile')}
                       </Link>
-                      <Link to="/bookings" className="w-full text-left px-4 py-3 text-white hover:text-[#1A1A2E] hover:bg-[#F5A623] transition-colors text-body-md border-b border-white/5 flex items-center gap-2">
+                      <Link to="/bookings" onClick={() => setProfileDropdownOpen(false)} className="w-full text-left px-4 py-3 text-white hover:text-[#1A1A2E] hover:bg-[#F5A623] transition-colors text-body-md border-b border-white/5 flex items-center gap-2">
                         <FaBookmark /> {t('nav.myBookings', 'My Bookings')}
                       </Link>
                       <button onClick={() => { logout(); setProfileDropdownOpen(false); }} className="w-full text-left px-4 py-3 text-red-400 hover:text-white hover:bg-red-500 transition-colors text-body-md flex items-center gap-2">
@@ -176,13 +197,13 @@ const Navbar = () => {
               <button
                 onClick={() => setIsLoginModalOpen(true)}
                 className="text-white hover:text-[#F5A623] transition-colors p-2 flex items-center gap-2"
-                title="Login"
               >
                 <FaUserCircle size={20} />
               </button>
             )}
           </div>
 
+          {/* Lang Dropdown */}
           <div className="relative">
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
@@ -195,7 +216,6 @@ const Navbar = () => {
                       i18n.language === 'it' ? 'Italiano' : 'English'
               }</span>
             </button>
-
             <AnimatePresence>
               {langDropdownOpen && (
                 <motion.div
@@ -221,7 +241,6 @@ const Navbar = () => {
                         <span className="text-lg">{lang.flag}</span>
                         <span>{lang.label}</span>
                       </span>
-                      {i18n.language === lang.code && <span className="text-[#F5A623]">✓</span>}
                     </button>
                   ))}
                 </motion.div>
@@ -230,140 +249,114 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Hamburger & Login */}
-        <div className="lg:hidden flex items-center gap-4 z-50">
-          <div className="relative">
-            <button
-              onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-              className="text-white hover:text-[#F5A623] transition-colors p-2 flex items-center gap-2"
-            >
-              <FaGlobe /> <span className="text-caption uppercase hidden sm:block font-medium">{
-                i18n.language === 'ar' ? 'العربية' :
-                  i18n.language === 'es' ? 'Español' :
-                    i18n.language === 'pt' ? 'Português' :
-                      i18n.language === 'it' ? 'Italiano' : 'English'
-              }</span>
-            </button>
+        {/* Mobile Buttons */}
+        <div className="lg:hidden flex items-center gap-3 z-50">
+          <button
+            onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+            className="text-white hover:text-[#F5A623] p-2 transition-colors"
+          >
+            <FaGlobe size={18} />
+          </button>
 
-            <AnimatePresence>
-              {langDropdownOpen && (
-                <motion.div
-                  variants={dropdownVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  className="absolute top-full right-0 mt-4 w-40 bg-[#1A1A2E] border border-white/10 rounded-lg overflow-hidden shadow-xl"
-                >
-                  {[
-                    { code: 'en', label: 'English', flag: '🇬🇧' },
-                    { code: 'ar', label: 'العربية', flag: '🇸🇦' },
-                    { code: 'es', label: 'Español', flag: '🇪🇸' },
-                    { code: 'pt', label: 'Português', flag: '🇧🇷' },
-                    { code: 'it', label: 'Italiano', flag: '🇮🇹' },
-                  ].map(lang => (
-                    <button
-                      key={lang.code}
-                      onClick={() => changeLanguage(lang.code)}
-                      className={`w-full text-left px-4 py-3 flex items-center justify-between text-body-md border-b border-white/5 last:border-0 transition-colors ${i18n.language === lang.code ? 'text-[#F5A623] font-semibold bg-white/5' : 'text-white hover:text-[#1A1A2E] hover:bg-[#F5A623]'}`}
-                    >
-                      <span className="flex items-center gap-2">
-                        <span className="text-lg">{lang.flag}</span>
-                        <span>{lang.label}</span>
-                      </span>
-                      {i18n.language === lang.code && <span className="text-[#F5A623]">✓</span>}
-                    </button>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-
+          {/* Mobile Profile/Login */}
           {!user ? (
-            <button onClick={() => setIsLoginModalOpen(true)} className="text-white hover:text-[#F5A623] transition-colors">
-              <FaUserCircle size={22} />
+            <button onClick={() => setIsLoginModalOpen(true)} className="text-white hover:text-[#F5A623] p-2 transition-colors">
+              <FaUserCircle size={20} />
             </button>
           ) : (
-            <span className="w-8 h-8 rounded-full border border-[#F5A623]/50 flex items-center justify-center text-white bg-white/5 font-display text-xs">{user.avatar}</span>
+            <Link to="/profile" className="w-8 h-8 rounded-full border border-[#F5A623]/50 flex items-center justify-center text-white bg-white/5 text-xs font-semibold">
+              {user.avatar}
+            </Link>
           )}
+
+          {/* Hamburger Menu Toggle */}
           <button
-            className="text-white p-2 hover:text-[#F5A623]"
-            onClick={() => setMobileMenuOpen(true)}
+            className="text-white p-2 hover:text-[#F5A623] transition-colors"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            <FaBars size={24} />
+            {mobileMenuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
           </button>
         </div>
 
-        {/* Mobile Menu Overlay */}
+        {/* Mobile Full Menu Overlay */}
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'tween', duration: 0.4 }}
-              style={{
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                width: '100vw',
-                height: '100vh',
-                zIndex: 9999,
-                overflowY: 'auto',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                paddingTop: '70px',
-                background: 'rgba(26, 26, 46, 0.98)',
-                backdropFilter: 'blur(24px)',
-                WebkitBackdropFilter: 'blur(24px)'
-              }}
-              className="gap-8"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-x-0 top-16 bottom-0 bg-[#1A1A2E]/98 backdrop-blur-xl z-40 flex flex-col px-6 py-6 overflow-y-auto lg:hidden gap-5"
             >
-              <button
-                onClick={() => setMobileMenuOpen(false)}
-                style={{ position: 'absolute', top: '16px', right: '16px' }}
-                className="text-white hover:text-[#F5A623] transition-colors p-2"
-              >
-                <FaTimes size={24} />
-              </button>
               {navLinks.map((link) => (
-                <div key={link.name} className="text-center">
+                <div key={link.name} className="w-full border-b border-white/5 pb-3 last:border-0">
                   {link.dropdown ? (
-                    <span className="text-display-sm text-gray-300 font-medium block mb-2">
-                      {link.name}
-                    </span>
+                    <>
+                      {/* عنوان القائمة في الموبايل - يفتح ويغلق عند الضغط عليه */}
+                      <button
+                        onClick={() => handleMobileDropdownToggle(link.name)}
+                        className="w-full flex justify-between items-center text-left text-lg text-white hover:text-[#F5A623] font-medium py-1.5 px-2 transition-colors"
+                      >
+                        <span className={mobileActiveDropdown === link.name ? 'text-[#F5A623]' : ''}>
+                          {link.name}
+                        </span>
+                        <FaChevronDown
+                          className={`text-sm transition-transform duration-300 ${mobileActiveDropdown === link.name ? 'rotate-180 text-[#F5A623]' : 'text-gray-400'
+                            }`}
+                        />
+                      </button>
+
+                      {/* العناصر الفرعية داخل الموبايل - تفتح وتغلق بسلاسة بفضل الأنيميشن */}
+                      <AnimatePresence initial={false}>
+                        {mobileActiveDropdown === link.name && (
+                          <motion.div
+                            variants={mobileDropdownVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                            className="flex flex-col gap-1 pl-4 bg-white/[0.03] rounded-xl overflow-hidden mt-1"
+                          >
+                            {link.dropdown.map(item => (
+                              <Link
+                                key={item.name}
+                                to={item.path}
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="text-base text-gray-300 hover:text-[#F5A623] py-2.5 px-3 block transition-colors border-b border-white/5 last:border-0"
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </>
                   ) : (
+                    // الروابط العادية التي لا تحتوي على قوائم (مثل الرئيسية)
                     <Link
                       to={link.path}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="text-display-md text-white hover:text-[#F5A623] transition-colors font-medium"
+                      className="text-lg text-white block hover:text-[#F5A623] transition-colors font-medium px-2 py-1.5"
                     >
                       {link.name}
                     </Link>
                   )}
-                  {link.dropdown && (
-                    <div className="mt-2 flex flex-col gap-3 bg-white/5 p-4 rounded-xl min-w-[200px]">
-                      {link.dropdown.map(item => (
-                        <Link
-                          key={item.name}
-                          to={item.path}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className="text-body-lg text-gray-400 hover:text-[#F5A623] transition-colors"
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
                 </div>
               ))}
+
+              {/* زر تسجيل الخروج للموبايل في حال وجود مستخدم */}
+              {user && (
+                <button
+                  onClick={() => { logout(); setMobileMenuOpen(false); }}
+                  className="mt-auto w-full py-3 bg-red-500/10 text-red-400 rounded-xl font-medium flex items-center justify-center gap-2 border border-red-500/20"
+                >
+                  <FaSignOutAlt /> {t('nav.logout', 'Logout')}
+                </button>
+              )}
             </motion.div>
           )}
         </AnimatePresence>
       </div>
 
-      {/* Login Modal */}
       <LoginModal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} />
     </header>
   );
