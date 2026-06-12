@@ -32,12 +32,12 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links - تعديل السيرفس إلى بروجرامز */}
           <div>
             <h4 className="text-white mb-6 text-lg font-semibold">{t('footer.quickLinks', 'Quick Links')}</h4>
             <ul className="flex flex-col gap-3">
               <li><Link to="/about" className="hover:text-[#F5A623] transition-colors">{t('nav.about')}</Link></li>
-              <li><Link to="/services" className="hover:text-[#F5A623] transition-colors">{t('nav.services')}</Link></li>
+              <li><Link to="/programs" className="hover:text-[#F5A623] transition-colors">{t('nav.programs', 'Programs')}</Link></li>
               <li><Link to="/blogs" className="hover:text-[#F5A623] transition-colors">{t('nav.blogs')}</Link></li>
               <li><Link to="/contact" className="hover:text-[#F5A623] transition-colors">{t('nav.contact')}</Link></li>
               <li><Link to="/faq" className="hover:text-[#F5A623] transition-colors">{t('footer.faq', 'FAQs')}</Link></li>
@@ -48,9 +48,20 @@ const Footer = () => {
           <div>
             <h4 className="text-white mb-6 text-lg font-semibold">{t('nav.destinations')}</h4>
             <ul className="flex flex-col gap-3">
-              <li><Link to="/destinations/italy" className="hover:text-[#F5A623] transition-colors">{t('nav.italy')}</Link></li>
-              <li><Link to="/destinations/spain" className="hover:text-[#F5A623] transition-colors">{t('nav.spain')}</Link></li>
-              <li><Link to="/destinations/brazil" className="hover:text-[#F5A623] transition-colors">{t('nav.brazil')}</Link></li>
+              {[
+                { key: 'egipto',      path: '/destinations/egypt'    },
+                { key: 'turquia',     path: '/destinations/turkey'   },
+                { key: 'jordania',    path: '/destinations/jordan'   },
+                { key: 'marruecos',   path: '/destinations/morocco'  },
+                { key: 'grecia',      path: '/destinations/greece'   },
+                { key: 'dubai',       path: '/destinations/dubai'    },
+                { key: 'tuniz',       path: '/destinations/tunisia'  },
+                { key: 'tierrasanta', path: '/destinations/holyland' },
+              ].map(({ key, path }) => (
+                <li key={key}>
+                  <Link to={path} className="hover:text-[#F5A623] transition-colors">{t(`nav.${key}`)}</Link>
+                </li>
+              ))}
             </ul>
           </div>
 

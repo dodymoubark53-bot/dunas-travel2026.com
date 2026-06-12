@@ -29,7 +29,14 @@
     "holyland": "Holy Land",
     "myBookings": "My Bookings",
     "myProfile": "My Profile",
-    "transportation": "Transportation"
+    "transportation": "Transportation",
+    "egipto": "Egypt",
+    "turquia": "Turkey",
+    "jordania": "Jordan",
+    "marruecos": "Morocco",
+    "grecia": "Greece",
+    "tuniz": "Tunisia",
+    "tierrasanta": "Holy Land"
   },
   "tour": {
     "duration": "Duration",

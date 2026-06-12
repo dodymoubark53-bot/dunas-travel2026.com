@@ -29,7 +29,14 @@
     "holyland": "الأراضي المقدسة",
     "myBookings": "حجوزاتي",
     "myProfile": "ملفي الشخصي",
-    "transportation": "النقل"
+    "transportation": "النقل",
+    "egipto": "مصر",
+    "turquia": "تركيا",
+    "jordania": "الأردن",
+    "marruecos": "المغرب",
+    "grecia": "اليونان",
+    "tuniz": "تونس",
+    "tierrasanta": "الأراضي المقدسة"
   },
   "tour": {
     "duration": "المدة",

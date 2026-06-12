@@ -29,7 +29,14 @@
     "holyland": "Terra Santa",
     "myBookings": "Minhas reservas",
     "myProfile": "Meu perfil",
-    "transportation": "Transporte"
+    "transportation": "Transporte",
+    "egipto": "Egito",
+    "turquia": "Turquia",
+    "jordania": "Jordânia",
+    "marruecos": "Marrocos",
+    "grecia": "Grécia",
+    "tuniz": "Tunísia",
+    "tierrasanta": "Terra Santa"
   },
   "tour": {
     "duration": "Duração",

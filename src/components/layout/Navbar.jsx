@@ -29,17 +29,19 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // تعديل: تبديل Services بـ Programs وإضافة الأقسام الستة الجديدة تماماً
   const navLinks = [
     { name: t('nav.home'), path: '/' },
     { name: t('nav.blogs'), path: '/blogs' },
     {
-      name: t('nav.services'),
+      name: t('nav.programs', { defaultValue: 'Programs' }),
       dropdown: [
-        { name: t('nav.hotels'), path: '/services/hotels' },
-        { name: t('nav.safari'), path: '/services/safari' },
-        { name: t('nav.camping'), path: '/services/camping' },
-        { name: t('nav.cruises'), path: '/services/cruises' },
-        { name: t('nav.transportation', { defaultValue: 'Transportation' }), path: '/transportation' },
+        { name: t('nav.classic', { defaultValue: 'Classic' }), path: '/programs/classic' },
+        { name: t('nav.transportation', { defaultValue: 'Transportation' }), path: '/programs/transportation' },
+        { name: t('nav.extension', { defaultValue: 'Extension' }), path: '/programs/extension' },
+        { name: t('nav.multiCountry', { defaultValue: 'Multi-Country Tours' }), path: '/programs/multi-country' },
+        { name: t('nav.honeymooners', { defaultValue: 'Honeymooners Package' }), path: '/programs/honeymooners' },
+        { name: t('nav.religious', { defaultValue: 'Programs Religiosos' }), path: '/programs/religious' },
       ]
     },
     {
@@ -73,7 +75,7 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 h-16 lg:h-20 flex items-center ${scrolled ? 'shadow-lg border-b border-white/5' : ''
         }`}
       style={{
-        backgroundColor: 'rgba(26, 26, 46, 0.95)', // نفس لون الفوتر تماماً #1A1A2E
+        backgroundColor: 'rgba(26, 26, 46, 0.95)',
         backdropFilter: 'blur(18px)',
         WebkitBackdropFilter: 'blur(18px)'
       }}
@@ -82,7 +84,7 @@ const Navbar = () => {
         className="container mx-auto px-6 h-full flex justify-between"
         style={{ alignItems: 'center' }}
       >
-        {/* Logo - متناسق تماماً مع الخلفية الغامقة */}
+        {/* Logo */}
         <Link to="/" className="flex items-center z-50">
           <Logo theme="dark" height={40} />
         </Link>
@@ -114,7 +116,7 @@ const Navbar = () => {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="absolute top-full left-0 mt-4 w-48 bg-[#1A1A2E] border border-white/10 rounded-lg overflow-hidden shadow-xl"
+                    className="absolute top-full left-0 mt-4 w-56 bg-[#1A1A2E] border border-white/10 rounded-lg overflow-hidden shadow-xl"
                   >
                     {link.dropdown.map((item) => (
                       <Link
@@ -291,7 +293,6 @@ const Navbar = () => {
           </button>
         </div>
 
-
         {/* Mobile Menu Overlay */}
         <AnimatePresence>
           {mobileMenuOpen && (
@@ -313,7 +314,7 @@ const Navbar = () => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 paddingTop: '70px',
-                background: 'rgba(26, 26, 46, 0.98)', // نفس خلفية الفوتر تماماً لقائمة الموبايل
+                background: 'rgba(26, 26, 46, 0.98)',
                 backdropFilter: 'blur(24px)',
                 WebkitBackdropFilter: 'blur(24px)'
               }}
@@ -328,21 +329,27 @@ const Navbar = () => {
               </button>
               {navLinks.map((link) => (
                 <div key={link.name} className="text-center">
-                  <Link
-                    to={link.path || '#'}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="text-display-md text-white hover:text-[#F5A623] transition-colors font-medium"
-                  >
-                    {link.name}
-                  </Link>
+                  {link.dropdown ? (
+                    <span className="text-display-sm text-gray-300 font-medium block mb-2">
+                      {link.name}
+                    </span>
+                  ) : (
+                    <Link
+                      to={link.path}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="text-display-md text-white hover:text-[#F5A623] transition-colors font-medium"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                   {link.dropdown && (
-                    <div className="mt-4 flex flex-col gap-3">
+                    <div className="mt-2 flex flex-col gap-3 bg-white/5 p-4 rounded-xl min-w-[200px]">
                       {link.dropdown.map(item => (
                         <Link
                           key={item.name}
                           to={item.path}
                           onClick={() => setMobileMenuOpen(false)}
-                          className="text-body-lg text-gray-400 hover:text-[#F5A623]"
+                          className="text-body-lg text-gray-400 hover:text-[#F5A623] transition-colors"
                         >
                           {item.name}
                         </Link>

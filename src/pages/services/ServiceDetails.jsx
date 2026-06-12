@@ -6,11 +6,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaCheckCircle, FaTimes, FaStar, FaMapMarkerAlt, FaTimesCircle } from 'react-icons/fa';
 import Button from '../../components/ui/Button';
 import { staggerContainer, fadeInUp } from '../../animations/variants';
-import { services } from '../../data/services';
+import { services } from '../../data/services'; // ملاحظة: يمكنك لاحقاً تغيير اسم الفولدر أو الفايل لـ programs لتنظيم داتا الـ ساس
 import InquiryForm from '../../components/booking/InquiryForm';
 
 const ServiceDetails = () => {
   const { t } = useTranslation();
+  // تعديل: استقبال category و slug بما يتوافق مع الـ Navbar الجديد للبرامج
   const { category, slug } = useParams();
   const service = services.find((s) => s.category === category && s.slug === slug);
   const [activeImage, setActiveImage] = useState(null);
@@ -23,7 +24,7 @@ const ServiceDetails = () => {
   if (!service) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-obsidian-50">
-        <h1 className="text-display-lg text-obsidian-900">{t('services.notFound', 'Service not found')}</h1>
+        <h1 className="text-display-lg text-obsidian-900">{t('programs.notFound', 'Program not found')}</h1>
       </div>
     );
   }
@@ -33,7 +34,10 @@ const ServiceDetails = () => {
   return (
     <div className="w-full bg-obsidian-50 pb-24">
       <Helmet>
-        <title>{t(`data.${service.title}`, service.title)} | {t('services.luxuryCat', 'Luxury {{category}}', { category: t(`nav.${category}`, category.charAt(0).toUpperCase() + category.slice(1)) })}</title>
+        {/* تعديل الترجمات في الـ Title من services إلى programs لتفادي الـ undefined */}
+        <title>
+          {t(`data.${service.title}`, service.title)} | {t('programs.luxuryCat', 'Luxury {{category}}', { category: t(`nav.${category}`, category.charAt(0).toUpperCase() + category.slice(1)) })}
+        </title>
         <meta name="description" content={t(`data.${service.shortDesc}`, service.shortDesc)} />
       </Helmet>
 
@@ -65,7 +69,7 @@ const ServiceDetails = () => {
               {t(`data.${service.title}`, service.title)}
             </motion.h1>
           </div>
-          
+
           <motion.div variants={fadeInUp} className="flex flex-col items-start md:items-end bg-obsidian-900/80 backdrop-blur-md p-6 rounded-2xl border border-ivory-50/10">
             <div className="flex text-gold-500 mb-2">
               {[...Array(5)].map((_, i) => (
@@ -82,7 +86,7 @@ const ServiceDetails = () => {
       {/* Main Content */}
       <section className="container mx-auto px-6 mt-16 max-w-5xl">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          
+
           <div className="lg:col-span-2">
             {/* Overview */}
             <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -141,8 +145,8 @@ const ServiceDetails = () => {
               <h2 className="text-display-md text-obsidian-900 mb-6 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>{t('tourDetail.gallery', 'Gallery')}</h2>
               <div className="grid grid-cols-3 gap-4">
                 {service.images.map((img, idx) => (
-                  <div 
-                    key={idx} 
+                  <div
+                    key={idx}
                     className={`rounded-xl overflow-hidden cursor-pointer group relative ${idx === 0 ? 'col-span-3 h-80' : 'col-span-1 h-40'}`}
                     onClick={() => setActiveImage(img)}
                   >
@@ -158,16 +162,17 @@ const ServiceDetails = () => {
           <div className="lg:col-span-1">
             <div className="sticky top-32">
               <div className="bg-ivory-50 rounded-2xl shadow-card p-8 border border-gold-500/10">
-                <h3 className="text-display-sm text-obsidian-900 mb-2 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>{t('services.bookExperience', 'Book Your Experience')}</h3>
-                <p className="text-body-sm text-obsidian-300 mb-6">{t('services.conciergeAvailability', 'Our concierge team will confirm availability within 2 hours.')}</p>
-                
+                {/* تعديل الترجمات هنا بردو من services لـ programs */}
+                <h3 className="text-display-sm text-obsidian-900 mb-2 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>{t('programs.bookExperience', 'Book Your Experience')}</h3>
+                <p className="text-body-sm text-obsidian-300 mb-6">{t('programs.conciergeAvailability', 'Our concierge team will confirm availability within 2 hours.')}</p>
+
                 <Button variant="gold-glow" className="w-full py-4 mb-4" onClick={() => setIsModalOpen(true)}>
-                  {t('services.inquireNow', 'Inquire Now')}
+                  {t('programs.inquireNow', 'Inquire Now')}
                 </Button>
-                
-                <div className="text-center">
+
+                <div class="text-center">
                   <span className="text-caption text-obsidian-300 flex items-center justify-center gap-2">
-                    <FaCheckCircle className="text-sage-500" /> {t('services.bestPriceGuarantee', 'Best Price Guarantee')}
+                    <FaCheckCircle className="text-sage-500" /> {t('programs.bestPriceGuarantee', 'Best Price Guarantee')}
                   </span>
                 </div>
               </div>
@@ -181,11 +186,12 @@ const ServiceDetails = () => {
         <section className="bg-ivory-50 py-24 mt-24 border-t border-obsidian-900/5">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-display-lg text-obsidian-900" style={{ fontFamily: "'Playfair Display', serif" }}>{t('services.moreCat', 'More {{category}}', { category: t(`nav.${category}`, category.charAt(0).toUpperCase() + category.slice(1)) })}</h2>
+              {/* تعديل الترجمة من services لـ programs */}
+              <h2 className="text-display-lg text-obsidian-900" style={{ fontFamily: "'Playfair Display', serif" }}>{t('programs.moreCat', 'More {{category}}', { category: t(`nav.${category}`, category.charAt(0).toUpperCase() + category.slice(1)) })}</h2>
               <div className="w-24 h-1 bg-gold-500 mx-auto mt-6"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedServices.map((relService) => (
                 <div key={relService.id} className="bg-obsidian-50 rounded-2xl overflow-hidden group h-full flex flex-col shadow-sm border border-obsidian-900/5 hover:shadow-card transition-all">
                   <div className="relative h-60 overflow-hidden">
@@ -200,7 +206,8 @@ const ServiceDetails = () => {
                         <span className="text-caption text-obsidian-300 block">{t('tourCard.from', 'From')}</span>
                         <span className="text-body-lg font-semibold text-obsidian-900">${relService.price}</span>
                       </div>
-                      <Link to={`/services/${relService.category}/${relService.slug}`}>
+                      {/* تعديل مسار لينك التفاصيل ليتوافق مع الـ Route الجديد للبرامج */}
+                      <Link to={`/programs/${relService.category}/${relService.slug}`}>
                         <Button variant="outline-gold" className="px-4 py-2 text-sm">{t('tourCard.viewDetails', 'View Details')}</Button>
                       </Link>
                     </div>
@@ -215,21 +222,24 @@ const ServiceDetails = () => {
       {/* Inquiry Modal */}
       <AnimatePresence>
         {isModalOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] bg-obsidian-900/80 flex items-center justify-center backdrop-blur-sm p-4"
             onClick={() => setIsModalOpen(false)}
           >
-            <InquiryForm onClose={() => setIsModalOpen(false)} tourTitle={service.title} />
+            {/* لمنع إغلاق المودال عند الضغط داخل الفورم نفسها */}
+            <div onClick={(e) => e.stopPropagation()}>
+              <InquiryForm onClose={() => setIsModalOpen(false)} tourTitle={service.title} />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
       {/* Lightbox */}
       <AnimatePresence>
         {activeImage && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
