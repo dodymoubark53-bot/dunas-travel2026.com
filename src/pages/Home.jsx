@@ -289,12 +289,12 @@ const Home = () => {
                 {t("home.exploreDest")}
               </Button>
             </Link>
-            <Link to="/contact">
+            <Link to="/tailor-a-tour">
               <Button
                 variant="glass"
                 className="w-full sm:w-auto px-8 py-4 text-lg"
               >
-                {t("home.bookJourney")}
+                {t("home.tailorTour")}
               </Button>
             </Link>
           </motion.div>

@@ -107,7 +107,8 @@
     "suvs": "SUVs",
     "tripDate": "Trip Date *",
     "viewTour": "View Tour",
-    "whoWeAre": "WHO WE ARE"
+    "whoWeAre": "WHO WE ARE",
+    "tailorTour": "Tailor a Tour"
   },
   "tourCard": {
     "reviews": "reviews",
@@ -1539,5 +1540,48 @@
   },
   "site": {
     "luxuryTravel": "Luxury Travel"
+  },
+  "tailor": {
+    "title": "Tailor Your Bespoke Tour | Dunas Travel",
+    "seoDesc": "Customize your luxury dream holiday with Dunas Travel. Choose your destinations, details, and let our experts design your perfect itinerary.",
+    "heading": "Tailor Your Custom Journey",
+    "step1Label": "Destinations",
+    "step2Label": "Trip Details",
+    "step1Title": "Where would you like to travel? (You can choose more than one)",
+    "step2Title": "Enter Contact & Traveler Info",
+    "errorDestination": "⚠️ Please select at least one destination to continue.",
+    "next": "Next Step",
+    "back": "Back",
+    "fullName": "Full Name *",
+    "fullNamePlaceholder": "Name as shown in passport",
+    "email": "Email Address *",
+    "emailPlaceholder": "name@example.com",
+    "nationality": "Nationality *",
+    "selectNationality": "Select nationality...",
+    "nationalityEgypt": "Egyptian",
+    "nationalitySaudi": "Saudi",
+    "nationalityEmirati": "Emirati",
+    "nationalityKuwaiti": "Kuwaiti",
+    "nationalityAmerican": "American",
+    "phone": "Phone Number (WhatsApp preferred) *",
+    "phonePlaceholder": "Example: 00201xxxxxxxxx",
+    "travelDate": "Expected Travel Date *",
+    "budget": "Approximate Budget Per Person *",
+    "selectBudget": "Select expected budget...",
+    "budgetOption1": "$1000 to $2000",
+    "budgetOption2": "$2000 to $3000",
+    "budgetOption3": "$3000 or more",
+    "adults": "Adults (+12 years)",
+    "children": "Children (2 - 11 years)",
+    "infants": "Infants (under 2 years)",
+    "passengerSection": "Names of travelers and companions:",
+    "passengerAdultPlaceholder": "Adult {{index}} Name *",
+    "passengerChildPlaceholder": "Child {{index}} Name *",
+    "passengerInfantPlaceholder": "Infant {{index}} Name *",
+    "specialRequests": "Special details or requests",
+    "specialRequestsPlaceholder": "Any additional details...",
+    "submit": "Send Inquiry Now!",
+    "successAlert": "Your request has been submitted successfully! We will contact you soon.",
+    "socialFooterDesc": "Need immediate assistance? Contact us via one of the following channels:"
   }
 }

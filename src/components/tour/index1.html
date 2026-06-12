@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Isometric Icon Hover Effects (Exact Copy)</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      /* تعريف الألوان كمتغيرات زي ما هو باين في كود الفيديو */
+      :root {
+        --bg-color: #e3e3e3; /* لون الخلفية الرمادي الفاتح */
+
+        /* ألوان الأيقونات عند الـ Hover (اللون الأساسي ولون الظل) */
+        --tiktok-clr: #000000;
+        --tiktok-shadow: #25f4ee;
+
+        --facebook-clr: #1877f2;
+        --facebook-shadow: #1059b8;
+
+        --youtube-clr: #ff0000;
+        --youtube-shadow: #b30000;
+
+        --x-clr: #000000;
+        --x-shadow: #333333;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: var(--bg-color);
+        font-family: sans-serif;
+      }
+
+      ul {
+        position: relative;
+        display: flex;
+        gap: 40px; /* المسافة بين الأيقونات */
+      }
+
+      ul li {
+        position: relative;
+        list-style: none;
+        width: 80px; /* مقاس المكعب */
+        height: 80px;
+      }
+
+      ul li a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff; /* السطح العلوي الافتراضي أبيض */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #333; /* لون الأيقونة الافتراضي */
+        font-size: 2.5rem;
+        text-decoration: none;
+        transition: 0.5s;
+        border-radius: 10px; /* حواف ناعمة زي الفيديو */
+
+        /* المنظور الهندسي (Isometric) */
+        transform: rotate(-30deg) skew(25deg);
+
+        /* الظل الأساسي للمكعب وهو ثابت */
+        box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* إنشاء الجانب الأيسر للمكعب باستخدام ::before */
+      ul li a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -15px; /* سمك الجانب */
+        width: 15px;
+        height: 100%;
+        background: #dcdcdc; /* لون جانبي افتراضي أغمق من الأبيض */
+        transition: 0.5s;
+
+        /* ميل الجانب الأيسر */
+        transform: rotate(0deg) skewY(-45deg);
+        transform-origin: right;
+        border-radius: 10px 0 0 10px;
+      }
+
+      /* إنشاء الجانب السفلي للمكعب باستخدام ::after */
+      ul li a::after {
+        content: "";
+        position: absolute;
+        bottom: -15px; /* سمك الجانب */
+        left: 0;
+        width: 100%;
+        height: 15px;
+        background: #e5e5e5; /* لون سفلي افتراضي */
+        transition: 0.5s;
+
+        /* ميل الجانب السفلي */
+        transform: rotate(0deg) skewX(-45deg);
+        transform-origin: top;
+        border-radius: 0 0 10px 10px;
+      }
+
+      /* التأثيرات عند وقوف الماوس (Hover) */
+
+      /* 1. حركة الارتفاع لفوق وزيادة الظل */
+      ul li:hover a {
+        transform: rotate(-30deg) skew(25deg) translate(20px, -20px);
+        box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.2);
+        color: #fff; /* قلب لون الأيقونة للأبيض */
+      }
+
+      /* 2. تطبيق الألوان الخاصة بكل أيقونة (السطح العلوي) */
+      ul li.tiktok:hover a {
+        background: var(--tiktok-clr);
+      }
+      ul li.facebook:hover a {
+        background: var(--facebook-clr);
+      }
+      ul li.youtube:hover a {
+        background: var(--youtube-clr);
+      }
+      ul li.x-color:hover a {
+        background: var(--x-clr);
+      }
+
+      /* 3. تطبيق الألوان على الجوانب (::before و ::after) - ده الجزء اللي كان في كود الفيديو */
+
+      /* الجانب الأيسر (أغمق قليلاً من السطح العلوي) */
+      ul li.tiktok:hover a::before {
+        background: #121212;
+      } /* ظل أسود التيك توك */
+      ul li.facebook:hover a::before {
+        background: var(--facebook-shadow);
+      }
+      ul li.youtube:hover a::before {
+        background: var(--youtube-shadow);
+      }
+      ul li.x-color:hover a::before {
+        background: #1a1a1a;
+      } /* ظل الـ X */
+
+      /* الجانب السفلي (متوسط الغمقان) */
+      ul li.tiktok:hover a::after {
+        background: var(--tiktok-shadow);
+      } /* اللون الفيروزي للتيك توك */
+      ul li.facebook:hover a::after {
+        background: #388af5;
+      } /* درجة فاتحة من أزرق فيسبوك */
+      ul li.youtube:hover a::after {
+        background: #ff3333;
+      } /* درجة فاتحة من أحمر يوتيوب */
+      ul li.x-color:hover a::after {
+        background: var(--x-shadow);
+      }
+
+      /* إضافة تأثير "توهج" (Glow) للأيقونة النشطة */
+      ul li.active a {
+        animation: glow 1.5s infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.1);
+        }
+        to {
+          box-shadow: -20px 20px 40px rgba(255, 0, 0, 0.4);
+        } /* توهج أحمر خفيف لليوتيوب مثلاً */
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="tiktok">
+        <a href="#">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </li>
+      <li class="facebook">
+        <a href="#">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+      <li class="youtube">
+        <a href="#">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </li>
+      <li class="x-color">
+        <a href="#">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>

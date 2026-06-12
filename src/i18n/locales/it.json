@@ -107,7 +107,8 @@
     "suvs": "SUV",
     "tripDate": "Data del viaggio *",
     "viewTour": "Visualizza tour",
-    "whoWeAre": "CHI SIAMO"
+    "whoWeAre": "CHI SIAMO",
+    "tailorTour": "Personalizza un Viaggio"
   },
   "tourCard": {
     "reviews": "recensioni",
@@ -1539,5 +1540,48 @@
   },
   "site": {
     "luxuryTravel": "Viaggi di lusso"
+  },
+  "tailor": {
+    "title": "Personalizza il tuo Viaggio su Misura | Dunas Travel",
+    "seoDesc": "Personalizza la tua vacanza di lusso da sogno con Dunas Travel. Scegli le tue destinazioni, i dettagli e lascia che i nostri esperti progettino il tuo itinerario perfetto.",
+    "heading": "Personalizza il tuo Viaggio",
+    "step1Label": "Destinazione",
+    "step2Label": "Dettagli del Viaggio",
+    "step1Title": "Dove vorresti viaggiare? (Puoi scegliere più di un paese)",
+    "step2Title": "Inserisci le Informazioni di Contatto e dei Viaggiatori",
+    "errorDestination": "⚠️ Seleziona almeno una destinazione per continuare.",
+    "next": "Passo Successivo",
+    "back": "Indietro",
+    "fullName": "Nome Completo *",
+    "fullNamePlaceholder": "Nome come riportato sul passaporto",
+    "email": "Indirizzo Email *",
+    "emailPlaceholder": "nome@esempio.com",
+    "nationality": "Nazionalità *",
+    "selectNationality": "Seleziona nazionalità...",
+    "nationalityEgypt": "Egiziana",
+    "nationalitySaudi": "Saudita",
+    "nationalityEmirati": "Emiratina",
+    "nationalityKuwaiti": "Kuwaitiana",
+    "nationalityAmerican": "Americana",
+    "phone": "Numero di Telefono (WhatsApp preferito) *",
+    "phonePlaceholder": "Esempio: 00201xxxxxxxxx",
+    "travelDate": "Data del Viaggio Prevista *",
+    "budget": "Budget Approssimativo per Persona *",
+    "selectBudget": "Seleziona budget previsto...",
+    "budgetOption1": "Da $1000 a $2000",
+    "budgetOption2": "Da $2000 a $3000",
+    "budgetOption3": "$3000 o più",
+    "adults": "Adulti (+12 anni)",
+    "children": "Bambini (2 - 11 anni)",
+    "infants": "Neonati (sotto i 2 anni)",
+    "passengerSection": "Nomi dei viaggiatori e accompagnatori:",
+    "passengerAdultPlaceholder": "Nome Adulto {{index}} *",
+    "passengerChildPlaceholder": "Nome Bambino {{index}} *",
+    "passengerInfantPlaceholder": "Nome Neonato {{index}} *",
+    "specialRequests": "Dettagli o richieste speciali",
+    "specialRequestsPlaceholder": "Eventuali dettagli aggiuntivi...",
+    "submit": "Invia Richiesta Ora!",
+    "successAlert": "La tua richiesta è stata inviata con successo! Ti contatteremo al più presto.",
+    "socialFooterDesc": "Hai bisogno di assistenza immediata? Contattaci tramite uno dei seguenti canali:"
   }
 }

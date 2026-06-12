@@ -107,7 +107,8 @@
     "suvs": "سيارات الدفع الرباعي",
     "tripDate": "تاريخ الرحلة *",
     "viewTour": "عرض الجولة",
-    "whoWeAre": "من نحن؟"
+    "whoWeAre": "من نحن؟",
+    "tailorTour": "تخصيص رحلة"
   },
   "tourCard": {
     "reviews": "تقييمات",
@@ -1544,5 +1545,48 @@
   },
   "site": {
     "luxuryTravel": "السفر الفاخر"
+  },
+  "tailor": {
+    "title": "تخصيص رحلتك السياحية | Dunas Travel",
+    "seoDesc": "خصص رحلة أحلامك الفاخرة مع دوناس ترافيل. اختر وجهاتك، تفاصيلك، ودع خبراءنا يصممون مسارك المثالي.",
+    "heading": "تخصيص رحلتك السياحية المخصصة",
+    "step1Label": "الوجهة السياحية",
+    "step2Label": "بيانات الرحلة",
+    "step1Title": "أين ترغب في السفر؟ (يمكنك اختيار أكثر من بلد)",
+    "step2Title": "أدخل معلومات الاتصال والمسافرين",
+    "errorDestination": "⚠️ يرجى اختيار وجهة واحدة على الأقل للاستمرار.",
+    "next": "الخطوة التالية",
+    "back": "رجوع",
+    "fullName": "الاسم الكامل *",
+    "fullNamePlaceholder": "الاسم كما هو في جواز السفر",
+    "email": "البريد الإلكتروني *",
+    "emailPlaceholder": "name@example.com",
+    "nationality": "الجنسية *",
+    "selectNationality": "اختر الجنسية...",
+    "nationalityEgypt": "مصرية",
+    "nationalitySaudi": "سعودية",
+    "nationalityEmirati": "إماراتية",
+    "nationalityKuwaiti": "كويتية",
+    "nationalityAmerican": "أمريكية",
+    "phone": "رقم الهاتف (يفضل واتساب) *",
+    "phonePlaceholder": "مثال: 00201xxxxxxxxx",
+    "travelDate": "تاريخ السفر المتوقع *",
+    "budget": "الميزانية التقريبية للشخص الواحد *",
+    "selectBudget": "حدد الميزانية المتوقعة...",
+    "budgetOption1": "من 1000$ إلى 2000$",
+    "budgetOption2": "من 2000$ إلى 3000$",
+    "budgetOption3": "3000$ فأكثر",
+    "adults": "البالغين (+12 سنة)",
+    "children": "الأطفال (2 - 11 سنة)",
+    "infants": "الرضع (تحت سنتين)",
+    "passengerSection": "أسماء المسافرين والمرافقين:",
+    "passengerAdultPlaceholder": "اسم الشخص البالغ رقم {{index}} *",
+    "passengerChildPlaceholder": "اسم الطفل رقم {{index}} *",
+    "passengerInfantPlaceholder": "اسم الرضيع رقم {{index}} *",
+    "specialRequests": "تفاصيل أو طلبات خاصة",
+    "specialRequestsPlaceholder": "أي تفاصيل إضافية...",
+    "submit": "أرسل الطلب الآن!",
+    "successAlert": "تم إرسال طلبك بنجاح! سنتواصل معك قريباً.",
+    "socialFooterDesc": "بحاجة لمساعدة فورية؟ تواصل معنا عبر إحدى الوسائل التالية:"
   }
 }

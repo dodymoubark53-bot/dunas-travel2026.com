@@ -1,0 +1,938 @@
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaPlane, FaWhatsapp, FaPhone, FaFacebookF, FaInstagram } from 'react-icons/fa';
+import Button from '../components/ui/Button';
+
+const TailorTour = () => {
+  const { t, i18n } = useTranslation();
+  const isRtl = i18n.dir() === 'rtl';
+
+  const [step, setStep] = useState(1);
+  const [animationState, setAnimationState] = useState('parked-1'); // parked-1, parked-2, flying-forward, flying-backward
+  const [selectedDestinations, setSelectedDestinations] = useState([]);
+  const [destError, setDestError] = useState(false);
+
+  // Traveler contact & info state
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [nationality, setNationality] = useState('');
+  const [phone, setPhone] = useState('');
+  const [travelDate, setTravelDate] = useState('');
+  const [budget, setBudget] = useState('');
+
+  // Traveler counts
+  const [adults, setAdults] = useState(1);
+  const [children, setChildren] = useState(0);
+  const [infants, setInfants] = useState(0);
+
+  // Dynamic names
+  const [passengerNames, setPassengerNames] = useState(['']); // initially 1 adult
+  const [specialRequests, setSpecialRequests] = useState('');
+
+  // Update dynamic passenger names array size
+  useEffect(() => {
+    const totalCount = adults + children + infants;
+    setPassengerNames((prev) => {
+      const next = [...prev];
+      if (next.length < totalCount) {
+        while (next.length < totalCount) {
+          next.push('');
+        }
+      } else if (next.length > totalCount) {
+        next.splice(totalCount);
+      }
+      return next;
+    });
+  }, [adults, children, infants]);
+
+  const handlePassengerNameChange = (index, value) => {
+    setPassengerNames((prev) => {
+      const next = [...prev];
+      next[index] = value;
+      return next;
+    });
+  };
+
+  const handleDestinationToggle = (dest) => {
+    setSelectedDestinations((prev) => {
+      const updated = prev.includes(dest)
+        ? prev.filter((d) => d !== dest)
+        : [...prev, dest];
+      if (updated.length > 0) {
+        setDestError(false);
+      }
+      return updated;
+    });
+  };
+
+  const handleNextStep = () => {
+    if (selectedDestinations.length === 0) {
+      setDestError(true);
+    } else {
+      setDestError(false);
+      setAnimationState('flying-forward');
+      setStep(2);
+    }
+  };
+
+  const handleBackStep = () => {
+    setAnimationState('flying-backward');
+    setStep(1);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(t('tailor.successAlert', 'Your request has been submitted successfully! We will contact you soon.'));
+    // Reset form
+    setSelectedDestinations([]);
+    setFullName('');
+    setEmail('');
+    setNationality('');
+    setPhone('');
+    setTravelDate('');
+    setBudget('');
+    setAdults(1);
+    setChildren(0);
+    setInfants(0);
+    setPassengerNames(['']);
+    setSpecialRequests('');
+    setAnimationState('parked-1');
+    setStep(1);
+  };
+
+  // Select plane-icon class dynamically depending on step & language direction
+  const getPlaneClass = () => {
+    if (isRtl) {
+      if (animationState === 'parked-1') return 'plane-parked-1-rtl';
+      if (animationState === 'parked-2') return 'plane-parked-2-rtl';
+      if (animationState === 'flying-forward') return 'plane-fly-forward-rtl';
+      if (animationState === 'flying-backward') return 'plane-fly-backward-rtl';
+    } else {
+      if (animationState === 'parked-1') return 'plane-parked-1-ltr';
+      if (animationState === 'parked-2') return 'plane-parked-2-ltr';
+      if (animationState === 'flying-forward') return 'plane-fly-forward-ltr';
+      if (animationState === 'flying-backward') return 'plane-fly-backward-ltr';
+    }
+    return '';
+  };
+
+  const isFlying = animationState === 'flying-forward' || animationState === 'flying-backward';
+
+  const destinations = [
+    {
+      id: 'egypt',
+      name: t('nav.egypt', 'Egypt'),
+      img: 'https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      id: 'turkey',
+      name: t('nav.turkey', 'Turkey'),
+      img: 'https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      id: 'jordan',
+      name: t('nav.jordan', 'Jordan'),
+      img: 'https://images.unsplash.com/photo-1579606032821-4e6161c81bd3?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      id: 'morocco',
+      name: t('nav.morocco', 'Morocco'),
+      img: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      id: 'greece',
+      name: t('nav.greece', 'Greece'),
+      img: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      id: 'dubai',
+      name: t('nav.dubai', 'Dubai'),
+      img: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      id: 'tunisia',
+      name: t('nav.tunisia', 'Tunisia'),
+      img: 'https://images.unsplash.com/photo-1580502304784-8985b7eb7260?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      id: 'holyland',
+      name: t('nav.holyland', 'Holy Land'),
+      img: 'https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=800&q=80',
+    },
+  ];
+
+  const totalPassengers = adults + children + infants;
+
+  return (
+    <div className="w-full bg-obsidian-50 pb-24 font-body">
+      <Helmet>
+        <title>{t('tailor.title', 'Tailor Your Bespoke Tour | Dunas Travel')}</title>
+        <meta
+          name="description"
+          content={t(
+            'tailor.seoDesc',
+            'Customize your luxury dream holiday with Dunas Travel. Choose your destinations, details, and let our experts design your perfect itinerary.'
+          )}
+        />
+      </Helmet>
+
+      {/* Styled Embed block for component custom CSS and Keyframes */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        .stepper-container {
+          position: relative;
+          max-width: 800px;
+          margin: 0 auto 50px auto;
+        }
+        .progress-line {
+          position: absolute;
+          top: 24px;
+          left: 10%;
+          right: 10%;
+          height: 2px;
+          border-top: 3px dashed #b1c1ce;
+          z-index: 0;
+        }
+        .plane-icon {
+          position: absolute;
+          top: 8px;
+          font-size: 28px;
+          color: var(--color-gold, #f5a623);
+          z-index: 10;
+        }
+
+        /* Default parked states */
+        .plane-parked-1-ltr {
+          left: 11%;
+          transform: translateY(0) rotate(0deg) scaleX(1);
+        }
+        .plane-parked-2-ltr {
+          left: 83%;
+          transform: translateY(0) rotate(0deg) scaleX(1);
+        }
+        .plane-parked-1-rtl {
+          right: 11%;
+          transform: translateY(0) rotate(0deg) scaleX(-1);
+        }
+        .plane-parked-2-rtl {
+          right: 83%;
+          transform: translateY(0) rotate(0deg) scaleX(-1);
+        }
+
+        /* Forward animations (Step 1 -> Step 2) */
+        .plane-fly-forward-ltr {
+          animation: flyForwardLTR 2s ease-in-out forwards;
+        }
+        .plane-fly-forward-rtl {
+          animation: flyForwardRTL 2s ease-in-out forwards;
+        }
+
+        /* Backward animations (Step 2 -> Step 1) */
+        .plane-fly-backward-ltr {
+          animation: flyBackwardLTR 2s ease-in-out forwards;
+        }
+        .plane-fly-backward-rtl {
+          animation: flyBackwardRTL 2s ease-in-out forwards;
+        }
+
+        /* Keyframes for flight trajectories */
+        @keyframes flyForwardLTR {
+          0% {
+            left: 11%;
+            transform: translateY(0) rotate(0deg) scaleX(1);
+          }
+          30% {
+            transform: translateY(-35px) rotate(-15deg) scaleX(1);
+          }
+          50% {
+            left: 47%;
+            transform: translateY(-50px) rotate(0deg) scaleX(1);
+          }
+          70% {
+            transform: translateY(-35px) rotate(15deg) scaleX(1);
+          }
+          100% {
+            left: 83%;
+            transform: translateY(0) rotate(0deg) scaleX(1);
+          }
+        }
+
+        @keyframes flyBackwardLTR {
+          0% {
+            left: 83%;
+            transform: translateY(0) rotate(0deg) scaleX(-1);
+          }
+          30% {
+            transform: translateY(-35px) rotate(15deg) scaleX(-1);
+          }
+          50% {
+            left: 47%;
+            transform: translateY(-50px) rotate(0deg) scaleX(-1);
+          }
+          70% {
+            transform: translateY(-35px) rotate(-15deg) scaleX(-1);
+          }
+          100% {
+            left: 11%;
+            transform: translateY(0) rotate(0deg) scaleX(-1);
+          }
+        }
+
+        @keyframes flyForwardRTL {
+          0% {
+            right: 11%;
+            transform: translateY(0) rotate(0deg) scaleX(-1);
+          }
+          30% {
+            transform: translateY(-35px) rotate(15deg) scaleX(-1);
+          }
+          50% {
+            right: 47%;
+            transform: translateY(-50px) rotate(0deg) scaleX(-1);
+          }
+          70% {
+            transform: translateY(-35px) rotate(-15deg) scaleX(-1);
+          }
+          100% {
+            right: 83%;
+            transform: translateY(0) rotate(0deg) scaleX(-1);
+          }
+        }
+
+        @keyframes flyBackwardRTL {
+          0% {
+            right: 83%;
+            transform: translateY(0) rotate(0deg) scaleX(1);
+          }
+          30% {
+            transform: translateY(-35px) rotate(-15deg) scaleX(1);
+          }
+          50% {
+            right: 47%;
+            transform: translateY(-50px) rotate(0deg) scaleX(1);
+          }
+          70% {
+            transform: translateY(-35px) rotate(15deg) scaleX(1);
+          }
+          100% {
+            right: 11%;
+            transform: translateY(0) rotate(0deg) scaleX(1);
+          }
+        }
+
+        /* Active smoke trail */
+        .exhaust-trail {
+          position: absolute;
+          left: -15px; /* Behind the tail */
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          gap: 6px;
+        }
+        .exhaust-trail .dot {
+          width: 6px;
+          height: 6px;
+          background-color: rgba(245, 166, 35, 0.8);
+          border-radius: 50%;
+          opacity: 0;
+          animation: trailSmoke 1s infinite;
+        }
+        .exhaust-trail .dot-1 { animation-delay: 0s; }
+        .exhaust-trail .dot-2 { animation-delay: 0.2s; }
+        .exhaust-trail .dot-3 { animation-delay: 0.4s; }
+
+        @keyframes trailSmoke {
+          0% {
+            transform: scale(0.5) translateX(0);
+            opacity: 0.8;
+          }
+          100% {
+            transform: scale(1.8) translateX(-20px);
+            opacity: 0;
+          }
+        }
+
+        /* 3D perspective submit wrapper */
+        .submit-wrapper {
+          perspective: 600px;
+          display: flex;
+          justify-content: center;
+          padding: 20px 0;
+        }
+
+        /* 3D floating submit button */
+        .btn-3d-glow {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 18px 56px;
+          border: 3px solid var(--color-gold, #f5a623);
+          border-radius: 16px;
+          background-color: var(--color-primary, #1e3a8a);
+          color: white;
+          font-family: var(--font-body, 'Montserrat', sans-serif);
+          font-size: 22px;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          cursor: pointer;
+          position: relative;
+          z-index: 1;
+          transform-style: preserve-3d;
+          transform: rotateX(12deg);
+          transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
+          animation: float3D 1.8s ease-in-out infinite alternate;
+        }
+
+        @keyframes float3D {
+          0% {
+            transform: translateY(0) rotateX(12deg);
+            box-shadow:
+              0 6px 0 #c07d0a,
+              0 12px 0 #7a4f04,
+              0 15px 25px rgba(26, 26, 70, 0.4),
+              0 0 20px rgba(245, 166, 35, 0.4);
+          }
+          100% {
+            transform: translateY(-8px) rotateX(12deg);
+            box-shadow:
+              0 14px 0 #c07d0a,
+              0 20px 0 #7a4f04,
+              0 25px 35px rgba(26, 26, 70, 0.35),
+              0 0 35px rgba(245, 166, 35, 0.65);
+          }
+        }
+
+        .btn-3d-glow:hover {
+          animation: none; /* pause the floating animation */
+          transform: translateY(4px) rotateX(12deg) scale(0.98);
+          box-shadow:
+            0 2px 0 #c07d0a,
+            0 4px 0 #7a4f04,
+            0 6px 12px rgba(26, 26, 70, 0.5),
+            0 0 15px rgba(245, 166, 35, 0.5);
+        }
+
+        .btn-3d-glow:active {
+          animation: none;
+          transform: translateY(8px) rotateX(12deg) scale(0.95);
+          box-shadow:
+            0 0px 0 #c07d0a,
+            0 0px 0 #7a4f04,
+            0 2px 4px rgba(26, 26, 70, 0.6),
+            0 0 5px rgba(245, 166, 35, 0.3);
+          transition: transform 0.05s ease, box-shadow 0.05s ease;
+        }
+
+        /* 3D social footer styling */
+        .social-footer-3d {
+          margin-top: 60px;
+          text-align: center;
+          padding-top: 40px;
+          border-top: 1px solid rgba(26, 26, 46, 0.1);
+        }
+        .social-footer-3d ul {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          gap: 30px;
+          list-style: none;
+          padding-bottom: 30px;
+          transform: rotate(-8deg) skew(8deg);
+          margin-top: 20px;
+        }
+        .social-footer-3d ul li {
+          position: relative;
+          width: 60px;
+          height: 60px;
+        }
+        .social-footer-3d ul li a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #fff !important;
+          font-size: 1.8rem;
+          text-decoration: none;
+          transition: 0.5s ease;
+          border-radius: 12px;
+          box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.08);
+          z-index: 1;
+        }
+        .social-footer-3d ul li a::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -12px;
+          width: 12px;
+          height: 100%;
+          transition: 0.5s ease;
+          transform: rotate(0deg) skewY(-45deg);
+          transform-origin: right;
+          border-radius: 12px 0 0 12px;
+        }
+        .social-footer-3d ul li a::after {
+          content: "";
+          position: absolute;
+          bottom: -12px;
+          left: 0;
+          width: 100%;
+          height: 12px;
+          transition: 0.5s ease;
+          transform: rotate(0deg) skewX(-45deg);
+          transform-origin: top;
+          border-radius: 0 0 12px 12px;
+        }
+
+        .social-footer-3d ul li.ts-whatsapp a { background: #22d765; }
+        .social-footer-3d ul li.ts-whatsapp a::before { background: #1db856; }
+        .social-footer-3d ul li.ts-whatsapp a::after { background: #55e18c; }
+
+        .social-footer-3d ul li.ts-phone a { background: #55c760; }
+        .social-footer-3d ul li.ts-phone a::before { background: #46a650; }
+        .social-footer-3d ul li.ts-phone a::after { background: #71cf7c; }
+
+        .social-footer-3d ul li.ts-facebook a { background: #3b5999; }
+        .social-footer-3d ul li.ts-facebook a::before { background: #2e477d; }
+        .social-footer-3d ul li.ts-facebook a::after { background: #4e6bb3; }
+
+        .social-footer-3d ul li.ts-instagram a { background: linear-gradient(135deg, #e4405f, #b339ac, #f96d00); }
+        .social-footer-3d ul li.ts-instagram a::before { background: linear-gradient(135deg, #ac2f46, #8e2b8b, #c15600); }
+        .social-footer-3d ul li.ts-instagram a::after { background: linear-gradient(135deg, #e4405f, #b339ac, #f96d00); opacity: 0.8; }
+
+        .social-footer-3d ul li:hover a {
+          transform: translate(12px, -12px);
+          box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.15);
+        }
+      ` }} />
+
+      {/* Banner Section */}
+      <section className="relative h-[40vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-obsidian-900"></div>
+        <div className="absolute inset-0 bg-hero-overlay"></div>
+        <div className="relative z-10 text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-display-lg text-ivory-50 px-4"
+          >
+            {t('tailor.heading', 'Tailor Your Custom Journey')}
+          </motion.h1>
+        </div>
+      </section>
+
+      {/* Content Form Section */}
+      <section className="container mx-auto px-6 py-12 -mt-16 relative z-20 max-w-5xl">
+        <div className="bg-ivory-50 rounded-xl shadow-card p-6 md:p-12 border border-obsidian-900/5">
+          {/* Stepper Header */}
+          <div className="stepper-container">
+            <div className="progress-line"></div>
+            <div className={`plane-icon ${getPlaneClass()}`}>
+              <FaPlane className="rtl-flip" />
+              {isFlying && (
+                <div className="exhaust-trail">
+                  <span className="dot dot-1"></span>
+                  <span className="dot dot-2"></span>
+                  <span className="dot dot-3"></span>
+                </div>
+              )}
+            </div>
+            <div className="flex justify-between relative z-10">
+              <div className="text-center w-32">
+                <div
+                  className={`w-12 h-12 rounded-full mx-auto flex items-center justify-center font-bold text-lg border-2 transition-all duration-500 ${
+                    step >= 1
+                      ? 'bg-gold-500 text-obsidian-900 border-gold-500 shadow-gold'
+                      : 'bg-white text-obsidian-300 border-gray-200'
+                  }`}
+                >
+                  1
+                </div>
+                <div
+                  className={`mt-2 text-sm font-semibold transition-colors duration-500 ${
+                    step >= 1 ? 'text-gold-500' : 'text-obsidian-300'
+                  }`}
+                >
+                  {t('tailor.step1Label', 'Destinations')}
+                </div>
+              </div>
+
+              <div className="text-center w-32">
+                <div
+                  className={`w-12 h-12 rounded-full mx-auto flex items-center justify-center font-bold text-lg border-2 transition-all duration-500 ${
+                    step >= 2
+                      ? 'bg-gold-500 text-obsidian-900 border-gold-500 shadow-gold'
+                      : 'bg-white text-obsidian-300 border-gray-200'
+                  }`}
+                >
+                  2
+                </div>
+                <div
+                  className={`mt-2 text-sm font-semibold transition-colors duration-500 ${
+                    step >= 2 ? 'text-gold-500' : 'text-obsidian-300'
+                  }`}
+                >
+                  {t('tailor.step2Label', 'Trip Details')}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Form Element */}
+          <form onSubmit={handleSubmit} className="mt-8">
+            <AnimatePresence mode="wait">
+              {step === 1 && (
+                <motion.div
+                  key="step1"
+                  initial={{ opacity: 0, x: isRtl ? 50 : -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: isRtl ? -50 : 50 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <h3 className="text-display-sm text-center text-obsidian-900 mb-8 font-medium">
+                    {t('tailor.step1Title', 'Where would you like to travel? (You can choose more than one)')}
+                  </h3>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+                    {destinations.map((dest) => {
+                      const isSelected = selectedDestinations.includes(dest.id);
+                      return (
+                        <div
+                          key={dest.id}
+                          onClick={() => handleDestinationToggle(dest.id)}
+                          className="relative h-[200px] rounded-xl overflow-hidden cursor-pointer group border-3 transition-all duration-300"
+                          style={{
+                            borderColor: isSelected ? 'var(--color-gold, #f5a623)' : 'rgba(26,26,46,0.1)',
+                            boxShadow: isSelected ? '0 0 24px rgba(245,166,35,0.25)' : 'none',
+                          }}
+                        >
+                          <img
+                            src={dest.img}
+                            alt={dest.name}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-obsidian-900/80 via-obsidian-900/20 to-transparent flex items-end justify-center p-4">
+                            <span className="text-ivory-50 font-bold text-lg drop-shadow-md text-center">
+                              {dest.name}
+                            </span>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  {destError && (
+                    <p className="text-[#e74c3c] text-center mb-6 font-medium text-body-md">
+                      {t('tailor.errorDestination', '⚠️ Please select at least one destination to continue.')}
+                    </p>
+                  )}
+
+                  <div className="flex justify-end pt-6 border-t border-obsidian-900/10">
+                    <Button
+                      type="button"
+                      variant="gold-glow"
+                      onClick={handleNextStep}
+                      className="px-8 py-3"
+                    >
+                      {t('tailor.next', 'Next Step')}
+                    </Button>
+                  </div>
+                </motion.div>
+              )}
+
+              {step === 2 && (
+                <motion.div
+                  key="step2"
+                  initial={{ opacity: 0, x: isRtl ? -50 : 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: isRtl ? 50 : -50 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <h3 className="text-display-sm text-obsidian-900 mb-8 font-medium">
+                    {t('tailor.step2Title', 'Enter Contact & Traveler Info')}
+                  </h3>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                      <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                        {t('tailor.fullName', 'Full Name *')}
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={fullName}
+                        onChange={(e) => setFullName(e.target.value)}
+                        placeholder={t('tailor.fullNamePlaceholder', 'Name as shown in passport')}
+                        className="w-full p-4 bg-white border border-obsidian-900/10 rounded-xl focus:border-gold-500 focus:shadow-[0_0_12px_rgba(245,166,35,0.15)] outline-none transition-all text-obsidian-900"
+                      />
+                    </div>
+                    <div>
+                      <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                        {t('tailor.email', 'Email Address *')}
+                      </label>
+                      <input
+                        type="email"
+                        required
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder={t('tailor.emailPlaceholder', 'name@example.com')}
+                        className="w-full p-4 bg-white border border-obsidian-900/10 rounded-xl focus:border-gold-500 focus:shadow-[0_0_12px_rgba(245,166,35,0.15)] outline-none transition-all text-obsidian-900"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                      <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                        {t('tailor.nationality', 'Nationality *')}
+                      </label>
+                      <select
+                        required
+                        value={nationality}
+                        onChange={(e) => setNationality(e.target.value)}
+                        className="w-full p-4 bg-white border border-obsidian-900/10 rounded-xl focus:border-gold-500 focus:shadow-[0_0_12px_rgba(245,166,35,0.15)] outline-none transition-all text-obsidian-900 cursor-pointer"
+                      >
+                        <option value="">{t('tailor.selectNationality', 'Select nationality...')}</option>
+                        <option value="Egyptian">{t('tailor.nationalityEgypt', 'Egyptian')}</option>
+                        <option value="Saudi">{t('tailor.nationalitySaudi', 'Saudi')}</option>
+                        <option value="Emirati">{t('tailor.nationalityEmirati', 'Emirati')}</option>
+                        <option value="Kuwaiti">{t('tailor.nationalityKuwaiti', 'Kuwaiti')}</option>
+                        <option value="American">{t('tailor.nationalityAmerican', 'American')}</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                        {t('tailor.phone', 'Phone Number (WhatsApp preferred) *')}
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        placeholder={t('tailor.phonePlaceholder', 'Example: 00201xxxxxxxxx')}
+                        className="w-full p-4 bg-white border border-obsidian-900/10 rounded-xl focus:border-gold-500 focus:shadow-[0_0_12px_rgba(245,166,35,0.15)] outline-none transition-all text-obsidian-900"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                      <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                        {t('tailor.travelDate', 'Expected Travel Date *')}
+                      </label>
+                      <input
+                        type="date"
+                        required
+                        value={travelDate}
+                        onChange={(e) => setTravelDate(e.target.value)}
+                        className="w-full p-4 bg-white border border-obsidian-900/10 rounded-xl focus:border-gold-500 focus:shadow-[0_0_12px_rgba(245,166,35,0.15)] outline-none transition-all text-obsidian-900 cursor-pointer"
+                      />
+                    </div>
+                    <div>
+                      <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                        {t('tailor.budget', 'Approximate Budget Per Person *')}
+                      </label>
+                      <select
+                        required
+                        value={budget}
+                        onChange={(e) => setBudget(e.target.value)}
+                        className="w-full p-4 bg-white border border-obsidian-900/10 rounded-xl focus:border-gold-500 focus:shadow-[0_0_12px_rgba(245,166,35,0.15)] outline-none transition-all text-obsidian-900 cursor-pointer"
+                      >
+                        <option value="">{t('tailor.selectBudget', 'Select expected budget...')}</option>
+                        <option value="1000-2000">{t('tailor.budgetOption1', '$1000 to $2000')}</option>
+                        <option value="2000-3000">{t('tailor.budgetOption2', '$2000 to $3000')}</option>
+                        <option value="3000+">{t('tailor.budgetOption3', '$3000 or more')}</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* Travelers Counts */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <div>
+                      <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                        {t('tailor.adults', 'Adults (+12 years)')}
+                      </label>
+                      <input
+                        type="number"
+                        min="1"
+                        value={adults}
+                        onChange={(e) => setAdults(Math.max(1, parseInt(e.target.value) || 1))}
+                        className="w-full p-4 bg-white border border-obsidian-900/10 rounded-xl focus:border-gold-500 focus:shadow-[0_0_12px_rgba(245,166,35,0.15)] outline-none transition-all text-obsidian-900"
+                      />
+                    </div>
+                    <div>
+                      <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                        {t('tailor.children', 'Children (2 - 11 years)')}
+                      </label>
+                      <input
+                        type="number"
+                        min="0"
+                        value={children}
+                        onChange={(e) => setChildren(Math.max(0, parseInt(e.target.value) || 0))}
+                        className="w-full p-4 bg-white border border-obsidian-900/10 rounded-xl focus:border-gold-500 focus:shadow-[0_0_12px_rgba(245,166,35,0.15)] outline-none transition-all text-obsidian-900"
+                      />
+                    </div>
+                    <div>
+                      <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                        {t('tailor.infants', 'Infants (under 2 years)')}
+                      </label>
+                      <input
+                        type="number"
+                        min="0"
+                        value={infants}
+                        onChange={(e) => setInfants(Math.max(0, parseInt(e.target.value) || 0))}
+                        className="w-full p-4 bg-white border border-obsidian-900/10 rounded-xl focus:border-gold-500 focus:shadow-[0_0_12px_rgba(245,166,35,0.15)] outline-none transition-all text-obsidian-900"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Reactive Dynamic Names */}
+                  {totalPassengers > 0 && (
+                    <div className="mb-6">
+                      <label className="block mb-3 font-semibold text-body-md text-obsidian-700">
+                        {t('tailor.passengerSection', 'Names of travelers and companions:')}
+                      </label>
+                      <div className="p-6 bg-obsidian-50/50 rounded-xl border border-dashed border-obsidian-900/20">
+                        {/* Render Adults */}
+                        {Array.from({ length: adults }).map((_, i) => {
+                          const index = i;
+                          return (
+                            <div key={`adult-${i}`} className="mb-3">
+                              <input
+                                type="text"
+                                required
+                                value={passengerNames[index] || ''}
+                                onChange={(e) => handlePassengerNameChange(index, e.target.value)}
+                                placeholder={t('tailor.passengerAdultPlaceholder', 'Adult {{index}} Name *').replace('{{index}}', i + 1)}
+                                className="w-full p-4 bg-white border border-obsidian-900/10 rounded-xl focus:border-gold-500 outline-none transition-all text-obsidian-900"
+                              />
+                            </div>
+                          );
+                        })}
+
+                        {/* Render Children */}
+                        {Array.from({ length: children }).map((_, i) => {
+                          const index = adults + i;
+                          return (
+                            <div key={`child-${i}`} className="mb-3">
+                              <input
+                                type="text"
+                                required
+                                value={passengerNames[index] || ''}
+                                onChange={(e) => handlePassengerNameChange(index, e.target.value)}
+                                placeholder={t('tailor.passengerChildPlaceholder', 'Child {{index}} Name *').replace('{{index}}', i + 1)}
+                                className="w-full p-4 bg-white border border-obsidian-900/10 rounded-xl focus:border-gold-500 outline-none transition-all text-obsidian-900"
+                              />
+                            </div>
+                          );
+                        })}
+
+                        {/* Render Infants */}
+                        {Array.from({ length: infants }).map((_, i) => {
+                          const index = adults + children + i;
+                          return (
+                            <div key={`infant-${i}`} className="mb-3">
+                              <input
+                                type="text"
+                                required
+                                value={passengerNames[index] || ''}
+                                onChange={(e) => handlePassengerNameChange(index, e.target.value)}
+                                placeholder={t('tailor.passengerInfantPlaceholder', 'Infant {{index}} Name *').replace('{{index}}', i + 1)}
+                                className="w-full p-4 bg-white border border-obsidian-900/10 rounded-xl focus:border-gold-500 outline-none transition-all text-obsidian-900"
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Special Requests */}
+                  <div className="mb-8">
+                    <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                      {t('tailor.specialRequests', 'Special details or requests')}
+                    </label>
+                    <textarea
+                      rows="3"
+                      value={specialRequests}
+                      onChange={(e) => setSpecialRequests(e.target.value)}
+                      placeholder={t('tailor.specialRequestsPlaceholder', 'Any additional details...')}
+                      className="w-full p-4 bg-white border border-obsidian-900/10 rounded-xl focus:border-gold-500 focus:shadow-[0_0_12px_rgba(245,166,35,0.15)] outline-none transition-all text-obsidian-900 resize-none"
+                    />
+                  </div>
+
+                  {/* Buttons Navigation */}
+                  <div className="flex justify-between items-center pt-6 border-t border-obsidian-900/10 relative">
+                    <button
+                      type="button"
+                      onClick={handleBackStep}
+                      className="px-6 py-3 border border-obsidian-900/20 text-obsidian-700 font-medium rounded-full hover:bg-obsidian-900/5 transition-all animate-none"
+                    >
+                      {t('tailor.back', 'Back')}
+                    </button>
+                    <div className="submit-wrapper">
+                      <button type="submit" className="btn-3d-glow">
+                        {t('tailor.submit', 'Send Inquiry Now!')}
+                      </button>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </form>
+
+          {/* Social Footer */}
+          <div className="social-footer-3d">
+            <p className="text-body-md text-obsidian-500 font-semibold mb-4">
+              {t('tailor.socialFooterDesc', 'Need immediate assistance? Contact us via one of the following channels:')}
+            </p>
+            <ul>
+              <li className="ts-whatsapp">
+                <a
+                  href="https://wa.me/201004146843"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="WhatsApp"
+                >
+                  <FaWhatsapp />
+                </a>
+              </li>
+              <li className="ts-phone">
+                <a href="tel:+20233746643" title={t('contact.phoneLabel', 'Phone')}>
+                  <FaPhone />
+                </a>
+              </li>
+              <li className="ts-facebook">
+                <a
+                  href="https://www.facebook.com/share/1BnRWtoUdo/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Facebook"
+                >
+                  <FaFacebookF />
+                </a>
+              </li>
+              <li className="ts-instagram">
+                <a
+                  href="https://www.instagram.com/dunas_travel?igsh=bWkyb2FhY2hoNnNo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Instagram"
+                >
+                  <FaInstagram />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default TailorTour;

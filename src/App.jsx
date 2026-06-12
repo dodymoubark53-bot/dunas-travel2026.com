@@ -32,6 +32,7 @@ const Transportation = lazy(
 const TransportationDetails = lazy(
   () => import("./pages/transportation/TransportationDetails"),
 );
+const TailorTour = lazy(() => import("./pages/TailorTour"));
 
 const PageTransition = ({ children }) => (
   <motion.div
@@ -318,6 +319,14 @@ function App() {
                   element={
                     <PageTransition>
                       <Contact />
+                    </PageTransition>
+                  }
+                />
+                <Route
+                  path="tailor-a-tour"
+                  element={
+                    <PageTransition>
+                      <TailorTour />
                     </PageTransition>
                   }
                 />
