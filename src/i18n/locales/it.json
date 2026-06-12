@@ -19,6 +19,14 @@
     "italy": "Italia",
     "spain": "Spagna",
     "brazil": "Brasile",
+    "egypt": "Egitto",
+    "turkey": "Turchia",
+    "jordan": "Giordania",
+    "morocco": "Marocco",
+    "greece": "Grecia",
+    "dubai": "Dubai",
+    "tunisia": "Tunisia",
+    "holyland": "Terra Santa",
     "myBookings": "Le mie prenotazioni",
     "myProfile": "Il mio profilo",
     "transportation": "Trasporti"
@@ -1362,18 +1370,66 @@
       "subtitle": "Terra del sole e del samba",
       "title": "Brasile"
     },
-    "italy": {
-      "gridDesc": "Esplora la nostra selezione esclusiva dell'itinerario degli ultimi piani per offrire un'esperienza premium e coinvolgente delle più grandi meraviglie italiane.",
-      "gridTitle": "I Nostri Itinerari in Italia",
-      "seoDesc": "Scopri l'Italia. Dalla splendida Costiera Amalfitana ai monumenti storici di Roma e Firenze, imbarcati in un viaggio indimenticabile di lusso.",
-      "seoTitle": "Tour e Vacanze di Lusso in Italia | Viaggi di Lusso",
-      "subtitle": "La Dolce Vita",
-      "title": "Scopri l'Italia"
+    "egypt": {
+      "title": "Egitto",
+      "subtitle": "La terra dei faraoni",
+      "seoTitle": "Tour di lusso in Egitto | Dunas Travel",
+      "seoDesc": "Scopri viaggi di lusso in Egitto. Itinerari personalizzati in arrivo."
     },
-    "spain": {
-      "seoDesc": "Esplora viaggi di lusso in Spagna. Itinerari personalizzati in arrivo.",
-      "seoTitle": "Tour e vacanze di lusso in Spagna | Viaggio Dunas"
+    "turkey": {
+      "title": "Turchia",
+      "subtitle": "Dove Oriente incontra Occidente",
+      "seoTitle": "Tour di lusso in Turchia | Dunas Travel",
+      "seoDesc": "Scopri viaggi di lusso in Turchia. Itinerari personalizzati in arrivo."
+    },
+    "jordan": {
+      "title": "Giordania",
+      "subtitle": "Il regno color rosa antico",
+      "seoTitle": "Tour di lusso in Giordania | Dunas Travel",
+      "seoDesc": "Scopri viaggi di lusso in Giordania. Itinerari personalizzati in arrivo."
+    },
+    "morocco": {
+      "title": "Marocco",
+      "subtitle": "I colori del Maghreb",
+      "seoTitle": "Tour di lusso in Marocco | Dunas Travel",
+      "seoDesc": "Scopri viaggi di lusso in Marocco. Itinerari personalizzati in arrivo."
+    },
+    "greece": {
+      "title": "Grecia",
+      "subtitle": "La culla della civiltà",
+      "seoTitle": "Tour di lusso in Grecia | Dunas Travel",
+      "seoDesc": "Scopri viaggi di lusso in Grecia. Itinerari personalizzati in arrivo."
+    },
+    "dubai": {
+      "title": "Dubai",
+      "subtitle": "Il lusso moderno ridefinito",
+      "seoTitle": "Tour di lusso a Dubai | Dunas Travel",
+      "seoDesc": "Scopri viaggi di lusso a Dubai. Itinerari personalizzati in arrivo."
+    },
+    "tunisia": {
+      "title": "Tunisia",
+      "subtitle": "Il gioiello del Nord Africa",
+      "seoTitle": "Tour di lusso in Tunisia | Dunas Travel",
+      "seoDesc": "Scopri viaggi di lusso in Tunisia. Itinerari personalizzati in arrivo."
+    },
+    "holyland": {
+      "title": "Terra Santa",
+      "subtitle": "Un viaggio tra fede e storia",
+      "seoTitle": "Tour di lusso in Terra Santa | Dunas Travel",
+      "seoDesc": "Scopri viaggi di lusso in Terra Santa. Itinerari personalizzati in arrivo."
     }
+  },
+  "italy": {
+    "gridDesc": "Esplora la nostra selezione esclusiva dell'itinerario degli ultimi piani per offrire un'esperienza premium e coinvolgente delle più grandi meraviglie italiane.",
+    "gridTitle": "I Nostri Itinerari in Italia",
+    "seoDesc": "Scopri l'Italia. Dalla splendida Costiera Amalfitana ai monumenti storici di Roma e Firenze, imbarcati in un viaggio indimenticabile di lusso.",
+    "seoTitle": "Tour e Vacanze di Lusso in Italia | Viaggi di Lusso",
+    "subtitle": "La Dolce Vita",
+    "title": "Scopri l'Italia"
+  },
+  "spain": {
+    "seoDesc": "Esplora viaggi di lusso in Spagna. Itinerari personalizzati in arrivo.",
+    "seoTitle": "Tour e vacanze di lusso in Spagna | Viaggio Dunas"
   },
   "destinations": {
     "heading": "Le nostre destinazioni",

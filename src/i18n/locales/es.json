@@ -19,6 +19,14 @@
     "italy": "Italia",
     "spain": "España",
     "brazil": "Brasil",
+    "egypt": "Egipto",
+    "turkey": "Turquía",
+    "jordan": "Jordania",
+    "morocco": "Marruecos",
+    "greece": "Grecia",
+    "dubai": "Dubái",
+    "tunisia": "Túnez",
+    "holyland": "Tierra Santa",
     "myBookings": "Mis Reservas",
     "myProfile": "Mi perfil",
     "transportation": "Transporte"
@@ -1388,6 +1396,54 @@
     "spain": {
       "seoDesc": "Explora viajes de lujo en España. Próximamente itinerarios personalizados.",
       "seoTitle": "Tours y vacaciones de lujo en España | Viaje a Dunas"
+    },
+    "egypt": {
+      "title": "Egipto",
+      "subtitle": "La tierra de los faraones",
+      "seoTitle": "Tours de lujo por Egipto | Dunas Travel",
+      "seoDesc": "Explora viajes de lujo por Egipto. Itinerarios personalizados próximamente."
+    },
+    "turkey": {
+      "title": "Turquía",
+      "subtitle": "Donde Oriente encuentra Occidente",
+      "seoTitle": "Tours de lujo por Turquía | Dunas Travel",
+      "seoDesc": "Explora viajes de lujo por Turquía. Itinerarios personalizados próximamente."
+    },
+    "jordan": {
+      "title": "Jordania",
+      "subtitle": "El reino color de rosa",
+      "seoTitle": "Tours de lujo por Jordania | Dunas Travel",
+      "seoDesc": "Explora viajes de lujo por Jordania. Itinerarios personalizados próximamente."
+    },
+    "morocco": {
+      "title": "Marruecos",
+      "subtitle": "Los colores del Magreb",
+      "seoTitle": "Tours de lujo por Marruecos | Dunas Travel",
+      "seoDesc": "Explora viajes de lujo por Marruecos. Itinerarios personalizados próximamente."
+    },
+    "greece": {
+      "title": "Grecia",
+      "subtitle": "La cuna de la civilización",
+      "seoTitle": "Tours de lujo por Grecia | Dunas Travel",
+      "seoDesc": "Explora viajes de lujo por Grecia. Itinerarios personalizados próximamente."
+    },
+    "dubai": {
+      "title": "Dubái",
+      "subtitle": "El lujo moderno redefinido",
+      "seoTitle": "Tours de lujo por Dubái | Dunas Travel",
+      "seoDesc": "Explora viajes de lujo por Dubái. Itinerarios personalizados próximamente."
+    },
+    "tunisia": {
+      "title": "Túnez",
+      "subtitle": "La joya del norte de África",
+      "seoTitle": "Tours de lujo por Túnez | Dunas Travel",
+      "seoDesc": "Explora viajes de lujo por Túnez. Itinerarios personalizados próximamente."
+    },
+    "holyland": {
+      "title": "Tierra Santa",
+      "subtitle": "Un viaje a través de la fe y la historia",
+      "seoTitle": "Tours de lujo por Tierra Santa | Dunas Travel",
+      "seoDesc": "Explora viajes de lujo por Tierra Santa. Itinerarios personalizados próximamente."
     }
   },
   "destinations": {

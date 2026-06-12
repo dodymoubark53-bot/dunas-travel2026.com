@@ -19,6 +19,14 @@
     "italy": "Itália",
     "spain": "Espanha",
     "brazil": "Brasil",
+    "egypt": "Egito",
+    "turkey": "Turquia",
+    "jordan": "Jordânia",
+    "morocco": "Marrocos",
+    "greece": "Grécia",
+    "dubai": "Dubai",
+    "tunisia": "Tunísia",
+    "holyland": "Terra Santa",
     "myBookings": "Minhas reservas",
     "myProfile": "Meu perfil",
     "transportation": "Transporte"
@@ -1385,108 +1393,157 @@
       "subtitle": "La Dolce Vita",
       "title": "Scopri l'Italia"
     },
-    "spain": {
-      "seoDesc": "Explore luxury journeys in Spain. Custom itineraries coming soon.",
-      "seoTitle": "Passeios e férias de luxo na Espanha | Dunas Viagens"
+    "egypt": {
+      "title": "Egito",
+      "subtitle": "A terra dos faraós",
+      "seoTitle": "Viagens de luxo ao Egito | Dunas Travel",
+      "seoDesc": "Explore viagens de luxo ao Egito. Roteiros personalizados em breve."
+    },
+    "turkey": {
+      "title": "Turquia",
+      "subtitle": "Onde o Oriente encontra o Ocidente",
+      "seoTitle": "Viagens de luxo à Turquia | Dunas Travel",
+      "seoDesc": "Explore viagens de luxo à Turquia. Roteiros personalizados em breve."
+    },
+    "jordan": {
+      "title": "Jordânia",
+      "subtitle": "O reino cor-de-rosa",
+      "seoTitle": "Viagens de luxo à Jordânia | Dunas Travel",
+      "seoDesc": "Explore viagens de luxo à Jordânia. Roteiros personalizados em breve."
+    },
+    "morocco": {
+      "title": "Marrocos",
+      "subtitle": "As cores do Magrebe",
+      "seoTitle": "Viagens de luxo ao Marrocos | Dunas Travel",
+      "seoDesc": "Explore viagens de luxo ao Marrocos. Roteiros personalizados em breve."
+    },
+    "greece": {
+      "title": "Grécia",
+      "subtitle": "O berço da civilização",
+      "seoTitle": "Viagens de luxo à Grécia | Dunas Travel",
+      "seoDesc": "Explore viagens de luxo à Grécia. Roteiros personalizados em breve."
+    },
+    "dubai": {
+      "title": "Dubai",
+      "subtitle": "O luxo moderno redefinido",
+      "seoTitle": "Viagens de luxo a Dubai | Dunas Travel",
+      "seoDesc": "Explore viagens de luxo a Dubai. Roteiros personalizados em breve."
+    },
+    "tunisia": {
+      "title": "Tunísia",
+      "subtitle": "A joia do norte de África",
+      "seoTitle": "Viagens de luxo à Tunísia | Dunas Travel",
+      "seoDesc": "Explore viagens de luxo à Tunísia. Roteiros personalizados em breve."
+    },
+    "holyland": {
+      "title": "Terra Santa",
+      "subtitle": "Uma viagem pela fé e pela história",
+      "seoTitle": "Viagens de luxo à Terra Santa | Dunas Travel",
+      "seoDesc": "Explore viagens de luxo à Terra Santa. Roteiros personalizados em breve."
     }
   },
-  "destinations": {
-    "heading": "Nossos destinos",
-    "metaDesc": "Explore nossos passeios de luxo escolhidos a dedo pela Itália, Espanha e Brasil.",
-    "title": "Todos os destinos | Viagens de luxo",
-    "viewGuide": "Ver guia de destino",
-    "worldCurated": "O mundo, curadoria"
-  },
-  "services": {
-    "allServices": "Todos os serviços",
-    "bestPriceGuarantee": "Garantia de melhor preço",
-    "bookExperience": "Reserve sua experiência",
-    "campingDesc": "Experimente acampamentos de luxo sob as estrelas com chefs particulares e comodidades premium.",
-    "conciergeAvailability": "Nossa equipe de concierge confirmará a disponibilidade dentro de 2 horas.",
-    "cruisesDesc": "Navegue pelo coração do Antigo Egito",
-    "explore": "Explorar",
-    "hotelsDesc": "Acomodações 5 estrelas escolhidas a dedo, oferecendo vistas incomparáveis e conforto absoluto.",
-    "inquireNow": "Pergunte agora",
-    "notFound": "Serviço não encontrado",
-    "ourServices": "Nossos serviços",
-    "safariDesc": "Embarque em uma aventura off-road inesquecível através de areias movediças e majestosas paisagens desérticas.",
-    "seoDesc": "Descubra nossos serviços de luxo personalizados, incluindo hotéis 5 estrelas, safáris no deserto, glamping e cruzeiros privados no Nilo.",
-    "seoServices": "Serviços de luxo",
-    "seoTitle": "Nossos serviços | Viagens de luxo",
-    "subtitle": "Experiências personalizadas",
-    "transportationDesc": "Veículos premium com motoristas profissionais garantindo conforto e segurança absolutos.",
-    "transportationShortDesc": "Veículos premium com motoristas profissionais."
-  },
-  "tourDetail": {
-    "excluded": "Não incluído",
-    "gallery": "Galeria",
-    "highlights": "Principais destaques",
-    "incExc": "O que está incluído e excluído",
-    "included": "Incluído",
-    "overview": "Visão geral"
-  },
-  "transportation": {
-    "aboutVehicle": "Sobre este veículo",
-    "capacity": "Capacidade",
-    "category": "Categoria",
-    "day": "dia",
-    "doorsCount": "Portas",
-    "filter": {
-      "all": "Todos",
-      "buses": "Ônibus",
-      "sedans": "Sedãs",
-      "suvs": "SUVs"
-    },
-    "heroDesc": "Viaje com conforto e estilo",
-    "makeReservation": "Faça uma reserva",
-    "premiumFeatures": "Recursos premium",
-    "reservationDesc": "Reserve seu transporte de luxo com antecedência. Fornecemos motoristas profissionais e veículos premium para garantir uma viagem confortável e elegante.",
-    "reserveNow": "Reserve agora",
-    "seatsCount": "Assentos",
-    "seoDesc": "Veículos premium com motoristas profissionais na Itália, Espanha e Brasil",
-    "seoTitle": "Transporte de luxo",
-    "transmission": "Transmissão"
-  },
-  "auth": {
-    "acceptTermsError": "Você deve aceitar os Termos e Condições",
-    "accountCreatedSuccess": "Conta criada com sucesso! Faça login.",
-    "agreeText": "Eu concordo com o",
-    "allFieldsRequired": "Todos os campos são obrigatórios",
-    "and": "e",
-    "confirmPassword": "Confirmar senha",
-    "confirmPasswordPlaceholder": "Confirme sua senha",
-    "createAccount": "Criar conta",
-    "createAccountBtn": "Criar conta",
-    "emailAddress": "Endereço de e-mail",
-    "emailInUse": "Este e-mail já está em uso",
-    "emailPlaceholder": "Digite seu e-mail",
-    "forgotPassword": "Esqueceu a senha?",
-    "fullName": "Nome Completo",
-    "fullNamePlaceholder": "Digite seu nome completo",
-    "haveAccount": "Já tem uma conta?",
-    "invalidCredentials": "E-mail ou senha inválida",
-    "loginButton": "Entrar",
-    "min8Chars": "Mínimo 8 caracteres",
-    "noAccount": "Não tem uma conta?",
-    "password": "Senha",
-    "passwordLengthError": "A senha deve ter pelo menos 8 caracteres",
-    "passwordPlaceholder": "Digite sua senha",
-    "passwordsDoNotMatch": "As senhas não coincidem",
-    "phoneNumber": "Número de telefone",
-    "phonePlaceholder": "Digite seu número de telefone",
-    "privacyPolicy": "Política de Privacidade",
-    "registerDesc": "Junte-se a nós para organizar suas experiências DUNAS TRAVEL.",
-    "rememberMe": "Lembre-se de mim",
-    "signInBtn": "Entrar",
-    "signInDesc": "Faça login para acessar seus itinerários personalizados.",
-    "termsAndConditions": "Termos e Condições",
-    "welcomeBack": "Bem-vindo de volta"
-  },
-  "languages": {
-    "italian": "Italiano",
-    "portuguese": "Português"
-  },
-  "site": {
-    "luxuryTravel": "Viagens de luxo"
+  "spain": {
+    "seoDesc": "Explore luxury journeys in Spain. Custom itineraries coming soon.",
+    "seoTitle": "Passeios e férias de luxo na Espanha | Dunas Viagens"
   }
+},
+"destinations": {
+  "heading": "Nossos destinos",
+  "metaDesc": "Explore nossos passeios de luxo escolhidos a dedo pela Itália, Espanha e Brasil.",
+  "title": "Todos os destinos | Viagens de luxo",
+  "viewGuide": "Ver guia de destino",
+  "worldCurated": "O mundo, curadoria"
+},
+"services": {
+  "allServices": "Todos os serviços",
+  "bestPriceGuarantee": "Garantia de melhor preço",
+  "bookExperience": "Reserve sua experiência",
+  "campingDesc": "Experimente acampamentos de luxo sob as estrelas com chefs particulares e comodidades premium.",
+  "conciergeAvailability": "Nossa equipe de concierge confirmará a disponibilidade dentro de 2 horas.",
+  "cruisesDesc": "Navegue pelo coração do Antigo Egito",
+  "explore": "Explorar",
+  "hotelsDesc": "Acomodações 5 estrelas escolhidas a dedo, oferecendo vistas incomparáveis e conforto absoluto.",
+  "inquireNow": "Pergunte agora",
+  "notFound": "Serviço não encontrado",
+  "ourServices": "Nossos serviços",
+  "safariDesc": "Embarque em uma aventura off-road inesquecível através de areias movediças e majestosas paisagens desérticas.",
+  "seoDesc": "Descubra nossos serviços de luxo personalizados, incluindo hotéis 5 estrelas, safáris no deserto, glamping e cruzeiros privados no Nilo.",
+  "seoServices": "Serviços de luxo",
+  "seoTitle": "Nossos serviços | Viagens de luxo",
+  "subtitle": "Experiências personalizadas",
+  "transportationDesc": "Veículos premium com motoristas profissionais garantindo conforto e segurança absolutos.",
+  "transportationShortDesc": "Veículos premium com motoristas profissionais."
+},
+"tourDetail": {
+  "excluded": "Não incluído",
+  "gallery": "Galeria",
+  "highlights": "Principais destaques",
+  "incExc": "O que está incluído e excluído",
+  "included": "Incluído",
+  "overview": "Visão geral"
+},
+"transportation": {
+  "aboutVehicle": "Sobre este veículo",
+  "capacity": "Capacidade",
+  "category": "Categoria",
+  "day": "dia",
+  "doorsCount": "Portas",
+  "filter": {
+    "all": "Todos",
+    "buses": "Ônibus",
+    "sedans": "Sedãs",
+    "suvs": "SUVs"
+  },
+  "heroDesc": "Viaje com conforto e estilo",
+  "makeReservation": "Faça uma reserva",
+  "premiumFeatures": "Recursos premium",
+  "reservationDesc": "Reserve seu transporte de luxo com antecedência. Fornecemos motoristas profissionais e veículos premium para garantir uma viagem confortável e elegante.",
+  "reserveNow": "Reserve agora",
+  "seatsCount": "Assentos",
+  "seoDesc": "Veículos premium com motoristas profissionais na Itália, Espanha e Brasil",
+  "seoTitle": "Transporte de luxo",
+  "transmission": "Transmissão"
+},
+"auth": {
+  "acceptTermsError": "Você deve aceitar os Termos e Condições",
+  "accountCreatedSuccess": "Conta criada com sucesso! Faça login.",
+  "agreeText": "Eu concordo com o",
+  "allFieldsRequired": "Todos os campos são obrigatórios",
+  "and": "e",
+  "confirmPassword": "Confirmar senha",
+  "confirmPasswordPlaceholder": "Confirme sua senha",
+  "createAccount": "Criar conta",
+  "createAccountBtn": "Criar conta",
+  "emailAddress": "Endereço de e-mail",
+  "emailInUse": "Este e-mail já está em uso",
+  "emailPlaceholder": "Digite seu e-mail",
+  "forgotPassword": "Esqueceu a senha?",
+  "fullName": "Nome Completo",
+  "fullNamePlaceholder": "Digite seu nome completo",
+  "haveAccount": "Já tem uma conta?",
+  "invalidCredentials": "E-mail ou senha inválida",
+  "loginButton": "Entrar",
+  "min8Chars": "Mínimo 8 caracteres",
+  "noAccount": "Não tem uma conta?",
+  "password": "Senha",
+  "passwordLengthError": "A senha deve ter pelo menos 8 caracteres",
+  "passwordPlaceholder": "Digite sua senha",
+  "passwordsDoNotMatch": "As senhas não coincidem",
+  "phoneNumber": "Número de telefone",
+  "phonePlaceholder": "Digite seu número de telefone",
+  "privacyPolicy": "Política de Privacidade",
+  "registerDesc": "Junte-se a nós para organizar suas experiências DUNAS TRAVEL.",
+  "rememberMe": "Lembre-se de mim",
+  "signInBtn": "Entrar",
+  "signInDesc": "Faça login para acessar seus itinerários personalizados.",
+  "termsAndConditions": "Termos e Condições",
+  "welcomeBack": "Bem-vindo de volta"
+},
+"languages": {
+  "italian": "Italiano",
+  "portuguese": "Português"
+},
+"site": {
+  "luxuryTravel": "Viagens de luxo"
+}
 }

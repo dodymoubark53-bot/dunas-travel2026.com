@@ -19,6 +19,14 @@
     "italy": "Italy",
     "spain": "Spain",
     "brazil": "Brazil",
+    "egypt": "Egypt",
+    "turkey": "Turkey",
+    "jordan": "Jordan",
+    "morocco": "Morocco",
+    "greece": "Greece",
+    "dubai": "Dubai",
+    "tunisia": "Tunisia",
+    "holyland": "Holy Land",
     "myBookings": "My Bookings",
     "myProfile": "My Profile",
     "transportation": "Transportation"
@@ -1354,7 +1362,7 @@
     "title": "Contact Us | Luxury Travel"
   },
   "dest": {
-    "brazil": {
+    "brazil1": {
       "brief": "A vibrant mix of natural beauty, rich culture and warm hospitality. Brazil offers unforgettable experiences, from the contagious energy of Rio de Janeiro and Salvador to the green immensity of the Amazon. Every moment is planned to provide maximum comfort, luxury and true cultural immersion.",
       "desc": "From the historic charm of Rio de Janeiro to the natural beauty of the Amazon, embark on an unforgettable luxury trip through the heart of Brazil.",
       "seoDesc": "Discover Brazil in style. From the stunning beaches of Rio de Janeiro to the heart of the Amazon, embark on an unforgettable journey of luxury.",
@@ -1362,13 +1370,38 @@
       "subtitle": "Land of the Sun and Samba",
       "title": "Brazil"
     },
-    "italy": {
+    "italy1": {
       "gridDesc": "Explore our exclusive selection of the itinerary of the latest plans for offering a co-involving and premium experience of Italy's greatest più grandi meraviglie.",
       "gridTitle": "I Nostri Itinerari in Italy",
       "seoDesc": "Scopri l'Italia. Dalla splendida Costiera Amalfitana ai monumenti storici di Roma e Firenze, imbarcati en un viaggio indimenticabile di lusso.",
       "seoTitle": "Tour and Vacanze di Lusso in Italia | Viaggi di Lusso",
       "subtitle": "La Dolce Vita",
       "title": "Scopri l'Italia"
+    },
+    
+    "spain1": {
+      "seoDesc": "Explore luxury journeys in Spain. Custom itineraries coming soon.",
+      "seoTitle": "Luxury Spain Tours & Vacations | Dunas Travel"
+    },
+    "turkey": {
+      "seoDesc": "Explore luxury journeys in Turkey. Custom itineraries coming soon.",
+      "seoTitle": "Luxury Turkey Tours & Vacations | Dunas Travel"
+    },
+    "greece": {
+      "seoDesc": "Explore luxury journeys in Greece. Custom itineraries coming soon.",
+      "seoTitle": "Luxury Greece Tours & Vacations | Dunas Travel"
+    },
+    "egypt": {
+      "seoDesc": "Explore luxury journeys in Egypt. Custom itineraries coming soon.",
+      "seoTitle": "Luxury Egypt Tours & Vacations | Dunas Travel"
+    },
+    "brazil": {
+      "seoDesc": "Explore luxury journeys in Brazil. Custom itineraries coming soon.",
+      "seoTitle": "Luxury Brazil Tours & Vacations | Dunas Travel"
+    },
+    "italy": {
+      "seoDesc": "Explore luxury journeys in Italy. Custom itineraries coming soon.",
+      "seoTitle": "Luxury Italy Tours & Vacations | Dunas Travel"
     },
     "spain": {
       "seoDesc": "Explore luxury journeys in Spain. Custom itineraries coming soon.",

@@ -14,6 +14,14 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Italy = lazy(() => import("./pages/destinations/Italy"));
 const Spain = lazy(() => import("./pages/destinations/Spain"));
 const Brazil = lazy(() => import("./pages/destinations/Brazil"));
+const Egypt = lazy(() => import("./pages/destinations/Egipto"));
+const Turkey = lazy(() => import("./pages/destinations/Turquia"));
+const Jordan = lazy(() => import("./pages/destinations/Jordania"));
+const Morocco = lazy(() => import("./pages/destinations/Marruecos"));
+const Greece = lazy(() => import("./pages/destinations/Grecia"));
+const Dubai = lazy(() => import("./pages/destinations/Dubai"));
+const Tunisia = lazy(() => import("./pages/destinations/Tunez"));
+const HolyLand = lazy(() => import("./pages/destinations/TierraSanta"));
 const Destinations = lazy(() => import("./pages/destinations/Destinations"));
 const TourDetails = lazy(() => import("./pages/tours/TourDetails"));
 const BlogDetails = lazy(() => import("./pages/blogs/BlogDetails"));
@@ -209,6 +217,70 @@ function App() {
                     element={
                       <PageTransition>
                         <Brazil />
+                      </PageTransition>
+                    }
+                  />
+                  <Route
+                    path="egypt"
+                    element={
+                      <PageTransition>
+                        <Egypt />
+                      </PageTransition>
+                    }
+                  />
+                  <Route
+                    path="turkey"
+                    element={
+                      <PageTransition>
+                        <Turkey />
+                      </PageTransition>
+                    }
+                  />
+                  <Route
+                    path="jordan"
+                    element={
+                      <PageTransition>
+                        <Jordan />
+                      </PageTransition>
+                    }
+                  />
+                  <Route
+                    path="morocco"
+                    element={
+                      <PageTransition>
+                        <Morocco />
+                      </PageTransition>
+                    }
+                  />
+                  <Route
+                    path="greece"
+                    element={
+                      <PageTransition>
+                        <Greece />
+                      </PageTransition>
+                    }
+                  />
+                  <Route
+                    path="dubai"
+                    element={
+                      <PageTransition>
+                        <Dubai />
+                      </PageTransition>
+                    }
+                  />
+                  <Route
+                    path="tunisia"
+                    element={
+                      <PageTransition>
+                        <Tunisia />
+                      </PageTransition>
+                    }
+                  />
+                  <Route
+                    path="holyland"
+                    element={
+                      <PageTransition>
+                        <HolyLand />
                       </PageTransition>
                     }
                   />

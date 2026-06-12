@@ -24,11 +24,60 @@ const destinationsData = [
     desc: "Passion & History",
     image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=800&q=80",
   },
+
   {
     id: "brazil",
     name: "Brazil",
     desc: "Land of Sun & Samba",
     image: "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "egypt",
+    name: "Egypt",
+    desc: "Pharaohs & Wonders",
+    image: "https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "turkey",
+    name: "Turkey",
+    desc: "East Meets West",
+    image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "jordan",
+    name: "Jordan",
+    desc: "Desert & Ancient Ruins",
+    image: "https://images.unsplash.com/photo-1579606032821-4e6161c81bd3?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "morocco",
+    name: "Morocco",
+    desc: "Colors & Culture",
+    image: "https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "greece",
+    name: "Greece",
+    desc: "Myths & Blue Horizons",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "dubai",
+    name: "Dubai",
+    desc: "Luxury & Skylines",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "tunisia",
+    name: "Tunisia",
+    desc: "Sahara & Sea",
+    image: "https://images.unsplash.com/photo-1580502304784-8985b7eb7260?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "holy-land",
+    name: "Holy Land",
+    desc: "Faith & History",
+    image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
