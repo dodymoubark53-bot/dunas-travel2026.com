@@ -10,8 +10,8 @@ import Logo from '../ui/Logo';
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null); // خاص بالـ Desktop (Hover)
-  const [mobileActiveDropdown, setMobileActiveDropdown] = useState(null); // خاص بالـ Mobile (Click)
+  const [activeDropdown, setActiveDropdown] = useState(null); // للـ Desktop (Hover)
+  const [mobileActiveDropdown, setMobileActiveDropdown] = useState(null); // للـ Mobile (Click)
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
@@ -30,7 +30,18 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // تهيئة الحالات عند تغيير حجم الشاشة لمنع التداخل
+  // منع التمرير في الخلفية (Body Scroll Lock) عند فتح قائمة الموبايل كاملة الشاشة
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -42,7 +53,6 @@ const Navbar = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // دالة للتحكم في فتح وإغلاق القوائم في الموبايل عند الضغط
   const handleMobileDropdownToggle = (name) => {
     setMobileActiveDropdown(mobileActiveDropdown === name ? null : name);
   };
@@ -81,17 +91,16 @@ const Navbar = () => {
     { name: t('nav.contact'), path: '/contact' },
   ];
 
-  // أنيميشن القوائم المنسدلة للـ Desktop
   const dropdownVariants = {
     hidden: { opacity: 0, y: 15, scale: 0.95 },
     visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.2, ease: 'easeOut' } },
     exit: { opacity: 0, y: 10, scale: 0.95, transition: { duration: 0.15, ease: 'easeIn' } }
   };
 
-  // أنيميشن فتح وإغلاق القوائم للموبايل بسلاسة (Accordion)
+  // أنيميشن منسدل ومريح للعين عند تمدد القوائم الفرعية الكبيرة في الموبايل
   const mobileDropdownVariants = {
     hidden: { opacity: 0, height: 0, marginTop: 0, overflow: 'hidden' },
-    visible: { opacity: 1, height: 'auto', marginTop: 8, transition: { duration: 0.25, ease: 'easeInOut' } },
+    visible: { opacity: 1, height: 'auto', marginTop: 12, transition: { duration: 0.3, ease: 'easeInOut' } },
     exit: { opacity: 0, height: 0, marginTop: 0, transition: { duration: 0.2, ease: 'easeInOut' } }
   };
 
@@ -249,109 +258,118 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Buttons */}
+        {/* Mobile Action Buttons */}
         <div className="lg:hidden flex items-center gap-3 z-50">
           <button
             onClick={() => setLangDropdownOpen(!langDropdownOpen)}
             className="text-white hover:text-[#F5A623] p-2 transition-colors"
           >
-            <FaGlobe size={18} />
+            <FaGlobe size={20} />
           </button>
 
-          {/* Mobile Profile/Login */}
           {!user ? (
             <button onClick={() => setIsLoginModalOpen(true)} className="text-white hover:text-[#F5A623] p-2 transition-colors">
-              <FaUserCircle size={20} />
+              <FaUserCircle size={22} />
             </button>
           ) : (
-            <Link to="/profile" className="w-8 h-8 rounded-full border border-[#F5A623]/50 flex items-center justify-center text-white bg-white/5 text-xs font-semibold">
+            <Link to="/profile" className="w-9 h-9 rounded-full border border-[#F5A623]/50 flex items-center justify-center text-white bg-white/5 text-sm font-semibold">
               {user.avatar}
             </Link>
           )}
 
-          {/* Hamburger Menu Toggle */}
+          {/* Hamburger Icon */}
           <button
-            className="text-white p-2 hover:text-[#F5A623] transition-colors"
+            className="text-white p-2 hover:text-[#F5A623] transition-colors z-50"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
+            {mobileMenuOpen ? <FaTimes size={26} /> : <FaBars size={24} />}
           </button>
         </div>
 
-        {/* Mobile Full Menu Overlay */}
+        {/* Mobile Full Screen Menu Overlay (تعبئ الشاشة بالكامل) */}
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
-              className="fixed inset-x-0 top-16 bottom-0 bg-[#1A1A2E]/98 backdrop-blur-xl z-40 flex flex-col px-6 py-6 overflow-y-auto lg:hidden gap-5"
+              initial={{ opacity: 0, x: '100%' }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: '100%' }}
+              transition={{ type: 'tween', duration: 0.35, ease: 'easeInOut' }}
+              className="fixed inset-0 bg-[#1A1A2E] z-40 flex flex-col px-8 pt-24 pb-8 overflow-y-auto lg:hidden h-screen w-screen"
             >
-              {navLinks.map((link) => (
-                <div key={link.name} className="w-full border-b border-white/5 pb-3 last:border-0">
-                  {link.dropdown ? (
-                    <>
-                      {/* عنوان القائمة في الموبايل - يفتح ويغلق عند الضغط عليه */}
-                      <button
-                        onClick={() => handleMobileDropdownToggle(link.name)}
-                        className="w-full flex justify-between items-center text-left text-lg text-white hover:text-[#F5A623] font-medium py-1.5 px-2 transition-colors"
+              <div className="flex flex-col gap-6 w-full max-w-md mx-auto">
+                {navLinks.map((link) => (
+                  <div key={link.name} className="w-full border-b border-white/5 pb-4 last:border-0">
+                    {link.dropdown ? (
+                      <>
+                        {/* العنوان الرئيسي للقسم الفرعي - خط أكبر وأوضح للضغط */}
+                        <button
+                          onClick={() => handleMobileDropdownToggle(link.name)}
+                          className="w-full flex justify-between items-center text-left text-2xl text-white hover:text-[#F5A623] font-semibold py-2 transition-colors"
+                        >
+                          <span className={mobileActiveDropdown === link.name ? 'text-[#F5A623]' : ''}>
+                            {link.name}
+                          </span>
+                          <FaChevronDown
+                            className={`text-base transition-transform duration-300 ${mobileActiveDropdown === link.name ? 'rotate-180 text-[#F5A623]' : 'text-gray-400'
+                              }`}
+                          />
+                        </button>
+
+                        {/* القائمة الداخلية المنسدلة للأجهزة المحمولة */}
+                        <AnimatePresence initial={false}>
+                          {mobileActiveDropdown === link.name && (
+                            <motion.div
+                              variants={mobileDropdownVariants}
+                              initial="hidden"
+                              animate="visible"
+                              exit="exit"
+                              className="flex flex-col gap-1 pl-4 bg-white/[0.03] rounded-2xl overflow-hidden mt-2 border border-white/5"
+                            >
+                              {link.dropdown.map(item => (
+                                <Link
+                                  key={item.name}
+                                  to={item.path}
+                                  onClick={() => setMobileMenuOpen(false)}
+                                  className="text-lg text-gray-300 hover:text-[#F5A623] hover:bg-white/5 py-3.5 px-4 block transition-all border-b border-white/5 last:border-0 font-medium"
+                                >
+                                  {item.name}
+                                </Link>
+                              ))}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </>
+                    ) : (
+                      // الروابط العادية (مثل الرئيسية) - بحجم خط كبير ومناسب لشاشة كاملة
+                      <Link
+                        to={link.path}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="text-2xl text-white block hover:text-[#F5A623] transition-colors font-semibold py-2"
                       >
-                        <span className={mobileActiveDropdown === link.name ? 'text-[#F5A623]' : ''}>
-                          {link.name}
-                        </span>
-                        <FaChevronDown
-                          className={`text-sm transition-transform duration-300 ${mobileActiveDropdown === link.name ? 'rotate-180 text-[#F5A623]' : 'text-gray-400'
-                            }`}
-                        />
-                      </button>
+                        {link.name}
+                      </Link>
+                    )}
+                  </div>
+                ))}
 
-                      {/* العناصر الفرعية داخل الموبايل - تفتح وتغلق بسلاسة بفضل الأنيميشن */}
-                      <AnimatePresence initial={false}>
-                        {mobileActiveDropdown === link.name && (
-                          <motion.div
-                            variants={mobileDropdownVariants}
-                            initial="hidden"
-                            animate="visible"
-                            exit="exit"
-                            className="flex flex-col gap-1 pl-4 bg-white/[0.03] rounded-xl overflow-hidden mt-1"
-                          >
-                            {link.dropdown.map(item => (
-                              <Link
-                                key={item.name}
-                                to={item.path}
-                                onClick={() => setMobileMenuOpen(false)}
-                                className="text-base text-gray-300 hover:text-[#F5A623] py-2.5 px-3 block transition-colors border-b border-white/5 last:border-0"
-                              >
-                                {item.name}
-                              </Link>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </>
-                  ) : (
-                    // الروابط العادية التي لا تحتوي على قوائم (مثل الرئيسية)
-                    <Link
-                      to={link.path}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="text-lg text-white block hover:text-[#F5A623] transition-colors font-medium px-2 py-1.5"
-                    >
-                      {link.name}
+                {/* زر ملفي الشخصي وحجوزاتي مدمجين في أسفل الشاشة للموبايل في حال تسجيل الدخول */}
+                {user && (
+                  <div className="flex flex-col gap-3 mt-4">
+                    <Link to="/profile" onClick={() => setMobileMenuOpen(false)} className="w-full py-3 px-4 bg-white/5 text-white rounded-xl text-lg font-medium flex items-center gap-3 border border-white/10">
+                      <FaUserCircle className="text-[#F5A623]" /> {t('nav.myProfile', 'My Profile')}
                     </Link>
-                  )}
-                </div>
-              ))}
-
-              {/* زر تسجيل الخروج للموبايل في حال وجود مستخدم */}
-              {user && (
-                <button
-                  onClick={() => { logout(); setMobileMenuOpen(false); }}
-                  className="mt-auto w-full py-3 bg-red-500/10 text-red-400 rounded-xl font-medium flex items-center justify-center gap-2 border border-red-500/20"
-                >
-                  <FaSignOutAlt /> {t('nav.logout', 'Logout')}
-                </button>
-              )}
+                    <Link to="/bookings" onClick={() => setMobileMenuOpen(false)} className="w-full py-3 px-4 bg-white/5 text-white rounded-xl text-lg font-medium flex items-center gap-3 border border-white/10">
+                      <FaBookmark className="text-[#F5A623]" /> {t('nav.myBookings', 'My Bookings')}
+                    </Link>
+                    <button
+                      onClick={() => { logout(); setMobileMenuOpen(false); }}
+                      className="w-full py-3.5 bg-red-500/10 text-red-400 rounded-xl text-lg font-semibold flex items-center justify-center gap-2 border border-red-500/20 transition-colors active:bg-red-500/20"
+                    >
+                      <FaSignOutAlt /> {t('nav.logout', 'Logout')}
+                    </button>
+                  </div>
+                )}
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
