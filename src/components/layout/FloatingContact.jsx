@@ -43,7 +43,7 @@ const FloatingContact = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex items-center justify-center">
+    <div id="floating-contact-container" className="floating-contact fixed bottom-6 right-6 z-50 flex items-center justify-center">
       <AnimatePresence>
         {isOpen && socials.map((social, idx) => {
           const Icon = social.icon;

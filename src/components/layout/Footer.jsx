@@ -49,13 +49,13 @@ const Footer = () => {
             <h4 className="text-white mb-6 text-lg font-semibold">{t('nav.destinations')}</h4>
             <ul className="flex flex-col gap-3">
               {[
-                { key: 'egipto',      path: '/destinations/egypt'    },
-                { key: 'turquia',     path: '/destinations/turkey'   },
-                { key: 'jordania',    path: '/destinations/jordan'   },
-                { key: 'marruecos',   path: '/destinations/morocco'  },
-                { key: 'grecia',      path: '/destinations/greece'   },
-                { key: 'dubai',       path: '/destinations/dubai'    },
-                { key: 'tuniz',       path: '/destinations/tunisia'  },
+                { key: 'egipto', path: '/destinations/egypt' },
+                { key: 'turquia', path: '/destinations/turkey' },
+                { key: 'jordania', path: '/destinations/jordan' },
+                { key: 'marruecos', path: '/destinations/morocco' },
+                { key: 'grecia', path: '/destinations/greece' },
+                { key: 'dubai', path: '/destinations/dubai' },
+                { key: 'tuniz', path: '/destinations/tunisia' },
                 { key: 'tierrasanta', path: '/destinations/holyland' },
               ].map(({ key, path }) => (
                 <li key={key}>
@@ -110,9 +110,7 @@ const Footer = () => {
           <p className="text-caption opacity-80">
             &copy; {new Date().getFullYear()} Dunas Travel. {t('footer.rights', 'All rights reserved.')}
           </p>
-          <p className="text-caption text-[#F5A623]">
-            {t('footer.created', 'Created by Dina Hefny')}
-          </p>
+
         </div>
       </div>
     </footer>

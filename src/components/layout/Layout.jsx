@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import FloatingContact from './FloatingContact';
+import BackgroundMusic from '../ui/BackgroundMusic';
 
 const Layout = () => {
   return (
@@ -13,6 +14,7 @@ const Layout = () => {
       </main>
       <Footer />
       <FloatingContact />
+      <BackgroundMusic />
     </div>
   );
 };
