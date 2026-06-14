@@ -10,27 +10,9 @@ import TourCard from "../components/tour/TourCard";
 import { tours } from "../data/tours";
 import { services } from "../data/services";
 import { transportation } from "../data/transportation";
+import { useCurrency } from "../context/CurrencyContext";
 
 const destinationsData = [
-  {
-    id: "italy",
-    name: "Italy",
-    desc: "La Dolce Vita",
-    image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "spain",
-    name: "Spain",
-    desc: "Passion & History",
-    image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=800&q=80",
-  },
-
-  {
-    id: "brazil",
-    name: "Brazil",
-    desc: "Land of Sun & Samba",
-    image: "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=80",
-  },
   {
     id: "egypt",
     name: "Egypt",
@@ -83,6 +65,7 @@ const destinationsData = [
 
 const Home = () => {
   const { t } = useTranslation();
+  const { formatPrice } = useCurrency();
   const [activeDestination, setActiveDestination] = useState(null);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [activeGalleryIndex, setActiveGalleryIndex] = useState(0);
@@ -194,17 +177,17 @@ const Home = () => {
 
   // Pick 4 tours for the Featured section
   const featuredToursList = [
-    tours.find((t) => t.destination === "italy"),
-    tours.find((t) => t.destination === "brazil"),
+    tours.find((t) => t.destination === "egypt"),
+    tours.find((t) => t.destination === "turkey"),
     tours.find(
       (t) =>
-        t.destination === "italy" &&
-        t.id !== tours.find((x) => x.destination === "italy")?.id,
+        t.destination === "jordan" &&
+        t.id !== tours.find((x) => x.destination === "jordan")?.id,
     ),
     tours.find(
       (t) =>
-        t.destination === "brazil" &&
-        t.id !== tours.find((x) => x.destination === "brazil")?.id,
+        t.destination === "morocco" &&
+        t.id !== tours.find((x) => x.destination === "morocco")?.id,
     ),
   ].filter(Boolean);
 
@@ -218,20 +201,20 @@ const Home = () => {
         <title>
           {t(
             "home.metaTitle",
-            "Dunas Travel | Award-Winning Experiences in Italy, Spain, Brazil",
+            "Dunas Travel | Award-Winning Experiences in Egypt, Jordan & Turkey",
           )}
         </title>
         <meta
           name="description"
           content={t(
             "home.metaDesc",
-            "Experience true luxury with Dunas Travel — curated journeys through the timeless wonders of Italy, Spain, and Brazil.",
+            "Experience true luxury with Dunas Travel — curated journeys through the timeless wonders of Egypt, Jordan, and Turkey.",
           )}
         />
         <meta property="og:title" content="Dunas Travel" />
         <meta
           property="og:description"
-          content="Premium luxury travel agency — Italy, Spain & Brazil"
+          content="Premium luxury travel agency — Egypt, Jordan & Turkey"
         />
         <meta property="og:image" content="/dunas-travel-logo.png" />
         <link rel="icon" type="image/png" href="/dunas-travel-logo.png" />
@@ -483,7 +466,7 @@ const Home = () => {
                     <div className="flex items-center justify-between text-caption text-ivory-300 mb-4">
                       <span>{t(`data.${tData.duration}`, tData.duration)}</span>
                       <span className="text-gold-500 font-semibold">
-                        ${tData.price}
+                        {formatPrice(tData.price)}
                       </span>
                     </div>
 
@@ -578,7 +561,7 @@ const Home = () => {
                             {t("home.perNight")}
                           </span>
                           <span className="text-lg font-semibold text-obsidian-900">
-                            ${hotel.price}
+                            {formatPrice(hotel.price)}
                           </span>
                         </div>
                         <Link to={`/services/hotels/${hotel.slug}`}>
@@ -790,7 +773,7 @@ const Home = () => {
                           {t("tourCard.from", "From")}
                         </span>
                         <span className="text-lg font-semibold text-gold-500">
-                          ${vehicle.pricePerDay}
+                          {formatPrice(vehicle.pricePerDay)}
                           <span className="text-xs text-ivory-300 font-normal">
                             {" "}
                             / {t("transportation.day", "day")}
@@ -892,8 +875,7 @@ const Home = () => {
                       {transportation.map((v) => (
                         <option key={v.id} value={v.id}>
                           {v.name} ({v.seats}{" "}
-                          {t("transportation.seatsCount", "Seats")}) - $
-                          {v.pricePerDay}/{t("transportation.day", "day")}
+                          {t("transportation.seatsCount", "Seats")}) - {formatPrice(v.pricePerDay)}/{t("transportation.day", "day")}
                         </option>
                       ))}
                     </select>

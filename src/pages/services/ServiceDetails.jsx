@@ -8,9 +8,11 @@ import Button from '../../components/ui/Button';
 import { staggerContainer, fadeInUp } from '../../animations/variants';
 import { services } from '../../data/services'; // ملاحظة: يمكنك لاحقاً تغيير اسم الفولدر أو الفايل لـ programs لتنظيم داتا الـ ساس
 import InquiryForm from '../../components/booking/InquiryForm';
+import { useCurrency } from '../../context/CurrencyContext';
 
 const ServiceDetails = () => {
   const { t } = useTranslation();
+  const { formatPrice } = useCurrency();
   // تعديل: استقبال category و slug بما يتوافق مع الـ Navbar الجديد للبرامج
   const { category, slug } = useParams();
   const service = services.find((s) => s.category === category && s.slug === slug);
@@ -77,8 +79,8 @@ const ServiceDetails = () => {
               ))}
               <span className="text-ivory-50 ml-2 text-body-sm font-medium">{service.rating}</span>
             </div>
-            <div className="text-ivory-300 text-caption uppercase tracking-wider mb-1">{t('tourCard.startingFrom', 'Starting From')}</div>
-            <div className="text-display-md text-ivory-50">${service.price}</div>
+            <div className="text-[#F5EDD6] text-caption uppercase tracking-wider mb-1">{t('tourCard.startingFrom', 'Starting From')}</div>
+            <div className="text-display-md text-ivory-50">{formatPrice(service.price)}</div>
           </motion.div>
         </motion.div>
       </section>
@@ -204,7 +206,7 @@ const ServiceDetails = () => {
                     <div className="flex justify-between items-center mt-auto pt-4 border-t border-obsidian-900/10">
                       <div>
                         <span className="text-caption text-obsidian-300 block">{t('tourCard.from', 'From')}</span>
-                        <span className="text-body-lg font-semibold text-obsidian-900">${relService.price}</span>
+                        <span className="text-body-lg font-semibold text-obsidian-900">{formatPrice(relService.price)}</span>
                       </div>
                       {/* تعديل مسار لينك التفاصيل ليتوافق مع الـ Route الجديد للبرامج */}
                       <Link to={`/programs/${relService.category}/${relService.slug}`}>

@@ -11,9 +11,6 @@ const About = lazy(() => import("./pages/About"));
 const Blogs = lazy(() => import("./pages/Blogs"));
 const Services = lazy(() => import("./pages/Services"));
 const Contact = lazy(() => import("./pages/Contact"));
-const Italy = lazy(() => import("./pages/destinations/Italy"));
-const Spain = lazy(() => import("./pages/destinations/Spain"));
-const Brazil = lazy(() => import("./pages/destinations/Brazil"));
 const Egypt = lazy(() => import("./pages/destinations/Egipto"));
 const Turkey = lazy(() => import("./pages/destinations/Turquia"));
 const Jordan = lazy(() => import("./pages/destinations/Jordania"));
@@ -194,30 +191,6 @@ function App() {
                     element={
                       <PageTransition>
                         <Destinations />
-                      </PageTransition>
-                    }
-                  />
-                  <Route
-                    path="italy"
-                    element={
-                      <PageTransition>
-                        <Italy />
-                      </PageTransition>
-                    }
-                  />
-                  <Route
-                    path="spain"
-                    element={
-                      <PageTransition>
-                        <Spain />
-                      </PageTransition>
-                    }
-                  />
-                  <Route
-                    path="brazil"
-                    element={
-                      <PageTransition>
-                        <Brazil />
                       </PageTransition>
                     }
                   />

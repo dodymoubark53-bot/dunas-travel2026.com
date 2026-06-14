@@ -6,12 +6,13 @@ import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../context/AuthContext';
 import LoginModal from '../auth/LoginModal';
 import Logo from '../ui/Logo';
+import CurrencySelector from '../ui/CurrencySelector';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null); // للـ Desktop (Hover)
-  const [mobileActiveDropdown, setMobileActiveDropdown] = useState(null); // للـ Mobile (Click)
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [mobileActiveDropdown, setMobileActiveDropdown] = useState(null);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
@@ -30,7 +31,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // منع التمرير في الخلفية (Body Scroll Lock) عند فتح قائمة الموبايل كاملة الشاشة
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -74,9 +74,6 @@ const Navbar = () => {
     {
       name: t('nav.destinations'),
       dropdown: [
-        { name: t('nav.italy'), path: '/destinations/italy' },
-        { name: t('nav.spain'), path: '/destinations/spain' },
-        { name: t('nav.brazil'), path: '/destinations/brazil' },
         { name: t('nav.egypt'), path: '/destinations/egypt' },
         { name: t('nav.turkey'), path: '/destinations/turkey' },
         { name: t('nav.jordan'), path: '/destinations/jordan' },
@@ -97,7 +94,6 @@ const Navbar = () => {
     exit: { opacity: 0, y: 10, scale: 0.95, transition: { duration: 0.15, ease: 'easeIn' } }
   };
 
-  // أنيميشن منسدل ومريح للعين عند تمدد القوائم الفرعية الكبيرة في الموبايل
   const mobileDropdownVariants = {
     hidden: { opacity: 0, height: 0, marginTop: 0, overflow: 'hidden' },
     visible: { opacity: 1, height: 'auto', marginTop: 12, transition: { duration: 0.3, ease: 'easeInOut' } },
@@ -163,6 +159,11 @@ const Navbar = () => {
             </div>
           ))}
         </nav>
+
+        {/* Currency Selector */}
+        <div className="hidden md:flex items-center z-50">
+          <CurrencySelector />
+        </div>
 
         {/* Actions (Desktop) */}
         <div className="hidden lg:flex items-center gap-4 z-50">
@@ -286,7 +287,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Full Screen Menu Overlay (تعبئ الشاشة بالكامل) */}
+        {/* Mobile Full Screen Menu Overlay */}
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
@@ -301,7 +302,6 @@ const Navbar = () => {
                   <div key={link.name} className="w-full border-b border-white/5 pb-4 last:border-0">
                     {link.dropdown ? (
                       <>
-                        {/* العنوان الرئيسي للقسم الفرعي - خط أكبر وأوضح للضغط */}
                         <button
                           onClick={() => handleMobileDropdownToggle(link.name)}
                           className="w-full flex justify-between items-center text-left text-2xl text-white hover:text-[#F5A623] font-semibold py-2 transition-colors"
@@ -315,7 +315,6 @@ const Navbar = () => {
                           />
                         </button>
 
-                        {/* القائمة الداخلية المنسدلة للأجهزة المحمولة */}
                         <AnimatePresence initial={false}>
                           {mobileActiveDropdown === link.name && (
                             <motion.div
@@ -340,7 +339,6 @@ const Navbar = () => {
                         </AnimatePresence>
                       </>
                     ) : (
-                      // الروابط العادية (مثل الرئيسية) - بحجم خط كبير ومناسب لشاشة كاملة
                       <Link
                         to={link.path}
                         onClick={() => setMobileMenuOpen(false)}
@@ -352,7 +350,14 @@ const Navbar = () => {
                   </div>
                 ))}
 
-                {/* زر ملفي الشخصي وحجوزاتي مدمجين في أسفل الشاشة للموبايل في حال تسجيل الدخول */}
+                {/* Mobile Currency Selector */}
+                <div className="flex md:hidden flex-col gap-2 mt-4 pt-4 border-t border-white/5">
+                  <span className="text-white/40 text-xs font-semibold tracking-wider uppercase">{t('nav.currency', 'Currency')}</span>
+                  <div className="flex">
+                    <CurrencySelector />
+                  </div>
+                </div>
+
                 {user && (
                   <div className="flex flex-col gap-3 mt-4">
                     <Link to="/profile" onClick={() => setMobileMenuOpen(false)} className="w-full py-3 px-4 bg-white/5 text-white rounded-xl text-lg font-medium flex items-center gap-3 border border-white/10">

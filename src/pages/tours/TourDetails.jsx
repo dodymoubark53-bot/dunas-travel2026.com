@@ -12,9 +12,11 @@ import Button from '../../components/ui/Button';
 import { accordionContent, fadeInUp, staggerContainer } from '../../animations/variants';
 import InquiryForm from '../../components/booking/InquiryForm';
 import AdvancedBooking from '../../components/booking/AdvancedBooking';
+import { useCurrency } from '../../context/CurrencyContext';
 
 const TourDetails = () => {
   const { t } = useTranslation();
+  const { formatPrice } = useCurrency();
   const { slug } = useParams();
   
   // البحث عن الجولة الفاخرة المطابقة للـ slug
@@ -276,7 +278,7 @@ const TourDetails = () => {
               <div className="sticky top-32 bg-obsidian-900 text-ivory-50 p-8 rounded-2xl shadow-card">
                 <div className="text-center mb-8 border-b border-ivory-50/10 pb-8">
                   <span className="block text-body-md text-ivory-300 mb-2">{t('tourCard.startingFrom', 'Starting from')}</span>
-                  <div className="text-display-xl text-gold-500">${tour.price}</div>
+                  <div className="text-display-xl text-gold-500">{formatPrice(tour.price)}</div>
                   <span className="block text-caption text-ivory-300 mt-2">{t('tour.perPerson', 'per person')}</span>
                 </div>
                 <div className="flex flex-col gap-4">
@@ -307,7 +309,7 @@ const TourDetails = () => {
                     <h3 className="text-display-md text-ivory-50 mb-2 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>{t(`data.${tData.title}`, tData.title)}</h3>
                     <div className="flex items-center justify-between text-caption text-ivory-300">
                       <span>{t(`data.${tData.duration}`, tData.duration)}</span>
-                      <span className="text-gold-500">${tData.price}</span>
+                      <span className="text-gold-500">{formatPrice(tData.price)}</span>
                     </div>
                   </div>
                 </div>

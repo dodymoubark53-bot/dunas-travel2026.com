@@ -7,9 +7,11 @@ import { staggerContainer, fadeInUp, cardHover } from '../animations/variants';
 import Button from '../components/ui/Button';
 import { services as allServicesData } from '../data/services';
 import { transportation } from '../data/transportation';
+import { useCurrency } from '../context/CurrencyContext';
 
 const Services = () => {
   const { t } = useTranslation();
+  const { formatPrice } = useCurrency();
   const { service } = useParams();
 
   const categories = [
@@ -195,7 +197,7 @@ const Services = () => {
                   <div className="flex justify-between items-center mt-auto pt-4 border-t border-gray-100">
                     <div>
                       <span className="text-caption text-obsidian-300 block">{t('tourCard.from', 'From')}</span>
-                      <span className="text-body-lg font-semibold text-obsidian-900">${item.price}</span>
+                      <span className="text-body-lg font-semibold text-obsidian-900">{formatPrice(item.price)}</span>
                     </div>
                     <Link to={`/services/${item.category}/${item.slug}`}>
                       <Button variant="outline-gold" className="px-4 py-2 text-sm group-hover:bg-gold-500 group-hover:text-obsidian-900 group-hover:shadow-[0_0_15px_rgba(201,162,39,0.4)] transition-all">{t('tourCard.viewDetails', 'View Details')}</Button>
@@ -240,7 +242,7 @@ const Services = () => {
                     <div className="flex justify-between items-center mt-auto pt-4 border-t border-gray-100">
                       <div>
                         <span className="text-caption text-obsidian-300 block">{t('tourCard.from', 'From')}</span>
-                        <span className="text-body-lg font-semibold text-obsidian-900">${item.pricePerDay}</span>
+                        <span className="text-body-lg font-semibold text-obsidian-900">{formatPrice(item.pricePerDay)}</span>
                       </div>
                       <Link to={`/transportation/${item.id}`}>
                         <Button variant="outline-gold" className="px-4 py-2 text-sm group-hover:bg-gold-500 group-hover:text-obsidian-900 group-hover:shadow-[0_0_15px_rgba(201,162,39,0.4)] transition-all">{t('tourCard.viewDetails', 'View Details')}</Button>

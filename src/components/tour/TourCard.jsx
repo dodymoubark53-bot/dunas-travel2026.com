@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 import { variants } from '../../animations/variants';
 import Button from '../ui/Button';
+import { useCurrency } from '../../context/CurrencyContext';
 
 // استيراد قاعدة البيانات الفيديرالية الموحدة
 import { tours as importedTours } from '../../data/tours';
@@ -35,6 +36,7 @@ const marketFlag = (market) => {
 
 const TourCard = ({ tour }) => {
   const { t } = useTranslation();
+  const { formatPrice } = useCurrency();
   const translatedDuration = t(`data.${tour.duration}`, tour.duration);
   const durationLabel = translatedDuration.split('/')[0].trim();
 
@@ -99,7 +101,7 @@ const TourCard = ({ tour }) => {
               {t('tourCard.from', 'from')}
             </span>
             <span className="text-display-md text-gold-700">
-              ${tour.price.toLocaleString()}
+              {formatPrice(tour.price)}
             </span>
           </div>
 

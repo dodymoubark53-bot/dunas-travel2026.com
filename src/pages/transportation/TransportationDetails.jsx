@@ -6,9 +6,11 @@ import { FaChevronRight, FaUserFriends, FaCog, FaCheck, FaCar } from 'react-icon
 import { useTranslation } from 'react-i18next';
 import { transportation } from '../../data/transportation';
 import TransportationForm from '../../components/booking/TransportationForm';
+import { useCurrency } from '../../context/CurrencyContext';
 
 const TransportationDetails = () => {
   const { t } = useTranslation();
+  const { formatPrice } = useCurrency();
   const { slug } = useParams();
   // slug is the ID based on our setup (e.g., tr-001)
   const vehicle = transportation.find(v => v.id === slug) || transportation[0];
@@ -64,7 +66,7 @@ const TransportationDetails = () => {
             transition={{ delay: 0.2 }}
             className="text-display-sm text-gold-500"
           >
-            {t('tourCard.from', 'from')} ${vehicle.pricePerDay} / {t('transportation.day', 'day')}
+            {t('tourCard.from', 'from')} {formatPrice(vehicle.pricePerDay)} / {t('transportation.day', 'day')}
           </motion.div>
         </div>
       </section>

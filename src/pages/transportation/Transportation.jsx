@@ -7,9 +7,11 @@ import { FaUserFriends, FaCog, FaCheck } from 'react-icons/fa';
 import { staggerContainer, fadeInUp } from '../../animations/variants';
 import { transportation } from '../../data/transportation';
 import TransportationForm from '../../components/booking/TransportationForm';
+import { useCurrency } from '../../context/CurrencyContext';
 
 const Transportation = () => {
   const { t } = useTranslation();
+  const { formatPrice } = useCurrency();
   const [activeFilter, setActiveFilter] = useState('All');
 
   const filters = [
@@ -146,7 +148,7 @@ const Transportation = () => {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-body-lg font-bold text-obsidian-900">${vehicle.pricePerDay}</span>
+                    <span className="text-body-lg font-bold text-obsidian-900">{formatPrice(vehicle.pricePerDay)}</span>
                     <span className="text-caption text-obsidian-500"> / {t('transportation.day', 'day')}</span>
                   </div>
                   <Link 

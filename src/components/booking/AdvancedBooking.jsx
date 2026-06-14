@@ -4,9 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaCheckCircle } from 'react-icons/fa';
 import Button from '../ui/Button';
 import { fadeInUp } from '../../animations/variants';
+import { useCurrency } from '../../context/CurrencyContext';
 
 const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson }) => {
   const { t } = useTranslation();
+  const { formatPrice } = useCurrency();
   const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'success'
 
   // Form State
@@ -98,7 +100,7 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson }) => {
               <p className="text-caption text-gold-500 mb-4">{t(`data.${tourTitle}`, tourTitle)}</p>
               <div>
                 <span className="block text-caption text-ivory-300">{t('booking.totalPrice', 'Total Price')}</span>
-                <span className="text-display-md text-gold-500 text-2xl">${totalPrice.toFixed(2)}</span>
+                <span className="text-display-md text-gold-500 text-2xl">{formatPrice(totalPrice)}</span>
               </div>
             </div>
 
