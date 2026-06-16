@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -13,6 +13,8 @@ const Services = () => {
   const { t } = useTranslation();
   const { formatPrice } = useCurrency();
   const { service } = useParams();
+  const location = useLocation();
+  const prefix = location.pathname.startsWith('/programs') ? '/programs' : '/services';
 
   const categories = [
     { id: 'hotels', title: t('nav.hotels', 'Luxury Hotels'), desc: t('data.Hand-picked 5-star accommodations offering unparalleled views and comfort.') },
@@ -117,13 +119,14 @@ const Services = () => {
           <motion.h1
             variants={fadeInUp}
             className="text-display-xl text-ivory-50"
-            style={['safari', 'cruises', 'camping', 'hotels', 'transportation'].includes(service) ? { fontFamily: "'Playfair Display', serif" } : {}}
+            style={['safari', 'cruises', 'camping', 'hotels', 'transportation', 'classic'].includes(service) ? { fontFamily: "'Playfair Display', serif" } : {}}
           >
             {service === 'safari' ? t('nav.safari', 'Desert Safari') :
               service === 'cruises' ? t('nav.cruises', 'Nile Cruises') :
                 service === 'camping' ? t('nav.camping', 'Glamping') :
                   service === 'hotels' ? t('nav.hotels', 'Luxury Hotels') :
-                    service === 'transportation' ? t('nav.transportation', 'Transportation') : t('services.ourServices', 'Our Services')}
+                    service === 'transportation' ? t('nav.transportation', 'Transportation') :
+                      service === 'classic' ? t('nav.classicPrograms', 'Classic Programs') : t('services.ourServices', 'Our Services')}
           </motion.h1>
           {service === 'safari' ? (
             <motion.p variants={fadeInUp} className="text-body-lg text-ivory-300 mt-4 max-w-2xl mx-auto">
@@ -145,7 +148,7 @@ const Services = () => {
             <motion.p variants={fadeInUp} className="text-body-lg text-ivory-300 mt-4 max-w-2xl mx-auto">
               {t('services.transportationDesc', 'Premium vehicles with professional drivers ensuring absolute comfort and safety.')}
             </motion.p>
-          ) : service && (
+          ) : (service && service !== 'classic') && (
             <motion.p variants={fadeInUp} className="text-body-lg text-ivory-300 mt-4 capitalize">
               {t('services.explore', 'Explore')} {t(`nav.${service}`, service)}
             </motion.p>
@@ -155,16 +158,18 @@ const Services = () => {
 
       <section className="container mx-auto px-6 py-12">
         {/* Category Selector */}
-        <div className="flex overflow-x-auto hide-scrollbar md:flex-wrap md:justify-center gap-4 mb-16 pb-4">
-          <Link to="/services" className="shrink-0">
-            <Button variant={!service ? 'gold-glow' : 'outline-gold'} className="px-6 py-2 text-sm">{t('services.allServices', 'All Services')}</Button>
-          </Link>
-          {categories.map(cat => (
-            <Link key={cat.id} to={`/services/${cat.id}`} className="shrink-0">
-              <Button variant={service === cat.id ? 'gold-glow' : 'outline-gold'} className="px-6 py-2 text-sm">{cat.title}</Button>
+        {service !== 'classic' && (
+          <div className="flex overflow-x-auto hide-scrollbar md:flex-wrap md:justify-center gap-4 mb-16 pb-4">
+            <Link to={prefix} className="shrink-0">
+              <Button variant={!service ? 'gold-glow' : 'outline-gold'} className="px-6 py-2 text-sm">{t('services.allServices', 'All Services')}</Button>
             </Link>
-          ))}
-        </div>
+            {categories.map(cat => (
+              <Link key={cat.id} to={`${prefix}/${cat.id}`} className="shrink-0">
+                <Button variant={service === cat.id ? 'gold-glow' : 'outline-gold'} className="px-6 py-2 text-sm">{cat.title}</Button>
+              </Link>
+            ))}
+          </div>
+        )}
 
         {/* Services Grid */}
         {filteredServices.length > 0 && (
@@ -199,7 +204,7 @@ const Services = () => {
                       <span className="text-caption text-obsidian-300 block">{t('tourCard.from', 'From')}</span>
                       <span className="text-body-lg font-semibold text-obsidian-900">{formatPrice(item.price)}</span>
                     </div>
-                    <Link to={`/services/${item.category}/${item.slug}`}>
+                    <Link to={`${prefix}/${item.category}/${item.slug}`}>
                       <Button variant="outline-gold" className="px-4 py-2 text-sm group-hover:bg-gold-500 group-hover:text-obsidian-900 group-hover:shadow-[0_0_15px_rgba(201,162,39,0.4)] transition-all">{t('tourCard.viewDetails', 'View Details')}</Button>
                     </Link>
                   </div>

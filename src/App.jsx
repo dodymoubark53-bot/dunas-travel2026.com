@@ -31,6 +31,8 @@ const TransportationDetails = lazy(
 );
 const TailorTour = lazy(() => import("./pages/TailorTour"));
 const FAQ = lazy(() => import("./pages/FAQ"));
+const HotelDetails = lazy(() => import("./pages/hotels/HotelDetails"));
+const RoomDetails = lazy(() => import("./pages/hotels/RoomDetails"));
 
 const PageTransition = ({ children }) => (
   <motion.div
@@ -174,6 +176,64 @@ function App() {
                     element={
                       <PageTransition>
                         <Services />
+                      </PageTransition>
+                    }
+                  />
+                  <Route
+                    path="hotels/:slug"
+                    element={
+                      <PageTransition>
+                        <HotelDetails />
+                      </PageTransition>
+                    }
+                  />
+                  <Route
+                    path="hotels/:hotelSlug/:roomSlug"
+                    element={
+                      <PageTransition>
+                        <RoomDetails />
+                      </PageTransition>
+                    }
+                  />
+                  <Route
+                    path=":category/:slug"
+                    element={
+                      <PageTransition>
+                        <ServiceDetails />
+                      </PageTransition>
+                    }
+                  />
+                </Route>
+                <Route path="programs">
+                  <Route
+                    index
+                    element={
+                      <PageTransition>
+                        <Services />
+                      </PageTransition>
+                    }
+                  />
+                  <Route
+                    path=":service"
+                    element={
+                      <PageTransition>
+                        <Services />
+                      </PageTransition>
+                    }
+                  />
+                  <Route
+                    path="hotels/:slug"
+                    element={
+                      <PageTransition>
+                        <HotelDetails />
+                      </PageTransition>
+                    }
+                  />
+                  <Route
+                    path="hotels/:hotelSlug/:roomSlug"
+                    element={
+                      <PageTransition>
+                        <RoomDetails />
                       </PageTransition>
                     }
                   />

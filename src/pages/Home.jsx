@@ -223,7 +223,7 @@ const Home = () => {
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=1600&q=80"
+            src="/images/hero.jpg"
             alt="Luxury Travel Hero"
             className="w-full h-full object-cover"
             fetchpriority="high"
@@ -1123,16 +1123,16 @@ const Home = () => {
         <div className="max-w-[1100px] mx-auto">
           <div className="grid grid-cols-2 gap-6 md:flex md:items-center md:justify-center bg-white rounded-[12px] shadow-[0_2px_16px_rgba(0,0,0,0.08)] p-6 md:p-[30px_40px]">
             {[
-              { src: "/imgs/logos/logo1.png", alt: "Logo 1" },
+              { src: "/imgs/logos/logo1.jpeg", alt: "Logo 1" },
               { src: "/imgs/logos/logo2.png", alt: "Logo 2" },
               { src: "/imgs/logos/logo3.png", alt: "Logo 3" },
               { src: "/imgs/logos/logo4.png", alt: "Logo 4" },
+              { src: "/imgs/logos/logo5.png", alt: "Logo 5" },
             ].map((logo, idx) => (
               <div
                 key={idx}
-                className={`flex-1 flex justify-center items-center min-h-[110px] px-6 ${
-                  idx < 3 ? "border-r-0 md:border-r border-[#e0e0e0]" : "border-0"
-                }`}
+                className={`flex-1 flex justify-center items-center min-h-[110px] px-6 ${idx < 4 ? "border-r-0 md:border-r border-[#e0e0e0]" : "border-0"
+                  }`}
               >
                 <img
                   src={logo.src}

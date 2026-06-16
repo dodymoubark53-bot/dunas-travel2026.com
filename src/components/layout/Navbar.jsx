@@ -13,6 +13,7 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [mobileActiveDropdown, setMobileActiveDropdown] = useState(null);
+  const [mobileActiveSubDropdown, setMobileActiveSubDropdown] = useState(null);
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
@@ -47,6 +48,7 @@ const Navbar = () => {
       if (window.innerWidth >= 1024) {
         setMobileMenuOpen(false);
         setMobileActiveDropdown(null);
+        setMobileActiveSubDropdown(null);
       }
     };
     window.addEventListener('resize', handleResize);
@@ -63,7 +65,20 @@ const Navbar = () => {
     {
       name: t('nav.programs', { defaultValue: 'Programs' }),
       dropdown: [
-        { name: t('nav.classic', { defaultValue: 'Classic' }), path: '/programs/classic' },
+        {
+          name: t('nav.classic', { defaultValue: 'Classic' }),
+          path: '/programs/classic',
+          subItems: [
+            { name: t('nav.classicProgram', { defaultValue: 'Classic Program' }), path: '/programs/classic/classic-program' }
+          ]
+        },
+        {
+          name: t('nav.hotelsTab', { defaultValue: 'Hotels' }),
+          path: '/programs/hotels',
+          subItems: [
+            { name: 'Sol Pyramid Hotel', path: '/programs/hotels/sol-pyramid-hotel' }
+          ]
+        },
         { name: t('nav.transportation', { defaultValue: 'Transportation' }), path: '/programs/transportation' },
         { name: t('nav.extension', { defaultValue: 'Extension' }), path: '/programs/extension' },
         { name: t('nav.multiCountry', { defaultValue: 'Multi-Country Tours' }), path: '/programs/multi-country' },
@@ -145,13 +160,37 @@ const Navbar = () => {
                     className="absolute top-full left-0 mt-2 w-56 bg-[#1A1A2E] border border-white/10 rounded-lg overflow-hidden shadow-xl"
                   >
                     {link.dropdown.map((item) => (
-                      <Link
-                        key={item.name}
-                        to={item.path}
-                        className="block px-4 py-3 text-white hover:text-[#1A1A2E] hover:bg-[#F5A623] transition-colors text-body-md border-b border-white/5 last:border-0"
-                      >
-                        {item.name}
-                      </Link>
+                      <div key={item.name} className="relative group/sub">
+                        {item.subItems ? (
+                          <>
+                            <Link
+                              to={item.path}
+                              className="px-4 py-3 text-white hover:text-[#1A1A2E] hover:bg-[#F5A623] transition-colors text-body-md border-b border-white/5 last:border-0 flex justify-between items-center w-full"
+                            >
+                              <span>{item.name}</span>
+                              <FaChevronDown className="-rotate-90 text-[10px] opacity-70 group-hover/sub:text-[#1A1A2E] group-hover/sub:rotate-0 transition-transform duration-200" />
+                            </Link>
+                            <div className="absolute left-full top-0 ml-0.5 hidden group-hover/sub:block w-56 bg-[#1A1A2E] border border-white/10 rounded-lg overflow-hidden shadow-2xl z-[9999]">
+                              {item.subItems.map((sub) => (
+                                <Link
+                                  key={sub.name}
+                                  to={sub.path}
+                                  className="block px-4 py-3 text-white hover:text-[#1A1A2E] hover:bg-[#F5A623] transition-colors text-body-md border-b border-white/5 last:border-0"
+                                >
+                                  {sub.name}
+                                </Link>
+                              ))}
+                            </div>
+                          </>
+                        ) : (
+                          <Link
+                            to={item.path}
+                            className="block px-4 py-3 text-white hover:text-[#1A1A2E] hover:bg-[#F5A623] transition-colors text-body-md border-b border-white/5 last:border-0"
+                          >
+                            {item.name}
+                          </Link>
+                        )}
+                      </div>
                     ))}
                   </motion.div>
                 )}
@@ -325,14 +364,63 @@ const Navbar = () => {
                               className="flex flex-col gap-1 pl-4 bg-white/[0.03] rounded-2xl overflow-hidden mt-2 border border-white/5"
                             >
                               {link.dropdown.map(item => (
-                                <Link
-                                  key={item.name}
-                                  to={item.path}
-                                  onClick={() => setMobileMenuOpen(false)}
-                                  className="text-lg text-gray-300 hover:text-[#F5A623] hover:bg-white/5 py-3.5 px-4 block transition-all border-b border-white/5 last:border-0 font-medium"
-                                >
-                                  {item.name}
-                                </Link>
+                                <div key={item.name} className="w-full">
+                                  {item.subItems ? (
+                                    <>
+                                      <div className="flex justify-between items-center text-lg text-gray-300 py-3.5 px-4 border-b border-white/5 last:border-0">
+                                        <Link
+                                          to={item.path}
+                                          onClick={() => setMobileMenuOpen(false)}
+                                          className="hover:text-[#F5A623] transition-colors flex-grow"
+                                        >
+                                          {item.name}
+                                        </Link>
+                                        <button
+                                          onClick={() => setMobileActiveSubDropdown(mobileActiveSubDropdown === item.name ? null : item.name)}
+                                          className="p-2 -mr-2 text-gray-400 hover:text-[#F5A623] transition-colors"
+                                        >
+                                          <FaChevronDown
+                                            className={`text-xs transition-transform duration-200 ${mobileActiveSubDropdown === item.name ? 'rotate-180 text-[#F5A623]' : ''}`}
+                                          />
+                                        </button>
+                                      </div>
+                                      <AnimatePresence initial={false}>
+                                        {mobileActiveSubDropdown === item.name && (
+                                          <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: 'auto', opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.2 }}
+                                            className="pl-4 bg-white/[0.02] border-l border-white/10"
+                                          >
+                                            {item.subItems.map(sub => (
+                                              <Link
+                                                key={sub.name}
+                                                to={sub.path}
+                                                onClick={() => {
+                                                  setMobileMenuOpen(false);
+                                                  setMobileActiveSubDropdown(null);
+                                                }}
+                                                className="text-body-md text-gray-400 hover:text-[#F5A623] py-3 px-4 block transition-colors border-b border-white/5 last:border-0"
+                                              >
+                                                {sub.name}
+                                              </Link>
+                                            ))}
+                                          </motion.div>
+                                        )}
+                                      </AnimatePresence>
+                                    </>
+                                  ) : (
+                                    <Link
+                                      key={item.name}
+                                      to={item.path}
+                                      onClick={() => setMobileMenuOpen(false)}
+                                      className="text-lg text-gray-300 hover:text-[#F5A623] hover:bg-white/5 py-3.5 px-4 block transition-all border-b border-white/5 last:border-0 font-medium"
+                                    >
+                                      {item.name}
+                                    </Link>
+                                  )}
+                                </div>
                               ))}
                             </motion.div>
                           )}
