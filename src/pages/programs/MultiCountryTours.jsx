@@ -260,7 +260,7 @@ const MultiCountryTours = () => {
             <p className="text-body-md text-obsidian-500 max-w-md mx-auto mb-6">
               {t('programs.noToursDesc', 'We do not have any active packages matching that specific country combination right now. Let us customize an itinerary just for you!')}
             </p>
-            <Link to="/tailor-tour">
+            <Link to="/tailor-a-tour">
               <Button variant="gold-glow">{t('nav.tailorMade', 'Request Tailor-Made Tour')}</Button>
             </Link>
           </div>
@@ -281,7 +281,7 @@ const MultiCountryTours = () => {
             {t('programs.ctaDesc', 'Whether you want to combine Egypt with Turkey, Jordan with Greece, or cross-border travel through all five, our expert travel designers will orchestrate a custom itinerary, managing all visas, transfers, premium flights, and boutique hotels.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/tailor-tour">
+            <Link to="/tailor-a-tour">
               <Button variant="gold-glow" className="w-full sm:w-auto px-8 py-4">{t('nav.tailorMade', 'Design Your Tour')}</Button>
             </Link>
             <Link to="/contact">
