@@ -63,26 +63,6 @@ export const services = [
     excluded: ['Scuba diving certifications', 'Spa treatments']
   },
 
-  // 4. MULTI-COUNTRY TOURS
-  {
-    id: 'prog-mul-1',
-    category: 'multi-country',
-    slug: 'cradle-of-civilization-egypt-jordan',
-    title: 'The Grand Cradle: Egypt & Jordan',
-    location: 'Egypt & Jordan',
-    price: 3200,
-    rating: 5.0,
-    images: ['/imgs/gallery/ultimate jordan grand tour.webp', '/imgs/gallery/wadi rum desert safari.webp'],
-    shortDesc: 'The ultimate regional journey combining the wonders of the Pharaohs with the rose-red city of Petra.',
-    overview: [
-      "Why settle for one country when you can witness two of the world's greatest historical gems? This Multi-Country Tour cross-references the highlights of Egypt and Jordan in one fluid luxury journey.",
-      "Staze at the Great Pyramids of Giza and cruise the Nile, then take a short direct flight to Jordan to float in the mineral-rich Dead Sea and walk through the stunning Siq into Petra.",
-      "With local operations handled flawlessly in both nations, you will experience consistent 5-star concierge service across international borders."
-    ],
-    highlights: ['Cross-border luxury tour coordination', 'Comprehensive sights coverage (Pyramids & Petra)', 'Dead Sea wellness glamping experience', 'VIP airport immigration assistance'],
-    included: ['Inter-country flights', 'Luxury hotels & desert camps', 'All regional entrance visas', 'Private site guides'],
-    excluded: ['International flights to/from origin', 'Personal spending']
-  },
 
   // 5. HONEYMOONERS PACKAGE
   {
