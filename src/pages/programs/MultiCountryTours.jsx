@@ -98,7 +98,7 @@ const MultiCountryTours = () => {
 
       <section className="container mx-auto px-6 py-16">
         {/* 3. Dynamic Interactive Filters */}
-        <div className="bg-white/80 backdrop-blur-md rounded-2xl p-6 shadow-card border border-gray-100 mb-12">
+        <div className="bg-ivory-50 backdrop-blur-md rounded-xl p-6 shadow-card border border-gold-500/10 mb-12">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-gold-50 flex items-center justify-center text-gold-500">
@@ -118,7 +118,7 @@ const MultiCountryTours = () => {
                   className={`px-4 py-2 rounded-full text-caption font-semibold tracking-wide uppercase transition-all duration-300 border ${
                     selectedCountry === country
                       ? 'bg-gold-500 text-obsidian-900 border-gold-500 shadow-md shadow-gold-500/25'
-                      : 'bg-white text-obsidian-700 border-gray-200 hover:border-gold-500 hover:text-gold-600'
+                      : 'bg-ivory-50 text-obsidian-700 border-gold-500/20 hover:border-gold-500 hover:text-gold-600'
                   }`}
                 >
                   {country === 'All' 
@@ -144,42 +144,43 @@ const MultiCountryTours = () => {
               <motion.div
                 layout
                 key={tour.id}
-                variants={fadeInUp}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
+                variants={cardHover}
+                initial="rest"
+                whileHover="hover"
+                animate="rest"
                 exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.45 }}
-                className="bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-hover border border-gray-100 group flex flex-col h-full"
+                className="bg-ivory-50 rounded-xl overflow-hidden flex flex-col h-full group shadow-card border border-gold-500/10"
               >
                 {/* Image Container with Badges */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-[280px] overflow-hidden">
+                  {/* Type · Duration badge (top-left) */}
+                  <div className="absolute top-4 left-4 z-10 bg-obsidian-900/80 backdrop-blur-md text-gold-500 text-caption px-4 py-1.5 rounded-full border border-gold-500/30 shadow-glass">
+                    {t(`data.${tour.type}`, tour.type)} · {tour.days}d
+                  </div>
+
+                  {/* Badge (Best Seller / Popular) */}
+                  {tour.badge && (
+                    <div className="absolute top-4 right-4 z-10 bg-gold-500 text-obsidian-900 text-caption font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+                      {t(`data.${tour.badge}`, tour.badge)}
+                    </div>
+                  )}
+
                   <img
                     src={tour.images[0]}
                     alt={t(`data.${tour.title}`, tour.title)}
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                    className="w-full h-full object-cover transform scale-100 group-hover:scale-[1.06] cinematic-transition"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30"></div>
-                  
-                  {/* Badges */}
-                  {tour.badge && (
-                    <span className="absolute top-4 left-4 z-10 bg-gold-500 text-obsidian-900 text-caption font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md">
-                      {t(`data.${tour.badge}`, tour.badge)}
-                    </span>
-                  )}
-                  
-                  {/* Rating Badge */}
-                  <span className="absolute top-4 right-4 z-10 bg-black/60 backdrop-blur-md text-gold-500 text-caption font-semibold flex items-center gap-1.5 px-3 py-1 rounded-full border border-gold-500/20">
-                    <FaStar size={11} className="text-gold-500" />
-                    <span>{tour.rating}</span>
-                  </span>
 
-                  {/* Floating Flags Box */}
+                  {/* Cinematic dark hover overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-obsidian-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                  {/* Floating Country Flags */}
                   <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-1.5">
                     {tour.countries.map((country, idx) => (
-                      <span 
-                        key={idx} 
-                        className="bg-obsidian-950/80 backdrop-blur-sm border border-gold-500/20 text-ivory-50 text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1.5 shadow-sm"
+                      <span
+                        key={idx}
+                        className="bg-obsidian-950/80 backdrop-blur-sm border border-gold-500/20 text-ivory-50 text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1.5 shadow-glass"
                       >
                         <span>{tour.flags[idx]}</span>
                         <span className="font-medium">{t(`data.${country}`, country)}</span>
@@ -189,61 +190,69 @@ const MultiCountryTours = () => {
                 </div>
 
                 {/* Card Body */}
-                <div className="p-8 flex flex-col flex-grow">
-                  <span className="text-caption text-gold-600 font-bold uppercase tracking-widest mb-2">
-                    {t(`data.${tour.type}`, tour.type)}
-                  </span>
-                  
-                  <h3 
-                    className="text-display-md text-obsidian-900 text-2xl mb-2 font-display line-clamp-1 group-hover:text-gold-700 transition-colors"
-                    style={{ fontFamily: "'Playfair Display', serif" }}
-                  >
-                    {t(`data.${tour.title}`, tour.title)}
-                  </h3>
-                  
-                  <p className="text-body-sm text-gold-600 font-medium mb-3 italic">
+                <div className="p-6 flex flex-col flex-grow">
+                  <span className="text-caption text-gold-600 uppercase tracking-widest mb-1 block">
                     {t(`data.${tour.subtitle}`, tour.subtitle)}
-                  </p>
-                  
-                  <p className="text-body-md text-obsidian-600 line-clamp-3 mb-6 leading-relaxed">
+                  </span>
+
+                  <Link to={`/programs/multi-country/${tour.slug}`}>
+                    <h3
+                      className="text-display-md text-obsidian-900 mb-3 line-clamp-2 group-hover:text-gold-700 transition-colors"
+                      style={{ fontFamily: "'Playfair Display', serif" }}
+                    >
+                      {t(`data.${tour.title}`, tour.title)}
+                    </h3>
+                  </Link>
+
+                  <p className="text-body-sm text-obsidian-500 line-clamp-3 mb-4 flex-grow">
                     {t(`data.${tour.description}`, tour.description)}
                   </p>
 
-                  {/* Highlights Bullet List */}
-                  <div className="border-t border-gray-100 pt-4 mb-6">
-                    <span className="text-[11px] uppercase tracking-wider text-obsidian-400 block mb-3 font-semibold">
-                      {t('programs.tourHighlights', 'Key Highlights')}
+                  {/* Star Rating */}
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="flex items-center gap-1 text-sm">
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <FaStar
+                          key={i}
+                          className={i < Math.floor(tour.rating) ? 'text-gold-500' : 'text-obsidian-300'}
+                          size={13}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-caption text-obsidian-900 font-semibold ml-1">
+                      {tour.rating.toFixed(1)}
                     </span>
+                    <span className="text-caption text-obsidian-300">
+                      ({tour.reviewCount} {t('tourCard.reviews', 'reviews')})
+                    </span>
+                  </div>
+
+                  {/* Key Highlights */}
+                  <div className="border-t border-gold-500/10 pt-4 mb-4">
                     <ul className="grid grid-cols-2 gap-x-2 gap-y-1.5">
                       {tour.highlights.slice(0, 4).map((hl, idx) => (
-                        <li key={idx} className="text-[12px] text-obsidian-700 flex items-center gap-1.5 truncate">
-                          <span className="w-1.5 h-1.5 rounded-full bg-gold-500 shrink-0"></span>
-                          <span>{t(`data.${hl}`, hl)}</span>
+                        <li key={idx} className="text-[12px] text-obsidian-500 flex items-center gap-1.5 truncate">
+                          <span className="w-1.5 h-1.5 rounded-full bg-gold-500 shrink-0 flex-shrink-0"></span>
+                          <span className="truncate">{t(`data.${hl}`, hl)}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* Meta Details & Price Footer */}
-                  <div className="flex items-center justify-between border-t border-gray-100 pt-6 mt-auto">
+                  {/* Price & CTA Footer */}
+                  <div className="flex items-center justify-between pt-4 border-t border-gold-500/10 mt-auto">
                     <div>
-                      <span className="text-caption text-obsidian-400 block uppercase tracking-wider">
-                        {t('tourCard.startingFrom', 'Starting from')}
+                      <span className="block text-caption text-obsidian-300 mb-1">
+                        {t('tourCard.from', 'from')}
                       </span>
-                      <div className="flex items-baseline gap-1">
-                        <span className="text-display-md text-gold-600 font-display text-2xl font-bold">
-                          {formatPrice(tour.price)}
-                        </span>
-                        <span className="text-caption text-obsidian-400">/pax</span>
-                      </div>
+                      <span className="text-display-md text-gold-700">
+                        {formatPrice(tour.price)}
+                      </span>
                     </div>
 
                     <Link to={`/programs/multi-country/${tour.slug}`}>
-                      <Button 
-                        variant="outline-gold" 
-                        className="px-5 py-2.5 text-xs font-semibold uppercase tracking-wider group-hover:bg-gold-500 group-hover:text-obsidian-900 group-hover:shadow-lg group-hover:shadow-gold-500/20 transition-all duration-300"
-                      >
-                        {t('tourCard.viewDetails', 'View Details')}
+                      <Button variant="outline-gold" className="px-6 py-2 flex items-center gap-2">
+                        {t('tourCard.book', 'Book')} <span className="rtl-flip">&rarr;</span>
                       </Button>
                     </Link>
                   </div>
@@ -254,7 +263,7 @@ const MultiCountryTours = () => {
         </motion.div>
 
         {filteredTours.length === 0 && (
-          <div className="text-center py-20 bg-white rounded-2xl border border-gray-100 p-8 shadow-card">
+          <div className="text-center py-20 bg-ivory-50 rounded-xl border border-gold-500/10 p-8 shadow-card">
             <FaCompass size={48} className="text-gold-500 mx-auto mb-4 animate-bounce" />
             <h3 className="text-display-md text-2xl text-obsidian-900 font-display mb-2">{t('programs.noToursFound', 'No Combinations Found')}</h3>
             <p className="text-body-md text-obsidian-500 max-w-md mx-auto mb-6">

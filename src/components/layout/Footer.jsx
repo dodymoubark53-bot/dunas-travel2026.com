@@ -30,14 +30,14 @@ const Footer = () => {
               {t('footer.desc', 'Curating award-winning DUNAS TRAVEL experiences across Egypt, Jordan, and Turkey since 2010.')}
             </p>
             <div className="flex items-center gap-4">
-              <a href="#" className="footer-social w-10 h-10 rounded-full bg-[#1A1A2E]/80 border border-white/20 flex items-center justify-center text-white hover:bg-[#F5A623] hover:text-[#1A1A2E] transition-all duration-300 hover:scale-110 shadow-lg">
+              <a href="https://www.facebook.com/share/1EsALYq8cg/" className="footer-social w-10 h-10 rounded-full bg-[#1A1A2E]/80 border border-white/20 flex items-center justify-center text-white hover:bg-[#F5A623] hover:text-[#1A1A2E] transition-all duration-300 hover:scale-110 shadow-lg">
                 <FaFacebook />
               </a>
-              <a href="#" className="footer-social w-10 h-10 rounded-full bg-[#1A1A2E]/80 border border-white/20 flex items-center justify-center text-white hover:bg-[#F5A623] hover:text-[#1A1A2E] transition-all duration-300 hover:scale-110 shadow-lg">
+              <a href="https://www.instagram.com/dunas_travel?igsh=bWkyb2FhY2hoNnN" className="footer-social w-10 h-10 rounded-full bg-[#1A1A2E]/80 border border-white/20 flex items-center justify-center text-white hover:bg-[#F5A623] hover:text-[#1A1A2E] transition-all duration-300 hover:scale-110 shadow-lg">
                 <FaInstagram />
               </a>
-              <a href="#" className="footer-social w-10 h-10 rounded-full bg-[#1A1A2E]/80 border border-white/20 flex items-center justify-center text-white hover:bg-[#F5A623] hover:text-[#1A1A2E] transition-all duration-300 hover:scale-110 shadow-lg">
-                <FaTwitter />
+              <a href="tel:+3374664302" className="footer-social w-10 h-10 rounded-full bg-[#1A1A2E]/80 border border-white/20 flex items-center justify-center text-white hover:bg-[#F5A623] hover:text-[#1A1A2E] transition-all duration-300 hover:scale-110 shadow-lg" title="اتصل بنا على الرقم الأول">
+                <FaPhone />
               </a>
             </div>
           </div>
