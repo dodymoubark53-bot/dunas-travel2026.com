@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaCheckCircle, FaTimes, FaStar, FaMapMarkerAlt, FaChevronDown, FaBed, FaClock, FaTag } from 'react-icons/fa';
+import { FaCheckCircle, FaTimes, FaStar, FaMapMarkerAlt, FaBed, FaClock, FaTag } from 'react-icons/fa';
 import { staggerContainer, fadeInUp } from '../../animations/variants';
 import Button from '../../components/ui/Button';
 import InquiryForm from '../../components/booking/InquiryForm';
@@ -15,7 +15,6 @@ const TurkeyProgramDetails = () => {
   const program = useTurkeyProgram(programId);
   const [activeImage, setActiveImage] = useState(null);
   const [activeForm, setActiveForm] = useState(null);
-  const [expandedDay, setExpandedDay] = useState(1);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -105,7 +104,7 @@ const TurkeyProgramDetails = () => {
               </motion.div>
             )}
 
-            {/* Itinerary */}
+            {/* Itinerary — single collapsible box */}
             <motion.div
               variants={fadeInUp}
               initial="hidden"
@@ -113,57 +112,34 @@ const TurkeyProgramDetails = () => {
               viewport={{ once: true }}
               className="mt-16"
             >
-              <h2 className="text-display-lg text-obsidian-900 mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
-                {t('tourDetail.itinerary', 'Itinerary')}
-              </h2>
-              <div className="w-24 h-1 bg-gold-500 mb-8"></div>
+              <div className="mb-10">
+                <h2 className="text-display-lg text-obsidian-900" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {t('tourDetail.itinerary', 'Itinerary')}
+                </h2>
+                <div className="w-24 h-1 bg-gold-500 mt-2"></div>
+              </div>
 
-              <div className="space-y-4">
-                {days.map((day) => (
-                  <div
-                    key={day.day}
-                    className="bg-ivory-50 rounded-xl border border-gold-500/10 overflow-hidden shadow-sm"
-                  >
-                    <button
-                      className="w-full flex items-center justify-between p-5 text-left hover:bg-obsidian-50/50 transition-colors"
-                      onClick={() => setExpandedDay(expandedDay === day.day ? null : day.day)}
-                    >
-                      <div className="flex items-center gap-4">
-                        <span className="w-10 h-10 rounded-full bg-gold-500 text-obsidian-900 font-bold flex items-center justify-center text-sm">
-                          {String(day.day).padStart(2, '0')}
-                        </span>
-                        <span className="font-semibold text-obsidian-900">
-                          {t('tour.day', 'Day')} {day.day}
-                        </span>
+              <div className="relative pl-10">
+                <div className="absolute left-[15px] top-8 bottom-8 w-[2px] bg-[rgba(201,162,39,0.2)]"></div>
+                <div className="space-y-6">
+                  {days.map((day) => (
+                    <div key={day.day} className="relative">
+                      <div className="absolute -left-10 top-[18px] w-3 h-3 bg-gold-500 rounded-full transform -translate-x-1/2 z-10 shadow-[0_0_0_4px_rgba(201,162,39,0.2)]" />
+
+                      <div className="bg-ivory-50 rounded-xl border-l-2 border-[rgba(201,162,39,0.3)] overflow-hidden shadow-sm p-5">
+                        <div className="flex items-center gap-4 mb-3">
+                          <span className="font-semibold text-obsidian-900">{t('tour.day', 'Day')} {day.day}</span>
+                          {day.meals && (
+                            <span className="text-caption text-obsidian-400 flex items-center gap-1">
+                              <FaBed className="text-gold-500" /> {day.meals}
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-body-sm text-obsidian-500 leading-relaxed">{day.description}</p>
                       </div>
-                      <div className="flex items-center gap-3">
-                        {day.meals && (
-                          <span className="text-caption text-obsidian-400 flex items-center gap-1">
-                            <FaBed className="text-gold-500" /> {day.meals}
-                          </span>
-                        )}
-                        <FaChevronDown
-                          className={`text-gold-500 transition-transform duration-300 ${expandedDay === day.day ? 'rotate-180' : ''}`}
-                        />
-                      </div>
-                    </button>
-                    <AnimatePresence>
-                      {expandedDay === day.day && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="overflow-hidden"
-                        >
-                          <div className="px-5 pb-5 pt-0 border-t border-gold-500/10">
-                            <p className="text-body-sm text-obsidian-500 leading-relaxed mt-3">{day.description}</p>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                ))}
+                    </div>
+                  ))}
+                </div>
               </div>
             </motion.div>
           </div>

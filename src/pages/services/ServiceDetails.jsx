@@ -21,7 +21,6 @@ const ServiceDetails = () => {
   const service = services.find((s) => s.category === category && s.slug === slug);
   const [activeImage, setActiveImage] = useState(null);
   const [activeForm, setActiveForm] = useState(null);
-  const [expandedDay, setExpandedDay] = useState(1);
 
   const translateData = (key, fallback) => {
     if (!key) return fallback || '';
@@ -231,120 +230,64 @@ const ServiceDetails = () => {
                   </motion.div>
                 )}
 
-                {/* Itinerary Section */}
+                {/* Itinerary Section — always visible */}
                 {service.itinerary && (
                   <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-16 text-left">
-                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
-                      <div>
-                        <span className="text-caption text-gold-500 uppercase tracking-widest font-semibold block mb-2">
-                          {t('tour.stepByStep', 'SUA JORNADA PASSO A PASSO')}
-                        </span>
-                        <h2 className="text-display-md text-3xl text-obsidian-900 font-display font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
-                          {t('tour.detailedItinerary', 'Detailed Itinerary')}
-                        </h2>
-                      </div>
-                      <div className="flex gap-3">
-                        <button 
-                          onClick={() => setExpandedDay('all')}
-                          className="px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider border border-gray-200 hover:border-gold-500 hover:text-gold-600 rounded-lg bg-white transition-colors cursor-pointer outline-none"
-                        >
-                          {t('tour.expandAll', 'Expand All')}
-                        </button>
-                        <button 
-                          onClick={() => setExpandedDay(null)}
-                          className="px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider border border-gray-200 hover:border-gold-500 hover:text-gold-600 rounded-lg bg-white transition-colors cursor-pointer outline-none"
-                        >
-                          {t('tour.collapseAll', 'Collapse All')}
-                        </button>
-                      </div>
+                    <div className="mb-10">
+                      <span className="text-caption text-gold-500 uppercase tracking-widest font-semibold block mb-2">
+                        {t('tour.stepByStep', 'SUA JORNADA PASSO A PASSO')}
+                      </span>
+                      <h2 className="text-display-md text-3xl text-obsidian-900 font-display font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
+                        {t('tour.detailedItinerary', 'Detailed Itinerary')}
+                      </h2>
                     </div>
 
                     <div className="relative pl-6 md:pl-10">
                       <div className="absolute left-[11px] md:left-[19px] top-8 bottom-8 w-[2px] bg-[rgba(201,162,39,0.2)]"></div>
                       <div className="flex flex-col gap-6">
-                        {service.itinerary.map((day) => {
-                          const isExpanded = expandedDay === 'all' || expandedDay === day.day;
-                          return (
-                            <div key={day.day} className="relative text-left">
-                              <motion.div
-                                animate={{ boxShadow: isExpanded ? ['0 0 0 0 rgba(201,162,39,0.4)', '0 0 0 8px rgba(201,162,39,0)', '0 0 0 0 rgba(201,162,39,0.4)'] : 'none' }}
-                                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                                className={`absolute -left-6 md:-left-10 top-[26px] w-3.5 h-3.5 rounded-full transform -translate-x-1/2 z-10 transition-colors border-2 ${
-                                  isExpanded ? 'bg-gold-500 border-white shadow-md scale-110' : 'bg-white border-gold-500/40'
-                                }`}
-                              />
+                        {service.itinerary.map((day) => (
+                          <div key={day.day} className="relative text-left">
+                            <div className="absolute -left-6 md:-left-10 top-[26px] w-3.5 h-3.5 bg-gold-500 rounded-full transform -translate-x-1/2 z-10 border-2 border-white shadow-[0_0_0_4px_rgba(201,162,39,0.2)]" />
 
-                              <div 
-                                className="rounded-xl overflow-hidden transition-all duration-300 border border-gray-100 animate-none" 
-                                style={{ 
-                                  backgroundColor: isExpanded ? 'rgba(201,162,39,0.05)' : 'white',
-                                  borderLeft: isExpanded ? '4px solid #C9A227' : '1px solid #E5E7EB'
-                                }}
-                              >
-                                <button 
-                                  onClick={() => {
-                                    if (expandedDay === 'all') {
-                                      setExpandedDay(day.day);
-                                    } else {
-                                      setExpandedDay(expandedDay === day.day ? null : day.day);
-                                    }
-                                  }}
-                                  className="w-full flex items-center justify-between p-6 text-left"
-                                >
-                                  <h3 className="text-body-lg font-semibold text-obsidian-900">
-                                    <span className="text-gold-600 mr-2 font-display">{t('tour.day', 'Day')} {day.day} &mdash;</span> {translateData(day.title, day.title)}
-                                  </h3>
-                                  <motion.div animate={{ rotate: isExpanded ? 180 : 0 }}>
-                                    <FaChevronDown className="text-gold-500" />
-                                  </motion.div>
-                                </button>
-                                
-                                <AnimatePresence initial={false}>
-                                  {isExpanded && (
-                                    <motion.div 
-                                      initial={{ height: 0, opacity: 0 }}
-                                      animate={{ height: 'auto', opacity: 1, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } }}
-                                      exit={{ height: 0, opacity: 0, transition: { duration: 0.25 } }}
-                                      className="overflow-hidden"
-                                    >
-                                      <div className="px-6 pb-6 flex flex-col gap-4">
-                                        <div className="bg-obsidian-900 text-ivory-50 p-6 rounded-xl flex flex-col gap-5 shadow-inner">
-                                          {day.morning && (
-                                            <div className="flex items-start gap-4 pb-4 border-b border-ivory-50/10 text-left">
-                                              <span className="text-xl mt-0.5 shrink-0">🌅</span>
-                                              <div>
-                                                <span className="font-bold text-gold-500 text-xs uppercase tracking-wider block mb-1">{t('tour.morning', 'Morning')}</span>
-                                                <p className="text-ivory-200 text-body-md leading-relaxed">{translateData(day.morning, day.morning)}</p>
-                                              </div>
-                                            </div>
-                                          )}
-                                          {day.afternoon && (
-                                            <div className="flex items-start gap-4 pb-4 border-b border-ivory-50/10 text-left">
-                                              <span className="text-xl mt-0.5 shrink-0">☀️</span>
-                                              <div>
-                                                <span className="font-bold text-gold-500 text-xs uppercase tracking-wider block mb-1">{t('tour.afternoon', 'Afternoon')}</span>
-                                                <p className="text-ivory-200 text-body-md leading-relaxed">{translateData(day.afternoon, day.afternoon)}</p>
-                                              </div>
-                                            </div>
-                                          )}
-                                          {day.evening && (
-                                            <div className="flex items-start gap-4 text-left">
-                                              <span className="text-xl mt-0.5 shrink-0">🌙</span>
-                                              <div>
-                                                <span className="font-bold text-gold-500 text-xs uppercase tracking-wider block mb-1">{t('tour.evening', 'Evening')}</span>
-                                                <p className="text-ivory-200 text-body-md leading-relaxed">{translateData(day.evening, day.evening)}</p>
-                                              </div>
-                                            </div>
-                                          )}
-                                        </div>
+                            <div className="rounded-xl overflow-hidden bg-[rgba(201,162,39,0.05)] border-l-4 border-[#C9A227]">
+                              <div className="p-6 text-left">
+                                <h3 className="text-body-lg font-semibold text-obsidian-900 mb-4">
+                                  <span className="text-gold-600 mr-2 font-display">{t('tour.day', 'Day')} {day.day} &mdash;</span> {translateData(day.title, day.title)}
+                                </h3>
+
+                                <div className="bg-obsidian-900 text-ivory-50 p-6 rounded-xl flex flex-col gap-5 shadow-inner">
+                                  {day.morning && (
+                                    <div className="flex items-start gap-4 pb-4 border-b border-ivory-50/10 text-left">
+                                      <span className="text-xl mt-0.5 shrink-0">🌅</span>
+                                      <div>
+                                        <span className="font-bold text-gold-500 text-xs uppercase tracking-wider block mb-1">{t('tour.morning', 'Morning')}</span>
+                                        <p className="text-ivory-200 text-body-md leading-relaxed">{translateData(day.morning, day.morning)}</p>
                                       </div>
-                                    </motion.div>
+                                    </div>
                                   )}
-                                </AnimatePresence>
+                                  {day.afternoon && (
+                                    <div className="flex items-start gap-4 pb-4 border-b border-ivory-50/10 text-left">
+                                      <span className="text-xl mt-0.5 shrink-0">☀️</span>
+                                      <div>
+                                        <span className="font-bold text-gold-500 text-xs uppercase tracking-wider block mb-1">{t('tour.afternoon', 'Afternoon')}</span>
+                                        <p className="text-ivory-200 text-body-md leading-relaxed">{translateData(day.afternoon, day.afternoon)}</p>
+                                      </div>
+                                    </div>
+                                  )}
+                                  {day.evening && (
+                                    <div className="flex items-start gap-4 text-left">
+                                      <span className="text-xl mt-0.5 shrink-0">🌙</span>
+                                      <div>
+                                        <span className="font-bold text-gold-500 text-xs uppercase tracking-wider block mb-1">{t('tour.evening', 'Evening')}</span>
+                                        <p className="text-ivory-200 text-body-md leading-relaxed">{translateData(day.evening, day.evening)}</p>
+                                      </div>
+                                    </div>
+                                  )}
+                                </div>
                               </div>
                             </div>
-                          );
-                        })}
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </motion.div>
