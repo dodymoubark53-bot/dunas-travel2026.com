@@ -21,27 +21,6 @@ export const services = [
     excluded: ['International flights', 'Tipping / Gratuities', 'Personal travel insurance']
   },
 
-  // 2. TRANSPORTATION PROGRAMS
-  {
-    id: 'prog-trn-1',
-    category: 'transportation',
-    slug: 'luxury-chauffeur-fleet',
-    title: 'Elite Private Transportation Fleet',
-    location: 'All Destinations',
-    price: 300,
-    rating: 4.9,
-    images: ['/imgs/transportation/bus1.jpeg', '/imgs/transportation/bus2.jpeg'],
-    shortDesc: 'Travel in absolute comfort with our premium, air-conditioned private luxury vehicles and professional drivers.',
-    overview: [
-      "Whether you need seamless airport transfers, inter-city travel, or a dedicated private chauffeur for your entire vacation, our luxury transportation program guarantees safety, punctuality, and style.",
-      "Our fleet consists of the latest models of luxury sedans, SUVs, and high-top executive vans, all equipped with high-speed onboard Wi-Fi, refreshing drinks, and climate control to beat the heat.",
-      "Our drivers are multi-lingual, highly vetted professionals with deep knowledge of local routes, ensuring your transit between hotels, airports, and sightseeing hubs is completely stress-free."
-    ],
-    highlights: ['Latest model luxury vehicles', 'Professional English-speaking chauffeurs', 'Onboard complimentary Wi-Fi & refreshments', '24/7 dispatch and flight-tracking support'],
-    included: ['Fuel and toll fees', 'Airport meet-and-greet service', 'Passenger insurance', 'Luggage handling'],
-    excluded: ['Driver overnight fees (for cross-country trips)', 'Extra-hours extension charges']
-  },
-
   // 3. EXTENSION PROGRAMS
   {
     id: 'prog-ext-1',
@@ -173,7 +152,7 @@ export const services = [
       {
         day: 5,
         title: 'CAIRO / WADI NATRUN / CAIRO',
-        morning: 'Breakfast. Excursion to Wadi El Natrun to visit three Copta monasteries: Deir Al Baramos, Deir Anba Bechoy, and Deir Santa Maria.',
+        morning: 'Breakfast. Excursion to Wadi El Natrun to visit three Coptic monasteries: Deir Al Baramos, Deir Anba Bechoy, and Deir Santa Maria.',
         afternoon: 'Lunch at a local restaurant.',
         evening: 'Return to Cairo, free afternoon, overnight.'
       },
