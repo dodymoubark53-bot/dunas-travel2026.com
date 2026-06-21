@@ -5,7 +5,8 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FaCheckCircle, FaTimes, FaStar, FaMapMarkerAlt, FaTimesCircle, 
-  FaChevronDown, FaBed, FaClock, FaTag, FaUserFriends, FaGlobe, FaChevronRight 
+  FaChevronDown, FaBed, FaClock, FaTag, FaUserFriends, FaGlobe, FaChevronRight,
+  FaCloudSun, FaSun, FaMoon
 } from 'react-icons/fa';
 import Button from '../../components/ui/Button';
 import { staggerContainer, fadeInUp } from '../../animations/variants';
@@ -218,19 +219,25 @@ const ServiceDetails = () => {
                               <div className="space-y-2">
                                 {day.morning && (
                                   <div className="flex items-start gap-3">
-                                    <span className="text-caption text-gold-600 uppercase tracking-wider font-semibold shrink-0 w-20">🌅 {t('tour.morning', 'Morning')}</span>
+                                    <span className="flex items-center gap-2 text-caption text-gold-600 uppercase tracking-wider font-semibold shrink-0 w-24">
+                                      <FaCloudSun className="text-gold-500" size={14} /> {t('tour.morning', 'Morning')}
+                                    </span>
                                     <p className="text-body-sm text-obsidian-500 leading-relaxed">{translateData(day.morning, day.morning)}</p>
                                   </div>
                                 )}
                                 {day.afternoon && (
                                   <div className="flex items-start gap-3">
-                                    <span className="text-caption text-gold-600 uppercase tracking-wider font-semibold shrink-0 w-20">☀️ {t('tour.afternoon', 'Afternoon')}</span>
+                                    <span className="flex items-center gap-2 text-caption text-amber-600 uppercase tracking-wider font-semibold shrink-0 w-24">
+                                      <FaSun className="text-amber-500" size={14} /> {t('tour.afternoon', 'Afternoon')}
+                                    </span>
                                     <p className="text-body-sm text-obsidian-500 leading-relaxed">{translateData(day.afternoon, day.afternoon)}</p>
                                   </div>
                                 )}
                                 {day.evening && (
                                   <div className="flex items-start gap-3">
-                                    <span className="text-caption text-gold-600 uppercase tracking-wider font-semibold shrink-0 w-20">🌙 {t('tour.evening', 'Evening')}</span>
+                                    <span className="flex items-center gap-2 text-caption text-indigo-600 uppercase tracking-wider font-semibold shrink-0 w-24">
+                                      <FaMoon className="text-indigo-400" size={14} /> {t('tour.evening', 'Evening')}
+                                    </span>
                                     <p className="text-body-sm text-obsidian-500 leading-relaxed">{translateData(day.evening, day.evening)}</p>
                                   </div>
                                 )}

@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   FaChevronRight, FaClock, FaUserFriends, FaGlobe, FaTag,
   FaCheck, FaTimes, FaMapMarkerAlt,
-  FaBed, FaCheckCircle
+  FaBed, FaCheckCircle, FaCloudSun, FaSun, FaMoon
 } from 'react-icons/fa';
 import { fadeInUp } from '../../animations/variants';
 import { multiCountryTours } from '../../data/multiCountryTours';
@@ -268,19 +268,25 @@ const MultiCountryTourDetails = () => {
                         <div className="space-y-2">
                           {day.morning && (
                             <div className="flex items-start gap-3">
-                              <span className="text-caption text-gold-600 uppercase tracking-wider font-semibold shrink-0 w-20">{'\uD83C\uDF05'} {t('tour.morning', 'Morning')}</span>
+                              <span className="flex items-center gap-2 text-caption text-gold-600 uppercase tracking-wider font-semibold shrink-0 w-24">
+                                <FaCloudSun className="text-gold-500" size={14} /> {t('tour.morning', 'Morning')}
+                              </span>
                               <p className="text-body-sm text-obsidian-500 leading-relaxed">{t(`data.${day.morning}`, day.morning)}</p>
                             </div>
                           )}
                           {day.afternoon && (
                             <div className="flex items-start gap-3">
-                              <span className="text-caption text-gold-600 uppercase tracking-wider font-semibold shrink-0 w-20">{'\u2600\uFE0F'} {t('tour.afternoon', 'Afternoon')}</span>
+                              <span className="flex items-center gap-2 text-caption text-amber-600 uppercase tracking-wider font-semibold shrink-0 w-24">
+                                <FaSun className="text-amber-500" size={14} /> {t('tour.afternoon', 'Afternoon')}
+                              </span>
                               <p className="text-body-sm text-obsidian-500 leading-relaxed">{t(`data.${day.afternoon}`, day.afternoon)}</p>
                             </div>
                           )}
                           {day.evening && (
                             <div className="flex items-start gap-3">
-                              <span className="text-caption text-gold-600 uppercase tracking-wider font-semibold shrink-0 w-20">{'\uD83C\uDF19'} {t('tour.evening', 'Evening')}</span>
+                              <span className="flex items-center gap-2 text-caption text-indigo-600 uppercase tracking-wider font-semibold shrink-0 w-24">
+                                <FaMoon className="text-indigo-400" size={14} /> {t('tour.evening', 'Evening')}
+                              </span>
                               <p className="text-body-sm text-obsidian-500 leading-relaxed">{t(`data.${day.evening}`, day.evening)}</p>
                             </div>
                           )}

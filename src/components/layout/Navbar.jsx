@@ -241,30 +241,94 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Lang */}
-          <button
-            onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-            className="h-9 rounded-full border border-obsidian-200 flex items-center justify-center text-obsidian-400 hover:text-amber-600 hover:border-amber-300 transition-all bg-amber-50/50 hover:bg-amber-50 shadow-sm gap-1.5 px-3"
-          >
-            <FaGlobe size={13} />
-            <span className="text-[11px] font-semibold uppercase">
-              {i18n.language === 'ar' ? 'ع' :
-                i18n.language === 'es' ? 'es' :
-                  i18n.language === 'pt' ? 'pt' :
-                    i18n.language === 'it' ? 'it' : 'en'}
-            </span>
-          </button>
+          {/* Lang (Desktop) */}
+          <div className="relative">
+            <button
+              onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+              className="h-9 rounded-full border border-obsidian-200 flex items-center justify-center text-obsidian-400 hover:text-amber-600 hover:border-amber-300 transition-all bg-amber-50/50 hover:bg-amber-50 shadow-sm gap-1.5 px-3"
+            >
+              <FaGlobe size={13} />
+              <span className="text-[11px] font-semibold uppercase">
+                {i18n.language === 'ar' ? 'ع' :
+                  i18n.language === 'es' ? 'es' :
+                    i18n.language === 'pt' ? 'pt' :
+                      i18n.language === 'it' ? 'it' : 'en'}
+              </span>
+            </button>
+            <AnimatePresence>
+              {langDropdownOpen && (
+                <motion.div
+                  variants={dropdownVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  className="absolute top-full right-0 mt-2 w-40 bg-white border border-obsidian-200 rounded-xl overflow-hidden shadow-xl z-[10000]"
+                >
+                  {[
+                    { code: 'en', label: 'English', flag: '🇬🇧' },
+                    { code: 'ar', label: 'العربية', flag: '🇪🇬' },
+                    { code: 'es', label: 'Español', flag: '🇪🇸' },
+                    { code: 'pt', label: 'Português', flag: '🇧🇷' },
+                    { code: 'it', label: 'Italiano', flag: '🇮🇹' },
+                  ].map(lang => (
+                    <button
+                      key={lang.code}
+                      onClick={() => changeLanguage(lang.code)}
+                      className={`w-full text-left px-4 py-3 flex items-center justify-between text-body-md border-b border-obsidian-100 last:border-0 transition-colors ${i18n.language === lang.code ? 'text-amber-600 font-semibold bg-amber-50' : 'text-obsidian-700 hover:text-amber-600 hover:bg-amber-50'}`}
+                    >
+                      <span className="flex items-center gap-2">
+                        <span className="text-lg">{lang.flag}</span>
+                        <span>{lang.label}</span>
+                      </span>
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
 
         {/* Mobile Action Buttons */}
         <div className="lg:hidden flex items-center gap-2 z-50">
-          {/* Lang */}
-          <button
-            onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-            className="w-9 h-9 rounded-full border border-obsidian-200 flex items-center justify-center text-obsidian-400 hover:text-amber-600 hover:border-amber-300 transition-all bg-amber-50/50 hover:bg-amber-50 shadow-sm gap-1.5 px-2.5"
-          >
-            <FaGlobe size={14} />
-          </button>
+          {/* Lang (Mobile) */}
+          <div className="relative">
+            <button
+              onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+              className="w-9 h-9 rounded-full border border-obsidian-200 flex items-center justify-center text-obsidian-400 hover:text-amber-600 hover:border-amber-300 transition-all bg-amber-50/50 hover:bg-amber-50 shadow-sm gap-1.5 px-2.5"
+            >
+              <FaGlobe size={14} />
+            </button>
+            <AnimatePresence>
+              {langDropdownOpen && (
+                <motion.div
+                  variants={dropdownVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  className="absolute top-full right-0 mt-2 w-40 bg-white border border-obsidian-200 rounded-xl overflow-hidden shadow-xl z-[10000]"
+                >
+                  {[
+                    { code: 'en', label: 'English', flag: '🇬🇧' },
+                    { code: 'ar', label: 'العربية', flag: '🇪🇬' },
+                    { code: 'es', label: 'Español', flag: '🇪🇸' },
+                    { code: 'pt', label: 'Português', flag: '🇧🇷' },
+                    { code: 'it', label: 'Italiano', flag: '🇮🇹' },
+                  ].map(lang => (
+                    <button
+                      key={lang.code}
+                      onClick={() => changeLanguage(lang.code)}
+                      className={`w-full text-left px-4 py-3 flex items-center justify-between text-body-md border-b border-obsidian-100 last:border-0 transition-colors ${i18n.language === lang.code ? 'text-amber-600 font-semibold bg-amber-50' : 'text-obsidian-700 hover:text-amber-600 hover:bg-amber-50'}`}
+                    >
+                      <span className="flex items-center gap-2">
+                        <span className="text-lg">{lang.flag}</span>
+                        <span>{lang.label}</span>
+                      </span>
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
 
           {/* Profile */}
           {!user ? (
@@ -423,38 +487,6 @@ const Navbar = () => {
                   </div>
                 )}
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* Global Lang Dropdown (shared between desktop & mobile) */}
-        <AnimatePresence>
-          {langDropdownOpen && (
-            <motion.div
-              variants={dropdownVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              className="absolute top-full right-1 mt-5 w-40 bg-white border border-obsidian-200 rounded-xl overflow-hidden shadow-xl z-[10000]"
-            >
-              {[
-                { code: 'en', label: 'English', flag: '🇬🇧' },
-                { code: 'ar', label: 'العربية', flag: '🇪🇬' },
-                { code: 'es', label: 'Español', flag: '🇪🇸' },
-                { code: 'pt', label: 'Português', flag: '🇧🇷' },
-                { code: 'it', label: 'Italiano', flag: '🇮🇹' },
-              ].map(lang => (
-                <button
-                  key={lang.code}
-                  onClick={() => changeLanguage(lang.code)}
-                  className={`w-full text-left px-4 py-3 flex items-center justify-between text-body-md border-b border-obsidian-100 last:border-0 transition-colors ${i18n.language === lang.code ? 'text-amber-600 font-semibold bg-amber-50' : 'text-obsidian-700 hover:text-amber-600 hover:bg-amber-50'}`}
-                >
-                  <span className="flex items-center gap-2">
-                    <span className="text-lg">{lang.flag}</span>
-                    <span>{lang.label}</span>
-                  </span>
-                </button>
-              ))}
             </motion.div>
           )}
         </AnimatePresence>

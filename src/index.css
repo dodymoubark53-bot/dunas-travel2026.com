@@ -84,13 +84,13 @@
 @layer components {
   /* ── Typography Scale ───────────────────────────────────────── */
   .text-display-xl {
-    @apply font-display font-normal;
+    @apply font-display font-semibold;
     font-size: var(--text-display-xl);
     line-height: var(--leading-display);
     letter-spacing: var(--tracking-display);
   }
   .text-display-lg {
-    @apply font-display font-normal;
+    @apply font-display font-semibold;
     font-size: var(--text-display-lg);
     line-height: var(--leading-display);
     letter-spacing: var(--tracking-display);
@@ -108,31 +108,31 @@
     letter-spacing: var(--tracking-display);
   }
   .text-body-xl {
-    @apply font-body font-normal;
+    @apply font-body font-medium;
     font-size: var(--text-body-xl);
     line-height: var(--leading-body);
     letter-spacing: var(--tracking-body);
   }
   .text-body-lg {
-    @apply font-body font-normal;
+    @apply font-body font-medium;
     font-size: var(--text-body-lg);
     line-height: var(--leading-body);
     letter-spacing: var(--tracking-body);
   }
   .text-body-md {
-    @apply font-body font-normal;
+    @apply font-body font-medium;
     font-size: var(--text-body-md);
     line-height: var(--leading-body);
     letter-spacing: var(--tracking-body);
   }
   .text-body-sm {
-    @apply font-body font-normal;
+    @apply font-body font-medium;
     font-size: var(--text-body-sm);
     line-height: var(--leading-body);
     letter-spacing: var(--tracking-body);
   }
   .text-caption {
-    @apply font-body font-medium;
+    @apply font-body font-semibold;
     font-size: var(--text-caption);
     line-height: var(--leading-normal);
     letter-spacing: var(--tracking-caps);
