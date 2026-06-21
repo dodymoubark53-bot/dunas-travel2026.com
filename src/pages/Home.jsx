@@ -205,6 +205,7 @@ const Home = () => {
         t.destination === "morocco" &&
         t.id !== tours.find((x) => x.destination === "morocco")?.id,
     ),
+    tours.find((t) => t.destination === "tunisia"),
   ].filter(Boolean);
 
   const handleDestinationClick = (id) => {
@@ -217,20 +218,20 @@ const Home = () => {
         <title>
           {t(
             "home.metaTitle",
-            "Dunas Travel | Award-Winning Experiences in Egypt, Jordan & Turkey",
+            "Dunas Travel | Award-Winning Experiences in Egypt, Jordan, Turkey & Tunisia",
           )}
         </title>
         <meta
           name="description"
           content={t(
             "home.metaDesc",
-            "Experience true luxury with Dunas Travel — curated journeys through the timeless wonders of Egypt, Jordan, and Turkey.",
+            "Experience true luxury with Dunas Travel — curated journeys through the timeless wonders of Egypt, Jordan, Turkey, and Tunisia.",
           )}
         />
         <meta property="og:title" content="Dunas Travel" />
         <meta
           property="og:description"
-          content="Premium luxury travel agency — Egypt, Jordan & Turkey"
+          content="Premium luxury travel agency — Egypt, Jordan, Turkey & Tunisia"
         />
         <meta property="og:image" content="/dunas-travel-logo.png" />
         <link rel="icon" type="image/png" href="/dunas-travel-logo.png" />
@@ -273,7 +274,7 @@ const Home = () => {
             variants={fadeInUp}
             className="text-body-lg text-ivory-300 mb-8 max-w-2xl mx-auto"
           >
-            {t("home.heroDesc", "Curating ultra-luxury, personalized itineraries through the timeless wonders of Egypt, Jordan, and Turkey. Experience the world's most captivating destinations in unparalleled style.")}
+            {t("home.heroDesc", "Curating ultra-luxury, personalized itineraries through the timeless wonders of Egypt, Jordan, Turkey, and Tunisia. Experience the world's most captivating destinations in unparalleled style.")}
           </motion.p>
 
           <motion.div
@@ -320,7 +321,7 @@ const Home = () => {
               <p className="text-body-lg text-obsidian-700 mb-8 leading-relaxed">
                 {t(
                   "home.aboutDesc",
-                  "Dunas Travel is a premium luxury travel agency specializing in Egypt, Jordan, and Turkey. Our passion is crafting highly curated tours, exclusive safaris, boutique cruises, and hand-picked hotel experiences for discerning travelers who seek the extraordinary. Let us transform your travel dreams into timeless memories.",
+                  "Dunas Travel is a premium luxury travel agency specializing in Egypt, Jordan, Turkey, and Tunisia. Our passion is crafting highly curated tours, exclusive safaris, boutique cruises, and hand-picked hotel experiences for discerning travelers who seek the extraordinary. Let us transform your travel dreams into timeless memories.",
                 )}
               </p>
               <Link to="/about">
@@ -703,7 +704,7 @@ const Home = () => {
               className="text-body-lg text-obsidian-700 max-w-2xl mx-auto"
             >
               Luxury vehicles and professional drivers — available across Egypt,
-              Jordan & Turkey
+              Jordan, Turkey & Tunisia
             </motion.p>
             <motion.div
               initial={{ width: 0 }}
@@ -762,8 +763,8 @@ const Home = () => {
 
                     <div className="absolute top-4 left-4 bg-gold-500 text-obsidian-900 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded shadow-md">
                       {vehicle.category === 'bus' ? t('transportation.filter.buses', 'Buses') :
-                       vehicle.category === 'coaster' ? t('transportation.filter.coasters', 'Coaster Vehicles') :
-                       t('transportation.filter.private', 'Private Vehicles')}
+                        vehicle.category === 'coaster' ? t('transportation.filter.coasters', 'Coaster Vehicles') :
+                          t('transportation.filter.private', 'Private Vehicles')}
                     </div>
 
                     <div className="absolute bottom-0 left-0 right-0 p-5 flex flex-col justify-end">

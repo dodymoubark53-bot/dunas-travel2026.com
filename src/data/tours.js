@@ -1,4 +1,4 @@
-export const tours = [
+const baseTours = [
   // ==========================================
   // 🇧🇷 MERCADO BRASILEIRO (PT-BR)
   // ==========================================
@@ -732,4 +732,6 @@ export const tours = [
   }
 ];
 
-export const allTours = [...tours];
+import { tunisiaTours } from './tunisiaTours';
+export const tours = [...baseTours, ...tunisiaTours];
+export const allTours = tours;

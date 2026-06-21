@@ -128,7 +128,8 @@ const TourDetails = () => {
               <div className="flex gap-8 border-b border-gray-200 mb-8 overflow-x-auto no-scrollbar">
                 {[
                   { id: 'overview', label: t('tour.tabOverview', 'Overview') },
-                  { id: 'highlights', label: t('tour.tabHighlights', 'Highlights') }
+                  { id: 'highlights', label: t('tour.tabHighlights', 'Highlights') },
+                  ...(tour.pricingTiers ? [{ id: 'pricing', label: t('tour.tabPricing', 'Pricing') }] : [])
                 ].map(tab => (
                   <button
                     key={tab.id}
@@ -179,6 +180,33 @@ const TourDetails = () => {
                         </li>
                       ))}
                     </ul>
+                  )}
+
+                  {activeTab === 'pricing' && tour.pricingTiers && (
+                    <div className="bg-white rounded-2xl shadow-card overflow-hidden border border-gold-500/10">
+                      <div className="bg-obsidian-900 px-6 py-4 text-ivory-50 font-display font-semibold text-lg tracking-wider">
+                        {t('tour.pricingTiers', 'Group Pricing Tiers')}
+                      </div>
+                      <div className="grid grid-cols-2 bg-obsidian-50 text-obsidian-700 text-sm font-semibold uppercase tracking-wider">
+                        <div className="p-4 border-r border-gold-500/10">{t('tour.groupSize', 'Group Size')}</div>
+                        <div className="p-4 text-center">{t('tour.pricePerPerson', 'Price Per Person')}</div>
+                      </div>
+                      {tour.pricingTiers.map((tier, idx) => (
+                        <div key={idx} className={`grid grid-cols-2 border-b border-gold-500/10 last:border-0 ${idx % 2 === 0 ? 'bg-white' : 'bg-obsidian-50/30'}`}>
+                          <div className="p-4 border-r border-gold-500/10 font-medium text-obsidian-900 flex items-center">
+                            {tier.minPax === tier.maxPax ? `${tier.minPax} Pax` : `${tier.minPax} - ${tier.maxPax} Pax`}
+                          </div>
+                          <div className="p-4 text-center font-bold text-gold-700">
+                            {formatPrice(tier.pricePerPax)}
+                          </div>
+                        </div>
+                      ))}
+                      {tour.optionalExcursionsPricing && (
+                        <div className="p-6 bg-obsidian-50/50 border-t border-gold-500/10 text-body-sm text-obsidian-500">
+                          * {t('tour.excursionsCurrency', 'Optional excursions are priced in')} {tour.optionalExcursionsPricing.currency}
+                        </div>
+                      )}
+                    </div>
                   )}
                 </motion.div>
               </AnimatePresence>
@@ -298,27 +326,49 @@ const TourDetails = () => {
                                   className="px-6 pb-6 overflow-hidden"
                                 >
                                   <div className="bg-obsidian-900 p-6 rounded-xl flex flex-col gap-4 shadow-inner">
-                                    <div className="flex items-start gap-4 pb-4 border-b border-[rgba(201,162,39,0.1)]">
-                                      <span className="text-2xl mt-1">🌅</span>
-                                      <div>
-                                        <span className="font-bold text-[#C9A227] block mb-1">{t('tour.morning', 'Morning')}</span>
-                                        <p className="text-[#F5EDD6] text-body-md leading-relaxed">{t(`data.${day.morning}`, day.morning)}</p>
-                                      </div>
-                                    </div>
-                                    <div className="flex items-start gap-4 pb-4 border-b border-[rgba(201,162,39,0.1)]">
-                                      <span className="text-2xl mt-1">☀️</span>
-                                      <div>
-                                        <span className="font-bold text-[#C9A227] block mb-1">{t('tour.afternoon', 'Afternoon')}</span>
-                                        <p className="text-[#F5EDD6] text-body-md leading-relaxed">{t(`data.${day.afternoon}`, day.afternoon)}</p>
-                                      </div>
-                                    </div>
-                                    <div className="flex items-start gap-4">
-                                      <span className="text-2xl mt-1">🌙</span>
-                                      <div>
-                                        <span className="font-bold text-[#C9A227] block mb-1">{t('tour.evening', 'Evening')}</span>
-                                        <p className="text-[#F5EDD6] text-body-md leading-relaxed">{t(`data.${day.evening}`, day.evening)}</p>
-                                      </div>
-                                    </div>
+                                    {day.description ? (
+                                      <>
+                                        <div className="flex items-start gap-4 pb-4 border-b border-[rgba(201,162,39,0.1)]">
+                                          <span className="text-2xl mt-1">📍</span>
+                                          <div>
+                                            <p className="text-[#F5EDD6] text-body-md leading-relaxed">{t(`data.${day.description}`, day.description)}</p>
+                                          </div>
+                                        </div>
+                                        {day.meals && (
+                                          <div className="flex items-start gap-4">
+                                            <span className="text-2xl mt-1">🍽️</span>
+                                            <div>
+                                              <span className="font-bold text-[#C9A227] block mb-1">{t('tour.meals', 'Meals')}</span>
+                                              <p className="text-[#F5EDD6] text-body-md leading-relaxed">{t(`data.${day.meals}`, day.meals)}</p>
+                                            </div>
+                                          </div>
+                                        )}
+                                      </>
+                                    ) : (
+                                      <>
+                                        <div className="flex items-start gap-4 pb-4 border-b border-[rgba(201,162,39,0.1)]">
+                                          <span className="text-2xl mt-1">🌅</span>
+                                          <div>
+                                            <span className="font-bold text-[#C9A227] block mb-1">{t('tour.morning', 'Morning')}</span>
+                                            <p className="text-[#F5EDD6] text-body-md leading-relaxed">{t(`data.${day.morning}`, day.morning)}</p>
+                                          </div>
+                                        </div>
+                                        <div className="flex items-start gap-4 pb-4 border-b border-[rgba(201,162,39,0.1)]">
+                                          <span className="text-2xl mt-1">☀️</span>
+                                          <div>
+                                            <span className="font-bold text-[#C9A227] block mb-1">{t('tour.afternoon', 'Afternoon')}</span>
+                                            <p className="text-[#F5EDD6] text-body-md leading-relaxed">{t(`data.${day.afternoon}`, day.afternoon)}</p>
+                                          </div>
+                                        </div>
+                                        <div className="flex items-start gap-4">
+                                          <span className="text-2xl mt-1">🌙</span>
+                                          <div>
+                                            <span className="font-bold text-[#C9A227] block mb-1">{t('tour.evening', 'Evening')}</span>
+                                            <p className="text-[#F5EDD6] text-body-md leading-relaxed">{t(`data.${day.evening}`, day.evening)}</p>
+                                          </div>
+                                        </div>
+                                      </>
+                                    )}
                                   </div>
                                 </motion.div>
                               )}
@@ -331,10 +381,10 @@ const TourDetails = () => {
                 </div>
               </div>
 
-              {/* Included / Excluded */}
-              <div className="mt-16 pt-12 border-t border-gray-200 grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Included / Excluded / Excursions */}
+              <div className={`mt-16 pt-12 border-t border-gray-200 grid grid-cols-1 md:grid-cols-${tour.excursions && tour.excursions.length > 0 ? '3' : '2'} gap-8`}>
                 <div>
-                  <h3 className="text-display-md text-2xl mb-6">{t('tourDetail.included', 'What is Included')}</h3>
+                  <h3 className="text-display-md text-2xl mb-6">{tour.included && tour.included.length > 0 ? (tour.inclusionsTitle ? t(`data.${tour.inclusionsTitle}`, tour.inclusionsTitle) : t('tourDetail.included', 'What is Included')) : ''}</h3>
                   <ul className="flex flex-col gap-3">
                     {tour.included && tour.included.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700">
@@ -345,7 +395,7 @@ const TourDetails = () => {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-display-md text-2xl mb-6">{t('tourDetail.excluded', 'What is Excluded')}</h3>
+                  <h3 className="text-display-md text-2xl mb-6">{tour.excluded && tour.excluded.length > 0 ? (tour.exclusionsTitle ? t(`data.${tour.exclusionsTitle}`, tour.exclusionsTitle) : t('tourDetail.excluded', 'What is Excluded')) : ''}</h3>
                   <ul className="flex flex-col gap-3">
                     {tour.excluded && tour.excluded.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700">
@@ -355,6 +405,19 @@ const TourDetails = () => {
                     ))}
                   </ul>
                 </div>
+                {tour.excursions && tour.excursions.length > 0 && (
+                  <div>
+                    <h3 className="text-display-md text-2xl mb-6">{t('tour.optionalExcursions', 'Optional Excursions')}</h3>
+                    <ul className="flex flex-col gap-3">
+                      {tour.excursions.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700">
+                          <FaCheck className="text-gold-500 mt-1 flex-shrink-0" />
+                          <span>{t(`data.${item}`, item)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
 
               {/* Accommodation list / Hotels section */}
@@ -384,7 +447,7 @@ const TourDetails = () => {
                           </h3>
                         </div>
                         <ul className="p-4 flex flex-col gap-1.5">
-                          {hotelList.map((hotel, idx) => (
+                          {Array.isArray(hotelList) && hotelList.map((hotel, idx) => (
                             <li
                               key={idx}
                               className="flex items-center gap-2 text-body-sm text-obsidian-700 py-1 border-b border-gold-500/5 last:border-0"

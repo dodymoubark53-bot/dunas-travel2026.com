@@ -161,7 +161,7 @@ const getLocalizedTours = (t) => [
         day: 13,
         title: 'Desembarque → El Cairo',
         morning: 'aswan_nubian_market_flight_cairo',
-        afternoon: 'Traslado al hotel en El Cairo. Tarde libre.',
+        afternoon: 'cairo_hotel_transfer_free_afternoon',
         evening: 'Cena libre en El Cairo. Última noche en la capital egipcia antes de volar a Dubái.',
       },
       {
@@ -302,7 +302,7 @@ const getLocalizedTours = (t) => [
         day: 6,
         title: 'El Cairo — Día Libre',
         morning: 'Desayuno. Día completamente libre para explorar la ciudad a su propio ritmo.',
-        afternoon: 'Traslado al hotel en El Cairo. Tarde libre.',
+        afternoon: 'cairo_hotel_transfer_free_afternoon',
         evening: 'Última noche en Egipto. Cena libre en el animado barrio de Zamalek o en el centro histórico.',
       },
       {
@@ -477,7 +477,7 @@ const getLocalizedTours = (t) => [
         day: 11,
         title: 'Desembarque → El Cairo',
         morning: 'aswan_cairo_flight_checkout',
-        afternoon: 'Traslado al hotel en El Cairo. Tarde libre.',
+        afternoon: 'cairo_hotel_transfer_free_afternoon',
         evening: 'cairo_free_dinner_opt_coptic',
       },
       {
@@ -629,7 +629,7 @@ const getLocalizedTours = (t) => [
         day: 10,
         title: 'Desembarque → El Cairo',
         morning: 'breakfast_checkout_aswan_flight_cairo',
-        afternoon: 'Traslado al hotel en El Cairo. Tarde libre.',
+        afternoon: 'cairo_hotel_transfer_free_afternoon',
         evening: 'opt_citadel_khan_museum',
       },
       {
