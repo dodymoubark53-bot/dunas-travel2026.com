@@ -285,7 +285,16 @@
     "whoWeAre": "WHO WE ARE",
     "tailorTour": "Tailor a Tour",
     "allToursTitle": "All Tours",
-    "heroDesc": "Curating ultra-luxury, personalized itineraries through the timeless wonders of Egypt, Jordan, and Turkey. Experience the world's most captivating destinations in unparalleled style."
+    "heroDesc": "Curating ultra-luxury, personalized itineraries through the timeless wonders of Egypt, Jordan, and Turkey. Experience the world's most captivating destinations in unparalleled style.",
+    "searchDest": "Destination",
+    "searchAllDest": "All Destinations",
+    "searchTour": "Tour / Program",
+    "searchAllTours": "All Tours",
+    "searchArrival": "Arrival",
+    "searchDeparture": "Departure",
+    "searchPeople": "People",
+    "searchBtn": "Search",
+    "popularDests": "Popular Destinations"
   },
   "tourCard": {
     "reviews": "reviews",

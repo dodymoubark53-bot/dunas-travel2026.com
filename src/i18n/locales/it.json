@@ -285,7 +285,16 @@
     "allToursTitle": "Tutti i tour",
     "heroDesc": "Curando itinerari ultra-lusso personalizzati attraverso le meraviglie senza tempo di Egitto, Giordania e Turchia. Scopri le destinazioni più affascinanti del mondo con uno stile senza pari.",
     "coasters": "Sottobicchieri",
-    "privateVehicles": "Veicoli privati"
+    "privateVehicles": "Veicoli privati",
+    "searchDest": "Destinazione",
+    "searchAllDest": "Tutte le Destinazioni",
+    "searchTour": "Tour / Programma",
+    "searchAllTours": "Tutti i Tour",
+    "searchArrival": "Arrivo",
+    "searchDeparture": "Partenza",
+    "searchPeople": "Persone",
+    "searchBtn": "Cerca",
+    "popularDests": "Destinazioni Popolari"
   },
   "tourCard": {
     "reviews": "recensioni",

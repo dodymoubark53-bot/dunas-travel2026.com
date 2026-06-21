@@ -285,7 +285,16 @@
     "whoWeAre": "QUIENES SOMOS",
     "tailorTour": "Diseñar un Viaje",
     "allToursTitle": "Todos los tours",
-    "heroDesc": "Seleccionando itinerarios personalizados de ultra lujo a través de las maravillas eternas de Egipto, Jordania y Turquía. Experimente los destinos más cautivadores del mundo con un estilo incomparable."
+    "heroDesc": "Seleccionando itinerarios personalizados de ultra lujo a través de las maravillas eternas de Egipto, Jordania y Turquía. Experimente los destinos más cautivadores del mundo con un estilo incomparable.",
+    "searchDest": "Destino",
+    "searchAllDest": "Todos los Destinos",
+    "searchTour": "Tour / Programa",
+    "searchAllTours": "Todos los Tours",
+    "searchArrival": "Llegada",
+    "searchDeparture": "Salida",
+    "searchPeople": "Personas",
+    "searchBtn": "Buscar",
+    "popularDests": "Destinos Populares"
   },
   "tourCard": {
     "reviews": "reseñas",

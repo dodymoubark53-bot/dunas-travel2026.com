@@ -285,7 +285,16 @@
     "allToursTitle": "جميع الجولات",
     "heroDesc": "تنظيم رحلات شخصية فائقة الفخامة عبر العجائب الخالدة في مصر والأردن وتركيا. استمتع بتجربة الوجهات الأكثر جاذبية في العالم بأسلوب لا مثيل له.",
     "coasters": "الوقايات",
-    "privateVehicles": "المركبات الخاصة"
+    "privateVehicles": "المركبات الخاصة",
+    "searchDest": "الوجهة",
+    "searchAllDest": "جميع الوجهات",
+    "searchTour": "الجولة / البرنامج",
+    "searchAllTours": "جميع الجولات",
+    "searchArrival": "تاريخ الوصول",
+    "searchDeparture": "تاريخ المغادرة",
+    "searchPeople": "عدد الأشخاص",
+    "searchBtn": "بحث",
+    "popularDests": "الوجهات الشهيرة"
   },
   "tourCard": {
     "reviews": "تقييمات",

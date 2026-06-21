@@ -285,7 +285,16 @@
     "whoWeAre": "QUEM SOMOS",
     "tailorTour": "Personalizar uma Viagem",
     "allToursTitle": "Todos os passeios",
-    "heroDesc": "Curadoria de itinerários ultraluxuosos e personalizados pelas maravilhas atemporais do Egito, Jordânia e Turquia. Experimente os destinos mais cativantes do mundo com um estilo incomparável."
+    "heroDesc": "Curadoria de itinerários ultraluxuosos e personalizados pelas maravilhas atemporais do Egito, Jordânia e Turquia. Experimente os destinos mais cativantes do mundo com um estilo incomparável.",
+    "searchDest": "Destino",
+    "searchAllDest": "Todos os Destinos",
+    "searchTour": "Tour / Programa",
+    "searchAllTours": "Todos os Tours",
+    "searchArrival": "Chegada",
+    "searchDeparture": "Partida",
+    "searchPeople": "Pessoas",
+    "searchBtn": "Pesquisar",
+    "popularDests": "Destinos Populares"
   },
   "tourCard": {
     "reviews": "avaliações",
