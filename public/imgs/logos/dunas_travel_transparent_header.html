@@ -1,120 +1,695 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { FaFacebook, FaInstagram, FaTwitter, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-import Logo from '../ui/Logo';
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>معرض منتجات نيون متجاوب بالكامل</title>
+    <style>
+      /* --- 1. التنسيقات العامة --- */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
 
-const Footer = () => {
-  const { t } = useTranslation();
-  return (
-    <footer className="bg-[#1A1A2E] text-gray-300 pt-20 pb-8 border-t border-white/5">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      body {
+        overflow-x: hidden;
+        background-color: #050505;
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
 
-          {/* Brand & Socials */}
-          <div>
-            <Link to="/" className="flex items-center mb-6">
-              <Logo theme="dark" height={70} />
-            </Link>
-            <p className="text-body-md mb-6 opacity-80">
-              {t('footer.desc', 'Curating award-winning DUNAS TRAVEL experiences across Egypt, Jordan, and Turkey since 2010.')}
-            </p>
-            <div className="flex items-center gap-4">
-              <a href="#" className="footer-social w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-[#F5A623] hover:text-[#1A1A2E] transition-all duration-300 hover:scale-110">
-                <FaFacebook />
-              </a>
-              <a href="#" className="footer-social w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-[#F5A623] hover:text-[#1A1A2E] transition-all duration-300 hover:scale-110">
-                <FaInstagram />
-              </a>
-              <a href="#" className="footer-social w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-[#F5A623] hover:text-[#1A1A2E] transition-all duration-300 hover:scale-110">
-                <FaTwitter />
-              </a>
-            </div>
-          </div>
+      /* --- 2. تأثير النيون المتوهج العلوي --- */
+      .neon-title-container {
+        text-align: center;
+        padding: 30px 15px 10px 15px;
+        z-index: 10;
+        position: relative;
+      }
 
-          {/* Quick Links - تعديل السيرفس إلى بروجرامز */}
-          <div>
-            <h4 className="text-white mb-6 text-lg font-semibold">{t('footer.quickLinks', 'Quick Links')}</h4>
-            <ul className="flex flex-col gap-3">
-              <li><Link to="/about" className="hover:text-[#F5A623] transition-colors">{t('nav.about')}</Link></li>
-              <li><Link to="/programs" className="hover:text-[#F5A623] transition-colors">{t('nav.programs', 'Programs')}</Link></li>
-              <li><Link to="/blogs" className="hover:text-[#F5A623] transition-colors">{t('nav.blogs')}</Link></li>
-              <li><Link to="/contact" className="hover:text-[#F5A623] transition-colors">{t('nav.contact')}</Link></li>
-              <li><Link to="/faq" className="hover:text-[#F5A623] transition-colors">{t('footer.faq', 'FAQs')}</Link></li>
-            </ul>
-          </div>
+      .neon-text {
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-shadow:
+          0 0 7px #fff,
+          0 0 10px #fff,
+          0 0 21px #00f3ff,
+          0 0 42px #00f3ff;
+        animation: flicker 1.5s infinite alternate;
+      }
 
-          {/* Destinations */}
-          <div>
-            <h4 className="text-white mb-6 text-lg font-semibold">{t('nav.destinations')}</h4>
-            <ul className="flex flex-col gap-3">
-              {[
-                { key: 'egipto', path: '/destinations/egypt' },
-                { key: 'turquia', path: '/destinations/turkey' },
-                { key: 'jordania', path: '/destinations/jordan' },
-                { key: 'marruecos', path: '/destinations/morocco' },
-                { key: 'grecia', path: '/destinations/greece' },
-                { key: 'dubai', path: '/destinations/dubai' },
-                { key: 'tuniz', path: '/destinations/tunisia' },
-                { key: 'tierrasanta', path: '/destinations/holyland' },
-              ].map(({ key, path }) => (
-                <li key={key}>
-                  <Link to={path} className="hover:text-[#F5A623] transition-colors">{t(`nav.${key}`)}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+      @keyframes flicker {
+        0%,
+        18%,
+        22%,
+        25%,
+        53%,
+        57%,
+        100% {
+          text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #00f3ff,
+            0 0 40px #00f3ff;
+        }
+        20%,
+        24%,
+        55% {
+          text-shadow: none;
+        }
+      }
 
-          {/* Contact & Newsletter */}
-          <div>
-            <h4 className="text-white mb-6 text-lg font-semibold">{t('nav.contact')}</h4>
-            <ul className="flex flex-col gap-4 mb-8">
-              <li className="flex items-start gap-3">
-                <FaMapMarkerAlt className="text-[#F5A623] mt-1 flex-shrink-0" />
-                <span className="text-sm">
-                  {t('footer.address', '5 Hussein Said St, Old Hadayk El Ahram, First floor, Flat 102 – 103, Haram - Giza – Egypt')}
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <FaPhone className="text-[#F5A623] mt-1 flex-shrink-0" />
-                <div className="flex flex-col gap-1 text-sm">
-                  <a href="tel:+20233746643" className="hover:text-[#F5A623] transition-colors">02 33746643</a>
-                  <a href="tel:+20233746654" className="hover:text-[#F5A623] transition-colors">02 33746654</a>
-                </div>
-              </li>
-              <li className="flex items-center gap-3">
-                <FaEnvelope className="text-[#F5A623] flex-shrink-0" />
-                <a href="mailto:info@dunas-travel.com" className="hover:text-[#F5A623] transition-colors text-sm">info@dunas-travel.com</a>
-              </li>
-            </ul>
+      /* --- 3. الحاوية الرئيسية للمنزلق --- */
+      .main-container {
+        position: relative;
+        flex: 1;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 8%;
+        margin-bottom: 80px; /* مساحة لأزرار التحكم بالأسفل */
+      }
 
-            <div className="relative">
-              <input
-                type="email"
-                placeholder={t('footer.newsletter', 'Subscribe to newsletter')}
-                className="w-full bg-white/5 border border-white/10 rounded-full py-3 px-6 text-white outline-none focus:border-[#F5A623] transition-colors placeholder:text-white/40"
-              />
-              <Link
-                to="/contact"
-                className="absolute right-1 top-1 bottom-1 bg-[#F5A623] hover:bg-[#F5A623]/80 text-[#1A1A2E] rounded-full px-6 font-medium transition-colors flex items-center justify-center"
-              >
-                {t('footer.join', 'Join')}
-              </Link>
-            </div>
-          </div>
+      /* الخلفيات الديناميكية */
+      .bg-slides {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        /* إضافة طبقة تظليل داكنة بنسبة بسيطة (35%) لضمان سهولة قراءة النصوص فوق الخلفية الواضحة */
+        background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
+      }
 
-        </div>
+      .bg-slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transform: scale(1.1);
+        transition:
+          opacity 0.8s ease-in-out,
+          transform 0.8s ease-in-out;
+      }
 
-        {/* Credits */}
-        <div className="pt-8 border-t border-white/10 text-center flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-caption opacity-80">
-            &copy; {new Date().getFullYear()} Dunas Travel. {t('footer.rights', 'All rights reserved.')}
+      .bg-slide.active {
+        opacity: 1; /* تم التعديل هنا لتصبح الخلفية واضحة جداً بنسبة 100% */
+        transform: scale(1);
+      }
+
+      /* النصوص الجانبية للكروت */
+      .content-wrapper {
+        max-width: 450px;
+        z-index: 5;
+      }
+
+      .content-item {
+        display: none;
+      }
+
+      .content-item.active {
+        display: block;
+      }
+
+      .content-item h2 {
+        font-size: 2.8rem;
+        margin-bottom: 15px;
+        color: #00f3ff;
+        text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+        animation: fadeInUp 0.5s ease forwards;
+      }
+
+      .content-item p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 25px;
+        color: #fff; /* تم تعديل اللون للأبيض الناصع ليظهر بوضوح فوق الصورة */
+        font-weight: 500;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* إضافة ظل خلف النص لحمايته */
+        animation: fadeInUp 0.5s ease 0.1s forwards;
+        opacity: 0;
+      }
+
+      /* زر التفاصيل */
+      .btn-open {
+        padding: 12px 35px;
+        background: rgba(
+          0,
+          0,
+          0,
+          0.6
+        ); /* إضافة خلفية معتمة قليلاً للزر لتظهر ملامحه */
+        border: 2px solid #00f3ff;
+        color: #00f3ff;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 30px;
+        backdrop-filter: blur(4px);
+        transition: 0.3s ease;
+        animation: fadeInUp 0.5s ease 0.2s forwards;
+        opacity: 0;
+      }
+
+      .btn-open:hover {
+        background: #00f3ff;
+        color: #000;
+        box-shadow: 0 0 20px #00f3ff;
+      }
+
+      /* هيكلة وتكديس الكروت المصغرة */
+      .cards-stack {
+        position: relative;
+        width: 320px;
+        height: 380px;
+        z-index: 5;
+      }
+
+      .card {
+        position: absolute;
+        width: 220px;
+        height: 320px;
+        border-radius: 20px;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+        transition:
+          transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+          opacity 0.6s,
+          z-index 0.6s;
+        opacity: 0;
+        transform: translateX(-100px) scale(0.8);
+        top: 30px;
+      }
+
+      .card.active {
+        opacity: 1;
+        z-index: 4;
+        transform: translateX(0) scale(1.05);
+        border: 2px solid rgba(0, 243, 255, 0.4);
+        box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
+      }
+
+      .card.active + .card {
+        opacity: 0.65;
+        z-index: 3;
+        transform: translateX(60px) scale(0.9);
+      }
+
+      .card.active + .card + .card {
+        opacity: 0.35;
+        z-index: 2;
+        transform: translateX(120px) scale(0.75);
+      }
+
+      /* أزرار التنقل السفلي */
+      .nav-controls {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 20px;
+        z-index: 10;
+      }
+
+      .nav-controls button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        font-size: 1.3rem;
+        cursor: pointer;
+        backdrop-filter: blur(8px);
+        transition: 0.3s;
+      }
+
+      .nav-controls button:hover {
+        background: #00f3ff;
+        color: #000;
+        box-shadow: 0 0 15px #00f3ff;
+        border-color: #00f3ff;
+      }
+
+      /* --- 4. النافذة المنبثقة (صفحة المنتج) المتجاوبة --- */
+      .product-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+        padding: 15px;
+      }
+
+      .product-modal.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .modal-content {
+        background: #111;
+        border: 1px solid #00f3ff;
+        box-shadow: 0 0 30px rgba(0, 243, 255, 0.2);
+        width: 100%;
+        max-width: 900px;
+        max-height: 90vh; /* يمنع خروج المحتوى في الموبايل */
+        border-radius: 20px;
+        padding: 30px;
+        position: relative;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        overflow-y: auto; /* يسمح بالـ Scroll داخل الموبايل عند الحاجة */
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 2.2rem;
+        color: #fff;
+        cursor: pointer;
+        z-index: 10;
+        transition: 0.3s;
+      }
+
+      .close-modal:hover {
+        color: #ff0055;
+      }
+
+      /* معرض صور المنتج التفاعلي داخل المودال */
+      .gallery-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        width: 100%;
+      }
+
+      .main-product-img {
+        width: 100%;
+        max-width: 300px;
+        height: 340px;
+        border-radius: 15px;
+        object-fit: cover;
+        border: 2px solid #222;
+      }
+
+      .thumb-gallery {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap; /* تترتب الصور الفرعية بشكل ممتاز على الشاشات الصغيرة */
+      }
+
+      .thumb-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        object-fit: cover;
+        cursor: pointer;
+        border: 2px solid #333;
+        transition: 0.2s ease;
+      }
+
+      .thumb-img:hover,
+      .thumb-img.active-thumb {
+        border-color: #00f3ff;
+        box-shadow: 0 0 8px #00f3ff;
+      }
+
+      /* تفاصيل المنتج النصية داخل المودال */
+      .product-details {
+        flex: 1;
+        width: 100%;
+      }
+
+      .product-details h2 {
+        font-size: 2rem;
+        color: #00f3ff;
+        margin-bottom: 12px;
+      }
+
+      .product-details p {
+        font-size: 1rem;
+        color: #aaa;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .product-price {
+        font-size: 1.6rem;
+        color: #fff;
+        font-weight: bold;
+        margin-bottom: 20px;
+        display: block;
+      }
+
+      .btn-buy {
+        padding: 12px 35px;
+        background: #00f3ff;
+        color: #000;
+        border: none;
+        border-radius: 30px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        width: 100%; /* تأخذ كامل العرض في الموبايل لسهولة الضغط */
+        max-width: 250px;
+        transition: 0.3s ease;
+      }
+
+      .btn-buy:hover {
+        box-shadow: 0 0 20px #00f3ff;
+      }
+
+      /* --- 5. شفرة الاستجابة للهواتف المحمولة (Responsive Media Queries) --- */
+      @media (max-width: 768px) {
+        .neon-text {
+          font-size: 1.6rem;
+        }
+
+        .main-container {
+          flex-direction: column-reverse; /* تضع الكروت في الأعلى والنصوص في الأسفل */
+          justify-content: center;
+          gap: 20px;
+          padding: 0 20px;
+          margin-bottom: 100px;
+        }
+
+        .cards-stack {
+          width: 260px;
+          height: 280px;
+          display: flex;
+          justify-content: center;
+        }
+
+        .card {
+          width: 160px;
+          height: 240px;
+          top: 10px;
+        }
+
+        .card.active + .card {
+          transform: translateX(40px) scale(0.9);
+        }
+
+        .card.active + .card + .card {
+          transform: translateX(80px) scale(0.8);
+        }
+
+        .content-wrapper {
+          text-align: center;
+          max-width: 100%;
+        }
+
+        .content-item h2 {
+          font-size: 1.8rem;
+          margin-bottom: 8px;
+        }
+
+        .content-item p {
+          font-size: 0.95rem;
+          margin-bottom: 15px;
+        }
+
+        /* إعدادات النافذة المنبثقة للموبايل */
+        .modal-content {
+          flex-direction: column; /* تحويل الترتيب إلى عمودي ليناسب شاشة الهاتف */
+          padding: 20px;
+          gap: 20px;
+        }
+
+        .main-product-img {
+          height: 240px; /* تقليل ارتفاع الصورة لتناسب الشاشات الصغيرة */
+        }
+
+        .product-details {
+          text-align: center;
+        }
+
+        .btn-buy {
+          max-width: 100%;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="neon-title-container">
+      <div class="neon-text">Neon Cyber Collection</div>
+    </div>
+
+    <div class="main-container">
+      <div class="bg-slides">
+        <div
+          class="bg-slide active"
+          style="
+            background-image: url(&quot;https://picsum.photos/id/684/1200/800&quot;);
+          "
+        ></div>
+        <div
+          class="bg-slide"
+          style="
+            background-image: url(&quot;https://picsum.photos/id/690/1200/800&quot;);
+          "
+        ></div>
+        <div
+          class="bg-slide"
+          style="
+            background-image: url(&quot;https://picsum.photos/id/703/1200/800&quot;);
+          "
+        ></div>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="content-item active">
+          <h2>Cyberpunk Helmet</h2>
+          <p>
+            خوذة ذكية بتصميم مستقبلي نيون مدمجة بشاشات عرض داخلية وتقنيات اتصال
+            متطورة.
           </p>
-
+          <button class="btn-open">See More</button>
+        </div>
+        <div class="content-item">
+          <h2>Cyber Watch</h2>
+          <p>
+            ساعة يد ميكانيكية رقمية مطلية بطبقات الفلورسنت المضيئة لمظهر يعبر عن
+            هوية الغد.
+          </p>
+          <button class="btn-open">See More</button>
+        </div>
+        <div class="content-item">
+          <h2>Futuristic Shoes</h2>
+          <p>
+            حذاء رياضي ذكي بأربطة تلقائية ونظام إضاءة نيون تفاعلي يتغير مع
+            خطواتك.
+          </p>
+          <button class="btn-open">See More</button>
         </div>
       </div>
-    </footer>
-  );
-};
 
-export default Footer;
+      <div class="cards-stack">
+        <div
+          class="card active"
+          style="
+            background-image: url(&quot;https://picsum.photos/id/684/400/600&quot;);
+          "
+        ></div>
+        <div
+          class="card"
+          style="
+            background-image: url(&quot;https://picsum.photos/id/690/400/600&quot;);
+          "
+        ></div>
+        <div
+          class="card"
+          style="
+            background-image: url(&quot;https://picsum.photos/id/703/400/600&quot;);
+          "
+        ></div>
+      </div>
+
+      <div class="nav-controls">
+        <button id="prevBtn">&lt;</button>
+        <button id="nextBtn">&gt;</button>
+      </div>
+    </div>
+
+    <div class="product-modal" id="productModal">
+      <div class="modal-content">
+        <span class="close-modal" id="closeModal">&times;</span>
+
+        <div class="gallery-container">
+          <img
+            src=""
+            alt="Product"
+            class="main-product-img"
+            id="mainProductImg"
+          />
+          <div class="thumb-gallery" id="thumbGallery"></div>
+        </div>
+
+        <div class="product-details">
+          <h2 id="modalTitle">اسم المنتج</h2>
+          <p id="modalDesc">الوصف يظهر هنا.</p>
+          <span class="product-price" id="modalPrice">$ 0.00</span>
+          <button class="btn-buy">اضف إلى السلة</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const productsData = [
+        {
+          title: "Cyberpunk Helmet",
+          desc: "خوذة ذكية بتصميم مستقبلي نيون مدمجة بشاشات عرض داخلية وتقنيات اتصال متطورة لعشاق الألعاب السبرانية.",
+          price: "$ 299.99",
+          images: [
+            "https://picsum.photos/id/684/400/600",
+            "https://picsum.photos/id/684/400/400",
+            "https://picsum.photos/id/1062/400/400",
+            "https://picsum.photos/id/1025/400/400",
+            "https://picsum.photos/id/1043/400/400",
+          ],
+        },
+        {
+          title: "Cyber Watch",
+          desc: "ساعة يد ميكانيكية رقمية مطلية بطبقات الفلورسنت المضيئة لمظهر يعبر عن هوية الغد مع زجاج مقاوم للخدش.",
+          price: "$ 149.50",
+          images: [
+            "https://picsum.photos/id/690/400/600",
+            "https://picsum.photos/id/690/400/400",
+            "https://picsum.photos/id/1011/400/400",
+            "https://picsum.photos/id/1012/400/400",
+            "https://picsum.photos/id/1013/400/400",
+          ],
+        },
+        {
+          title: "Futuristic Shoes",
+          desc: "حذاء رياضي ذكي بأربطة تلقائية ونظام إضاءة نيون تفاعلي يتغير مع خطواتك ومزود بمستشعرات قياس الأداء.",
+          price: "$ 190.00",
+          images: [
+            "https://picsum.photos/id/703/400/600",
+            "https://picsum.photos/id/703/400/400",
+            "https://picsum.photos/id/103/400/400",
+            "https://picsum.photos/id/104/400/400",
+            "https://picsum.photos/id/106/400/400",
+          ],
+        },
+      ];
+
+      const nextBtn = document.getElementById("nextBtn");
+      const prevBtn = document.getElementById("prevBtn");
+      const bgSlides = document.querySelectorAll(".bg-slide");
+      const contentItems = document.querySelectorAll(".content-item");
+      const cards = document.querySelectorAll(".card");
+
+      let currentIndex = 0;
+
+      function updateSlider(index) {
+        bgSlides.forEach((slide) => slide.classList.remove("active"));
+        contentItems.forEach((item) => item.classList.remove("active"));
+        cards.forEach((card) => card.classList.remove("active"));
+
+        bgSlides[index].classList.add("active");
+        contentItems[index].classList.add("active");
+        cards[index].classList.add("active");
+      }
+
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % cards.length;
+        updateSlider(currentIndex);
+      });
+
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+        updateSlider(currentIndex);
+      });
+
+      const modal = document.getElementById("productModal");
+      const closeModal = document.getElementById("closeModal");
+      const btnOpens = document.querySelectorAll(".btn-open");
+      const mainProductImg = document.getElementById("mainProductImg");
+      const thumbGallery = document.getElementById("thumbGallery");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalDesc = document.getElementById("modalDesc");
+      const modalPrice = document.getElementById("modalPrice");
+
+      btnOpens.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const data = productsData[currentIndex];
+
+          modalTitle.innerText = data.title;
+          modalDesc.innerText = data.desc;
+          modalPrice.innerText = data.price;
+          mainProductImg.src = data.images[0];
+
+          thumbGallery.innerHTML = "";
+
+          for (let i = 1; i < data.images.length; i++) {
+            const img = document.createElement("img");
+            img.src = data.images[i];
+            img.classList.add("thumb-img");
+            if (i === 1) img.classList.add("active-thumb");
+
+            img.addEventListener("click", function () {
+              mainProductImg.src = this.src;
+              document
+                .querySelectorAll(".thumb-img")
+                .forEach((t) => t.classList.remove("active-thumb"));
+              this.classList.add("active-thumb");
+            });
+
+            thumbGallery.appendChild(img);
+          }
+
+          modal.classList.add("open");
+        });
+      });
+
+      closeModal.addEventListener("click", () => {
+        modal.classList.remove("open");
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.remove("open");
+        }
+      });
+    </script>
+  </body>
+</html>

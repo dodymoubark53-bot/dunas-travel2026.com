@@ -217,12 +217,18 @@
     "youMayAlsoLike": "قد يعجبك أيضاً",
     "exclusiveJourney": "رحلة حصرية لا تحتوي على أدنى تفاصيل لراحة كبيرة.",
     "premiumImmersion": "الغمر المتميز وسط خدمات من الدرجة التنفيذية.",
-    "stepByStep": "سوا جورنادا باسو باسو",
+    "stepByStep": "رحلتك خطوة بخطوة",
     "night": "ليلة",
     "nights": "ليالي",
     "expandAll": "توسيع الكل",
     "collapseAll": "طوي الكل",
-    "tabAccommodations": "الإقامة"
+    "tabAccommodations": "الإقامة",
+    "destination": "الوجهة",
+    "regime": "نظام الوجبات",
+    "hotelCategory": "الفئة",
+    "accommodation": "الإقامة",
+    "double": "مزدوج",
+    "single": "فردي"
   },
   "home": {
     "award": "تجارب حائزة على جوائز",
@@ -2287,7 +2293,8 @@
     "Private bathroom with amenities": "حمام خاص مع وسائل الراحة",
     "In-room safe box": "خزنة داخل الغرفة",
     "Mini bar refrigerated stocked items (against charge)": "العناصر المخزنة المبردة في الميني بار (مقابل رسوم)",
-    "Room service extra charges": "خدمة الغرف رسوم إضافية"
+    "Room service extra charges": "خدمة الغرف رسوم إضافية",
+    "Un viaje que fusiona dos de las civilizaciones más influyentes de la humanidad y ofrece una experiencia inolvidable. De las majestuosas Pirámides y el legendario Crucero del Nilo a la Acrópolis de Atenas y el Crucero por las Islas Griegas: once días para recorrer 7.000 años de historia con total comodidad y un guía en español.": "رحلة تدمج بين اثنتين من أكثر الحضارات الإنسانية تأثيراً وتقدم تجربة لا تُنسى. من الأهرامات المهيبة والرحلة النيلية الأسطورية إلى الأكروبوليس في أثينا ورحلة الجزر اليونانية: أحد عشر يومًا لاستكشاف 7000 عام من التاريخ في راحة تامة ودليل باللغة الإسبانية."
   },
   "footer": {
     "quickLinks": "روابط سريعة",
@@ -2462,7 +2469,10 @@
       "title": "اليونان",
       "subtitle": "مهد الحضارات",
       "seoTitle": "جولات فاخرة في اليونان | دوناس تراڤل",
-      "seoDesc": "اكتشف رحلات فاخرة في اليونان. برامج مخصصة قادمة قريباً."
+      "seoDesc": "اكتشف رحلات فاخرة في اليونان. برامج مخصصة قادمة قريباً.",
+      "hotelsTitle": "فنادق الدرجة الأولى",
+      "hotelsDesc": "حسب التوفر، الإقامة في أحد الفنادق التالية من الدرجة الأولى في كل وجهة.",
+      "accTitle": "ملخص الإقامة"
     },
     "dubai": {
       "title": "دبي",
@@ -2678,5 +2688,9 @@
     "destination": "الوجهة",
     "nights": "الليالي",
     "regime": "نظام الوجبات"
+  },
+  
+  "multiCountry": {
+    "description": "هذه جولة سياحية تشمل عدة دول"
   }
 }

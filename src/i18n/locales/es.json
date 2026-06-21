@@ -215,14 +215,16 @@
     "inquire": "Consultar Disponibilidad",
     "freeCancel": "Cancelación gratuita hasta 30 días",
     "youMayAlsoLike": "También te Puede Gustar",
-    "exclusiveJourney": "Un viaggio esclusivo curato nei minimi dettagli per il massimo comfort.",
+    "exclusiveJourney": "Un viaje exclusivo curado al más mínimo detalle para el máximo confort.",
     "premiumImmersion": "Inmersión premium en medida con servicios de clase ejecutiva.",
-    "stepByStep": "SUA JORNADA PASSO A PASSO",
+    "stepByStep": "SU JORNADA PASO A PASO",
     "night": "Noche",
     "nights": "Noches",
     "expandAll": "Expandir Todo",
     "collapseAll": "Contraer Todo",
-    "tabAccommodations": "Alojamientos"
+    "tabAccommodations": "Alojamientos",
+    "double": "Doble",
+    "single": "Individual"
   },
   "home": {
     "award": "Experiencias Galardonadas",
@@ -2287,7 +2289,8 @@
     "Private bathroom with amenities": "Baño privado con amenidades",
     "In-room safe box": "Caja de seguridad en la habitación",
     "Mini bar refrigerated stocked items (against charge)": "Mini bar con artículos refrigerados en existencia (contra cargo)",
-    "Room service extra charges": "Cargos extras por servicio de habitaciones"
+    "Room service extra charges": "Cargos extras por servicio de habitaciones",
+    "Un viaje que fusiona dos de las civilizaciones más influyentes de la humanidad y ofrece una experiencia inolvidable. De las majestuosas Pirámides y el legendario Crucero del Nilo a la Acrópolis de Atenas y el Crucero por las Islas Griegas: once días para recorrer 7.000 años de historia con total comodidad y un guía en español.": "Un viaje que fusiona dos de las civilizaciones más influyentes de la humanidad y ofrece una experiencia inolvidable. De las majestuosas Pirámides y el legendario Crucero del Nilo a la Acrópolis de Atenas y el Crucero por las Islas Griegas: once días para recorrer 7.000 años de historia con total comodidad y un guía en español."
   },
   "footer": {
     "quickLinks": "Enlaces Rápidos",

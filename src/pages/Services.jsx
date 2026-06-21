@@ -249,8 +249,8 @@ const Services = () => {
                         <span className="text-caption text-obsidian-300 block">{t('tourCard.from', 'From')}</span>
                         <span className="text-body-lg font-semibold text-obsidian-900">{formatPrice(item.pricePerDay)}</span>
                       </div>
-                      <Link to={`/transportation/${item.id}`}>
-                        <Button variant="outline-gold" className="px-4 py-2 text-sm group-hover:bg-gold-500 group-hover:text-obsidian-900 group-hover:shadow-[0_0_15px_rgba(201,162,39,0.4)] transition-all">{t('tourCard.viewDetails', 'View Details')}</Button>
+                      <Link to="/transportation">
+                        <Button variant="outline-gold" className="px-4 py-2 text-sm group-hover:bg-gold-500 group-hover:text-obsidian-900 group-hover:shadow-[0_0_15px_rgba(201,162,39,0.4)] transition-all">{t('transportation.reserveNow', 'Reserve Now')}</Button>
                       </Link>
                     </div>
                   </div>

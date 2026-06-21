@@ -5,8 +5,6 @@ export const blogs = [
     title: 'The Hidden Temples of Luxor',
     category: 'History',
     date: 'Oct 12, 2023',
-    readTime: '6 min read',
-    author: 'Amir Hassan',
     excerpt: 'Beyond Karnak and the Valley of the Kings lie incredible, lesser-known temples waiting to be explored. Discover the secrets of ancient Thebes without the crowds.',
     img: 'https://images.unsplash.com/photo-1596130535979-eedea4278d29?w=800&q=80&fit=crop',
     content: [
@@ -22,8 +20,6 @@ export const blogs = [
     title: 'Petra by Night',
     category: 'Travel Guide',
     date: 'Nov 05, 2023',
-    readTime: '5 min read',
-    author: 'Sarah Jenkins',
     excerpt: 'Experiencing the rose-red city illuminated by thousands of candles is a bucket-list event. Here is everything you need to know to plan your magical evening.',
     img: 'https://images.unsplash.com/photo-1662747974561-f2f5ea3825a6?w=800&q=80&fit=crop',
     content: [
@@ -39,8 +35,6 @@ export const blogs = [
     title: 'Istanbul\'s Grand Bazaar',
     category: 'Culture & Shopping',
     date: 'Dec 18, 2023',
-    readTime: '7 min read',
-    author: 'Leyla Yilmaz',
     excerpt: 'Navigate the labyrinthine alleys of one of the world\'s oldest and largest covered markets. From Turkish delight to antique kilims, here is your ultimate shopping guide.',
     img: 'https://images.unsplash.com/photo-1547057365-90f38124c65b?w=800&q=80&fit=crop',
     content: [
@@ -56,8 +50,6 @@ export const blogs = [
     title: 'Sailing the Nile',
     category: 'Adventure',
     date: 'Jan 22, 2024',
-    readTime: '5 min read',
-    author: 'Omar Tariq',
     excerpt: 'Step away from the massive cruise ships and experience the lifeblood of Egypt on a traditional wooden felucca. A peaceful, authentic journey awaits.',
     img: 'https://images.unsplash.com/photo-1684100096410-fd39cdff91a3?w=800&q=80&fit=crop',
     content: [
@@ -73,8 +65,6 @@ export const blogs = [
     title: 'Wadi Rum Desert',
     category: 'Nature & Camping',
     date: 'Feb 14, 2024',
-    readTime: '6 min read',
-    author: 'David Chen',
     excerpt: 'Towering sandstone mountains, crimson sands, and a sky exploding with stars. Discover why camping in Jordan\'s Valley of the Moon is the ultimate desert escape.',
     img: 'https://images.unsplash.com/photo-1612892483236-52d32a0e0ac1?w=800&q=80&fit=crop',
     content: [
@@ -90,8 +80,6 @@ export const blogs = [
     title: 'Turkish Cuisine',
     category: 'Food & Drink',
     date: 'Mar 08, 2024',
-    readTime: '8 min read',
-    author: 'Aisha Demir',
     excerpt: 'Turkish food is a rich fusion of Central Asian, Middle Eastern, and Mediterranean flavors. Here are the iconic dishes you absolutely must taste during your visit.',
     img: 'https://images.unsplash.com/photo-1748540459503-19efc015143b?w=800&q=80&fit=crop',
     content: [
@@ -107,8 +95,6 @@ export const blogs = [
     title: 'Best Time to Visit Egypt',
     category: 'Travel Tips',
     date: 'Mar 25, 2024',
-    readTime: '4 min read',
-    author: 'Amir Hassan',
     excerpt: 'Planning your dream trip to the Pyramids? Weather plays a crucial role. Read our comprehensive month-by-month guide to choosing the perfect season.',
     img: 'https://images.unsplash.com/photo-1623674587543-9c7564de99d1?w=800&q=80&fit=crop',
     content: [
@@ -124,8 +110,6 @@ export const blogs = [
     title: 'Dead Sea Experience',
     category: 'Wellness',
     date: 'Apr 02, 2024',
-    readTime: '5 min read',
-    author: 'Sarah Jenkins',
     excerpt: 'It is the lowest point on earth and the world\'s largest natural spa. Discover the incredible health benefits of floating in Jordan\'s hypersaline lake.',
     img: 'https://images.unsplash.com/photo-1743943932415-947f79353387?w=800&q=80&fit=crop',
     content: [
@@ -141,8 +125,6 @@ export const blogs = [
     title: 'Cappadocia Hot Air Balloons',
     category: 'Adventure',
     date: 'Apr 15, 2024',
-    readTime: '6 min read',
-    author: 'Leyla Yilmaz',
     excerpt: 'Drifting silently over fairy chimneys at sunrise is a transcendent experience. Here is everything you need to know about booking a balloon flight in Turkey.',
     img: 'https://images.unsplash.com/photo-1559783510-c448bd7d686b?w=800&q=80&fit=crop',
     content: [

@@ -3,9 +3,9 @@ import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  FaChevronRight, FaClock, FaUserFriends, FaGlobe, FaTag, 
-  FaCheck, FaTimes, FaStar, FaChevronDown, FaMapMarkerAlt, FaBed 
+import {
+  FaChevronRight, FaClock, FaUserFriends, FaGlobe, FaTag,
+  FaCheck, FaTimes, FaStar, FaChevronDown, FaMapMarkerAlt, FaBed
 } from 'react-icons/fa';
 import { tours } from '../../data/tours';
 import Button from '../../components/ui/Button';
@@ -18,10 +18,10 @@ const TourDetails = () => {
   const { t } = useTranslation();
   const { formatPrice } = useCurrency();
   const { slug } = useParams();
-  
+
   // البحث عن الجولة الفاخرة المطابقة للـ slug
-  const tour = tours.find(t => t.slug === slug) || tours[0]; 
-  
+  const tour = tours.find(t => t.slug === slug) || tours[0];
+
   const [activeTab, setActiveTab] = useState('description');
   const [expandedDay, setExpandedDay] = useState(1);
   const [activeImage, setActiveImage] = useState(0);
@@ -55,7 +55,7 @@ const TourDetails = () => {
             <span className="rtl-flip"><FaChevronRight className="text-[10px]" /></span>
             <span className="text-ivory-300">{t(`data.${tour.title}`, tour.title)}</span>
           </div>
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className={`text-display-xl text-ivory-50 ${tour.subtitle ? 'mb-2' : 'mb-6'}`}
@@ -63,7 +63,7 @@ const TourDetails = () => {
             {t(`data.${tour.title}`, tour.title)}
           </motion.h1>
           {tour.subtitle && (
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
@@ -77,8 +77,8 @@ const TourDetails = () => {
 
       {/* 2. Photo Gallery */}
       <section className="relative w-full h-[50vh] lg:h-[70vh] overflow-hidden group cursor-pointer" onClick={() => setIsLightboxOpen(true)}>
-        <motion.img 
-          src={tour.images[activeImage] || '/images/tour-1.png'} 
+        <motion.img
+          src={tour.images[activeImage] || '/images/tour-1.png'}
           alt={t(`data.${tour.title}`, tour.title)}
           className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-105"
           loading="lazy"
@@ -91,7 +91,7 @@ const TourDetails = () => {
 
       <div className="container mx-auto px-6 -mt-12 relative z-20">
         <div className="bg-ivory-50 rounded-2xl shadow-card overflow-hidden">
-          
+
           {/* 3. Quick Info Bar */}
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-gray-100 border-b border-gray-100 bg-obsidian-50">
             <div className="p-6 flex flex-col items-center justify-center text-center gap-2">
@@ -113,8 +113,8 @@ const TourDetails = () => {
               <FaGlobe className="text-gold-500 text-2xl mb-1" />
               <span className="text-caption text-obsidian-500 uppercase">{t('tour.languages', 'Languages')}</span>
               <span className="text-body-md font-semibold text-obsidian-900">
-                {tour.language === 'pt-BR' 
-                  ? t('languages.portuguese', 'Português') 
+                {tour.language === 'pt-BR'
+                  ? t('languages.portuguese', 'Português')
                   : tour.language === 'es'
                     ? t('languages.spanish', 'Español')
                     : t('languages.italian', 'Italiano')}
@@ -130,16 +130,15 @@ const TourDetails = () => {
                   { id: 'description', label: t('tour.tabDescription', 'Description') },
                   { id: 'highlights', label: t('tour.tabHighlights', 'Highlights') }
                 ].map(tab => (
-                  <button 
+                  <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`pb-4 text-body-md font-semibold uppercase tracking-wider relative transition-colors ${
-                      activeTab === tab.id ? 'text-gold-700' : 'text-obsidian-300 hover:text-obsidian-700'
-                    }`}
+                    className={`pb-4 text-body-md font-semibold uppercase tracking-wider relative transition-colors ${activeTab === tab.id ? 'text-gold-700' : 'text-obsidian-300 hover:text-obsidian-700'
+                      }`}
                   >
                     {tab.label}
                     {activeTab === tab.id && (
-                      <motion.div 
+                      <motion.div
                         layoutId="activeTab"
                         className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold-500"
                       />
@@ -160,8 +159,8 @@ const TourDetails = () => {
                     <div className="text-body-lg text-obsidian-700 leading-relaxed">
                       <p className="mb-6">{t(`data.${tour.description}`, tour.description)}</p>
                       <p>
-                        {tour.language === 'pt-BR' 
-                          ? t('tour.premiumImmersion', 'Imersão premium sob medida com serviços de classe executiva.') 
+                        {tour.language === 'pt-BR'
+                          ? t('tour.premiumImmersion', 'Imersão premium sob medida com serviços de classe executiva.')
                           : tour.language === 'es'
                             ? t('tour.spanishImmersion', 'Una inmersión premium diseñada a la medida con servicios de primera clase.')
                             : t('tour.exclusiveJourney', 'Un viaggio esclusivo curato nei minimi dettagli per il massimo comfort.')}
@@ -208,14 +207,14 @@ const TourDetails = () => {
                       >
                         <div className="p-4 border-r border-gold-500/10 font-semibold text-obsidian-900 flex items-center gap-2 text-sm md:text-base">
                           <FaMapMarkerAlt className="text-gold-500 flex-shrink-0" />
-                          {row.destination}
+                          {t(`data.${row.destination}`, row.destination)}
                         </div>
                         <div className="p-4 border-r border-gold-500/10 text-center font-bold text-gold-700 text-base md:text-lg">
                           {row.nights}
                         </div>
                         <div className="p-4 text-center text-obsidian-700 flex items-center justify-center gap-2 text-sm md:text-base">
                           <FaBed className="text-gold-500 flex-shrink-0" />
-                          {row.regime}
+                          {t(`data.${row.regime}`, row.regime)}
                         </div>
                       </div>
                     ))}
@@ -245,16 +244,16 @@ const TourDetails = () => {
                           className="absolute -left-6 md:-left-10 top-[26px] w-3 h-3 bg-gold-500 rounded-full transform -translate-x-1/2 z-10"
                         />
 
-                        <div 
-                          className="rounded-xl overflow-hidden group" 
-                          style={{ 
+                        <div
+                          className="rounded-xl overflow-hidden group"
+                          style={{
                             backgroundColor: expandedDay === day.day ? 'rgba(201,162,39,0.08)' : 'rgba(201,162,39,0.04)',
                             borderLeft: '2px solid rgba(201,162,39,0.3)',
                             boxShadow: expandedDay === day.day ? '-3px 0 12px rgba(201,162,39,0.3)' : 'none',
                             transition: 'all 0.3s ease'
                           }}
                         >
-                          <button 
+                          <button
                             onClick={() => setExpandedDay(expandedDay === day.day ? null : day.day)}
                             className="w-full flex items-center justify-between p-6 text-left"
                           >
@@ -265,10 +264,10 @@ const TourDetails = () => {
                               <FaChevronDown className="text-gold-500" />
                             </motion.div>
                           </button>
-                          
+
                           <AnimatePresence>
                             {expandedDay === day.day && (
-                              <motion.div 
+                              <motion.div
                                 initial={{ height: 0, opacity: 0 }}
                                 animate={{ height: 'auto', opacity: 1, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } }}
                                 exit={{ height: 0, opacity: 0, transition: { duration: 0.3 } }}
@@ -338,7 +337,7 @@ const TourDetails = () => {
                 <div className="mt-16 pt-12 border-t border-gray-200">
                   <div className="mb-8">
                     <span className="text-caption text-gold-500 uppercase tracking-widest font-semibold block mb-2">
-                      {t('tour.hotelCategory', 'CATEGORÍA')} — {tour.hotelCategory}
+                      {t('tour.hotelCategory', 'CATEGORÍA')} — {t(`data.${tour.hotelCategory}`, tour.hotelCategory)}
                     </span>
                     <h2 className="text-display-md text-3xl text-obsidian-900 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>
                       {t('dest.greece.hotelsTitle', 'Hoteles de Primera Clase')}
@@ -356,7 +355,7 @@ const TourDetails = () => {
                         <div className="bg-obsidian-900 px-4 py-3">
                           <h3 className="text-gold-500 font-semibold text-xs md:text-sm uppercase tracking-widest flex items-center gap-2">
                             <FaMapMarkerAlt className="flex-shrink-0 text-xs" />
-                            {city}
+                            {t(`data.${city}`, city)}
                           </h3>
                         </div>
                         <ul className="p-4 flex flex-col gap-1.5">
@@ -366,7 +365,7 @@ const TourDetails = () => {
                               className="flex items-center gap-2 text-body-sm text-obsidian-700 py-1 border-b border-gold-500/5 last:border-0"
                             >
                               <span className="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0" />
-                              {hotel}
+                              {t(`data.${hotel}`, hotel)}
                             </li>
                           ))}
                         </ul>
@@ -426,7 +425,7 @@ const TourDetails = () => {
       {/* Booking Modals */}
       <AnimatePresence>
         {activeForm && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] bg-obsidian-900/80 flex items-start sm:items-center justify-center backdrop-blur-sm p-4 overflow-y-auto"
             onClick={() => setActiveForm(null)}
@@ -440,7 +439,7 @@ const TourDetails = () => {
       {/* Lightbox Modal */}
       <AnimatePresence>
         {isLightboxOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] bg-obsidian-900/95 flex items-center justify-center backdrop-blur-sm"
             onClick={() => setIsLightboxOpen(false)}

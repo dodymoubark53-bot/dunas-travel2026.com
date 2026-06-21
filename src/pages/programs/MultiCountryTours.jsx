@@ -3,36 +3,38 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  FaClock, FaGlobe, FaStar, FaChevronRight, FaUserFriends, 
-  FaCompass, FaFilter, FaMapMarkerAlt, FaCalendarAlt 
+import {
+  FaChevronRight,
+  FaCompass, FaFilter
 } from 'react-icons/fa';
 import { multiCountryTours } from '../../data/multiCountryTours';
 import Button from '../../components/ui/Button';
-import { useCurrency } from '../../context/CurrencyContext';
-import { staggerContainer, fadeInUp, cardHover } from '../../animations/variants';
+import TourCard from '../../components/tour/TourCard';
+import { staggerContainer, fadeInUp } from '../../animations/variants';
 
 const MultiCountryTours = () => {
   const { t } = useTranslation();
-  const { formatPrice } = useCurrency();
   const [selectedCountry, setSelectedCountry] = useState('All');
+
+  // Get localized tours data
+  const toursData = useMemo(() => multiCountryTours(t), [t]);
 
   // Extract all unique countries from our multi-country tours data to build filter options
   const filterCountries = useMemo(() => {
     const list = new Set();
-    multiCountryTours.forEach(tour => {
+    toursData.forEach(tour => {
       tour.countries.forEach(country => list.add(country));
     });
     return ['All', ...Array.from(list)];
-  }, []);
+  }, [toursData]);
 
   // Filter tours based on the selected country
   const filteredTours = useMemo(() => {
-    if (selectedCountry === 'All') return multiCountryTours;
-    return multiCountryTours.filter(tour => 
+    if (selectedCountry === 'All') return toursData;
+    return toursData.filter(tour =>
       tour.countries.includes(selectedCountry)
     );
-  }, [selectedCountry]);
+  }, [selectedCountry, toursData]);
 
   return (
     <div className="w-full bg-obsidian-50 pb-24">
@@ -54,20 +56,20 @@ const MultiCountryTours = () => {
             className="absolute inset-0 bg-gradient-to-b from-obsidian-900/60 via-obsidian-900/75 to-obsidian-950"
           ></div>
         </div>
-        
-        <motion.div 
+
+        <motion.div
           className="relative z-10 text-center px-6 mt-20 max-w-4xl"
-          variants={staggerContainer} 
-          initial="hidden" 
+          variants={staggerContainer}
+          initial="hidden"
           animate="visible"
         >
-          <motion.span 
-            variants={fadeInUp} 
+          <motion.span
+            variants={fadeInUp}
             className="text-gold-500 uppercase tracking-widest text-caption font-semibold block mb-4"
           >
             {t('programs.multiCountrySubtitle', 'Epic Cross-Border Odysseys')}
           </motion.span>
-          
+
           <motion.h1
             variants={fadeInUp}
             className="text-display-xl md:text-display-2xl text-ivory-50 font-display mb-6"
@@ -75,9 +77,9 @@ const MultiCountryTours = () => {
           >
             {t('nav.multiCountry', 'Multi-Country Tours')}
           </motion.h1>
-          
-          <motion.p 
-            variants={fadeInUp} 
+
+          <motion.p
+            variants={fadeInUp}
             className="text-body-lg md:text-xl text-ivory-200 max-w-2xl mx-auto leading-relaxed"
           >
             {t('programs.multiCountryLead', 'Seamless journeys bridging ancient civilizations, timeless deserts, and futuristic cities. Carefully designed for absolute luxury, premium comfort, and complete immersion with dedicated Spanish guides.')}
@@ -109,20 +111,19 @@ const MultiCountryTours = () => {
                 <p className="text-body-sm text-obsidian-500">{t('programs.filterDesc', 'Select a country to discover multi-country combinations')}</p>
               </div>
             </div>
-            
+
             <div className="flex flex-wrap gap-2">
               {filterCountries.map(country => (
                 <button
                   key={country}
                   onClick={() => setSelectedCountry(country)}
-                  className={`px-4 py-2 rounded-full text-caption font-semibold tracking-wide uppercase transition-all duration-300 border ${
-                    selectedCountry === country
+                  className={`px-4 py-2 rounded-full text-caption font-semibold tracking-wide uppercase transition-all duration-300 border ${selectedCountry === country
                       ? 'bg-gold-500 text-obsidian-900 border-gold-500 shadow-md shadow-gold-500/25'
                       : 'bg-ivory-50 text-obsidian-700 border-gold-500/20 hover:border-gold-500 hover:text-gold-600'
-                  }`}
+                    }`}
                 >
-                  {country === 'All' 
-                    ? t('programs.allDestinations', 'All Combos') 
+                  {country === 'All'
+                    ? t('programs.allDestinations', 'All Combos')
                     : t(`data.${country}`, country)
                   }
                 </button>
@@ -144,119 +145,17 @@ const MultiCountryTours = () => {
               <motion.div
                 layout
                 key={tour.id}
-                variants={cardHover}
-                initial="rest"
-                whileHover="hover"
-                animate="rest"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                className="bg-ivory-50 rounded-xl overflow-hidden flex flex-col h-full group shadow-card border border-gold-500/10"
               >
-                {/* Image Container with Badges */}
-                <div className="relative h-[280px] overflow-hidden">
-                  {/* Type · Duration badge (top-left) */}
-                  <div className="absolute top-4 left-4 z-10 bg-obsidian-900/80 backdrop-blur-md text-gold-500 text-caption px-4 py-1.5 rounded-full border border-gold-500/30 shadow-glass">
-                    {t(`data.${tour.type}`, tour.type)} · {tour.days}d
-                  </div>
-
-                  {/* Badge (Best Seller / Popular) */}
-                  {tour.badge && (
-                    <div className="absolute top-4 right-4 z-10 bg-gold-500 text-obsidian-900 text-caption font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
-                      {t(`data.${tour.badge}`, tour.badge)}
-                    </div>
-                  )}
-
-                  <img
-                    src={tour.images[0]}
-                    alt={t(`data.${tour.title}`, tour.title)}
-                    className="w-full h-full object-cover transform scale-100 group-hover:scale-[1.06] cinematic-transition"
-                    loading="lazy"
-                  />
-
-                  {/* Cinematic dark hover overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-obsidian-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                  {/* Floating Country Flags */}
-                  <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-1.5">
-                    {tour.countries.map((country, idx) => (
-                      <span
-                        key={idx}
-                        className="bg-obsidian-950/80 backdrop-blur-sm border border-gold-500/20 text-ivory-50 text-[11px] px-2 py-0.5 rounded-full flex items-center gap-1.5 shadow-glass"
-                      >
-                        <span>{tour.flags[idx]}</span>
-                        <span className="font-medium">{t(`data.${country}`, country)}</span>
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Card Body */}
-                <div className="p-6 flex flex-col flex-grow">
-                  <span className="text-caption text-gold-600 uppercase tracking-widest mb-1 block">
-                    {t(`data.${tour.subtitle}`, tour.subtitle)}
-                  </span>
-
-                  <Link to={`/programs/multi-country/${tour.slug}`}>
-                    <h3
-                      className="text-display-md text-obsidian-900 mb-3 line-clamp-2 group-hover:text-gold-700 transition-colors"
-                      style={{ fontFamily: "'Playfair Display', serif" }}
-                    >
-                      {t(`data.${tour.title}`, tour.title)}
-                    </h3>
-                  </Link>
-
-                  <p className="text-body-sm text-obsidian-500 line-clamp-3 mb-4 flex-grow">
-                    {t(`data.${tour.description}`, tour.description)}
-                  </p>
-
-                  {/* Star Rating */}
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="flex items-center gap-1 text-sm">
-                      {Array.from({ length: 5 }).map((_, i) => (
-                        <FaStar
-                          key={i}
-                          className={i < Math.floor(tour.rating) ? 'text-gold-500' : 'text-obsidian-300'}
-                          size={13}
-                        />
-                      ))}
-                    </div>
-                    <span className="text-caption text-obsidian-900 font-semibold ml-1">
-                      {tour.rating.toFixed(1)}
-                    </span>
-                    <span className="text-caption text-obsidian-300">
-                      ({tour.reviewCount} {t('tourCard.reviews', 'reviews')})
-                    </span>
-                  </div>
-
-                  {/* Key Highlights */}
-                  <div className="border-t border-gold-500/10 pt-4 mb-4">
-                    <ul className="grid grid-cols-2 gap-x-2 gap-y-1.5">
-                      {tour.highlights.slice(0, 4).map((hl, idx) => (
-                        <li key={idx} className="text-[12px] text-obsidian-500 flex items-center gap-1.5 truncate">
-                          <span className="w-1.5 h-1.5 rounded-full bg-gold-500 shrink-0 flex-shrink-0"></span>
-                          <span className="truncate">{t(`data.${hl}`, hl)}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Price & CTA Footer */}
-                  <div className="flex items-center justify-between pt-4 border-t border-gold-500/10 mt-auto">
-                    <div>
-                      <span className="block text-caption text-obsidian-300 mb-1">
-                        {t('tourCard.from', 'from')}
-                      </span>
-                      <span className="text-display-md text-gold-700">
-                        {formatPrice(tour.price)}
-                      </span>
-                    </div>
-
-                    <Link to={`/programs/multi-country/${tour.slug}`}>
-                      <Button variant="outline-gold" className="px-6 py-2 flex items-center gap-2">
-                        {t('tourCard.book', 'Book')} <span className="rtl-flip">&rarr;</span>
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
+                <TourCard
+                  tour={tour}
+                  linkBase="/programs/multi-country"
+                  countries={tour.countries}
+                  flags={tour.flags}
+                  highlights={tour.highlights}
+                />
               </motion.div>
             ))}
           </AnimatePresence>

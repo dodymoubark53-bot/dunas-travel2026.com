@@ -1,33 +1,42 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { FaUserFriends, FaCog, FaCheck } from 'react-icons/fa';
+import { FaUserFriends, FaCog, FaCheck, FaMapMarkerAlt } from 'react-icons/fa';
 import { staggerContainer, fadeInUp } from '../../animations/variants';
 import { transportation } from '../../data/transportation';
 import TransportationForm from '../../components/booking/TransportationForm';
 import { useCurrency } from '../../context/CurrencyContext';
+import Button from '../../components/ui/Button';
 
 const Transportation = () => {
   const { t } = useTranslation();
   const { formatPrice } = useCurrency();
   const [activeFilter, setActiveFilter] = useState('All');
+  const [selectedVehicleId, setSelectedVehicleId] = useState('');
 
   const filters = [
     { id: 'All', label: t('transportation.filter.all', 'All') },
-    { id: 'Sedans', label: t('transportation.filter.sedans', 'Sedans') },
-    { id: 'SUVs', label: t('transportation.filter.suvs', 'SUVs') },
-    { id: 'Buses', label: t('transportation.filter.buses', 'Buses') }
+    { id: 'Buses', label: t('transportation.filter.buses', 'Buses') },
+    { id: 'Coasters', label: t('transportation.filter.coasters', 'Coaster Vehicles') },
+    { id: 'Private', label: t('transportation.filter.private', 'Private Vehicles') }
   ];
 
   const filteredVehicles = transportation.filter(vehicle => {
     if (activeFilter === 'All') return true;
-    if (activeFilter === 'Sedans') return vehicle.category === 'sedan';
-    if (activeFilter === 'SUVs') return vehicle.category === 'suv';
     if (activeFilter === 'Buses') return vehicle.category === 'bus';
+    if (activeFilter === 'Coasters') return vehicle.category === 'coaster';
+    if (activeFilter === 'Private') return vehicle.category === 'private';
     return true;
   });
+
+  const handleReserveClick = (vehicleId = '') => {
+    setSelectedVehicleId(vehicleId);
+    const element = document.getElementById('reservation');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className="w-full bg-obsidian-50 pb-24">
@@ -40,7 +49,7 @@ const Transportation = () => {
       <section className="relative w-full h-[400px] md:h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/imgs/transportation/oip (4).webp" 
+            src="/imgs/transportation/bus1.jpeg" 
             alt="Transportation Hero" 
             className="w-full h-full object-cover object-center"
             loading="lazy"
@@ -95,28 +104,35 @@ const Transportation = () => {
               whileHover={{ y: -6, boxShadow: "0 0 32px rgba(201,162,39,0.22)", transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } }}
               className="bg-ivory-50 rounded-2xl overflow-hidden shadow-card hover:shadow-hover transition-all duration-300 group"
             >
-              <Link to={`/transportation/${vehicle.id}`} className="block relative h-64 overflow-hidden">
+              <div 
+                onClick={() => handleReserveClick(vehicle.id)}
+                className="block relative h-64 overflow-hidden cursor-pointer"
+              >
                 <img 
-                  src={vehicle.heroImage || vehicle.image} 
+                  src={vehicle.image} 
                   alt={t(`data.${vehicle.name}`, vehicle.name)} 
                   className="w-full h-full object-cover cinematic-transition group-hover:scale-[1.06]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <span className="text-ivory-50 font-semibold flex items-center gap-2">
-                    {t('tourCard.viewDetails', 'View Details')} &rarr;
+                    {t('transportation.reserveNow', 'Reserve Now')} &rarr;
                   </span>
                 </div>
-              </Link>
+              </div>
               <div className="p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <span className="text-caption text-gold-500 uppercase tracking-wider block mb-1">
-                      {t(`transportation.cat.${vehicle.category}`, vehicle.category)}
+                    <span className="text-gold-500 uppercase tracking-widest text-[11px] font-bold block mb-1">
+                      {vehicle.category === 'bus' ? t('transportation.filter.buses', 'Buses') :
+                       vehicle.category === 'coaster' ? t('transportation.filter.coasters', 'Coaster Vehicles') :
+                       t('transportation.filter.private', 'Private Vehicles')}
                     </span>
-                    <h3 className="text-display-md text-xl text-obsidian-900 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>
-                      <Link to={`/transportation/${vehicle.id}`} className="hover:text-gold-500 transition-colors">
-                        {t(`data.${vehicle.name}`, vehicle.name)}
-                      </Link>
+                    <h3 
+                      onClick={() => handleReserveClick(vehicle.id)}
+                      className="text-display-md text-xl text-obsidian-900 font-display cursor-pointer hover:text-gold-500 transition-colors"
+                      style={{ fontFamily: "'Playfair Display', serif" }}
+                    >
+                      {t(`data.${vehicle.name}`, vehicle.name)}
                     </h3>
                   </div>
                 </div>
@@ -151,16 +167,88 @@ const Transportation = () => {
                     <span className="text-body-lg font-bold text-obsidian-900">{formatPrice(vehicle.pricePerDay)}</span>
                     <span className="text-caption text-obsidian-500"> / {t('transportation.day', 'day')}</span>
                   </div>
-                  <Link 
-                    to={`/transportation/${vehicle.id}`}
-                    className="text-body-md font-medium text-gold-500 hover:text-gold-600 transition-colors rounded-full"
+                  <button 
+                    onClick={() => handleReserveClick(vehicle.id)}
+                    className="text-body-md font-medium text-gold-500 hover:text-gold-600 transition-colors rounded-full cursor-pointer outline-none"
                   >
                     {t('transportation.reserveNow', 'Reserve Now')} &rarr;
-                  </Link>
+                  </button>
                 </div>
               </div>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* Private & Comfortable Transfers Block */}
+      <section className="container mx-auto px-6 py-12 mb-20 bg-obsidian-900 rounded-3xl border border-[rgba(245,166,35,0.2)] text-ivory-50 overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-gold-500/10 rounded-full blur-[80px] -mr-32 -mt-32"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-gold-500/10 rounded-full blur-[80px] -ml-32 -mb-32"></div>
+        
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-6 md:p-10">
+          <div>
+            <span className="text-gold-500 uppercase tracking-widest text-caption block mb-4">
+              {t('transportation.static.subtitle', 'Premium Transfer Services')}
+            </span>
+            <h2 className="text-display-md md:text-display-lg text-ivory-50 mb-6 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Private & Comfortable Transfers in Egypt
+            </h2>
+            <p className="text-body-lg text-ivory-300 mb-8 leading-relaxed">
+              Enjoy a smooth and comfortable journey with our private transfer services. Our professional drivers and representatives will be waiting for you at the airport, hotel, or any requested location to ensure a safe and hassle-free experience.
+            </p>
+            
+            <div className="mb-6">
+              <h4 className="text-gold-400 font-semibold text-lg mb-4">{t('transportation.static.includeTitle', 'Our transfer services include:')}</h4>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {[
+                  'Airport transfers',
+                  'Hotel transfers',
+                  'Private vehicles',
+                  'Professional drivers',
+                  'Meet & assist service',
+                  'Available 24/7'
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-center gap-2 text-body-md text-ivory-300">
+                    <span className="text-gold-500 text-lg font-bold">✓</span>
+                    <span>{t(`transportation.static.feature.${idx}`, item)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          
+          <div className="bg-obsidian-800/80 backdrop-blur-sm rounded-2xl p-8 border border-ivory-50/5 flex flex-col h-full justify-between">
+            <div>
+              <h3 className="text-xl font-display text-gold-500 mb-6 flex items-center gap-2 border-b border-ivory-50/10 pb-4">
+                <FaMapMarkerAlt className="text-gold-500" />
+                {t('transportation.static.destTitle', 'Popular Destinations')}
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  'Cairo Airport – Hotel',
+                  'Hurghada Airport – Hotel',
+                  'Luxor – Aswan',
+                  'Cairo – Alexandria',
+                  'Any customized route upon request'
+                ].map((dest, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-body-md text-ivory-300">
+                    <span className="w-1.5 h-1.5 bg-gold-500 rounded-full mt-2 shrink-0"></span>
+                    <span>{t(`transportation.static.dest.${idx}`, dest)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="mt-8">
+              <Button 
+                variant="gold-glow" 
+                className="w-full py-4 text-lg font-semibold rounded-full uppercase tracking-wider"
+                onClick={() => handleReserveClick('')}
+              >
+                Request your transfer
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -172,7 +260,7 @@ const Transportation = () => {
             {t('transportation.reservationDesc', 'Book your luxury transportation in advance. We provide professional chauffeurs and premium vehicles to ensure a comfortable and stylish journey.')}
           </p>
         </div>
-        <TransportationForm />
+        <TransportationForm preSelectedVehicleId={selectedVehicleId} />
       </section>
     </div>
   );

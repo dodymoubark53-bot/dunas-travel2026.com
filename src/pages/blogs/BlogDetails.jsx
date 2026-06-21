@@ -64,14 +64,13 @@ const BlogDetails = () => {
             {t(`blogs.${blog.title}`, blog.title)}
           </motion.h1>
           <motion.p variants={fadeInUp} className="text-body-md text-ivory-300">
-            {t('blogs.by', 'By')} <span className="text-ivory-50 font-medium">{t(`blogs.${blog.author}`, blog.author)}</span> &bull; {t(`blogs.${blog.readTime}`, blog.readTime)}
           </motion.p>
         </motion.div>
       </section>
 
       {/* Article Body */}
       <section className="container mx-auto px-6 mt-16 mb-24 max-w-3xl">
-        <motion.div 
+        <motion.div
           className="prose prose-lg prose-headings:font-display prose-headings:text-obsidian-900 prose-p:text-obsidian-500 prose-p:font-body prose-a:text-gold-500 hover:prose-a:text-gold-700"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -83,7 +82,7 @@ const BlogDetails = () => {
             </p>
           ))}
         </motion.div>
-        
+
         {/* Share / Tags section (Optional placeholder) */}
         <div className="mt-12 pt-8 border-t border-obsidian-900/10 flex justify-between items-center">
           <div className="flex gap-2">
@@ -102,7 +101,7 @@ const BlogDetails = () => {
             <div className="w-24 h-1 bg-gold-500 mx-auto mt-6"></div>
           </div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
             variants={staggerContainer}
             initial="hidden"
@@ -117,10 +116,7 @@ const BlogDetails = () => {
                     <img src={relBlog.img} alt={t(`blogs.${relBlog.title}`, relBlog.title)} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                   </Link>
                   <div className="p-8 flex flex-col flex-grow">
-                    <div className="flex justify-between items-center text-caption text-obsidian-300 mb-3">
-                      <span>{t(`blogs.${relBlog.date}`, relBlog.date)}</span>
-                      <span>{t(`blogs.${relBlog.readTime}`, relBlog.readTime)}</span>
-                    </div>
+
                     <Link to={`/blogs/${relBlog.slug}`}>
                       <h3 className="text-display-md text-obsidian-900 mb-3 text-lg line-clamp-2 hover:text-gold-500 transition-colors cursor-pointer">{t(`blogs.${relBlog.title}`, relBlog.title)}</h3>
                     </Link>

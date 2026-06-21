@@ -217,12 +217,14 @@
     "youMayAlsoLike": "You May Also Like",
     "exclusiveJourney": "Un viaggio esclusivo curato nei minimi dettagli per il massimo comfort.",
     "premiumImmersion": "Imersão premium sob medida com serviços de classe executiva.",
-    "stepByStep": "SUA JORNADA PASSO A PASSO",
+    "stepByStep": "YOUR JOURNEY STEP-BY-STEP",
     "night": "Night",
     "nights": "Nights",
     "expandAll": "Expand All",
     "collapseAll": "Collapse All",
-    "tabAccommodations": "Accommodations"
+    "tabAccommodations": "Accommodations",
+    "double": "Double",
+    "single": "Single"
   },
   "home": {
     "award": "Award-Winning Experiences",
@@ -2287,7 +2289,8 @@
     "Private bathroom with amenities": "Private bathroom with amenities",
     "In-room safe box": "In-room safe box",
     "Mini bar refrigerated stocked items (against charge)": "Mini bar refrigerated stocked items (against charge)",
-    "Room service extra charges": "Room service extra charges"
+    "Room service extra charges": "Room service extra charges",
+    "Un viaje que fusiona dos de las civilizaciones más influyentes de la humanidad y ofrece una experiencia inolvidable. De las majestuosas Pirámides y el legendario Crucero del Nilo a la Acrópolis de Atenas y el Crucero por las Islas Griegas: once días para recorrer 7.000 años de historia con total comodidad y un guía en español.": "A trip that merges two of humanity's most influential civilizations and offers an unforgettable experience. From the majestic Pyramids and the legendary Nile Cruise to the Acropolis of Athens and the Greek Islands Cruise: eleven days to explore 7,000 years of history in total comfort and a guide in Spanish."
   },
   "about": {
     "legacy": "Our Legacy",

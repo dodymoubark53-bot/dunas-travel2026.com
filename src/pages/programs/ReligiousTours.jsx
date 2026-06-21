@@ -162,12 +162,12 @@ const ReligiousTours = () => {
                   {/* Location badge (top-right) */}
                   <div className="absolute top-4 right-4 z-10 bg-obsidian-900/60 backdrop-blur-md text-ivory-50 text-caption px-3 py-1 rounded-full border border-white/10 shadow-glass flex items-center gap-1.5">
                     <FaMapMarkerAlt size={10} className="text-gold-500" />
-                    <span className="text-[11px] font-medium">{tour.location}</span>
+                    <span className="text-[11px] font-medium">{t(`data.${tour.location}`, tour.location)}</span>
                   </div>
 
                   <img
                     src={tour.images[0]}
-                    alt={tour.title}
+                    alt={t(`data.${tour.title}`, tour.title)}
                     className="w-full h-full object-cover transform scale-100 group-hover:scale-[1.06] cinematic-transition"
                     loading="lazy"
                   />
@@ -189,7 +189,7 @@ const ReligiousTours = () => {
                 {/* Card Body */}
                 <div className="p-6 flex flex-col flex-grow">
                   <span className="text-caption text-gold-600 uppercase tracking-widest mb-1 block">
-                    {tour.location}
+                    {t(`data.${tour.location}`, tour.location)}
                   </span>
 
                   <Link to={`/services/religious/${tour.slug}`}>

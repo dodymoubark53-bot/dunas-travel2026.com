@@ -222,7 +222,9 @@
     "nights": "Noites",
     "expandAll": "Expandir Tudo",
     "collapseAll": "Recolher Tudo",
-    "tabAccommodations": "Acomodações"
+    "tabAccommodations": "Acomodações",
+    "double": "Duplo",
+    "single": "Individual"
   },
   "home": {
     "award": "Experiências Premiadas",
@@ -2287,7 +2289,8 @@
     "Private bathroom with amenities": "Banheiro privativo com amenidades",
     "In-room safe box": "Cofre no quarto",
     "Mini bar refrigerated stocked items (against charge)": "Itens estocados refrigerados do frigobar (sob cobrança)",
-    "Room service extra charges": "Taxas extras de serviço de quarto"
+    "Room service extra charges": "Taxas extras de serviço de quarto",
+    "Un viaje que fusiona dos de las civilizaciones más influyentes de la humanidad y ofrece una experiencia inolvidable. De las majestuosas Pirámides y el legendario Crucero del Nilo a la Acrópolis de Atenas y el Crucero por las Islas Griegas: once días para recorrer 7.000 años de historia con total comodidad y un guía en español.": "Uma viagem que une duas das civilizações mais influentes da humanidade e oferece uma experiência inesquecível. Das majestosas pirâmides e do lendário cruzeiro pelo Nilo à Acrópole de Atenas e ao cruzeiro pelas ilhas gregas: onze dias para explorar 7.000 anos de história com total conforto e guia em espanhol."
   },
   "footer": {
     "quickLinks": "Links Rápidos",

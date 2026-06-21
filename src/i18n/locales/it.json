@@ -217,12 +217,14 @@
     "youMayAlsoLike": "Potrebbe piacerti anche",
     "exclusiveJourney": "Un viaggio esclusivo curato nei minimi dettagli per il massimo comfort.",
     "premiumImmersion": "Imersão premium sob medida com serviços de classe executive.",
-    "stepByStep": "SUA JORNADA PASSO A PASSO",
+    "stepByStep": "IL TUO VIAGGIO PASSO DOPO PASSO",
     "night": "Notte",
     "nights": "Notti",
     "expandAll": "Espandi Tutto",
     "collapseAll": "Comprimi Tutto",
-    "tabAccommodations": "Alloggi"
+    "tabAccommodations": "Alloggi",
+    "double": "Doppia",
+    "single": "Singola"
   },
   "home": {
     "award": "Esperienze pluripremiate",
@@ -1957,7 +1959,7 @@
     "Visado Egipto: 35 USD (en destino)": "Visto per l'Egitto: 35 USD (a destinazione)",
     "Tasas de salida de Israel: 48 USD": "Tasse di partenza per Israele: 48 USD",
     "Propinas: 45 USD/pax": "Mance: 45 USD/persona",
-    "Seguro de viaje": "Seguro de viaje",
+    "Seguro de viaje": "Assicurazione di viaggio",
     "País de Origen → El Cairo": "Paese d'origine → Il Cairo",
     "Llegada al Aeropuerto Internacional de El Cairo. Recepción y asistencia con el visado (35 USD).": "Arrivo all'aeroporto internazionale del Cairo. Accoglienza e assistenza per il visto (35 USD).",
     "Traslado al hotel en El Cairo. Check-in y acomodación.": "Trasferimento in albergo al Cairo. Check-in e sistemazione.",
@@ -2287,7 +2289,8 @@
     "Private bathroom with amenities": "Bagno privato con servizi",
     "In-room safe box": "Cassetta di sicurezza in camera",
     "Mini bar refrigerated stocked items (against charge)": "Articoli refrigerati forniti nel minibar (a pagamento)",
-    "Room service extra charges": "Supplementi per il servizio in camera"
+    "Room service extra charges": "Supplementi per il servizio in camera",
+    "Un viaje que fusiona dos de las civilizaciones más influyentes de la humanidad y ofrece una experiencia inolvidable. De las majestuosas Pirámides y el legendario Crucero del Nilo a la Acrópolis de Atenas y el Crucero por las Islas Griegas: once días para recorrer 7.000 años de historia con total comodidad y un guía en español.": "Un viaggio che unisce due delle civiltà più influenti dell'umanità e offre un'esperienza indimenticabile. Dalle maestose Piramidi e la leggendaria Crociera sul Nilo alla Crociera sull'Acropoli di Atene e le Isole Greche: undici giorni per esplorare 7.000 anni di storia in totale comfort e con una guida in spagnolo."
   },
   "about": {
     "legacy": "La nostra eredità",

@@ -105,6 +105,14 @@ const Home = () => {
     });
   };
 
+  const handleHomeReserveClick = (vehicleId) => {
+    setResForm((prev) => ({ ...prev, vehicle: vehicleId }));
+    const element = document.getElementById("home-reservation-form");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const filteredVehicles =
     vehicleFilter === "all"
       ? transportation
@@ -699,7 +707,7 @@ const Home = () => {
 
           {/* Filter Tabs */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {["all", "sedan", "suv", "bus"].map((tab) => (
+            {["all", "bus", "coaster", "private"].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setVehicleFilter(tab)}
@@ -710,11 +718,11 @@ const Home = () => {
               >
                 {tab === "all"
                   ? t("home.allVehicles", "All")
-                  : tab === "sedan"
-                    ? t("home.sedans", "Sedans")
-                    : tab === "suv"
-                      ? t("home.suvs", "SUVs")
-                      : t("home.buses", "Buses")}
+                  : tab === "bus"
+                    ? t("home.buses", "Buses")
+                    : tab === "coaster"
+                      ? t("home.coasters", "Coasters")
+                      : t("home.privateVehicles", "Private Vehicles")}
               </button>
             ))}
           </div>
@@ -744,7 +752,9 @@ const Home = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/40 to-transparent"></div>
 
                     <div className="absolute top-4 left-4 bg-gold-500 text-obsidian-900 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded shadow-md">
-                      {vehicle.category}
+                      {vehicle.category === 'bus' ? t('transportation.filter.buses', 'Buses') :
+                       vehicle.category === 'coaster' ? t('transportation.filter.coasters', 'Coaster Vehicles') :
+                       t('transportation.filter.private', 'Private Vehicles')}
                     </div>
 
                     <div className="absolute bottom-0 left-0 right-0 p-5 flex flex-col justify-end">
@@ -782,14 +792,12 @@ const Home = () => {
                         </span>
                       </div>
 
-                      <Link to={`/transportation/${vehicle.id}`}>
-                        <Button
-                          variant="outline-gold"
-                          className="w-full py-2 text-sm text-center flex items-center justify-center bg-obsidian-900/40 backdrop-blur-sm"
-                        >
-                          {t("tourCard.viewDetails", "View Details")}
-                        </Button>
-                      </Link>
+                      <button
+                        onClick={() => handleHomeReserveClick(vehicle.id)}
+                        className="w-full py-2 text-sm font-semibold text-gold-500 hover:text-obsidian-900 hover:bg-gold-500 transition-colors border border-gold-500 rounded-lg flex items-center justify-center bg-obsidian-900/40 backdrop-blur-sm cursor-pointer outline-none"
+                      >
+                        {t("transportation.reserveNow", "Reserve Now")}
+                      </button>
                     </div>
                   </div>
                 ))}

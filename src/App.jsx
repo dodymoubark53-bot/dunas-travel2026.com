@@ -26,9 +26,6 @@ const ServiceDetails = lazy(() => import("./pages/services/ServiceDetails"));
 const Transportation = lazy(
   () => import("./pages/transportation/Transportation"),
 );
-const TransportationDetails = lazy(
-  () => import("./pages/transportation/TransportationDetails"),
-);
 const TailorTour = lazy(() => import("./pages/TailorTour"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const HotelDetails = lazy(() => import("./pages/hotels/HotelDetails"));
@@ -363,14 +360,6 @@ function App() {
                     element={
                       <PageTransition>
                         <Transportation />
-                      </PageTransition>
-                    }
-                  />
-                  <Route
-                    path=":slug"
-                    element={
-                      <PageTransition>
-                        <TransportationDetails />
                       </PageTransition>
                     }
                   />

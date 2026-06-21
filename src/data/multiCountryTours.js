@@ -2,8 +2,10 @@
 // MULTI-COUNTRY TOURS — Catálogo de Itinerarios (9 Programas)
 // Source: Catalogo_Itinerarios_9_Viajes.docx
 // ============================================================
+import { useTranslation } from 'react-i18next';
 
-export const multiCountryTours = [
+// دالة مساعدة لتفعيل الترجمة داخل المصفوفة بسلاسة
+const getLocalizedTours = (t) => [
   // ─────────────────────────────────────────────────────────
   // 1. ESTRELLAS DEL MEDIO ORIENTE — 19 DÍAS
   // ─────────────────────────────────────────────────────────
@@ -30,8 +32,7 @@ export const multiCountryTours = [
       'https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&q=80',
       'https://images.unsplash.com/photo-1601579112934-17ac2aa86292?w=1200&q=80',
     ],
-    description:
-      'La jornada más épica de Oriente Medio en un solo recorrido: cuatro países, cuatro culturas, cuatro civilizaciones. Desde las mezquitas otomanas de Estambul hasta el brillo ultramoderno de Dubái, pasando por la magia rosada de Petra y los templos eternos del Nilo. Este tour de 19 días es el compendio definitivo de lo mejor que Oriente puede ofrecerte.',
+    description: t('multiCountry.description'),
     highlights: [
       'Crucero en barco por el Bósforo en Estambul',
       'Safari 4×4 en el desierto de Wadi Rum',
@@ -75,7 +76,7 @@ export const multiCountryTours = [
       {
         day: 1,
         title: 'País de Origen → Estambul',
-        morning: 'Llegada al Aeropuerto Internacional de Estambul. Recepción por nuestro representante local con cartel de bienvenida.',
+        morning: 'Llegada al Aeropuerto Internacional de Estambul. Recepción por nuestro representative local con cartel de bienvenida.',
         afternoon: 'Traslado al hotel en el corazón histórico de Estambul. Check-in y acomodación en habitaciones.',
         evening: 'Tiempo libre para explorar los alrededores del hotel. Cena por cuenta propia en el animado barrio de Sultanahmet.',
       },
@@ -233,8 +234,7 @@ export const multiCountryTours = [
       'https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&q=80',
       'https://images.unsplash.com/photo-1565019001609-2dcd4975f670?w=1200&q=80',
     ],
-    description:
-      'Un viaje que fusiona dos de las civilizaciones más influyentes de la humanidad. De las majestuosas Pirámides y el legendario Crucero del Nilo a la Acrópolis de Atenas y el Crucero por las Islas Griegas: once días para recorrer 7.000 años de historia con total comodidad y un guía en español.',
+    description: t('multiCountry.description'),
     highlights: [
       'Pirámides de Giza y Gran Esfinge',
       'Crucero de 3 noches por el Nilo (Aswan → Luxor)',
@@ -282,14 +282,14 @@ export const multiCountryTours = [
         title: 'Crucero Nilo — Aswan & Kom Ombo',
         morning: 'Desayuno a bordo. Visita al maravilloso Templo de Philae, la joya arquitectónica de Aswan, llegando en lancha a la isla.',
         afternoon: 'Navegación hacia Kom Ombo al atardecer. Visita al impresionante Templo de Kom Ombo dedicado a Sobek y Haroeris.',
-        evening: 'Navegación nocturna hacia Edfu. Cena a bordo con entretenimiento tradicional egipcio.',
+        evening: 'Navegación nocturna hacia Edfu. Cena a bordo con entertainment tradicional egipcio.',
       },
       {
         day: 4,
         title: 'Crucero Nilo — Edfu & Esna',
         morning: 'Desayuno a bordo. Visita al grandioso Templo de Edfu, dedicado al dios Horus, el mejor conservado del Antiguo Egipto.',
         afternoon: 'Navegación hacia Esna, donde el crucero cruza la exclusa histórica (desnivel de 8 metros). Llegada a Luxor.',
-        evening: 'Noche a bordo en Luxor. Posibles visitas adicionales según el horario de navegación.',
+        evening: 'Noche a bordo in Luxor. Posibles visitas adicionales según el horario de navegación.',
       },
       {
         day: 5,
@@ -368,8 +368,7 @@ export const multiCountryTours = [
       'https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&q=80',
       'https://images.unsplash.com/photo-1601579112934-17ac2aa86292?w=1200&q=80',
     ],
-    description:
-      'Dos mundos en un solo viaje: el Dubái del futuro y el Egipto eterno. Comienza con el glamour del Dubái ultramoderno — safaris en el desierto, excursión a Abu Dhabi y el City Tour por el Creek histórico — y luego sumérgete en la historia de los faraones con un crucero de 4 noches por el Nilo entre Luxor y Aswan.',
+    description: t('multiCountry.description'),
     highlights: [
       'Dubái City Tour: barrio histórico Al Bastakiya, mercado de oro',
       'Safari 4×4 en el desierto de Dubái con cena beduina',
@@ -408,7 +407,7 @@ export const multiCountryTours = [
         day: 1,
         title: 'Dubái — Llegada',
         morning: 'Llegada al Aeropuerto Internacional de Dubái. Recepción por nuestro representante con cartel de bienvenida.',
-        afternoon: 'Traslado al hotel en Dubái. Check-in y acomodación en habitaciones.',
+        afternoon: 'Traslado al hotel in Dubái. Check-in y acomodación en habitaciones.',
         evening: 'Tarde libre para explorar los alrededores. Cena por cuenta propia en Dubai Mall o Dubai Marina.',
       },
       {
@@ -523,8 +522,7 @@ export const multiCountryTours = [
       'https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&q=80',
       'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80',
     ],
-    description:
-      'Tres destinos legendarios de Oriente Medio en un itinerario de 16 días perfectamente diseñado: la magia ancestral de Petra en Jordania, el eterno esplendor de los faraones en Egipto y el fulgurante modernismo de Dubái. Un viaje que reúne historia, desierto y lujo en proporciones perfectas.',
+    description: t('multiCountry.description'),
     highlights: [
       'Petra: El Siq, El Tesoro y El Monasterio (850 escalones)',
       'Safari 4×4 en Wadi Rum, el Valle de la Luna',
@@ -703,8 +701,7 @@ export const multiCountryTours = [
       'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1200&q=80',
       'https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&q=80',
     ],
-    description:
-      'Dos tesoros africanos del Mediterráneo en un solo gran viaje. Desde las dunas doradas del Sahara tunecino y el lujo all-inclusive de Hammamet hasta los templos eternos del Nilo y las Pirámides de Giza: 16 días que combinan playa, desierto e historia de manera perfecta. Salidas especiales desde Madrid o Barcelona.',
+    description: t('multiCountry.description'),
     highlights: [
       'Anfiteatro romano de El Jem, el más grande de África',
       'Dunas del Sahara en Douz: dromedarios y quads',
@@ -733,7 +730,7 @@ export const multiCountryTours = [
       '4 noches Crucero Nilo (pensión completa, sin bebidas)',
       '3 noches El Cairo (alojamiento y desayuno)',
       'Guía en español en Egipto',
-      'Vuelos domésticos Cairo–Luxor y Aswan–Cairo',
+      'Vuegos domésticos Cairo–Luxor y Aswan–Cairo',
     ],
     excluded: [
       'Bebidas durante el circuito tunecino',
@@ -789,7 +786,7 @@ export const multiCountryTours = [
         title: 'Hammamet — Todo Incluido',
         morning: 'Desayuno. Último día libre en el magnífico resort de Hammamet.',
         afternoon: 'Tarde libre para aprovechar todas las instalaciones del hotel.',
-        evening: 'Cena de despedida a Túnez en el resort.',
+        evening: 'Cena todo incluido en el resort.',
       },
       {
         day: 8,
@@ -881,8 +878,7 @@ export const multiCountryTours = [
       'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1200&q=80',
       'https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&q=80',
     ],
-    description:
-      'Un viaje que fusiona el alma árabe de dos continentes: la mística de Marruecos —con sus medinas laberínticas, la majestuosa Mezquita Hassan II y la Plaza Jemaa el Fna— y la eternidad de Egipto con el Crucero del Nilo y las Pirámides. Salida especial desde la Costa del Sol cruzando en ferry a Tánger.',
+    description: t('multiCountry.description'),
     highlights: [
       'Cruce en ferry Tarifa–Tánger por el Estrecho de Gibraltar',
       'Medina de Fez (Bab Bou Jeloud), Patrimonio UNESCO',
@@ -928,7 +924,7 @@ export const multiCountryTours = [
         title: 'Fez — La Ciudad Más Antigua del Mundo',
         morning: 'Desayuno. Exteriores del Palacio Real de Fez, el barrio judío (Mellah), la fortaleza con vistas panorámicas a Fez el Bali.',
         afternoon: 'Caminata guiada por la Medina: entrada por Bab Bou Jeloud (la Puerta Azul), zoco de los tintoreros (Chouara), Madrasa Bou Inania.',
-        evening: 'Cena incluida en un riad tradicional de Fez.',
+        evening: 'Cena incluida in un riad tradicional de Fez.',
       },
       {
         day: 3,
@@ -1028,8 +1024,7 @@ export const multiCountryTours = [
       'https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&q=80',
       'https://images.unsplash.com/photo-1569144157591-c60f3f82f137?w=1200&q=80',
     ],
-    description:
-      'El tour más valorado de nuestra colección multi-país: once días que combinan la magia rosada de Petra, la aventura de Wadi Rum y el esplendor del Nilo. Con vuelos con Egyptair incluidos desde Madrid o Barcelona, este recorrido es la opción perfecta para descubrir dos de las civilizaciones más fascinantes del Mediterráneo.',
+    description: t('multiCountry.description'),
     highlights: [
       'Vuelos con Egyptair incluidos (Madrid/Barcelona)',
       'Petra: El Siq, El Tesoro, Tumbas Reales y El Monasterio',
@@ -1150,7 +1145,7 @@ export const multiCountryTours = [
   },
 
   // ─────────────────────────────────────────────────────────
-  // 8. EGIPTO Y TIERRA SANTA — 10 DÍAS (Enriched content)
+  // 8. EGIPTO Y TIERRA SANTA — 10 DÍAS
   // ─────────────────────────────────────────────────────────
   {
     id: 'mct-008',
@@ -1174,8 +1169,7 @@ export const multiCountryTours = [
       'https://images.unsplash.com/photo-1598965402089-897ce52e8355?w=1200&q=80',
       'https://images.unsplash.com/photo-1547553676-f3c6bad53b2b?w=1200&q=80',
     ],
-    description:
-      'Un viaje profundamente significativo que combina el esplendor faraónico de Egipto con la espiritualidad de Tierra Santa. Desde las Pirámides y el Crucero del Nilo hasta Jerusalén, Belén y el Mar Muerto: diez días para recorrer los lugares más sagrados de tres grandes religiones monoteístas con guía en español.',
+    description: t('multiCountry.description'),
     highlights: [
       'Pirámides de Giza y Gran Esfinge',
       'Crucero de 3 noches por el Nilo (pensión completa)',
@@ -1248,7 +1242,7 @@ export const multiCountryTours = [
         day: 6,
         title: 'Luxor — Orilla Occidental',
         morning: 'Desayuno. Desembarque. Valle de los Reyes (tumbas de Tutankamón, Ramsés II), Templo de Hatshepsut.',
-        afternoon: 'Colosos de Memnón. Vuelo Luxor–Cairo (incluido). Traslado al aeropuerto para vuelo a Tel Aviv.',
+        afternoon: 'Colosos de Memnón. Vuelo disintegration Luxor–Cairo (incluido). Traslado al aeropuerto para vuelo a Tel Aviv.',
         evening: 'Llegada al Aeropuerto Ben Gurión de Tel Aviv. Traslado a Jerusalén. Check-in.',
       },
       {
@@ -1283,7 +1277,7 @@ export const multiCountryTours = [
   },
 
   // ─────────────────────────────────────────────────────────
-  // 9. GRAN TOUR MEDITERRÁNEO — 14 DÍAS (Enriched content)
+  // 9. GRAN TOUR MEDITERRÁNEO — 14 DÍAS
   // ─────────────────────────────────────────────────────────
   {
     id: 'mct-009',
@@ -1307,8 +1301,7 @@ export const multiCountryTours = [
       'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=80',
       'https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&q=80',
     ],
-    description:
-      'El gran recorrido por las tres civilizaciones fundadoras del mundo mediterráneo: los faraones de Egipto, los filósofos griegos y el esplendor otomano de Turquía. Catorce días que combinan el Crucero del Nilo, la Acrópolis de Atenas, el Crucero por las Islas Griegas y las mezquitas de Estambul en un itinerario de lujo con guía en español.',
+    description: t('multiCountry.description'),
     highlights: [
       'Crucero de 3 noches por el Nilo (Aswan → Luxor)',
       'Pirámides de Giza y Gran Esfinge',
@@ -1447,4 +1440,6 @@ export const multiCountryTours = [
   },
 ];
 
+
+export const multiCountryTours = getLocalizedTours; 
 export default multiCountryTours;
