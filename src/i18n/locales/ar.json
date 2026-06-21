@@ -227,8 +227,12 @@
     "regime": "نظام الوجبات",
     "hotelCategory": "الفئة",
     "accommodation": "الإقامة",
+    "days": "أيام",
+    "inclusions": "يشمل / لا يشمل",
+    "spanishImmersion": "انغماس متميز مصمم خصيصاً مع خدمات من الدرجة الأولى.",
     "double": "مزدوج",
-    "single": "فردي"
+    "single": "فردي",
+    "tabOverview": "نظرة عامة"
   },
   "home": {
     "award": "تجارب حائزة على جوائز",
@@ -279,7 +283,9 @@
     "whoWeAre": "من نحن؟",
     "tailorTour": "تخصيص رحلة",
     "allToursTitle": "جميع الجولات",
-    "heroDesc": "تنظيم رحلات شخصية فائقة الفخامة عبر العجائب الخالدة في مصر والأردن وتركيا. استمتع بتجربة الوجهات الأكثر جاذبية في العالم بأسلوب لا مثيل له."
+    "heroDesc": "تنظيم رحلات شخصية فائقة الفخامة عبر العجائب الخالدة في مصر والأردن وتركيا. استمتع بتجربة الوجهات الأكثر جاذبية في العالم بأسلوب لا مثيل له.",
+    "coasters": "الوقايات",
+    "privateVehicles": "المركبات الخاصة"
   },
   "tourCard": {
     "reviews": "تقييمات",
@@ -2294,7 +2300,28 @@
     "In-room safe box": "خزنة داخل الغرفة",
     "Mini bar refrigerated stocked items (against charge)": "العناصر المخزنة المبردة في الميني بار (مقابل رسوم)",
     "Room service extra charges": "خدمة الغرف رسوم إضافية",
-    "Un viaje que fusiona dos de las civilizaciones más influyentes de la humanidad y ofrece una experiencia inolvidable. De las majestuosas Pirámides y el legendario Crucero del Nilo a la Acrópolis de Atenas y el Crucero por las Islas Griegas: once días para recorrer 7.000 años de historia con total comodidad y un guía en español.": "رحلة تدمج بين اثنتين من أكثر الحضارات الإنسانية تأثيراً وتقدم تجربة لا تُنسى. من الأهرامات المهيبة والرحلة النيلية الأسطورية إلى الأكروبوليس في أثينا ورحلة الجزر اليونانية: أحد عشر يومًا لاستكشاف 7000 عام من التاريخ في راحة تامة ودليل باللغة الإسبانية."
+    "Un viaje que fusiona dos de las civilizaciones más influyentes de la humanidad y ofrece una experiencia inolvidable. De las majestuosas Pirámides y el legendario Crucero del Nilo a la Acrópolis de Atenas y el Crucero por las Islas Griegas: once días para recorrer 7.000 años de historia con total comodidad y un guía en español.": "رحلة تدمج بين اثنتين من أكثر الحضارات الإنسانية تأثيراً وتقدم تجربة لا تُنسى. من الأهرامات المهيبة والرحلة النيلية الأسطورية إلى الأكروبوليس في أثينا ورحلة الجزر اليونانية: أحد عشر يومًا لاستكشاف 7000 عام من التاريخ في راحة تامة ودليل باللغة الإسبانية.",
+    "Descubra o coração do Egito Antigo neste roteiro intenso de quatro dias. Explore as imponentes Pirâmides de Giza e a Esfinge, desvende os mistérios arqueológicos em Memphis e Sakkara, e encante-se com o acervo do Grand Egyptian Museum. A viagem inclui também uma imersão cultural no Bairro Copta e pelas ruelas vibrantes do Mercado Khan El Khalili, com suporte total em português.": "اكتشف قلب مصر القديمة في هذه الرحلة المكثفة التي تستغرق أربعة أيام. استكشف أهرامات الجيزة وأبو الهول المهيبة، واكتشف الألغاز الأثرية في ممفيس وسقارة، وتعجب من مجموعات المتحف المصري الكبير. تتضمن الرحلة أيضًا انغماسًا ثقافيًا في الحي القبطي والأزقة النابضة بالحياة في سوق خان الخليلي، مع دعم كامل باللغة البرتغالية.",
+    "Uma jornada de cinco dias que une os tesouros faraônicos do Cairo à brisa mediterrânea de Alexandria. Visite o complexo das Pirâmides de Giza e a lendária Necrópole de Sakkara antes de seguir para a costa. Em Alexandria, admire as Catacumbas de Kom El Shoqafa e a imponente Fortaleza de Qaitbay, desfrutando da rica gastronomia e herança cultural em um roteiro fascinante.": "رحلة مدتها خمسة أيام تجمع بين كنوز القاهرة الفرعونية ونسيم الإسكندرية على البحر الأبيض المتوسط. قم بزيارة مجمع أهرامات الجيزة ومقبرة سقارة الأسطورية قبل التوجه إلى الساحل. في الإسكندرية، استمتع بمقابر كوم الشقافة وقلعة قايتباي المهيبة، واستمتع بفن الطهي الغني والتراث الثقافي في خط سير رائع.",
+    "Navegue pela grandiosidade do Egito antigo durante oito dias inesquecíveis, com cruzeiro cinco estrelas pelo Rio Nilo de Aswan a Luxor. Contemple a magnitude de templos majestosos como Philae, Karnak e Kom Ombo, e a misteriosa beleza do Vale dos Reis. O roteiro é complementado pelas Pirâmides de Giza e o Novo Museu Egípcio no Cairo, oferecendo a autêntica essência faraônica.": "أبحر عبر عظمة مصر القديمة على مدار ثمانية أيام لا تُنسى مع رحلة نهرية من فئة الخمس نجوم على نهر النيل من أسوان إلى الأقصر. تأمل عظمة المعابد المهيبة مثل فيلة والكرنك وكوم أمبو، والجمال الغامض لوادي الملوك. ويكتمل خط سير الرحلة بأهرامات الجيزة والمتحف المصري الجديد في القاهرة، حيث يقدمان الجوهر الفرعوني الأصيل.",
+    "Vivencie o esplendor da civilização egípcia ao longo de nove dias intensos, navegando o Rio Nilo na deslumbrante rota de Luxor até Aswan. Admire construções colossais como o Templo de Hórus em Edfu e o místico Vale dos Reis. O roteiro abraça também o charme do Cairo Islâmico, com visitas à Mesquita de Alabastro e ao Museu Egípcio, garantindo uma imersão cultural rica e completa.": "استمتع بتجربة روعة الحضارة المصرية على مدار تسعة أيام مكثفة، حيث أبحرت في نهر النيل على الطريق المذهل من الأقصر إلى أسوان. استمتع بالمباني الضخمة مثل معبد حورس في إدفو ووادي الملوك الغامض. يحتضن خط سير الرحلة أيضًا سحر القاهرة الإسلامية، مع زيارات إلى مسجد المرمر والمتحف المصري، مما يضمن انغماسًا ثقافيًا غنيًا وكاملًا.",
+    "Mergulhe na cultura faraônica e relaxe no litoral vibrante do Mar Vermelho durante dez dias perfeitos. Além de explorar o Cairo e navegar pelas águas lendárias do Nilo apreciando os maravilhosos Templos de Karnak e Edfu, você desfrutará do regime all-inclusive em Hurghada. Uma combinação ímpar de arqueologia e descanso sob o sol em praias exuberantes.": "انغمس في الثقافة الفرعونية واسترخي على ساحل البحر الأحمر النابض بالحياة لمدة عشرة أيام مثالية. بالإضافة إلى استكشاف القاهرة والإبحار عبر مياه النيل الأسطورية والاستمتاع بمعابد الكرنك وإدفو الرائعة، ستستمتع بالنظام الشامل في الغردقة. مزيج فريد من الآثار والاسترخاء تحت أشعة الشمس على الشواطئ الخضراء.",
+    "A união definitiva entre o fascínio da antiguidade e as belezas naturais em um roteiro de onze dias. Viaje pelo tempo no Cairo e navegue pelo Rio Nilo descobrindo os segredos dos faraós em Luxor e Aswan. O clímax perfeito reserva três noites em Sharm El Sheikh, um autêntico paraíso subaquático com rica vida marinha e recifes de corais, tudo acompanhado de serviço all-inclusive de alto padrão.": "الاتحاد النهائي بين سحر العصور القديمة والجمال الطبيعي في خط سير الرحلة لمدة أحد عشر يومًا. سافر عبر الزمن في القاهرة وأبحر في نهر النيل واكتشف أسرار الفراعنة في الأقصر وأسوان. تحجز الذروة المثالية لمدة ثلاث ليالٍ في شرم الشيخ، وهي جنة أصيلة تحت الماء تزخر بالحياة البحرية الغنية والشعاب المرجانية، وكلها مصحوبة بخدمة شاملة كليًا عالية المستوى.",
+    "Criado especialmente para apaixonados por arqueologia profunda, este roteiro premium de dez dias leva você além dos cartões postais. Acompanhe toda a grandiosidade de um cruzeiro pelo Rio Nilo, explore templos místicos e participe de uma experiência rara: o pernoite em Abu Simbel com seu indescritível espetáculo noturno de som e luz, honrando o poderoso Ramsés II.": "تم إنشاء خط سير الرحلة المتميز هذا لمدة عشرة أيام خصيصًا لأولئك المتحمسين لعلم الآثار العميقة، ويأخذك إلى ما هو أبعد من البطاقات البريدية. استمتع بتجربة عظمة رحلة نهر النيل، واستكشف المعابد الغامضة وشارك في تجربة نادرة: المبيت في أبو سمبل مع عرض الصوت والضوء الليلي الذي لا يوصف، تكريمًا لرمسيس الثاني العظيم.",
+    "Uma odisséia espetacular de nove dias que percorre as águas do Mediterrâneo e os mistérios do Vale do Nilo. Do encanto greco-romano da Biblioteca de Alexandria até o luxuoso cruzeiro que cruza de Aswan a Luxor, você descobrirá contrastes impressionantes. Visitas às famosas Pirâmides e a imersão na herança copta transformam esta viagem num verdadeiro compêndio vivo da história egípcia.": "رحلة مذهلة مدتها تسعة أيام تستكشف مياه البحر الأبيض المتوسط ​​وأسرار وادي النيل. من السحر اليوناني الروماني لمكتبة الإسكندرية إلى الرحلة البحرية الفاخرة التي تنطلق من أسوان إلى الأقصر، سوف تكتشف تناقضات مذهلة. إن الزيارات إلى الأهرامات الشهيرة والانغماس في التراث القبطي تحول هذه الرحلة إلى خلاصة حية حقيقية للتاريخ المصري.",
+    "Esplora le radici dell'Egitto antico con un itinerario di otto giorni che bilancia perfettamente la capitale e la navigazione fluviale. Ammira lo spettacolo delle Piramidi di Giza e della Sfinge, prima di salpare per una crociera cinque stelle sul Nilo tra Aswan e Luxor. Lasciati incantare da complessi templari grandiosi come Karnak, Philae e la Valle dei Re, sempre accompagnato da esperte guide in italiano.": "استكشف جذور مصر القديمة من خلال خط سير رحلة مدته ثمانية أيام يوازن بشكل مثالي بين العاصمة والملاحة النهرية. استمتع بمناظر أهرامات الجيزة وأبو الهول، قبل الإبحار في رحلة نيلية من فئة الخمس نجوم بين أسوان والأقصر. دع نفسك تنبهر بمجمعات المعابد الفخمة مثل الكرنك وفيلة ووادي الملوك، برفقة مرشدين خبراء باللغة الإيطالية دائمًا.",
+    "Scopri l'Egitto autentico in un viaggio di otto giorni pensato per garantirti totale spensieratezza e comodità. Questo percorso arricchito ti porta dalle imponenti Piramidi alla suggestiva navigazione sul Nilo, includendo cene speciali, visita ad Abu Simbel e mance. Assapora la magia di Karnak e vivi a fondo Il Cairo storico e islamico, immerso in un'esperienza Premium.": "اكتشف مصر الأصيلة في رحلة مدتها ثمانية أيام مصممة لتضمن لك راحة البال التامة. يأخذك خط سير الرحلة الغني هذا من الأهرامات المهيبة إلى الملاحة المثيرة على نهر النيل، بما في ذلك وجبات العشاء الخاصة وزيارة أبو سمبل والنصائح. تذوق سحر الكرنك واستمتع بتجربة القاهرة التاريخية والإسلامية بالكامل، منغمسًا في تجربة متميزة.",
+    "L'equilibrio ideale tra l'antico Egitto e le spiagge del Mar Rosso in un avvincente percorso di undici giorni. Parti dalla meraviglia delle Piramidi e da una romantica crociera tra Luxor e Aswan, per concludere il viaggio con tre notti all-inclusive a Sharm El Sheikh. Immergiti in acque trasparenti ammirando la famosa barriera corallina per coronare la tua vacanza perfetta.": "التوازن المثالي بين مصر القديمة وشواطئ البحر الأحمر في رحلة مثيرة مدتها أحد عشر يومًا. ابدأ من عجائب الأهرامات وقم برحلة بحرية رومانسية بين الأقصر وأسوان، واختتم الرحلة بثلاث ليالٍ شاملة كليًا في شرم الشيخ. انغمس في المياه الشفافة واستمتع بالشعاب المرجانية الشهيرة لتتويج عطلتك المثالية.",
+    "Rivivi i misteri dei faraoni e goditi il relax totale grazie a questo incredibile tour di undici giorni. Dopo l'emozionante avventura nel Cairo Vecchio e l'incantevole crociera lungo il Nilo, verrai condotto attraverso il deserto verso le candide spiagge di Hurghada. Scopri lo snorkeling, il lusso del trattamento all-inclusive e la bellezza mozzafiato delle località costiere.": "استرجع أسرار الفراعنة واستمتع بالاسترخاء التام في هذه الجولة المذهلة التي تستغرق أحد عشر يومًا. بعد المغامرة المثيرة في القاهرة القديمة والرحلة البحرية الساحرة على طول نهر النيل، سيتم نقلك عبر الصحراء نحو شواطئ الغردقة البيضاء. اكتشف الغطس ورفاهية الإقامة الشاملة والجمال الأخاذ للمواقع الساحلية.",
+    "Un itinerario flessibile e affascinante di undici giorni, perfetto per chi cerca storia e libertà sul Mar Rosso. Vivi l'essenza dell'Egitto antico navigando sul Nilo e ammirando il maestoso altopiano di Giza. Prosegui il soggiorno all'insegna del comfort nei favolosi resort di Hurghada, godendo della libertà di modulare e scegliere escursioni e attività facoltative a proprio piacimento.": "خط سير الرحلة المرن والرائع لمدة أحد عشر يومًا، مثالي لأولئك الذين يبحثون عن التاريخ والحرية في البحر الأحمر. استمتع بتجربة جوهر مصر القديمة من خلال الإبحار في نهر النيل والاستمتاع بهضبة الجيزة المهيبة. واصل إقامتك براحة في منتجعات الغردقة الرائعة، واستمتع بحرية تعديل واختيار الرحلات والأنشطة الاختيارية حسب رغبتك.",
+    "Sumérgete en el esplendor de la Antigua Grecia y el encanto del mar Egeo en este espectacular itinerario de nueve días. Desde la grandiosa Acrópolis de Atenas hasta los vibrantes atardeceres en Santorini y Mykonos, cada escala revela un pedazo de paraíso y cultura. Coronando la travesía con la auténtica gastronomía e historia minoica en Creta, este viaje combina cultura clásica y pura esencia mediterránea.": "قم بتلخيص روعة أنتيغوا اليونان وسحر بحر إيجه في خط سير الرحلة المذهل هذا للأيام الجديدة. من أكروبوليس دي أتيناس الفخم إلى أتارديسيريس النابضة بالحياة في سانتوريني وميكونوس، يكشف كل درج عن قطعة من الجنة والثقافة. تتويجًا للرحلة بفن الطهي المينوسي الأصيل وتاريخ جزيرة كريت، تجمع هذه الرحلة بين الثقافة الكلاسيكية وجوهر البحر الأبيض المتوسط ​​النقي.",
+    "Llegada al Aeropuerto Internacional de Estambul. Recepción por nuestro representative local con cartel de bienvenida.": "الوصول إلى مطار إسطنبول الدولي. الاستقبال من قبل ممثلنا المحلي مع علامة الترحيب.",
+    "Navegación nocturna hacia Edfu. Cena a bordo con entertainment tradicional egipcio.": "الإبحار ليلاً إلى إدفو. تناول العشاء على متن السفينة مع الترفيه المصري التقليدي.",
+    "Noche a bordo in Luxor. Posibles visitas adicionales según el horario de navegación.": "ليلة على متن السفينة في الأقصر. زيارات إضافية محتملة حسب جدول الإبحار.",
+    "Traslado al hotel in Dubái. Check-in y acomodación en habitaciones.": "الإنتقال إلى الفندق في دبي. تسجيل الوصول والإقامة في الغرف.",
+    "Vuegos domésticos Cairo–Luxor y Aswan–Cairo": "رحلات داخلية القاهرة-الأقصر وأسوان-القاهرة",
+    "Cena incluida in un riad tradicional de Fez.": "العشاء متضمن في رياض تقليدي في فاس.",
+    "Colosos de Memnón. Vuelo disintegration Luxor–Cairo (incluido). Traslado al aeropuerto para vuelo a Tel Aviv.": "تمثالا ممنون. رحلة التفكك بين الأقصر والقاهرة (متضمنة). التوجه إلى المطار للطيران إلى تل أبيب."
   },
   "footer": {
     "quickLinks": "روابط سريعة",
@@ -2414,6 +2441,7 @@
   },
   "common": {
     "cancel": "إلغاء",
+    "close": "إغلاق",
     "processing": "جارٍ المعالجة...",
     "sending": "جارٍ الإرسال...",
     "back": "العودة إلى الفندق"
@@ -2470,9 +2498,30 @@
       "subtitle": "مهد الحضارات",
       "seoTitle": "جولات فاخرة في اليونان | دوناس تراڤل",
       "seoDesc": "اكتشف رحلات فاخرة في اليونان. برامج مخصصة قادمة قريباً.",
+      "desc": "من الأكروبول المهيب في أثينا إلى غروب الشمس الأبدي في سانتوريني والشواطئ الكريستالية في ميكونوس وكريت، اليونان هي الرحلة التي طالما حلمت بها.",
+      "brief": "اليونان هي الوجهة المثالية لمن يبحثون عن التاريخ العريق والمناظر الخلابة والمطبخ المتوسطي. برامجنا تجمع بين الجزر الرئيسية والعاصمة في رحلة واحدة دون متاعب، مع مرشدين بالإسبانية وجميع العبارات مشمولة.",
+      "ourJourneys": "برامجنا",
+      "toursTitle": "برامج اليونان",
+      "destLabel": "الوجهات",
+      "destTitle": "أربع وجهات، رحلة واحدة",
+      "accTitle": "ملخص الإقامة",
       "hotelsTitle": "فنادق الدرجة الأولى",
       "hotelsDesc": "حسب التوفر، الإقامة في أحد الفنادق التالية من الدرجة الأولى في كل وجهة.",
-      "accTitle": "ملخص الإقامة"
+      "inclusionsTitle": "ما هو مشمول",
+      "ctaLabel": "هل أنت مستعد للسفر إلى اليونان؟",
+      "ctaTitle": "مغامرتك اليونانية تبدأ هنا",
+      "ctaDesc": "احجز الآن وسافر مع مرشدين بالإسبانية وإقامة من الدرجة الأولى وجميع العبارات مشمولة.",
+      "ctaBtn": "عرض البرنامج الكامل",
+      "city": {
+        "athens": "أثينا",
+        "mykonos": "ميكونوس",
+        "santorini": "سانتوريني",
+        "crete": "كريت"
+      },
+      "departures": "🗓 رحلات يومية · 1 أبريل – 9 أكتوبر",
+      "duration": "9 أيام / 8 ليالي",
+      "category": "الدرجة الأولى",
+      "heroAlt": "سانتوريني، اليونان"
     },
     "dubai": {
       "title": "دبي",
@@ -2538,7 +2587,9 @@
       "all": "الكل",
       "buses": "الحافلات",
       "sedans": "سيارات السيدان",
-      "suvs": "سيارات الدفع الرباعي"
+      "suvs": "سيارات الدفع الرباعي",
+      "coasters": "مركبات كوستر",
+      "private": "المركبات الخاصة"
     },
     "heroDesc": "سافر براحة وأناقة",
     "makeReservation": "قم بالحجز",
@@ -2548,7 +2599,12 @@
     "seatsCount": "مقاعد",
     "seoTitle": "وسائل النقل الفاخرة",
     "transmission": "انتقال",
-    "seoDesc": "سيارات متميزة مع سائقين محترفين في جميع أنحاء مصر والأردن وتركيا"
+    "seoDesc": "سيارات متميزة مع سائقين محترفين في جميع أنحاء مصر والأردن وتركيا",
+    "static": {
+      "destTitle": "الوجهات الشعبية",
+      "includeTitle": "خدمات النقل لدينا تشمل:",
+      "subtitle": "خدمات النقل المتميزة"
+    }
   },
   "auth": {
     "acceptTermsError": "يجب عليك قبول الشروط والأحكام",
@@ -2682,14 +2738,28 @@
     "pricingDetails": "تفاصيل الأسعار والإضافات",
     "helperVisa": "مساعدة مضمونة في الحصول على التأشيرات المحلية",
     "helperGuide": "مرشد سياحي معتمد يتحدث الإسبانية في جميع الوجهات",
-    "helperFlights": "رحلات الطيران الداخلية مشمولة بالكامل"
+    "helperFlights": "رحلات الطيران الداخلية مشمولة بالكامل",
+    "noReligiousDesc": "نقوم حاليًا بتحديث كتالوج برامجنا الدينية. يرجى الاتصال بنا للحصول على خط سير رحلة الحج مصممة خصيصا.",
+    "noReligiousFound": "لم يتم العثور على برامج دينية",
+    "relVal1Desc": "تتبع الطرق القديمة للعائلة المقدسة عبر أديرة مصر المقدسة",
+    "relVal1Title": "التراث القبطي",
+    "relVal2Desc": "زيارات ذات مغزى عميق مع مرشدين لاهوتيين خبراء يجلبون التاريخ إلى الحياة",
+    "relVal2Title": "الانغماس الروحي",
+    "relVal3Desc": "تم التعامل مع جميع الخدمات اللوجستية - بما في ذلك التأشيرات والفنادق والتحويلات والدعم الكامل للحج",
+    "relVal3Title": "رعاية كاملة",
+    "religiousCTADesc": "سيقوم متخصصو السفر الروحي لدينا بصياغة خط سير رحلة حج مخصص لك فقط - يجمع بين المواقع المقدسة في جميع أنحاء مصر والأردن والأراضي المقدسة مع أماكن إقامة متميزة وأدلة لاهوتية متخصصة.",
+    "religiousCTALabel": "الرحلات المقدسة المخصصة",
+    "religiousCTATitle": "هل تحتاج إلى خط سير رحلة حج مخصص؟",
+    "religiousLead": "قم بالسير على خطى العائلة المقدسة عبر الأديرة القبطية القديمة في مصر واكتشف العجائب المقدسة في الأرض المقدسة. رحلات موجهة بخبرة وإثراء روحي تم تصميمها بعناية مطلقة.",
+    "religiousMetaDesc": "انطلق في رحلة مقدسة عبر الأديرة القبطية القديمة في مصر والأماكن المقدسة في الأردن. رحلات حج روحية عميقة ومُنظمة بدقة مع مرشدين خبراء.",
+    "religiousSubtitle": "الرحلات المقدسة والحج",
+    "religiousType": "جولة دينية"
   },
   "accommodations": {
     "destination": "الوجهة",
     "nights": "الليالي",
     "regime": "نظام الوجبات"
   },
-  
   "multiCountry": {
     "description": "هذه جولة سياحية تشمل عدة دول"
   }

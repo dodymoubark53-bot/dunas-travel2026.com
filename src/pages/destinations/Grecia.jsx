@@ -36,7 +36,7 @@ const Grecia = () => {
         <div className="absolute inset-0 z-0">
           <img
             src={HERO_IMG}
-            alt="Santorini, Greece"
+            alt={t('dest.greece.heroAlt', 'Santorini, Greece')}
             className="w-full h-full object-cover object-center"
             loading="eager"
             fetchpriority="high"
@@ -80,7 +80,7 @@ const Grecia = () => {
           </motion.p>
           <motion.div variants={fadeInUp}>
             <span className="inline-flex items-center gap-2 bg-gold-500/20 border border-gold-500/40 text-gold-400 px-6 py-2 rounded-full text-sm font-semibold backdrop-blur-sm">
-              🗓 Salidas diarias · 1 Abril – 9 Octubre
+              {t('dest.greece.departures', '🗓 Salidas diarias · 1 Abril – 9 Octubre')}
             </span>
           </motion.div>
         </motion.div>
@@ -90,15 +90,20 @@ const Grecia = () => {
       <section className="bg-obsidian-900 py-3">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap items-center justify-center gap-8 text-ivory-300 text-sm">
-            {['🏛 Atenas', '🌊 Mykonos', '🌅 Santorini', '🏖 Creta'].map((item) => (
-              <span key={item} className="flex items-center gap-2 font-medium">
-                {item}
+            {[
+              { key: 'athens', icon: '🏛', label: 'Atenas' },
+              { key: 'mykonos', icon: '🌊', label: 'Mykonos' },
+              { key: 'santorini', icon: '🌅', label: 'Santorini' },
+              { key: 'crete', icon: '🏖', label: 'Creta' }
+            ].map((item) => (
+              <span key={item.key} className="flex items-center gap-2 font-medium">
+                <span>{item.icon}</span> {t(`dest.greece.city.${item.key}`, item.label)}
               </span>
             ))}
             <span className="border-l border-ivory-50/10 pl-8 text-gold-500 font-semibold">
-              9 Días / 8 Noches
+              {t('dest.greece.duration', '9 Días / 8 Noches')}
             </span>
-            <span className="text-gold-500 font-semibold">Primera Clase</span>
+            <span className="text-gold-500 font-semibold">{t('dest.greece.category', 'Primera Clase')}</span>
           </div>
         </div>
       </section>

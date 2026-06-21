@@ -7,7 +7,7 @@ const strings = new Set();
 
 tours.forEach(tour => {
   if (tour.title) strings.add(tour.title);
-  if (tour.description) strings.add(tour.description);
+  if (tour.overview) strings.add(tour.overview);
   if (tour.duration) strings.add(tour.duration);
   if (tour.type) strings.add(tour.type);
   if (tour.departures) strings.add(tour.departures);
@@ -64,10 +64,10 @@ services.forEach(service => {
   }
 });
 
-multiCountryTours.forEach(tour => {
+multiCountryTours((k)=>k).forEach(tour => {
   if (tour.title) strings.add(tour.title);
   if (tour.subtitle) strings.add(tour.subtitle);
-  if (tour.description) strings.add(tour.description);
+  if (tour.overview) strings.add(tour.overview);
   if (tour.duration) strings.add(tour.duration);
   if (tour.type) strings.add(tour.type);
   

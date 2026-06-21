@@ -22,7 +22,7 @@ const MultiCountryTourDetails = () => {
   // Find the selected multi-country tour or default to the first one
   const toursData = multiCountryTours(t);
   const tour = toursData.find(tItem => tItem.slug === slug) || toursData[0];
-  const [activeTab, setActiveTab] = useState('description');
+  const [activeTab, setActiveTab] = useState('overview');
   const [expandedDay, setExpandedDay] = useState(1);
   const [activeImage, setActiveImage] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
@@ -44,7 +44,7 @@ const MultiCountryTourDetails = () => {
     <div className="w-full bg-obsidian-50 pb-24">
       <Helmet>
         <title>{t(`data.${tour.title}`, tour.title)} | {t('site.luxuryTravel', 'Dunas Travel')}</title>
-        <meta name="description" content={t(`data.${tour.description}`, tour.description).substring(0, 150) + '...'} />
+        <meta name="description" content={t(`data.${tour.overview}`, tour.overview).substring(0, 150) + '...'} />
       </Helmet>
 
       {/* 1. Header & Breadcrumb */}
@@ -168,7 +168,7 @@ const MultiCountryTourDetails = () => {
               {/* 4. Tabs navigation */}
               <div className="flex gap-8 border-b border-gray-200 mb-8 overflow-x-auto no-scrollbar">
                 {[
-                  { id: 'description', label: t('tour.tabDescription', 'Description') },
+                  { id: 'overview', label: t('tour.tabOverview', 'Overview') },
                   { id: 'highlights', label: t('tour.tabHighlights', 'Highlights') }
                 ].map(tab => (
                   <button
@@ -197,9 +197,9 @@ const MultiCountryTourDetails = () => {
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.25 }}
                 >
-                  {activeTab === 'description' && (
+                  {activeTab === 'overview' && (
                     <div className="text-body-lg text-obsidian-750 leading-relaxed">
-                      <p className="mb-6">{t(`data.${tour.description}`, tour.description)}</p>
+                      <p className="mb-6">{t(`data.${tour.overview}`, tour.overview)}</p>
 
                       <div className="bg-gold-500/5 border border-gold-500/20 p-5 rounded-xl flex items-start gap-4">
                         <FaInfoCircle className="text-gold-600 text-xl shrink-0 mt-1" />

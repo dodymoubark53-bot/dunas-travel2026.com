@@ -25,7 +25,7 @@ tours.forEach(tour => {
     }
   };
   addString(tour.title);
-  addString(tour.description);
+  addString(tour.overview);
   addString(tour.duration);
   addString(tour.type);
   addString(tour.departures);
@@ -72,7 +72,7 @@ services.forEach(service => {
   }
 });
 
-multiCountryTours.forEach(tour => {
+multiCountryTours((k)=>k).forEach(tour => {
   const lang = 'es';
   const addString = (str) => {
     if (str && typeof str === 'string') {
@@ -81,7 +81,7 @@ multiCountryTours.forEach(tour => {
   };
   addString(tour.title);
   addString(tour.subtitle);
-  addString(tour.description);
+  addString(tour.overview);
   addString(tour.duration);
   addString(tour.type);
   if (tour.highlights) tour.highlights.forEach(addString);

@@ -22,7 +22,7 @@ const TourDetails = () => {
   // البحث عن الجولة الفاخرة المطابقة للـ slug
   const tour = tours.find(t => t.slug === slug) || tours[0];
 
-  const [activeTab, setActiveTab] = useState('description');
+  const [activeTab, setActiveTab] = useState('overview');
   const [expandedDay, setExpandedDay] = useState(1);
   const [activeImage, setActiveImage] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
@@ -40,7 +40,7 @@ const TourDetails = () => {
     <div className="w-full bg-obsidian-50 pb-24">
       <Helmet>
         <title>{t(`data.${tour.title}`, tour.title)} | {t('site.luxuryTravel', 'Luxury Travel')}</title>
-        <meta name="description" content={t(`data.${tour.description}`, tour.description).substring(0, 150) + '...'} />
+        <meta name="description" content={t(`data.${tour.overview}`, tour.overview).substring(0, 150) + '...'} />
       </Helmet>
 
       {/* 1. Tour Name & Breadcrumb */}
@@ -127,7 +127,7 @@ const TourDetails = () => {
               {/* 4. Tabs */}
               <div className="flex gap-8 border-b border-gray-200 mb-8 overflow-x-auto no-scrollbar">
                 {[
-                  { id: 'description', label: t('tour.tabDescription', 'Description') },
+                  { id: 'overview', label: t('tour.tabOverview', 'Overview') },
                   { id: 'highlights', label: t('tour.tabHighlights', 'Highlights') }
                 ].map(tab => (
                   <button
@@ -155,9 +155,9 @@ const TourDetails = () => {
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3 }}
                 >
-                  {activeTab === 'description' && (
+                  {activeTab === 'overview' && (
                     <div className="text-body-lg text-obsidian-700 leading-relaxed">
-                      <p className="mb-6">{t(`data.${tour.description}`, tour.description)}</p>
+                      <p className="mb-6">{t(`data.${tour.overview}`, tour.overview)}</p>
                       <p>
                         {tour.language === 'pt-BR'
                           ? t('tour.premiumImmersion', 'Imersão premium sob medida com serviços de classe executiva.')

@@ -223,8 +223,16 @@
     "expandAll": "Expandir Todo",
     "collapseAll": "Contraer Todo",
     "tabAccommodations": "Alojamientos",
+    "accommodation": "Alojamiento",
+    "days": "Días",
+    "destination": "Destino",
+    "hotelCategory": "Categoría",
+    "inclusions": "Incluye / No Incluye",
+    "regime": "Régimen",
+    "spanishImmersion": "Una inmersión premium diseñada a la medida con servicios de primera clase.",
     "double": "Doble",
-    "single": "Individual"
+    "single": "Individual",
+    "tabOverview": "Descripción general"
   },
   "home": {
     "award": "Experiencias Galardonadas",
@@ -251,6 +259,8 @@
     "allVehicles": "Todos",
     "bookTransfer": "Reserve su traslado",
     "buses": "Autobuses",
+    "coasters": "Autobuses pequeños",
+    "privateVehicles": "Vehículos privados",
     "childrenCount": "Niños (0-20)",
     "chooseVehicle": "Elige un vehículo",
     "ctaBrowse": "Explorar recorridos",
@@ -2290,7 +2300,28 @@
     "In-room safe box": "Caja de seguridad en la habitación",
     "Mini bar refrigerated stocked items (against charge)": "Mini bar con artículos refrigerados en existencia (contra cargo)",
     "Room service extra charges": "Cargos extras por servicio de habitaciones",
-    "Un viaje que fusiona dos de las civilizaciones más influyentes de la humanidad y ofrece una experiencia inolvidable. De las majestuosas Pirámides y el legendario Crucero del Nilo a la Acrópolis de Atenas y el Crucero por las Islas Griegas: once días para recorrer 7.000 años de historia con total comodidad y un guía en español.": "Un viaje que fusiona dos de las civilizaciones más influyentes de la humanidad y ofrece una experiencia inolvidable. De las majestuosas Pirámides y el legendario Crucero del Nilo a la Acrópolis de Atenas y el Crucero por las Islas Griegas: once días para recorrer 7.000 años de historia con total comodidad y un guía en español."
+    "Un viaje que fusiona dos de las civilizaciones más influyentes de la humanidad y ofrece una experiencia inolvidable. De las majestuosas Pirámides y el legendario Crucero del Nilo a la Acrópolis de Atenas y el Crucero por las Islas Griegas: once días para recorrer 7.000 años de historia con total comodidad y un guía en español.": "Un viaje que fusiona dos de las civilizaciones más influyentes de la humanidad y ofrece una experiencia inolvidable. De las majestuosas Pirámides y el legendario Crucero del Nilo a la Acrópolis de Atenas y el Crucero por las Islas Griegas: once días para recorrer 7.000 años de historia con total comodidad y un guía en español.",
+    "Descubra o coração do Egito Antigo neste roteiro intenso de quatro dias. Explore as imponentes Pirâmides de Giza e a Esfinge, desvende os mistérios arqueológicos em Memphis e Sakkara, e encante-se com o acervo do Grand Egyptian Museum. A viagem inclui também uma imersão cultural no Bairro Copta e pelas ruelas vibrantes do Mercado Khan El Khalili, com suporte total em português.": "Descubra el corazón del Antiguo Egipto en este intenso itinerario de cuatro días. Explore las imponentes pirámides de Giza y la Esfinge, descubra misterios arqueológicos en Memphis y Sakkara y maravíllese con las colecciones del Gran Museo Egipcio. El viaje también incluye una inmersión cultural en el Barrio Copto y las vibrantes callejuelas del mercado Khan El Khalili, con soporte total en portugués.",
+    "Uma jornada de cinco dias que une os tesouros faraônicos do Cairo à brisa mediterrânea de Alexandria. Visite o complexo das Pirâmides de Giza e a lendária Necrópole de Sakkara antes de seguir para a costa. Em Alexandria, admire as Catacumbas de Kom El Shoqafa e a imponente Fortaleza de Qaitbay, desfrutando da rica gastronomia e herança cultural em um roteiro fascinante.": "Un viaje de cinco días que une los tesoros faraónicos de El Cairo con la brisa mediterránea de Alejandría. Visite el complejo de la pirámide de Giza y la legendaria Necrópolis de Sakkara antes de dirigirse a la costa. En Alejandría, admire las catacumbas de Kom El Shoqafa y la imponente fortaleza Qaitbay, disfrutando de la rica gastronomía y el patrimonio cultural en un itinerario fascinante.",
+    "Navegue pela grandiosidade do Egito antigo durante oito dias inesquecíveis, com cruzeiro cinco estrelas pelo Rio Nilo de Aswan a Luxor. Contemple a magnitude de templos majestosos como Philae, Karnak e Kom Ombo, e a misteriosa beleza do Vale dos Reis. O roteiro é complementado pelas Pirâmides de Giza e o Novo Museu Egípcio no Cairo, oferecendo a autêntica essência faraônica.": "Navegue por la grandeza del antiguo Egipto durante ocho días inolvidables con un crucero de cinco estrellas por el río Nilo desde Asuán a Luxor. Contempla la magnitud de majestuosos templos como Philae, Karnak y Kom Ombo, y la misteriosa belleza del Valle de los Reyes. El itinerario se complementa con las Pirámides de Giza y el Nuevo Museo Egipcio de El Cairo, ofreciendo la auténtica esencia faraónica.",
+    "Vivencie o esplendor da civilização egípcia ao longo de nove dias intensos, navegando o Rio Nilo na deslumbrante rota de Luxor até Aswan. Admire construções colossais como o Templo de Hórus em Edfu e o místico Vale dos Reis. O roteiro abraça também o charme do Cairo Islâmico, com visitas à Mesquita de Alabastro e ao Museu Egípcio, garantindo uma imersão cultural rica e completa.": "Experimente el esplendor de la civilización egipcia durante nueve intensos días, navegando por el río Nilo en la impresionante ruta de Luxor a Asuán. Admira construcciones colosales como el Templo de Horus en Edfu y el místico Valle de los Reyes. El itinerario también abarca el encanto del Cairo islámico, con visitas a la Mezquita de Alabastro y al Museo Egipcio, lo que garantiza una inmersión cultural rica y completa.",
+    "Mergulhe na cultura faraônica e relaxe no litoral vibrante do Mar Vermelho durante dez dias perfeitos. Além de explorar o Cairo e navegar pelas águas lendárias do Nilo apreciando os maravilhosos Templos de Karnak e Edfu, você desfrutará do regime all-inclusive em Hurghada. Uma combinação ímpar de arqueologia e descanso sob o sol em praias exuberantes.": "Sumérgete en la cultura faraónica y relájate en la vibrante costa del Mar Rojo durante diez días perfectos. Además de explorar El Cairo y navegar por las legendarias aguas del Nilo disfrutando de los maravillosos Templos de Karnak y Edfu, disfrutarás del régimen todo incluido en Hurghada. Una combinación única de arqueología y relax bajo el sol en exuberantes playas.",
+    "A união definitiva entre o fascínio da antiguidade e as belezas naturais em um roteiro de onze dias. Viaje pelo tempo no Cairo e navegue pelo Rio Nilo descobrindo os segredos dos faraós em Luxor e Aswan. O clímax perfeito reserva três noites em Sharm El Sheikh, um autêntico paraíso subaquático com rica vida marinha e recifes de corais, tudo acompanhado de serviço all-inclusive de alto padrão.": "La unión definitiva entre la fascinación por la antigüedad y la belleza natural en un itinerario de once días. Viaja en el tiempo en El Cairo y navega por el río Nilo descubriendo los secretos de los faraones en Luxor y Asuán. El colofón perfecto reserva tres noches en Sharm El Sheikh, un auténtico paraíso submarino con rica vida marina y arrecifes de coral, todo ello acompañado de un servicio todo incluido de alto nivel.",
+    "Criado especialmente para apaixonados por arqueologia profunda, este roteiro premium de dez dias leva você além dos cartões postais. Acompanhe toda a grandiosidade de um cruzeiro pelo Rio Nilo, explore templos místicos e participe de uma experiência rara: o pernoite em Abu Simbel com seu indescritível espetáculo noturno de som e luz, honrando o poderoso Ramsés II.": "Creado especialmente para los apasionados de la arqueología profunda, este itinerario premium de diez días lo lleva más allá de las postales. Experimente toda la grandeza de un crucero por el río Nilo, explore templos místicos y participe en una experiencia única: pasar la noche en Abu Simbel con su indescriptible espectáculo nocturno de luz y sonido, en honor al poderoso Ramsés II.",
+    "Uma odisséia espetacular de nove dias que percorre as águas do Mediterrâneo e os mistérios do Vale do Nilo. Do encanto greco-romano da Biblioteca de Alexandria até o luxuoso cruzeiro que cruza de Aswan a Luxor, você descobrirá contrastes impressionantes. Visitas às famosas Pirâmides e a imersão na herança copta transformam esta viagem num verdadeiro compêndio vivo da história egípcia.": "Una espectacular odisea de nueve días que explora las aguas del Mediterráneo y los misterios del valle del Nilo. Desde el encanto grecorromano de la Biblioteca de Alejandría hasta el lujoso crucero que navega desde Asuán a Luxor, descubrirá sorprendentes contrastes. Las visitas a las famosas pirámides y la inmersión en la herencia copta transforman este viaje en un verdadero compendio viviente de la historia egipcia.",
+    "Esplora le radici dell'Egitto antico con un itinerario di otto giorni che bilancia perfettamente la capitale e la navigazione fluviale. Ammira lo spettacolo delle Piramidi di Giza e della Sfinge, prima di salpare per una crociera cinque stelle sul Nilo tra Aswan e Luxor. Lasciati incantare da complessi templari grandiosi come Karnak, Philae e la Valle dei Re, sempre accompagnato da esperte guide in italiano.": "Explora las raíces del antiguo Egipto con un itinerario de ocho días que equilibra perfectamente la capital y la navegación fluvial. Admire el espectáculo de las Pirámides de Giza y la Esfinge, antes de zarpar en un crucero de cinco estrellas por el Nilo entre Asuán y Luxor. Déjate encantar por grandiosos complejos de templos como Karnak, Philae y el Valle de los Reyes, siempre acompañado de guías expertos en italiano.",
+    "Scopri l'Egitto autentico in un viaggio di otto giorni pensato per garantirti totale spensieratezza e comodità. Questo percorso arricchito ti porta dalle imponenti Piramidi alla suggestiva navigazione sul Nilo, includendo cene speciali, visita ad Abu Simbel e mance. Assapora la magia di Karnak e vivi a fondo Il Cairo storico e islamico, immerso in un'esperienza Premium.": "Descubra el auténtico Egipto en un viaje de ocho días diseñado para garantizarle total comodidad y despreocupación. Este itinerario enriquecido lo lleva desde las imponentes pirámides hasta la evocadora navegación por el Nilo, que incluye cenas especiales, visita a Abu Simbel y consejos. Saborea la magia de Karnak y vive plenamente el Cairo histórico e islámico, inmerso en una experiencia Premium.",
+    "L'equilibrio ideale tra l'antico Egitto e le spiagge del Mar Rosso in un avvincente percorso di undici giorni. Parti dalla meraviglia delle Piramidi e da una romantica crociera tra Luxor e Aswan, per concludere il viaggio con tre notti all-inclusive a Sharm El Sheikh. Immergiti in acque trasparenti ammirando la famosa barriera corallina per coronare la tua vacanza perfetta.": "El equilibrio ideal entre el antiguo Egipto y las playas del Mar Rojo en un apasionante viaje de once días. Comience con la maravilla de las Pirámides y un crucero romántico entre Luxor y Asuán, concluyendo el viaje con tres noches con todo incluido en Sharm El Sheikh. Sumérgete en aguas transparentes admirando el famoso arrecife de coral para coronar tus vacaciones perfectas.",
+    "Rivivi i misteri dei faraoni e goditi il relax totale grazie a questo incredibile tour di undici giorni. Dopo l'emozionante avventura nel Cairo Vecchio e l'incantevole crociera lungo il Nilo, verrai condotto attraverso il deserto verso le candide spiagge di Hurghada. Scopri lo snorkeling, il lusso del trattamento all-inclusive e la bellezza mozzafiato delle località costiere.": "Revive los misterios de los faraones y disfruta de una relajación total en este increíble tour de once días. Después de la emocionante aventura en el Viejo Cairo y el encantador crucero por el Nilo, lo llevarán a través del desierto hacia las playas blancas de Hurghada. Descubra el snorkel, el lujo del alojamiento con todo incluido y la impresionante belleza de los lugares costeros.",
+    "Un itinerario flessibile e affascinante di undici giorni, perfetto per chi cerca storia e libertà sul Mar Rosso. Vivi l'essenza dell'Egitto antico navigando sul Nilo e ammirando il maestoso altopiano di Giza. Prosegui il soggiorno all'insegna del comfort nei favolosi resort di Hurghada, godendo della libertà di modulare e scegliere escursioni e attività facoltative a proprio piacimento.": "Un itinerario flexible y fascinante de once días, perfecto para quienes buscan historia y libertad en el Mar Rojo. Experimente la esencia del antiguo Egipto navegando por el Nilo y admirando la majestuosa meseta de Giza. Continúe su estadía cómodamente en los fabulosos resorts de Hurghada, disfrutando de la libertad de modular y elegir excursiones y actividades opcionales a su gusto.",
+    "Sumérgete en el esplendor de la Antigua Grecia y el encanto del mar Egeo en este espectacular itinerario de nueve días. Desde la grandiosa Acrópolis de Atenas hasta los vibrantes atardeceres en Santorini y Mykonos, cada escala revela un pedazo de paraíso y cultura. Coronando la travesía con la auténtica gastronomía e historia minoica en Creta, este viaje combina cultura clásica y pura esencia mediterránea.": "Resume el esplendor de la Antigua Grecia y el encanto del Mar Egeo en este espectacular itinerario de nuevos días. Desde la grandiosa Acrópolis de Atenas hasta los vibrantes atardeceres de Santorini y Mykonos, cada escalera revela un pedazo de paraíso y cultura. Coronando el viaje con la auténtica gastronomía minoica y la historia de Creta, este viaje combina la cultura clásica y la pura esencia mediterránea.",
+    "Llegada al Aeropuerto Internacional de Estambul. Recepción por nuestro representative local con cartel de bienvenida.": "Llegada al Aeropuerto Internacional de Estambul. Recepción por nuestro representative local con cartel de bienvenida.",
+    "Navegación nocturna hacia Edfu. Cena a bordo con entertainment tradicional egipcio.": "Navegación nocturna hacia Edfu. Cena a bordo con entertainment tradicional egipcio.",
+    "Noche a bordo in Luxor. Posibles visitas adicionales según el horario de navegación.": "Noche a bordo in Luxor. Posibles visitas adicionales según el horario de navegación.",
+    "Traslado al hotel in Dubái. Check-in y acomodación en habitaciones.": "Traslado al hotel in Dubái. Check-in y acomodación en habitaciones.",
+    "Vuegos domésticos Cairo–Luxor y Aswan–Cairo": "Vuegos domésticos Cairo–Luxor y Aswan–Cairo",
+    "Cena incluida in un riad tradicional de Fez.": "Cena incluida in un riad tradicional de Fez.",
+    "Colosos de Memnón. Vuelo disintegration Luxor–Cairo (incluido). Traslado al aeropuerto para vuelo a Tel Aviv.": "Colosos de Memnón. Vuelo disintegration Luxor–Cairo (incluido). Traslado al aeropuerto para vuelo a Tel Aviv."
   },
   "footer": {
     "quickLinks": "Enlaces Rápidos",
@@ -2410,6 +2441,7 @@
   },
   "common": {
     "cancel": "Cancelar",
+    "close": "Cerrar",
     "processing": "Procesando...",
     "sending": "Enviando...",
     "back": "Volver al hotel"
@@ -2465,7 +2497,31 @@
       "title": "Grecia",
       "subtitle": "La cuna de la civilización",
       "seoTitle": "Tours de lujo por Grecia | Dunas Travel",
-      "seoDesc": "Explora viajes de lujo por Grecia. Itinerarios personalizados próximamente."
+      "seoDesc": "Explora viajes de lujo por Grecia. Itinerarios personalizados próximamente.",
+      "desc": "De la majestuosa Acrópolis de Atenas a los atardeceres eternos de Santorini y las playas cristalinas de Mykonos y Creta, Grecia es el viaje que siempre soñaste.",
+      "brief": "Grecia es el destino perfecto para quienes buscan historia milenaria, paisajes de ensueño y gastronomía mediterránea. Nuestros programas combinan las principales islas con la capital en un único viaje sin complicaciones, con guías en español y todos los ferries incluidos.",
+      "ourJourneys": "NUESTROS PROGRAMAS",
+      "toursTitle": "Programas a Grecia",
+      "destLabel": "LOS DESTINOS",
+      "destTitle": "Cuatro Destinos, un Solo Viaje",
+      "accTitle": "Resumen de Alojamientos",
+      "hotelsTitle": "Hoteles de Primera Clase",
+      "hotelsDesc": "En función de la disponibilidad, alojamiento en uno de los siguientes hoteles de primera clase en cada destino.",
+      "inclusionsTitle": "Qué está incluido",
+      "ctaLabel": "¿LISTO PARA VOLAR A GRECIA?",
+      "ctaTitle": "Tu aventura griega comienza aquí",
+      "ctaDesc": "Reserva ahora y viaja con guías en español, alojamiento de primera clase y todos los ferries incluidos.",
+      "ctaBtn": "Ver Programa Completo",
+      "city": {
+        "athens": "Atenas",
+        "mykonos": "Mykonos",
+        "santorini": "Santorini",
+        "crete": "Creta"
+      },
+      "departures": "🗓 Salidas diarias · 1 Abril – 9 Octubre",
+      "duration": "9 Días / 8 Noches",
+      "category": "Primera Clase",
+      "heroAlt": "Santorini, Grecia"
     },
     "dubai": {
       "title": "Dubái",
@@ -2531,7 +2587,9 @@
       "all": "Todos",
       "buses": "Autobuses",
       "sedans": "sedanes",
-      "suvs": "SUV"
+      "suvs": "SUV",
+      "coasters": "Vehículos de montaña rusa",
+      "private": "Vehículos Privados"
     },
     "heroDesc": "Viaje con comodidad y estilo",
     "makeReservation": "Hacer una reserva",
@@ -2541,7 +2599,12 @@
     "seatsCount": "Asientos",
     "seoTitle": "Transporte de lujo",
     "transmission": "Transmisión",
-    "seoDesc": "Vehículos premium con conductores profesionales en Egipto, Jordania y Turquía"
+    "seoDesc": "Vehículos premium con conductores profesionales en Egipto, Jordania y Turquía",
+    "static": {
+      "destTitle": "Destinos populares",
+      "includeTitle": "Nuestros servicios de traslado incluyen:",
+      "subtitle": "Servicios de transferencia premium"
+    }
   },
   "auth": {
     "acceptTermsError": "Debes aceptar los Términos y Condiciones",
@@ -2675,7 +2738,22 @@
     "pricingDetails": "Detalle de Tarifas y Suplementos",
     "helperVisa": "Asistencia garantizada para visado local",
     "helperGuide": "Guía certificado en español en todos los destinos",
-    "helperFlights": "Vuelos domésticos totalmente incluidos"
+    "helperFlights": "Vuelos domésticos totalmente incluidos",
+    "noReligiousDesc": "Actualmente estamos actualizando nuestro catálogo de programas religiosos. Por favor contáctenos para un itinerario de peregrinación a medida.",
+    "noReligiousFound": "No se encontraron programas religiosos",
+    "relVal1Desc": "Traza las antiguas rutas de la Sagrada Familia a través de los monasterios sagrados de Egipto",
+    "relVal1Title": "Herencia copta",
+    "relVal2Desc": "Visitas profundamente significativas con guías teólogos expertos que dan vida a la historia.",
+    "relVal2Title": "Inmersión Espiritual",
+    "relVal3Desc": "Toda la logística se maneja: visas, hoteles, traslados y apoyo completo para la peregrinación incluidos.",
+    "relVal3Title": "Cuidado completo",
+    "religiousCTADesc": "Nuestros especialistas en viajes espirituales elaborarán un itinerario de peregrinación personalizado solo para usted, combinando sitios sagrados en Egipto, Jordania y Tierra Santa con alojamiento premium y guías teológicos expertos.",
+    "religiousCTALabel": "Viajes sagrados a medida",
+    "religiousCTATitle": "¿Necesita un itinerario de peregrinación personalizado?",
+    "religiousLead": "Siga los pasos de la Sagrada Familia a través de los antiguos monasterios coptos de Egipto y descubra las maravillas sagradas de Tierra Santa. Viajes espiritualmente enriquecedores guiados por expertos y elaborados con absoluto cuidado.",
+    "religiousMetaDesc": "Embárquese en un viaje sagrado a través de los antiguos monasterios coptos de Egipto y los lugares sagrados de Jordania. Peregrinaciones profundamente espirituales, meticulosamente organizadas y con guías expertos.",
+    "religiousSubtitle": "Viajes Sagrados y Peregrinaciones",
+    "religiousType": "Tour Religioso"
   },
   "accommodations": {
     "destination": "Destino",
