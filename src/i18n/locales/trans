@@ -1,0 +1,694 @@
+تمام يا فنانة، ده البرومت بالانجلش جاهز ومنظم جداً لـ "Anti-Gravity IDE" عشان يتعامل مع الداتا الجديدة دي كلها بدقة، يعمل الـ keys، ويربط كل لغة بالنص الأصلي بتاعها في ملفات الترجمة (JSON/Localization files) من غير أي تداخل.
+
+---
+
+### **The Prompt:**
+
+```text
+Please process the following batch of translation entries and map them into the localization system/files according to these instructions:
+
+1. Key Generation & Mapping: For each numbered item under the different sections, generate a unique localization key based on its context or content (e.g., `tour_istanbul_jewels`, `petra_entrance`, `dead_sea_floating`, etc.) or follow a consistent sequential pattern.
+2. Source Text Linkage: Link each generated key directly to the original Spanish/Source text provided for that item.
+3. Multi-language File Insertion: Append or integrate these translations (EN, AR, IT, PT, ES) into their respective language resource files. Ensure that all language variants for the same item are perfectly synchronized under the exact same generated key.
+4. Handling Context Clues: Pay attention to specific context markers or notes embedded in the text (like "match text 9" or "key name clues") to ensure proper logical grouping.
+
+Data Entries:
+
+--- SECTION 1 ---
+1. Original: Opcional: "Jewels of Constantinople" (65 €) — Hippodrome, Blue Mosque, Topkapi Palace, Hagia Sophia and Grand Bazaar.
+EN: Optional: "Jewels of Constantinople" (65 €) — Hippodrome, Blue Mosque, Topkapi Palace, Hagia Sophia and Grand Bazaar.
+AR: اختياري: "جواهر القسطنطينية" (65 يورو) — ميدان السباق، الجامع الأزرق، قصر توبكابي، آيا صوفيا والبازار الكبير.
+IT: Opzionale: "Gioielli di Costantinopoli" (65 €) — Ippodromo, Moschea Blu, Palazzo di Topkapi, Santa Sofia e Gran Bazar.
+PT: Opcional: "Jóias de Constantinopla" (65 €) — Hipódromo, Mesquita Azul, Palácio de Topkapi, Santa Sofia e Grande Bazar.
+ES: Opcional: "Joyas de Constantinopla" (65 €) — Hipódromo, Mezquita Azul, Palacio de Topkapi, Santa Sofía y Gran Bazar.
+
+2. Original: Desayuno. Entrada a Petra: Tumba de los Obeliscos, el majestuoso El Siq (desfiladero de 1.2 km), El Tesoro (Khazneh), la Calle de las Fachadas y el anfiteatro nabateo.
+EN: Breakfast. Entrance to Petra: Tomb of the Obelisks, the majestic Siq (1.2 km gorge), the Treasury (Khazneh), the Street of Facades and the Nabatean amphitheater.
+AR: إفطار. دخول البترا: مقبرة المسلات، السيق المهيب (ممر بطول 1.2 كم)، الخزنة، شارع الواجهات والمدرج النبطي.
+IT: Colazione. Ingresso a Petra: Tomba degli Obelischi, il maestoso Siq (gola di 1.2 km), il Tesoro (Khazneh), la Via delle Facciate e l'anfiteatro nabateo.
+PT: Café da manhã. Entrada em Petra: Túmulo dos Obeliscos, o majestoso Siq (desfiladeiro de 1,2 km), o Tesouro (Khazneh), a Rua das Fachadas e o anfiteatro nabateu.
+ES: Desayuno. Entrada a Petra: Tumba de los Obeliscos, el majestuoso El Siq (desfiladero de 1.2 km), El Tesoro (Khazneh), la Calle de las Fachadas y el anfiteatro nabateo.
+
+3. Original: ⚠️ Regreso a Amman. Cena incluida. Traslado al aeropuerto para vuelo nocturno a El Cairo (≥20:00 h, no incluido).
+EN: ⚠️ Return to Amman. Dinner included. Transfer to the airport for night flight to Cairo (≥20:00, not included).
+AR: ⚠️ العودة إلى عمان. عشاء شامل. الانتقال إلى المطار لرحلة ليلية إلى القاهرة (≥20:00، غير متضمنة).
+IT: ⚠️ Ritorno ad Amman. Cena inclusa. Trasferimento in aeroporto per il volo notturno per Il Cairo (≥20:00, non incluso).
+PT: ⚠️ Retorno a Amã. Jantar incluído. Transfer para o aeroporto para voo noturno para o Cairo (≥20:00, não incluído).
+ES: ⚠️ Regreso a Amman. Cena incluida. Traslado al aeropuerto para vuelo nocturno a El Cairo (≥20:00 h, no incluido).
+
+4. Original: Desayuno. Visita histórica a las Pirámides de Keops, Kefrén y Micerinos y la Gran Esfinge (~3 horas). Opcional: Memphis y Sakkara por la tarde.
+EN: Breakfast. Historical visit to the Pyramids of Khufu, Khafre and Menkaure and the Great Sphinx (~3 hours). Optional: Memphis and Saqqara in the afternoon.
+AR: إفطار. زيارة تاريخية لأهرامات خوفو وخفرع ومنقرع وأبو الهول (~3 ساعات). اختياري: ممفيس وسقارة بعد الظهر.
+IT: Colazione. Visita storica alle Piramidi di Cheope, Chefren e Micerino e la Grande Sfinge (~3 ore). Opzionale: Menfi e Sakkara nel pomeriggio.
+PT: Café da manhã. Visita histórica às Pirâmides de Quéops, Quéfren e Miquerinos e à Grande Esfinge (~3 horas). Opcional: Mênfis e Sakkara à tarde.
+ES: Desayuno. Visita histórica a las Pirámides de Keops, Kefrén y Micerinos y la Gran Esfinge (~3 horas). Opcional: Memphis y Sakkara por la tarde.
+
+5. Original: Desayuno a bordo. Orilla oriental: visita a los monumentales Templos de Karnak (el complejo religioso más grande del mundo antiguo) y el Templo de Luxor.
+EN: Breakfast on board. East bank: visit to the monumental Karnak Temples (the largest religious complex in the ancient world) and the Luxor Temple.
+AR: إفطار على متن السفينة. الضفة الشرقية: زيارة معبدي الكرنك (أكبر مجمع ديني في العالم القديم) والأقصر.
+IT: Colazione a bordo. Riva orientale: visita ai monumentali Templi di Karnak (il più grande complesso religioso del mondo antico) e il Tempio di Luxor.
+PT: Café da manhã a bordo. Margem oriental: visita aos monumentais Templos de Karnak (o maior complexo religioso do mundo antigo) e ao Templo de Luxor.
+ES: Desayuno a bordo. Orilla oriental: visita a los monumentales Templos de Karnak (el complejo religioso más grande del mundo antiguo) y el Templo de Luxor.
+
+6. Original: Orilla occidental: Valle de los Reyes (tumbas faraónicas), Templo de Hatshepsut y los Colosos de Memnón.
+EN: West bank: Valley of the Kings (pharaonic tombs), Temple of Hatshepsut and the Colossi of Memnon.
+AR: الضفة الغربية: وادي الملوك (المقابر الفرعونية)، معبد حتشبسوت وتمثالي ممنون.
+IT: Riva occidentale: Valle dei Re (tombe faraoniche), Tempio di Hatshepsut e i Colossi di Memnone.
+PT: Margem ocidental: Vale dos Reis (túmulos faraônicos), Templo de Hatshepsut e os Colossos de Memnon.
+ES: Orilla occidental: Valle de los Reyes (tumbas faraónicas), Templo de Hatshepsut y los Colosos de Memnón.
+
+7. Original: Romántico paseo en faluca tradicional por las aguas serenas del Nilo. Opcional: excursión a Abu Simbel (los colosos de Ramsés II).
+EN: Romantic ride on a traditional felucca on the serene waters of the Nile. Optional: excursion to Abu Simbel (the colossi of Ramesses II).
+AR: جولة رومانسية في فلوكة تقليدية على مياه النيل الهادئة. اختياري: رحلة إلى أبو سمبل (تماثيل رمسيس الثاني).
+IT: Romantico giro in feluca tradizionale sulle acque serene del Nilo. Opzionale: escursione ad Abu Simbel (i colossi di Ramesse II).
+PT: Passeio romântico em faluca tradicional pelas águas serenas do Nilo. Opcional: excursão a Abu Simbel (os colossos de Ramsés II).
+ES: Romántico paseo en faluca tradicional por las aguas serenas del Nilo. Opcional: excursión a Abu Simbel (los colosos de Ramsés II).
+
+8. Original: Desayuno a bordo. Check-out a las 08:00 h. Tiempo libre en Aswan para pasear por el mercado nubio. Vuelo Aswan → El Cairo (incluido).
+EN: Breakfast on board. Check-out at 08:00. Free time in Aswan to stroll through the Nubian market. Flight Aswan → Cairo (included).
+AR: إفطار على متن السفينة. المغادرة الساعة 08:00. وقت حر في أسوان للتجول في السوق النوبي. رحلة أسوان → القاهرة (متضمنة).
+IT: Colazione a bordo. Check-out alle 08:00. Tempo libero ad Assuan per passeggiare nel mercato nubiano. Volo Assuan → Il Cairo (incluso).
+PT: Café da manhã a bordo. Check-out às 08:00. Tempo livre em Aswan para passear pelo mercado núbio. Voo Aswan → Cairo (incluído).
+ES: Desayuno a bordo. Check-out a las 08:00 h. Tiempo libre en Aswan para pasear por el mercado nubio. Vuelo Aswan → El Cairo (incluido).
+
+--- SECTION 2 ---
+1. Original: Belén: Basílica de la Natividad
+EN: Bethlehem: Church of the Nativity
+AR: بيت لحم: كنيسة المهد
+IT: Betlemme: Basilica della Natività
+PT: Belém: Basílica da Natividade
+ES: Belén: Basílica de la Natividad
+
+2. Original: Visita al barrio copto de El Cairo: Iglesia de la Sagrada Familia (donde descansó la Sagrada Familia) y al Khan el Khalili.
+EN: Visit to the Coptic quarter of Cairo: Church of the Holy Family (where the Holy Family rested) and Khan el Khalili.
+AR: زيارة الحي القبطي في القاهرة: كنيسة العائلة المقدسة (حيث استراحت العائلة المقدسة) وخان الخليلي.
+IT: Visita al quartiere copto del Cairo: Chiesa della Sacra Famiglia (dove riposò la Sacra Famiglia) e Khan el Khalili.
+PT: Visita ao bairro copta do Cairo: Igreja da Sagrada Família (onde a Sagrada Família descansou) e Khan el Khalili.
+ES: Visita al barrio copto de El Cairo: Iglesia de la Sagrada Familia (donde descansó la Sagrada Familia) y al Khan el Khalili.
+
+3. Original: Desayuno a bordo. Paseo en faluca por las aguas serenas del Nilo de Aswan. Opcional: Abu Simbel.
+EN: Breakfast on board. Felucca ride on the serene waters of the Nile in Aswan. Optional: Abu Simbel.
+AR: إفطار على متن السفينة. جولة في فلوكة على مياه النيل الهادئة في أسوان. اختياري: أبو سمبل.
+IT: Colazione a bordo. Giro in feluca sulle acque serene del Nilo ad Assuan. Opzionale: Abu Simbel.
+PT: Café da manhã a bordo. Passeio de faluca pelas águas serenas do Nilo em Aswan. Opcional: Abu Simbel.
+ES: Desayuno a bordo. Paseo en faluca por las aguas serenas del Nilo de Aswan. Opcional: Abu Simbel.
+
+4. Original: Desayuno. Jerusalén: Monte de los Olivos (vistas panorámicas), Getsemaní, Vía Dolorosa.
+EN: Breakfast. Jerusalem: Mount of Olives (panoramic views), Gethsemane, Via Dolorosa.
+AR: إفطار. القدس: جبل الزيتون (إطلالات بانورامية)، جثسيماني، طريق الآلام.
+IT: Colazione. Gerusalemme: Monte degli Ulivi (viste panoramiche), Getsemani, Via Dolorosa.
+PT: Café da manhã. Jerusalém: Monte das Oliveiras (vistas panorâmicas), Getsêmani, Via Dolorosa.
+ES: Desayuno. Jerusalén: Monte de los Olivos (vistas panorámicas), Getsemaní, Vía Dolorosa.
+
+5. Original: Ciudad Vieja: Santo Sepulcro, Muro de las Lamentaciones, Cúpula de la Roca (exterior), barrio judío.
+EN: Old City: Holy Sepulchre, Western Wall, Dome of the Rock (exterior), Jewish Quarter.
+AR: البلدة القديمة: كنيسة القيامة، حائط المبكى، قبة الصخرة (من الخارج)، الحي اليهودي.
+IT: Città Vecchia: Santo Sepolcro, Muro del Pianto, Cupola della Roccia (esterno), quartiere ebraico.
+PT: Cidade Velha: Santo Sepulcro, Muro das Lamentações, Domo da Rocha (exterior), bairro judeu.
+ES: Ciudad Vieja: Santo Sepulcro, Muro de las Lamentaciones, Cúpula de la Roca (exterior), barrio judío.
+
+6. Original: Desayuno. Excursión a Belén: Basílica de la Natividad, Gruta de la Natividad, calle de los peregrinos.
+EN: Breakfast. Excursion to Bethlehem: Church of the Nativity, Grotto of the Nativity, Pilgrims' Street.
+AR: إفطار. رحلة إلى بيت لحم: كنيسة المهد، مغارة المهد، شارع الحجاج.
+IT: Colazione. Escursione a Betlemme: Basilica della Natività, Grotta della Natività, via dei Pellegrini.
+PT: Café da manhã. Excursão a Belém: Basílica da Natividade, Gruta da Natividade, rua dos peregrinos.
+ES: Desayuno. Excursión a Belén: Basílica de la Natividad, Gruta de la Natividad, calle de los peregrinos.
+
+7. Original: Mar Muerto: flotación única en las aguas más saladas del mundo. Tratamientos de barro volcánico.
+EN: Dead Sea: unique floating in the saltiest waters in the world. Volcanic mud treatments.
+AR: البحر الميت: طفو فريد في أكثر مياه العالم ملوحة. علاجات بالطين البركاني.
+IT: Mar Morto: galleggiamento unico nelle acque più salate del mondo. Trattamenti con fango vulcanico.
+PT: Mar Morto: flutuação única nas águas mais salgadas do mundo. Tratamentos de lama vulcânica.
+ES: Mar Muerto: flotación única en las aguas más saladas del mundo. Tratamientos de barro volcánico.
+
+8. Original: Desayuno. Excursión al norte: Nazaret (Basílica de la Anunciación), Mar de Galilea, Cafarnaum.
+EN: Breakfast. Excursion to the north: Nazareth (Basilica of the Annunciation), Sea of Galilee, Capernaum.
+AR: إفطار. رحلة إلى الشمال: الناصرة (كنيسة البشارة)، بحيرة طبريا، كفرناحوم.
+IT: Colazione. Escursione a nord: Nazareth (Basilica dell'Annunciazione), Lago di Galilea, Cafarnao.
+PT: Café da manhã. Excursão ao norte: Nazaré (Basílica da Anunciação), Mar da Galileia, Cafarnaum.
+ES: Desayuno. Excursión al norte: Nazaret (Basílica de la Anunciación), Mar de Galilea, Cafarnaum.
+
+9. Original: Visado Egipto: 35 USD (en destino)
+EN: Egypt visa: 35 USD (on site)
+AR: تأشيرة مصر: 35 دولارًا (في الوجهة)
+IT: Visto Egitto: 35 USD (in loco)
+PT: Visto Egito: 35 USD (no destino)
+ES: Visado Egipto: 35 USD (en destino)
+
+10. Original: Tasas de salida de Israel: 48 USD
+EN: Israel departure fees: 48 USD
+AR: رسوم مغادرة إسرائيل: 48 دولارًا
+IT: Tasse di uscita da Israele: 48 USD
+PT: Taxas de saída de Israel: 48 USD
+ES: Tasas de salida de Israel: 48 USD
+
+11. Original: Propinas: 45 USD/pax
+EN: Tips: 45 USD/pax
+AR: إكراميات: 45 دولارًا للشخص
+IT: Mance: 45 USD/pax
+PT: Gorjetas: 45 USD/pax
+ES: Propinas: 45 USD/pax
+
+12. Original: Estambul: Mezquita Azul, Santa Sofía, Palacio de Topkapi
+EN: Istanbul: Blue Mosque, Hagia Sophia, Topkapi Palace
+AR: إسطنبول: الجامع الأزرق، آيا صوفيا، قصر توبكابي
+IT: Istanbul: Moschea Blu, Santa Sofia, Palazzo di Topkapi
+PT: Istambul: Mesquita Azul, Santa Sofia, Palácio de Topkapi
+ES: Estambul: Mezquita Azul, Santa Sofía, Palacio de Topkapi
+
+13. Original: Desayuno. Día libre para explorar: Barrio Copto, Memphis y Sakkara (opcional).
+EN: Breakfast. Free day to explore: Coptic Quarter, Memphis and Saqqara (optional).
+AR: إفطار. يوم حر للاستكشاف: الحي القبطي، ممفيس وسقارة (اختياري).
+IT: Colazione. Giorno libero per esplorare: Quartiere Copto, Menfi e Sakkara (opzionale).
+PT: Café da manhã. Dia livre para explorar: Bairro Copta, Mênfis e Sakkara (opcional).
+ES: Desayuno. Día libre para explorar: Barrio Copto, Memphis y Sakkara (opcional).
+
+14. Original: Desayuno a bordo. Paseo en faluca. Opcional: Abu Simbel.
+EN: Breakfast on board. Felucca ride. Optional: Abu Simbel.
+AR: إفطار على متن السفينة. جولة في فلوكة. اختياري: أبو سمبل.
+IT: Colazione a bordo. Giro in feluca. Opzionale: Abu Simbel.
+PT: Café da manhã a bordo. Passeio de faluca. Opcional: Abu Simbel.
+ES: Desayuno a bordo. Paseo en faluca. Opcional: Abu Simbel.
+
+15. Original: Desayuno. Visita guiada a la Acrópolis: Partenón, Erecteión y Cariátides. Museo de la Acrópolis.
+EN: Breakfast. Guided tour of the Acropolis: Parthenon, Erechtheion and Caryatids. Acropolis Museum.
+AR: إفطار. جولة موجهة في الأكروبوليس: البارثينون، الإرخثيون وحاملات الأعمدة. متحف الأكروبوليس.
+IT: Colazione. Visita guidata all'Acropoli: Partenone, Eretteo e Cariatidi. Museo dell'Acropoli.
+PT: Café da manhã. Visita guided à Acrópole: Partenon, Erectéion e Cariátides. Museu da Acrópole.
+ES: Desayuno. Visita guided a la Acrópolis: Partenón, Erecteión y Cariátides. Museo de la Acrópolis.
+
+16. Original: Tour panorámico: Tumba del Soldado Desconocido, Parlamento, Estadio Panathinaikon.
+EN: Panoramic tour: Tomb of the Unknown Soldier, Parliament, Panathenaic Stadium.
+AR: جولة بانورامية: قبر الجندي المجهول، البرلمان، ملعب باناثينايكون.
+IT: Tour panoramico: Tomba del Milite Ignoto, Parlamento, Stadio Panatenaico.
+PT: Tour panorâmico: Túmulo do Soldado Desconhecido, Parlamento, Estádio Panatenaico.
+ES: Tour panorámico: Tumba del Soldado Desconocido, Parlamento, Estadio Panathinaikon.
+
+17. Original: Desayuno. Embarque en el crucero de 1 día: Hydra, Poros y Egina.
+EN: Breakfast. Embark on the 1-day cruise: Hydra, Poros and Aegina.
+AR: إفطار. الصعود على الرحلة البحرية ليوم واحد: هيدرا، بوروس وإيجينا.
+IT: Colazione. Imbarco sulla crociera di 1 giorno: Idra, Poros ed Egina.
+PT: Café da manhã. Embarque no cruzeiro de 1 dia: Hydra, Poros e Egina.
+ES: Desayuno. Embarque en el crucero de 1 día: Hydra, Poros y Egina.
+
+18. Original: A bordo: orquesta, bailarines de danzas griegas y comida griega incluida.
+EN: On board: orchestra, Greek dancers and Greek food included.
+AR: على متن السفينة: أوركسترا، راقصو رقصات يونانية وطعام يوناني شامل.
+IT: A bordo: orchestra, ballerini di danze greche e cibo greco incluso.
+PT: A bordo: orquestra, dançarinos de danças gregas e comida grega incluída.
+ES: A bordo: orquesta, bailarines de danzas griegas y comida griega incluida.
+
+19. Original: Palacio de Topkapi: el corazón del Imperio Otomano por cuatro siglos.
+EN: Topkapi Palace: the heart of the Ottoman Empire for four centuries.
+AR: قصر توبكابي: قلب الإمبراطورية العثمانية لأربعة قرون.
+IT: Palazzo di Topkapi: il cuore dell'Impero Ottomano per quattro secoli.
+PT: Palácio de Topkapi: o coração do Império Otomano por quatro séculos.
+ES: Palacio de Topkapi: el corazón del Imperio Otomano por cuatro siglos.
+
+20. Original: بازار التوابل (Mısır Çarşısı). حي بيوغلو وبرج غلطة.
+EN: Spice Bazaar (Mısır Çarşısı). Beyoğlu district and Galata Tower.
+AR: بازار التوابل (Mısır Çarşısı). حي بيوغلو وبرج غلطة.
+IT: Bazar delle Spezie (Mısır Çarşısı). Quartiere di Beyoğlu e Torre di Galata.
+PT: Bazar de Especiarias (Mısır Çarşısı). Bairro de Beyoğlu e Torre de Gálata.
+ES: Bazar de las Especias (Mısır Çarşısı). Barrio de Beyoğlu y Torre de Gálata.
+
+21. Original: Desayuno. Día libre. Opcional: Joyas de Constantinopla (65 €) — visita completa a los monumentos principales.
+EN: Breakfast. Free day. Optional: Jewels of Constantinople (65 €) — full visit to the main monuments.
+AR: إفطار. يوم حر. اختياري: جواهر القسطنطينية (65 يورو) — زيارة كاملة لأهم المعالم.
+IT: Colazione. Giorno libero. Opzionale: Gioielli di Costantinopoli (65 €) — visita completa ai monumenti principali.
+PT: Café da manhã. Dia livre. Opcional: Jóias de Constantinopla (65 €) — visita completa aos principais monumentos.
+ES: Desayuno. Día libre. Opcional: Joyas de Constantinopla (65 €) — visita completa a los monumentos principales.
+
+22. Original: Visita al barrio asiático de Estambul: Kadıköy y Moda.
+EN: Visit to the Asian side of Istanbul: Kadıköy and Moda.
+AR: زيارة الجانب الآسيوي من إسطنبول: كاديكوي ومودا.
+IT: Visita al lato asiatico di Istanbul: Kadıköy e Moda.
+PT: Visita ao lado asiático de Istambul: Kadıköy e Moda.
+ES: Visita al barrio asiático de Estambul: Kadıköy y Moda.
+
+23. Original: Visado Egipto: 35 USD (en destino)
+(Note: Map this to the exact same key as item 9 in this section).
+
+24. Original: Propinas Egipto: 45 USD/pax
+EN: Egypt tips: 45 USD/pax
+AR: إكراميات مصر: 45 دولارًا للشخص
+IT: Mance Egitto: 45 USD/pax
+PT: Gorjetas Egito: 45 USD/pax
+ES: Propinas Egipto: 45 USD/pax
+
+--- SECTION 3 ---
+1. Original: Visado Egipto: 30 €/pax
+EN: Egypt visa: 30 €/pax
+AR: تأشيرة مصر: 30 يورو للشخص
+IT: Visto Egitto: 30 €/pax
+PT: Visto Egito: 30 €/pax
+ES: Visado Egipto: 30 €/pax
+
+2. Original: Propinas viaje: 45 €/pax (obligatorio en destino)
+EN: Travel tips: 45 €/pax (mandatory on site)
+AR: إكراميات الرحلة: 45 يورو للشخص (إلزامي في الوجهة)
+IT: Mance di viaggio: 45 €/pax (obbligatorie in loco)
+PT: Gorjetas de viagem: 45 €/pax (obrigatório no destino)
+ES: Propinas viaje: 45 €/pax (obligatorio en destino)
+
+3. Original: 2 vuelos domésticos: Cairo–Luxor y Aswan–Cairo
+EN: 2 domestic flights: Cairo–Luxor and Aswan–Cairo
+AR: رحلتان داخليتان: القاهرة–الأقصر وأسوان–القاهرة
+IT: 2 voli domestici: Cairo–Luxor e Assuan–Cairo
+PT: 2 voos domésticos: Cairo–Luxor e Aswan–Cairo
+ES: 2 vuelos domésticos: Cairo–Luxor y Aswan–Cairo
+
+4. Original: Petra: El Siq, El Tesoro, Tumbas Reales y El Monasterio
+EN: Petra: The Siq, The Treasury, Royal Tombs and The Monastery
+AR: البترا: السيق، الخزنة، المقابر الملكية والدير
+IT: Petra: Il Siq, Il Tesoro, Tombe Reali e Il Monastero
+PT: Petra: O Siq, O Tesouro, Túmulos Reais e O Mosteiro
+ES: Petra: El Siq, El Tesoro, Tumbas Reales y El Monasterio
+
+5. Original: Alojamiento en Amman. Nota: cena no incluida si llegada > 21:00 h.
+EN: Accommodation in Amman. Note: dinner not included if arrival > 21:00.
+AR: إقامة في عمان. ملاحظة: العشاء غير متضمن إذا الوصول بعد 21:00.
+IT: Sistemazione ad Amman. Nota: cena non inclusa se arrivo > 21:00.
+PT: Alojamento em Amã. Nota: jantar não incluído se chegada > 21:00.
+ES: Alojamiento en Amman. Nota: cena no incluida si llegada > 21:00 h.
+
+6. Original: Desayuno. Iglesia Ortodoxa San Jorge en Madaba: el famoso mosaico-mapa de Palestina del siglo VI. Monte Nebo: vistas del Valle del Jordán y el Mar Muerto.
+EN: Breakfast. St. George Orthodox Church in Madaba: the famous 6th-century mosaic map of Palestine. Mount Nebo: views of the Jordan Valley and the Dead Sea.
+AR: إفطار. كنيسة القديس جاورجيوس الأرثوذكسية في مادبا: خريطة الفسيفساء الشهيرة لفلسطين من القرن السادس. جبل نيبو: إطلالات على وادي الأردن والبحر الميت.
+IT: Colazione. Chiesa ortodossa di San Giorgio a Madaba: la famosa mappa musiva del VI secolo della Palestina. Monte Nebo: viste sulla Valle del Giordano e il Mar Morto.
+PT: Café da manhã. Igreja Ortodoxa de São Jorge em Madaba: o famoso mapa de mosaico da Palestina do século VI. Monte Nebo: vistas do Vale do Jordão e do Mar Morto.
+ES: Desayuno. Iglesia Ortodoxa San Jorge en Madaba: el famoso mosaico-mapa de Palestina del siglo VI. Monte Nebo: vistas del Valle del Jordán y el Mar Muerto.
+
+7. Original: Desayuno. Día completo en Petra: El Tesoro (Khazneh), Tumbas de Colores, Tumbas Reales.
+EN: Breakfast. Full day in Petra: The Treasury (Khazneh), Color Tombs, Royal Tombs.
+AR: إفطار. يوم كامل في البترا: الخزنة، المقابر الملونة، المقابر الملكية.
+IT: Colazione. Giornata intera a Petra: Il Tesoro (Khazneh), Tombe Colorate, Tombe Reali.
+PT: Café da manhã. Dia completo em Petra: O Tesouro (Khazneh), Túmulos Coloridos, Túmulos Reais.
+ES: Desayuno. Día completo en Petra: El Tesoro (Khazneh), Tumbas de Colores, Tumbas Reales.
+
+8. Original: Desayuno picnic. Vuelo Cairo–Aswan (incluido). Embarque en el crucero. Opcional: Abu Simbel antes de embarcar.
+EN: Picnic breakfast. Cairo–Aswan flight (included). Board the cruise. Optional: Abu Simbel before boarding.
+AR: فطور رحلة. رحلة القاهرة–أسوان (متضمنة). الصعود على الرحلة النيلية. اختياري: أبو سمبل قبل الصعود.
+IT: Colazione al sacco. Volo Cairo–Assuan (incluso). Imbarco sulla nave. Opzionale: Abu Simbel prima dell'imbarco.
+PT: Café da manhã tipo piquenique. Voo Cairo–Aswan (incluído). Embarque no cruzeiro. Opcional: Abu Simbel antes do embarque.
+ES: Desayuno picnic. Vuelo Cairo–Aswan (incluido). Embarque en el crucero. Opcional: Abu Simbel antes de embarcar.
+
+9. Original: Desayuno a bordo. Navegación a Kom Ombo: visita al templo de Sobek y Haroeris.
+EN: Breakfast on board. Navigation to Kom Ombo: visit to the temple of Sobek and Haroeris.
+AR: إفطار على متن السفينة. الإبحار إلى كوم أمبو: زيارة معبد سوبك وحورس.
+IT: Colazione a bordo. Navigazione verso Kom Ombo: visita al tempio di Sobek e Haroeris.
+PT: Café da manhã a bordo. Navegação para Kom Ombo: visita ao templo de Sobek e Haroeris.
+ES: Desayuno a bordo. Navegación a Kom Ombo: visita al templo de Sobek y Haroeris.
+
+10. Original: Desayuno. Check-out 08:00 h. Colosos de Memnón, Templo funerario de Hatshepsut, Valle de los Reyes.
+EN: Breakfast. Check-out 08:00. Colossi of Memnon, Mortuary Temple of Hatshepsut, Valley of the Kings.
+AR: إفطار. المغادرة 08:00. تمثالي ممنون، معبد حتشبسوت الجنائزي، وادي الملوك.
+IT: Colazione. Check-out 08:00. Colossi di Memnone, Tempio funerario di Hatshepsut, Valle dei Re.
+PT: Café da manhã. Check-out 08:00. Colossos de Memnon, Templo funerário de Hatshepsut, Vale dos Reis.
+ES: Desayuno. Check-out 08:00 h. Colosos de Memnón, Templo funerario de Hatshepsut, Valle de los Reyes.
+
+11. Original: Tarde libre. Opcional: Museo Egipcio (Gran Museo Egipcio), Khan el Khalili.
+EN: Free afternoon. Optional: Egyptian Museum (Grand Egyptian Museum), Khan el Khalili.
+AR: بعد الظهر حر. اختياري: المتحف المصري (المتحف المصري الكبير)، خان الخليلي.
+IT: Pomeriggio libero. Opzionale: Museo Egizio (Grande Museo Egizio), Khan el Khalili.
+PT: Tarde livre. Opcional: Museu Egípcio (Grande Museu Egípcio), Khan el Khalili.
+ES: Tarde libre. Opcional: Museo Egipcio (Gran Museo Egipcio), Khan el Khalili.
+
+12. Original: Propinas Egipto: 45 USD + visado: 30 USD/pax
+EN: Egypt tips: 45 USD + visa: 30 USD/pax
+AR: إكراميات مصر: 45 دولارًا + التأشيرة: 30 دولارًا للشخص
+IT: Mance Egitto: 45 USD + visto: 30 USD/pax
+PT: Gorjetas Egito: 45 USD + visto: 30 USD/pax
+ES: Propinas Egipto: 45 USD + visado: 30 USD/pax
+
+13. Original: Propinas Jordania: 50 USD + visado: 60 USD/pax
+EN: Jordan tips: 50 USD + visa: 60 USD/pax
+AR: إكراميات الأردن: 50 دولارًا + التأشيرة: 60 دولارًا للشخص
+IT: Mance Giordania: 50 USD + visto: 60 USD/pax
+PT: Gorjetas Jordânia: 50 USD + visto: 60 USD/pax
+ES: Propinas Jordania: 50 USD + visado: 60 USD/pax
+
+14. Original: Jerusalén: Ciudad Vieja, Vía Dolorosa y Santo Sepulcro
+EN: Jerusalem: Old City, Via Dolorosa and Holy Sepulchre
+AR: القدس: البلدة القديمة، طريق الآلام وكنيسة القيامة
+IT: Gerusalemme: Città Vecchia, Via Dolorosa e Santo Sepolcro
+PT: Jerusalém: Cidade Velha, Via Dolorosa e Santo Sepulcro
+ES: Jerusalén: Ciudad Vieja, Vía Dolorosa y Santo Sepulcro
+
+15. Original: Mar Muerto: flotación única en el punto más bajo de la Tierra
+EN: Dead Sea: unique floating at the lowest point on Earth
+AR: البحر الميت: طفو فريد في أخفض نقطة على وجه الأرض
+IT: Mar Morto: galleggiamento unico nel punto più basso della Terra
+PT: Mar Morto: flutuação única no ponto mais baixo da Terra
+ES: Mar Muerto: flotación única en el punto más bajo de la Tierra
+
+--- SECTION 4 ---
+1. Original: Opcional: "Joyas de Constantinopla" (65 €) — Hipódromo, Mezquita Azul, Palacio de Topkapi, Santa Sofía y Gran Bazar.
+EN: Optional: "Jewels of Constantinople" (65 €) — Hippodrome, Blue Mosque, Topkapi Palace, Hagia Sophia and Grand Bazaar.
+AR: اختياري: "جواهر القسطنطينية" (65 يورو) — ميدان السباق، الجامع الأزرق، قصر توبكابي، آيا صوفيا والبازار الكبير.
+IT: Opzionale: "Gioielli di Costantinopoli" (65 €) — Ippodromo, Moschea Blu, Palazzo di Topkapi, Santa Sofia e Gran Bazar.
+PT: Opcional: "Jóias de Constantinopla" (65 €) — Hipódromo, Mesquita Azul, Palácio de Topkapi, Santa Sofia e Grande Bazar.
+ES: Opcional: "Joyas de Constantinopla" (65 €) — Hipódromo, Mezquita Azul, Palacio de Topkapi, Santa Sofía y Gran Bazar.
+
+2. Original: Desayuno. Entrada a Petra: Tumba de los Obeliscos, el majestuoso El Siq (desfiladero de 1.2 km), El Tesoro (Khazneh), la Calle de las Fachadas y el anfiteatro nabateo.
+EN: Breakfast. Entrance to Petra: Tomb of the Obelisks, the majestic Siq (1.2 km gorge), the Treasury (Khazneh), the Street of Facades and the Nabatean amphitheater.
+AR: إفطار. دخول البترا: مقبرة المسلات، السيق المهيب (ممر بطول 1.2 كم)، الخزنة، شارع الواجهات والمدرج النبطي.
+IT: Colazione. Ingresso a Petra: Tomba degli Obelischi, il maestoso Siq (gola di 1.2 km), il Tesoro (Khazneh), la Via delle Facciate e l'anfiteatro nabateo.
+PT: Café da manhã. Entrada em Petra: Túmulo dos Obeliscos, o majestoso Siq (desfiladeiro de 1,2 km), o Tesouro (Khazneh), a Rua das Fachadas e o anfiteatro nabateu.
+ES: Desayuno. Entrada a Petra: Tumba de los Obeliscos, el majestuoso El Siq (desfiladero de 1.2 km), El Tesoro (Khazneh), la Calle de las Fachadas y el anfiteatro nabateo.
+
+3. Original: ⚠️ Regreso a Amman. Cena incluida. Traslado al aeropuerto para vuelo nocturno a El Cairo (≥20:00 h, no incluido).
+EN: ⚠️ Return to Amman. Dinner included. Transfer to airport for night flight to Cairo (≥20:00, not included).
+AR: ⚠️ العودة إلى عمان. عشاء شامل. الانتقال إلى المطار لرحلة ليلية إلى القاهرة (≥20:00، غير متضمنة).
+IT: ⚠️ Ritorno ad Amman. Cena inclusa. Trasferimento in aeroporto per volo notturno per Il Cairo (≥20:00, non incluso).
+PT: ⚠️ Retorno a Amã. Jantar incluído. Transfer para o aeroporto para voo noturno para o Cairo (≥20:00, não incluído).
+ES: ⚠️ Regreso a Amman. Cena incluida. Traslado al aeropuerto para vuelo nocturno a El Cairo (≥20:00 h, no incluido).
+
+4. Original: Desayuno. Visita histórica a las Pirámides de Keops, Kefrén y Micerinos y la Gran Esfinge (~3 horas). Opcional: Memphis y Sakkara por la tarde.
+EN: Breakfast. Historical visit to the Pyramids of Khufu, Khafre and Menkaure and the Great Sphinx (~3 hrs). Optional: Memphis and Saqqara in the afternoon.
+AR: إفطار. زيارة تاريخية لأهرامات خوفو وخفرع ومنقرع وأبو الهول (~3 ساعات). اختياري: ممفيس وسقارة بعد الظهر.
+IT: Colazione. Visita storica alle Piramidi di Cheope, Chefren e Micerino e la Grande Sfinge (~3 ore). Opzionale: Menfi e Sakkara nel pomeriggio.
+PT: Café da manhã. Visita histórica às Pirâmides de Quéops, Quéfren e Miquerinos e à Grande Esfinge (~3 horas). Opcional: Mênfis e Sakkara à tarde.
+ES: Desayuno. Visita histórica a las Pirámides de Keops, Kefrén y Micerinos y la Gran Esfinge (~3 horas). Opcional: Memphis y Sakkara por la tarde.
+
+5. Original: Desayuno a bordo. Orilla oriental: visita a los monumentales Templos de Karnak (el complejo religioso más grande del mundo antiguo) y el Templo de Luxor.
+EN: Breakfast on board. East bank: visit to the monumental Karnak Temples (the largest religious complex in the ancient world) and Luxor Temple.
+AR: إفطار على متن السفينة. الضفة الشرقية: زيارة معبدي الكرنك (أكبر مجمع ديني في العالم القديم) والأقصر.
+IT: Colazione a bordo. Riva orientale: visita ai monumentali Templi di Karnak (il più grande complesso religioso del mondo antico) e il Tempio di Luxor.
+PT: Café da manhã a bordo. Margem oriental: visita aos monumentais Templos de Karnak (o maior complexo religioso do mundo antigo) e ao Templo di Luxor.
+ES: Desayuno a bordo. Orilla oriental: visita a los monumentales Templos de Karnak (el complejo religioso más grande del mundo antiguo) y el Templo de Luxor.
+
+6. Original: Orilla occidental: Valle de los Reyes (tumbas faraónicas), Templo de Hatshepsut y los Colosos de Memnón.
+EN: West bank: Valley of the Kings (pharaonic tombs), Temple of Hatshepsut and the Colossi of Memnon.
+AR: الضفة الغربية: وادي الملوك (المقابر الفرعونية)، معبد حتشبسوت وتمثالي ممنون.
+IT: Riva occidentale: Valle dei Re (tombe faraoniche), Tempio di Hatshepsut e i Colossi di Memnone.
+PT: Margem ocidental: Vale dos Reis (túmulos faraônicos), Templo de Hatshepsut e os Colossos de Memnon.
+ES: Orilla occidental: Valle de los Reyes (tumbas faraónicas), Templo de Hatshepsut y los Colosos de Memnón.
+
+7. Original: Romántico paseo en faluca tradicional por las aguas serenas del Nilo. Opcional: excursión a Abu Simbel (los colosos de Ramsés II).
+EN: Romantic felucca ride on the serene waters of the Nile. Optional: excursion to Abu Simbel (the colossi of Ramesses II).
+AR: جولة رومانسية في فلوكة تقليدية على مياه النيل الهادئة. اختياري: رحلة إلى أبو سمبل (تماثيل رمسيس الثاني).
+IT: Romantico giro in feluca sulle acque serene del Nilo. Opzionale: escursione ad Abu Simbel (i colossi di Ramesse II).
+PT: Passeio romântico de faluca pelas águas serenas do Nilo. Opcional: excursão a Abu Simbel (os colossos de Ramsés II).
+ES: Romántico paseo en faluca tradicional por las aguas serenas del Nilo. Opcional: excursión a Abu Simbel (los colosos de Ramsés II).
+
+8. Original: Desayuno a bordo. Check-out a las 08:00 h. Tiempo libre en Aswan para pasear por el mercado nubio. Vuelo Aswan → El Cairo (incluido).
+EN: Breakfast on board. Check-out at 08:00. Free time in Aswan to stroll through the Nubian market. Flight Aswan → Cairo (included).
+AR: إفطار على متن السفينة. المغادرة الساعة 08:00. وقت حر في أسوان للتجول في السوق النوبي. رحلة أسوان ← القاهرة (متضمنة).
+IT: Colazione a bordo. Check-out alle 08:00. Tempo libero ad Assuan per il mercado nubiano. Volo Assuan → Il Cairo (incluso).
+PT: Café da manhã a bordo. Check-out às 08:00. Tempo livre em Aswan para passear pelo mercado núbio. Voo Aswan → Cairo (incluído).
+ES: Desayuno a bordo. Check-out a las 08:00 h. Tiempo libre en Aswan para pasear por el mercado nubio. Vuelo Aswan → El Cairo (incluido).
+
+9. Original: Traslado al hotel en El Cairo. Tarde libre.
+(Note: Map this to the key name: `opt_cairo_tour`).
+EN: Transfer to hotel in Cairo. Free afternoon.
+AR: الانتقال إلى الفندق في القاهرة. بعد الظهر حر.
+IT: Trasferimento in hotel al Cairo. Pomeriggio libero.
+PT: Transfer para o hotel no Cairo. Tarde livre.
+ES: Traslado al hotel en El Cairo. Tarde libre.
+
+10. Original: A las 15:00 h: emocionante safari 4×4 en el desierto de Dubái. Dunas, fotos al atardecer dorado.
+EN: At 15:00: exciting 4×4 safari in the Dubai desert. Dunes, golden sunset photos.
+AR: الساعة 15:00: رحلة سفاري مثيرة 4×4 في صحراء دبي. كثبان رملية، صور غروب ذهبية.
+IT: Alle 15:00: emozionante safari 4×4 nel deserto di Dubai. Dune, foto al tramonto dorato.
+PT: Às 15:00: emocionante safari 4×4 no deserto de Dubai. Dunas, fotos ao pôr do sol dourado.
+ES: A las 15:00 h: emocionante safari 4×4 en el desierto de Dubái. Dunas, fotos al atardecer dorado.
+
+11. Original: Desayuno. Día completamente libre para actividades opcionales: crucero en dhow por el Creek, visita al Palm Jumeirah o compras en Dubai Mall.
+EN: Breakfast. Completely free day for optional activities: dhow cruise on the Creek, visit to Palm Jumeirah or shopping at Dubai Mall.
+AR: إفطار. يوم حر بالكامل لأنشطة اختيارية: رحلة في داو على الخور، زيارة نخلة جميرا أو تسوق في دبي مول.
+IT: Colazione. Giornata completamente libera per attività opzionali: crociera in dhow sul Creek, visita a Palm Jumeirah o shopping al Dubai Mall.
+PT: Café da manhã. Dia completamente livre para atividades opcionais: cruzeiro em dhow pelo Creek, visita à Palm Jumeirah ou compras no Dubai Mall.
+ES: Desayuno. Día completamente libre para actividades opcionales: crucero en dhow por el Creek, visita al Palm Jumeirah o compras en Dubai Mall.
+
+12. Original: Cena libre. Opcional: visita nocturna al área del Burj Khalifa y Dubai Fountain.
+EN: Free dinner. Optional: night visit to the Burj Khalifa area and Dubai Fountain.
+AR: عشاء حر. اختياري: زيارة ليلية لمنطقة برج خليفة ونافورة دبي.
+IT: Cena libera. Opzionale: visita notturna all'area del Burj Khalifa e Dubai Fountain.
+PT: Jantar livre. Opcional: visita noturna à área do Burj Khalifa e Fonte de Dubai.
+ES: Cena libre. Opcional: visita nocturna al área del Burj Khalifa y Dubai Fountain.
+
+13. Original: A las 15:00 h: safari 4×4 en el desierto de Dubái. Deslizamiento sobre dunas doradas y fotos al atardecer.
+EN: At 15:00: 4×4 safari in the Dubai desert. Sliding over golden dunes and sunset photos.
+AR: الساعة 15:00: رحلة سفاري 4×4 في صحراء دبي. الانزلاق على الكثبان الذهبية وصور الغروب.
+IT: Alle 15:00: safari 4×4 nel deserto di Dubai. Scivolate sulle dune dorate e foto al tramonto.
+PT: Às 15:00: safari 4×4 no deserto de Dubai. Deslizando sobre dunas douradas e fotos ao pôr do sol.
+ES: A las 15:00 h: safari 4×4 en el desierto de Dubái. Deslizamiento sobre dunas doradas y fotos al atardecer.
+
+--- SECTION 5 ---
+1. Original: Sugerencias: Palm Jumeirah, Dubai Museum, Aquaventure Waterpark o crucero en dhow.
+EN: Suggestions: Palm Jumeirah, Dubai Museum, Aquaventure Waterpark or dhow cruise.
+AR: اقتراحات: نخلة جميرا، متحف دبي، منتجع أكوافنتشر المائي أو رحلة في داو.
+IT: Suggerimenti: Palm Jumeirah, Dubai Museum, Aquaventure Waterpark o crociera in dhow.
+PT: Sugestões: Palm Jumeirah, Museu de Dubai, Aquaventure Waterpark ou cruzeiro em dhow.
+ES: Sugerencias: Palm Jumeirah, Dubai Museum, Aquaventure Waterpark o crucero en dhow.
+
+2. Original: Desayuno. Check-out a las 12:00 h. Visita a las Pirámides de Keops, Kefrén y Micerinos y la Gran Esfinge (~3 horas). Opcional: Memphis y Sakkara por la tarde.
+EN: Breakfast. Check-out at 12:00. Visit to the Pyramids of Khufu, Khafre and Menkaure and the Great Sphinx (~3 hrs). Optional: Memphis and Saqqara in the afternoon.
+AR: إفطار. المغادرة الساعة 12:00. زيارة أهرامات خوفو وخفرع ومنقرع وأبو الهول (~3 ساعات). اختياري: ممفيس وسقارة بعد الظهر.
+IT: Colazione. Check-out alle 12:00. Visita alle Piramidi di Cheope, Chefren e Micerino e la Grande Sfinge (~3 ore). Opzionale: Menfi e Sakkara nel pomeriggio.
+PT: Café da manhã. Check-out às 12:00. Visita às Pirâmides de Quéops, Quéfren e Miquerinos e à Grande Esfinge (~3 horas). Opcional: Mênfis e Sakkara à tarde.
+ES: Desayuno. Check-out a las 12:00 h. Visita a las Pirámides de Keops, Kefrén y Micerinos y la Gran Esfinge (~3 horas). Opcional: Memphis y Sakkara por la tarde.
+
+3. Original: Desayuno a bordo. Orilla oriental: Templos de Karnak (el complejo religioso más grande del mundo antiguo) y Templo de Luxor.
+EN: Breakfast on board. East bank: Karnak Temples (the largest religious complex in the ancient world) and Luxor Temple.
+AR: إفطار على متن السفينة. الضفة الشرقية: معبدا الكرنك (أكبر مجمع ديني في العالم القديم) والأقصر.
+IT: Colazione a bordo. Riva orientale: Templi di Karnak (il più grande complesso religioso del mondo antico) e Tempio di Luxor.
+PT: Café da manhã a bordo. Margem oriental: Templos de Karnak (o maior complexo religioso do mundo antigo) e Templo de Luxor.
+ES: Desayuno a bordo. Orilla oriental: Templos de Karnak (el complejo religioso más grande del mundo antiguo) y Templo de Luxor.
+
+4. Original: Orilla occidental: Valle de los Reyes, Templo de Hatshepsut y los Colosos de Memnón. Navegación hacia Edfu.
+EN: West bank: Valley of the Kings, Temple of Hatshepsut and the Colossi of Memnon. Navigation to Edfu.
+AR: الضفة الغربية: وادي الملوك، معبد حتشبسوت وتمثالي ممنون. الإبحار إلى إدفو.
+IT: Riva occidentale: Valle dei Re, Tempio di Hatshepsut e Colossi di Memnone. Navigazione verso Edfu.
+PT: Margem ocidental: Vale dos Reis, Templo de Hatshepsut e Colossos de Memnon. Navegação para Edfu.
+ES: Orilla occidental: Valle de los Reyes, Templo de Hatshepsut y los Colosos de Memnón. Navegación hacia Edfu.
+
+5. Original: Tarde libre en Aswan. Opcional: visita a Abu Simbel (los templos de Ramsés II, no incluido).
+EN: Free afternoon in Aswan. Optional: visit to Abu Simbel (temples of Ramesses II, not included).
+AR: بعد الظهر حر في أسوان. اختياري: زيارة أبو سمبل (معبدا رمسيس الثاني، غير متضمنة).
+IT: Pomeriggio libero ad Assuan. Opzionale: visita ad Abu Simbel (i templi di Ramesse II, non incluso).
+PT: Tarde livre em Aswan. Opcional: visita a Abu Simbel (templos de Ramsés II, não incluído).
+ES: Tarde libre en Aswan. Opcional: visita a Abu Simbel (los templos de Ramsés II, no incluido).
+
+6. Original: Desayuno a bordo. Check-out a las 08:00 h. Tiempo libre en Aswan. Vuelo doméstico Aswan–Cairo (incluido).
+EN: Breakfast on board. Check-out at 08:00. Free time in Aswan. Domestic flight Aswan–Cairo (included).
+AR: إفطار على متن السفينة. المغادرة الساعة 08:00. وقت حر في أسوان. رحلة داخلية أسوان–القاهرة (متضمنة).
+IT: Colazione a bordo. Check-out alle 08:00. Tempo libero ad Assuan. Volo domestico Assuan–Cairo (incluso).
+PT: Café da manhã a bordo. Check-out às 08:00. Tempo livre em Aswan. Voo doméstico Aswan–Cairo (incluído).
+ES: Desayuno a bordo. Check-out a las 08:00 h. Tiempo libre en Aswan. Vuelo doméstico Aswan–Cairo (incluido).
+
+7. Original: Cena libre en El Cairo. Opcional: Barrio Copto, Khan el Khalili o Ciudadela.
+EN: Free dinner in Cairo. Optional: Coptic Quarter, Khan el Khalili or Citadel.
+AR: عشاء حر في القاهرة. اختياري: الحي القبطي، خان الخليلي أو القلعة.
+IT: Cena libera al Cairo. Opzionale: Quartiere Copto, Khan el Khalili o Cittadella.
+PT: Jantar livre no Cairo. Opcional: Bairro Copta, Khan el Khalili ou Cidadela.
+ES: Cena libre en El Cairo. Opcional: Barrio Copto, Khan el Khalili o Ciudadela.
+
+8. Original: Desayuno. Día completamente libre para visitas opcionales: Ciudadela de Saladino, Mezquita de Alabastro, Museo Egipcio.
+EN: Breakfast. Completely free day for optional visits: Saladin Citadel, Alabaster Mosque, Egyptian Museum.
+AR: إفطار. يوم حر بالكامل لزيارات اختيارية: قلعة صلاح الدين، جامع محمد علي، المتحف المصري.
+IT: Colazione. Giornata completamente libera per visite opzionali: Cittadella di Saladino, Moschea di Alabastro, Museo Egizio.
+PT: Café da manhã. Dia completamente livre para visitas opcionais: Cidadela de Saladino, Mesquita de Alabastro, Museu Egípcio.
+ES: Desayuno. Día completamente libre para visitas opcionales: Ciudadela de Saladino, Mezquita de Alabastro, Museo Egipcio.
+
+9. Original: Desayuno. Entrada a Petra: El Siq, El Tesoro (Khazneh), Calle de las Fachadas, Teatro y Tumbas Reales.
+EN: Breakfast. Entrance to Petra: The Siq, The Treasury (Khazneh), Street of Facades, Theater and Royal Tombs.
+AR: إفطار. دخول البترا: السيق، الخزنة، شارع الواجهات، المسرح والمقابر الملكية.
+IT: Colazione. Ingresso a Petra: Il Siq, Il Tesoro (Khazneh), Via delle Facciate, Teatro e Tombe Reali.
+PT: Café da manhã. Entrada em Petra: O Siq, O Tesouro (Khazneh), Rua das Fachadas, Teatro e Túmulos Reais.
+ES: Desayuno. Entrada a Petra: El Siq, El Tesoro (Khazneh), Calle de las Fachadas, Teatro y Tumbas Reales.
+
+10. Original: ⚠️ Vuelo nocturno a El Cairo (≥20:00 h, no incluido). Llegada y traslado al hotel.
+EN: ⚠️ Night flight to Cairo (≥20:00, not included). Arrival and transfer to hotel.
+AR: ⚠️ رحلة ليلية إلى القاهرة (≥20:00، غير متضمنة). الوصول والانتقال إلى الفندق.
+IT: ⚠️ Volo notturno per Il Cairo (≥20:00, non incluso). Arrivo e trasferimento in hotel.
+PT: ⚠️ Voo noturno para o Cairo (≥20:00, não incluído). Chegada e transfer para o hotel.
+ES: ⚠️ Vuelo nocturno a El Cairo (≥20:00 h, no incluido). Llegada y traslado al hotel.
+
+11. Original: Desayuno. Visita a las Pirámides de Giza y la Gran Esfinge (~3 horas). Opcional: Memphis y Sakkara.
+EN: Breakfast. Visit to the Pyramids of Giza and the Great Sphinx (~3 hrs). Optional: Memphis and Saqqara.
+AR: إفطار. زيارة أهرامات الجيزة وأبو الهول (~3 ساعات). اختياري: ممفيس وسقارة.
+IT: Colazione. Visita alle Piramidi di Giza e la Grande Sfinge (~3 ore). Opzionale: Menfi e Sakkara.
+PT: Café da manhã. Visita às Pirâmides de Gizé e à Grande Esfinge (~3 horas). Opcional: Mênfis e Sakkara.
+ES: Desayuno. Visita a las Pirámides de Giza y la Gran Esfinge (~3 horas). Opcional: Memphis y Sakkara.
+
+12. Original: Opcional: Abu Simbel (templos de Ramsés II). Tarde libre en Aswan.
+EN: Optional: Abu Simbel (temples of Ramesses II). Free afternoon in Aswan.
+AR: اختياري: أبو سمبل (معبدا رمسيس الثاني). بعد الظهر حر في أسوان.
+IT: Opzionale: Abu Simbel (templi di Ramesse II). Pomeriggio libero ad Assuan.
+PT: Opcional: Abu Simbel (templos de Ramsés II). Tarde livre em Aswan.
+ES: Opcional: Abu Simbel (templos de Ramsés II). Tarde libre en Aswan.
+
+13. Original: Desayuno a bordo. Check-out 08:00 h. Tiempo libre in Aswan. Vuelo Aswan–Cairo (incluido).
+EN: Breakfast on board. Check-out 08:00. Free time in Aswan. Flight Aswan–Cairo (included).
+AR: إفطار على متن السفينة. المغادرة 08:00. وقت حر في أسوان. رحلة أسوان–القاهرة (متضمنة).
+IT: Colazione a bordo. Check-out 08:00. Tempo libero ad Assuan. Volo Assuan–Cairo (incluso).
+PT: Café da manhã a bordo. Check-out 08:00. Tempo livre em Aswan. Voo Aswan–Cairo (incluído).
+ES: Desayuno a bordo. Check-out 08:00 h. Tiempo libre en Aswan. Vuelo Aswan–Cairo (incluido).
+
+14. Original: Opcional: Ciudadela, Mezquita de Alabastro, Khan el Khalili, Museo Egipcio.
+EN: Optional: Citadel, Alabaster Mosque, Khan el Khalili, Egyptian Museum.
+AR: اختياري: القلعة، جامع محمد علي، خان الخليلي، المتحف المصري.
+IT: Opzionale: Cittadella, Moschea di Alabastro, Khan el Khalili, Museo Egizio.
+PT: Opcional: Cidadela, Mesquita de Alabastro, Khan el Khalili, Museu Egípcio.
+ES: Opcional: Ciudadela, Mezquita de Alabastro, Khan el Khalili, Museo Egipcio.
+
+15. Original: Desayuno. Excursión a Abu Dhabi: Mezquita Sheikh Zayed, palacios, Corniche.
+EN: Breakfast. Excursion to Abu Dhabi: Sheikh Zayed Mosque, palaces, Corniche.
+AR: إفطار. رحلة إلى أبو ظبي: جامع الشيخ زايد، القصور، الكورنيش.
+IT: Colazione. Escursione ad Abu Dhabi: Moschea Sheikh Zayed, palazzi, Corniche.
+PT: Café da manhã. Excursão a Abu Dhabi: Mesquita Sheikh Zayed, palácios, Corniche.
+ES: Desayuno. Excursión a Abu Dhabi: Mezquita Sheikh Zayed, palacios, Corniche.
+
+16. Original: A las 15:00 h: safari 4×4 en el desierto. Dunas de arena dorada, fotos al atardecer.
+EN: At 15:00: 4×4 safari in the desert. Golden sand dunes, sunset photos.
+AR: الساعة 15:00: رحلة سفاري 4×4 في الصحراء. كثبان رملية ذهبية، صور الغروب.
+IT: Alle 15:00: safari 4×4 nel deserto. Dune di sabbia dorata, foto al tramonto.
+PT: Às 15:00: safari 4×4 no deserto. Dunas de areia dourada, fotos ao pôr do sol.
+ES: A las 15:00 h: safari 4×4 en el desierto. Dunas de arena dorada, fotos al atardecer.
+
+17. Original: Opcional: paseo en dromedario o quads por las dunas del Sahara. Cena y alojamiento en hotel 4*.
+EN: Optional: camel ride or quad biking through the Sahara dunes. Dinner and accommodation at 4* hotel.
+AR: اختياري: ركوب الجمال أو قيادة الكواد في كثبان الصحراء الكبرى. عشاء وإقامة في فندق 4 نجوم.
+IT: Opzionale: giro in dromedario o quad sulle dune del Sahara. Cena e pernottamento in hotel 4*.
+PT: Opcional: passeio de dromedário ou quad pelas dunas do Saara. Jantar e alojamento em hotel 4*.
+ES: Opcional: paseo en dromedario o quads por las dunas del Sahara. Cena y alojamiento en hotel 4*.
+
+18. Original: Llegada a Tozeur. Almuerzo en el Hotel Ksar Rouge. Opcional: 4×4 a los oasis de Chebika, Tamerza y Ong Ejmel.
+EN: Arrival in Tozeur. Lunch at Hotel Ksar Rouge. Optional: 4×4 to the oases of Chebika, Tamerza and Ong Jmel.
+AR: الوصول إلى توزر. غداء في فندق قصر روج. اختياري: رحلة 4×4 إلى واحات شبيكة وتامرزة وأونج إجميل.
+IT: Arrivo a Tozeur. Pranzo all'Hotel Ksar Rouge. Opzionale: 4×4 alle oasi di Chebika, Tamerza e Ong Jmel.
+PT: Chegada a Tozeur. Almoço no Hotel Ksar Rouge. Opcional: 4×4 aos oásis de Chebika, Tamerza e Ong Ejmel.
+ES: Llegada a Tozeur. Almuerzo en el Hotel Ksar Rouge. Opcional: 4×4 a los oasis de Chebika, Tamerza y Ong Ejmel.
+
+--- SECTION 6 ---
+1. Original: Desayuno. Kairouan, la 4ª ciudad más santa del Islam: Gran Mezquita, Mausoleo del Barbero, Piscinas Aghlabitas.
+EN: Breakfast. Kairouan, the 4th holiest city in Islam: Great Mosque, Barber's Mausoleum, Aghlabid Basins.
+AR: إفطار. القيروان، رابع أقدس مدينة في الإسلام: الجامع الكبير، ضريح الحلاق، الأحواض الأغلبية.
+IT: Colazione. Kairouan, la 4ª città più santa dell'Islam: Grande Moschea, Mausoleo del Barbiere, Vasche Aghlabidi.
+PT: Café da manhã. Kairouan, a 4ª cidade mais sagrada do Islã: Grande Mesquita, Mausoléu do Barbeiro, Piscinas Aghlábidas.
+ES: Desayuno. Kairouan, la 4ª ciudad más santa del Islam: Gran Mezquita, Mausoleo del Barbero, Piscinas Aghlabitas.
+
+2. Original: Cena y entretenimiento incluido en el resort. Opcional: excursión a Sidi Bou Said.
+EN: Dinner and entertainment included at the resort. Optional: excursion to Sidi Bou Said.
+AR: عشاء وترفيه شاملان في المنتجع. اختياري: رحلة إلى سيدي بو سعيد.
+IT: Cena e intrattenimento inclusi al resort. Opzionale: escursione a Sidi Bou Said.
+PT: Jantar e entretenimento incluídos no resort. Opcional: excursão a Sidi Bou Said.
+ES: Cena y entretenimiento incluido en el resort. Opcional: excursión a Sidi Bou Said.
+
+3. Original: Desayuno. Día libre. Opcional: visita a Cartago y Túnez ciudad.
+EN: Breakfast. Free day. Optional: visit to Carthage and Tunis city.
+AR: إفطار. يوم حر. اختياري: زيارة قرطاج ومدينة تونس.
+IT: Colazione. Giorno libero. Opzionale: visita a Cartagine e Tunisi città.
+PT: Café da manhã. Dia livre. Opcional: visita a Cartago e cidade de Túnis.
+ES: Desayuno. Día libre. Opcional: visita a Cartago y Túnez ciudad.
+
+4. Original: Desayuno. Pirámides de Keops, Kefrén y Micerinos y la Gran Esfinge (~3 horas). Opcional: Memphis y Sakkara.
+EN: Breakfast. Pyramids of Khufu, Khafre and Menkaure and the Great Sphinx (~3 hrs). Optional: Memphis and Saqqara.
+AR: إفطار. أهرامات خوفو وخفرع ومنقرع وأبو الهول (~3 ساعات). اختياري: ممفيس وسقارة.
+IT: Colazione. Piramidi di Cheope, Chefren e Micerino e la Grande Sfinge (~3 ore). Opzionale: Menfi e Sakkara.
+PT: Café da manhã. Pirâmides de Quéops, Quéfren e Miquerinos e a Grande Esfinge (~3 horas). Opcional: Mênfis e Sakkara.
+ES: Desayuno. Pirámides de Keops, Kefrén y Micerinos y la Gran Esfinge (~3 horas). Opcional: Memphis y Sakkara.
+
+5. Original: Desayuno a bordo. Check-out 08:00 h. Tiempo libre en Aswan. Almuerzo incluido.
+EN: Breakfast on board. Check-out 08:00. Free time in Aswan. Lunch included.
+AR: إفطار على متن السفينة. المغادرة 08:00. وقت حر في أسوان. غداء شامل.
+IT: Colazione a bordo. Check-out 08:00. Tempo libero ad Assuan. Pranzo incluso.
+PT: Café da manhã a bordo. Check-out 08:00. Tempo livre em Aswan. Almoço incluído.
+ES: Desayuno a bordo. Check-out 08:00 h. Tiempo libre en Aswan. Almuerzo incluido.
+
+6. Original: Desayuno. Día libre. Opcional: Ciudadela de Saladino, Mezquita de Alabastro, Khan el Khalili, Museo Egipcio.
+EN: Breakfast. Free day. Optional: Saladin Citadel, Alabaster Mosque, Khan el Khalili, Egyptian Museum.
+AR: إفطار. يوم حر. اختياري: قلعة صلاح الدين، جامع محمد علي، خان الخليلي، المتحف المصري.
+IT: Colazione. Giorno libero. Opzionale: Cittadella di Saladino, Moschea di Alabastro, Khan el Khalili, Museo Egizio.
+PT: Café da manhã. Dia livre. Opcional: Cidadela de Saladino, Mesquita de Alabastro, Khan el Khalili, Museu Egípcio.
+ES: Desayuno. Día libre. Opcional: Ciudadela de Saladino, Mezquita de Alabastro, Khan el Khalili, Museo Egipcio.
+
+7. Original: Visado Egipto: 30 €/pax
+EN: Egypt visa: 30 €/pax
+AR: تأشيرة مصر: 30 يورو للشخص
+IT: Visto Egitto: 30 €/pax
+PT: Visto Egito: 30 €/pax
+ES: Visado Egipto: 30 €/pax
+
+8. Original: Propinas Egipto: 45 €/pax (obligatorio en destino)
+EN: Egypt tips: 45 €/pax (mandatory on site)
+AR: إكراميات مصر: 45 يورو للشخص (إلزامي في الوجهة)
+IT: Mance Egitto: 45 €/pax (obbligatorie in loco)
+PT: Gorjetas Egito: 45 €/pax (obrigatório no destino)
+ES: Propinas Egipto: 45 €/pax (obligatorio en destino)
+
+9. Original: Entradas: El Jem, Gran Mezquita Kairouan, Mausoleo, Piscinas Aghlabitas
+EN: Entrances: El Jem, Great Mosque of Kairouan, Mausoleum, Aghlabid Basins
+AR: تذاكر الدخول: الجم، الجامع الكبير بالقيروان، الضريح، الأحواض الأغلبية
+IT: Ingressi: El Jem, Grande Moschea di Kairouan, Mausoleo, Vasche Aghlabidi
+PT: Entradas: El Jem, Grande Mesquita de Kairouan, Mauséu, Piscinas Aghlábidas
+ES: Entradas: El Jem, Gran Mezquita Kairouan, Mausoleo, Piscinas Aghlabitas
+
+10. Original: Viaje a Meknes: vista panorámica exterior de Bab el Mansour, una de las puertas más espectaculares del mundo árabe. Continuación hacia Fez.
+EN: Trip to Meknes: exterior panoramic view of Bab el Mansour, one of the most spectacular gates in the Arab world. Continue to Fez.
+AR: رحلة إلى مكناس: منظر خارجي بانورامي لباب المنصور، أحد أروع الأبواب في العالم العربي. الاستمرار إلى فاس.
+IT: Viaggio a Meknes: vista panoramica esterna di Bab el Mansour, una delle porte più spettaculares del mondo arabo. Proseguimento per Fez.
+PT: Viagem a Meknès: vista panorâmica externa de Bab el Mansour, uma das portas mais espetaculares do mundo árabe. Continuação para Fez.
+ES: Viaje a Meknes: vista panorámica exterior de Bab el Mansour, una de las puertas más espectaculares del mundo árabe. Continuación hacia Fez.
+
+11. Original: Caminata guiada por la Medina: entrada por Bab Bou Jeloud (la Puerta Azul), zoco de los tintoreros (Chouara), Madrasa Bou Inania.
+EN: Guided walk through the Medina: entrance through Bab Bou Jeloud (the Blue Gate), dyers' souk (Chouara), Bou Inania Madrasa.
+AR: جولة مشي موجهة في المدينة: الدخول عبر باب بوجلود (الباب الأزرق)، سوق الصباغين (شوارة)، مدرسة بوعنانية.
+IT: Passeggiata guidata attraverso la Medina: ingresso da Bab Bou Jeloud (la Porta Blu), souk dei tintori (Chouara), Madrasa Bou Inania.
+PT: Caminhada guiada pela Medina: entrada por Bab Bou Jeloud (a Porta Azul), souk dos tintureiros (Chouara), Madrasa Bou Inania.
+ES: Caminata guiada por la Medina: entrada por Bab Bou Jeloud (la Puerta Azul), zoco de los tintoreros (Chouara), Madrasa Bou Inania.
+
+--- SECTION 7 ---
+1. Original: Desayuno. Rabat: Palacio Real, el imponente Mausoleo de Mohamed V y la Torre Hassan (inacabada en 1199).
+EN: Breakfast. Rabat: Royal Palace, the imposing Mausoleum of Mohammed V and Hassan Tower (unfinished since 1199).
+AR: إفطار. الرباط: القصر الملكي، ضريح محمد الخامس المهيب وصومعة حسان (غير مكتملة منذ 1199).
+IT: Colazione. Rabat: Palazzo Reale, l'imponente Mausoleo di Mohamed V e la Torre Hassan (incompiuta dal 1199).
+PT: Café da manhã. Rabat: Palácio Real, o imponente Mausoléu de Mohamed V e a Torre Hassan (inacabada desde 1199).
+ES: Desayuno. Rabat: Palacio Real, el imponente Mausoleo de Mohamed V y la Torre Hassan (inacabada en 1199).
+
+2. Original: Casablanca: Plaza de las Naciones Unidas, la Corniche y exteriores de la grandiosa Mezquita Hassan II (la 5ª más grande del mundo). Llegada a Marrakech.
+EN: Casablanca: United Nations Square, the Corniche and exteriors of the magnificent Hassan II Mosque (the 5th largest in the world). Arrival in Marrakech.
+AR: الدار البيضاء: ساحة الأمم المتحدة، الكورنيش وواجهة مسجد الحسن الثاني المهيب (خامس أكبر مسجد في العالم). الوصول إلى مراكش.
+IT: Casablanca: Piazza delle Nazioni Unite, la Corniche e gli esterni della grandiosa Moschea Hassan II (la 5ª più grande del mondo). Arrivo a Marrakech.
+PT: Casablanca: Praça das Nações Unidas, a Corniche e exteriores da grandiosa Mesquita Hassan II (a 5ª maior do mundo). Chegada a Marrakech.
+ES: Casablanca: Plaza de las Naciones Unidas, la Corniche y exteriores de la grandiosa Mezquita Hassan II (la 5ª más grande del mundo). Llegada a Marrakech.
+
+3. Original: Alojamiento en Marrakech. Opcional: Cena Fantasía Chez Ali con espectáculo ecuestre.
+EN: Accommodation in Marrakech. Optional: Chez Ali Fantasy Dinner with equestrian show.
+AR: إقامة في مراكش. اختياري: عشاء خيالي في شيز علي مع عرض فروسية.
+IT: Sistemazione a Marrakech. Opzionale: Cena Fantasia Chez Ali con spettacolo equestre.
+PT: Alojamento em Marrakech. Opcional: Jantar Fantasia Chez Ali com espetáculo equestre.
+ES: Alojamiento en Marrakech. Opcional: Cena Fantasía Chez Ali con espectáculo ecuestre.
+
+4. Original: Desayuno. Pirámides de Giza y la Gran Esfinge (~3 horas). Opcional: Memphis y Sakkara.
+EN: Breakfast. Pyramids of Giza and the Great Sphinx (~3 hrs). Optional: Memphis and Saqqara.
+AR: إفطار. أهرامات الجيزة وأبو الهول (~3 ساعات). اختياري: ممفيس وسقارة.
+IT: Colazione. Piramidi di Giza e la Grande Sfinge (~3 ore). Opzionale: Menfi e Sakkara.
+PT: Café da manhã. Pirâmides de Gizé e a Grande Esfinge (~3 horas). Opcional: Mênfis e Sakkara.
+ES: Desayuno. Pirámides de Giza y la Gran Esfinge (~3 horas). Opcional: Memphis y Sakkara.
+
+5. Original: Almuerzo incluido. Opcional: Abu Simbel. Tarde libre en Aswan.
+EN: Lunch included. Optional: Abu Simbel. Free afternoon in Aswan.
+AR: غداء شامل. اختياري: أبو سمبل. بعد الظهر حر في أسوان.
+IT: Pranzo incluso. Opzionale: Abu Simbel. Pomeriggio libero ad Assuan.
+PT: Almoço incluído. Opcional: Abu Simbel. Tarde livre em Aswan.
+ES: Almuerzo incluido. Opcional: Abu Simbel. Tarde libre en Aswan.
+
+6. Original: Desayuno a bordo. Check-out 08:00 h. Tiempo libre en Aswan. Almuerzo incluido.
+EN: Breakfast on board. Check-out 08:00. Free time in Aswan. Lunch included.
+AR: إفطار على متن السفينة. المغادرة 08:00. وقت حر في أسوان. غداء شامل.
+IT: Colazione a bordo. Check-out 08:00. Tempo libero ad Assuan. Pranzo incluso.
+PT: Café da manhã a bordo. Check-out 08:00. Tempo livre em Aswan. Almoço incluído.
+ES: Desayuno a bordo. Check-out 08:00 h. Tiempo libre en Aswan. Almuerzo incluido.
+
+7. Original: bajo de la Tierra
+(Note: This is a continuation string for "el punto más bajo de la Tierra").
+EN: the lowest point on Earth
+AR: أخفض نقطة على وجه الأرض
+IT: il punto più basso della Terra
+PT: o ponto mais baixo da Terra
+ES: bajo de la Tierra
+
+```

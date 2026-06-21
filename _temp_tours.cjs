@@ -2,10 +2,9 @@
 // MULTI-COUNTRY TOURS — Catálogo de Itinerarios (9 Programas)
 // Source: Catalogo_Itinerarios_9_Viajes.docx
 // ============================================================
-import { useTranslation } from 'react-i18next';
 
 // دالة مساعدة لتفعيل الترجمة داخل المصفوفة بسلاسة
-const getLocalizedTours = (t) => [
+module.exports = [
   // ─────────────────────────────────────────────────────────
   // 1. ESTRELLAS DEL MEDIO ORIENTE — 19 DÍAS
   // ─────────────────────────────────────────────────────────
@@ -38,7 +37,7 @@ const getLocalizedTours = (t) => [
       'Safari 4×4 en el desierto de Wadi Rum',
       'Crucero de 4 noches por el Nilo con pensión completa',
       'Pirámides de Giza y la Gran Esfinge',
-      'petra_rose_city',
+      'Ciudad Rosa de Petra: El Siq y El Tesoro',
       'Safari 4×4 en el desierto de Dubái con cena beduina',
       'Excursión a Abu Dhabi y Mezquita Sheikh Zayed',
       'Guía en español durante todo el viaje',
@@ -84,14 +83,14 @@ const getLocalizedTours = (t) => [
         day: 2,
         title: 'Estambul — Corazón Otomano',
         morning: 'Desayuno. Visita incluida a la Mezquita del Príncipe (Şehzade Camii) o la Nueva Mezquita (Yeni Cami), dos joyas de la arquitectura otomana.',
-        afternoon: 'Emocionante paseo en barco por el estrecho del Bósforo, navegando entre Europa y Asia. Visita al famoso Bazar de las Especias (spice_bazaar_misir_carsisi).',
+        afternoon: 'Emocionante paseo en barco por el estrecho del Bósforo, navegando entre Europa y Asia. Visita al famoso Bazar de las Especias (Mısır Çarşısı).',
         evening: 'Tiempo libre en Estambul para cenas opcionales en restaurantes con vistas al Cuerno de Oro.',
       },
       {
         day: 3,
         title: 'Estambul — Día Libre',
         morning: 'Desayuno. Día completamente libre para explorar la ciudad a su ritmo.',
-        afternoon: 'optional_jewels_of_constantinople_65_hippodrome',
+        afternoon: 'Opcional: "Joyas de Constantinopla" (65 €) — Hipódromo, Mezquita Azul, Palacio de Topkapi, Santa Sofía y Gran Bazar.',
         evening: 'Descanso en el hotel o noche libre para cenar en el famoso barrio de Beyoğlu.',
       },
       {
@@ -111,7 +110,7 @@ const getLocalizedTours = (t) => [
       {
         day: 6,
         title: 'Petra — Ciudad Rosa (Día Completo)',
-        morning: 'petra_entrance_tour',
+        morning: 'Desayuno. Entrada a Petra: Tumba de los Obeliscos, el majestuoso El Siq (desfiladero de 1.2 km), El Tesoro (Khazneh), la Calle de las Fachadas y el anfiteatro nabateo.',
         afternoon: 'Ascenso a los 850 escalones tallados en roca hasta El Deir (El Monasterio), con impresionantes vistas al desierto jordano.',
         evening: 'Regreso al hotel. Cena incluida. Descanso después de un día extraordinario.',
       },
@@ -120,7 +119,7 @@ const getLocalizedTours = (t) => [
         title: 'Petra → Little Petra → Wadi Rum → Cairo',
         morning: 'Desayuno. Visita a la Pequeña Petra (Siq Al Bared), una joya menos conocida con fascinantes pinturas nabateas. Traslado al desierto de Wadi Rum.',
         afternoon: 'Safari 4×4 de 2 horas en el majestuoso desierto de Wadi Rum, el "Valle de la Luna". Fotos al atardecer entre formaciones rocosas centenarias.',
-        evening: 'return_amman_flight_cairo',
+        evening: '⚠️ Regreso a Amman. Cena incluida. Traslado al aeropuerto para vuelo nocturno a El Cairo (≥20:00 h, no incluido).',
       },
       {
         day: 8,
@@ -132,15 +131,15 @@ const getLocalizedTours = (t) => [
       {
         day: 9,
         title: 'El Cairo → Luxor (Embarque Crucero)',
-        morning: 'pyramids_sphinx_memphis_sakkara',
+        morning: 'Desayuno. Visita histórica a las Pirámides de Keops, Kefrén y Micerinos y la Gran Esfinge (~3 horas). Opcional: Memphis y Sakkara por la tarde.',
         afternoon: 'Vuelo nocturno a Luxor (no incluido). Traslado al crucero del Nilo. Cena a bordo.',
         evening: 'Alojamiento en el crucero del Nilo. Primera noche flotando sobre el río más legendario del mundo.',
       },
       {
         day: 10,
         title: 'Crucero Nilo — Luxor (Pensión Completa)',
-        morning: 'east_bank_karnak_luxor',
-        afternoon: 'west_bank_valley_kings',
+        morning: 'Desayuno a bordo. Orilla oriental: visita a los monumentales Templos de Karnak (el complejo religioso más grande del mundo antiguo) y el Templo de Luxor.',
+        afternoon: 'Orilla occidental: Valle de los Reyes (tumbas faraónicas), Templo de Hatshepsut y los Colosos de Memnón.',
         evening: 'Navegación suave hacia Edfu. Cena a bordo con entretenimiento. Noche en el Nilo.',
       },
       {
@@ -154,14 +153,14 @@ const getLocalizedTours = (t) => [
         day: 12,
         title: 'Crucero Nilo — Aswan (Pensión Completa)',
         morning: 'Desayuno a bordo. Visita al Templo de Philae, la "Perla del Nilo", en su isla artificial. Impresionante llegada en lancha.',
-        afternoon: 'felucca_nile_abu_simbel',
+        afternoon: 'Romántico paseo en faluca tradicional por las aguas serenas del Nilo. Opcional: excursión a Abu Simbel (los colosos de Ramsés II).',
         evening: 'Última noche a bordo del crucero. Cena de gala y despedida del Nilo.',
       },
       {
         day: 13,
         title: 'Desembarque → El Cairo',
-        morning: 'aswan_nubian_market_flight_cairo',
-        afternoon: 'opt_cairo_tour opt_cairo_tour',
+        morning: 'Desayuno a bordo. Check-out a las 08:00 h. Tiempo libre en Aswan para pasear por el mercado nubio. Vuelo Aswan → El Cairo (incluido).',
+        afternoon: 'Traslado al hotel en El Cairo. Tarde libre. Opcional: Ciudadela de Saladino, Mezquita de Alabastro, Khan el Khalili, Museo Egipcio o Barrio Copto.',
         evening: 'Cena libre en El Cairo. Última noche en la capital egipcia antes de volar a Dubái.',
       },
       {
@@ -189,13 +188,13 @@ const getLocalizedTours = (t) => [
         day: 17,
         title: 'Dubái — Safari en el Desierto',
         morning: 'Desayuno. Mañana libre para visitar el Burj Khalifa, las tiendas de lujo o las playas de Jumeirah.',
-        afternoon: 'dubai_safari_dunes',
+        afternoon: 'A las 15:00 h: emocionante safari 4×4 en el desierto de Dubái. Dunas, fotos al atardecer dorado.',
         evening: 'Cena buffet oriental en campamento beduino con danza del vientre, show de tanoura y espectáculo de fuego.',
       },
       {
         day: 18,
         title: 'Dubái — Día Libre',
-        morning: 'dubai_free_day_dhow',
+        morning: 'Desayuno. Día completamente libre para actividades opcionales: crucero en dhow por el Creek, visita al Palm Jumeirah o compras en Dubai Mall.',
         afternoon: 'Tiempo libre para las últimas compras de souvenirs y recuerdos del viaje.',
         evening: 'Cena de despedida. Noche en el hotel. Preparación del equipaje para el regreso.',
       },
@@ -254,13 +253,13 @@ const getLocalizedTours = (t) => [
       '4 noches Atenas (alojamiento y desayuno)',
       'Asistencia en aeropuertos y traslados',
       'Guía en español durante todo el viaje',
-      'domestic_flights_cai_asw_lxr',
+      'Vuelos domésticos: CAI–ASW y LXR–CAI',
       'Visitas y entradas según itinerario',
     ],
     excluded: [
       'Vuelos internacionales',
-      'egypt_visa_assistance',
-      'travel_tips_mandatory',
+      'Visado Egipto + asistencia: 30 USD/pax',
+      'Propinas de viaje: 45 USD/pax (obligatorio en destino)',
     ],
     itinerary: [
       {
@@ -275,7 +274,7 @@ const getLocalizedTours = (t) => [
         title: 'El Cairo → Aswan (Embarque Crucero)',
         morning: 'Desayuno. Visita histórica a las Pirámides de Keops, Kefrén y Micerinos y la Gran Esfinge (~3 horas). Vuelo doméstico Cairo–Aswan (incluido).',
         afternoon: 'Llegada a Aswan. Embarque en el crucero del Nilo. Bienvenida y acomodación en camarotes. Cena a bordo.',
-        evening: 'opt_abu_simbel_cruise',
+        evening: 'Opcional: excursión a Abu Simbel por carretera antes de embarcar. Noche en el crucero anclado en Aswan.',
       },
       {
         day: 3,
@@ -294,7 +293,7 @@ const getLocalizedTours = (t) => [
       {
         day: 5,
         title: 'Desembarque Luxor → El Cairo',
-        morning: 'luxor_full_day_tour',
+        morning: 'Desayuno a bordo. Check-out a las 08:00 h. Día completo en Luxor: Templos de Karnak y Luxor, Colosos de Memnón, Templo de Hatshepsut, Valle de los Reyes.',
         afternoon: 'Vuelo doméstico Luxor–Cairo (incluido). Traslado al hotel en El Cairo.',
         evening: 'Cena libre. Noche en El Cairo. Descanso antes de la excursión opcional del día siguiente.',
       },
@@ -302,7 +301,7 @@ const getLocalizedTours = (t) => [
         day: 6,
         title: 'El Cairo — Día Libre',
         morning: 'Desayuno. Día completamente libre para explorar la ciudad a su propio ritmo.',
-        afternoon: 'opt_cairo_tour',
+        afternoon: 'Opcional: Ciudadela de Saladino, Mezquita de Alabastro, Khan el Khalili, Museo Egipcio o Barrio Copto.',
         evening: 'Última noche en Egipto. Cena libre en el animado barrio de Zamalek o en el centro histórico.',
       },
       {
@@ -315,22 +314,22 @@ const getLocalizedTours = (t) => [
       {
         day: 8,
         title: 'Atenas — La Acrópolis',
-        morning: 'acropolis_guided_visit',
-        afternoon: 'athens_panoramic_tour',
+        morning: 'Desayuno. Visita guiada a la Acrópolis: el majestuoso Partenón y el Erecteión con sus famosas Cariátides.',
+        afternoon: 'Tour panorámico por Atenas: Tumba del Soldado Desconocido, Parlamento Helénico, Estadio Panathinaikon (sede de los primeros Juegos Olímpicos modernos).',
         evening: 'Tarde libre en el barrio de Monastiraki. Cena con vistas a la Acrópolis iluminada.',
       },
       {
         day: 9,
         title: 'Atenas — Crucero por las Islas Griegas',
         morning: 'Desayuno. Embarque en el crucero de un día al Golfo Sarónico visitando las idílicas islas de Hydra, Poros y Egina.',
-        afternoon: 'onboard_greek_entertainment',
+        afternoon: 'A bordo: orquesta, cantantes, bailarines de danzas tradicionales griegas y deliciosa comida griega incluida.',
         evening: 'Regreso a Atenas por la tarde. Cena libre. Noche en el hotel.',
       },
       {
         day: 10,
         title: 'Atenas — Día Libre',
         morning: 'Desayuno. Día completamente libre para explorar a tu ritmo.',
-        afternoon: 'athens_suggestions',
+        afternoon: 'Sugerencias: Visita al Museo de la Acrópolis, el Barrio de Plaka, el Ágora Antigua o excursión a Cabo Sounion.',
         evening: 'Cena de despedida en un restaurante tradicional griego con vistas al mar Egeo.',
       },
       {
@@ -370,7 +369,7 @@ const getLocalizedTours = (t) => [
     ],
     overview: "Desde las pirámides milenarias hasta los rascacielos vanguardistas, este itinerario de 13 días conecta el antiguo Egipto con la audaz metrópolis de Dubái. Sorpréndete con un crucero completo por el Nilo en pensión completa y aventúrate en inolvidables safaris 4x4, desvelando tesoros históricos y maravillas arquitectónicas del golfo Pérsico.",
     highlights: [
-      'dubai_city_tour',
+      'Dubái City Tour: barrio histórico Al Bastakiya, mercado de oro',
       'Safari 4×4 en el desierto de Dubái con cena beduina',
       'Excursión a Abu Dhabi y Mezquita Sheikh Zayed',
       'Pirámides de Giza, Kefrén y Micerinos',
@@ -390,16 +389,16 @@ const getLocalizedTours = (t) => [
       'Dubái City Tour ½ día (guía en español, compartido)',
       'Safari desierto + cena campamento (compartido)',
       'Abu Dhabi City Tour (guía en español, compartido)',
-      'domestic_flights_cai_lxr_asw_cai',
+      'Vuelos domésticos: CAI/LXR/ASW/CAI',
       'IVA 5%',
       'Visitas, entradas y traslados según itinerario',
       'Asistencia en aeropuertos',
     ],
     excluded: [
       'Visado EAU (solo Bolivia, Panamá y Ecuador)',
-      'egypt_visa_assistance',
-      'travel_tips_45_usd',
-      'tax_dubai_hotels',
+      'Visado Egipto + asistencia: 30 USD/pax',
+      'Propinas viaje: 45 USD/pax (obligatorio en destino)',
+      'Impuesto de turismo hotel Dubái: AED 10/noche (3*) · AED 15 (4*) · AED 20 (5*)',
       'Gastos extras y personales',
     ],
     itinerary: [
@@ -415,7 +414,7 @@ const getLocalizedTours = (t) => [
         title: 'Dubái — Old Dubai (Medio Día)',
         morning: 'Desayuno. Visita al histórico barrio de Al Bastakiya con sus icónicas casas antiguas y torres de viento. Cruce en abra (barca tradicional) por el Dubai Creek.',
         afternoon: 'Visita al vibrante Mercado de las Especias y al famoso Mercado del Oro, el mayor del mundo. Tarde libre.',
-        evening: 'dubai_opt_night_burj_khalifa',
+        evening: 'Cena libre. Opcional: visita nocturna al área del Burj Khalifa y Dubai Fountain.',
       },
       {
         day: 3,
@@ -428,14 +427,14 @@ const getLocalizedTours = (t) => [
         day: 4,
         title: 'Dubái — Safari en el Desierto',
         morning: 'Desayuno. Mañana libre para visitar el Burj Khalifa (opcional, no incluido), las tiendas de lujo o las playas de Jumeirah.',
-        afternoon: 'dubai_safari_sliding',
+        afternoon: 'A las 15:00 h: safari 4×4 en el desierto de Dubái. Deslizamiento sobre dunas doradas y fotos al atardecer.',
         evening: 'Cena buffet oriental en campamento beduino con danza del vientre, show de tanoura y espectáculo de fuego.',
       },
       {
         day: 5,
         title: 'Dubái — Día Libre',
         morning: 'Desayuno. Día completamente libre para visitas opcionales.',
-        afternoon: 'dubai_suggestions',
+        afternoon: 'Sugerencias: Palm Jumeirah, Dubai Museum, Aquaventure Waterpark o crucero en dhow.',
         evening: 'Última noche en Dubái. Cena de despedida a los Emiratos.',
       },
       {
@@ -448,15 +447,15 @@ const getLocalizedTours = (t) => [
       {
         day: 7,
         title: 'El Cairo → Luxor (Inicio Crucero)',
-        morning: 'pyramids_checkout_12_memphis',
+        morning: 'Desayuno. Check-out a las 12:00 h. Visita a las Pirámides de Keops, Kefrén y Micerinos y la Gran Esfinge (~3 horas). Opcional: Memphis y Sakkara por la tarde.',
         afternoon: 'Vuelo nocturno a Luxor (incluido). Traslado al crucero del Nilo. Acomodación en camarotes.',
         evening: 'Cena a bordo del crucero. Primera noche flotando en el Nilo en Luxor.',
       },
       {
         day: 8,
         title: 'Crucero Nilo — Luxor (Pensión Completa)',
-        morning: 'karnak_luxor_east_bank',
-        afternoon: 'west_bank_edfu_nav',
+        morning: 'Desayuno a bordo. Orilla oriental: Templos de Karnak (el complejo religioso más grande del mundo antiguo) y Templo de Luxor.',
+        afternoon: 'Orilla occidental: Valle de los Reyes, Templo de Hatshepsut y los Colosos de Memnón. Navegación hacia Edfu.',
         evening: 'Cena a bordo con entretenimiento. Noche en el Nilo.',
       },
       {
@@ -470,20 +469,20 @@ const getLocalizedTours = (t) => [
         day: 10,
         title: 'Crucero Nilo — Aswan (Pensión Completa)',
         morning: 'Desayuno a bordo. Visita al Templo de Philae, joya arquitectónica en su isla artificial. Paseo en faluca por el Nilo.',
-        afternoon: 'free_afternoon_aswan_opt_abu_simbel',
+        afternoon: 'Tarde libre en Aswan. Opcional: visita a Abu Simbel (los templos de Ramsés II, no incluido).',
         evening: 'Última noche a bordo del crucero. Cena de gala y brindis de despedida.',
       },
       {
         day: 11,
         title: 'Desembarque → El Cairo',
-        morning: 'aswan_cairo_flight_checkout',
-        afternoon: 'opt_cairo_tour',
-        evening: 'cairo_free_dinner_opt_coptic',
+        morning: 'Desayuno a bordo. Check-out a las 08:00 h. Tiempo libre en Aswan. Vuelo doméstico Aswan–Cairo (incluido).',
+        afternoon: 'Traslado al hotel en El Cairo. Tarde libre.',
+        evening: 'Cena libre en El Cairo. Opcional: Barrio Copto, Khan el Khalili o Ciudadela.',
       },
       {
         day: 12,
         title: 'El Cairo — Día Libre',
-        morning: 'free_day_opt_citadel_museum',
+        morning: 'Desayuno. Día completamente libre para visitas opcionales: Ciudadela de Saladino, Mezquita de Alabastro, Museo Egipcio.',
         afternoon: 'Compras en el bazar Khan el Khalili. Tiempo para souvenirs y recuerdos.',
         evening: 'Cena de despedida en Egipto.',
       },
@@ -524,11 +523,11 @@ const getLocalizedTours = (t) => [
     ],
     overview: "Una travesía grandiosa de 16 días descubriendo las maravillas inmortales de Jordania, Egipto y Dubái. Adéntrate por el Siq de Petra, surca el mítico río Nilo durante cuatro días e impresiónate ante la deslumbrante Mezquita Sheikh Zayed en Abu Dhabi. Un recorrido monumental diseñado para brindar el máximo confort y una auténtica inmersión cultural.",
     highlights: [
-      'petra_siq_treasury_monastery_850',
+      'Petra: El Siq, El Tesoro y El Monasterio (850 escalones)',
       'Safari 4×4 en Wadi Rum, el Valle de la Luna',
       'Pirámides de Giza y Gran Esfinge',
       'Crucero de 4 noches por el Nilo (pensión completa)',
-      'abu_dhabi_mosque_louvre',
+      'Abu Dhabi: Mezquita Sheikh Zayed y Louvre',
       'Safari en el desierto de Dubái con cena beduina',
       'Guía en español en los tres países',
     ],
@@ -579,7 +578,7 @@ const getLocalizedTours = (t) => [
       {
         day: 3,
         title: 'Petra — Ciudad Rosa (Día Completo)',
-        morning: 'petra_entrance_royal_tombs',
+        morning: 'Desayuno. Entrada a Petra: El Siq, El Tesoro (Khazneh), Calle de las Fachadas, Teatro y Tumbas Reales.',
         afternoon: 'Ascenso a El Deir (El Monasterio) por los 850 escalones tallados en roca. Vistas impresionantes al desierto.',
         evening: 'Regreso al hotel. Cena incluida. Descanso.',
       },
@@ -588,7 +587,7 @@ const getLocalizedTours = (t) => [
         title: 'Petra → Wadi Rum → Amman → El Cairo',
         morning: 'Desayuno. Visita a la Pequeña Petra (Siq Al Bared). Safari 4×4 de 2 horas en Wadi Rum.',
         afternoon: 'Regreso a Amman. Cena incluida. Preparación para el vuelo nocturno.',
-        evening: 'night_flight_cairo_transfer',
+        evening: '⚠️ Vuelo nocturno a El Cairo (≥20:00 h, no incluido). Llegada y traslado al hotel.',
       },
       {
         day: 5,
@@ -600,7 +599,7 @@ const getLocalizedTours = (t) => [
       {
         day: 6,
         title: 'El Cairo → Luxor (Inicio Crucero)',
-        morning: 'giza_sphinx_opt_memphis',
+        morning: 'Desayuno. Visita a las Pirámides de Giza y la Gran Esfinge (~3 horas). Opcional: Memphis y Sakkara.',
         afternoon: 'Vuelo nocturno a Luxor (incluido). Traslado al crucero del Nilo.',
         evening: 'Cena a bordo del crucero en Luxor.',
       },
@@ -622,15 +621,15 @@ const getLocalizedTours = (t) => [
         day: 9,
         title: 'Crucero Nilo — Aswan (Pensión Completa)',
         morning: 'Desayuno a bordo. Templo de Philae. Paseo en faluca por el Nilo.',
-        afternoon: 'opt_abu_simbel_free_afternoon',
+        afternoon: 'Opcional: Abu Simbel (templos de Ramsés II). Tarde libre en Aswan.',
         evening: 'Última noche a bordo. Cena de despedida del Nilo.',
       },
       {
         day: 10,
         title: 'Desembarque → El Cairo',
-        morning: 'breakfast_checkout_aswan_flight_cairo',
-        afternoon: 'opt_cairo_tour',
-        evening: 'opt_citadel_khan_museum',
+        morning: 'Desayuno a bordo. Check-out 08:00 h. Tiempo libre en Aswan. Vuelo Aswan–Cairo (incluido).',
+        afternoon: 'Traslado al hotel en El Cairo. Tarde libre.',
+        evening: 'Opcional: Ciudadela, Mezquita de Alabastro, Khan el Khalili, Museo Egipcio.',
       },
       {
         day: 11,
@@ -649,7 +648,7 @@ const getLocalizedTours = (t) => [
       {
         day: 13,
         title: 'Dubái → Abu Dhabi → Dubái',
-        morning: 'abu_dhabi_excursion',
+        morning: 'Desayuno. Excursión a Abu Dhabi: Mezquita Sheikh Zayed, palacios, Corniche.',
         afternoon: 'Museo del Louvre Abu Dhabi y Ferrari World. Regreso a Dubái.',
         evening: 'Cena libre en Dubai Marina.',
       },
@@ -657,7 +656,7 @@ const getLocalizedTours = (t) => [
         day: 14,
         title: 'Dubái — Safari en el Desierto',
         morning: 'Desayuno. Mañana libre (Burj Khalifa, playa, shopping).',
-        afternoon: 'safari_desert_golden_dunes',
+        afternoon: 'A las 15:00 h: safari 4×4 en el desierto. Dunas de arena dorada, fotos al atardecer.',
         evening: 'Cena buffet oriental en campamento beduino con shows tradicionales.',
       },
       {
@@ -704,7 +703,7 @@ const getLocalizedTours = (t) => [
     overview: "Sumérgete durante 16 días en la fascinante herencia de Túnez y Egipto. Atraviesa las dunas del Sahara en Douz y deslúmbrate con el imponente Anfiteatro de El Jem antes de volar al país de los faraones. Relájate en resorts todo incluido en Hammamet y embárcate en un poético crucero por el Nilo descubriendo un mosaico único de culturas norteafricanas.",
     highlights: [
       'Anfiteatro romano de El Jem, el más grande de África',
-      'sahara_dunes_douz_camels_quads',
+      'Dunas del Sahara en Douz: dromedarios y quads',
       'Lago salado Chott El Jerid con espejismos',
       '4 noches Todo Incluido en hotel 5* en Hammamet',
       'Pirámides de Keops, Kefrén y Micerinos',
@@ -726,7 +725,7 @@ const getLocalizedTours = (t) => [
       '3 noches en hoteles 4*–5* con media pensión en Túnez',
       '4 noches Hammamet (Todo Incluido 5*)',
       '3 almuerzos + 2 cenas + 3 desayunos en circuito tunecino',
-      'entrances_el_jem_great_mosque_of',
+      'Entradas: El Jem, Gran Mezquita Kairouan, Mausoleo, Piscinas Aghlabitas',
       '4 noches Crucero Nilo (pensión completa, sin bebidas)',
       '3 noches El Cairo (alojamiento y desayuno)',
       'Guía en español en Egipto',
@@ -735,8 +734,8 @@ const getLocalizedTours = (t) => [
     excluded: [
       'Bebidas durante el circuito tunecino',
       'Propinas y tasas de estancia en Túnez',
-      'egypt_visa_30_eur',
-      'egypt_tips_45_pax_mandatory_on',
+      'Visado Egipto: 30 €/pax',
+      'Propinas Egipto: 45 €/pax (obligatorio en destino)',
     ],
     itinerary: [
       {
@@ -751,19 +750,19 @@ const getLocalizedTours = (t) => [
         title: 'Túnez → El Jem → Matmata → Douz',
         morning: 'Desayuno. Visita al colosal Anfiteatro de El Jem, el más grande de África y tercero del mundo romano.',
         afternoon: 'Almuerzo incluido. Visita a las fascinantes casas trogloditas de Matmata, excavadas en la tierra. Llegada a Douz, la "Puerta del Sahara".',
-        evening: 'sahara_dromedary_quads',
+        evening: 'Opcional: paseo en dromedario o quads por las dunas del Sahara. Cena y alojamiento en hotel 4*.',
       },
       {
         day: 3,
         title: 'Douz → Chott El Jerid → Tozeur → Chebika',
         morning: 'Desayuno. Cruce del lago salado Chott El Jerid, con sus asombrosos espejismos en el horizonte.',
-        afternoon: 'arrival_in_tozeur_lunch_at_hotel',
+        afternoon: 'Llegada a Tozeur. Almuerzo en el Hotel Ksar Rouge. Opcional: 4×4 a los oasis de Chebika, Tamerza y Ong Ejmel.',
         evening: 'Cena y alojamiento en hotel de la zona.',
       },
       {
         day: 4,
         title: 'Tozeur → Kairouan → Hammamet',
-        morning: 'breakfast_kairouan_the_4th_holiest_city',
+        morning: 'Desayuno. Kairouan, la 4ª ciudad más santa del Islam: Gran Mezquita, Mausoleo del Barbero, Piscinas Aghlabitas.',
         afternoon: 'Almuerzo. Visita a la Cooperativa de Alfombras. Llegada a Hammamet y check-in en hotel 5* todo incluido.',
         evening: 'Primera noche en régimen Todo Incluido en la hermosa costa de Hammamet.',
       },
@@ -772,12 +771,12 @@ const getLocalizedTours = (t) => [
         title: 'Hammamet — Todo Incluido',
         morning: 'Desayuno. Día libre en el hotel y la playa del Mediterráneo.',
         afternoon: 'Disfrute de las instalaciones del hotel 5* con piscinas, spa y actividades.',
-        evening: 'dinner_and_entertainment_included_at_the',
+        evening: 'Cena y entretenimiento incluido en el resort. Opcional: excursión a Sidi Bou Said.',
       },
       {
         day: 6,
         title: 'Hammamet — Todo Incluido',
-        morning: 'breakfast_free_day_optional_visit_to',
+        morning: 'Desayuno. Día libre. Opcional: visita a Cartago y Túnez ciudad.',
         afternoon: 'Relax en la playa o actividades acuáticas.',
         evening: 'Cena todo incluido en el resort.',
       },
@@ -798,7 +797,7 @@ const getLocalizedTours = (t) => [
       {
         day: 9,
         title: 'El Cairo → Luxor (Inicio Crucero)',
-        morning: 'breakfast_pyramids_of_khufu_khafre_and',
+        morning: 'Desayuno. Pirámides de Keops, Kefrén y Micerinos y la Gran Esfinge (~3 horas). Opcional: Memphis y Sakkara.',
         afternoon: 'Vuelo doméstico a Luxor. Traslado al crucero del Nilo. Cena a bordo.',
         evening: 'Primera noche a bordo del crucero en Luxor.',
       },
@@ -820,20 +819,20 @@ const getLocalizedTours = (t) => [
         day: 12,
         title: 'Crucero Nilo — Aswan (Pensión Completa)',
         morning: 'Desayuno a bordo. Templo de Philae. Paseo en faluca.',
-        afternoon: 'optional_abu_simbel_free_afternoon',
+        afternoon: 'Opcional: Abu Simbel. Tarde libre en Aswan.',
         evening: 'Última noche a bordo. Cena de despedida del Nilo.',
       },
       {
         day: 13,
         title: 'Desembarque → El Cairo',
-        morning: 'breakfast_on_board_checkout_0800_free',
+        morning: 'Desayuno a bordo. Check-out 08:00 h. Tiempo libre en Aswan. Almuerzo incluido.',
         afternoon: 'Vuelo doméstico Aswan–Cairo (incluido). Traslado al hotel. Alojamiento.',
         evening: 'Tarde y noche libre en El Cairo.',
       },
       {
         day: 14,
         title: 'El Cairo — Día Libre',
-        morning: 'breakfast_free_day_optional_saladin_citadel',
+        morning: 'Desayuno. Día libre. Opcional: Ciudadela de Saladino, Mezquita de Alabastro, Khan el Khalili, Museo Egipcio.',
         afternoon: 'Tiempo libre para compras y exploración.',
         evening: 'Cena libre. Última noche en Egipto.',
       },
@@ -901,13 +900,13 @@ const getLocalizedTours = (t) => [
       'Visitas indicadas en el programa en Marruecos',
       '4 noches Crucero Nilo (pensión completa, sin bebidas)',
       '3 noches El Cairo (alojamiento y desayuno)',
-      'two_domestic_flights',
+      '2 vuelos domésticos: Cairo–Luxor y Aswan–Cairo',
       'Guía en español en Egipto',
       'Entradas según itinerario',
     ],
     excluded: [
-      'egypt_visa_30_eur',
-      'travel_tips_45_eur',
+      'Visado Egipto: 30 €/pax',
+      'Propinas viaje: 45 €/pax (obligatorio en destino)',
       'Bebidas durante el crucero',
       'Excursiones opcionales',
     ],
@@ -916,22 +915,22 @@ const getLocalizedTours = (t) => [
         day: 1,
         title: 'Costa del Sol → Tánger → Meknes → Fez',
         morning: 'Traslado desde la Costa del Sol hasta Tarifa. Cruce en ferry por el Estrecho de Gibraltar hasta Tánger.',
-        afternoon: 'trip_to_meknes_exterior_panoramic_view',
+        afternoon: 'Viaje a Meknes: vista panorámica exterior de Bab el Mansour, una de las puertas más espectaculares del mundo árabe. Continuación hacia Fez.',
         evening: 'Llegada a Fez. Cena incluida. Alojamiento en el corazón de la medina.',
       },
       {
         day: 2,
         title: 'Fez — La Ciudad Más Antigua del Mundo',
         morning: 'Desayuno. Exteriores del Palacio Real de Fez, el barrio judío (Mellah), la fortaleza con vistas panorámicas a Fez el Bali.',
-        afternoon: 'guided_walk_through_the_medina_entrance',
+        afternoon: 'Caminata guiada por la Medina: entrada por Bab Bou Jeloud (la Puerta Azul), zoco de los tintoreros (Chouara), Madrasa Bou Inania.',
         evening: 'Cena incluida in un riad tradicional de Fez.',
       },
       {
         day: 3,
         title: 'Fez → Rabat → Casablanca → Marrakech',
-        morning: 'breakfast_rabat_royal_palace_the_imposing',
-        afternoon: 'casablanca_united_nations_square_the_corniche',
-        evening: 'accommodation_in_marrakech_optional_chez_ali',
+        morning: 'Desayuno. Rabat: Palacio Real, el imponente Mausoleo de Mohamed V y la Torre Hassan (inacabada en 1199).',
+        afternoon: 'Casablanca: Plaza de las Naciones Unidas, la Corniche y exteriores de la grandiosa Mezquita Hassan II (la 5ª más grande del mundo). Llegada a Marrakech.',
+        evening: 'Alojamiento en Marrakech. Opcional: Cena Fantasía Chez Ali con espectáculo ecuestre.',
       },
       {
         day: 4,
@@ -950,7 +949,7 @@ const getLocalizedTours = (t) => [
       {
         day: 6,
         title: 'El Cairo → Luxor (Inicio Crucero)',
-        morning: 'breakfast_pyramids_of_giza_and_the',
+        morning: 'Desayuno. Pirámides de Giza y la Gran Esfinge (~3 horas). Opcional: Memphis y Sakkara.',
         afternoon: 'Vuelo doméstico Cairo–Luxor. Traslado al crucero del Nilo. Cena a bordo.',
         evening: 'Primera noche en el crucero del Nilo en Luxor.',
       },
@@ -972,13 +971,13 @@ const getLocalizedTours = (t) => [
         day: 9,
         title: 'Crucero Nilo — Aswan (Pensión Completa)',
         morning: 'Desayuno a bordo. Templo de Philae. Paseo en faluca.',
-        afternoon: 'lunch_included_optional_abu_simbel_free',
+        afternoon: 'Almuerzo incluido. Opcional: Abu Simbel. Tarde libre en Aswan.',
         evening: 'Última noche en el crucero. Cena de despedida.',
       },
       {
         day: 10,
         title: 'Desembarque → El Cairo',
-        morning: 'breakfast_on_board_checkout_0800_free',
+        morning: 'Desayuno a bordo. Check-out 08:00 h. Tiempo libre en Aswan. Almuerzo incluido.',
         afternoon: 'Vuelo doméstico Aswan–Cairo. Traslado al hotel. Alojamiento.',
         evening: 'Tarde libre en El Cairo.',
       },
@@ -1027,7 +1026,7 @@ const getLocalizedTours = (t) => [
     overview: "Experimenta 11 días de inmersión total en los tesoros más grandes del Medio Oriente, uniendo Jordania y Egipto. Descubre la legendaria Ciudad Rosa de Petra, lánzate a una travesía en 4x4 por el desierto de Wadi Rum y maravíllate ante las imponentes Pirámides de Giza. Coronado por un crucero de tres noches a lo largo del Nilo, este recorrido brinda historia y aventura en su máxima expresión.",
     highlights: [
       'Vuelos con Egyptair incluidos (Madrid/Barcelona)',
-      'petra_siq_treasury_monastery',
+      'Petra: El Siq, El Tesoro, Tumbas Reales y El Monasterio',
       'Safari 4×4 en Wadi Rum (2 horas, incluido)',
       'Paseo a caballo en Petra',
       'Pirámides de Keops, Kefrén y Micerinos',
@@ -1036,7 +1035,7 @@ const getLocalizedTours = (t) => [
     ],
     accommodations: [
       { destination: 'El Cairo', nights: 3, regime: 'A/D (Azal o similar)' },
-      { destination: 'Crucero Nilo', nights: 3, regime: 'PC sin bebidas ship_ms_florence o similar)' },
+      { destination: 'Crucero Nilo', nights: 3, regime: 'PC sin bebidas (MS Florence o similar)' },
       { destination: 'Amman', nights: 2, regime: 'MP (Saray Hotel o similar)' },
       { destination: 'Petra', nights: 2, regime: 'MP (La Maison o similar)' },
       { destination: 'Wadi Rum', nights: 1, regime: 'MP en campamento (Hassan Zawaideh o similar)' },
@@ -1060,8 +1059,8 @@ const getLocalizedTours = (t) => [
     ],
     excluded: [
       'Comidas, bebidas y extras no mencionados',
-      'egypt_tips_visa_combined',
-      'jordan_tips_visa_combined',
+      'Propinas Egipto: 45 USD + visado: 30 USD/pax',
+      'Propinas Jordania: 50 USD + visado: 60 USD/pax',
     ],
     itinerary: [
       {
@@ -1069,19 +1068,19 @@ const getLocalizedTours = (t) => [
         title: 'Ciudad de Origen → Amman',
         morning: 'Presentación en el aeropuerto 2 horas antes. Vuelo a Amman con Egyptair (incluido).',
         afternoon: 'Llegada al Aeropuerto Queen Alia de Amman. Traslado al hotel.',
-        evening: 'amman_acc_dinner_note',
+        evening: 'Alojamiento en Amman. Nota: cena no incluida si llegada > 21:00 h.',
       },
       {
         day: 2,
         title: 'Amman → Madaba → Monte Nebo → Petra',
-        morning: 'madaba_nebo_tour',
+        morning: 'Desayuno. Iglesia Ortodoxa San Jorge en Madaba: el famoso mosaico-mapa de Palestina del siglo VI. Monte Nebo: vistas del Valle del Jordán y el Mar Muerto.',
         afternoon: 'Castillo de Shobak (Mont Real). Llegada a Petra al atardecer.',
         evening: 'Cena incluida en el hotel. Descanso antes del gran día en Petra.',
       },
       {
         day: 3,
         title: 'Petra — Ciudad Rosa (Día Completo)',
-        morning: 'petra_full_day_tombs',
+        morning: 'Desayuno. Día completo en Petra: El Tesoro (Khazneh), Tumbas de Colores, Tumbas Reales.',
         afternoon: 'Ascenso al imponente Monasterio (El Deir). Paseo a caballo (incluido).',
         evening: 'Regreso al hotel por la tarde. Cena incluida.',
       },
@@ -1102,14 +1101,14 @@ const getLocalizedTours = (t) => [
       {
         day: 6,
         title: 'El Cairo → Aswan (Embarque Crucero)',
-        morning: 'picnic_flight_aswan_opt_abu_simbel',
+        morning: 'Desayuno picnic. Vuelo Cairo–Aswan (incluido). Embarque en el crucero. Opcional: Abu Simbel antes de embarcar.',
         afternoon: 'Visita al Templo de Philae según horario de navegación. Cena a bordo.',
         evening: 'Primera noche en el crucero del Nilo en Aswan.',
       },
       {
         day: 7,
         title: 'Crucero Nilo — Aswan & Kom Ombo (Pensión Completa)',
-        morning: 'kom_ombo_sobek_haroeris',
+        morning: 'Desayuno a bordo. Navegación a Kom Ombo: visita al templo de Sobek y Haroeris.',
         afternoon: 'Navegación a Edfu. Cena a bordo.',
         evening: 'Noche en el crucero navegando hacia Edfu.',
       },
@@ -1123,7 +1122,7 @@ const getLocalizedTours = (t) => [
       {
         day: 9,
         title: 'Luxor → El Cairo',
-        morning: 'luxor_west_bank_checkout',
+        morning: 'Desayuno. Check-out 08:00 h. Colosos de Memnón, Templo funerario de Hatshepsut, Valle de los Reyes.',
         afternoon: 'Vuelo Luxor–Cairo (incluido). Traslado al hotel. Alojamiento.',
         evening: 'Cena libre en El Cairo.',
       },
@@ -1131,7 +1130,7 @@ const getLocalizedTours = (t) => [
         day: 10,
         title: 'El Cairo — Pirámides y Día Libre',
         morning: 'Desayuno. Pirámides de Keops, Kefrén y Micerinos y la Gran Esfinge (~3 horas).',
-        afternoon: 'free_afternoon_opt_gem_khan',
+        afternoon: 'Tarde libre. Opcional: Museo Egipcio (Gran Museo Egipcio), Khan el Khalili.',
         evening: 'Última noche en El Cairo.',
       },
       {
@@ -1173,9 +1172,9 @@ const getLocalizedTours = (t) => [
     highlights: [
       'Pirámides de Giza y Gran Esfinge',
       'Crucero de 3 noches por el Nilo (pensión completa)',
-      'jerusalem_old_city_via_dolorosa',
-      'bethlehem_nativity',
-      'dead_sea_lowest_point',
+      'Jerusalén: Ciudad Vieja, Vía Dolorosa y Santo Sepulcro',
+      'Belén: Basílica de la Natividad',
+      'Mar Muerto: flotación única en el punto más bajo de la Tierra',
       'Yad Vashem y Monte de los Olivos',
       'Guía en español en ambos países',
     ],
@@ -1196,9 +1195,9 @@ const getLocalizedTours = (t) => [
       'Asistencia en aeropuertos y pasos fronterizos',
     ],
     excluded: [
-      'egypt_visa_35',
-      'israel_departure_fees',
-      'tips_45',
+      'Visado Egipto: 35 USD (en destino)',
+      'Tasas de salida de Israel: 48 USD',
+      'Propinas: 45 USD/pax',
       'Vuelos internacionales',
       'Seguro de viaje',
     ],
@@ -1214,7 +1213,7 @@ const getLocalizedTours = (t) => [
         day: 2,
         title: 'El Cairo — Pirámides y Tesoros',
         morning: 'Desayuno. Visita guiada a las Pirámides de Keops, Kefrén y Micerinos y la Gran Esfinge de Giza (~3 horas).',
-        afternoon: 'cairo_coptic_holy_family',
+        afternoon: 'Visita al barrio copto de El Cairo: Iglesia de la Sagrada Familia (donde descansó la Sagrada Familia) y al Khan el Khalili.',
         evening: 'Cena libre. Noche en El Cairo.',
       },
       {
@@ -1227,7 +1226,7 @@ const getLocalizedTours = (t) => [
       {
         day: 4,
         title: 'Crucero Nilo — Aswan & Kom Ombo',
-        morning: 'felucca_aswan_abu_simbel',
+        morning: 'Desayuno a bordo. Paseo en faluca por las aguas serenas del Nilo de Aswan. Opcional: Abu Simbel.',
         afternoon: 'Navegación a Kom Ombo. Visita al Templo de Kom Ombo dedicado a Sobek y Haroeris.',
         evening: 'Navegación hacia Edfu. Cena a bordo con entretenimiento.',
       },
@@ -1248,21 +1247,21 @@ const getLocalizedTours = (t) => [
       {
         day: 7,
         title: 'Jerusalén — Ciudad Santa',
-        morning: 'jerusalem_olives_gethsemane',
-        afternoon: 'old_city_holy_sepulchre',
+        morning: 'Desayuno. Jerusalén: Monte de los Olivos (vistas panorámicas), Getsemaní, Vía Dolorosa.',
+        afternoon: 'Ciudad Vieja: Santo Sepulcro, Muro de las Lamentaciones, Cúpula de la Roca (exterior), barrio judío.',
         evening: 'Cena libre en el mercado árabe de Jerusalén. Noche en la Ciudad Santa.',
       },
       {
         day: 8,
         title: 'Belén & Mar Muerto',
-        morning: 'breakfast_excursion_bethlehem_nativity',
-        afternoon: 'dead_sea_floating_mud',
+        morning: 'Desayuno. Excursión a Belén: Basílica de la Natividad, Gruta de la Natividad, calle de los peregrinos.',
+        afternoon: 'Mar Muerto: flotación única en las aguas más saladas del mundo. Tratamientos de barro volcánico.',
         evening: 'Regreso a Jerusalén. Cena libre.',
       },
       {
         day: 9,
         title: 'Nazaret & Mar de Galilea',
-        morning: 'nazareth_galilee_capernaum',
+        morning: 'Desayuno. Excursión al norte: Nazaret (Basílica de la Anunciación), Mar de Galilea, Cafarnaum.',
         afternoon: 'Regreso a Jerusalén. Tiempo libre para visitas adicionales.',
         evening: 'Cena de despedida a Tierra Santa. Última noche en Jerusalén.',
       },
@@ -1307,7 +1306,7 @@ const getLocalizedTours = (t) => [
       'Pirámides de Giza y Gran Esfinge',
       'Acrópolis de Atenas y el Partenón',
       'Crucero de 1 día por las Islas del Golfo Sarónico',
-      'istanbul_highlights_1',
+      'Estambul: Mezquita Azul, Santa Sofía, Palacio de Topkapi',
       'Crucero por el Bósforo (Europa y Asia)',
       'Gran Bazar y Bazar de las Especias en Estambul',
       'Guía en español en los tres países',
@@ -1331,8 +1330,8 @@ const getLocalizedTours = (t) => [
       'Paseo en barco por el Bósforo (incluido)',
     ],
     excluded: [
-      'egypt_visa_35',
-      'egypt_tips_45',
+      'Visado Egipto: 35 USD (en destino)',
+      'Propinas Egipto: 45 USD/pax',
       'Vuelos internacionales',
       'Seguro de viaje',
       'Excursiones opcionales no mencionadas',
@@ -1355,7 +1354,7 @@ const getLocalizedTours = (t) => [
       {
         day: 3,
         title: 'El Cairo — Día Libre',
-        morning: 'free_coptic_memphis_sakkara',
+        morning: 'Desayuno. Día libre para explorar: Barrio Copto, Memphis y Sakkara (opcional).',
         afternoon: 'Compras en el histórico bazar Khan el Khalili.',
         evening: 'Noche libre. Preparación para el embarque.',
       },
@@ -1369,7 +1368,7 @@ const getLocalizedTours = (t) => [
       {
         day: 5,
         title: 'Crucero Nilo — Aswan & Kom Ombo',
-        morning: 'felucca_ride_opt_abu_simbel',
+        morning: 'Desayuno a bordo. Paseo en faluca. Opcional: Abu Simbel.',
         afternoon: 'Navegación a Kom Ombo. Visita al Templo de Sobek y Haroeris.',
         evening: 'Cena a bordo. Navegación hacia Edfu.',
       },
@@ -1390,15 +1389,15 @@ const getLocalizedTours = (t) => [
       {
         day: 8,
         title: 'Atenas — La Acrópolis',
-        morning: 'acropolis_parthenon_museum',
-        afternoon: 'panoramic_tomb_parliament',
+        morning: 'Desayuno. Visita guiada a la Acrópolis: Partenón, Erecteión y Cariátides. Museo de la Acrópolis.',
+        afternoon: 'Tour panorámico: Tumba del Soldado Desconocido, Parlamento, Estadio Panathinaikon.',
         evening: 'Tarde libre. Cena con vistas a la Acrópolis iluminada.',
       },
       {
         day: 9,
         title: 'Atenas — Crucero por las Islas Griegas',
-        morning: 'one_day_cruise_hydra',
-        afternoon: 'onboard_greek_dancers',
+        morning: 'Desayuno. Embarque en el crucero de 1 día: Hydra, Poros y Egina.',
+        afternoon: 'A bordo: orquesta, bailarines de danzas griegas y comida griega incluida.',
         evening: 'Regreso a Atenas. Cena libre.',
       },
       {
@@ -1412,21 +1411,21 @@ const getLocalizedTours = (t) => [
         day: 11,
         title: 'Estambul — Corazón Otomano',
         morning: 'Desayuno. Mezquita Azul (Sultan Ahmed), Santa Sofía (Hagia Sophia), Hipódromo de Constantinopla.',
-        afternoon: 'topkapi_heart_ottoman',
+        afternoon: 'Palacio de Topkapi: el corazón del Imperio Otomano por cuatro siglos.',
         evening: 'Gran Bazar de Estambul. Cena libre en el barrio de Sultanahmet.',
       },
       {
         day: 12,
         title: 'Estambul — Bósforo y Bazar',
         morning: 'Desayuno. Crucero panorámico por el Bósforo, navegando entre Europa y Asia.',
-        afternoon: 'spice_bazaar_beyoglu',
+        afternoon: 'Bazar de las Especias (Mısır Çarşısı). Barrio de Beyoğlu y Torre de Gálata.',
         evening: 'Cena en restaurante con vista al Cuerno de Oro.',
       },
       {
         day: 13,
         title: 'Estambul — Día Libre',
-        morning: 'free_jewels_constantinople',
-        afternoon: 'asian_side_kadikoy_moda',
+        morning: 'Desayuno. Día libre. Opcional: Joyas de Constantinopla (65 €) — visita completa a los monumentos principales.',
+        afternoon: 'Visita al barrio asiático de Estambul: Kadıköy y Moda.',
         evening: 'Cena de despedida al Gran Tour Mediterráneo.',
       },
       {
@@ -1441,5 +1440,4 @@ const getLocalizedTours = (t) => [
 ];
 
 
-export const multiCountryTours = getLocalizedTours; 
-export default multiCountryTours;
+ 
