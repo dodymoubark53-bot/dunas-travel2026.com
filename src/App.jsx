@@ -33,6 +33,7 @@ const RoomDetails = lazy(() => import("./pages/hotels/RoomDetails"));
 const MultiCountryTours = lazy(() => import("./pages/programs/MultiCountryTours"));
 const MultiCountryTourDetails = lazy(() => import("./pages/programs/MultiCountryTourDetails"));
 const ReligiousTours = lazy(() => import("./pages/programs/ReligiousTours"));
+const TurkeyProgramDetails = lazy(() => import("./pages/programs/TurkeyProgramDetails"));
 
 const PageTransition = ({ children }) => (
   <motion.div
@@ -226,6 +227,14 @@ function App() {
                     element={
                       <PageTransition>
                         <ReligiousTours />
+                      </PageTransition>
+                    }
+                  />
+                  <Route
+                    path="turkey/:programId"
+                    element={
+                      <PageTransition>
+                        <TurkeyProgramDetails />
                       </PageTransition>
                     }
                   />

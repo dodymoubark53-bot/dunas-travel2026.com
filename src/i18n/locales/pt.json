@@ -2775,7 +2775,15 @@
       "title": "Turquia",
       "subtitle": "Onde o Oriente encontra o Ocidente",
       "seoTitle": "Viagens de luxo à Turquia | Dunas Travel",
-      "seoDesc": "Explore viagens de luxo à Turquia. Roteiros personalizados em breve."
+      "seoDesc": "Explore viagens de luxo à Turquia. Roteiros personalizados em breve.",
+      "desc": "Da majestosa Hagia Sofia às chaminés de fadas da Capadócia e às águas turquesas do Egeu, a Turquia conecta continentes e milénios.",
+      "brief": "A Turquia é onde o Oriente encontra o Ocidente, oferecendo uma rica tapeçaria de história, cultura e beleza natural. Nossos programas abrangem desde os tesouros imperiais de Istambul até as paisagens surreais da Capadócia, os terraços termais de Pamukkale e as ruínas antigas de Éfeso e Troia.",
+      "ourPrograms": "Nossos Programas",
+      "toursTitle": "Programas da Turquia",
+      "ctaLabel": "PRONTO PARA VIAJAR À TURQUIA?",
+      "ctaTitle": "Sua aventura turca começa aqui",
+      "ctaDesc": "Explore nossos programas selecionados da Turquia e reserve sua viagem dos sonhos hoje.",
+      "ctaBtn": "Ver Todos os Programas"
     },
     "jordan": {
       "title": "Jordânia",
@@ -2871,6 +2879,7 @@
     "highlights": "Principais destaques",
     "incExc": "O que está incluído e excluído",
     "included": "Incluído",
+    "itinerary": "Itinerário",
     "overview": "Visão geral"
   },
   "transportation": {
@@ -3027,6 +3036,10 @@
     "noToursFound": "Nenhuma Combinação Encontrada",
     "noToursDesc": "Não temos pacotes ativos correspondentes a essa combinação específica de países no momento. Deixe-nos personalizar um itinerário exclusivo para você!",
     "customOdyssey": "Viagem Multiverso sob Medida",
+    "customizeLabel": "NÃO ENCONTROU O QUE PROCURA?",
+    "customizeTitle": "Deixe-nos desenhar a sua viagem perfeita à Turquia",
+    "customizeDesc": "Conte-nos as suas preferências e os nossos designers de viagens especializados criarão um itinerário personalizado para si.",
+    "customizeBtn": "Personalize a sua Viagem",
     "ctaTitle": "Não encontrou a combinação exata que desejava?",
     "ctaDesc": "Deseje você combinar o Egito com a Turquia, a Jordânia com a Grécia ou viajar por todos os cinco países, nossos designers de viagens especializados criarão um itinerário personalizado, gerenciando todos os vistos, traslados, voos premium e hotéis boutique.",
     "luxGuarantee": "Serviço Executivo Incluso",

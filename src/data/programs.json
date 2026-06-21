@@ -1,0 +1,2390 @@
+{
+  "programs": [
+    {
+      "days": [
+        {
+          "day": "1",
+          "meals": {
+            "pt": "Refeições no hotel",
+            "it": "Pasti in hotel",
+            "en": "Meals at hotel",
+            "ar": "وجبات بالفندق",
+            "es": "Comidas en el hotel"
+          },
+          "description": {
+            "pt": "Chegada ao aeroporto de Istambul, recepção e transfer para o hotel. Pernoitada.",
+            "it": "Arrivo all'aeroporto di Istanbul, accoglienza e trasferimento in hotel. Pernottamento.",
+            "en": "Arrival at Istanbul Airport, reception and transfer to hotel. Overnight.",
+            "ar": "الوصول لمطار إسطنبول، الاستقبال والانتقال للفندق والمبيت.",
+            "es": "Llegada al aeropuerto de Estambul, recepción y traslado al hotel. Alojamiento."
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "es": "Desayuno"
+          },
+          "description": {
+            "pt": "Tour incluindo as antigas Muralhas de Constantinopla, a Mesquita de Rüstem Pasha e o Bazar de Especiarias. (Tarde opcional \"Pérola de Istambul\" com cruzeiro no Bósforo, Praça Taksim, Rua Istiklal e Torre de Gálata exterior).",
+            "it": "Giro che include le antiche Mura di Costantinopoli, la Moschea di Rüstem Pasha e il Bazar delle Spezie. (Pomeriggio opzionale \"Perla di Istanbul\" con crociera sul Bosforo, piazza Taksim, via Istiklal e Torre di Galata esterno).",
+            "en": "Tour including the ancient Walls of Constantinople, Rüstem Pasha Mosque, and the Egyptian Spice Bazaar. (Optional afternoon tour \"Pearl of Istanbul\" including Bosphorus cruise, Taksim Square, Istiklal Street, and Galata Tower exterior).",
+            "ar": "جولة تشمل أسوار قسطنطينية القديمة، ومسجد رستم باشا، وبازار التوابل المصري. (متاح رحلة اختيارية بعد الظهر باسم \"لؤلؤة إسطنبول\" تشمل جولة البوسفور، ساحة تقسيم، شارع استقلال، وبرج غالاطا خارجي).",
+            "es": "Recorrido que incluye las antiguas Murallas de Constantinopla, la Mezquita de Rüstem Pasha y el Bazar de las Especias. (Tarde opcional \"Perla de Estambul\" con crucero por el Bósforo, plaza Taksim, calle Istiklal y Torre de Gálata exterior)."
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena",
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء",
+            "es": "Desayuno + Cena"
+          },
+          "description": {
+            "pt": "Visita ao Grande Bazar pela manhã, depois viagem de ônibus (6 h) ou trem de alta velocidade (5 h) para Ancara. Visita ao Anıtkabir (Mausoléu de Atatürk), jantar e pernoite.",
+            "it": "Visita al Gran Bazar al mattino, poi viaggio in pullman (6 h) o treno ad alta velocità (5 h) per Ankara. Visita all'Anıtkabir (Mausoleo di Atatürk), cena e pernottamento.",
+            "en": "Visit the Grand Bazaar in the morning, then travel by bus (6 hrs) or high-speed train (5 hrs) to Ankara. Visit Anıtkabir (Atatürk's Mausoleum), then dinner and overnight.",
+            "ar": "زيارة الجراند بازار صباحاً، ثم التحرك بالحافلة (6 ساعات) أو القطار سريع السرعة (5 ساعات) إلى أنقرة. زيارة ضريح أتاتورك ثم العشاء والمبيت.",
+            "es": "Visita al Gran Bazar por la mañana, luego viaje en autobús (6 h) o tren de alta velocidad (5 h) a Ankara. Visita al Anıtkabir (Mausoleo de Atatürk), cena y alojamiento."
+          }
+        },
+        {
+          "day": "4",
+          "meals": {
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena",
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء",
+            "es": "Desayuno + Cena"
+          },
+          "description": {
+            "pt": "Transfer para a Capadócia (3 h) passando pelo Lago Salgado. No caminho, visita a uma das antigas cidades subterrâneas. Na chegada, visita a uma oficina de tapetes e cerâmica.",
+            "it": "Trasferimento in Cappadocia (3 h) passando per il Lago Salato. Durante il percorso, visita a una delle antiche città sotterranee. All'arrivo, visita a un laboratorio di tappeti e ceramica.",
+            "en": "Travel to Cappadocia (3 hrs) passing by the Salt Lake. En route, visit one of the ancient underground cities. Upon arrival, visit a carpet and ceramic workshop.",
+            "ar": "التحرك إلى كابادوكيا (3 ساعات) مروراً بالبحيرة الملحية. في الطريق يتم زيارة إحدى المدن الأرضية القديمة. عند الوصول يتم زيارة ورشة سجاد وخزف.",
+            "es": "Traslado a Capadocia (3 h) pasando por el Lago Salado. En el camino, visita a una de las antiguas ciudades subterráneas. A la llegada, visita a taller de alfombras y cerámica."
+          }
+        },
+        {
+          "day": "5",
+          "meals": {
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena",
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء",
+            "es": "Desayuno + Cena"
+          },
+          "description": {
+            "pt": "(Balão de ar quente opcional ao amanhecer). Tour inclui: Vale de Göreme, vila de Uçhisar, Vale do Amor, Vale de Devrent, Vale dos Pombos e Vale da Imaginação, com visita a uma oficina de ônix. (Noite opcional: show folclórico).",
+            "it": "(Mongolfiera opzionale all'alba). Giro include: Valle di Göreme, villaggio di Uçhisar, Valle dell'Amore, Valle di Devrent, Valle dei Piccioni e Valle dell'Immaginazione, con visita a un laboratorio di onice. (Serata opzionale: spettacolo folcloristico).",
+            "en": "(Optional hot air balloon at dawn). Tour including: Göreme Valley, Uçhisar village, Love Valley, Devrent Valley, Pigeon Valley, and Imagination Valley, with a visit to an onyx workshop. (Optional evening: traditional folklore show).",
+            "ar": "(منطاد اختياري فجراً). جولة تشمل: وادي جوريم، قرية أواتش حصار، وادي الحب، وادي ديرفنت، وادي الصيادين، ووادي الحمام، مع زيارة ورش الأونيكس. (اختياري مساءً: سهرة العروض التراثية).",
+            "es": "(Globo aerostático opcional al amanecer). Recorrido: Valle de Göreme, pueblo de Uçhisar, Valle del Amor, Valle de Devrent, Valle de las Palomas y Valle de la Imaginación, con visita a taller de ónix. (Noche opcional: espectáculo folclórico)."
+          }
+        },
+        {
+          "day": "6",
+          "meals": {
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena",
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء",
+            "es": "Desayuno + Cena"
+          },
+          "description": {
+            "pt": "Viagem terrestre para Pamukkale (8 h). Visita ao antigo caravançará (Kervansaray), aos terraços de travertino branco de Pamukkale e à cidade antiga de Hierápolis. Visita a uma loja outlet, depois hotel.",
+            "it": "Trasferimento via terra a Pamukkale (8 h). Visita all'antico caravanserraglio (Kervansaray), alle terrazze di travertino bianco di Pamukkale e all'antica città di Hierapolis. Visita a un outlet, poi in hotel.",
+            "en": "Overland to Pamukkale (8 hrs). Visit the ancient caravanserai (Kervansaray), the white travertine terraces of Pamukkale, and the ancient city of Hierapolis. Visit an outlet store, then hotel.",
+            "ar": "التحرك براً إلى باموكالي (8 ساعات). زيارة الخان القديم (Kervansaray) ومدرجات باموكالي الجيرية ومدينة هيرابوليس الأثرية. زيارة متجر آوتلت ثم الفندق.",
+            "es": "Traslado por carretera a Pamukkale (8 h). Visita al antiguo caravasar (Kervansaray), las terrazas de travertino blanco de Pamukkale y la ciudad antigua de Hierápolis. Visita a tienda outlet, luego al hotel."
+          }
+        },
+        {
+          "day": "7",
+          "meals": {
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena",
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء",
+            "es": "Desayuno + Cena"
+          },
+          "description": {
+            "pt": "Transfer para Éfeso (3 h) e visita à cidade romana (Biblioteca de Celso, Teatro, Templo de Adriano). Visita à Casa da Virgem Maria e a uma fábrica de couro. Transfer para Esmirna ou Kuşadası para pernoite.",
+            "it": "Trasferimento a Efeso (3 h) e visita alla città romana (Biblioteca di Celso, Teatro, Tempio di Adriano). Visita alla Casa della Vergine Maria e a una conceria. Trasferimento a Smirne o Kuşadası per pernottamento.",
+            "en": "Travel to Ephesus (3 hrs) and visit the Roman city (Library of Celsus, Theater, Temple of Hadrian). Visit the House of the Virgin Mary and a leather factory. Transfer to Izmir or Kuşadası for overnight.",
+            "ar": "التحرك إلى أفسس (3 ساعات) وزيارة المدينة الرومانية (مكتبة سيلسوس، المسرح، معبد هادريان). زيارة بيت مريم العذراء ومصنع جلود. الانتقال للمبيت في إزمير أو كوشاداسي.",
+            "es": "Traslado a Éfeso (3 h) y visita a la ciudad romana (Biblioteca de Celso, Teatro, Templo de Adriano). Visita a la Casa de la Virgen María y fábrica de cuero. Traslado a Esmirna o Kuşadası para alojamiento."
+          }
+        },
+        {
+          "day": "8",
+          "meals": {
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena",
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء",
+            "es": "Desayuno + Cena"
+          },
+          "description": {
+            "pt": "Transfer para visitar a antiga cidade de Pérgamo (Asclepeion, antigo hospital) (2 h). Depois transfer para a histórica cidade de Troia (3 h). Chegada a Çanakkale para pernoite.",
+            "it": "Trasferimento per visitare l'antica città di Pergamo (Asclepeion, antico ospedale) (2 h). Poi trasferimento alla storica città di Troia (3 h). Arrivo a Çanakkale per pernottamento.",
+            "en": "Travel to visit the ancient city of Pergamon (Asclepion ancient hospital) (2 hrs). Then travel to the historic city of Troy (3 hrs). Arrive in Çanakkale for overnight.",
+            "ar": "التحرك لزيارة مدينة برغامة الأثرية (مشفى أسكليبيون القديم) (ساعتان). ثم التحرك إلى مدينة طروادة التاريخية (3 ساعات). الوصول لتشاناق قلعة للمبيت.",
+            "es": "Traslado para visitar la antigua ciudad de Pérgamo (Asclepeion, antiguo hospital) (2 h). Luego traslado a la ciudad histórica de Troya (3 h). Llegada a Çanakkale para alojamiento."
+          }
+        },
+        {
+          "day": "9",
+          "meals": {
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "es": "Desayuno"
+          },
+          "description": {
+            "pt": "Transfer para Bursa (3 h) atravessando a ponte Osman Gazi. Visita à Grande Mesquita, Mesquita Verde e Túmulo Verde, com parada em uma loja de delícias turcas. Continuação para Istambul.",
+            "it": "Trasferimento a Bursa (3 h) attraversando il ponte Osman Gazi. Visita alla Grande Moschea, Moschea Verde e Tomba Verde, con sosta in un negozio di lokum. Proseguimento per Istanbul.",
+            "en": "Travel to Bursa (3 hrs) crossing the Osman Gazi Bridge. Visit the Grand Mosque, Green Mosque, and Green Tomb, with a stop at a Turkish delight shop. Continue to Istanbul.",
+            "ar": "التحرك إلى مدينة بورصة (3 ساعات) وعبور جسر عثمان غازي. زيارة الجامع الكبير، الجامع الأخضر، والضريح الأخضر مع التوقف عند متجر الحلقوم. إكمال الطريق لإسطنبول.",
+            "es": "Traslado a Bursa (3 h) cruzando el puente Osman Gazi. Visita a la Gran Mezquita, Mezquita Verde y Tumba Verde, con parada en tienda de delizia turca. Continuación a Estambul."
+          }
+        },
+        {
+          "day": "10",
+          "meals": {
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "es": "Desayuno"
+          },
+          "description": {
+            "pt": "Dia completamente livre em Istambul para relaxar e fazer compras (ou tour clássico opcional).",
+            "it": "Giornata completamente libera a Istanbul per relax e shopping (o tour classico opzionale).",
+            "en": "Completely free day in Istanbul for relaxation and shopping (or optional classic tour).",
+            "ar": "يوم حر بالكامل في إسطنبول للاسترخاء والتسوق (أو جولة اختيارية كلاسيكية).",
+            "es": "Día completamente libre en Estambul para relajarse y comprar (o tour clásico opcional)."
+          }
+        },
+        {
+          "day": "11",
+          "meals": {
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "es": "Desayuno"
+          },
+          "description": {
+            "pt": "Transfer para o aeroporto para partida final.",
+            "it": "Trasferimento in aeroporto per la partenza finale.",
+            "en": "Transfer to airport for final departure.",
+            "ar": "النقل للمطار للمغادرة النهائية.",
+            "es": "Traslado al aeropuerto para la salida final."
+          }
+        }
+      ],
+      "id": "REG-01",
+      "duration": {
+        "pt": "11 dias / 10 noites",
+        "it": "11 giorni / 10 notti",
+        "en": "11 days / 10 nights",
+        "ar": "11 أيام / 10 ليالٍ",
+        "es": "11 días / 10 noches"
+      },
+      "minPax": {
+        "pt": "2 Pax",
+        "it": "2 Pax",
+        "en": "2 Pax",
+        "ar": "فردان",
+        "es": "2 Pax"
+      },
+      "highlights": {
+        "pt": [
+          "Transferência de trem de alta velocidade para a capital Ancara (no pacote REG-01B).",
+          "Exploração das cidades bizantinas e cristãs totalmente escavadas no subsolo na Capadócia.",
+          "Caminhar sobre os encantadores terraços de travertino branco de Pamukkale (\"Castelo de Algodão\").",
+          "Ver as ruínas históricas de Troia e reviver a Ilíada de Homero.",
+          "Atravessar a ponte suspensa Osman Gazi, a 4ª ponte suspensa mais longa do mundo."
+        ],
+        "it": [
+          "Trasferimento in treno ad alta velocità per la capitale Ankara (nel pacchetto REG-01B).",
+          "Esplorazione delle città bizantine e cristiane interamente scavate nel sottosuolo in Cappadocia.",
+          "Camminare sulle incantevoli terrazze di travertino bianco di Pamukkale (\"Castello di Cotone\").",
+          "Vedere le rovine storiche di Troia e rivivere l'Iliade di Omero.",
+          "Attraversare il ponte sospeso Osman Gazi, il 4° ponte sospeso più lungo del mondo."
+        ],
+        "en": [
+          "High-speed train transfer to the capital Ankara (in REG-01B package).",
+          "Exploring the Byzantine and Christian cities carved entirely underground in Cappadocia.",
+          "Walking on the enchanting white travertine terraces of Pamukkale (\"Cotton Castle\").",
+          "Seeing the historical ruins of Troy and reliving Homer's Iliad.",
+          "Crossing the Osman Gazi suspension bridge, the 4th longest suspension bridge in the world."
+        ],
+        "ar": [
+          "الانتقال السريع بقطار فائق السرعة إلى العاصمة أنقرة (في باقة REG-01B).",
+          "استكشاف المدن البيزنطية والمسيحية المحفورة بالكامل تحت الأرض في كابادوكيا.",
+          "السير على طبقات الجير الأبيض الساحرة في \"قلعة القطن\" باموكالي.",
+          "رؤية آثار طروادة التاريخية واسترجاع أحداث إلياذة هوميروس.",
+          "عبور جسر عثمان غازي المعلق، رابع أطول جسر معلق في العالم."
+        ],
+        "es": [
+          "Traslado en tren de alta velocidad a la capital Ankara (en el paquete REG-01B).",
+          "Exploración de las ciudades bizantinas y cristianas excavadas completamente bajo tierra en Capadocia.",
+          "Caminar sobre las encantadoras terrazas de travertino blanco de Pamukkale (\"Castillo de Algodón\").",
+          "Ver las ruinas históricas de Troya y revivir la Ilíada de Homero.",
+          "Cruzar el puente colgante Osman Gazi, el 4º puente colgante más largo del mundo."
+        ]
+      },
+      "code": {
+        "pt": "REG-01 A (de ônibus) / REG-01B (de trem de alta velocidade)",
+        "it": "REG-01 A (in pullman) / REG-01B (in treno ad alta velocità)",
+        "en": "REG-01 A (by bus) / REG-01B (by high-speed train)",
+        "ar": "REG-01 A (بالحافلة) / REG-01B (بالقطار السريع)",
+        "es": "REG-01 A (en autobús) / REG-01B (en tren de alta velocidad)"
+      },
+      "overview": {
+        "pt": "Uma viagem terrestre abrangente projetada para amantes da história e da natureza. Leva você em uma aventura que conecta a história de Istambul com a capital Ancara, até as maravilhas da Capadócia e os terraços termais de Pamukkale, passando pelas ruínas de Éfeso, Troia e Bursa — o roteiro clássico completo para explorar a história da Anatólia.",
+        "it": "Un viaggio via terra completo progettato per gli amanti della storia e della natura. Ti porta in un'avventura che collega l'antica Istanbul con la capitale Ankara, fino alle meraviglie della Cappadocia e alle terrazze termali di Pamukkale, passando per le rovine di Efeso, Troia e Bursa — il classico tour completo per esplorare la storia dell'Anatolia.",
+        "en": "A comprehensive overland journey designed for history and nature lovers. It takes you on an extended adventure connecting the ancient heritage of Istanbul with the depths of the capital Ankara, reaching the wonders of Cappadocia and the thermal terraces of Pamukkale, passing through the ruins of Ephesus, Troy and Bursa — the complete classic tour to explore the history of Anatolia.",
+        "ar": "رحلة برية شاملة مصممة لعشاق التاريخ والطبيعة. تأخذك في مغامرة ممتدة تربط بين عراقة إسطنبول وعمق العاصمة أنقرة، لتصل إلى عجائب كابادوكيا والمدرجات الحرارية في باموكالي، مروراً بأطلال أفسس وطروادة وبورصة، وهي الرحلة الكلاسيكية المتكاملة لاستكشاف تاريخ الأناضول.",
+        "es": "Un viaje terrestre integral diseñado para amantes de la historia y la naturaleza. Te lleva en una aventura prolongada que conecta la historia de Estambul con la profunda capital Ankara, hasta las maravillas de Capadocia y las terrazas termales de Pamukkale, pasando por las ruinas de Éfeso, Troya y Bursa — el recorrido clásico completo para explorar la historia de Anatolia."
+      },
+      "name": {
+        "pt": "Turquia Lendária",
+        "it": "Turchia Leggendaria",
+        "en": "Legendary Turkey",
+        "ar": "تركيا الأسطورية",
+        "es": "Turquía Legendaria"
+      }
+    },
+    {
+      "days": [
+        {
+          "day": "1",
+          "meals": null,
+          "description": {
+            "pt": "Chegada ao aeroporto de Istambul e transfer para o hotel. Pernoitada.",
+            "it": "Arrivo all'aeroporto di Istanbul e trasferimento in hotel. Pernottamento.",
+            "en": "Arrival at Istanbul Airport and transfer to hotel. Overnight.",
+            "ar": "الوصول إلى مطار إسطنبول والنقل إلى الفندق والمبيت.",
+            "es": "Llegada al aeropuerto de Estambul y traslado al hotel. Alojamiento."
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "pt": "Café da manhã + Almoço",
+            "it": "Colazione + Pranzo",
+            "en": "Breakfast + Lunch",
+            "ar": "إفطار + غداء",
+            "es": "Desayuno + Almuerzo"
+          },
+          "description": {
+            "pt": "Tour completo pela cidade: Santa Sofia (exterior), Palácio de Topkapi (incluindo Harém), Mesquita Azul, Hipódromo romano, e tempo livre no Grande Bazar.",
+            "it": "Giro completo della città: Santa Sofia (esterno), Palazzo di Topkapi (incluso Harem), Moschea Blu, Ippodromo romano, e tempo libero al Gran Bazar.",
+            "en": "Full city tour including: Hagia Sophia (exterior), Topkapi Palace (including Harem), Blue Mosque, Roman Hippodrome, ending with free time at the Grand Bazaar.",
+            "ar": "جولة كاملة بالمدينة تشمل: آيا صوفيا (خارجياً)، وقصر توبكابي (شامل الحرملك)، والمسجد الأزرق، وميدان سباق الخيل الروماني (الهيبودروم)، وتختم بوقت حر في الجراند بازار.",
+            "es": "Recorrido completo por la ciudad: Santa Sofía (exterior), Palacio de Topkapi (incluyendo el Harén), Mezquita Azul, Hipódromo romano, y tiempo libre en el Gran Bazar."
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "es": "Desayuno"
+          },
+          "description": {
+            "pt": "Dia completamente livre na cidade ou passeios opcionais.",
+            "it": "Giornata completamente libera in città o tour opzionali.",
+            "en": "Completely free day in the city or optional tours.",
+            "ar": "يوم حر تماماً في المدينة أو خيار القيام بجولات اختيارية.",
+            "es": "Día completamente libre en la ciudad o excursiones opcionales."
+          }
+        },
+        {
+          "day": "4",
+          "meals": {
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "es": "Desayuno"
+          },
+          "description": {
+            "pt": "Transfer para o aeroporto para partida.",
+            "it": "Trasferimento in aeroporto per la partenza.",
+            "en": "Transfer to airport for departure.",
+            "ar": "التوصيل للمطار للمغادرة.",
+            "es": "Traslado al aeropuerto para la salida."
+          }
+        }
+      ],
+      "id": "REG-02",
+      "duration": {
+        "pt": "4 dias / 3 noites",
+        "it": "4 giorni / 3 notti",
+        "en": "4 days / 3 nights",
+        "ar": "4 أيام / 3 ليالٍ",
+        "es": "4 días / 3 noches"
+      },
+      "minPax": {
+        "pt": "2 Pax",
+        "it": "2 Pax",
+        "en": "2 Pax",
+        "ar": "فردان",
+        "es": "2 Pax"
+      },
+      "highlights": {
+        "pt": [
+          "Tour histórico completo do ícone da arquitetura bizantina e islâmica — Santa Sofia.",
+          "Acesso exclusivo aos aposentos reais do Palácio de Topkapi com o ingresso do Harém.",
+          "Contemplar os designs azuis únicos da Mesquita Azul com seus seis minaretes.",
+          "Compras e lembranças entre as lojas do histórico Grande Bazar."
+        ],
+        "it": [
+          "Tour storico completo dell'icona dell'architettura bizantina e islamica — Santa Sofia.",
+          "Accesso esclusivo agli appartamenti reali del Palazzo di Topkapi con il biglietto dell'Harem.",
+          "Ammirare i caratteristici disegni blu della Moschea Blu con i suoi sei minareti.",
+          "Shopping e souvenir tra i negozi del storico Gran Bazar."
+        ],
+        "en": [
+          "Comprehensive historical tour of the icon of Byzantine and Islamic architecture — Hagia Sophia.",
+          "Exclusive access to the royal chambers of Topkapi Palace with the \"Harem\" ticket.",
+          "Admire the unique blue designs of the six-minaret Blue Mosque.",
+          "Shopping and finding souvenirs among the shops of the historic Grand Bazaar."
+        ],
+        "ar": [
+          "جولة تاريخية شاملة لأيقونة المعمار البيزنطي والإسلامي \"آيا صوفيا\".",
+          "دخول حصري لأجنحة قصر توبكابي الملكي مع تذكرة \"الحرملك\".",
+          "تأمل التصاميم الزرقاء الفريدة لستة مآذن في المسجد الأزرق.",
+          "التسوق واقتناء التذكارات من بين متاجر الجراند بازار التاريخي."
+        ],
+        "es": [
+          "Recorrido histórico completo por el ícono de la arquitectura bizantina e islámica — Santa Sofía.",
+          "Acceso exclusivo a las estancias reales del Palacio de Topkapi con entrada al Harén.",
+          "Contemplar los singulares diseños azules de las seis torres de la Mezquita Azul.",
+          "Comprar y adquirir recuerdos entre las tiendas del histórico Gran Bazar."
+        ]
+      },
+      "code": {
+        "pt": "REG-02",
+        "it": "REG-02",
+        "en": "REG-02",
+        "ar": "REG-02",
+        "es": "REG-02"
+      },
+      "overview": {
+        "pt": "Um programa intensivo e ideal para viajantes que desejam mergulhar na magia da capital de três impérios (Istambul) sem sair dela. O programa foca nos principais sítios históricos da cidade através de passeios organizados e confortáveis, com tempo livre para compras e exploração pessoal.",
+        "it": "Un programma intensivo e ideale per i viaggiatori che vogliono immergersi nella magia della capitale di tre imperi (Istanbul) senza allontanarsi. Il programma si concentra sui principali siti storici della città con tour organizzati e confortevoli, con tempo libero per shopping ed esplorazione personale.",
+        "en": "An intensive, ideal program for travelers who want to dive into the magic of the capital of three empires (Istanbul) without leaving it. The program focuses on the city's major historical sites through comfortable organized tours, with free time for shopping and personal exploration.",
+        "ar": "برنامج مكثف ومثالي للمسافرين الذين يرغبون في الغوص في سحر عاصمة الإمبراطوريات الثلاث (إسطنبول) دون مغادرتها. يركز البرنامج على المواقع التاريخية الكبرى للبلد في جولات منظمة مريحة مع توفير وقت حر للتسوق والاستكشاف الشخصي.",
+        "es": "Un programa intensivo e ideal para viajeros que desean sumergirse en la magia de la capital de tres imperios (Estambul) sin salir de ella. El programa se centra en los grandes sitios históricos de la ciudad mediante visitas organizadas y cómodas, con tiempo libre para compras y exploración personal."
+      },
+      "name": {
+        "pt": "O Melhor de Istambul",
+        "it": "Il Meglio di Istanbul",
+        "en": "Best of Istanbul",
+        "ar": "أفضل ما في إسطنبول",
+        "es": "Lo Mejor de Estambul"
+      }
+    },
+    {
+      "days": [
+        {
+          "day": "1–7",
+          "meals": null,
+          "description": {
+            "pt": "Correspondem exatamente no percurso, passeios diários e refeições ao programa \"Turquia Legendária\" por terra (Istambul → Ancara → Capadócia → Pamukkale → Éfeso).",
+            "it": "Corrispondono perfettamente nel percorso, nei tour giornalieri e nei pasti al programma \"Turchia Leggendaria\" via terra (Istanbul → Ankara → Cappadocia → Pamukkale → Efeso).",
+            "en": "Fully match the route, daily tours, and meals of the \"Legendary Turkey\" overland program (Istanbul → Ankara → Cappadocia → Pamukkale → Ephesus).",
+            "ar": "تتطابق تماماً في مسارها وجولاتها اليومية والوجبات مع برنامج \"تركيا الأسطورية براً\" (إسطنبول -> أنقرة -> كابادوكيا -> باموكالي -> أفسس).",
+            "es": "Coinciden completamente en recorrido, visitas diarias y comidas con el programa \"Turquía Legendaria\" por tierra (Estambul → Ankara → Capadocia → Pamukkale → Éfeso)."
+          }
+        },
+        {
+          "day": "8",
+          "meals": {
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "es": "Desayuno"
+          },
+          "description": {
+            "pt": "Transfer direto do hotel em Esmirna ou Kuşadası para o porto ou aeroporto para partida final.",
+            "it": "Trasferimento diretto dall'hotel a Smirne o Kuşadası al porto o aeroporto per la partenza finale.",
+            "en": "Direct transfer from the hotel in Izmir or Kuşadası to the port or airport for final departure.",
+            "ar": "التوصيل مباشرة من الفندق في إزمير أو كوشاداسي إلى الميناء أو المطار للمغادرة النهائية.",
+            "es": "Traslado directo desde el hotel en Esmirna o Kuşadası al puerto o aeropuerto para la salida final."
+          }
+        }
+      ],
+      "id": "REG-03",
+      "duration": {
+        "pt": "8 dias / 7 noites",
+        "it": "8 giorni / 7 notti",
+        "en": "8 days / 7 nights",
+        "ar": "8 أيام / 7 ليالٍ",
+        "es": "8 días / 7 noches"
+      },
+      "minPax": {
+        "pt": "2 Pax",
+        "it": "2 Pax",
+        "en": "2 Pax",
+        "ar": "فردان",
+        "es": "2 Pax"
+      },
+      "highlights": {
+        "pt": [
+          "Visita ao histórico Bazar de Especiarias no antigo bairro de Eminönü em Istambul.",
+          "Tirar fotos impressionantes sobre o Lago Salgado durante o trajeto para Ancara.",
+          "Visitar os incríveis teatros romanos e as antigas bibliotecas na cidade arqueológica de Éfeso.",
+          "Oportunidade de peregrinação e bênção visitando a sagrada Casa da Virgem Maria no Monte Bülbül."
+        ],
+        "it": [
+          "Visita allo storico Bazar delle Spezie nell'antico quartiere di Eminönü a Istanbul.",
+          "Scattare foto mozzafiato sul Lago Salato durante il viaggio verso Ankara.",
+          "Visitare gli incredibili teatri romani e le antiche biblioteche nella città archeologica di Efeso.",
+          "Opportunità di pellegrinaggio alla sacra Casa della Vergine Maria sul Monte Bülbül."
+        ],
+        "en": [
+          "Visit the historic Egyptian Spice Bazaar in the old Eminönü district of Istanbul.",
+          "Capture stunning photos over the Salt Lake while heading to Ankara.",
+          "Visit the amazing Roman theaters and ancient libraries in the archaeological city of Ephesus.",
+          "Opportunity to make a pilgrimage to the sacred House of the Virgin Mary on Mount Koressos."
+        ],
+        "ar": [
+          "زيارة بازار التوابل المصري التاريخي في حي إمينونو القديم بإسطنبول.",
+          "التقاط صور مذهلة فوق البحيرة الملحية أثناء التوجه لأنقرة.",
+          "زيارة المسارح الرومانية والمكتبات القديمة المذهلة في مدينة أفسس الأثرية.",
+          "فرصة الحج والتبرك بزيارة بيت مريم العذراء المقدس على جبل بلبل."
+        ],
+        "es": [
+          "Visita al histórico Bazar de las Especias en el antiguo barrio de Eminönü en Estambul.",
+          "Tomar fotos impresionantes sobre el Lago Salado mientras se viaja a Ankara.",
+          "Visitar los increíbles teatros romanos y las antiguas bibliotecas en la ciudad arqueológica de Éfeso.",
+          "Oportunidad de peregrinar y bendecirse visitando la sagrada Casa de la Virgen María en el Monte Bülbül."
+        ]
+      },
+      "code": {
+        "pt": "REG-03",
+        "it": "REG-03",
+        "en": "REG-03",
+        "ar": "REG-03",
+        "es": "REG-03"
+      },
+      "overview": {
+        "pt": "Um programa especialmente projetado para viajantes que buscam rotas terrestres cheias de pontos turísticos sem precisar retornar ao ponto de partida por estrada. Ele encurta a rota clássica da Turquia para terminar diretamente na costa do Egeu, tornando-o ideal para quem planeja combinar um tour terrestre com um cruzeiro.",
+        "it": "Un programma appositamente progettato per viaggiatori che cercano percorsi via terra ricchi di monumenti senza dover tornare al punto di partenza su strada. Accorcia il percorso classico della Turchia per terminare direttamente sulla costa dell'Egeo, ideale per chi pianifica di combinare un tour via terra con una crociera.",
+        "en": "A program specially designed for travelers seeking overland journeys full of landmarks without needing to return to the starting point by road. It shortens the classic Turkey route to end directly on the Aegean coast, making it ideal for those planning to combine an overland tour with a sea cruise.",
+        "ar": "برنامج مصمم خصيصاً للمسافرين الباحثين عن رحلات المسارات البرية المليئة بالمعالم دون الحاجة للعودة براً لنقطة البداية. يختصر البرنامج مسار تركيا الكلاسيكي لينتهي مباشرة عند سواحل بحر إيجة؛ مما يجعله مثالياً لمن يخططون للربط بين جولة برية وكروز بحري.",
+        "es": "Un programa diseñado especialmente para viajeros que buscan rutas terrestres llenas de monumentos sin necesidad de regresar al punto de partida por carretera. Acorta la ruta clásica de Turquía para terminar directamente en la costa del Egeo, ideal para quienes planean combinar un tour terrestre con un crucero."
+      },
+      "name": {
+        "pt": "Paixão pela Turquia",
+        "it": "Passione della Turchia",
+        "en": "Passion of Turkey",
+        "ar": "شغف تركيا",
+        "es": "Pasión de Turquía"
+      }
+    },
+    {
+      "days": [
+        {
+          "day": "1–5",
+          "meals": null,
+          "description": {
+            "pt": "Correspondem exatamente ao percurso e às refeições do programa \"Turquia Legendária\" por terra.",
+            "it": "Corrispondono perfettamente al percorso e ai pasti del programma \"Turchia Leggendaria\" via terra.",
+            "en": "Fully match the route and specified meals of the \"Legendary Turkey\" overland program.",
+            "ar": "تتطابق تماماً مع مسار رحلة \"تركيا الأسطورية براً\" والوجبات المحددة فيها.",
+            "es": "Coinciden completamente con el recorrido y las comidas del programa \"Turquía Legendaria\" por tierra."
+          }
+        },
+        {
+          "day": "6",
+          "meals": {
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "es": "Desayuno"
+          },
+          "description": {
+            "pt": "Transfer para o aeroporto da Capadócia, voo de volta para Istambul, depois transfer para o hotel.",
+            "it": "Trasferimento all'aeroporto della Cappadocia, volo di ritorno a Istanbul, poi trasferimento in hotel.",
+            "en": "Transfer to Cappadocia airport, take a flight back to Istanbul, then transfer to hotel.",
+            "ar": "النقل إلى مطار كابادوكيا واستقلال طائرة والعودة طيراناً إلى إسطنبول، ثم الانتقال للفندق.",
+            "es": "Traslado al aeropuerto de Capadocia, vuelo de regreso a Estambul, luego traslado al hotel."
+          }
+        },
+        {
+          "day": "7",
+          "meals": {
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "es": "Desayuno"
+          },
+          "description": {
+            "pt": "Dia livre em Istambul, ou participar de um tour opcional completo pela Cidade Velha (Santa Sofia exterior, Topkapi, Mesquita Azul).",
+            "it": "Giornata libera a Istanbul, o partecipare a un tour opzionale completo della Città Vecchia (Santa Sofia esterno, Topkapi, Moschea Blu).",
+            "en": "Free day in Istanbul, or join an optional full Old City tour (Hagia Sophia exterior, Topkapi Palace, Blue Mosque).",
+            "ar": "يوم حر في إسطنبول، أو الانضمام لرحلة اختيارية كاملة للمدينة القديمة (آيا صوفيا خارجي، توبكابي، والمسجد الأزرق).",
+            "es": "Día libre en Estambul, o unirse a un tour opcional completo de la Ciudad Vieja (Santa Sofía exterior, Topkapi, Mezquita Azul)."
+          }
+        },
+        {
+          "day": "8",
+          "meals": {
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "es": "Desayuno"
+          },
+          "description": {
+            "pt": "Transfer para o aeroporto de Istambul para partida final.",
+            "it": "Trasferimento all'aeroporto di Istanbul per la partenza finale.",
+            "en": "Transfer to Istanbul airport for final departure.",
+            "ar": "التوصيل لمطار إسطنبول للمغادرة النهائية.",
+            "es": "Traslado al aeropuerto de Estambul para la salida final."
+          }
+        }
+      ],
+      "id": "REG-04",
+      "duration": {
+        "pt": "8 dias / 7 noites",
+        "it": "8 giorni / 7 notti",
+        "en": "8 days / 7 nights",
+        "ar": "8 أيام / 7 ليالٍ",
+        "es": "8 días / 7 noches"
+      },
+      "minPax": {
+        "pt": "2 Pax",
+        "it": "2 Pax",
+        "en": "2 Pax",
+        "ar": "فردان",
+        "es": "2 Pax"
+      },
+      "highlights": {
+        "pt": [
+          "Navegar em uma embarcação regular em um cruzeiro opcional exclusivo pelo Bósforo.",
+          "Explorar as igrejas escavadas na rocha e os museus dos vales nas rochas de tufo vulcânico do Vale de Göreme.",
+          "Desfrutar da panorâmica das paisagens do alto do castelo rochoso de Uçhisar.",
+          "Um voo doméstico confortável de volta da Capadócia diretamente para Istambul."
+        ],
+        "it": [
+          "Navigare su un'imbarcazione regolare in un'esclusiva crociera opzionale sul Bosforo.",
+          "Esplorare le chiese rupestri e i musei delle valli nelle rocce di tufo vulcanico della Valle di Göreme.",
+          "Godere della panoramica dei paesaggi dalla cima del castello roccioso di Uçhisar.",
+          "Un comodo volo interno di ritorno dalla Cappadocia direttamente a Istanbul."
+        ],
+        "en": [
+          "Sail on a regular boat on an optional special Bosphorus cruise.",
+          "Explore the rock-hewn churches and valley museums in the volcanic tuff rocks of Göreme Valley.",
+          "Enjoy the panoramic landscapes from the top of the rock castle in Uçhisar.",
+          "A comfortable domestic flight from Cappadocia directly back to Istanbul."
+        ],
+        "ar": [
+          "الإبحار بمركب في جولة اختيارية مميزة عبر مضيق البوسفور.",
+          "استكشاف الكنائس الروك ومتاحف الوديان في صخور التوفا البركانية بوادي جوريم.",
+          "الاستمتاع ببانوراما المناظر الطبيعية من أعلى القلعة الصخرية في أواتش حصار.",
+          "توفير وقت طيران داخلي مريح للعودة من كابادوكيا إلى إسطنبول مباشرة."
+        ],
+        "es": [
+          "Navegar en una embarcación regular en un exclusivo crucero opcional por el Bósforo.",
+          "Explorar las iglesias rupestres y los museos de los valles en las rocas de toba volcánica del Valle de Göreme.",
+          "Disfrutar de la panorámica de los paisajes desde lo alto del castillo rocoso de Uçhisar.",
+          "Un cómodo vuelo nacional de regreso desde Capadocia directamente a Estambul."
+        ]
+      },
+      "code": {
+        "pt": "REG-04",
+        "it": "REG-04",
+        "en": "REG-04",
+        "ar": "REG-04",
+        "es": "REG-04"
+      },
+      "overview": {
+        "pt": "Uma viagem focada principalmente nos dois destinos mais famosos e mágicos da Turquia: o turbilhão de cores de Istambul e as paisagens lunares de contos de fadas da Capadócia. O programa combina a rota terrestre de ida com um voo doméstico confortável para a volta, economizando tempo e aproveitando Istambul.",
+        "it": "Un viaggio incentrato principalmente sulle due destinazioni più famose e magiche della Turchia: il vortice di colori di Istanbul e i paesaggi lunari da favola della Cappadocia. Il programma combina il percorso via terra all'andata con un comodo volo interno per il ritorno per risparmiare tempo e godersi Istanbul.",
+        "en": "A journey focused primarily on Turkey's two most famous and magical destinations: the whirlwind of colors in Istanbul and the fairytale lunar landscapes of Cappadocia. The program combines an overland outbound route with a comfortable domestic flight for the return to save time and enjoy Istanbul.",
+        "ar": "رحلة تركز بشكل أساسي على الوجهتين الأكثر شهرة وسحراً في تركيا: عاصفة الألوان في إسطنبول والمناظر القمرية الخيالية في كابادوكيا. يتميز البرنامج بدمج المسار البري في الذهاب مع توفير طيران داخلي مريح في العودة لاختصار الوقت والاستمتاع بإسطنبول.",
+        "es": "Un viaje centrado principalmente en los dos destinos más famosos y mágicos de Turquía: el torbellino de colores de Estambul y los paisajes lunares de ensueño de Capadocia. El programa combina la ruta terrestre de ida con un cómodo vuelo interno de regreso para ahorrar tiempo y disfrutar de Estambul."
+      },
+      "name": {
+        "pt": "Capadócia Lendária",
+        "it": "Cappadocia Leggendaria",
+        "en": "Legendary Cappadocia",
+        "ar": "كابادوكيا الأسطورية",
+        "es": "Capadocia Legendaria"
+      }
+    },
+    {
+      "id": "REG-05",
+      "code": {
+        "en": "REG-05",
+        "es": "REG-05",
+        "pt": "REG-05",
+        "ar": "REG-05",
+        "it": "REG-05"
+      },
+      "name": {
+        "en": "Admirable Turkey - Summer Route",
+        "es": "Admirable Turquía de Verano",
+        "pt": "Admirável Turquia - Rota de Verão",
+        "ar": "تركيا الرائعة - المسار الصيفي",
+        "it": "Admirabile Turchia - Percorso Estivo"
+      },
+      "duration": {
+        "en": "10 days / 9 nights",
+        "es": "10 días / 9 noches",
+        "pt": "10 dias / 9 noites",
+        "ar": "10 أيام / 9 ليالٍ",
+        "it": "10 giorni / 9 notti"
+      },
+      "minPax": {
+        "en": "2 Pax",
+        "es": "2 Pax",
+        "pt": "2 Pax",
+        "ar": "فردان",
+        "it": "2 Pax"
+      },
+      "overview": {
+        "en": "A vibrant summer package combining the scent of Ottoman and Byzantine history in Turkish cities with coastal relaxation on the Aegean shores. The tour features the possibility of crossing the Turkish border for a day and sailing to the nearby Greek islands.",
+        "es": "Un vibrante paquete veraniego que combina la fragancia de la historia otomana y bizantina en las ciudades turcas con la relajación costera en las orillas del Egeo. El recorrido ofrece la posibilidad de cruzar la frontera turca por un día y navegar hacia las cercanas islas griegas.",
+        "pt": "Um vibrante pacote de verão que combina o aroma da história otomana e bizantina nas cidades turcas com o relaxamento costeiro nas margens do Egeu. O passeio oferece a possibilidade de cruzar a fronteira turca por um dia e navegar para as proximas ilhas gregas.",
+        "ar": "باقة صيفية نابضة بالحياة تجمع بين عبق التاريخ العثماني والبيزنطي في المدن التركية، والاستجمام الساحلي على ضفاف بحر إيجة. تمتاز الرحلة بإمكانية تخطي الحدود التركية ليوم واحد والإبحار نحو الجزر اليونانية القريبة.",
+        "it": "Un vibrante pacchetto estivo che unisce il profumo della storia ottomana e bizantina nelle città turche con il relax costiero sulle rive dell'Egeo. Il tour offre la possibilità di oltrepassare il confine turco per un giorno e navigare verso le vicine isole greche."
+      },
+      "highlights": {
+        "en": [
+          "A special walking tour through the colorful historic neighborhoods of Fener and Balat to explore cultural diversity.",
+          "Visit the ancient Zeyrek Mosque, the second largest standing Byzantine religious building after Hagia Sophia.",
+          "An optional 12-hour ferry trip to the stunning Greek island of \"Chios\" to explore its stone villages.",
+          "Visit the historical pottery workshops on the banks of the Red River in the town of Avanos in Cappadocia."
+        ],
+        "es": [
+          "Un especial recorrido a pie por los coloridos barrios históricos de Fener y Balat para explorar la diversidad cultural.",
+          "Visita a la antigua Mezquita de Zeyrek, el segundo edificio religioso bizantino en pie más grande después de Santa Sofía.",
+          "Un viaje opcional en ferry de 12 horas para visitar la impresionante isla griega de \"Quíos\" y explorar sus pueblos de piedra.",
+          "Visita a los talleres históricos de cerámica a orillas del Río Rojo en la localidad de Avanos en Capadocia."
+        ],
+        "pt": [
+          "Um especial passeio a pé pelos coloridos bairros históricos de Fener e Balat para explorar a diversidade cultural.",
+          "Visita à antiga Mesquita de Zeyrek, o segundo maior edifício religioso bizantino em pé depois de Santa Sofia.",
+          "Uma viagem opcional de balsa de 12 horas para visitar a deslumbrante ilha grega de \"Quios\" e explorar suas aldeias de pedra.",
+          "Visita às oficinas históricas de cerâmica às margens do Rio Vermelho na cidade de Avanos na Capadócia."
+        ],
+        "ar": [
+          "جولة مشي مميزة في أحياء فينير وبالات التاريخية الملونة لاستكشاف التنوع الثقافي.",
+          "زيارة مسجد زيريك الأثري، ثاني أكبر مبنى بيزنطي ديني قائم بعد آيا صوفيا.",
+          "رحلة عبّارة اختيارية لمد 12 ساعة لزيارة جزيرة \"خيوس\" اليونانية الخلابة واستكشاف قراها الحجرية.",
+          "زيارة ورش تصنيع الفخار التاريخية على ضفاف النهر الأحمر في بلدة أوانوس بكابادوكيا."
+        ],
+        "it": [
+          "Una speciale passeggiata attraverso i colorati quartieri storici di Fener e Balat per esplorare la diversità culturale.",
+          "Visita all'antica Moschea di Zeyrek, il secondo più grande edificio religioso bizantino dopo Santa Sofia.",
+          "Un'opzionale gita in traghetto di 12 ore per visitare la splendida isola greca di \"Chio\" ed esplorare i suoi villaggi di pietra.",
+          "Visita ai laboratori storici di ceramica sulle rive del Fiume Rosso nella città di Avanos in Cappadocia."
+        ]
+      },
+      "days": [
+        {
+          "day": "1",
+          "description": {
+            "en": "Arrival at Istanbul Airport, transfer to hotel. Overnight.",
+            "es": "Llegada al aeropuerto de Estambul, traslado al hotel. Alojamiento.",
+            "pt": "Chegada ao aeroporto de Istambul, transfer para o hotel. Pernoitada.",
+            "ar": "الوصول إلى مطار إسطنبول، النقل للفندق والمبيت.",
+            "it": "Arrivo all'aeroporto di Istanbul, trasferimento in hotel. Pernottamento."
+          },
+          "meals": null
+        },
+        {
+          "day": "2",
+          "description": {
+            "en": "Tour through the alleys of historic Fener and Balat, visit to Zeyrek Mosque. Return to hotel on your own (optional Old City tour available).",
+            "es": "Recorrido por las callejuelas de Fener y Balat históricos, visita a la Mezquita de Zeyrek. Regreso al hotel por su cuenta (disponible tour opcional de la Ciudad Vieja).",
+            "pt": "Passeio pelas vielas históricas de Fener e Balat, visita à Mesquita de Zeyrek. Retorno ao hotel por conta própria (tour opcional da Cidade Velha disponível).",
+            "ar": "جولة في أزقة فينير وبالات التاريخية، وزيارة مسجد زيريك الأثري. العودة للفندق بمعرفتك (متاح خيار جولة المدينة القديمة الاختيارية).",
+            "it": "Giro tra i vicoli di Fener e Balat, visita alla Moschea di Zeyrek. Rientro in hotel autonomamente (tour opzionale della Città Vecchia disponibile)."
+          },
+          "meals": {
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "ar": "إفطار",
+            "it": "Colazione"
+          }
+        },
+        {
+          "day": "3",
+          "description": {
+            "en": "Overland to Ankara, visit Anıtkabir (Atatürk's Mausoleum), then continue via the Salt Lake to Cappadocia, visit a carpet workshop.",
+            "es": "Traslado por carretera a Ankara, visita al Anıtkabir, luego continuar por el Lago Salado a Capadocia, visita a taller de alfombras.",
+            "pt": "Viagem terrestre para Ancara, visita ao Anıtkabir, depois continuação via Lago Salgado para a Capadócia, visita a uma oficina de tapetes.",
+            "ar": "التحرك براً إلى أنقرة وزيارة ضريح أتاتورك، ثم إكمال الطريق عبر البحيرة الملحية وصولاً لكابادوكيا وزيارة ورشة سجاد.",
+            "it": "Trasferimento via terra ad Ankara, visita all'Anıtkabir, poi proseguimento via Lago Salato alla Cappadocia, visita a un laboratorio di tappeti."
+          },
+          "meals": {
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "ar": "إفطار + عشاء",
+            "it": "Colazione + Cena"
+          }
+        },
+        {
+          "day": "4",
+          "description": {
+            "en": "(Optional hot air balloon). Visit Göreme Open Air Museum, Imagination Valley, Pigeon Valley, Uçhisar Castle, an underground city, plus onyx and ceramic workshops. (Optional evening show).",
+            "es": "(Globo opcional). Visita al Museo al Aire Libre de Göreme, Valle de la Imaginación, Valle de las Palomas, Castillo de Uçhisar, ciudad subterránea, talleres de ónix y cerámica. (Espectáculo opcional nocturno).",
+            "pt": "(Balão opcional). Visita ao Museu ao Ar Livre de Göreme, Vale da Imaginação, Vale dos Pombos, Castelo de Uçhisar, cidade subterrânea, oficinas de ônix e cerâmica. (Show noturno opcional).",
+            "ar": "(منطاد اختياري). زيارة متحف جوريم المفتوح، وادي الصيادين ووادي الحمام، قلعة أواتش حصار، وإحدى المدن الأرضية، بالإضافة لورش الأونيكس والخزف. (سهرة اختيارية مساءً).",
+            "it": "(Mongolfiera opzionale). Visita al Museo all'Aperto di Göreme, Valle dell'Immaginazione, Valle dei Piccioni, Castello di Uçhisar, città sotterranea, laboratori di onice e ceramica. (Spettacolo serale opzionale)."
+          },
+          "meals": {
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "ar": "إفطار + عشاء",
+            "it": "Colazione + Cena"
+          }
+        },
+        {
+          "day": "5",
+          "description": {
+            "en": "Overland to Pamukkale (8 hrs). Visit the ancient caravanserai (Kervansaray), travertine springs, Hierapolis ancient theater and necropolis, then outlet store.",
+            "es": "Traslado por carretera a Pamukkale (8 h). Visita al antiguo caravasar, manantiales de travertino, teatro antiguo de Hierápolis y su necrópolis, luego tienda outlet.",
+            "pt": "Viagem terrestre para Pamukkale (8 h). Visita ao antigo caravançará, nascentes de travertino, teatro antigo de Hierápolis e sua necrópole, depois loja outlet.",
+            "ar": "التحرك براً لباموكالي (8 ساعات)، زيارة الخان القديم (Kervansaray)، الينابيع الجيرية، ومسرح هيرابوليس القديم ومقبرتها، ثم متجر آوتلت.",
+            "it": "Trasferimento via terra a Pamukkale (8 h). Visita all'antico caravanserraglio, sorgenti di travertino, teatro antico di Hierapolis e sua necropoli, poi outlet."
+          },
+          "meals": {
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "ar": "إفطار + عشاء",
+            "it": "Colazione + Cena"
+          }
+        },
+        {
+          "day": "6",
+          "description": {
+            "en": "Travel to Ephesus, visit Roman ruins, the House of the Virgin Mary, and a leather factory. Overnight in Kuşadası or Izmir.",
+            "es": "Traslado a Éfeso, visita a las ruinas romanas, Casa de la Virgen María y fábrica de cuero. Alojamiento en Kuşadası o Esmirna.",
+            "pt": "Transfer para Éfeso, visita às ruínas romanas, Casa da Virgem Maria e fábrica de couro. Pernoitada em Kuşadası ou Esmirna.",
+            "ar": "التحرك إلى أفسس وزيارة آثارها الرومانية وموقع بيت مريم العذراء ومصنع الجلود، ثم المبيت في كوشاداسي أو إزمير.",
+            "it": "Trasferimento a Efeso, visita alle rovine romane, Casa della Vergine Maria e conceria. Pernottamento a Kuşadası o Smirne."
+          },
+          "meals": {
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "ar": "إفطار + عشاء",
+            "it": "Colazione + Cena"
+          }
+        },
+        {
+          "day": "7",
+          "description": {
+            "en": "Free day in Kuşadası. (Optional 12-hour ferry trip to the Greek island of Chios or Samos to explore mastic villages, workshops, and ancient Byzantine towns).",
+            "es": "Día libre en Kuşadası. (Viaje opcional en ferry de 12 h a la isla griega de Quíos o Samos para explorar pueblos de mástique, talleres y pueblos bizantinos).",
+            "pt": "Dia livre em Kuşadası. (Viagem opcional de balsa de 12 h para a ilha grega de Quios ou Samos para explorar vilas de mástique, oficinas e vilas bizantinas).",
+            "ar": "يوم حر في كوشاداسي. (متاح رحلة اختيارية كاملة 12 ساعة بالعبّارة لزيارة جزيرة خيوس اليونانية Chios أو جزيرة ساموس لاستكشاف قرى إنتاج المصطكى، الورش والبلدات البيزنطية القديمة).",
+            "it": "Giorno libero a Kuşadası. (Gita opzionale in traghetto di 12 h all'isola greca di Chio o Samo per esplorare villaggi del mastice, laboratori e borghi bizantini)."
+          },
+          "meals": {
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "ar": "إفطار + عشاء",
+            "it": "Colazione + Cena"
+          }
+        },
+        {
+          "day": "8",
+          "description": {
+            "en": "Overland to Bursa, cross the Osman Gazi Bridge, visit the Grand Mosque, Green Mosque and its Tomb, then return to Istanbul for overnight.",
+            "es": "Traslado por carretera a Bursa, cruzar el puente Osman Gazi, visitar la Gran Mezquita, Mezquita Verde y su Tumba, luego regreso a Estambul para alojamiento.",
+            "pt": "Viagem terrestre para Bursa, atravessar a ponte Osman Gazi, visitar a Grande Mesquita, Mesquita Verde e seu Túmulo, depois retorno a Istambul para pernoite.",
+            "ar": "التحرك براً إلى بورصة، عبور جسر عثمان غازي المعلق وزيارة المسجد الكبير والمسجد الأخضر وضريحه، ثم العودة لإسطنبول للمبيت.",
+            "it": "Trasferimento via terra a Bursa, attraversare il ponte Osman Gazi, visitare la Grande Moschea, Moschea Verde e la sua Tomba, poi ritorno a Istanbul per pernottamento."
+          },
+          "meals": {
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "ar": "إفطار",
+            "it": "Colazione"
+          }
+        },
+        {
+          "day": "9",
+          "description": {
+            "en": "Free day in Istanbul for shopping (optional full Bosphorus boat tour, Taksim, and Galata including lunch).",
+            "es": "Día libre en Estambul para compras (disponible tour opcional completo en barco por el Bósforo, Taksim y Gálata con almuerzo incluido).",
+            "pt": "Dia livre em Istambul para compras (tour opcional completo de barco pelo Bósforo, Taksim e Gálata com almoço incluído).",
+            "ar": "يوم حر في إسطنبول للتسوق (متاح رحلة اختيارية كاملة بالمركب في البوسفور وحي تقسيم والغالاطا شاملة الغداء).",
+            "it": "Giorno libero a Istanbul per shopping (tour opzionale completo in barca sul Bosforo, Taksim e Galata con pranzo incluso)."
+          },
+          "meals": {
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "ar": "إفطار",
+            "it": "Colazione"
+          }
+        },
+        {
+          "day": "10",
+          "description": {
+            "en": "Transfer to Istanbul Airport for departure.",
+            "es": "Traslado al aeropuerto de Estambul para la salida.",
+            "pt": "Transfer para o aeroporto de Istambul para partida.",
+            "ar": "التوصيل لمطار إسطنبول للمغادرة.",
+            "it": "Trasferimento all'aeroporto di Istanbul per la partenza."
+          },
+          "meals": {
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "ar": "إفطار",
+            "it": "Colazione"
+          }
+        }
+      ]
+    },
+    {
+      "id": "REG-05-B",
+      "code": {
+        "en": "REG-05-B",
+        "ar": "REG-05-B",
+        "pt": "REG-05-B",
+        "es": "REG-05-B",
+        "it": "REG-05-B"
+      },
+      "name": {
+        "en": "Admirable Turkey - Winter Route",
+        "ar": "تركيا الرائعة - المسار الشتوي",
+        "pt": "Admirável Turquia - Rota de Inverno",
+        "es": "Admirable Turquía de Invierno",
+        "it": "Admirabile Turchia - Percorso Invernale"
+      },
+      "duration": {
+        "en": "10 days / 9 nights",
+        "ar": "10 أيام / 9 ليالٍ",
+        "pt": "10 dias / 9 noites",
+        "es": "10 días / 9 noches",
+        "it": "10 giorni / 9 notti"
+      },
+      "minPax": {
+        "en": "2 Pax",
+        "ar": "فردان",
+        "pt": "2 Pax",
+        "es": "2 Pax",
+        "it": "2 Pax"
+      },
+      "overview": {
+        "en": "An exceptional winter adventure showcasing the magic of Cappadocia and Anatolia under a blanket of white snow. This program replaces coastal activities with an exciting sports experience for winter enthusiasts atop one of the region's highest dormant volcanoes.",
+        "ar": "مغامرة شتوية استثنائية تُبرز سحر كابادوكيا والأناضول تحت غطاء من الجليد الأبيض. يستبدل هذا البرنامج الأنشطة الساحلية بتجربة رياضية مثيرة لعشاق الشتاء فوق قمم أحد أعلى البراكين الخامدة في المنطقة.",
+        "pt": "Uma excepcional aventura de inverno mostrando a magia da Capadócia e da Anatólia sob um manto de neve branca. Este programa substitui as atividades costeiras por uma emocionante experiência esportiva para os amantes do inverno no topo de um dos vulcões extintos mais altos da região.",
+        "es": "Una excepcional aventura invernal que muestra la magia de Capadocia y Anatolia bajo un manto de nieve blanca. Este programa sustituye las actividades costeras por una emocionante experiencia deportiva para los amantes del invierno en la cima de uno de los volcanes inactivos más altos de la región.",
+        "it": "Un'eccezionale avventura invernale che mostra la magia della Cappadocia e dell'Anatolia sotto un manto di neve bianca. Questo programma sostituisce le attività costiere con un'emozionante esperienza sportiva per gli amanti dell'inverno sulla cima di uno dei più alti vulcani spenti della regione."
+      },
+      "highlights": {
+        "en": [
+          "Exciting winter skiing experience on the dormant volcano Mount Erciyes.",
+          "Enjoy the cable car ride and admire the enchanting icy landscapes of Anatolia from above.",
+          "Drink traditional \"Rakı\" and attend folk dance shows in Cappadocia's cave restaurants.",
+          "A complete winter ski clothing package (jacket and trousers) provided for a comfortable and safe experience."
+        ],
+        "ar": [
+          "تجربة التزلج الشتوي المثيرة فوق بركان وجبل \"إرجيس\" (Erciyes) الخامد.",
+          "الاستمتاع بركوب التلفريك الجبلي ومشاهدة المناظر الجليدية الساحرة للأناضول من الأعلى.",
+          "شرب مشروب \"الراكي\" التقليدي وحضور عروض الرقص الفلكلوري داخل مطاعم الكهوف في كابادوكيا.",
+          "توفير باقة ملابس تزلج شتوية متكاملة (جاكيت وبنطال) لضمان تجربة مريحة وآمنة."
+        ],
+        "pt": [
+          "Emocionante experiência de esqui de inverno no vulcão extinto Monte Erciyes.",
+          "Aproveitar o teleférico da montanha e admirar as paisagens geladas encantadoras da Anatólia do alto.",
+          "Beber o tradicional \"Rakı\" e assistir a apresentações de dança folclórica nos restaurantes caverna da Capadócia.",
+          "Pacote completo de roupas de esqui de inverno (jaqueta e calça) para uma experiência confortável e segura."
+        ],
+        "es": [
+          "Emocionante experiencia de esquí invernal en el volcán inactivo Monte Erciyes.",
+          "Disfrutar del teleférico de montaña y contemplar los paisajes helados de Anatolia desde las alturas.",
+          "Beber \"raki\" tradicional y asistir a espectáculos de danza folclórica en los restaurantes cueva de Capadocia.",
+          "Paquete completo de ropa de esquí invernal (chaqueta y pantalón) para una experiencia cómoda y segura."
+        ],
+        "it": [
+          "Emozionante esperienza sciistica invernale sul vulcano spento Monte Erciyes.",
+          "Godersi la funivia e ammirare gli incantevoli paesaggi ghiacciati dell'Anatolia dall'alto.",
+          "Bere il tradizionale \"Rakı\" e assistere a spettacoli di danze folkloristiche nei ristoranti nelle grotte della Cappadocia.",
+          "Pacchetto completo di abbigliamento da sci invernale (giacca e pantaloni) per un'esperienza confortevole e sicura."
+        ]
+      },
+      "days": [
+        {
+          "meals": {
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "pt": "Café da manhã",
+            "es": "Desayuno",
+            "it": "Colazione"
+          },
+          "day": "1–2",
+          "description": {
+            "en": "Arrival in Istanbul. Half-day tour including the Hippodrome, Blue Mosque, and exterior view of Hagia Sophia.",
+            "ar": "الوصول لإسطنبول. جولة نصف يوم تشمل ميدان سباق الخيل، المسجد الأزرق، وإطلالة آيا صوفيا الخارجية.",
+            "pt": "Chegada a Istambul. Tour de meio dia incluindo o Hipódromo, a Mesquita Azul e vista externa de Santa Sofia.",
+            "es": "Llegada a Estambul. Tour de medio día que incluye el Hipódromo, la Mezquita Azul y vista exterior de Santa Sofía.",
+            "it": "Arrivo a Istanbul. Giro di mezza giornata che include l'Ippodromo, la Moschea Blu e la vista esterna di Santa Sofia."
+          }
+        },
+        {
+          "meals": {
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء",
+            "pt": "Café da manhã + Jantar",
+            "es": "Desayuno + Cena",
+            "it": "Colazione + Cena"
+          },
+          "day": "3–4",
+          "description": {
+            "en": "Overland to Ankara and Anıtkabir, then to Cappadocia. Visit valley museums (Göreme, Uçhisar, underground city).",
+            "ar": "الانتقال براً لأنقرة وضريح أتاتورك ثم كابادوكيا وزيارة متاحف الوديان (جوريم، أواتش حصار، والمدينة الأرضية).",
+            "pt": "Viagem terrestre para Ancara e Anıtkabir, depois para a Capadócia. Visita aos museus dos vales (Göreme, Uçhisar, cidade subterrânea).",
+            "es": "Traslado por carretera a Ankara y Anıtkabir, luego a Capadocia. Visita a los museos de los valles (Göreme, Uçhisar, ciudad subterránea).",
+            "it": "Trasferimento via terra ad Ankara e Anıtkabir, poi in Cappadocia. Visita ai musei delle valli (Göreme, Uçhisar, città sotterranea)."
+          }
+        },
+        {
+          "meals": {
+            "en": "Breakfast + Lunch + Dinner",
+            "ar": "إفطار + غداء + عشاء",
+            "pt": "Café da manhã + Almoço + Jantar",
+            "es": "Desayuno + Almuerzo + Cena",
+            "it": "Colazione + Pranzo + Cena"
+          },
+          "day": "5",
+          "description": {
+            "en": "Winter ski tour: transfer to Mount Erciyes. Free time for shopping and skiing, cable car ride, lunch included with clothing provided, return to hotel around 17:00.",
+            "ar": "جولة التزلج الشتوية: الانتقال إلى جبل إرجيس (Erciyes). وقت حر للتسوق والتزلج، استخدام التلفريك، ووجبة الغداء متضمنة الملابس، والعودة للفندق حوالي 17:00.",
+            "pt": "Tour de esqui de inverno: transfer para o Monte Erciyes. Tempo livre para compras e esqui, teleférico, almoço incluído com roupas fornecidas, retorno ao hotel por volta das 17:00.",
+            "es": "Tour de esquí invernal: traslado al Monte Erciyes. Tiempo libre para compras y esquí, teleférico, almuerzo incluido con ropa proporcionada, regreso al hotel sobre las 17:00.",
+            "it": "Tour sciistico invernale: trasferimento al Monte Erciyes. Tempo libero per shopping e sci, funivia, pranzo incluso con abbigliamento fornito, rientro in hotel verso le 17:00."
+          }
+        },
+        {
+          "meals": null,
+          "day": "6–10",
+          "description": {
+            "en": "Follow the same landmarks and route as the summer program (travel to Pamukkale and its ruins, then Ephesus and the House of the Virgin Mary, then Bursa and return to Istanbul for a free day and departure).",
+            "ar": "يتبع نفس معالم ومسار البرنامج الصيفي (التحرك لباموكالي وآثارها، ثم أفسس وبيت مريم العذراء، ثم بورصة والعودة لإسطنبول لقضاء يوم حر والمغادرة).",
+            "pt": "Seguem os mesmos pontos de interesse e percurso do programa de verão (viagem para Pamukkale e suas ruínas, depois Éfeso e a Casa da Virgem Maria, depois Bursa e retorno a Istambul para um dia livre e partida).",
+            "es": "Siguen los mismos puntos de interés y recorrido del programa de verano (traslado a Pamukkale y sus ruinas, luego Éfeso y la Casa de la Virgen María, luego Bursa y regreso a Estambul para un día libre y salida).",
+            "it": "Seguono gli stessi punti di interesse e percorso del programma estivo (trasferimento a Pamukkale e le sue rovine, poi Efeso e la Casa della Vergine Maria, poi Bursa e ritorno a Istanbul per un giorno libero e partenza)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "REG-06",
+      "code": {
+        "en": "REG-06",
+        "ar": "REG-06",
+        "pt": "REG-06",
+        "it": "REG-06",
+        "es": "REG-06"
+      },
+      "name": {
+        "en": "Heart of Turkey (Istanbul & Cappadocia by Air)",
+        "ar": "قلب تركيا (إسطنبول وكابادوكيا طيران)",
+        "pt": "Coração da Turquia",
+        "it": "Cuore della Turchia",
+        "es": "Corazón de Turquía"
+      },
+      "duration": {
+        "en": "7 days / 6 nights",
+        "ar": "7 أيام / 6 ليالٍ",
+        "pt": "7 dias / 6 noites",
+        "it": "7 giorni / 6 notti",
+        "es": "7 días / 6 noches"
+      },
+      "minPax": {
+        "en": "2 Pax",
+        "ar": "فردان",
+        "pt": "2 Pax",
+        "it": "2 Pax",
+        "es": "2 Pax"
+      },
+      "overview": {
+        "en": "This is the fastest and most comfortable program for those who want to skip long distances, relying entirely on domestic flights to travel directly between Turkey's two beating hearts: the history of Istanbul and the volcanic natural wonders of Cappadocia.",
+        "ar": "هذا البرنامج هو الأسرع والأكثر راحة لمن يريد اختصار المسافات الطويلة؛ حيث يعتمد بالكامل على الطيران الداخلي للانتقال مباشرة بين قلبي تركيا النابضين: تاريخ إسطنبول وعجائب الطبيعة البركانية في كابادوكيا.",
+        "pt": "Este é o programa mais rápido e confortável para quem quer pular longas distâncias, baseando-se inteiramente em voos domésticos para viajar diretamente entre os dois corações pulsantes da Turquia: a história de Istambul e as maravilhas naturais vulcânicas da Capadócia.",
+        "it": "Questo è il programma più veloce e comodo per chi vuole saltare le lunghe distanze, basandosi interamente su voli interni per viaggiare direttamente tra i due cuori pulsanti della Turchia: la storia di Istanbul e le meraviglie naturali vulcaniche della Cappadocia.",
+        "es": "Este es el programa más rápido y cómodo para quienes desean acortar largas distancias, basándose completamente en vuelos internos para viajar directamente entre los dos corazones palpitantes de Turquía: la historia de Estambul y las maravillas naturales volcánicas de Capadocia."
+      },
+      "highlights": {
+        "en": [
+          "Walk through the contemporary Taksim district and explore the historic Flower Passage and fish market.",
+          "Take unique souvenir photos of the Galata Tower, the 14th-century Genoese icon.",
+          "Guided tour of Pasabağ (Monks Valley) and see the famous fairy chimney rock formations.",
+          "Enjoy a delicious local lunch in the town of Avanos, famous for pottery in Cappadocia."
+        ],
+        "ar": [
+          "السير في حي تقسيم المعاصر واستكشاف ممر الزهور التاريخي وسوق السمك.",
+          "التقاط صور تذكارية فريدة لبرج غالاطا، الأيقونة الجنوية من القرن الرابع عشر.",
+          "جولة مع مرشد سياحي في وادي الرهبان (Pasabaği) ورؤية المداخن المخروطية الشهيرة.",
+          "الاستمتاع بوجبة غداء محلية شهية في بلدة أوانوس الشهيرة بكابادوكيا."
+        ],
+        "pt": [
+          "Caminhar pelo contemporâneo bairro de Taksim e explorar a histórica Passagem das Flores e o mercado de peixe.",
+          "Tirar fotos de lembrança únicas da Torre de Gálata, o ícone genovês do século XIV.",
+          "Tour guiado pelo Vale dos Monges (Pasabağ) e ver as famosas chaminés de fadas cônicas.",
+          "Desfrutar de um delicioso almoço local na cidade de Avanos, famosa pela cerâmica na Capadócia."
+        ],
+        "it": [
+          "Passeggiare nel contemporaneo quartiere di Taksim ed esplorare lo storico Passaggio dei Fiori e il mercato del pesce.",
+          "Scattare foto ricordo uniche della Torre di Galata, l'icona genovese del XIV secolo.",
+          "Tour guidato della Valle dei Monaci (Pasabağ) e vedere le famose cheminée delle fate coniche.",
+          "Gustare un delizioso pranzo locale nella città di Avanos, famosa per la ceramica in Cappadocia."
+        ],
+        "es": [
+          "Pasear por el contemporáneo barrio de Taksim y explorar el histórico Pasaje de las Flores y el mercado de pescado.",
+          "Tomar fotos únicas de recuerdo de la Torre de Gálata, el icono genovés del siglo XIV.",
+          "Recorrido guiado por el Valle de los Monjes (Pasabağ) y ver las famosas chimeneas de hadas cónicas.",
+          "Disfrutar de un delicioso almuerzo local en la localidad de Avanos, famosa por su cerámica en Capadocia."
+        ]
+      },
+      "days": [
+        {
+          "day": "1",
+          "description": {
+            "en": "Arrival in Istanbul, transfer to hotel. Overnight.",
+            "ar": "الوصول إلى إسطنبول والنقل للفندق والمبيت.",
+            "pt": "Chegada a Istambul, transfer para o hotel. Pernoitada.",
+            "it": "Arrivo a Istanbul, trasferimento in hotel. Pernottamento.",
+            "es": "Llegada a Estambul, traslado al hotel. Alojamiento."
+          },
+          "meals": null
+        },
+        {
+          "day": "2",
+          "description": {
+            "en": "Full Old City tour (Hagia Sophia exterior, Topkapi Palace, Blue Mosque, Hippodrome, Grand Bazaar).",
+            "ar": "جولة المدينة القديمة الكاملة (آيا صوفيا خارجي، قصر توبكابي، المسجد الأزرق، الهيبودروم، والجراند بازار).",
+            "pt": "Tour completo da Cidade Velha (Santa Sofia exterior, Palácio de Topkapi, Mesquita Azul, Hipódromo, Grande Bazar).",
+            "it": "Giro completo della Città Vecchia (Santa Sofia esterno, Palazzo di Topkapi, Moschea Blu, Ippodromo, Gran Bazar).",
+            "es": "Recorrido completo de la Ciudad Vieja (Santa Sofía exterior, Palacio de Topkapi, Mezquita Azul, Hipódromo, Gran Bazar)."
+          },
+          "meals": {
+            "en": "Breakfast + Lunch",
+            "ar": "إفطار + غداء",
+            "pt": "Café da manhã + Almoço",
+            "it": "Colazione + Pranzo",
+            "es": "Desayuno + Almuerzo"
+          }
+        },
+        {
+          "day": "3",
+          "description": {
+            "en": "Morning Bosphorus boat tour, followed by a tour of Taksim district, Istiklal Street, and Galata. Afternoon transfer to airport for flight to Cappadocia, reception, dinner, and overnight.",
+            "ar": "جولة البوسفور الصباحية بالمركب، تليها جولة حي تقسيم وشارع استقلال والغالاطا. بعد الظهر، النقل للمطار للطيران إلى كابادوكيا، الاستقبال والعشاء بالمبيت.",
+            "pt": "Passeio matinal de barco pelo Bósforo, seguido de um tour por Taksim, Rua Istiklal e Gálata. À tarde, transfer para o aeroporto para voo para a Capadócia, recepção, jantar e pernoite.",
+            "it": "Giro mattutino in barca sul Bosforo, seguito da un tour di Taksim, via Istiklal e Galata. Pomeriggio trasferimento in aeroporto per il volo per la Cappadocia, accoglienza, cena e pernottamento.",
+            "es": "Paseo matutino en barco por el Bósforo, seguido de un recorrido por Taksim, calle Istiklal y Gálata. Por la tarde, traslado al aeropuerto para volar a Capadocia, recepción, cena y alojamiento."
+          },
+          "meals": {
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena",
+            "es": "Desayuno + Cena"
+          }
+        },
+        {
+          "day": "4",
+          "description": {
+            "en": "Full tour of Northern Cappadocia: Göreme Open Air Museum, Ortahisar view, Pasabağ (Monks Valley), lunch in Avanos, Devrent Valley, Three Hills (Üç Güzeller) in Ürgüp, then Göreme panorama.",
+            "ar": "جولة كاملة في شمال كابادوكيا تشمل: متحف جوريم المفتوح، إطلالة أورتا حصار، بونباسي (وادي الرهبان)، الغداء في أوانوس، معالم وادي ديرفنت ووادي التلال الثلاثة في أورجوب، ثم بانوراما جوريم.",
+            "pt": "Tour completo do norte da Capadócia: Museu ao Ar Livre de Göreme, vista de Ortahisar, Pasabağ (Vale dos Monges), almoço em Avanos, Vale de Devrent, Três Colinas (Üç Güzeller) em Ürgüp, depois panorama de Göreme.",
+            "it": "Giro completo della Cappadocia settentrionale: Museo all'Aperto di Göreme, vista di Ortahisar, Pasabağ (Valle dei Monaci), pranzo ad Avanos, Valle di Devrent, Tre Colline (Üç Güzeller) a Ürgüp, poi panorama di Göreme.",
+            "es": "Recorrido completo del norte de Capadocia: Museo al Aire Libre de Göreme, vista de Ortahisar, Pasabağ (Valle de los Monjes), almuerzo en Avanos, Valle de Devrent, Tres Colinas (Üç Güzeller) en Ürgüp, luego panorama de Göreme."
+          },
+          "meals": {
+            "en": "Breakfast + Lunch + Dinner",
+            "ar": "إفطار + غداء + عشاء",
+            "pt": "Café da manhã + Almoço + Jantar",
+            "it": "Colazione + Pranzo + Cena",
+            "es": "Desayuno + Almuerzo + Cena"
+          }
+        },
+        {
+          "day": "5",
+          "description": {
+            "en": "Free day in Cappadocia (or optional Southern Cappadocia tour).",
+            "ar": "يوم حر في كابادوكيا (أو رحلة اختيارية لجنوب كابادوكيا).",
+            "pt": "Dia livre na Capadócia (ou tour opcional pelo sul da Capadócia).",
+            "it": "Giorno libero in Cappadocia (o tour opzionale della Cappadocia meridionale).",
+            "es": "Día libre en Capadocia (o tour opcional por el sur de Capadocia)."
+          },
+          "meals": {
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena",
+            "es": "Desayuno + Cena"
+          }
+        },
+        {
+          "day": "6",
+          "description": {
+            "en": "Transfer to Cappadocia airport for return flight to Istanbul, free afternoon, overnight.",
+            "ar": "النقل لمطار كابادوكيا للطيران عودة إلى إسطنبول، وقت حر بعد الظهر والمبيت.",
+            "pt": "Transfer para o aeroporto da Capadócia para voo de volta a Istambul, tarde livre, pernoite.",
+            "it": "Trasferimento all'aeroporto della Cappadocia per il volo di ritorno a Istanbul, pomeriggio libero, pernottamento.",
+            "es": "Traslado al aeropuerto de Capadocia para vuelo de regreso a Estambul, tarde libre, alojamiento."
+          },
+          "meals": {
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "es": "Desayuno"
+          }
+        },
+        {
+          "day": "7",
+          "description": {
+            "en": "Transfer to Istanbul Airport for final departure.",
+            "ar": "النقل لمطار إسطنبول للمغادرة النهائية.",
+            "pt": "Transfer para o aeroporto de Istambul para partida final.",
+            "it": "Trasferimento all'aeroporto di Istanbul per la partenza finale.",
+            "es": "Traslado al aeropuerto de Estambul para la salida final."
+          },
+          "meals": {
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "es": "Desayuno"
+          }
+        }
+      ]
+    },
+    {
+      "id": "REG-07",
+      "code": {
+        "en": "REG-07",
+        "ar": "REG-07",
+        "pt": "REG-07",
+        "it": "REG-07",
+        "es": "REG-07"
+      },
+      "name": {
+        "en": "Turkish Riviera Classic",
+        "ar": "الريفييرا التركية الكلاسيكية",
+        "pt": "Riviera Turca Clássica",
+        "it": "Riviera Turca Classica",
+        "es": "Riviera Turca"
+      },
+      "duration": {
+        "en": "12 days / 11 nights",
+        "ar": "12 يوماً / 11 ليلة",
+        "pt": "12 dias / 11 noites",
+        "it": "12 giorni / 11 notti",
+        "es": "12 días / 11 noches"
+      },
+      "minPax": {
+        "en": "2 Pax",
+        "ar": "فردان",
+        "pt": "2 Pax",
+        "it": "2 Pax",
+        "es": "2 Pax"
+      },
+      "overview": {
+        "en": "The perfect blend of luxury historical exploration and upscale coastal relaxation. After an intensive cultural tour of Anatolia's natural museums and archaeological cities, the program transitions to a tranquil beach stay in the nightlife and luxury capital — Bodrum.",
+        "ar": "المزيج المثالي بين الرحلات الاستكشافية التاريخية الفاخرة والاسترخاء الساحلي الراقي. بعد جولة ثقافية مكثفة في متاحف الأناضول الطبيعية والمدن الأثرية، ينتقل البرنامج ليمنحك إقامة شاطئية هادئة في عاصمة السهر والرفاهية \"بودروم\".",
+        "pt": "A combinação perfeita entre explorações históricas de luxo e relaxamento costeiro exclusivo. Após um intenso tour cultural pelos museus naturais da Anatólia e cidades arqueológicas, o programa faz a transição para uma estadia tranquila à beira-mar na capital do entretenimento e luxo — Bodrum.",
+        "it": "La combinazione perfetta tra esplorazioni storiche di lusso e relax costiero esclusivo. Dopo un intenso tour culturale dei musei naturali dell'Anatolia e delle città archeologiche, il programma passa a un soggiorno balneare tranquillo nella capitale del divertimento e del lusso — Bodrum.",
+        "es": "La combinación perfecta entre expediciones históricas de lujo y relajación costera exclusiva. Tras un intensivo recorrido cultural por los museos naturales de Anatolia y las ciudades arqueológicas, el programa transita a una estancia tranquila de playa en la capital del ocio y el lujo — Bodrum."
+      },
+      "highlights": {
+        "en": [
+          "Explore the ruins of the Asclepieion in Pergamon, considered the first psychiatric hospital in history.",
+          "Private transfer with car and driver to the luxurious coastal city of Bodrum.",
+          "Spend completely free days lounging before the turquoise waters of the Aegean Sea in Bodrum resorts.",
+          "Attend a special fashion show of the finest and most elegant Turkish leather jackets in Ephesus."
+        ],
+        "ar": [
+          "استكشاف أطلال مستشفى \"أسكليبيون\" في برغامة، الذي يُعد أول مستشفى للصحة النفسية في التاريخ.",
+          "الانتقال الخاص بسيارة وسائق إلى مدينة \"بودروم\" الساحلية الفاخرة.",
+          "قضاء أيام حرة بالكامل للاستلقاء أمام مياه بحر إيجة الفيروزية في منتجعات بودروم.",
+          "حضور عرض أزياء خاص لأفخم وأرقى سترات الجلود التركية في أفسس."
+        ],
+        "pt": [
+          "Explorar as ruínas do Asclepeion em Pérgamo, considerado o primeiro hospital psiquiátrico da história.",
+          "Transferência privada com carro e motorista para a luxuosa cidade costeira de Bodrum.",
+          "Passar dias completamente livres relaxando em frente às águas turquesas do Mar Egeu nos resorts de Bodrum.",
+          "Assistir a um desfile de moda especial das mais elegantes jaquetas de couro turcas em Éfeso."
+        ],
+        "it": [
+          "Esplorare le rovine dell'Asclepeion a Pergamo, considerato il primo ospedale psichiatrico della storia.",
+          "Trasferimento privato con auto e autista alla lussuosa città costiera di Bodrum.",
+          "Trascorrere giorni completamente liberi rilassandosi davanti alle acque turchesi del Mar Egeo nei resort di Bodrum.",
+          "Assistere a una sfilata di moda speciale delle più eleganti giacche di pelle turche a Efeso."
+        ],
+        "es": [
+          "Explorar las ruinas del Asclepeion en Pérgamo, considerado el primer hospital de salud mental de la historia.",
+          "Traslado privado con coche y chófer a la lujosa ciudad costera de Bodrum.",
+          "Pasar días completamente libres descansando frente a las aguas turquesas del mar Egeo en los resorts de Bodrum.",
+          "Asistir a un desfile de moda especial de los mejores y más elegantes chaquetas de cuero turco en Éfeso."
+        ]
+      },
+      "days": [
+        {
+          "day": "1–7",
+          "description": {
+            "en": "Fully match the route, overland tours, and meals of the \"Legendary Turkey\" overland program, up to the visit of Ephesus ruins, House of the Virgin Mary, and the leather factory.",
+            "ar": "تتطابق تماماً في مسارها وجولاتها براً والوجبات مع برنامج \"تركيا الأسطورية براً\" حتى زيارة آثار أفسس وبيت مريم العذراء ومصنع الجلود.",
+            "pt": "Correspondem exatamente no percurso, passeios terrestres e refeições ao programa \"Turquia Legendária\" até a visita das ruínas de Éfeso, Casa da Virgem Maria e a fábrica de couro.",
+            "it": "Corrispondono perfettamente nel percorso, tour via terra e pasti al programma \"Turchia Leggendaria\" fino alla visita delle rovine di Efeso, Casa della Vergine Maria e la conceria.",
+            "es": "Coinciden completamente en recorrido, giras por tierra y comidas con el programa \"Turquía Legendaria\" hasta la visita de las ruinas de Éfeso, Casa de la Virgen María y la fábrica de cuero."
+          },
+          "meals": null
+        },
+        {
+          "day": "8",
+          "description": {
+            "en": "Private driver transfer (2.5 hrs) to the Bodrum coastal resort. Free afternoon at the hotel, overnight.",
+            "ar": "النقل مع سائق فقط (ساعتان ونصف) لمنتجع بودروم الساحلي (Bodrum)، وقت حر بالفندق بعد الظهر والمبيت.",
+            "pt": "Transferência com motorista privado (2.5 h) para o resort costeiro de Bodrum. Tarde livre no hotel, pernoite.",
+            "it": "Trasferimento con autista privato (2.5 h) al resort costiero di Bodrum. Pomeriggio libero in hotel, pernottamento.",
+            "es": "Traslado con conductor privado (2.5 h) al resort costero de Bodrum. Tarde libre en el hotel, alojamiento."
+          },
+          "meals": {
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena",
+            "es": "Desayuno + Cena"
+          }
+        },
+        {
+          "day": "9",
+          "description": {
+            "en": "Completely free day in Bodrum to relax on the beaches and enjoy the resort.",
+            "ar": "يوم حر بالكامل في بودروم للاسترخاء على الشواطئ والاستمتاع بالمنتجع.",
+            "pt": "Dia completamente livre em Bodrum para relaxar nas praias e aproveitar o resort.",
+            "it": "Giornata completamente libera a Bodrum per rilassarsi sulle spiagge e godersi il resort.",
+            "es": "Día completamente libre en Bodrum para relajarse en las playas y disfrutar del resort."
+          },
+          "meals": {
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena",
+            "es": "Desayuno + Cena"
+          }
+        },
+        {
+          "day": "10",
+          "description": {
+            "en": "Transfer to Bodrum airport for return flight to Istanbul, hotel overnight.",
+            "ar": "النقل لمطار بودروم للطيران عودة إلى إسطنبول، والمبيت بالفندق.",
+            "pt": "Transfer para o aeroporto de Bodrum para voo de volta a Istambul, pernoite no hotel.",
+            "it": "Trasferimento all'aeroporto di Bodrum per il volo di ritorno a Istanbul, pernottamento in hotel.",
+            "es": "Traslado al aeropuerto de Bodrum para vuelo de regreso a Estambul, alojamiento en hotel."
+          },
+          "meals": {
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "es": "Desayuno"
+          }
+        },
+        {
+          "day": "11",
+          "description": {
+            "en": "Completely free day in Istanbul for relaxation or a classic tour.",
+            "ar": "يوم حر بالكامل في إسطنبول للاستجمام أو جولة كلاسيكية.",
+            "pt": "Dia completamente livre em Istambul para descanso ou um tour clássico.",
+            "it": "Giornata completamente libera a Istanbul per relax o un tour classico.",
+            "es": "Día completamente libre en Estambul para descanso o un tour clásico."
+          },
+          "meals": {
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "es": "Desayuno"
+          }
+        },
+        {
+          "day": "12",
+          "description": {
+            "en": "Transfer to airport for final departure.",
+            "ar": "التوصيل للمطار للمغادرة النهائية.",
+            "pt": "Transfer para o aeroporto para partida final.",
+            "it": "Trasferimento in aeroporto per la partenza finale.",
+            "es": "Traslado al aeropuerto para la salida final."
+          },
+          "meals": {
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "es": "Desayuno"
+          }
+        }
+      ]
+    },
+    {
+      "id": "REG-08",
+      "code": {
+        "en": "REG-08",
+        "ar": "REG-08",
+        "pt": "REG-08",
+        "it": "REG-08",
+        "es": "REG-08"
+      },
+      "name": {
+        "en": "Stop Over (Quick Stop in Istanbul)",
+        "ar": "التوقف السريع في إسطنبول",
+        "pt": "Stop Over",
+        "it": "Stop Over",
+        "es": "Stop Over"
+      },
+      "duration": {
+        "en": "3 days / 2 nights",
+        "ar": "3 أيام / ليلتان",
+        "pt": "3 dias / 2 noites",
+        "it": "3 giorni / 2 notti",
+        "es": "3 días / 2 noches"
+      },
+      "minPax": {
+        "en": "2 Pax",
+        "ar": "فردان",
+        "pt": "2 Pax",
+        "it": "2 Pax",
+        "es": "2 Pax"
+      },
+      "overview": {
+        "en": "A smart, quick package designed for business travelers or long-transit passengers who want a fast taste of Istanbul's magic and document their visit without committing to long programs.",
+        "ar": "باقة ذكية وسريعة مخصصة لرجال الأعمال أو المسافرين بنظام الترانزيت الطويل والذين يرغبون في تذوق سحر إسطنبول السريع وتوثيق زيارتهم للبلد دون الارتباط ببرامج طويلة.",
+        "pt": "Um pacote inteligente e rápido projetado para empresários ou viajantes em trânsito longo que desejam provar o rápido encanto de Istambul e documentar sua visita sem se comprometer com programas longos.",
+        "it": "Un pacchetto intelligente e veloce progettato per uomini d'affari o viaggiatori in transito lungo che desiderano assaporare il rapido fascino di Istanbul e documentare la loro visita senza impegnarsi in programmi lunghi.",
+        "es": "Un paquete inteligente y rápido diseñado para hombres de negocios o viajeros en tránsito largo que desean degustar el rápido encanto de Estambul y documentar su visita sin comprometerse con programas largos."
+      },
+      "highlights": {
+        "en": [
+          "Direct transfers from and to the airport to ensure no time is wasted.",
+          "Complete flexibility in choosing and customizing daytime tours according to the traveler's preference.",
+          "Opportunity to attend an optional lively evening with music and traditional oriental shows."
+        ],
+        "ar": [
+          "توصيلات مباشرة من وإلى المطار لضمان عدم إضاعة الوقت.",
+          "مرونة كاملة في اختيار وتخصيص الجولات نهاراً وفقاً لرغبة المسافر.",
+          "فرصة حضور سهرة ليلية اختيارية عارمة بالموسيقى والعروض الشرقية التقليدية."
+        ],
+        "pt": [
+          "Transferências diretas de e para o aeroporto para garantir que não haja perda de tempo.",
+          "Flexibilidade total para escolher e personalizar os passeios diurnos de acordo com a preferência do viajante.",
+          "Oportunidade de assistir a uma animada noite opcional com música e espetáculos orientais tradicionais."
+        ],
+        "it": [
+          "Trasferimenti diretti da e per l'aeroporto per garantire che non si perda tempo.",
+          "Completa flessibilità nella scelta e personalizzazione dei tour diurni secondo le preferenze del viaggiatore.",
+          "Opportunità di partecipare a una vivace serata opzionale con musica e spettacoli orientali tradizionali."
+        ],
+        "es": [
+          "Traslados directos desde y hacia el aeropuerto para garantizar que no se pierda tiempo.",
+          "Flexibilidad total para elegir y personalizar los tours diurnos según la preferencia del viajero.",
+          "Oportunidad de asistir a una animada velada opcional con música y espectáculos orientales tradicionales."
+        ]
+      },
+      "days": [
+        {
+          "day": "1",
+          "description": {
+            "en": "Reception at Istanbul Airport and transfer to hotel. Overnight.",
+            "ar": "الاستقبال في مطار إسطنبول والتوصيل للفندق والمبيت.",
+            "pt": "Recepção no aeroporto de Istambul e transfer para o hotel. Pernoitada.",
+            "it": "Accoglienza all'aeroporto di Istanbul e trasferimento in hotel. Pernottamento.",
+            "es": "Recepción en el aeropuerto de Estambul y traslado al hotel. Alojamiento."
+          },
+          "meals": null
+        },
+        {
+          "day": "2",
+          "description": {
+            "en": "Free day for shopping or the opportunity to join an optional tour (Old City or Bosphorus cruise). (Optional evening: Bosphorus show at ).",
+            "ar": "يوم حر للتسوق أو فرصة للانضمام لرحلة اختيارية (المدينة القديمة أو جولة البوسفور) (اختياري مساءً: عروض البوسفور بقيمة 99 دولار).",
+            "pt": "Dia livre para compras ou oportunidade de participar de um tour opcional (Cidade Velha ou cruzeiro no Bósforo). (Noite opcional: show do Bósforo por US$ 99).",
+            "it": "Giorno libero per shopping o possibilità di partecipare a un tour opzionale (Città Vecchia o crociera sul Bosforo). (Serata opzionale: spettacolo sul Bosforo a 99 USD).",
+            "es": "Día libre para compras o la oportunidad de unirse a un tour opcional (Ciudad Vieja o crucero por el Bósforo). (Noche opcional: espectáculo del Bósforo por 99 USD)."
+          },
+          "meals": {
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "es": "Desayuno"
+          }
+        },
+        {
+          "day": "3",
+          "description": {
+            "en": "Transfer to airport for connecting departure.",
+            "ar": "التوصيل للمطار للمغادرة العابرة.",
+            "pt": "Transfer para o aeroporto para partida de conexão.",
+            "it": "Trasferimento in aeroporto per la partenza di coincidenza.",
+            "es": "Traslado al aeropuerto para la salida de conexión."
+          },
+          "meals": {
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "es": "Desayuno"
+          }
+        }
+      ]
+    },
+    {
+      "id": "REG-10",
+      "code": {
+        "es": "REG-10",
+        "pt": "REG-10",
+        "it": "REG-10",
+        "en": "REG-10",
+        "ar": "REG-10"
+      },
+      "name": {
+        "es": "Riviera Turca con Fethiye",
+        "pt": "Riviera Turca com Fethiye",
+        "it": "Riviera Turca con Fethiye",
+        "en": "Extended Turkish Riviera with Fethiye",
+        "ar": "الريفييرا التركية الممتدة مع فتحية"
+      },
+      "duration": {
+        "es": "13 días / 12 noches",
+        "pt": "13 dias / 12 noites",
+        "it": "13 giorni / 12 notti",
+        "en": "13 days / 12 nights",
+        "ar": "13 يوماً / 12 ليلة"
+      },
+      "minPax": {
+        "es": "2 Pax",
+        "pt": "2 Pax",
+        "it": "2 Pax",
+        "en": "2 Pax",
+        "ar": "فردان"
+      },
+      "overview": {
+        "es": "Este es el programa más largo y lujoso para los amantes de la naturaleza costera y las aguas turquesas, extendiéndose para combinar los monumentos clásicos de Anatolia con los dos resorts playeros más bellos de Turquía: Bodrum y Fethiye.",
+        "pt": "Este é o programa mais longo e luxuoso para os amantes da natureza costeira e águas turquesas, estendendo-se para combinar os marcos clássicos da Anatólia com os dois mais belos resorts de praia da Turquia: Bodrum e Fethiye.",
+        "it": "Questo è il programma più lungo e lussuoso per gli amanti della natura costiera e delle acque turchesi, estendendosi per combinare i monumenti classici dell'Anatolia con le due più belle località balneari della Turchia: Bodrum e Fethiye.",
+        "en": "This is the longest and most luxurious program for lovers of coastal nature and turquoise waters, extending to combine classic Anatolian landmarks with Turkey's two most beautiful beach resorts: Bodrum and Fethiye.",
+        "ar": "هذا هو البرنامج الأطول والأكثر فخامة لعشاق الطبيعة الساحلية والمياه الفيروزية؛ حيث يمتد ليجمع بين معالم الأناضول الكلاسيكية وأجمل منتجعين شاطئيين في تركيا على الإطلاق: بودروم وفتحية."
+      },
+      "highlights": {
+        "es": [
+          "Una estancia prolongada y confortable de 3 noches completas en Estambul al inicio del viaje.",
+          "Combinar el lujoso resort de Bodrum con el encantador resort de Fethiye en un solo viaje.",
+          "Disfrutar del servicio de traslado en coche privado con conductor entre las ciudades costeras.",
+          "Pasar 4 noches de completo descanso playero entre el mar Egeo y el Mediterráneo."
+        ],
+        "pt": [
+          "Uma estadia prolongada e confortável de 3 noites completas em Istambul no início da viagem.",
+          "Combinar o luxuoso resort de Bodrum com o encantador resort de Fethiye em uma única viagem.",
+          "Desfrutar do serviço de transferência em carro particular com motorista entre as cidades costeiras.",
+          "Passar 4 noites de completo relaxamento à beira-mar entre o Mar Egeu e o Mediterrâneo."
+        ],
+        "it": [
+          "Un soggiorno prolungato e confortevole di 3 notti intere a Istanbul all'inizio del viaggio.",
+          "Combinare la lussuosa località di Bodrum con l'affascinante località di Fethiye in un unico viaggio.",
+          "Godere del servizio di trasferimento in auto privata con autista tra le città costiere.",
+          "Trascorrere 4 notti di completo relax balneare tra il Mar Egeo e il Mediterraneo."
+        ],
+        "en": [
+          "An extended, comfortable 3-night stay in Istanbul at the start of the trip.",
+          "Combining the luxurious Bodrum resort with the charming Fethiye resort in one journey.",
+          "Enjoy private car transfer with driver between coastal cities.",
+          "Spend 4 nights of complete beach relaxation between the Aegean and Mediterranean seas."
+        ],
+        "ar": [
+          "إقامة ممتدة ومريحة لـ 3 ليالٍ كاملة في إسطنبول في بداية الرحلة.",
+          "الجمع بين منتجع بودروم الفاخر ومنتجع فتحية الساحر في رحلة واحدة.",
+          "الاستمتاع بخدمة التوصيل بسيارات خاصة مع سائق بين المدن الساحلية.",
+          "قضاء 4 ليالٍ من الاستجمام الشاطئي الكامل بين بحر إيجة والبحر المتوسط."
+        ]
+      },
+      "days": [
+        {
+          "meals": {
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "en": "Breakfast",
+            "ar": "إفطار"
+          },
+          "day": "1–3",
+          "description": {
+            "es": "3 noches en Estambul incluyendo un recorrido por el Bazar de las Especias, las murallas y la Mezquita de Rüstem Pasha, con un día libre.",
+            "pt": "3 noites em Istambul incluindo um tour pelo Bazar de Especiarias, as muralhas e a Mesquita de Rüstem Pasha, com um dia livre.",
+            "it": "3 notti a Istanbul inclusa una visita al Bazar delle Spezie, le mura e la Moschea di Rüstem Pasha, con un giorno libero.",
+            "en": "3 nights in Istanbul including a tour of the Spice Bazaar, city walls, and Rüstem Pasha Mosque, with one free day.",
+            "ar": "قضاء 3 ليالٍ في إسطنبول شاملة جولة بازار التوابل والأسوار ومسجد رستم باشا، مع يوم حر."
+          }
+        },
+        {
+          "meals": {
+            "es": "Desayuno de picnic + Cena",
+            "pt": "Café da manhã de piquenique + Jantar",
+            "it": "Colazione al sacco + Cena",
+            "en": "Picnic breakfast + Dinner",
+            "ar": "إفطار صندوقي + عشاء"
+          },
+          "day": "4",
+          "description": {
+            "es": "Traslado al aeropuerto para volar a Capadocia. En el camino, visita a una ciudad subterránea y un taller de cerámica.",
+            "pt": "Transfer para o aeroporto para voo para a Capadócia. No caminho, visita a uma cidade subterrânea e a uma oficina de cerâmica.",
+            "it": "Trasferimento in aeroporto per il volo per la Cappadocia. Lungo il percorso, visita a una città sotterranea e a un laboratorio di ceramica.",
+            "en": "Transfer to airport for flight to Cappadocia. En route, visit an underground city and a ceramic workshop.",
+            "ar": "الانتقال للمطار للطيران إلى كابادوكيا. في الطريق زيارة مدينة أرضية وورشة خزف."
+          }
+        },
+        {
+          "meals": {
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena",
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء"
+          },
+          "day": "5–6",
+          "description": {
+            "es": "Recorrido por los valles de Capadocia y globo opcional (día 5). Luego traslado por carretera a Pamukkale para ver sus ruinas y manantiales termales (día 6).",
+            "pt": "Passeio pelos vales da Capadócia e balão de ar quente opcional (dia 5). Depois viagem terrestre para Pamukkale para suas ruínas e nascentes termais (dia 6).",
+            "it": "Giro delle valli della Cappadocia e mongolfiera opzionale (giorno 5). Poi trasferimento via terra a Pamukkale per le sue rovine e sorgenti termali (giorno 6).",
+            "en": "Cappadocia valleys tour and optional hot air balloon (Day 5). Then overland to Pamukkale for its ruins and thermal springs (Day 6).",
+            "ar": "جولة وديان كابادوكيا والمنطاد الاختياري (اليوم 5)، ثم الانتقال براً في اليوم السادس لباموكالي وأثارها والينابيع الحرارية."
+          }
+        },
+        {
+          "meals": {
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena",
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء"
+          },
+          "day": "7",
+          "description": {
+            "es": "Recorrido por el sitio arqueológico de Éfeso, Casa de la Virgen María, fábrica de cuero, luego traslado al hotel en Esmirna o Kuşadası.",
+            "pt": "Tour do sítio arqueológico de Éfeso, Casa da Virgem Maria, fábrica de couro, depois transfer para hotel em Esmirna ou Kuşadası.",
+            "it": "Giro del sito archeologico di Efeso, Casa della Vergine Maria, conceria, poi trasferimento in hotel a Smirne o Kuşadası.",
+            "en": "Tour of the archaeological site of Ephesus, House of the Virgin Mary, leather factory, then transfer to hotel in Izmir or Kuşadası.",
+            "ar": "جولة أفسس الأثرية، وبيت مريم العذراء، ومصنع الجلود، والانتقال لفندق إزمير أو كوشاداسي."
+          }
+        },
+        {
+          "meals": {
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena",
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء"
+          },
+          "day": "8–9",
+          "description": {
+            "es": "Traslado en coche privado con conductor al resort costero de Bodrum para 2 noches completamente libres.",
+            "pt": "Transferência em carro particular com motorista para o resort costeiro de Bodrum para 2 noites completamente livres.",
+            "it": "Trasferimento in auto privata con autista alla località costiera di Bodrum per 2 notti completamente libere.",
+            "en": "Private car transfer with driver to the coastal resort of Bodrum for 2 completely free nights.",
+            "ar": "الانتقال بسيارة وسائق إلى بودروم الساحلية لقضاء ليلتين حرتين بالكامل."
+          }
+        },
+        {
+          "meals": {
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena",
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء"
+          },
+          "day": "10–11",
+          "description": {
+            "es": "Traslado en coche privado con conductor al famoso resort de Fethiye para 2 noches libres de descanso.",
+            "pt": "Transferência em carro particular com motorista para o famoso resort de Fethiye para 2 noites livres de relaxamento.",
+            "it": "Trasferimento in auto privata con autista alla famosa località di Fethiye per 2 notti libere di relax.",
+            "en": "Private car transfer with driver to the famous resort of Fethiye for 2 free nights of relaxation.",
+            "ar": "التحرك بسيارة وسائق إلى منتجع فتحية (Fethiye) الشهير، وقضاء ليلتين حرتين للاستجمام."
+          }
+        },
+        {
+          "meals": {
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "en": "Breakfast",
+            "ar": "إفطار"
+          },
+          "day": "12",
+          "description": {
+            "es": "Traslado al aeropuerto cercano para vuelo de regreso a Estambul, alojamiento.",
+            "pt": "Transfer para o aeroporto próximo para voo de volta a Istambul, pernoite.",
+            "it": "Trasferimento all'aeroporto vicino per il volo di ritorno a Istanbul, pernottamento.",
+            "en": "Transfer to the nearby airport for return flight to Istanbul, overnight.",
+            "ar": "النقل للمطار القريب للطيران عودة إلى إسطنبول والمبيت."
+          }
+        },
+        {
+          "meals": {
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "en": "Breakfast",
+            "ar": "إفطار"
+          },
+          "day": "13",
+          "description": {
+            "es": "Traslado al aeropuerto para la salida final.",
+            "pt": "Transfer para o aeroporto para partida final.",
+            "it": "Trasferimento in aeroporto per la partenza finale.",
+            "en": "Transfer to airport for final departure.",
+            "ar": "التوصيل للمطار والمغادرة النهائية."
+          }
+        }
+      ]
+    },
+    {
+      "id": "REG-11",
+      "code": {
+        "es": "REG-11",
+        "pt": "REG-11",
+        "it": "REG-11",
+        "en": "REG-11",
+        "ar": "REG-11"
+      },
+      "name": {
+        "es": "Andalía",
+        "pt": "Andalía",
+        "it": "Andalía",
+        "en": "Andalía (Antalya & Mediterranean Coast)",
+        "ar": "أنطاليا والساحل المتوسطي"
+      },
+      "duration": {
+        "es": "10 días / 9 noches",
+        "pt": "10 dias / 9 noites",
+        "it": "10 giorni / 9 notti",
+        "en": "10 days / 9 nights",
+        "ar": "10 أيام / 9 ليالٍ"
+      },
+      "minPax": {
+        "es": "2 Pax",
+        "pt": "2 Pax",
+        "it": "2 Pax",
+        "en": "2 Pax",
+        "ar": "فردان"
+      },
+      "overview": {
+        "es": "Un viaje que te lleva al corazón de la costa turquesa turca con vistas al mar Mediterráneo. El programa combina maravillosamente el encanto de los museos al aire libre de Capadocia con la relajación en Antalya (la \"Novia del Mediterráneo\"), antes de partir hacia las maravillas de Pamukkale y las ruinas históricas de Éfeso.",
+        "pt": "Uma viagem que leva você ao coração da costa turquesa turca com vista para o Mar Mediterrâneo. O programa combina maravilhosamente o charme dos museus ao ar livre da Capadócia com relaxamento em Antália (a \"Noiva do Mediterrâneo\"), antes de partir para as maravilhas de Pamukkale e as ruínas históricas de Éfeso.",
+        "it": "Un viaggio che ti porta nel cuore della costa turchese turca affacciata sul Mar Mediterraneo. Il programma fonde meravigliosamente il fascino dei musei all'aperto della Cappadocia con il relax ad Antalya (la \"Sposa del Mediterraneo\"), prima di partire per le meraviglie di Pamukkale e le rovine storiche di Efeso.",
+        "en": "A journey taking you to the heart of the turquoise Turkish coast overlooking the Mediterranean Sea. The program beautifully blends the charm of Cappadocia's open-air museums with relaxation in Antalya (the \"Bride of the Mediterranean\"), before heading to the wonders of Pamukkale and the historic ruins of Ephesus.",
+        "ar": "رحلة تأخذك إلى قلب الساحل الفيروزي التركي المطل على البحر الأبيض المتوسط. يدمج البرنامج بشكل رائع بين سحر المتاحف المفتوحة في كابادوكيا والاسترخاء في أنطاليا (عروس المتوسط)، قبل الانطلاق لزيارة عجائب باموكالي وأفسس التاريخية."
+      },
+      "highlights": {
+        "es": [
+          "Viajar en coche por rutas terrestres panorámicas hasta la enorme bahía mediterránea de Antalya.",
+          "Un día completamente libre en Antalya para explorar la ciudad vieja (Kaleiçi) y las playas.",
+          "Encuentro con guías locales especializados en cada sitio arqueológico importante (como Pamukkale).",
+          "Explorar el antiguo teatro romano y la enorme necrópolis de Anatolia en Hierápolis."
+        ],
+        "pt": [
+          "Viajar de carro por rotas terrestres cênicas até a vasta baía mediterrânea de Antália.",
+          "Um dia completamente livre em Antália para explorar a cidade velha (Kaleiçi) e as praias.",
+          "Encontrar guias locais especializados em cada sítio arqueológico importante (como Pamukkale).",
+          "Explorar o antigo teatro romano e a vasta necrópole da Anatólia em Hierápolis."
+        ],
+        "it": [
+          "Viaggiare in auto lungo percorsi panoramici via terra fino alla vasta baia mediterranea di Antalya.",
+          "Una giornata completamente libera ad Antalya per esplorare la città vecchia (Kaleiçi) e le spiagge.",
+          "Incontrare guide locali specializzate in ogni importante sito archeologico (come Pamukkale).",
+          "Esplorare l'antico teatro romano e la vasta necropoli dell'Anatolia a Hierapolis."
+        ],
+        "en": [
+          "Travel by car along scenic overland routes to the vast Mediterranean Gulf of Antalya.",
+          "A completely free day in Antalya to explore the old city (Kaleiçi) and beaches.",
+          "Meet specialized local guides at each major archaeological site (such as Pamukkale).",
+          "Explore the ancient Roman theater and the vast Anatolian necropolis in Hierapolis."
+        ],
+        "ar": [
+          "الانتقال بالسيارة عبر طرق برية ممتعة وصولاً إلى خليج أنطاليا المتوسطي الضخم.",
+          "يوم حر بالكامل في أنطاليا لاستكشاف المدينة القديمة (كالييتشي) والشواطئ.",
+          "لقاء مع مرشدين محليين متخصصين عند كل موقع أثري رئيسي (مثل باموكالي).",
+          "استكشاف المسرح الروماني القديم ومقبرة الأناضول الضخمة (Necrópolis) في هيرابوليس."
+        ]
+      },
+      "days": [
+        {
+          "meals": null,
+          "day": "1–4",
+          "description": {
+            "es": "Pasar los primeros días entre Estambul (recorrido por la Ciudad Vieja, crucero por el Bósforo, Taksim) y luego Capadocia visitando sus principales lugares (Valle de Göreme, ciudad subterránea de Özkonak o Saratlı) con las comidas habituales de desayuno y cena.",
+            "pt": "Passar os primeiros dias entre Istambul (tour da Cidade Velha, cruzeiro no Bósforo, Taksim) e depois a Capadócia visitando seus principais pontos (Vale de Göreme, cidade subterrânea de Özkonak ou Saratlı) com as refeições padrão de café da manhã e jantar.",
+            "it": "Trascorrere i primi giorni tra Istanbul (giro della Città Vecchia, crociera sul Bosforo, Taksim) e poi la Cappadocia visitando i suoi principali luoghi (Valle di Göreme, città sotterranea di Özkonak o Saratlı) con i pasti standard di colazione e cena.",
+            "en": "Spend the first days between Istanbul (Old City tour, Bosphorus cruise, Taksim) then Cappadocia visiting its main landmarks (Göreme Valley, Özkonak or Saratlı underground city) with standard breakfast and dinner meals.",
+            "ar": "قضاء الأيام الأولى بين إسطنبول (جولة المدينة القديمة، رحلة البوسفور وتقسيم) ثم كابادوكيا وزيارة معالمها الأساسية (وادي جوريم، المدينة الأرضية أوزكوناك أو ساراتلي مع وجبات الإفطار والعشاء المعتادة)."
+          }
+        },
+        {
+          "meals": {
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena",
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء"
+          },
+          "day": "5",
+          "description": {
+            "es": "Traslado por carretera a la ciudad costera de Antalya, llegada al hotel, alojamiento.",
+            "pt": "Transferência terrestre para a cidade costeira de Antália, chegada ao hotel, pernoite.",
+            "it": "Trasferimento via terra alla città costiera di Antalya, arrivo in hotel, pernottamento.",
+            "en": "Overland transfer to the coastal city of Antalya, arrival at hotel, overnight.",
+            "ar": "النقل عبر طريق بري إلى مدينة أنطاليا الساحلية (Antalya) والوصول للفندق والمبيت."
+          }
+        },
+        {
+          "meals": {
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena",
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء"
+          },
+          "day": "6",
+          "description": {
+            "es": "Día completamente libre en Antalya para descanso y actividades personales.",
+            "pt": "Dia completamente livre em Antália para descanso e atividades pessoais.",
+            "it": "Giornata completamente libera ad Antalya per relax e attività personali.",
+            "en": "Completely free day in Antalya for relaxation and personal activities.",
+            "ar": "يوم حر بالكامل في أنطاليا للاستجمام والنشاط الشخصي."
+          }
+        },
+        {
+          "meals": {
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena",
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء"
+          },
+          "day": "7",
+          "description": {
+            "es": "Traslado con conductor de Antalya a Pamukkale, encuentro con guía local para visitar las terrazas de travertino y las ruinas de Hierápolis, alojamiento.",
+            "pt": "Transferência com motorista de Antália para Pamukkale, encontro com um guia local para visitar os terraços de travertino e as ruínas de Hierápolis, pernoite.",
+            "it": "Trasferimento con autista da Antalya a Pamukkale, incontro con una guida locale per visitare le terrazze di travertino e le rovine di Hierapolis, pernottamento.",
+            "en": "Transfer with driver from Antalya to Pamukkale, meeting a local guide to visit the travertine terraces and Hierapolis ruins, overnight.",
+            "ar": "الانتقال مع سائق من أنطاليا إلى باموكالي؛ حيث يتم مقابلة المرشد المحلي لزيارة مدرجات الينابيع وآثار هيرابوليس والمبيت."
+          }
+        },
+        {
+          "meals": {
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena",
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء"
+          },
+          "day": "8",
+          "description": {
+            "es": "Traslado para visitar Éfeso, Casa de la Virgen María, fábrica de cuero y desfile de moda, alojamiento en Kuşadası o Esmirna.",
+            "pt": "Transferência para visitar Éfeso, Casa da Virgem Maria, fábrica de couro e desfile de moda, pernoite em Kuşadası ou Esmirna.",
+            "it": "Trasferimento per visitare Efeso, Casa della Vergine Maria, conceria e sfilata di moda, pernottamento a Kuşadası o Smirne.",
+            "en": "Transfer to visit Ephesus, House of the Virgin Mary, leather factory and fashion show, overnight in Kuşadası or Izmir.",
+            "ar": "الانتقال لزيارة أفسس وبيت مريم ومصنع الجلود وعرض الأزياء والمبيت في كوشاداسي أو إزمير."
+          }
+        },
+        {
+          "meals": {
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "en": "Breakfast",
+            "ar": "إفطار"
+          },
+          "day": "9",
+          "description": {
+            "es": "Traslado al aeropuerto para volar de Esmirna a Estambul para la última noche.",
+            "pt": "Transfer para o aeroporto para voo de Esmirna para Istambul para a última noite.",
+            "it": "Trasferimento in aeroporto per il volo da Smirne a Istanbul per l'ultima notte.",
+            "en": "Transfer to airport for flight from Izmir to Istanbul for the last night.",
+            "ar": "النقل للمطار للطيران من إزمير إلى إسطنبول لليلة الأخيرة."
+          }
+        },
+        {
+          "meals": {
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione",
+            "en": "Breakfast",
+            "ar": "إفطار"
+          },
+          "day": "10",
+          "description": {
+            "es": "Traslado al aeropuerto de Estambul para la salida final.",
+            "pt": "Transfer para o aeroporto de Istambul para partida final.",
+            "it": "Trasferimento all'aeroporto di Istanbul per la partenza finale.",
+            "en": "Transfer to Istanbul Airport for final departure.",
+            "ar": "التوصيل لمطار إسطنبول والمغادرة النهائية."
+          }
+        }
+      ]
+    },
+    {
+      "id": "REG-13",
+      "code": {
+        "it": "REG-13",
+        "ar": "REG-13",
+        "es": "REG-13",
+        "en": "REG-13",
+        "pt": "REG-13"
+      },
+      "name": {
+        "it": "Estensione 7 Chiese",
+        "ar": "امتداد الكنائس السبعة التاريخية",
+        "es": "Extensión 7 Iglesias",
+        "en": "Seven Churches Extension",
+        "pt": "Extensão 7 Igrejas"
+      },
+      "duration": {
+        "it": "3 giorni / 2 notti",
+        "ar": "3 أيام / ليلتان",
+        "es": "3 días / 2 noches",
+        "en": "3 days / 2 nights",
+        "pt": "3 dias / 2 noites"
+      },
+      "minPax": {
+        "it": "4 Pax",
+        "ar": "4 أفراد",
+        "es": "4 Pax",
+        "en": "4 Pax",
+        "pt": "4 Pax"
+      },
+      "overview": {
+        "it": "Un viaggio culturale e religioso approfondito rivolto agli amanti della storia antica e dell'archeologia biblica e paleocristiana. Ti porta attraverso le rovine delle antiche città romane dell'Asia Minore per esplorare i siti delle Sette Chiese menzionate nel libro dell'Apocalisse.",
+        "ar": "رحلة ثقافية ودينية متعمقة موجهة لعشاق التاريخ القديم والآثار التوراتية والمسيحية المبكرة. تأخذك عبر أطلال مدن آسيا الصغرى الرومانية القديمة لاستكشاف مواقع الكنائس السبعة التي وردت في سفر الرؤيا.",
+        "es": "Un viaje cultural y religioso en profundidad dirigido a los amantes de la historia antigua y la arqueología bíblica y cristiana primitiva. Te lleva a través de las ruinas de las antiguas ciudades romanas de Asia Menor para explorar los sitios de las Siete Iglesias mencionadas en el libro del Apocalipsis.",
+        "en": "An in-depth cultural and religious journey aimed at lovers of ancient history and early Christian biblical archaeology. It takes you through the ruins of ancient Roman Asia Minor cities to explore the sites of the Seven Churches mentioned in the Book of Revelation.",
+        "pt": "Uma viagem cultural e religiosa aprofundada voltada para os amantes da história antiga e da arqueologia bíblica e cristã primitiva. Leva você através das ruínas das antigas cidades romanas da Ásia Menor para explorar os locais das Sete Igrejas mencionadas no livro do Apocalipse."
+      },
+      "highlights": {
+        "it": [
+          "Visitare le rovine dell'antica città di Tiatira, famosa per la sua industria di tinture porpora reale.",
+          "Salire sull'Acropoli di Pergamo e ammirare il teatro più ripido del mondo e i resti del grande Altare di Zeus.",
+          "Esplorare la massiccia Basilica Rossa costruita in mattoni rossi, conosciuta come la Chiesa di Pergamo.",
+          "Visitare l'antica sinagoga ebraica e il Tempio di Artemide nella storica città di Sardi."
+        ],
+        "ar": [
+          "زيارة أطلال مدينة \"ثياتيرا\" القديمة الشهيرة بصناعة الصبغات الأرجوانية الملكية.",
+          "صعود أكروبوليس برغامة ومشاهدة المسرح الأكثر انحداراً في العالم وبقايا مذبح زيوس العظيم.",
+          "استكشاف البازيليكا الحمراء الضخمة المبنية من الطوب الأحمر والمعروفة بكنيسة برغامة.",
+          "زيارة الكنيس اليهودي الأثري ومعبد الإلهة أرتيميس في مدينة ساردس التاريخية."
+        ],
+        "es": [
+          "Visitar las ruinas de la antigua ciudad de Tiatira, famosa por su industria de tintes púrpura real.",
+          "Ascender al Acrópolis de Pérgamo y contemplar el teatro más empinado del mundo y los restos del gran Altar de Zeus.",
+          "Explorar la enorme Basílica Roja construida de ladrillo rojo, conocida como la Iglesia de Pérgamo.",
+          "Visitar la antigua sinagoga judía y el Templo de Artemisa en la histórica ciudad de Sardes."
+        ],
+        "en": [
+          "Visit the ruins of the ancient city of Thyatira, famous for its royal purple dye industry.",
+          "Climb the Pergamon Acropolis and see the steepest theater in the world and the remains of the great Altar of Zeus.",
+          "Explore the massive Red Basilica built of red brick, known as the Church of Pergamon.",
+          "Visit the ancient Jewish synagogue and the Temple of Artemis in the historic city of Sardis."
+        ],
+        "pt": [
+          "Visitar as ruínas da antiga cidade de Tiatira, famosa por sua indústria de tintura púrpura real.",
+          "Subir à Acrópole de Pérgamo e ver o teatro mais íngreme do mundo e os restos do grande Altar de Zeus.",
+          "Explorar a maciça Basílica Vermelha construída em tijolo vermelho, conhecida como a Igreja de Pérgamo.",
+          "Visitar a antiga sinagoga judaica e o Templo de Ártemis na histórica cidade de Sárdis."
+        ]
+      },
+      "days": [
+        {
+          "description": {
+            "it": "Partenza da Kuşadası per visitare la città di Tiatira (Akhisar) e vedere i resti della basilica bizantina, poi proseguire per l'antica città di Pergamo per visitare l'Acropoli, le tombe archeologiche e la Basilica Rossa. Pernottamento a Smirne.",
+            "ar": "التحرك من كوشاداسي لزيارة مدينة \"ثياتيرا\" (أخيسار) ورؤية آثار البازيليكا البيزنطية، ثم التوجه لمدينة برغامة الأثرية وزيارة الأكروبوليس والمقابر الأثرية والبازيليكا الحمراء، والمبيت في إزمير.",
+            "es": "Salida de Kuşadası para visitar la ciudad de Tiatira (Akhisar) y ver los restos de la basílica bizantina, luego continuar a la antigua ciudad de Pérgamo para visitar el Acrópolis, las tumbas arqueológicas y la Basílica Roja. Alojamiento en Esmirna.",
+            "en": "Depart from Kuşadası to visit the city of Thyatira (Akhisar) and see the remains of the Byzantine basilica, then proceed to the ancient city of Pergamon to visit the Acropolis, archaeological tombs, and the Red Basilica. Overnight in Izmir.",
+            "pt": "Partida de Kuşadası para visitar a cidade de Tiatira (Akhisar) e ver os restos da basílica bizantina, depois seguir para a antiga cidade de Pérgamo para visitar a Acrópole, as tumbas arqueológicas e a Basílica Vermelha. Pernoitada em Esmirna."
+          },
+          "day": "1",
+          "meals": {
+            "it": "Cena",
+            "ar": "عشاء",
+            "es": "Cena",
+            "en": "Dinner",
+            "pt": "Jantar"
+          }
+        },
+        {
+          "description": {
+            "it": "Giro di Smirne (sito della Chiesa di San Policarpo), poi visita a Sardi (capitale dell'antica Lidia) inclusi Agorà, Ginnasio, Sinagoga e Tempio di Artemide, terminando con la visita alla Chiesa di San Giovanni a Filadelfia. Cena e pernottamento.",
+            "ar": "جولة في إزمير (موقع كنيسة سانت بوليكاربوس)، ثم التوجه لزيارة \"ساردس\" (عاصمة ليديا القديمة) وتشمل الأغورا، الجيمناسيوم، الكنيس، ومعبد أرتيميس، وختاماً بزيارة كنيسة القديس يوحنا في فيلادلفيا، ثم العشاء والمبيت.",
+            "es": "Recorrido por Esmirna (sitio de la Iglesia de San Policarpo), luego visita a Sardes (capital de la antigua Lidia) incluyendo el Ágora, el Gimnasio, la Sinagoga y el Templo de Artemisa, finalizando con la visita a la Iglesia de San Juan en Filadelfia. Cena y alojamiento.",
+            "en": "Tour of Izmir (site of the Church of St. Polycarp), then proceed to visit Sardis (capital of ancient Lydia) including the Agora, Gymnasium, Synagogue, and Temple of Artemis, ending with a visit to the Church of St. John in Philadelphia. Dinner and overnight.",
+            "pt": "Tour por Esmirna (local da Igreja de São Policarpo), depois visita a Sárdis (capital da antiga Lídia) incluindo a Ágora, o Ginásio, a Sinagoga e o Templo de Ártemis, terminando com a visita à Igreja de São João na Filadélfia. Jantar e pernoite."
+          },
+          "day": "2",
+          "meals": {
+            "it": "Colazione + Cena",
+            "ar": "إفطار + عشاء",
+            "es": "Desayuno + Cena",
+            "en": "Breakfast + Dinner",
+            "pt": "Café da manhã + Jantar"
+          }
+        },
+        {
+          "description": {
+            "it": "Visita a Laodicea, poi trasferimento al porto di Kuşadası o all'aeroporto di Smirne per la partenza.",
+            "ar": "زيارة لاوديكيا، ثم النقل إلى ميناء كوشاداسي أو إلى مطار إزمير للمغادرة.",
+            "es": "Visita a Laodicea, luego traslado al puerto de Kuşadası o al aeropuerto de Esmirna para la salida.",
+            "en": "Visit Laodicea, then transfer to Kuşadası port or Izmir airport for departure.",
+            "pt": "Visita a Laodicéia, depois transfer para o porto de Kuşadası ou aeroporto de Esmirna para partida."
+          },
+          "day": "3",
+          "meals": {
+            "it": "Colazione",
+            "ar": "إفطار",
+            "es": "Desayuno",
+            "en": "Breakfast",
+            "pt": "Café da manhã"
+          }
+        }
+      ]
+    },
+    {
+      "id": "REG-14",
+      "code": {
+        "it": "REG-14",
+        "ar": "REG-14",
+        "es": "REG-14",
+        "en": "REG-14",
+        "pt": "REG-14"
+      },
+      "name": {
+        "it": "Segreto del Tempio",
+        "ar": "سر المعبد والشرق الأناضولي",
+        "es": "Secreto del Templo",
+        "en": "Secret of the Temple & Eastern Anatolia",
+        "pt": "Segredo do Templo"
+      },
+      "duration": {
+        "it": "11 giorni / 10 notti",
+        "ar": "11 يوماً / 10 ليالٍ",
+        "es": "11 días / 10 noches",
+        "en": "11 days / 10 nights",
+        "pt": "11 dias / 10 noites"
+      },
+      "minPax": {
+        "it": "4 Pax",
+        "ar": "4 أفراد",
+        "es": "4 Pax",
+        "en": "4 Pax",
+        "pt": "4 Pax"
+      },
+      "overview": {
+        "it": "Questo non è solo un viaggio, ma una \"spedizione esplorativa\" in Mesopotamia e nella culla delle civiltà umane nel sud-est della Turchia. Un programma eccezionale che si allontana dalle rotte tradizionali per portare i viaggiatori appassionati al punto zero della storia, ai santuari dei profeti e ai paesi che parlano ancora la lingua aramaica di Gesù Cristo.",
+        "ar": "هذه ليست مجرد رحلة، بل هي \"بعثة استكشافية\" إلى بلاد الرافدين ومنطقة مهد الحضارات الإنسانية في جنوب شرق تركيا. برنامج استثنائي يبتعد عن المسارات التقليدية ليأخذ المسافرين الشغوفين إلى نقطة الصفر في التاريخ، ومزارات الأنبياء، والبلدات التي لا تزال تتحدث لغة السيد المسيح الآرامية.",
+        "es": "Esto no es solo un viaje, sino una \"expedición exploratoria\" a Mesopotamia y la cuna de las civilizaciones humanas en el sureste de Turquía. Un programa excepcional que se aleja de las rutas tradicionales para llevar a los viajeros apasionados al punto cero de la historia, los santuarios de los profetas y los pueblos que aún hablan la lengua aramea de Jesucristo.",
+        "en": "This is not just a trip, but an \"exploratory expedition\" to Mesopotamia and the cradle of human civilization in southeastern Turkey. An exceptional program that moves away from traditional routes to take passionate travelers to ground zero of history, the shrines of prophets, and towns that still speak the Aramaic language of Jesus Christ.",
+        "pt": "Esta não é apenas uma viagem, mas uma \"expedição exploratória\" à Mesopotâmia e ao berço das civilizações humanas no sudeste da Turquia. Um programa excepcional que se afasta das rotas tradicionais para levar viajantes apaixonados ao ponto zero da história, aos santuários dos profetas e às cidades que ainda falam a língua aramaica de Jesus Cristo."
+      },
+      "highlights": {
+        "it": [
+          "Vedere il famoso mosaico della \"Ragazza Zingara\" al Museo di Zeugma a Gaziantep.",
+          "Salire sul storico Monte Nemrud tra statue di pietra giganti per un'alba indimenticabile.",
+          "Visitare la grotta dove nacque il Profeta Abramo e i laghi archeologici a Urfa.",
+          "Ingresso esclusivo a Göbeklitepe, il tempio più antico costruito dall'umanità 12.000 anni fa.",
+          "Visitare il Monastero Mor Gabriel a Mardin e ascoltare preghiere nell'antica lingua aramaica.",
+          "Esplorare le leggendarie cisterne d'acqua scavate nella roccia della città di Dara, conosciuta come l'\"Efeso della Mesopotamia\"."
+        ],
+        "ar": [
+          "رؤية فسيفساء \"الفتاة الغجرية\" الشهيرة عالمياً في متحف زيوغما بمدينة غازي عنتاب.",
+          "صعود جبل نمرود التاريخي بين التماثيل الحجرية العملاقة لمشاهدة شروق شمس لا يُنسى.",
+          "زيارة الكهف التاريخي لولادة سيدنا إبراهيم عليه السلام والبحيرات الأثرية في أورفا.",
+          "الدخول الحصري لموقع غوبكلي تبه (Göbeklitepe)، أقدم معبد شيده البشر في التاريخ قبل 12,000 عام.",
+          "زيارة دير مار غبريال في ماردين وسماع الصلوات باللغة الآرامية القديمة الأصلية.",
+          "استكشاف صهاريج مياه مدينة \"دارا\" الصخرية الأسطورية الملقبة بـ \"أفسس بلاد الرافدين\"."
+        ],
+        "es": [
+          "Ver el mundialmente famoso mosaico de la \"Niña Gitana\" en el Museo de Zeugma en Gaziantep.",
+          "Ascender al histórico Monte Nemrud entre estatuas de piedra gigantes para ver un amanecer inolvidable.",
+          "Visitar la cueva donde nació el Profeta Abraham y los lagos arqueológicos en Urfa.",
+          "Entrada exclusiva a Göbeklitepe, el templo más antiguo construido por la humanidad hace 12.000 años.",
+          "Visitar el Monasterio Mor Gabriel en Mardin y escuchar oraciones en la antigua lengua aramea.",
+          "Explorar las legendarias cisternas de agua excavadas en la roca de la ciudad de Dara, conocida como la \"Éfeso de Mesopotamia\"."
+        ],
+        "en": [
+          "See the world-famous \"Gypsy Girl\" mosaic at the Zeugma Museum in Gaziantep.",
+          "Climb historic Mount Nemrud among giant stone statues for an unforgettable sunrise.",
+          "Visit the cave where Prophet Abraham was born and the archaeological lakes in Urfa.",
+          "Exclusive entry to Göbeklitepe, the oldest temple built by mankind 12,000 years ago.",
+          "Visit Mor Gabriel Monastery in Mardin and hear prayers in the ancient Aramaic language.",
+          "Explore the legendary rock-cut water cisterns of the city of Dara, known as the \"Ephesus of Mesopotamia.\""
+        ],
+        "pt": [
+          "Ver o mundialmente famoso mosaico da \"Garota Cigana\" no Museu de Zeugma em Gaziantep.",
+          "Subir o histórico Monte Nemrud entre estátuas de pedra gigantes para um nascer do sol inesquecível.",
+          "Visitar a caverna onde o Profeta Abraão nasceu e os lagos arqueológicos em Urfa.",
+          "Entrada exclusiva em Göbeklitepe, o templo mais antigo construído pela humanidade há 12.000 anos.",
+          "Visitar o Mosteiro Mor Gabriel em Mardin e ouvir orações na antiga língua aramaica.",
+          "Explorar as lendárias cisternas de água escavadas na rocha da cidade de Dara, conhecida como a \"Éfeso da Mesopotâmia\"."
+        ]
+      },
+      "days": [
+        {
+          "description": {
+            "it": "Completamente identici nel percorso via terra e nei pasti specificati ai primi 5 giorni dell'itinerario della \"Turchia Leggendaria via Terra\" (Istanbul, Ankara, valli della Cappadocia, mongolfiera, città sotterranee).",
+            "ar": "تتطابق تماماً في مسارها البري والوجبات المحددة مع أول 5 أيام من مسار \"تركيا الأسطورية براً\" (إسطنبول، أنقرة، وديان كابادوكيا والمنطاد والمدن الأرضية).",
+            "es": "Totalmente idénticos en ruta terrestre y comidas especificadas a los primeros 5 días del itinerario de \"Turquía Legendaria por Tierra\" (Estambul, Ankara, valles de Capadocia, globo aerostático, ciudades subterráneas).",
+            "en": "Fully identical in overland route and specified meals to the first 5 days of the \"Legendary Turkey by Land\" itinerary (Istanbul, Ankara, Cappadocia valleys, hot air balloon, underground cities).",
+            "pt": "Totalmente idênticos em rota terrestre e refeições especificadas aos primeiros 5 dias do itinerário \"Turquia Lendária por Terra\" (Istambul, Ancara, vales da Capadócia, balão de ar quente, cidades subterrâneas)."
+          },
+          "day": "1–5",
+          "meals": null
+        },
+        {
+          "description": {
+            "it": "Trasferimento via terra dalla Cappadocia a Gaziantep (Antep), visita al Museo di Zeugma dei mosaici romani, tempo libero, pernottamento.",
+            "ar": "التحرك براً من كابادوكيا لمدينة غازي عنتاب (Antep)، وزيارة متحف زيوغما للموزاييك الروماني، ووقت حر والمبيت.",
+            "es": "Traslado por carretera de Capadocia a Gaziantep (Antep), visita al Museo de Zeugma de mosaicos romanos, tiempo libre, alojamiento.",
+            "en": "Travel overland from Cappadocia to Gaziantep (Antep), visit the Zeugma Museum of Roman mosaics, free time, overnight.",
+            "pt": "Transferência terrestre da Capadócia para Gaziantep (Antep), visita ao Museu de Zeugma de mosaicos romanos, tempo livre, pernoite."
+          },
+          "day": "6",
+          "meals": {
+            "it": "Colazione",
+            "ar": "إفطار",
+            "es": "Desayuno",
+            "en": "Breakfast",
+            "pt": "Café da manhã"
+          }
+        },
+        {
+          "description": {
+            "it": "Visitare il Castello di Gaziantep e il suo antico bazar, assaggiare il baklava tradizionale, poi proseguire per Halfeti per vedere le rare \"rose nere,\" dirigersi al Monte Nemrud per il pernottamento.",
+            "ar": "زيارة قلعة عنتاب وبازارها القديم وتذوق البقلاوة التراثية، ثم التحرك لبلدة هالفيتي لرؤية منابت \"الورود السوداء\" النادرة، والتوجه إلى جبل نمرود للمبيت.",
+            "es": "Visitar el Castillo de Gaziantep y su antiguo bazar, degustar el baklava tradicional, luego ir al pueblo de Halfeti para ver las raras \"rosas negras,\" dirigirse al Monte Nemrud para alojamiento.",
+            "en": "Visit Gaziantep Castle and its old bazaar, taste traditional baklava, then proceed to Halfeti town to see the rare \"black roses,\" head to Mount Nemrud for overnight.",
+            "pt": "Visitar o Castelo de Gaziantep e seu antigo bazar, provar o baklava tradicional, depois seguir para a cidade de Halfeti para ver as raras \"rosas negras,\" ir ao Monte Nemrud para pernoite."
+          },
+          "day": "7",
+          "meals": {
+            "it": "Colazione",
+            "ar": "إفطار",
+            "es": "Desayuno",
+            "en": "Breakfast",
+            "pt": "Café da manhã"
+          }
+        },
+        {
+          "description": {
+            "it": "Salire sul Monte Nemrud per vedere le statue giganti delle teste degli dei, proseguire per Urfa per visitare il castello, il lago dei pesci, la grotta della nascita del Profeta Abramo, la Chiesa di Rıjı e il Museo Archeologico di Urfa. (Opzionale: partecipare a una serata musicale tradizionale Sira).",
+            "ar": "صعود جبل نمرود لمشاهدة التماثيل العملاقة لرؤوس الآلهة، والتحرك لمدينة أورفا وزيارة القلعة وبحيرة الأسماك وكهف ميلاد سيدنا إبراهيم، وكنيسة ريجي ومتحف أورفا الأثري (اختياري: حضور سهرة ليلة تيسير الموسيقية التراثية).",
+            "es": "Ascender al Monte Nemrud para ver las estatuas gigantes de cabezas de dioses, ir a Urfa para visitar el castillo, el lago de los peces, la cueva del nacimiento del Profeta Abraham, la Iglesia de Rıjı y el Museo Arqueológico de Urfa. (Opcional: asistir a una velada musical tradicional de Sira).",
+            "en": "Climb Mount Nemrud to see the giant statues of the gods' heads, proceed to Urfa to visit the castle, fish lake, cave where Prophet Abraham was born, Church of Rıjı, and Urfa Archaeological Museum. (Optional: attend a traditional Sira music evening).",
+            "pt": "Subir ao Monte Nemrud para ver as estátuas gigantes das cabeças dos deuses, seguir para Urfa para visitar o castelo, o lago dos peixes, a caverna do nascimento do Profeta Abraão, a Igreja de Rıjı e o Museu Arqueológico de Urfa. (Opcional: assistir a uma noite musical tradicional Sira)."
+          },
+          "day": "8",
+          "meals": {
+            "it": "Colazione al sacco + Cena",
+            "ar": "إفطار صندوقي + عشاء",
+            "es": "Desayuno de caja + Cena",
+            "en": "Box Breakfast + Dinner",
+            "pt": "Café da manhã de caixa + Jantar"
+          }
+        },
+        {
+          "description": {
+            "it": "Proseguire per Harran per vedere le case di fango a forma di alveare, visitare il sito archeologico di Göbeklitepe patrimonio UNESCO, poi viaggiare a Mardin per il pernottamento.",
+            "ar": "التحرك لبلدة حرّان لرؤية المنازل الطينية المقببة، وزيارة موقع غوبكلي تبه (Göbeklitepe) الأثري العالمي المدرج باليونسكو، والتحرك لمدينة ماردين والمبيت.",
+            "es": "Ir a Harran para ver las casas de adobe con forma de colmena, visitar el sitio arqueológico de Göbeklitepe declarado Patrimonio de la UNESCO, luego viajar a Mardin para alojamiento.",
+            "en": "Proceed to Harran to see the beehive mud-brick houses, visit the UNESCO-listed archaeological site of Göbeklitepe, then travel to Mardin for overnight.",
+            "pt": "Seguir para Harran para ver as casas de barro em forma de colmeia, visitar o sítio arqueológico de Göbeklitepe declarado Patrimônio da UNESCO, depois viajar para Mardin para pernoite."
+          },
+          "day": "9",
+          "meals": {
+            "it": "Colazione",
+            "ar": "إفطار",
+            "es": "Desayuno",
+            "en": "Breakfast",
+            "pt": "Café da manhã"
+          }
+        },
+        {
+          "description": {
+            "it": "Giro di Mardin incluso l'antico Monastero Siro Ortodosso Mor Gabriel, visita all'antica città scavata nella roccia di Dara, poi trasferimento all'aeroporto di Mardin per volare di ritorno a Istanbul per l'ultima notte.",
+            "ar": "جولة في ماردين تشمل دير مار غبريال السرياني الأرثوذكسي الأقدم، وزيارة مدينة \"دارا\" الأثرية المحفورة في الصخور، ثم النقل لمطار ماردين للطيران عودة إلى إسطنبول لليلة الأخيرة.",
+            "es": "Recorrido por Mardin incluyendo el antiguo Monasterio Sirio Ortodoxo Mor Gabriel, visita a la antigua ciudad excavada en la roca de Dara, luego traslado al aeropuerto de Mardin para volar de regreso a Estambul para la última noche.",
+            "en": "Tour of Mardin including the ancient Syriac Orthodox Mor Gabriel Monastery, visit the rock-carved ancient city of Dara, then transfer to Mardin airport to fly back to Istanbul for the last night.",
+            "pt": "Tour por Mardin incluindo o antigo Mosteiro Siríaco Ortodoxo Mor Gabriel, visita à antiga cidade escavada na rocha de Dara, depois transfer para o aeroporto de Mardin para voar de volta a Istambul para a última noite."
+          },
+          "day": "10",
+          "meals": {
+            "it": "Colazione",
+            "ar": "إفطار",
+            "es": "Desayuno",
+            "en": "Breakfast",
+            "pt": "Café da manhã"
+          }
+        },
+        {
+          "description": {
+            "it": "Trasferimento in aeroporto per la partenza finale.",
+            "ar": "التوصيل للمطار للمغادرة النهائية.",
+            "es": "Traslado al aeropuerto para la salida final.",
+            "en": "Transfer to airport for final departure.",
+            "pt": "Transfer para o aeroporto para partida final."
+          },
+          "day": "11",
+          "meals": {
+            "it": "Colazione",
+            "ar": "إفطار",
+            "es": "Desayuno",
+            "en": "Breakfast",
+            "pt": "Café da manhã"
+          }
+        }
+      ]
+    },
+    {
+      "id": "REG-09",
+      "code": {
+        "en": "REG-09",
+        "ar": "REG-09",
+        "es": "REG-09",
+        "pt": "REG-09",
+        "it": "REG-09"
+      },
+      "name": {
+        "en": "Turkey Without Rush",
+        "ar": "تركيا بلا استعجال",
+        "es": "Turquía sin Prisas",
+        "pt": "Turquia Sem Pressa",
+        "it": "Turchia Senza Fretta"
+      },
+      "duration": {
+        "en": "9 days / 8 nights",
+        "ar": "9 أيام / 8 ليالٍ",
+        "es": "9 días / 8 noches",
+        "pt": "9 dias / 8 noites",
+        "it": "9 giorni / 8 notti"
+      },
+      "minPax": {
+        "en": "2 Pax",
+        "ar": "فردان",
+        "es": "2 Pax",
+        "pt": "2 Pax",
+        "it": "2 Pax"
+      },
+      "overview": {
+        "en": "As the name perfectly describes, this is a \"chill\" program designed for travelers who hate long, exhausting overland schedules. The program moves exclusively by air, connecting the three major hubs (Istanbul, Cappadocia, and the Aegean) to ensure maximum comfort and luxury.",
+        "ar": "كما يصفه اسمه تماماً، هو برنامج \"على الرايق\" مصمم للمسافر الذي يكره الجداول البرية الطويلة المرهقة. يتنقل البرنامج حصرياً بالطائرات ليربط بين المحطات الرئيسية الثلاث الكبرى (إسطنبول، كابادوكيا، وبحر إيجة) لضمان أقصى درجات الراحة والرفاهية.",
+        "es": "Tal como lo describe su nombre, es un programa \"tranquilo\" diseñado para el viajero que odia los largos y agotadores itinerarios por carretera. El programa se desplaza exclusivamente en avión para conectar las tres grandes estaciones (Estambul, Capadocia y el Egeo), garantizando la máxima comodidad y lujo.",
+        "pt": "Como o nome descreve perfeitamente, este é um programa \"na tranquilidade\" projetado para o viajante que odeia longos e cansativos itinerários terrestres. O programa se desloca exclusivamente por via aérea, conectando os três principais hubs (Istambul, Capadócia e o Egeu), garantindo o máximo conforto e luxo.",
+        "it": "Come il nome descrive perfettamente, è un programma \"rilassato\" progettato per il viaggiatore che odia i lunghi e faticosi itinerari via terra. Il programma si sposta esclusivamente in aereo per collegare i tre grandi hub (Istanbul, Cappadocia e l'Egeo), garantendo il massimo comfort e lusso."
+      },
+      "highlights": {
+        "en": [
+          "A comfortable tour free from the hardship of long overland travel via an integrated domestic flight network.",
+          "Explore the famous ecological and historical Love Valley in Cappadocia.",
+          "A dedicated trip to visit the thermal springs of Pamukkale departing from your coastal base.",
+          "An excellent balance between guided historical tours and free personal time."
+        ],
+        "ar": [
+          "جولة مريحة خالية من عناء السفر البري الطويل عبر شبكة طيران داخلي متكاملة.",
+          "استكشاف وادي الحب (Valle del Amor) البيئي والتاريخي الشهير في كابادوكيا.",
+          "رحلة مخصصة لزيارة معالم الينابيع الحرارية في باموكالي انطلاقاً من مقرك الساحلي.",
+          "توازن ممتاز بين الجولات التاريخية الموجهة والأوقات الحرة الشخصية."
+        ],
+        "es": [
+          "Un tour cómodo y libre de la fatiga de los largos viajes por carretera gracias a una red integrada de vuelos domésticos.",
+          "Explorar el famoso Valle del Amor ecológico e histórico en Capadocia.",
+          "Un viaje dedicado para visitar los manantiales termales de Pamukkale partiendo desde su base costera.",
+          "Un excelente equilibrio entre visitas históricas guiadas y tiempo libre personal."
+        ],
+        "pt": [
+          "Um tour confortável e livre do cansaço das longas viagens terrestres através de uma rede integrada de voos domésticos.",
+          "Explorar o famoso Vale do Amor ecológico e histórico na Capadócia.",
+          "Uma viagem dedicada para visitar as nascentes termais de Pamukkale partindo da sua base costeira.",
+          "Um excelente equilíbrio entre passeios históricos guiados e tempo livre pessoal."
+        ],
+        "it": [
+          "Un tour comodo e libero dalla fatica dei lunghi viaggi via terra grazie a una rete integrata di voli domestici.",
+          "Esplorare il famoso Valle dell'Amore ecologico e storico in Cappadocia.",
+          "Un viaggio dedicato per visitare le sorgenti termali di Pamukkale partendo dalla vostra base costiera.",
+          "Un eccellente equilibrio tra tour storici guidati e tempo libero personale."
+        ]
+      },
+      "days": [
+        {
+          "meals": {
+            "en": "Breakfast + Lunch on Day 2",
+            "ar": "إفطار + غداء في اليوم الثاني",
+            "es": "Desayuno + Almuerzo el día 2",
+            "pt": "Café da manhã + Almoço no dia 2",
+            "it": "Colazione + Pranzo il giorno 2"
+          },
+          "day": "1–2",
+          "description": {
+            "en": "Arrival in Istanbul. Full-day historical Old City tour (Hagia Sophia exterior, Topkapi Palace, Grand Bazaar).",
+            "ar": "الوصول لإسطنبول، والقيام بجولة المدينة القديمة الكاملة التاريخية (آيا صوفيا خارجي، توبكابي، والجراند بازار).",
+            "es": "Llegada a Estambul. Recorrido completo de la Ciudad Vieja (Santa Sofía exterior, Palacio de Topkapi, Gran Bazar).",
+            "pt": "Chegada a Istambul. Tour completo da Cidade Velha (Santa Sofia exterior, Palácio de Topkapi, Grande Bazar).",
+            "it": "Arrivo a Istanbul. Giro completo della Città Vecchia (Santa Sofia esterno, Palazzo di Topkapi, Gran Bazar)."
+          }
+        },
+        {
+          "meals": {
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء",
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena"
+          },
+          "day": "3",
+          "description": {
+            "en": "Spice Bazaar tour and Bosphorus boat cruise during the day, visit Taksim and Galata, then transfer to airport for direct flight to Cappadocia, overnight.",
+            "ar": "جولة سوق التوابل والبوسفور بالمركب نهاراً، وزيارة تقسيم والغالاطا، يليه الانتقال للمطار للطيران مباشرة إلى كابادوكيا والمبيت.",
+            "es": "Recorrido del Bazar de las Especias y paseo en barco por el Bósforo, visita a Taksim y Gálata, luego traslado al aeropuerto para vuelo directo a Capadocia, alojamiento.",
+            "pt": "Tour do Bazar de Especiarias e cruzeiro de barco pelo Bósforo, visita a Taksim e Gálata, depois transfer para o aeroporto para voo direto para a Capadócia, pernoite.",
+            "it": "Giro del Bazar delle Spezie e crociera in barca sul Bosforo, visita a Taksim e Galata, poi trasferimento in aeroporto per il volo diretto per la Cappadocia, pernottamento."
+          }
+        },
+        {
+          "meals": {
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء",
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena"
+          },
+          "day": "4",
+          "description": {
+            "en": "Valleys tour in Cappadocia (Göreme, Uçhisar, Love Valley, underground city).",
+            "ar": "جولة الوديان في كابادوكيا (جوريم، أواتش حصار، وادي الحب، والمدينة تحت الأرض).",
+            "es": "Recorrido por los valles de Capadocia (Göreme, Uçhisar, Valle del Amor, ciudad subterránea).",
+            "pt": "Passeio pelos vales da Capadócia (Göreme, Uçhisar, Vale do Amor, cidade subterrânea).",
+            "it": "Giro delle valli in Cappadocia (Göreme, Uçhisar, Valle dell'Amore, città sotterranea)."
+          }
+        },
+        {
+          "meals": {
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء",
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena"
+          },
+          "day": "5",
+          "description": {
+            "en": "Transfer to airport for flight from Cappadocia to Izmir, transfer to hotel in Kuşadası.",
+            "ar": "النقل إلى المطار للطيران من كابادوكيا إلى إزمير، النقل للفندق في كوشاداسي.",
+            "es": "Traslado al aeropuerto para volar de Capadocia a Esmirna, traslado al hotel en Kuşadası.",
+            "pt": "Transfer para o aeroporto para voo da Capadócia para Esmirna, transfer para o hotel em Kuşadası.",
+            "it": "Trasferimento in aeroporto per il volo dalla Cappadocia a Smirne, trasferimento in hotel a Kuşadası."
+          }
+        },
+        {
+          "meals": {
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء",
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena"
+          },
+          "day": "6",
+          "description": {
+            "en": "Full-day trip by car from Kuşadası to visit the Pamukkale travertines and Hierapolis ruins, returning to Kuşadası.",
+            "ar": "رحلة يوم كامل بالسيارة من كوشاداسي لزيارة مدرجات باموكالي وآثار هيرابوليس والعودة لكوشاداسي.",
+            "es": "Excursión de día completo en coche desde Kuşadası para visitar los travertinos de Pamukkale y las ruinas de Hierápolis, regreso a Kuşadası.",
+            "pt": "Viagem de dia inteiro de carro de Kuşadası para visitar os travertinos de Pamukkale e as ruínas de Hierápolis, retorno a Kuşadası.",
+            "it": "Gita di un giorno intero in auto da Kuşadası per visitare i travertini di Pamukkale e le rovine di Hierapolis, ritorno a Kuşadası."
+          }
+        },
+        {
+          "meals": {
+            "en": "Breakfast + Dinner",
+            "ar": "إفطار + عشاء",
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena"
+          },
+          "day": "7",
+          "description": {
+            "en": "Tour of the Roman ruins of Ephesus, House of the Virgin Mary, leather factory, and fashion show.",
+            "ar": "جولة آثار أفسس الرومانية، وبيت مريم العذراء، ومصنع الجلود وعرض الأزياء.",
+            "es": "Recorrido por las ruinas romanas de Éfeso, Casa de la Virgen María, fábrica de cuero y desfile de moda.",
+            "pt": "Tour das ruínas romanas de Éfeso, Casa da Virgem Maria, fábrica de couro e desfile de moda.",
+            "it": "Giro delle rovine romane di Efeso, Casa della Vergine Maria, conceria e sfilata di moda."
+          }
+        },
+        {
+          "meals": {
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "day": "8",
+          "description": {
+            "en": "Transfer to airport for flight from Izmir back to Istanbul, overnight.",
+            "ar": "النقل للمطار للطيران من إزمير عودة إلى إسطنبول والمبيت.",
+            "es": "Traslado al aeropuerto para volar de Esmirna de regreso a Estambul, alojamiento.",
+            "pt": "Transfer para o aeroporto para voo de Esmirna de volta a Istambul, pernoite.",
+            "it": "Trasferimento in aeroporto per il volo da Smirne di ritorno a Istanbul, pernottamento."
+          }
+        },
+        {
+          "meals": {
+            "en": "Breakfast",
+            "ar": "إفطار",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "day": "9",
+          "description": {
+            "en": "Transfer to Istanbul Airport for final departure.",
+            "ar": "التوصيل لمطار إسطنبول للمغادرة النهائية.",
+            "es": "Traslado al aeropuerto de Estambul para la salida final.",
+            "pt": "Transfer para o aeroporto de Istambul para partida final.",
+            "it": "Trasferimento all'aeroporto di Istanbul per la partenza finale."
+          }
+        }
+      ]
+    }
+  ]
+}

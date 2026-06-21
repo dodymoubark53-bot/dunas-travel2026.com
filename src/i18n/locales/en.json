@@ -2760,7 +2760,15 @@
       "title": "Turkey",
       "subtitle": "Where East meets West",
       "seoTitle": "Luxury Turkey Tours & Vacations | Dunas Travel",
-      "seoDesc": "Explore luxury journeys in Turkey. Custom itineraries coming soon."
+      "seoDesc": "Explore luxury journeys in Turkey. Custom itineraries coming soon.",
+      "desc": "From the majestic Hagia Sophia to the fairy chimneys of Cappadocia and the turquoise waters of the Aegean, Turkey bridges continents and millennia.",
+      "brief": "Turkey is where East meets West, offering a rich tapestry of history, culture, and natural beauty. Our programs span from Istanbul's imperial treasures to the surreal landscapes of Cappadocia, the thermal terraces of Pamukkale, and the ancient ruins of Ephesus and Troy.",
+      "ourPrograms": "Our Programs",
+      "toursTitle": "Turkey Programs",
+      "ctaLabel": "READY TO TRAVEL TO TURKEY?",
+      "ctaTitle": "Your Turkish adventure starts here",
+      "ctaDesc": "Explore our curated Turkey programs and book your dream journey today.",
+      "ctaBtn": "View All Programs"
     },
     "jordan": {
       "title": "Jordan",
@@ -2866,6 +2874,7 @@
     "highlights": "Key Highlights",
     "incExc": "What's Included & Excluded",
     "included": "Included",
+    "itinerary": "Itinerary",
     "overview": "Overview"
   },
   "transportation": {
@@ -3022,7 +3031,11 @@
     "noToursFound": "No Combinations Found",
     "noToursDesc": "We do not have any active packages matching that specific country combination right now. Let us customize an itinerary just for you!",
     "customOdyssey": "Tailor-Made Multiverse Journey",
-    "ctaTitle": "Didn’t find the exact combination you wanted?",
+    "customizeLabel": "DIDN'T FIND WHAT YOU'RE LOOKING FOR?",
+    "customizeTitle": "Let us design your perfect Turkey journey",
+    "customizeDesc": "Tell us your preferences, and our expert travel designers will craft a bespoke itinerary tailored just for you.",
+    "customizeBtn": "Customize Your Trip",
+    "ctaTitle": "Didn't find the exact combination you wanted?",
     "ctaDesc": "Whether you want to combine Egypt with Turkey, Jordan with Greece, or cross-border travel through all five, our expert travel designers will orchestrate a custom itinerary, managing all visas, transfers, premium flights, and boutique hotels.",
     "luxGuarantee": "Executive Service Included",
     "luxGuaranteeDesc": "This multi-country catalog features premium flights, custom-vetted 4-star and 5-star hotels, luxury Nile cruisers, private 4x4 desert safaris, and certified Spanish-speaking local guides in every country.",
