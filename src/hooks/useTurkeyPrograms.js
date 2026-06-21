@@ -29,6 +29,8 @@ const getLangValue = (obj, lang) => {
 
 const slugify = (str) => str.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 
+const TURKEY_IDS = ['REG-01', 'REG-02', 'REG-03', 'REG-04', 'REG-05', 'REG-05-B', 'REG-06', 'REG-07', 'REG-08', 'REG-09', 'REG-10', 'REG-11', 'REG-13', 'REG-14'];
+
 export const useTurkeyPrograms = () => {
   const { i18n } = useTranslation();
   const lang = i18n.language;
@@ -36,7 +38,7 @@ export const useTurkeyPrograms = () => {
   const activeLang = supported.includes(lang) ? lang : 'en';
 
   return useMemo(() => {
-    return rawPrograms.map((prog) => {
+    return rawPrograms.filter((prog) => TURKEY_IDS.includes(prog.id)).map((prog) => {
       const name = getLangValue(prog.name, activeLang);
       return {
         id: prog.id,

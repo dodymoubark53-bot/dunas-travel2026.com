@@ -8,6 +8,8 @@ import { fadeInUp, staggerContainer } from "../animations/variants";
 import Button from "../components/ui/Button";
 import TourCard from "../components/tour/TourCard";
 import { tours } from "../data/tours";
+import { useTurkeyPrograms } from "../hooks/useTurkeyPrograms";
+import { useJordanPrograms } from "../hooks/useJordanPrograms";
 import { services } from "../data/services";
 import { transportation } from "../data/transportation";
 import { useCurrency } from "../context/CurrencyContext";
@@ -70,6 +72,74 @@ const Home = () => {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [activeGalleryIndex, setActiveGalleryIndex] = useState(0);
   const [isAllToursPopupOpen, setIsAllToursPopupOpen] = useState(false);
+
+  const turkeyPrograms = useTurkeyPrograms();
+  const formattedTurkeyTours = turkeyPrograms.map((tp) => ({
+    id: tp.id,
+    slug: tp.slug,
+    destination: "turkey",
+    title: tp.title,
+    description: tp.overview,
+    duration: tp.duration,
+    price: tp.raw?.price || 899,
+    rating: 4.8,
+    reviewCount: 120,
+    images: tp.images,
+    type: tp.raw?.type || "Cultural Tour",
+    market: "Global",
+    highlights: tp.highlights,
+    code: tp.code
+  }));
+
+  const jordanPrograms = useJordanPrograms();
+  const formattedJordanTours = jordanPrograms.map((jp) => ({
+    id: jp.id,
+    slug: jp.slug,
+    destination: "jordan",
+    title: jp.title,
+    description: jp.overview,
+    duration: jp.duration,
+    price: jp.raw?.price || 899,
+    rating: 4.8,
+    reviewCount: 120,
+    images: jp.images,
+    type: jp.raw?.type || "Cultural Tour",
+    market: "Global",
+    highlights: jp.highlights,
+    code: jp.code
+  }));
+
+  // Hero Slider State
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const heroSlides = [
+    {
+      id: "main",
+      image: "/images/hero.jpg",
+      title: t("home.heroTitle"),
+      desc: t("home.heroDesc", "Curating ultra-luxury, personalized itineraries through the timeless wonders of Egypt, Jordan, Turkey, and Tunisia. Experience the world's most captivating destinations in unparalleled style."),
+      button1: { text: t("home.exploreDest"), link: "/destinations", variant: "gold-glow" },
+      button2: { text: t("home.tailorTour"), link: "/tailor-a-tour", variant: "glass" },
+      award: t("home.award")
+    },
+    {
+      id: "turkey",
+      image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=1920&q=80",
+      title: t("home.turkeyHeroTitle", "Discover Turkey"),
+      desc: t("home.turkeyHeroDesc", "Explore the magic of Istanbul, the fairy chimneys of Cappadocia, the stunning coast of Antalya, and the thermal pools of Pamukkale. Unforgettable journeys await."),
+      price: t("home.turkeyHeroPrice", "Starting from $899"),
+      button1: { text: t("home.turkeyHeroView", "View Packages"), link: "/destinations", variant: "gold-glow" },
+      button2: { text: t("home.turkeyHeroBook", "Book Now"), link: "/contact", variant: "glass" },
+      award: t("home.turkeyHeroAward", "FEATURED DESTINATION")
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [heroSlides.length]);
 
   // Transportation State
   const [vehicleFilter, setVehicleFilter] = useState("all");
@@ -189,13 +259,17 @@ const Home = () => {
     .slice(0, 2);
 
   const activeTours = activeDestination
-    ? tours.filter((t) => t.destination === activeDestination)
+    ? activeDestination === "turkey"
+      ? formattedTurkeyTours
+      : activeDestination === "jordan"
+        ? formattedJordanTours
+        : tours.filter((t) => t.destination === activeDestination)
     : [];
 
   const featuredToursList = [
     tours.find((t) => t.destination === "egypt"),
-    tours.find((t) => t.destination === "turkey"),
-    tours.find(
+    formattedTurkeyTours[0] || tours.find((t) => t.destination === "turkey"),
+    formattedJordanTours[0] || tours.find(
       (t) =>
         t.destination === "jordan" &&
         t.id !== tours.find((x) => x.destination === "jordan")?.id,
@@ -239,66 +313,100 @@ const Home = () => {
 
       {/* Hero Section */}
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/images/hero.jpg"
-            alt="Luxury Travel Hero"
-            className="w-full h-full object-cover"
-            fetchpriority="high"
-          />
-          <div className="absolute inset-0"></div>
-        </div>
-
-        <motion.div
-          className="relative z-10 container mx-auto px-6 text-center mt-12"
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <motion.span
-            variants={fadeInUp}
-            className="inline-block font-body text-gold-500 tracking-[0.2em] uppercase text-sm mb-4"
-          >
-            {t("home.award")}
-          </motion.span>
-
-          <motion.h1
-            variants={fadeInUp}
-            className="text-display-xl text-ivory-50 mb-6 max-w-4xl mx-auto drop-shadow-lg whitespace-pre-line"
-          >
-            {t("home.heroTitle")}
-          </motion.h1>
-
-          <motion.p
-            variants={fadeInUp}
-            className="text-body-lg text-ivory-300 mb-8 max-w-2xl mx-auto"
-          >
-            {t("home.heroDesc", "Curating ultra-luxury, personalized itineraries through the timeless wonders of Egypt, Jordan, Turkey, and Tunisia. Experience the world's most captivating destinations in unparalleled style.")}
-          </motion.p>
-
+        <AnimatePresence mode="wait">
           <motion.div
-            variants={fadeInUp}
-            className="flex flex-col sm:flex-row items-center justify-center gap-6"
+            key={currentSlide}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="absolute inset-0 z-0"
           >
-            <Link to="/destinations">
-              <Button
-                variant="gold-glow"
-                className="w-full sm:w-auto px-8 py-4 text-lg"
-              >
-                {t("home.exploreDest")}
-              </Button>
-            </Link>
-            <Link to="/tailor-a-tour">
-              <Button
-                variant="glass"
-                className="w-full sm:w-auto px-8 py-4 text-lg"
-              >
-                {t("home.tailorTour")}
-              </Button>
-            </Link>
+            <img
+              src={heroSlides[currentSlide].image}
+              alt="Luxury Travel Hero"
+              className="w-full h-full object-cover"
+              fetchpriority={currentSlide === 0 ? "high" : "auto"}
+            />
+            <div className="absolute inset-0"></div>
           </motion.div>
-        </motion.div>
+        </AnimatePresence>
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide}
+            className="relative z-10 container mx-auto px-6 text-center mt-12"
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+          >
+            <motion.span
+              variants={fadeInUp}
+              className="inline-block font-body text-gold-500 tracking-[0.2em] uppercase text-sm mb-4"
+            >
+              {heroSlides[currentSlide].award}
+            </motion.span>
+
+            <motion.h1
+              variants={fadeInUp}
+              className="text-display-xl text-ivory-50 mb-6 max-w-4xl mx-auto drop-shadow-lg whitespace-pre-line"
+            >
+              {heroSlides[currentSlide].title}
+            </motion.h1>
+
+            <motion.p
+              variants={fadeInUp}
+              className="text-body-lg text-ivory-300 mb-6 max-w-2xl mx-auto"
+            >
+              {heroSlides[currentSlide].desc}
+            </motion.p>
+
+            {heroSlides[currentSlide].price && (
+              <motion.div variants={fadeInUp} className="mb-8">
+                <span className="text-xl text-gold-500 font-semibold bg-obsidian-900/50 px-6 py-2 rounded-full border border-gold-500/30 backdrop-blur-sm shadow-[0_0_15px_rgba(245,166,35,0.2)]">
+                  {heroSlides[currentSlide].price}
+                </span>
+              </motion.div>
+            )}
+
+            <motion.div
+              variants={fadeInUp}
+              className="flex flex-col sm:flex-row items-center justify-center gap-6"
+            >
+              <Link to={heroSlides[currentSlide].button1.link}>
+                <Button
+                  variant={heroSlides[currentSlide].button1.variant}
+                  className="w-full sm:w-auto px-8 py-4 text-lg"
+                >
+                  {heroSlides[currentSlide].button1.text}
+                </Button>
+              </Link>
+              <Link to={heroSlides[currentSlide].button2.link}>
+                <Button
+                  variant={heroSlides[currentSlide].button2.variant}
+                  className="w-full sm:w-auto px-8 py-4 text-lg"
+                >
+                  {heroSlides[currentSlide].button2.text}
+                </Button>
+              </Link>
+            </motion.div>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Slide Indicators */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-3">
+          {heroSlides.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentSlide(idx)}
+              className={`h-2 rounded-full transition-all duration-500 ${
+                currentSlide === idx ? "bg-gold-500 w-8" : "bg-ivory-50/50 hover:bg-ivory-50 w-2"
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
+        </div>
       </section>
 
       {/* About the Company */}
@@ -364,9 +472,11 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {destinationsData.map((dest) => {
-              const tourCount = tours.filter(
-                (t) => t.destination === dest.id,
-              ).length;
+              const tourCount = dest.id === "turkey" 
+                ? formattedTurkeyTours.length 
+                : dest.id === "jordan"
+                  ? formattedJordanTours.length
+                  : tours.filter((t) => t.destination === dest.id).length;
               const isActive = activeDestination === dest.id;
 
               return (
@@ -423,10 +533,23 @@ const Home = () => {
                     {t("nav.tours")}
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {activeTours.map((tour) => (
-                      <TourCard key={tour.id} tour={tour} />
+                    {activeTours.slice(0, 6).map((tour) => (
+                      <TourCard 
+                        key={tour.id} 
+                        tour={tour} 
+                        linkBase={activeDestination === "turkey" ? "/programs/turkey" : "/tours"} 
+                      />
                     ))}
                   </div>
+                  {activeTours.length > 6 && (
+                    <div className="flex justify-center mt-10">
+                      <Link to={`/destinations/${activeDestination}`}>
+                        <Button variant="outline-gold" className="px-8 py-3">
+                          {t("home.viewAll", "View All")} {activeTours.length} {t("nav.tours", "Tours")}
+                        </Button>
+                      </Link>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             )}

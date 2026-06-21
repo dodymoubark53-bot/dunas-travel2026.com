@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { staggerContainer, fadeInUp } from '../../animations/variants';
 import Button from '../../components/ui/Button';
+import TourCard from '../../components/tour/TourCard';
 import { useTurkeyPrograms } from '../../hooks/useTurkeyPrograms';
 
 const HERO_IMG = 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=1920&q=80';
@@ -61,56 +62,29 @@ const Turquia = () => {
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
         >
-          {programs.map((prog) => (
-            <motion.div
-              key={prog.id}
-              variants={fadeInUp}
-              className="bg-ivory-50 rounded-xl overflow-hidden flex flex-col h-full group shadow-card border border-gold-500/10 hover:shadow-lg transition-shadow"
-            >
-              <Link to={`/programs/turkey/${prog.slug}`} className="block relative h-[240px] overflow-hidden">
-                <div className="absolute top-4 left-4 z-10 bg-obsidian-900/80 backdrop-blur-md text-gold-500 text-caption px-4 py-1.5 rounded-full border border-gold-500/30 shadow-glass">
-                  {prog.minPax} · {prog.duration.split('/')[0].trim()}
-                </div>
-                <img
-                  src={prog.images[0]}
-                  alt={prog.title}
-                  className="w-full h-full object-cover transform scale-100 group-hover:scale-[1.06] transition-transform duration-700"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-obsidian-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </Link>
-
-              <div className="p-6 flex flex-col flex-grow">
-                <span className="text-caption text-gold-600 uppercase tracking-widest mb-1 block">{prog.code}</span>
-                <Link to={`/programs/turkey/${prog.slug}`}>
-                  <h3 className="text-display-md text-obsidian-900 mb-3 line-clamp-2 group-hover:text-gold-700 transition-colors">
-                    {prog.title}
-                  </h3>
-                </Link>
-                <p className="text-body-sm text-obsidian-500 line-clamp-3 mb-4 flex-grow">{prog.overview}</p>
-
-                <div className="border-t border-gold-500/10 pt-4 mb-4">
-                  <ul className="grid grid-cols-1 gap-y-1.5">
-                    {(Array.isArray(prog.highlights) ? prog.highlights : []).slice(0, 3).map((hl, idx) => (
-                      <li key={idx} className="text-[12px] text-obsidian-500 flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-gold-500 shrink-0"></span>
-                        <span className="truncate">{hl}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="flex items-center justify-between pt-4 border-t border-gold-500/10 mt-auto">
-                  <span className="text-caption text-obsidian-300">{prog.duration}</span>
-                  <Link to={`/programs/turkey/${prog.slug}`}>
-                    <Button variant="outline-gold" className="px-6 py-2 flex items-center gap-2">
-                      {t('tourCard.viewDetails', 'View Details')} <span className="rtl-flip">&rarr;</span>
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+          {programs.map((prog) => {
+            const tourObj = {
+              id: prog.id,
+              slug: prog.slug,
+              destination: 'turkey',
+              title: prog.title,
+              description: prog.overview,
+              duration: prog.duration,
+              price: prog.raw?.price || 899,
+              images: prog.images,
+              type: prog.raw?.type || 'Cultural Tour',
+              code: prog.code,
+              minPax: prog.minPax,
+            };
+            return (
+              <TourCard
+                key={prog.id}
+                tour={tourObj}
+                linkBase="/programs/turkey"
+                highlights={Array.isArray(prog.highlights) ? prog.highlights : []}
+              />
+            );
+          })}
         </motion.div>
       </section>
 

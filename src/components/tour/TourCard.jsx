@@ -15,19 +15,7 @@ export const toursBR = importedTours.filter(t => t.language === 'pt-BR');
 export const toursIT = importedTours.filter(t => t.language === 'it');
 export const allTours = [...toursBR, ...toursIT];
 
-const renderStars = (rating) => {
-  const stars = [];
-  for (let i = 1; i <= 5; i++) {
-    if (rating >= i) {
-      stars.push(<FaStar key={i} className="text-gold-500" />);
-    } else if (rating >= i - 0.5) {
-      stars.push(<FaStarHalfAlt key={i} className="text-gold-500" />);
-    } else {
-      stars.push(<FaRegStar key={i} className="text-obsidian-300" />);
-    }
-  }
-  return <div className="flex items-center gap-1 text-sm">{stars}</div>;
-};
+// Removed renderStars as per Turkey template
 
 const marketFlag = (market) => {
   const flags = { Brasil: '🇧🇷', Italia: '🇮🇹' };
@@ -58,16 +46,16 @@ const TourCard = ({
 
   return (
     <motion.div
-      className="bg-ivory-50 rounded-xl overflow-hidden flex flex-col h-full group shadow-card border border-gold-500/10"
-      variants={variants.cardLift}
-      initial="rest"
-      whileHover="hover"
-      animate="rest"
+      className="bg-ivory-50 rounded-xl overflow-hidden flex flex-col h-full group shadow-card border border-gold-500/10 hover:shadow-lg transition-shadow"
+      variants={variants.fadeInUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: '-50px' }}
     >
-      {/* Image */}
-      <div className="relative h-[280px] overflow-hidden">
+      {/* Image as Link */}
+      <Link to={detailUrl} className="block relative h-[240px] overflow-hidden">
         <div className="absolute top-4 left-4 z-10 bg-obsidian-900/80 backdrop-blur-md text-gold-500 text-caption px-4 py-1.5 rounded-full border border-gold-500/30 shadow-glass">
-          {t(`data.${tour.type}`, tour.type)} · {isMultiCountry ? `${tour.days}d` : durationLabel}
+          {tour.minPax ? `${tour.minPax} · ` : ''}{isMultiCountry ? `${tour.days}d` : durationLabel}
         </div>
 
         {/* Badge (Best Seller / Popular / …) — only when the tour has one */}
@@ -87,7 +75,7 @@ const TourCard = ({
         <img
           src={tour.images[0]}
           alt={`${t(`data.${tour.title}`, tour.title)} — ${t(`nav.${tour.destination}`, tour.destination)}`}
-          className="w-full h-full object-cover transform scale-100 group-hover:scale-[1.06] cinematic-transition"
+          className="w-full h-full object-cover transform scale-100 group-hover:scale-[1.06] transition-transform duration-700"
           loading="lazy"
         />
 
@@ -107,12 +95,12 @@ const TourCard = ({
             ))}
           </div>
         )}
-      </div>
+      </Link>
 
       {/* Content */}
       <div className="p-6 flex flex-col flex-grow">
         <span className="text-caption text-gold-600 uppercase tracking-widest mb-1 block">
-          {t(`data.${tour.subtitle || tour.destination}`, tour.subtitle || tour.destination)}
+          {tour.code || t(`data.${tour.subtitle || tour.destination}`, tour.subtitle || tour.destination)}
         </span>
 
         <Link to={detailUrl}>
@@ -125,23 +113,15 @@ const TourCard = ({
           {t(`data.${tour.description}`, tour.description)}
         </p>
 
-        <div className="flex items-center gap-2 mb-6">
-          {renderStars(tour.rating)}
-          <span className="text-caption text-obsidian-900 font-semibold ml-1">
-            {tour.rating.toFixed(1)}
-          </span>
-          <span className="text-caption text-obsidian-300">
-            ({tour.reviewCount} {t('tourCard.reviews', 'reviews')})
-          </span>
-        </div>
+
 
         {/* Optional key-highlights mini-list (multi-country cards) */}
-        {Array.isArray(highlights) && highlights.length > 0 && (
+        {Array.isArray(highlights || tour.highlights) && (highlights || tour.highlights).length > 0 && (
           <div className="border-t border-gold-500/10 pt-4 mb-4">
-            <ul className="grid grid-cols-2 gap-x-2 gap-y-1.5">
-              {highlights.slice(0, 4).map((hl, idx) => (
-                <li key={idx} className="text-[12px] text-obsidian-500 flex items-center gap-1.5 truncate">
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold-500 shrink-0 flex-shrink-0"></span>
+            <ul className="grid grid-cols-1 gap-y-1.5">
+              {(highlights || tour.highlights).slice(0, 3).map((hl, idx) => (
+                <li key={idx} className="text-[12px] text-obsidian-500 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold-500 shrink-0"></span>
                   <span className="truncate">{t(`data.${hl}`, hl)}</span>
                 </li>
               ))}
@@ -162,7 +142,7 @@ const TourCard = ({
 
           <Link to={detailUrl}>
             <Button variant="outline-gold" className="px-6 py-2 flex items-center gap-2">
-              {t('tourCard.book', 'Book')} <span className="rtl-flip">&rarr;</span>
+              {t('tourCard.viewDetails', 'View Details')} <span className="rtl-flip">&rarr;</span>
             </Button>
           </Link>
         </div>

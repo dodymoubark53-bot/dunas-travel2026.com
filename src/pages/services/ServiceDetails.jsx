@@ -230,9 +230,9 @@ const ServiceDetails = () => {
                   </motion.div>
                 )}
 
-                {/* Itinerary Section — always visible */}
+                {/* Itinerary Section */}
                 {service.itinerary && (
-                  <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-16 text-left">
+                  <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-16">
                     <div className="mb-10">
                       <span className="text-caption text-gold-500 uppercase tracking-widest font-semibold block mb-2">
                         {t('tour.stepByStep', 'SUA JORNADA PASSO A PASSO')}
@@ -242,48 +242,40 @@ const ServiceDetails = () => {
                       </h2>
                     </div>
 
-                    <div className="relative pl-6 md:pl-10">
-                      <div className="absolute left-[11px] md:left-[19px] top-8 bottom-8 w-[2px] bg-[rgba(201,162,39,0.2)]"></div>
-                      <div className="flex flex-col gap-6">
+                    <div className="relative pl-10">
+                      <div className="absolute left-[15px] top-8 bottom-8 w-[2px] bg-[rgba(201,162,39,0.2)]"></div>
+                      <div className="space-y-6">
                         {service.itinerary.map((day) => (
-                          <div key={day.day} className="relative text-left">
-                            <div className="absolute -left-6 md:-left-10 top-[26px] w-3.5 h-3.5 bg-gold-500 rounded-full transform -translate-x-1/2 z-10 border-2 border-white shadow-[0_0_0_4px_rgba(201,162,39,0.2)]" />
+                          <div key={day.day} className="relative">
+                            <div className="absolute -left-10 top-[18px] w-3 h-3 bg-gold-500 rounded-full transform -translate-x-1/2 z-10 shadow-[0_0_0_4px_rgba(201,162,39,0.2)]" />
 
-                            <div className="rounded-xl overflow-hidden bg-[rgba(201,162,39,0.05)] border-l-4 border-[#C9A227]">
-                              <div className="p-6 text-left">
-                                <h3 className="text-body-lg font-semibold text-obsidian-900 mb-4">
-                                  <span className="text-gold-600 mr-2 font-display">{t('tour.day', 'Day')} {day.day} &mdash;</span> {translateData(day.title, day.title)}
-                                </h3>
+                            <div className="bg-ivory-50 rounded-xl border-l-2 border-[rgba(201,162,39,0.3)] overflow-hidden shadow-sm p-5">
+                              <div className="flex items-center gap-4 mb-3">
+                                <span className="font-semibold text-obsidian-900">{t('tour.day', 'Day')} {day.day}</span>
+                                {day.title && (
+                                  <span className="text-body-sm text-obsidian-500">{translateData(day.title, day.title)}</span>
+                                )}
+                              </div>
 
-                                <div className="bg-obsidian-900 text-ivory-50 p-6 rounded-xl flex flex-col gap-5 shadow-inner">
-                                  {day.morning && (
-                                    <div className="flex items-start gap-4 pb-4 border-b border-ivory-50/10 text-left">
-                                      <span className="text-xl mt-0.5 shrink-0">🌅</span>
-                                      <div>
-                                        <span className="font-bold text-gold-500 text-xs uppercase tracking-wider block mb-1">{t('tour.morning', 'Morning')}</span>
-                                        <p className="text-ivory-200 text-body-md leading-relaxed">{translateData(day.morning, day.morning)}</p>
-                                      </div>
-                                    </div>
-                                  )}
-                                  {day.afternoon && (
-                                    <div className="flex items-start gap-4 pb-4 border-b border-ivory-50/10 text-left">
-                                      <span className="text-xl mt-0.5 shrink-0">☀️</span>
-                                      <div>
-                                        <span className="font-bold text-gold-500 text-xs uppercase tracking-wider block mb-1">{t('tour.afternoon', 'Afternoon')}</span>
-                                        <p className="text-ivory-200 text-body-md leading-relaxed">{translateData(day.afternoon, day.afternoon)}</p>
-                                      </div>
-                                    </div>
-                                  )}
-                                  {day.evening && (
-                                    <div className="flex items-start gap-4 text-left">
-                                      <span className="text-xl mt-0.5 shrink-0">🌙</span>
-                                      <div>
-                                        <span className="font-bold text-gold-500 text-xs uppercase tracking-wider block mb-1">{t('tour.evening', 'Evening')}</span>
-                                        <p className="text-ivory-200 text-body-md leading-relaxed">{translateData(day.evening, day.evening)}</p>
-                                      </div>
-                                    </div>
-                                  )}
-                                </div>
+                              <div className="space-y-2">
+                                {day.morning && (
+                                  <div className="flex items-start gap-3">
+                                    <span className="text-caption text-gold-600 uppercase tracking-wider font-semibold shrink-0 w-20">🌅 {t('tour.morning', 'Morning')}</span>
+                                    <p className="text-body-sm text-obsidian-500 leading-relaxed">{translateData(day.morning, day.morning)}</p>
+                                  </div>
+                                )}
+                                {day.afternoon && (
+                                  <div className="flex items-start gap-3">
+                                    <span className="text-caption text-gold-600 uppercase tracking-wider font-semibold shrink-0 w-20">☀️ {t('tour.afternoon', 'Afternoon')}</span>
+                                    <p className="text-body-sm text-obsidian-500 leading-relaxed">{translateData(day.afternoon, day.afternoon)}</p>
+                                  </div>
+                                )}
+                                {day.evening && (
+                                  <div className="flex items-start gap-3">
+                                    <span className="text-caption text-gold-600 uppercase tracking-wider font-semibold shrink-0 w-20">🌙 {t('tour.evening', 'Evening')}</span>
+                                    <p className="text-body-sm text-obsidian-500 leading-relaxed">{translateData(day.evening, day.evening)}</p>
+                                  </div>
+                                )}
                               </div>
                             </div>
                           </div>

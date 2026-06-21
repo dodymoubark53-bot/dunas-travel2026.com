@@ -2385,6 +2385,1378 @@
           }
         }
       ]
+    },
+    {
+      "days": [
+        {
+          "day": "1",
+          "meals": {
+            "ar": "عشاء",
+            "en": "Dinner",
+            "es": "Cena",
+            "pt": "Jantar",
+            "it": "Cena"
+          },
+          "description": {
+            "ar": "الوصول إلى مطار عمان، النقل للفندق والمبيت (العشاء يشترط الوصول قبل 9 مساءً).",
+            "en": "Arrival at Amman Airport, transfer to hotel and overnight. (Dinner requires arrival before 9 PM).",
+            "es": "Llegada al aeropuerto de Ammán, traslado al hotel y alojamiento. (La cena requiere llegada antes de las 9 PM).",
+            "pt": "Chegada ao aeroporto de Amã, traslado ao hotel e pernoite. (Jantar requer chegada antes das 21h).",
+            "it": "Arrivo all'aeroporto di Amman, trasferimento in hotel e pernottamento. (La cena richiede arrivo prima delle 21:00)."
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "عمان، التحرك إلى البحر الميت للسباحة والاستجمام، العودة للمبيت في عمان.",
+            "en": "Amman, transfer to the Dead Sea for swimming and relaxation, return to Amman for overnight.",
+            "es": "Ammán, traslado al Mar Muerto para nadar y relajarse, regreso a Ammán para alojamiento.",
+            "pt": "Amã, traslado ao Mar Morto para nadar e relaxar, retorno a Amã para pernoite.",
+            "it": "Amman, trasferimento al Mar Morto per nuotare e rilassarsi, ritorno ad Amman per pernottamento."
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "عمان، مأدبا (كنيسة القديس جرجس)، جبل نيبو، قلعة الشوبك التاريخية، المبيت في البتراء.",
+            "en": "Amman, Madaba (St. George's Church), Mount Nebo, Shobak Castle, overnight in Petra.",
+            "es": "Ammán, Madaba (Iglesia de San Jorge), Monte Nebo, Castillo de Shobak, alojamiento en Petra.",
+            "pt": "Amã, Madaba (Igreja de São Jorge), Monte Nebo, Castelo de Shobak, pernoite em Petra.",
+            "it": "Amman, Madaba (Chiesa di San Giorgio), Monte Nebo, Castello di Shobak, pernottamento a Petra."
+          }
+        },
+        {
+          "day": "4",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "يوم كامل مخصص لزيارة معالم مدينة البتراء الأثرية (السيق، الخزنة، المدرج).",
+            "en": "Full day dedicated to visiting the archaeological city of Petra (Siq, Treasury, Theater).",
+            "es": "Día completo dedicado a visitar la ciudad arqueológica de Petra (Siq, Tesoro, Teatro).",
+            "pt": "Dia inteiro dedicado a visitar a cidade arqueológica de Petra (Siq, Tesouro, Teatro).",
+            "it": "Giornata intera dedicata alla visita della città archeologica di Petra (Siq, Tesoro, Teatro)."
+          }
+        },
+        {
+          "day": "5",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "البتراء، زيارة البتراء الصغيرة، صحراء وادي رم (جولة 4×4 لمدة ساعتين)، العودة للمبيت في عمان.",
+            "en": "Petra, visit Little Petra, Wadi Rum desert (2-hour 4x4 tour), return to Amman for overnight.",
+            "es": "Petra, visita a Petra Pequeña, desierto de Wadi Rum (tour en 4x4 de 2 horas), regreso a Ammán para alojamiento.",
+            "pt": "Petra, visita à Pequena Petra, deserto de Wadi Rum (tour de 4x4 de 2 horas), retorno a Amã para pernoite.",
+            "it": "Petra, visita alla Piccola Petra, deserto del Wadi Rum (giro in 4x4 di 2 ore), ritorno ad Amman per pernottamento."
+          }
+        },
+        {
+          "day": "6",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "يوم حر كامل في عمان للتسوق أو الجولات الشخصية.",
+            "en": "Full free day in Amman for shopping or personal tours.",
+            "es": "Día libre completo en Ammán para compras o tours personales.",
+            "pt": "Dia livre completo em Amã para compras ou passeios pessoais.",
+            "it": "Giornata completamente libera ad Amman per shopping o tour personali."
+          }
+        },
+        {
+          "day": "7",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "جولة في مدينة عمان (القلعة والمدرج الروماني)، زيارة مدينة جرش الرومانية، قلعة عجلون، المبيت في عمان.",
+            "en": "Amman city tour (Citadel and Roman Theater), visit Jerash Roman city, Ajloun Castle, overnight in Amman.",
+            "es": "Tour por Ammán (Ciudadela y Teatro Romano), visita a la ciudad romana de Jerash, Castillo de Ajloun, alojamiento en Ammán.",
+            "pt": "Tour por Amã (Cidadela e Teatro Romano), visita à cidade romana de Jerash, Castelo de Ajloun, pernoite em Amã.",
+            "it": "Giro di Amman (Cittadella e Teatro Romano), visita alla città romana di Jerash, Castello di Ajloun, pernottamento ad Amman."
+          }
+        },
+        {
+          "day": "8",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "النقل من الفندق إلى مطار عمان للمغادرة النهائية.",
+            "en": "Transfer from hotel to Amman Airport for final departure.",
+            "es": "Traslado del hotel al aeropuerto de Ammán para la salida final.",
+            "pt": "Traslado do hotel ao aeroporto de Amã para partida final.",
+            "it": "Trasferimento dall'hotel all'aeroporto di Amman per la partenza finale."
+          }
+        }
+      ],
+      "id": "REG-15",
+      "duration": {
+        "ar": "8 أيام / 7 ليالي",
+        "en": "8 days / 7 nights",
+        "es": "8 días / 7 noches",
+        "pt": "8 dias / 7 noites",
+        "it": "8 giorni / 7 notti"
+      },
+      "minPax": {
+        "ar": "فردان",
+        "en": "2 Pax",
+        "es": "2 Pax",
+        "pt": "2 Pax",
+        "it": "2 Pax"
+      },
+      "highlights": {
+        "ar": [
+          "الطفو الاستثنائي في أخفض نقطة على وجه الأرض (البحر الميت).",
+          "اكتشاف لوحة الفسيفساء الأثرية في مأدبا والوقوف على قمة جبل نيبو.",
+          "جولة كاملة في السيق والخزنة بمدينة البتراء الوردية.",
+          "مغامرة الـ 4×4 بين الرمال الصخرية الوردية في وادي رم.",
+          "استكشاف \"بومبي الشرق\" في مدينة جرش الأثرية."
+        ],
+        "en": [
+          "Exceptional floating at the lowest point on Earth (Dead Sea).",
+          "Discover the ancient mosaic map in Madaba and stand atop Mount Nebo.",
+          "Full tour through the Siq and Treasury in the rose-red city of Petra.",
+          "4x4 adventure among the pink rocky sands of Wadi Rum.",
+          "Explore the 'Pompeii of the East' in the ancient city of Jerash."
+        ],
+        "es": [
+          "La flotación excepcional en el punto más bajo de la Tierra (Mar Muerto).",
+          "Descubrimiento del mosaico antiguo en Madaba y la cima del Monte Nebo.",
+          "Recorrido completo por el Siq y el Tesoro en la ciudad rosa de Petra.",
+          "Aventura en 4x4 entre las arenas rocosas rosadas de Wadi Rum.",
+          "Exploración de la 'Pompeya de Oriente' en la ciudad antigua de Jerash."
+        ],
+        "pt": [
+          "Flutuação excepcional no ponto mais baixo da Terra (Mar Morto).",
+          "Descobrir o antigo mosaico em Madaba e estar no topo do Monte Nebo.",
+          "Tour completo pelo Siq e Tesouro na cidade rosa de Petra.",
+          "Aventura de 4x4 entre as areias rochosas rosadas de Wadi Rum.",
+          "Explore a 'Pompeia do Oriente' na antiga cidade de Jerash."
+        ],
+        "it": [
+          "Galleggiamento eccezionale nel punto più basso della Terra (Mar Morto).",
+          "Scoprire l'antico mosaico a Madaba e stare sulla cima del Monte Nebo.",
+          "Giro completo attraverso il Siq e il Tesoro nella città rosa di Petra.",
+          "Avventura in 4x4 tra le sabbie rocciose rosa del Wadi Rum.",
+          "Esplora la 'Pompei d'Oriente' nell'antica città di Jerash."
+        ]
+      },
+      "code": {
+        "ar": "REG-15 A",
+        "en": "REG-15 A",
+        "es": "REG-15 A",
+        "pt": "REG-15 A",
+        "it": "REG-15 A"
+      },
+      "overview": {
+        "ar": "رحلة تجمع بين سحر التاريخ وعجائب الطبيعة في الأردن. مصممة للمسافرين الراغبين في استكشاف كنز الأنباط المفقود في البتراء والتحليق فوق مياه البحر الميت الملحية دون تفويت نبض العاصمة عمان التاريخي.",
+        "en": "A journey combining the magic of history and the wonders of nature in Jordan. Designed for travelers wishing to explore the lost Nabatean treasure of Petra and float on the salty waters of the Dead Sea without missing the historic pulse of the capital Amman.",
+        "es": "Un viaje que combina la magia de la historia con las maravillas de la naturaleza en Jordania. Diseñado para viajeros que desean explorar el tesoro perdido de los nabateos en Petra y flotar en las aguas saladas del Mar Muerto sin perderse el pulso histórico de la capital Ammán.",
+        "pt": "Uma viagem que combina a magia da história com as maravilhas da natureza na Jordânia. Projetada para viajantes que desejam explorar o tesouro perdido dos nabateus em Petra e flutuar nas águas salgadas do Mar Morto sem perder o pulso histórico da capital Amã.",
+        "it": "Un viaggio che unisce la magia della storia con le meraviglie della natura in Giordania. Progettato per viaggiatori che desiderano esplorare il tesoro perduto dei Nabatei a Petra e galleggiare sulle acque salate del Mar Morto senza perdere il battito storico della capitale Amman."
+      },
+      "name": {
+        "ar": "الأردن الكلاسيكي",
+        "en": "Classic Jordan",
+        "es": "Jordania Clásico",
+        "pt": "Jordânia Clássica",
+        "it": "Giordania Classica"
+      }
+    },
+    {
+      "days": [
+        {
+          "day": "1",
+          "meals": {
+            "ar": "عشاء",
+            "en": "Dinner",
+            "es": "Cena",
+            "pt": "Jantar",
+            "it": "Cena"
+          },
+          "description": {
+            "ar": "الوصول إلى مطار عمان، النقل للفندق والمبيت.",
+            "en": "Arrival at Amman Airport, transfer to hotel and overnight.",
+            "es": "Llegada al aeropuerto de Ammán, traslado al hotel y alojamiento.",
+            "pt": "Chegada ao aeroporto de Amã, traslado ao hotel e pernoite.",
+            "it": "Arrivo all'aeroporto di Amman, trasferimento in hotel e pernottamento."
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "عمان، رحلة يوم كامل إلى البحر الميت، العودة للمبيت في عمان.",
+            "en": "Amman, full day trip to the Dead Sea, return to Amman for overnight.",
+            "es": "Ammán, excursión de día completo al Mar Muerto, regreso a Ammán para alojamiento.",
+            "pt": "Amã, passeio de dia inteiro ao Mar Morto, retorno a Amã para pernoite.",
+            "it": "Amman, gita di un giorno intero al Mar Morto, ritorno ad Amman per pernottamento."
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "عمان، مأدبا، جبل نيبو، قلعة الشوبك، المبيت في البتراء.",
+            "en": "Amman, Madaba, Mount Nebo, Shobak Castle, overnight in Petra.",
+            "es": "Ammán, Madaba, Monte Nebo, Castillo de Shobak, alojamiento en Petra.",
+            "pt": "Amã, Madaba, Monte Nebo, Castelo de Shobak, pernoite em Petra.",
+            "it": "Amman, Madaba, Monte Nebo, Castello di Shobak, pernottamento a Petra."
+          }
+        },
+        {
+          "day": "4",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "زيارة كاملة لمدينة البتراء الأثرية والمبيت بها.",
+            "en": "Full visit to the archaeological city of Petra and overnight there.",
+            "es": "Visita completa a la ciudad arqueológica de Petra y alojamiento allí.",
+            "pt": "Visita completa à cidade arqueológica de Petra e pernoite lá.",
+            "it": "Visita completa alla città archeologica di Petra e pernottamento lì."
+          }
+        },
+        {
+          "day": "5",
+          "meals": {
+            "ar": "إفطار + عشاء",
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena"
+          },
+          "description": {
+            "ar": "البتراء، البتراء الصغيرة، وادي رم (جولة 4×4)، المبيت والعشاء داخل مخيم في صحراء وادي رم.",
+            "en": "Petra, Little Petra, Wadi Rum (4x4 tour), overnight and dinner inside a camp in the Wadi Rum desert.",
+            "es": "Petra, Petra Pequeña, Wadi Rum (tour en 4x4), alojamiento y cena dentro de un campamento en el desierto de Wadi Rum.",
+            "pt": "Petra, Pequena Petra, Wadi Rum (tour de 4x4), pernoite e jantar dentro de um acampamento no deserto de Wadi Rum.",
+            "it": "Petra, Piccola Petra, Wadi Rum (giro in 4x4), pernottamento e cena in un accampamento nel deserto del Wadi Rum."
+          }
+        },
+        {
+          "day": "6",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "وادي رم، الانتقال والعودة إلى عمان، وقت حر والمبيت في عمان.",
+            "en": "Wadi Rum, transfer back to Amman, free time and overnight in Amman.",
+            "es": "Wadi Rum, traslado de regreso a Ammán, tiempo libre y alojamiento en Ammán.",
+            "pt": "Wadi Rum, traslado de volta a Amã, tempo livre e pernoite em Amã.",
+            "it": "Wadi Rum, trasferimento di ritorno ad Amman, tempo libero e pernottamento ad Amman."
+          }
+        },
+        {
+          "day": "7",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "عمان، جولة مدينة عمان، جرش، قلعة عجلون، العودة لعمان والمبيت.",
+            "en": "Amman, Amman city tour, Jerash, Ajloun Castle, return to Amman for overnight.",
+            "es": "Ammán, tour por Ammán, Jerash, Castillo de Ajloun, regreso a Ammán para alojamiento.",
+            "pt": "Amã, tour por Amã, Jerash, Castelo de Ajloun, retorno a Amã para pernoite.",
+            "it": "Amman, giro di Amman, Jerash, Castello di Ajloun, ritorno ad Amman per pernottamento."
+          }
+        },
+        {
+          "day": "8",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "عمان، التوجه للمطار للمغادرة.",
+            "en": "Amman, transfer to airport for departure.",
+            "es": "Ammán, traslado al aeropuerto para la salida.",
+            "pt": "Amã, traslado ao aeroporto para partida.",
+            "it": "Amman, trasferimento in aeroporto per la partenza."
+          }
+        }
+      ],
+      "id": "REG-16",
+      "duration": {
+        "ar": "8 أيام / 7 ليالي",
+        "en": "8 days / 7 nights",
+        "es": "8 días / 7 noches",
+        "pt": "8 dias / 7 noites",
+        "it": "8 giorni / 7 notti"
+      },
+      "minPax": {
+        "ar": "فردان",
+        "en": "2 Pax",
+        "es": "2 Pax",
+        "pt": "2 Pax",
+        "it": "2 Pax"
+      },
+      "highlights": {
+        "ar": [
+          "تجربة الاسترخاء والسباحة في مياه البحر الميت الغنية بالمعادن.",
+          "رحلة عبر الزمن داخل قلاع الشوبك والبتراء التاريخية.",
+          "مبيت استثنائي وعشاء تقليدي في مخيم صحراوي بقلب وادي رم.",
+          "جولة سفاري بسيارات الدفع الرباعي بين التشكيلات الغرانيتية الساحرة.",
+          "زيارة المسرح الروماني وقلعة عمان القديمة."
+        ],
+        "en": [
+          "Relaxation and swimming experience in the mineral-rich waters of the Dead Sea.",
+          "A journey through time inside the historic castles of Shobak and Petra.",
+          "Exceptional overnight and traditional dinner in a desert camp in the heart of Wadi Rum.",
+          "Safari tour in 4x4 vehicles among the enchanting granite formations.",
+          "Visit the Roman Theater and the ancient Amman Citadel."
+        ],
+        "es": [
+          "Experiencia de relajación y natación en las aguas ricas en minerales del Mar Muerto.",
+          "Un viaje en el tiempo dentro de los castillos históricos de Shobak y Petra.",
+          "Noche excepcional y cena tradicional en un campamento desértico en el corazón de Wadi Rum.",
+          "Safari en vehículos 4x4 entre las encantadoras formaciones de granito.",
+          "Visita al Teatro Romano y la antigua Ciudadela de Ammán."
+        ],
+        "pt": [
+          "Experiência de relaxamento e natação nas águas ricas em minerais do Mar Morto.",
+          "Uma viagem no tempo dentro dos castelos históricos de Shobak e Petra.",
+          "Pernoite excepcional e jantar tradicional em um acampamento no deserto no coração de Wadi Rum.",
+          "Safari em veículos 4x4 entre as encantadoras formações de granito.",
+          "Visite o Teatro Romano e a antiga Cidadela de Amã."
+        ],
+        "it": [
+          "Esperienza di relax e nuoto nelle acque ricche di minerali del Mar Morto.",
+          "Un viaggio nel tempo all'interno dei castelli storici di Shobak e Petra.",
+          "Pernottamento eccezionale e cena tradizionale in un accampamento nel deserto nel cuore del Wadi Rum.",
+          "Safari in veicoli 4x4 tra le incantevoli formazioni granitiche.",
+          "Visita al Teatro Romano e all'antica Cittadella di Amman."
+        ]
+      },
+      "code": {
+        "ar": "REG-16 A",
+        "en": "REG-16 A",
+        "es": "REG-16 A",
+        "pt": "REG-16 A",
+        "it": "REG-16 A"
+      },
+      "overview": {
+        "ar": "لعشاق المغامرة والهدوء، تأخذك هذه الرحلة إلى عمق الطبيعة الأردنية. الاختيار المثالي لمن يرغب في استكشاف الآثار نهاراً والنوم تحت النجوم ليلاً في قلب مخيمات وادي رم الصحراوية.",
+        "en": "For adventure and tranquility lovers, this journey takes you deep into Jordanian nature. The perfect choice for those who want to explore ruins by day and sleep under the stars at night in the heart of Wadi Rum's desert camps.",
+        "es": "Para los amantes de la aventura y la tranquilidad, este viaje te lleva a lo profundo de la naturaleza jordana. La elección perfecta para quienes desean explorar ruinas de día y dormir bajo las estrellas por la noche en el corazón de los campamentos desérticos de Wadi Rum.",
+        "pt": "Para os amantes de aventura e tranquilidade, esta viagem leva você ao fundo da natureza jordaniana. A escolha perfeita para quem deseja explorar ruínas durante o dia e dormir sob as estrelas à noite no coração dos acampamentos do deserto de Wadi Rum.",
+        "it": "Per gli amanti dell'avventura e della tranquillità, questo viaggio ti porta nel profondo della natura giordana. La scelta perfetta per chi vuole esplorare le rovine di giorno e dormire sotto le stelle di notte nel cuore degli accampamenti del deserto del Wadi Rum."
+      },
+      "name": {
+        "ar": "الأردن مع الصحراء",
+        "en": "Jordan with Desert",
+        "es": "Jordania con Desierto",
+        "pt": "Jordânia com Deserto",
+        "it": "Giordania con Deserto"
+      }
+    },
+    {
+      "days": [
+        {
+          "day": "1",
+          "meals": {
+            "ar": "عشاء",
+            "en": "Dinner",
+            "es": "Cena",
+            "pt": "Jantar",
+            "it": "Cena"
+          },
+          "description": {
+            "ar": "الوصول إلى مطار عمان، النقل للفندق في عمان والمبيت.",
+            "en": "Arrival at Amman Airport, transfer to hotel in Amman and overnight.",
+            "es": "Llegada al aeropuerto de Ammán, traslado al hotel en Ammán y alojamiento.",
+            "pt": "Chegada ao aeroporto de Amã, traslado ao hotel em Amã e pernoite.",
+            "it": "Arrivo all'aeroporto di Amman, trasferimento in hotel ad Amman e pernottamento."
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "ar": "إفطار + عشاء",
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena"
+          },
+          "description": {
+            "ar": "عمان، الانتقال إلى البحر الميت للمبيت مباشرة في فندق شاطئي هناك والاستمتاع بالوقت.",
+            "en": "Amman, transfer to the Dead Sea to stay directly at a beachfront hotel and enjoy free time.",
+            "es": "Ammán, traslado al Mar Muerto para alojarse directamente en un hotel frente a la playa y disfrutar del tiempo libre.",
+            "pt": "Amã, traslado ao Mar Morto para ficar diretamente em um hotel à beira-mar e aproveitar o tempo livre.",
+            "it": "Amman, trasferimento al Mar Morto per soggiornare direttamente in un hotel sulla spiaggia e godersi il tempo libero."
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "البحر الميت، مأدبا، جبل نيبو، قلعة الشوبك، المبيت في البتراء.",
+            "en": "Dead Sea, Madaba, Mount Nebo, Shobak Castle, overnight in Petra.",
+            "es": "Mar Muerto, Madaba, Monte Nebo, Castillo de Shobak, alojamiento en Petra.",
+            "pt": "Mar Morto, Madaba, Monte Nebo, Castelo de Shobak, pernoite em Petra.",
+            "it": "Mar Morto, Madaba, Monte Nebo, Castello di Shobak, pernottamento a Petra."
+          }
+        },
+        {
+          "day": "4",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "يوم كامل لزيارة البتراء والمبيت في فندق البتراء.",
+            "en": "Full day visiting Petra and overnight at Petra hotel.",
+            "es": "Día completo visitando Petra y alojamiento en hotel de Petra.",
+            "pt": "Dia inteiro visitando Petra e pernoite no hotel de Petra.",
+            "it": "Giornata intera visitando Petra e pernottamento all'hotel di Petra."
+          }
+        },
+        {
+          "day": "5",
+          "meals": {
+            "ar": "إفطار + عشاء",
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena"
+          },
+          "description": {
+            "ar": "البتراء، البتراء الصغيرة، وادي رم (جولة 4×4)، المبيت في مخيم وادي رم.",
+            "en": "Petra, Little Petra, Wadi Rum (4x4 tour), overnight at Wadi Rum camp.",
+            "es": "Petra, Petra Pequeña, Wadi Rum (tour en 4x4), alojamiento en campamento de Wadi Rum.",
+            "pt": "Petra, Pequena Petra, Wadi Rum (tour de 4x4), pernoite no acampamento de Wadi Rum.",
+            "it": "Petra, Piccola Petra, Wadi Rum (giro in 4x4), pernottamento all'accampamento di Wadi Rum."
+          }
+        },
+        {
+          "day": "6",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "وادي رم، الانتقال إلى عمان والمبيت.",
+            "en": "Wadi Rum, transfer to Amman and overnight.",
+            "es": "Wadi Rum, traslado a Ammán y alojamiento.",
+            "pt": "Wadi Rum, traslado para Amã e pernoite.",
+            "it": "Wadi Rum, trasferimento ad Amman e pernottamento."
+          }
+        },
+        {
+          "day": "7",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "عمان، جولة عمان، جرش، عجلون، العودة لعمان والمبيت.",
+            "en": "Amman, Amman tour, Jerash, Ajloun, return to Amman for overnight.",
+            "es": "Ammán, tour por Ammán, Jerash, Ajloun, regreso a Ammán para alojamiento.",
+            "pt": "Amã, tour por Amã, Jerash, Ajloun, retorno a Amã para pernoite.",
+            "it": "Amman, giro di Amman, Jerash, Ajloun, ritorno ad Amman per pernottamento."
+          }
+        },
+        {
+          "day": "8",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "عمان، المطار للمغادرة.",
+            "en": "Amman, airport for departure.",
+            "es": "Ammán, aeropuerto para la salida.",
+            "pt": "Amã, aeroporto para partida.",
+            "it": "Amman, aeroporto per la partenza."
+          }
+        }
+      ],
+      "id": "REG-17",
+      "duration": {
+        "ar": "8 أيام / 7 ليالي",
+        "en": "8 days / 7 nights",
+        "es": "8 días / 7 noches",
+        "pt": "8 dias / 7 noites",
+        "it": "8 giorni / 7 notti"
+      },
+      "minPax": {
+        "ar": "فردان",
+        "en": "2 Pax",
+        "es": "2 Pax",
+        "pt": "2 Pax",
+        "it": "2 Pax"
+      },
+      "highlights": {
+        "ar": [
+          "إقامة كاملة ومباشرة في فندق على شاطئ البحر الميت مع وقت حر للاستجمام.",
+          "تتبع خطى الأنباط عبر 850 درجة للوصول إلى دير البتراء المهيب.",
+          "ليلة ساحرة تحت أضواء النجوم في صحراء وادي رم.",
+          "زيارة كنيسة القديس جرجس التي تضم أول خريطة فسيفسائية لفلسطين.",
+          "استكشاف قلعة عجلون الإسلامية والاستمتاع بالإطلالة الجبلية الرائعة."
+        ],
+        "en": [
+          "Full direct stay at a beachfront Dead Sea hotel with free time for relaxation.",
+          "Follow the Nabatean footsteps up 850 steps to the majestic El Deir Monastery in Petra.",
+          "Magical night under the starlight in the Wadi Rum desert.",
+          "Visit St. George's Church housing the oldest mosaic map of Palestine.",
+          "Explore Ajloun Islamic Castle and enjoy the stunning mountain views."
+        ],
+        "es": [
+          "Estancia completa y directa en un hotel frente al Mar Muerto con tiempo libre para relajarse.",
+          "Sigue los pasos nabateos por 850 escalones hasta el majestuoso Monasterio El Deir en Petra.",
+          "Noche mágica bajo la luz de las estrellas en el desierto de Wadi Rum.",
+          "Visita a la Iglesia de San Jorge que alberga el mapa de mosaico más antiguo de Palestina.",
+          "Explora el Castillo Islámico de Ajloun y disfruta de las impresionantes vistas montañosas."
+        ],
+        "pt": [
+          "Estadia completa e direta em um hotel à beira-mar do Mar Morto com tempo livre para relaxar.",
+          "Siga os passos nabateus por 850 degraus até o majestoso Mosteiro El Deir em Petra.",
+          "Noite mágica sob a luz das estrelas no deserto de Wadi Rum.",
+          "Visite a Igreja de São Jorge que abriga o mapa de mosaico mais antigo da Palestina.",
+          "Explore o Castelo Islâmico de Ajloun e desfrute das deslumbrantes vistas das montanhas."
+        ],
+        "it": [
+          "Soggiorno completo e diretamente in un hotel sulla spiaggia del Mar Morto con tempo libero per rilassarsi.",
+          "Segui le orme dei Nabatei per 850 gradini fino al maestoso Monastero di El Deir a Petra.",
+          "Notte magica sotto la luce delle stelle nel deserto del Wadi Rum.",
+          "Visita la Chiesa di San Giorgio che ospita la più antica mappa musiva della Palestina.",
+          "Esplora il Castello Islamico di Ajloun e goditi le splendide viste montane."
+        ]
+      },
+      "code": {
+        "ar": "REG-17 A",
+        "en": "REG-17 A",
+        "es": "REG-17 A",
+        "pt": "REG-17 A",
+        "it": "REG-17 A"
+      },
+      "overview": {
+        "ar": "الرحلة الأفضل للراحة والاستجمام؛ حيث تمنحك فرصة الإقامة المباشرة ليلة كاملة على ضفاف البحر الميت للاستفادة من خصائصه العلاجية، قبل الانطلاق في مغامرة شيقة عبر رمال الصحراء والمدن الأثرية.",
+        "en": "The best trip for rest and relaxation, giving you the chance to stay directly overnight on the shores of the Dead Sea to enjoy its therapeutic properties, before embarking on an exciting adventure through desert sands and ancient cities.",
+        "es": "El mejor viaje para el descanso y la relajación, brindándote la oportunidad de alojarte directamente una noche a orillas del Mar Muerto para disfrutar de sus propiedades terapéuticas, antes de embarcarte en una emocionante aventura por arenas desérticas y ciudades antiguas.",
+        "pt": "A melhor viagem para descanso e relaxamento, dando-lhe a oportunidade de ficar diretamente uma noite nas margens do Mar Morto para desfrutar de suas propriedades terapêuticas, antes de embarcar em uma emocionante aventura por areias do deserto e cidades antigas.",
+        "it": "Il miglior viaggio per riposo e relax, offrendoti l'opportunità di soggiornare direttamente una notte sulle rive del Mar Morto per godere delle sue proprietà terapeutiche, prima di imbarcarti in un'emozionante avventura tra sabbie del deserto e città antiche."
+      },
+      "name": {
+        "ar": "الصحراء والبحر الميت",
+        "en": "Desert and Dead Sea",
+        "es": "Jordania Desierto y Mar Muerto",
+        "pt": "Deserto e Mar Morto",
+        "it": "Deserto e Mar Morto"
+      }
+    },
+    {
+      "days": [
+        {
+          "day": "1",
+          "meals": {
+            "ar": "عشاء",
+            "en": "Dinner",
+            "es": "Cena",
+            "pt": "Jantar",
+            "it": "Cena"
+          },
+          "description": {
+            "ar": "الوصول إلى مطار عمان، النقل للفندق والمبيت.",
+            "en": "Arrival at Amman Airport, transfer to hotel and overnight.",
+            "es": "Llegada al aeropuerto de Ammán, traslado al hotel y alojamiento.",
+            "pt": "Chegada ao aeroporto de Amã, traslado ao hotel e pernoite.",
+            "it": "Arrivo all'aeroporto di Amman, trasferimento in hotel e pernottamento."
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "ar": "إفطار + عشاء",
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena"
+          },
+          "description": {
+            "ar": "عمان، الانتقال للمبيت في فندق في البحر الميت مباشرة.",
+            "en": "Amman, transfer to stay overnight directly at a Dead Sea hotel.",
+            "es": "Ammán, traslado para alojarse directamente en un hotel del Mar Muerto.",
+            "pt": "Amã, traslado para pernoitar diretamente em um hotel do Mar Morto.",
+            "it": "Amman, trasferimento per pernottare direttamente in un hotel sul Mar Morto."
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "البحر الميت، مأدبا، جبل نيبو، الشوبك، المبيت في البتراء.",
+            "en": "Dead Sea, Madaba, Mount Nebo, Shobak, overnight in Petra.",
+            "es": "Mar Muerto, Madaba, Monte Nebo, Shobak, alojamiento en Petra.",
+            "pt": "Mar Morto, Madaba, Monte Nebo, Shobak, pernoite em Petra.",
+            "it": "Mar Morto, Madaba, Monte Nebo, Shobak, pernottamento a Petra."
+          }
+        },
+        {
+          "day": "4",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "زيارة كاملة لمدينة البتراء الأثرية والمبيت فيها.",
+            "en": "Full visit to the archaeological city of Petra and overnight there.",
+            "es": "Visita completa a la ciudad arqueológica de Petra y alojamiento allí.",
+            "pt": "Visita completa à cidade arqueológica de Petra e pernoite lá.",
+            "it": "Visita completa alla città archeologica di Petra e pernottamento lì."
+          }
+        },
+        {
+          "day": "5",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "البتراء، وادي رم (جولة 4×4 لمدة ساعتين)، الانتقال إلى مدينة العقبة والمبيت هناك.",
+            "en": "Petra, Wadi Rum (2-hour 4x4 tour), transfer to Aqaba city and overnight there.",
+            "es": "Petra, Wadi Rum (tour en 4x4 de 2 horas), traslado a la ciudad de Aqaba y alojamiento allí.",
+            "pt": "Petra, Wadi Rum (tour de 4x4 de 2 horas), traslado para a cidade de Aqaba e pernoite lá.",
+            "it": "Petra, Wadi Rum (giro in 4x4 di 2 ore), trasferimento alla città di Aqaba e pernottamento lì."
+          }
+        },
+        {
+          "day": "6",
+          "meals": {
+            "ar": "إفطار + غداء",
+            "en": "Breakfast + Lunch",
+            "es": "Desayuno + Almuerzo",
+            "pt": "Café da manhã + Almoço",
+            "it": "Colazione + Pranzo"
+          },
+          "description": {
+            "ar": "صباحاً وقت حر في العقبة (البحر الأحمر)، بعد الظهر الانتقال إلى عمان والمبيت.",
+            "en": "Morning free time in Aqaba (Red Sea), afternoon transfer to Amman and overnight.",
+            "es": "Mañana libre en Aqaba (Mar Rojo), traslado por la tarde a Ammán y alojamiento.",
+            "pt": "Manhã livre em Aqaba (Mar Vermelho), traslado à tarde para Amã e pernoite.",
+            "it": "Mattina libera ad Aqaba (Mar Rosso), trasferimento pomeridiano ad Amman e pernottamento."
+          }
+        },
+        {
+          "day": "7",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "عمان، جولة عمان، جرش، عجلون، العودة لعمان والمبيت.",
+            "en": "Amman, Amman tour, Jerash, Ajloun, return to Amman for overnight.",
+            "es": "Ammán, tour por Ammán, Jerash, Ajloun, regreso a Ammán para alojamiento.",
+            "pt": "Amã, tour por Amã, Jerash, Ajloun, retorno a Amã para pernoite.",
+            "it": "Amman, giro di Amman, Jerash, Ajloun, ritorno ad Amman per pernottamento."
+          }
+        },
+        {
+          "day": "8",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "عمان، المطار للمغادرة.",
+            "en": "Amman, airport for departure.",
+            "es": "Ammán, aeropuerto para la salida.",
+            "pt": "Amã, aeroporto para partida.",
+            "it": "Amman, aeroporto per la partenza."
+          }
+        }
+      ],
+      "id": "REG-18",
+      "duration": {
+        "ar": "8 أيام / 7 ليالي",
+        "en": "8 days / 7 nights",
+        "es": "8 días / 7 noches",
+        "pt": "8 dias / 7 noites",
+        "it": "8 giorni / 7 notti"
+      },
+      "minPax": {
+        "ar": "فردان",
+        "en": "2 Pax",
+        "es": "2 Pax",
+        "pt": "2 Pax",
+        "it": "2 Pax"
+      },
+      "highlights": {
+        "ar": [
+          "تجربة الطفو في البحر الميت وزيارة جبل نيبو التاريخي.",
+          "جولة معمارية وثقافية شاملة في مدينة البتراء المنحوتة في الصخر.",
+          "الانتقال إلى مدينة العقبة الساحلية والاستمتاع بوقت حر على شواطئ البحر الأحمر.",
+          "جولة الـ 4×4 المثيرة في وادي رم وسط الجبال الصخرية.",
+          "زيارة معالم عمان التاريخية (القلعة والمتحف الأثري) ومدينة جرش."
+        ],
+        "en": [
+          "Floating experience in the Dead Sea and visit historic Mount Nebo.",
+          "Comprehensive architectural and cultural tour of the rock-carved city of Petra.",
+          "Transfer to the coastal city of Aqaba to enjoy free time on the Red Sea beaches.",
+          "Exciting 4x4 tour in Wadi Rum amidst rocky mountains.",
+          "Visit Amman's historic landmarks (Citadel and Archaeological Museum) and Jerash."
+        ],
+        "es": [
+          "Experiencia de flotación en el Mar Muerto y visita al histórico Monte Nebo.",
+          "Recorrido arquitectónico y cultural completo por la ciudad tallada en roca de Petra.",
+          "Traslado a la ciudad costera de Aqaba para disfrutar de tiempo libre en las playas del Mar Rojo.",
+          "Emocionante tour en 4x4 en Wadi Rum en medio de montañas rocosas.",
+          "Visita a los lugares históricos de Ammán (Ciudadela y Museo Arqueológico) y Jerash."
+        ],
+        "pt": [
+          "Experiência de flutuação no Mar Morto e visita ao histórico Monte Nebo.",
+          "Tour arquitetônico e cultural abrangente pela cidade esculpida na rocha de Petra.",
+          "Traslado para a cidade costeira de Aqaba para aproveitar tempo livre nas praias do Mar Vermelho.",
+          "Empolgante tour de 4x4 em Wadi Rum em meio a montanhas rochosas.",
+          "Visite os marcos históricos de Amã (Cidadela e Museu Arqueológico) e Jerash."
+        ],
+        "it": [
+          "Esperienza di galleggiamento nel Mar Morto e visita al storico Monte Nebo.",
+          "Giro architettonico e culturale completo della città scavata nella roccia di Petra.",
+          "Trasferimento alla città costiera di Aqaba per godersi tempo libero sulle spiagge del Mar Rosso.",
+          "Emozionante giro in 4x4 nel Wadi Rum tra montagne rocciose.",
+          "Visita ai monumenti storici di Amman (Cittadella e Museo Archeologico) e Jerash."
+        ]
+      },
+      "code": {
+        "ar": "REG-18 A",
+        "en": "REG-18 A",
+        "es": "REG-18 A",
+        "pt": "REG-18 A",
+        "it": "REG-18 A"
+      },
+      "overview": {
+        "ar": "البرنامج الأكثر شمولاً وتنوعاً؛ يغطي الأردن من شماله التاريخي إلى جنوبه الساحلي. صُمم ليوفر مزيجاً رائعاً بين الآثار، المغامرة الصحراوية، والاسترخاء على شواطئ البحر الأحمر والعقبة.",
+        "en": "The most comprehensive and varied program; covers Jordan from its historic north to its coastal south. Designed to provide a wonderful mix of archaeology, desert adventure, and relaxation on the beaches of the Red Sea and Aqaba.",
+        "es": "El programa más completo y variado; cubre Jordania desde su norte histórico hasta su sur costero. Diseñado para ofrecer una maravillosa combinación de arqueología, aventura en el desierto y relajación en las playas del Mar Rojo y Aqaba.",
+        "pt": "O programa mais abrangente e variado; cobre a Jordânia desde seu norte histórico até seu sul costeiro. Projetado para oferecer uma maravilhosa combinação de arqueologia, aventura no desierto e relaxamento nas praias do Mar Vermelho e Aqaba.",
+        "it": "Il programma più completo e vario; copre la Giordania dal suo nord storico al suo sud costiero. Progettato per offrire una meravigliosa combinazione di archeologia, avventura nel deserto e relax sulle spiagge del Mar Rosso e Aqaba."
+      },
+      "name": {
+        "ar": "الأردن الكامل",
+        "en": "Complete Jordan",
+        "es": "Jordania al Completo",
+        "pt": "Jordânia Completa",
+        "it": "Giordania Completa"
+      }
+    },
+    {
+      "days": [
+        {
+          "day": "1",
+          "meals": {
+            "ar": "عشاء",
+            "en": "Dinner",
+            "es": "Cena",
+            "pt": "Jantar",
+            "it": "Cena"
+          },
+          "description": {
+            "ar": "الوصول إلى مطار عمان ونقل للفندق والمبيت.",
+            "en": "Arrival at Amman Airport, transfer to hotel and overnight.",
+            "es": "Llegada al aeropuerto de Ammán, traslado al hotel y alojamiento.",
+            "pt": "Chegada ao aeroporto de Amã, traslado ao hotel e pernoite.",
+            "it": "Arrivo all'aeroporto di Amman, trasferimento in hotel e pernottamento."
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "عمان، جولة البحر الميت والعودة للمبيت في عمان.",
+            "en": "Amman, Dead Sea tour and return to Amman for overnight.",
+            "es": "Ammán, tour al Mar Muerto y regreso a Ammán para alojamiento.",
+            "pt": "Amã, tour ao Mar Morto e retorno a Amã para pernoite.",
+            "it": "Amman, giro al Mar Morto e ritorno ad Amman per pernottamento."
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "عمان، مأدبا، جبل نيبو، قلعة الشوبك، المبيت في البتراء.",
+            "en": "Amman, Madaba, Mount Nebo, Shobak Castle, overnight in Petra.",
+            "es": "Ammán, Madaba, Monte Nebo, Castillo de Shobak, alojamiento en Petra.",
+            "pt": "Amã, Madaba, Monte Nebo, Castelo de Shobak, pernoite em Petra.",
+            "it": "Amman, Madaba, Monte Nebo, Castello di Shobak, pernottamento a Petra."
+          }
+        },
+        {
+          "day": "4",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "جولة كاملة في البتراء ومبيت في البتراء.",
+            "en": "Full tour of Petra and overnight in Petra.",
+            "es": "Recorrido completo por Petra y alojamiento en Petra.",
+            "pt": "Tour completo de Petra e pernoite em Petra.",
+            "it": "Giro completo di Petra e pernottamento a Petra."
+          }
+        },
+        {
+          "day": "5",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "البتراء، وادي رم (جولة 4×4)، الانتقال للعقبة والمبيت في العقبة.",
+            "en": "Petra, Wadi Rum (4x4 tour), transfer to Aqaba and overnight in Aqaba.",
+            "es": "Petra, Wadi Rum (tour en 4x4), traslado a Aqaba y alojamiento en Aqaba.",
+            "pt": "Petra, Wadi Rum (tour de 4x4), traslado para Aqaba e pernoite em Aqaba.",
+            "it": "Petra, Wadi Rum (giro in 4x4), trasferimento ad Aqaba e pernottamento ad Aqaba."
+          }
+        },
+        {
+          "day": "6",
+          "meals": {
+            "ar": "إفطار + غداء",
+            "en": "Breakfast + Lunch",
+            "es": "Desayuno + Almuerzo",
+            "pt": "Café da manhã + Almoço",
+            "it": "Colazione + Pranzo"
+          },
+          "description": {
+            "ar": "وقت حر بالعقبة، العودة لعمان والمبيت.",
+            "en": "Free time in Aqaba, return to Amman and overnight.",
+            "es": "Tiempo libre en Aqaba, regreso a Ammán y alojamiento.",
+            "pt": "Tempo livre em Aqaba, retorno a Amã e pernoite.",
+            "it": "Tempo libero ad Aqaba, ritorno ad Amman e pernottamento."
+          }
+        },
+        {
+          "day": "7",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "عمان، جولة عمان، جرش، عجلون، العودة لعمان والمبيت.",
+            "en": "Amman, Amman tour, Jerash, Ajloun, return to Amman for overnight.",
+            "es": "Ammán, tour por Ammán, Jerash, Ajloun, regreso a Ammán para alojamiento.",
+            "pt": "Amã, tour por Amã, Jerash, Ajloun, retorno a Amã para pernoite.",
+            "it": "Amman, giro di Amman, Jerash, Ajloun, ritorno ad Amman per pernottamento."
+          }
+        },
+        {
+          "day": "8",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "عمان، المطار للمغادرة.",
+            "en": "Amman, airport for departure.",
+            "es": "Ammán, aeropuerto para la salida.",
+            "pt": "Amã, aeroporto para partida.",
+            "it": "Amman, aeroporto per la partenza."
+          }
+        }
+      ],
+      "id": "REG-19",
+      "duration": {
+        "ar": "8 أيام / 7 ليالي",
+        "en": "8 days / 7 nights",
+        "es": "8 días / 7 noches",
+        "pt": "8 dias / 7 noites",
+        "it": "8 giorni / 7 notti"
+      },
+      "minPax": {
+        "ar": "فردان",
+        "en": "2 Pax",
+        "es": "2 Pax",
+        "pt": "2 Pax",
+        "it": "2 Pax"
+      },
+      "highlights": {
+        "ar": [
+          "رحلة يوم كامل إلى البحر الميت مع العودة لراحة صاخبة في عمان.",
+          "عبور ممر \"السيق\" الضيق لمشاهدة عظمة \"الخزنة\" في البتراء.",
+          "أجواء ساحلية مميزة وإقامة في فنادق العقبة المطلة على البحر الأحمر.",
+          "جولة استكشافية في قلعة عجلون المبنية عام 1185 م لحماية المنطقة.",
+          "جولة في بوابات وأعمدة مدينة جرش الرومانية المحفوظة بعناية."
+        ],
+        "en": [
+          "Full day trip to the Dead Sea with return for relaxation in Amman.",
+          "Cross the narrow Siq canyon to behold the majestic Treasury in Petra.",
+          "Distinctive coastal atmosphere and stay at Aqaba hotels overlooking the Red Sea.",
+          "Exploratory tour of Ajloun Castle built in 1185 AD to protect the region.",
+          "Tour through the gates and columns of the well-preserved Roman city of Jerash."
+        ],
+        "es": [
+          "Excursión de día completo al Mar Muerto con regreso para descansar en Ammán.",
+          "Cruzar el estrecho cañón del Siq para contemplar el majestuoso Tesoro en Petra.",
+          "Ambiente costero distintivo y estancia en hoteles de Aqaba con vistas al Mar Rojo.",
+          "Visita exploratoria al Castillo de Ajloun construido en 1185 d.C. para proteger la región.",
+          "Recorrido por las puertas y columnas de la bien conservada ciudad romana de Jerash."
+        ],
+        "pt": [
+          "Passeio de dia inteiro ao Mar Morto com retorno para descanso em Amã.",
+          "Atravesse o estreito desfiladeiro do Siq para contemplar o majestoso Tesouro em Petra.",
+          "Ambiente costeiro distinto e estadia em hotéis de Aqaba com vista para o Mar Vermelho.",
+          "Tour exploratório pelo Castelo de Ajloun construído em 1185 d.C. para proteger a região.",
+          "Tour pelos portões e colunas da bem preservada cidade romana de Jerash."
+        ],
+        "it": [
+          "Gita di un giorno intero al Mar Morto con ritorno per relax ad Amman.",
+          "Attraversa lo stretto canyon del Siq per ammirare il maestoso Tesoro a Petra.",
+          "Atmosfera costiera distintiva e soggiorno in hotel di Aqaba con vista sul Mar Rosso.",
+          "Giro esplorativo del Castello di Ajloun costruito nel 1185 d.C. per proteggere la regione.",
+          "Giro attraverso le porte e le colonne della ben conservata città romana di Jerash."
+        ]
+      },
+      "code": {
+        "ar": "REG-19 A",
+        "en": "REG-19 A",
+        "es": "REG-19 A",
+        "pt": "REG-19 A",
+        "it": "REG-19 A"
+      },
+      "overview": {
+        "ar": "برنامج موازن يركز على الجمع بين المواقع الأثرية الكبرى والأنشطة المائية. رحلة سريعة إلى البحر الميت، تليها زيارة التاريخ الوردي، وتنتهي بليالٍ دافئة على شواطئ البحر الأحمر في العقبة.",
+        "en": "A balanced program focusing on combining major archaeological sites with water activities. A quick trip to the Dead Sea, followed by a visit to the rose-red history, ending with warm nights on the Red Sea beaches in Aqaba.",
+        "es": "Un programa equilibrado que se centra en combinar los principales sitios arqueológicos con actividades acuáticas. Un viaje rápido al Mar Muerto, seguido de una visita a la historia rosa, terminando con noches cálidas en las playas del Mar Rojo en Aqaba.",
+        "pt": "Um programa equilibrado focado em combinar os principais sítios arqueológicos com atividades aquáticas. Uma rápida viagem ao Mar Morto, seguida de uma visita à história rosa, terminando com noites quentes nas praias do Mar Vermelho em Aqaba.",
+        "it": "Un programma equilibrato che combina i principali siti archeologici con attività acquatiche. Un rapido viaggio al Mar Morto, seguito da una visita alla storia rosa, terminando con calde notti sulle spiagge del Mar Rosso ad Aqaba."
+      },
+      "name": {
+        "ar": "الأردن والبحر الأحمر",
+        "en": "Jordan Red Sea",
+        "es": "Jordania Mar Rojo",
+        "pt": "Jordânia Mar Vermelho",
+        "it": "Giordania Mar Rosso"
+      }
+    },
+    {
+      "days": [
+        {
+          "day": "1",
+          "meals": {
+            "ar": "عشاء",
+            "en": "Dinner",
+            "es": "Cena",
+            "pt": "Jantar",
+            "it": "Cena"
+          },
+          "description": {
+            "ar": "الوصول إلى عمان، النقل للفندق والمبيت.",
+            "en": "Arrival in Amman, transfer to hotel and overnight.",
+            "es": "Llegada a Ammán, traslado al hotel y alojamiento.",
+            "pt": "Chegada a Amã, traslado ao hotel e pernoite.",
+            "it": "Arrivo ad Amman, trasferimento in hotel e pernottamento."
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "عمان، مأدبا، جبل نيبو، قلعة الشوبك، المبيت في البتراء.",
+            "en": "Amman, Madaba, Mount Nebo, Shobak Castle, overnight in Petra.",
+            "es": "Ammán, Madaba, Monte Nebo, Castillo de Shobak, alojamiento en Petra.",
+            "pt": "Amã, Madaba, Monte Nebo, Castelo de Shobak, pernoite em Petra.",
+            "it": "Amman, Madaba, Monte Nebo, Castello di Shobak, pernottamento a Petra."
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "جولة كاملة في البتراء ومبيت في البتراء.",
+            "en": "Full tour of Petra and overnight in Petra.",
+            "es": "Recorrido completo por Petra y alojamiento en Petra.",
+            "pt": "Tour completo de Petra e pernoite em Petra.",
+            "it": "Giro completo di Petra e pernottamento a Petra."
+          }
+        },
+        {
+          "day": "4",
+          "meals": {
+            "ar": "إفطار + عشاء",
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "pt": "Café da manhã + Jantar",
+            "it": "Colazione + Cena"
+          },
+          "description": {
+            "ar": "البتراء، البتراء الصغيرة، وادي رم (جولة 4×4)، المبيت في مخيم وادي رم.",
+            "en": "Petra, Little Petra, Wadi Rum (4x4 tour), overnight at Wadi Rum camp.",
+            "es": "Petra, Petra Pequeña, Wadi Rum (tour en 4x4), alojamiento en campamento de Wadi Rum.",
+            "pt": "Petra, Pequena Petra, Wadi Rum (tour de 4x4), pernoite no acampamento de Wadi Rum.",
+            "it": "Petra, Piccola Petra, Wadi Rum (giro in 4x4), pernottamento all'accampamento di Wadi Rum."
+          }
+        },
+        {
+          "day": "5",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "وادي رم، النقل إلى مطار عمان أو حدود ألنبي للمغادرة.",
+            "en": "Wadi Rum, transfer to Amman Airport or Allenby border for departure.",
+            "es": "Wadi Rum, traslado al aeropuerto de Ammán o frontera de Allenby para la salida.",
+            "pt": "Wadi Rum, traslado para o aeroporto de Amã ou fronteira de Allenby para partida.",
+            "it": "Wadi Rum, trasferimento all'aeroporto di Amman o al confine di Allenby per la partenza."
+          }
+        }
+      ],
+      "id": "REG-20",
+      "duration": {
+        "ar": "5 أيام / 4 ليالي",
+        "en": "5 days / 4 nights",
+        "es": "5 días / 4 noches",
+        "pt": "5 dias / 4 noites",
+        "it": "5 giorni / 4 notti"
+      },
+      "minPax": {
+        "ar": "فردان",
+        "en": "2 Pax",
+        "es": "2 Pax",
+        "pt": "2 Pax",
+        "it": "2 Pax"
+      },
+      "highlights": {
+        "ar": [
+          "زيارة سريعة ومباشرة لأبرز معالم عمان عند الوصول.",
+          "استكشاف جبل نيبو ومأدبا في الطريق إلى الجنوب الأردني.",
+          "يوم كامل مخصص لروائع البتراء وتماثيلها الصخرية.",
+          "مغامرة صحراوية ومبيت في مخيم وادي رم.",
+          "مرونة في المغادرة عبر مطار عمان أو حدود ألنبي."
+        ],
+        "en": [
+          "Quick and direct visit to Amman's main landmarks upon arrival.",
+          "Explore Mount Nebo and Madaba en route to southern Jordan.",
+          "Full day dedicated to the wonders of Petra and its rock-cut monuments.",
+          "Desert adventure and overnight at Wadi Rum camp.",
+          "Flexibility to depart via Amman Airport or Allenby border."
+        ],
+        "es": [
+          "Visita rápida y directa a los principales lugares de interés de Ammán a la llegada.",
+          "Explorar el Monte Nebo y Madaba de camino al sur de Jordania.",
+          "Día completo dedicado a las maravillas de Petra y sus monumentos tallados en roca.",
+          "Aventura en el desierto y alojamiento en campamento de Wadi Rum.",
+          "Flexibilidad para salir vía aeropuerto de Ammán o frontera de Allenby."
+        ],
+        "pt": [
+          "Visita rápida e direta aos principais pontos turísticos de Amã na chegada.",
+          "Explore o Monte Nebo e Madaba a caminho do sul da Jordânia.",
+          "Dia inteiro dedicado às maravilhas de Petra e seus monumentos esculpidos na rocha.",
+          "Aventura no deserto e pernoite no acampamento de Wadi Rum.",
+          "Flexibilidade para partir via aeroporto de Amã ou fronteira de Allenby."
+        ],
+        "it": [
+          "Visita rapida e diretta ai principali punti di riferimento di Amman all'arrivo.",
+          "Esplora il Monte Nebo e Madaba lungo la strada per il sud della Giordania.",
+          "Giornata intera dedicata alle meraviglie di Petra e ai suoi monumenti scavati nella roccia.",
+          "Avventura nel deserto e pernottamento all'accampamento di Wadi Rum.",
+          "Flessibilità di partire via aeroporto di Amman o confine di Allenby."
+        ]
+      },
+      "code": {
+        "ar": "REG-20 A",
+        "en": "REG-20 A",
+        "es": "REG-20 A",
+        "pt": "REG-20 A",
+        "it": "REG-20 A"
+      },
+      "overview": {
+        "ar": "برنامج مكثف وذكي مصمم كأفضل امتداد سياحي للمسافرين القادمين عبر الحدود أو لزيارات العمل القصيرة. يركز على تقديم الجوهر السياحي للأردن (عمان، البتراء، ووادي رم) في 5 أيام فقط.",
+        "en": "An intensive and smart program designed as the best tourist extension for travelers arriving across the border or for short business trips. Focuses on delivering the essence of Jordan (Amman, Petra, and Wadi Rum) in just 5 days.",
+        "es": "Un programa intensivo e inteligente diseñado como la mejor extensión turística para viajeros que llegan por la frontera o para viajes de negocios cortos. Se centra en ofrecer la esencia de Jordania (Ammán, Petra y Wadi Rum) en solo 5 días.",
+        "pt": "Um programa intensivo e inteligente projetado como a melhor extensão turística para viajantes que chegam pela fronteira ou para viagens de negócios curtas. Foca em oferecer a essência da Jordânia (Amã, Petra e Wadi Rum) em apenas 5 dias.",
+        "it": "Un programma intensivo e intelligente progettato come la migliore estensione turistica per viaggiatori che arrivano via confine o per brevi viaggi di lavoro. Si concentra sull'offrire l'essenza della Giordania (Amman, Petra e Wadi Rum) in soli 5 giorni."
+      },
+      "name": {
+        "ar": "امتداد الأردن - 5 أيام",
+        "en": "Jordan Extension - 5 Days",
+        "es": "Extensión Jordania - 5 Días",
+        "pt": "Extensão Jordânia - 5 Dias",
+        "it": "Estensione Giordania - 5 Giorni"
+      }
+    },
+    {
+      "days": [
+        {
+          "day": "1",
+          "meals": {
+            "ar": "عشاء",
+            "en": "Dinner",
+            "es": "Cena",
+            "pt": "Jantar",
+            "it": "Cena"
+          },
+          "description": {
+            "ar": "الوصول إلى عمان ونقل للفندق والمبيت.",
+            "en": "Arrival in Amman, transfer to hotel and overnight.",
+            "es": "Llegada a Ammán, traslado al hotel y alojamiento.",
+            "pt": "Chegada a Amã, traslado ao hotel e pernoite.",
+            "it": "Arrivo ad Amman, trasferimento in hotel e pernottamento."
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "عمان، مأدبا، جبل نيبو، قلعة الشوبك، المبيت في البتراء.",
+            "en": "Amman, Madaba, Mount Nebo, Shobak Castle, overnight in Petra.",
+            "es": "Ammán, Madaba, Monte Nebo, Castillo de Shobak, alojamiento en Petra.",
+            "pt": "Amã, Madaba, Monte Nebo, Castelo de Shobak, pernoite em Petra.",
+            "it": "Amman, Madaba, Monte Nebo, Castello di Shobak, pernottamento a Petra."
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "جولة كاملة في البتراء ومبيت في البتراء.",
+            "en": "Full tour of Petra and overnight in Petra.",
+            "es": "Recorrido completo por Petra y alojamiento en Petra.",
+            "pt": "Tour completo de Petra e pernoite em Petra.",
+            "it": "Giro completo di Petra e pernottamento a Petra."
+          }
+        },
+        {
+          "day": "4",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Café da manhã",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "البتراء، البتراء الصغيرة، وادي رم (جولة 4×4)، النقل فوراً من وادي رم مباشرة للمطار أو الحدود.",
+            "en": "Petra, Little Petra, Wadi Rum (4x4 tour), immediate transfer from Wadi Rum directly to airport or border.",
+            "es": "Petra, Petra Pequeña, Wadi Rum (tour en 4x4), traslado inmediato desde Wadi Rum directamente al aeropuerto o frontera.",
+            "pt": "Petra, Pequena Petra, Wadi Rum (tour de 4x4), traslado imediato de Wadi Rum diretamente para o aeroporto ou fronteira.",
+            "it": "Petra, Piccola Petra, Wadi Rum (giro in 4x4), trasferimento immediato da Wadi Rum direttamente all'aeroporto o al confine."
+          }
+        }
+      ],
+      "id": "REG-21",
+      "duration": {
+        "ar": "4 أيام / 3 ليالي",
+        "en": "4 days / 3 nights",
+        "es": "4 días / 3 noches",
+        "pt": "4 dias / 3 noites",
+        "it": "4 giorni / 3 notti"
+      },
+      "minPax": {
+        "ar": "فردان",
+        "en": "2 Pax",
+        "es": "2 Pax",
+        "pt": "2 Pax",
+        "it": "2 Pax"
+      },
+      "highlights": {
+        "ar": [
+          "ليلة مريحة في عمان للانطلاق مبكراً نحو الجنوب.",
+          "جولة سريعة غنية بالتاريخ في مأدبا وقلعة الشوبك.",
+          "رحلة ملهمة إلى مدينة البتراء الوردية ومزاراتها الشهيرة.",
+          "جولة فورية بالسيارات الـ 4×4 في وادي رم باليوم الأخير قبل التوجه للمطار مباشرة.",
+          "النقل السريع والمباشر إلى المطار أو الحدود لضمان اللحاق برحلتك."
+        ],
+        "en": [
+          "Comfortable night in Amman for an early start southward.",
+          "Quick history-rich tour of Madaba and Shobak Castle.",
+          "Inspiring trip to the rose-red city of Petra and its famous monuments.",
+          "Immediate 4x4 tour in Wadi Rum on the last day before heading directly to the airport.",
+          "Fast and direct transfer to the airport or border to ensure you catch your flight."
+        ],
+        "es": [
+          "Noche cómoda en Ammán para comenzar temprano hacia el sur.",
+          "Tour rápido y rico en historia por Madaba y el Castillo de Shobak.",
+          "Viaje inspirador a la ciudad rosa de Petra y sus famosos monumentos.",
+          "Tour inmediato en 4x4 en Wadi Rum el último día antes de ir directamente al aeropuerto.",
+          "Traslado rápido y directo al aeropuerto o frontera para garantizar que tome su vuelo."
+        ],
+        "pt": [
+          "Noite confortável em Amã para começar cedo rumo ao sul.",
+          "Tour rápido e rico em história por Madaba e Castelo de Shobak.",
+          "Viagem inspiradora à cidade rosa de Petra e seus famosos monumentos.",
+          "Tour imediato de 4x4 em Wadi Rum no último dia antes de ir diretamente ao aeroporto.",
+          "Traslado rápido e direto ao aeroporto ou fronteira para garantir que você pegue seu voo."
+        ],
+        "it": [
+          "Notte confortevole ad Amman per una partenza anticipata verso sud.",
+          "Giro rapido ricco di storia a Madaba e al Castello di Shobak.",
+          "Viaggio stimolante alla città rosa di Petra e ai suoi famosi monumenti.",
+          "Giro immediato in 4x4 nel Wadi Rum l'ultimo giorno prima di andare direttamente all'aeroporto.",
+          "Trasferimento rapido e diretto all'aeroporto o al confine per garantire la presa del volo."
+        ]
+      },
+      "code": {
+        "ar": "REG-21 A",
+        "en": "REG-21 A",
+        "es": "REG-21 A",
+        "pt": "REG-21 A",
+        "it": "REG-21 A"
+      },
+      "overview": {
+        "ar": "الخيار الأسرع والأكثر فهوة لأصحاب الجداول المزدحمة. 4 أيام سريعة تختصر لك المسافات لتشاهد عظمة البتراء وتعيش مغامرة الصحراء في وادي رم دون الحاجة لإقامة طويلة.",
+        "en": "The fastest and smartest choice for busy schedules. 4 quick days that shorten distances for you to witness the grandeur of Petra and experience the desert adventure in Wadi Rum without needing a long stay.",
+        "es": "La opción más rápida e inteligente para agendas ocupadas. 4 días rápidos que acortan distancias para que seas testigo de la grandeza de Petra y experimentes la aventura del desierto en Wadi Rum sin necesidad de una larga estancia.",
+        "pt": "A escolha mais rápida e inteligente para agendas lotadas. 4 dias rápidos que encurtam distâncias para você testemunhar a grandiosidade de Petra e experimentar a aventura do deserto em Wadi Rum sem precisar de uma longa estadia.",
+        "it": "La scelta più rapida e intelligente per agende impegnate. 4 giorni veloci che accorciano le distanze per assistere alla grandiosità di Petra e vivere l'avventura nel deserto del Wadi Rum senza bisogno di un lungo soggiorno."
+      },
+      "name": {
+        "ar": "امتداد الأردن - 4 أيام",
+        "en": "Jordan Extension - 4 Days",
+        "es": "Extensión Jordania - 4 Días",
+        "pt": "Extensão Jordânia - 4 Dias",
+        "it": "Estensione Giordania - 4 Giorni"
+      }
     }
   ]
 }

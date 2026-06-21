@@ -3,16 +3,16 @@ import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaCheckCircle, FaTimes, FaStar, FaMapMarkerAlt, FaBed, FaClock, FaTag, FaChevronRight } from 'react-icons/fa';
+import { FaCheckCircle, FaStar, FaMapMarkerAlt, FaBed, FaClock, FaTag, FaChevronRight } from 'react-icons/fa';
 import { staggerContainer, fadeInUp } from '../../animations/variants';
 import Button from '../../components/ui/Button';
 import InquiryForm from '../../components/booking/InquiryForm';
-import { useTurkeyProgram } from '../../hooks/useTurkeyPrograms';
+import { useJordanProgram } from '../../hooks/useJordanPrograms';
 
-const TurkeyProgramDetails = () => {
+const JordanProgramDetails = () => {
   const { t } = useTranslation();
   const { programId } = useParams();
-  const program = useTurkeyProgram(programId);
+  const program = useJordanProgram(programId);
   const [activeImage, setActiveImage] = useState(null);
   const [activeForm, setActiveForm] = useState(null);
 
@@ -43,7 +43,7 @@ const TurkeyProgramDetails = () => {
           <div className="flex items-center justify-center gap-2 text-caption text-gold-500 mb-4 uppercase tracking-wider">
             <Link to="/" className="hover:text-ivory-50 transition-colors">{t('nav.home', 'Home')}</Link>
             <span className="rtl-flip"><FaChevronRight className="text-[10px]" /></span>
-            <Link to="/destinations/turkey" className="hover:text-ivory-50 transition-colors">{t('dest.turkey.title', 'Turkey')}</Link>
+            <Link to="/destinations/jordan" className="hover:text-ivory-50 transition-colors">{t('dest.jordan.title', 'Jordan')}</Link>
             <span className="rtl-flip"><FaChevronRight className="text-[10px]" /></span>
             <span className="text-ivory-300">{title}</span>
           </div>
@@ -106,20 +106,17 @@ const TurkeyProgramDetails = () => {
             <div className="p-6 flex flex-col items-center justify-center text-center gap-2">
               <FaMapMarkerAlt className="text-gold-500 text-2xl mb-1" />
               <span className="text-caption text-obsidian-500 uppercase">{t('tour.destination', 'Destination')}</span>
-              <span className="text-body-md font-semibold text-obsidian-900">{t('dest.turkey.title', 'Turkey')}</span>
+              <span className="text-body-md font-semibold text-obsidian-900">{t('dest.jordan.title', 'Jordan')}</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Content */}
       <section className="container mx-auto px-6 pt-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
-          {/* Main content */}
           <div className="lg:col-span-2">
 
-            {/* Overview */}
             <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               <h2 className="text-display-lg text-obsidian-900 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
                 {t('tourDetail.overview', 'Overview')}
@@ -127,7 +124,6 @@ const TurkeyProgramDetails = () => {
               <p className="text-body-lg text-obsidian-500 leading-relaxed">{overview}</p>
             </motion.div>
 
-            {/* Highlights */}
             {Array.isArray(highlights) && highlights.length > 0 && (
               <motion.div
                 variants={fadeInUp}
@@ -150,7 +146,6 @@ const TurkeyProgramDetails = () => {
               </motion.div>
             )}
 
-            {/* Itinerary — single collapsible box */}
             <motion.div
               variants={fadeInUp}
               initial="hidden"
@@ -190,7 +185,6 @@ const TurkeyProgramDetails = () => {
             </motion.div>
           </div>
 
-          {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-32">
               <div className="bg-obsidian-900 text-ivory-50 rounded-2xl shadow-card p-8 border border-gold-500/10">
@@ -219,16 +213,15 @@ const TurkeyProgramDetails = () => {
         </div>
       </section>
 
-      {/* Contact / Customize Trip CTA */}
       <section className="relative py-24 mt-8 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${images[0]})` }} />
         <div className="absolute inset-0 bg-obsidian-900/75" />
         <div className="relative z-10 container mx-auto px-6 text-center max-w-3xl">
           <span className="text-gold-500 uppercase tracking-widest text-sm font-semibold block mb-4">
-            {t('programs.customizeLabel', 'DIDN\'T FIND WHAT YOU\'RE LOOKING FOR?')}
+            {t('programs.customizeLabel', "DIDN'T FIND WHAT YOU'RE LOOKING FOR?")}
           </span>
           <h2 className="text-display-xl text-ivory-50 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            {t('programs.customizeTitle', 'Let us design your perfect Turkey journey')}
+            {t('programs.customizeTitle', 'Let us design your perfect Jordan journey')}
           </h2>
           <p className="text-body-lg text-ivory-300 mb-10">
             {t('programs.customizeDesc', 'Tell us your preferences, and our expert travel designers will craft a bespoke itinerary tailored just for you.')}
@@ -248,7 +241,6 @@ const TurkeyProgramDetails = () => {
         </div>
       </section>
 
-      {/* Inquiry Modal */}
       <AnimatePresence>
         {activeForm && (
           <motion.div
@@ -268,4 +260,4 @@ const TurkeyProgramDetails = () => {
   );
 };
 
-export default TurkeyProgramDetails;
+export default JordanProgramDetails;

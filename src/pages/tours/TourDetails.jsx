@@ -249,7 +249,7 @@ const TourDetails = () => {
                 </div>
               )}
 
-              {/* Itinerary Section — always visible */}
+              {/* Itinerary Section */}
               <div className="mt-16 pt-12 border-t border-gray-200">
                 <div className="mb-10">
                   <span className="text-caption text-gold-500 uppercase tracking-widest font-semibold block mb-2">
@@ -260,65 +260,52 @@ const TourDetails = () => {
                   </h2>
                 </div>
 
-                <div className="relative pl-6 md:pl-10">
-                  <div className="absolute left-[11px] md:left-[19px] top-8 bottom-8 w-[2px] bg-[rgba(201,162,39,0.2)]"></div>
-                  <div className="flex flex-col gap-6">
+                <div className="relative pl-10">
+                  <div className="absolute left-[15px] top-8 bottom-8 w-[2px] bg-[rgba(201,162,39,0.2)]"></div>
+                  <div className="space-y-6">
                     {tour.itinerary && tour.itinerary.map((day) => (
                       <div key={day.day} className="relative">
-                        <div className="absolute -left-6 md:-left-10 top-[26px] w-3 h-3 bg-gold-500 rounded-full transform -translate-x-1/2 z-10 shadow-[0_0_0_4px_rgba(201,162,39,0.2)]" />
+                        <div className="absolute -left-10 top-[18px] w-3 h-3 bg-gold-500 rounded-full transform -translate-x-1/2 z-10 shadow-[0_0_0_4px_rgba(201,162,39,0.2)]" />
 
-                        <div className="rounded-xl overflow-hidden group bg-[rgba(201,162,39,0.08)] border-l-2 border-[rgba(201,162,39,0.3)]">
-                          <div className="p-6 text-left">
-                            <h3 className="text-body-lg font-semibold text-obsidian-900 mb-4">
-                              <span className="text-gold-600 mr-2 font-display">{t('tour.day', 'Day')} {day.day} &mdash;</span> {t(`data.${day.title}`, day.title)}
-                            </h3>
+                        <div className="bg-ivory-50 rounded-xl border-l-2 border-[rgba(201,162,39,0.3)] overflow-hidden shadow-sm p-5">
+                          <div className="flex items-center gap-4 mb-3">
+                            <span className="font-semibold text-obsidian-900">{t('tour.day', 'Day')} {day.day}</span>
+                            {day.title && (
+                              <span className="text-body-sm text-obsidian-500">{t(`data.${day.title}`, day.title)}</span>
+                            )}
+                            {day.meals && (
+                              <span className="text-caption text-obsidian-400 flex items-center gap-1 ml-auto">
+                                <FaBed className="text-gold-500" /> {t(`data.${day.meals}`, day.meals)}
+                              </span>
+                            )}
+                          </div>
 
-                            <div className="bg-obsidian-900 p-6 rounded-xl flex flex-col gap-4 shadow-inner">
-                              {day.description ? (
-                                <>
-                                  <div className="flex items-start gap-4 pb-4 border-b border-[rgba(201,162,39,0.1)]">
-                                    <span className="text-2xl mt-1">📍</span>
-                                    <div>
-                                      <p className="text-[#F5EDD6] text-body-md leading-relaxed">{t(`data.${day.description}`, day.description)}</p>
-                                    </div>
-                                  </div>
-                                  {day.meals && (
-                                    <div className="flex items-start gap-4">
-                                      <span className="text-2xl mt-1">🍽️</span>
-                                      <div>
-                                        <span className="font-bold text-[#C9A227] block mb-1">{t('tour.meals', 'Meals')}</span>
-                                        <p className="text-[#F5EDD6] text-body-md leading-relaxed">{t(`data.${day.meals}`, day.meals)}</p>
-                                      </div>
-                                    </div>
-                                  )}
-                                </>
-                              ) : (
-                                <>
-                                  <div className="flex items-start gap-4 pb-4 border-b border-[rgba(201,162,39,0.1)]">
-                                    <span className="text-2xl mt-1">🌅</span>
-                                    <div>
-                                      <span className="font-bold text-[#C9A227] block mb-1">{t('tour.morning', 'Morning')}</span>
-                                      <p className="text-[#F5EDD6] text-body-md leading-relaxed">{t(`data.${day.morning}`, day.morning)}</p>
-                                    </div>
-                                  </div>
-                                  <div className="flex items-start gap-4 pb-4 border-b border-[rgba(201,162,39,0.1)]">
-                                    <span className="text-2xl mt-1">☀️</span>
-                                    <div>
-                                      <span className="font-bold text-[#C9A227] block mb-1">{t('tour.afternoon', 'Afternoon')}</span>
-                                      <p className="text-[#F5EDD6] text-body-md leading-relaxed">{t(`data.${day.afternoon}`, day.afternoon)}</p>
-                                    </div>
-                                  </div>
-                                  <div className="flex items-start gap-4">
-                                    <span className="text-2xl mt-1">🌙</span>
-                                    <div>
-                                      <span className="font-bold text-[#C9A227] block mb-1">{t('tour.evening', 'Evening')}</span>
-                                      <p className="text-[#F5EDD6] text-body-md leading-relaxed">{t(`data.${day.evening}`, day.evening)}</p>
-                                    </div>
-                                  </div>
-                                </>
+                          {day.description && (
+                            <p className="text-body-sm text-obsidian-500 leading-relaxed">{t(`data.${day.description}`, day.description)}</p>
+                          )}
+
+                          {!day.description && (
+                            <div className="space-y-2">
+                              {day.morning && (
+                                <div className="flex items-start gap-3">
+                                  <span className="text-caption text-gold-600 uppercase tracking-wider font-semibold shrink-0 w-20">🌅 {t('tour.morning', 'Morning')}</span>
+                                  <p className="text-body-sm text-obsidian-500 leading-relaxed">{t(`data.${day.morning}`, day.morning)}</p>
+                                </div>
+                              )}
+                              {day.afternoon && (
+                                <div className="flex items-start gap-3">
+                                  <span className="text-caption text-gold-600 uppercase tracking-wider font-semibold shrink-0 w-20">☀️ {t('tour.afternoon', 'Afternoon')}</span>
+                                  <p className="text-body-sm text-obsidian-500 leading-relaxed">{t(`data.${day.afternoon}`, day.afternoon)}</p>
+                                </div>
+                              )}
+                              {day.evening && (
+                                <div className="flex items-start gap-3">
+                                  <span className="text-caption text-gold-600 uppercase tracking-wider font-semibold shrink-0 w-20">🌙 {t('tour.evening', 'Evening')}</span>
+                                  <p className="text-body-sm text-obsidian-500 leading-relaxed">{t(`data.${day.evening}`, day.evening)}</p>
+                                </div>
                               )}
                             </div>
-                          </div>
+                          )}
                         </div>
                       </div>
                     ))}
