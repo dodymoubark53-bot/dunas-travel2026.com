@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaCheck, FaTimes, FaChevronDown, FaBed, FaMapMarkerAlt } from 'react-icons/fa';
-import { staggerContainer, fadeInUp, cardHover } from '../../animations/variants';
+import { staggerContainer, fadeInUp } from '../../animations/variants';
 import TourCard from '../../components/tour/TourCard';
 import Button from '../../components/ui/Button';
 import { tours } from '../../data/tours';
@@ -14,25 +13,10 @@ const HERO_IMG =
   'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1920&q=80';
 const SANTORINI_IMG =
   'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=80';
-const MYKONOS_IMG =
-  'https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?auto=format&fit=crop&w=800&q=80';
-const ATHENS_IMG =
-  'https://images.unsplash.com/photo-1555993539-1732b0258235?auto=format&fit=crop&w=800&q=80';
 
 const Grecia = () => {
   const { t } = useTranslation();
   const greekTours = tours.filter((tour) => tour.destination === 'greece');
-
-  // Find the single Greece tour for detailed sections
-  const tour = greekTours[0];
-
-  const [expandedDay, setExpandedDay] = useState(1);
-
-  const destinations = [
-    { name: 'Atenas', img: ATHENS_IMG, desc: 'Historia & Cultura' },
-    { name: 'Mykonos', img: MYKONOS_IMG, desc: 'Glamour & Playas' },
-    { name: 'Santorini', img: SANTORINI_IMG, desc: 'Puestas de Sol & Caldera' },
-  ];
 
   return (
     <div className="w-full bg-obsidian-50 pb-24">

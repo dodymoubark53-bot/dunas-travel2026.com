@@ -91,6 +91,12 @@ const RoomDetails = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
+  const getTodayString = () => {
+    const d = new Date();
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  };
+  const todayStr = getTodayString();
+
   // Review Form State
   const [reviews, setReviews] = useState([
     { name: 'Sofia Rodriguez', rating: 5, date: '2026-05-12', text: 'Stunning Pyramids views straight from the window! Extremely comfortable cotton sheets and very helpful service.' },
@@ -139,6 +145,12 @@ const RoomDetails = () => {
 
   const handleBookingSubmit = (e) => {
     e.preventDefault();
+    if (formData.checkInDate && formData.checkInDate < todayStr) {
+      return;
+    }
+    if (formData.checkOutDate && formData.checkOutDate < (formData.checkInDate || todayStr)) {
+      return;
+    }
     setIsSubmitting(true);
     
     // Construct pre-filled email draft
@@ -467,6 +479,7 @@ const RoomDetails = () => {
                         name="checkInDate"
                         required
                         value={formData.checkInDate}
+                        min={todayStr}
                         onChange={handleInputChange}
                         className="w-full p-3 bg-slate-800 border border-slate-700 text-white text-xs outline-none focus:border-gold-500"
                       />
@@ -478,6 +491,7 @@ const RoomDetails = () => {
                         name="checkOutDate"
                         required
                         value={formData.checkOutDate}
+                        min={formData.checkInDate || todayStr}
                         onChange={handleInputChange}
                         className="w-full p-3 bg-slate-800 border border-slate-700 text-white text-xs outline-none focus:border-gold-500"
                       />

@@ -23,8 +23,12 @@ const TailorTour = () => {
   const [dateError, setDateError] = useState(false);
   const [budget, setBudget] = useState('');
 
-  // Today's date logic
-  const todayStr = new Date().toISOString().split('T')[0];
+  // Today's date logic using local time
+  const getTodayString = () => {
+    const d = new Date();
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  };
+  const todayStr = getTodayString();
 
   // Traveler counts
   const [adults, setAdults] = useState(1);

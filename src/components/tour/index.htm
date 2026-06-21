@@ -643,7 +643,7 @@
           <div class="form-row">
             <div class="form-group">
               <label class="field-label">تاريخ السفر المتوقع *</label>
-              <input type="date" required />
+              <input type="date" required id="expected-travel-date" />
             </div>
             <div class="form-group">
               <label class="field-label"
@@ -804,6 +804,28 @@
           }
         } else {
           section.style.display = "none";
+        }
+      }
+
+      // Initialize dynamic travel date minimum to today's local date
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const dd = String(today.getDate()).padStart(2, '0');
+      const todayStr = `${yyyy}-${mm}-${dd}`;
+      const dateInput = document.getElementById("expected-travel-date");
+      if (dateInput) {
+        dateInput.min = todayStr;
+        
+        // Add form submission check to prevent manual bypasses
+        const form = document.getElementById("tailorTripForm");
+        if (form) {
+          form.addEventListener("submit", function(event) {
+            if (dateInput.value && dateInput.value < todayStr) {
+              event.preventDefault();
+              alert("يرجى اختيار تاريخ سفر في المستقبل.");
+            }
+          });
         }
       }
     </script>

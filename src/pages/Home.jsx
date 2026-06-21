@@ -87,8 +87,17 @@ const Home = () => {
   });
   const [resSuccess, setResSuccess] = useState(false);
 
+  const getTodayString = () => {
+    const d = new Date();
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  };
+  const todayStr = getTodayString();
+
   const handleResSubmit = (e) => {
     e.preventDefault();
+    if (resForm.date && resForm.date < todayStr) {
+      return;
+    }
     setResSuccess(true);
     setTimeout(() => setResSuccess(false), 5000);
     setResForm({
@@ -899,6 +908,7 @@ const Home = () => {
                       type="date"
                       required
                       value={resForm.date}
+                      min={todayStr}
                       onChange={(e) =>
                         setResForm({ ...resForm, date: e.target.value })
                       }

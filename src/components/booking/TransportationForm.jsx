@@ -9,6 +9,13 @@ import { transportation } from '../../data/transportation';
 const TransportationForm = ({ preSelectedVehicleId = '' }) => {
   const { t } = useTranslation();
   const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'success'
+
+  const getTodayString = () => {
+    const d = new Date();
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  };
+  const todayStr = getTodayString();
+
   const [formData, setFormData] = useState({
     vehicleId: preSelectedVehicleId,
     tripDate: '',
@@ -36,6 +43,9 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (formData.tripDate && formData.tripDate < todayStr) {
+      return;
+    }
     setStatus('submitting');
     // Simulate API call
     setTimeout(() => {
@@ -106,6 +116,7 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
                 type="date" 
                 name="tripDate"
                 value={formData.tripDate}
+                min={todayStr}
                 onChange={handleChange}
                 required
                 className="w-full p-4 border border-gray-200 rounded-lg focus:border-gold-500 outline-none transition-colors text-[16px]"

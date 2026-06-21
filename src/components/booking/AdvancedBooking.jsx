@@ -12,6 +12,12 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson }) => {
   const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'success'
   const isEgyptJordanTour = tourTitle === "Combined EGYPT with Jordan - 14 DAYS / 13 Nights" || tourTitle?.includes("Combined EGYPT with Jordan");
 
+  const getTodayString = () => {
+    const d = new Date();
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  };
+  const todayStr = getTodayString();
+
   // Form State
   const [formData, setFormData] = useState({
     arrivalDate: '',
@@ -42,6 +48,12 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (formData.arrivalDate && formData.arrivalDate < todayStr) {
+      return;
+    }
+    if (formData.departureDate && formData.departureDate < (formData.arrivalDate || todayStr)) {
+      return;
+    }
     setStatus('submitting');
     setTimeout(() => {
       setStatus('success');
@@ -131,6 +143,7 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson }) => {
                   type="date"
                   name="arrivalDate"
                   value={formData.arrivalDate}
+                  min={todayStr}
                   onChange={handleInputChange}
                   required
                   className="w-full p-4 rounded-lg outline-none transition-all text-[16px] bg-[rgba(255,252,247,0.05)] text-[#F5EDD6] placeholder:text-[rgba(245,237,214,0.4)] border border-[rgba(255,252,247,0.1)] focus:border-[rgba(201,162,39,0.4)] focus:shadow-[0_0_12px_rgba(201,162,39,0.15)] [color-scheme:dark]"
@@ -142,6 +155,7 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson }) => {
                   type="date"
                   name="departureDate"
                   value={formData.departureDate}
+                  min={formData.arrivalDate || todayStr}
                   onChange={handleInputChange}
                   required
                   className="w-full p-4 rounded-lg outline-none transition-all text-[16px] bg-[rgba(255,252,247,0.05)] text-[#F5EDD6] placeholder:text-[rgba(245,237,214,0.4)] border border-[rgba(255,252,247,0.1)] focus:border-[rgba(201,162,39,0.4)] focus:shadow-[0_0_12px_rgba(201,162,39,0.15)] [color-scheme:dark]"
