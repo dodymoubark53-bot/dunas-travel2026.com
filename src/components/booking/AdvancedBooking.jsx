@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  FaCheckCircle, FaCalendarAlt, FaUser, FaPlus, FaMinus, 
-  FaPaperPlane, FaLanguage, FaEnvelope, FaPhone, FaTimes, 
-  FaChevronDown, FaEdit
+  FaCheckCircle, FaCalendarAlt, FaPlus, FaMinus, 
+  FaPaperPlane, FaLanguage, FaTimes, 
+  FaChevronDown
 } from 'react-icons/fa';
 import Button from '../ui/Button';
 import { fadeInUp } from '../../animations/variants';

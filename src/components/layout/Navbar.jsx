@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes, FaGlobe, FaChevronDown, FaUserCircle, FaSignOutAlt, FaBookmark } from 'react-icons/fa';
@@ -213,8 +213,8 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* Currency Selector */}
-        <div className="hidden md:flex items-center z-50">
+        {/* Currency Selector (Desktop) */}
+        <div className="hidden lg:flex items-center z-50">
           <CurrencySelector />
         </div>
 
@@ -289,7 +289,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Action Buttons */}
-        <div className="lg:hidden flex items-center gap-2 z-50">
+        <div className="lg:hidden flex items-center gap-1.5 z-50">
           {/* Lang (Mobile) */}
           <div className="relative">
             <button
@@ -463,10 +463,10 @@ const Navbar = () => {
                 ))}
 
                 {/* Mobile Currency Selector */}
-                <div className="flex md:hidden flex-col gap-2 mt-4 pt-4 border-t border-obsidian-100">
+                <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-obsidian-100">
                   <span className="text-obsidian-400 text-xs font-semibold tracking-wider uppercase">{t('nav.currency', 'Currency')}</span>
                   <div className="flex">
-                    <CurrencySelector />
+                    <CurrencySelector light />
                   </div>
                 </div>
 

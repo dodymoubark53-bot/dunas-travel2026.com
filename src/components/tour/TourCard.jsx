@@ -1,21 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 import { variants } from '../../animations/variants';
 import Button from '../ui/Button';
 import { useCurrency } from '../../context/CurrencyContext';
-
-// استيراد قاعدة البيانات الفيديرالية الموحدة
-import { tours as importedTours } from '../../data/tours';
-
-// تصفية أوتوماتيكية حسب الأسواق واللغة
-export const toursBR = importedTours.filter(t => t.language === 'pt-BR');
-export const toursIT = importedTours.filter(t => t.language === 'it');
-export const allTours = [...toursBR, ...toursIT];
-
-// Removed renderStars as per Turkey template
 
 const marketFlag = (market) => {
   const flags = { Brasil: '🇧🇷', Italia: '🇮🇹' };

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaTimes, FaEye, FaEyeSlash, FaUserCircle } from 'react-icons/fa';
@@ -45,7 +45,7 @@ const LoginModal = ({ isOpen, onClose }) => {
       await login(email, password);
       onClose();
       window.location.href = '/'; // Redirect to home
-    } catch (err) {
+    } catch {
       setError(t('auth.invalidCredentials', 'Invalid email or password'));
     } finally {
       setIsLoading(false);
@@ -77,11 +77,11 @@ const LoginModal = ({ isOpen, onClose }) => {
       setSuccess(t('auth.accountCreatedSuccess', 'Account created successfully! Please log in.'));
       // Switch back to login view but keep email filled
       setTimeout(() => switchView('login'), 2000);
-    } catch (err) {
-      if (err.message.toLowerCase().includes('already exists') || err.message.toLowerCase().includes('duplicate')) {
+    } catch (err_) {
+      if (err_.message.toLowerCase().includes('already exists') || err_.message.toLowerCase().includes('duplicate')) {
         setError(t('auth.emailInUse', 'This email is already in use'));
       } else {
-        setError(err.message);
+        setError(err_.message);
       }
     } finally {
       setIsLoading(false);

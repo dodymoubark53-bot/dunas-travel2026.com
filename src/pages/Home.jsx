@@ -9,7 +9,9 @@ import TourCard from "../components/tour/TourCard";
 import { tours } from "../data/tours";
 import { useTurkeyPrograms } from "../hooks/useTurkeyPrograms";
 import { useJordanPrograms } from "../hooks/useJordanPrograms";
+import { useDubaiPrograms } from "../hooks/useDubaiPrograms";
 import { services } from "../data/services";
+import { multiCountryTours } from "../data/multiCountryTours";
 import { transportation } from "../data/transportation";
 import { useCurrency } from "../context/CurrencyContext";
 import rawProgramData from "../data/programs.json";
@@ -29,6 +31,12 @@ const destinationsData = [
     image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=800&q=80",
   },
   {
+    id: "dubai",
+    name: "Dubai",
+    desc: "Luxury & Skylines",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80",
+  },
+  {
     id: "jordan",
     name: "Jordan",
     desc: "Desert & Ancient Ruins",
@@ -43,14 +51,8 @@ const destinationsData = [
   {
     id: "greece",
     name: "Greece",
-    desc: "Myths & Blue Horizons",
+    desc: "Myths & Islands",
     image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "dubai",
-    name: "Dubai",
-    desc: "Luxury & Skylines",
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "tunisia",
@@ -110,6 +112,24 @@ const Home = () => {
     code: jp.code
   }));
 
+  const dubaiPrograms = useDubaiPrograms();
+  const formattedDubaiTours = dubaiPrograms.map((dp) => ({
+    id: dp.id,
+    slug: dp.slug,
+    destination: "dubai",
+    title: dp.title,
+    description: dp.overview,
+    duration: dp.duration,
+    price: dp.raw?.price || 899,
+    rating: 4.8,
+    reviewCount: 120,
+    images: dp.images,
+    type: dp.raw?.type || "Dubai Tour",
+    market: "Global",
+    highlights: dp.highlights,
+    code: dp.code
+  }));
+
   // Hero Video State
   const videoRef = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
@@ -124,11 +144,11 @@ const Home = () => {
   const destinations = [
     { id: "egypt", label: t("dest.egypt.title", "Egypt"), img: "/imgs/gallery/pharaohs & pyramid.jpg" },
     { id: "turkey", label: t("dest.turkey.title", "Turkey"), img: "/imgs/gallery/grand tour of turkey.jpg" },
+    { id: "dubai", label: t("dest.dubai.title", "Dubai"), img: "/imgs/gallery/16.jpeg" },
     { id: "jordan", label: t("dest.jordan.title", "Jordan"), img: "/imgs/gallery/ultimate jordan grand tour.webp" },
-    { id: "greece", label: t("dest.greece.title", "Greece"), img: "/imgs/gallery/1.jpeg" },
     { id: "tunisia", label: t("dest.tunisia.title", "Tunisia"), img: "/imgs/gallery/3.jpeg" },
     { id: "morocco", label: t("dest.morocco.title", "Morocco"), img: "/imgs/gallery/14.jpeg" },
-    { id: "dubai", label: t("dest.dubai.title", "Dubai"), img: "/imgs/gallery/16.jpeg" },
+    { id: "greece", label: t("dest.greece.title", "Greece"), img: "/imgs/gallery/ephesus & the aegean coast.jpg" },
     { id: "holyland", label: t("dest.holyland.title", "Holy Land"), img: "/imgs/gallery/20.jpeg" },
   ];
 
@@ -136,6 +156,7 @@ const Home = () => {
 
   const TURKEY_IDS = ["REG-01","REG-02","REG-03","REG-04","REG-05","REG-05-B","REG-06","REG-07","REG-08","REG-09","REG-10","REG-11","REG-13","REG-14"];
   const JORDAN_IDS = ["REG-15","REG-16","REG-17","REG-18","REG-19","REG-20","REG-21"];
+  const DUBAI_IDS = ["REG-22","REG-23","REG-24","REG-25","REG-26","REG-27","REG-28"];
 
   const getToursForDest = (destId) => {
     const lang = i18n.language;
@@ -157,6 +178,12 @@ const Home = () => {
       rawPrograms.filter((p) => JORDAN_IDS.includes(p.id)).forEach((p) => {
         const slug = slugify(p.id + "-" + p.name.en);
         result.push({ label: p.name[lang] || p.name.en, url: `/programs/jordan/${slug}`, id: `prog-${p.id}` });
+      });
+    }
+    if (destId === "dubai") {
+      rawPrograms.filter((p) => DUBAI_IDS.includes(p.id)).forEach((p) => {
+        const slug = slugify(p.id + "-" + p.name.en);
+        result.push({ label: p.name[lang] || p.name.en, url: `/programs/dubai/${slug}`, id: `prog-${p.id}` });
       });
     }
     return result;
@@ -294,16 +321,25 @@ const Home = () => {
   const featuredHotels = services
     .filter((s) => s.category === "hotels")
     .slice(0, 2);
-  const availableSafaris = services
-    .filter((s) => s.category === "safari")
+  const featuredClassic = services
+    .filter((s) => s.category === "classic")
     .slice(0, 2);
+  const honeymoonPackage = services
+    .filter((s) => s.category === "honeymooners")
+    .slice(0, 1);
+  const featuredReligious = services
+    .filter((s) => s.category === "religious")
+    .slice(0, 1);
+  const multiCountryItems = multiCountryTours().slice(0, 2);
 
   const activeTours = activeDestination
     ? activeDestination === "turkey"
       ? formattedTurkeyTours
       : activeDestination === "jordan"
         ? formattedJordanTours
-        : tours.filter((t) => t.destination === activeDestination)
+        : activeDestination === "dubai"
+          ? formattedDubaiTours
+          : tours.filter((t) => t.destination === activeDestination)
     : [];
 
   const featuredToursList = [
@@ -594,7 +630,9 @@ const Home = () => {
                 ? formattedTurkeyTours.length 
                 : dest.id === "jordan"
                   ? formattedJordanTours.length
-                  : tours.filter((t) => t.destination === dest.id).length;
+                  : dest.id === "dubai"
+                    ? formattedDubaiTours.length
+                    : tours.filter((t) => t.destination === dest.id).length;
               const isActive = activeDestination === dest.id;
 
               return (
@@ -653,7 +691,7 @@ const Home = () => {
                       <TourCard 
                         key={tour.id} 
                         tour={tour} 
-                        linkBase={activeDestination === "turkey" ? "/programs/turkey" : "/tours"} 
+                        linkBase={activeDestination === "turkey" ? "/programs/turkey" : activeDestination === "jordan" ? "/programs/jordan" : activeDestination === "dubai" ? "/programs/dubai" : "/tours"} 
                       />
                     ))}
                   </div>
@@ -837,63 +875,205 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Available Safaris */}
+            {/* Programs, Honeymoon, Multi-Country, Religious */}
             <div>
               <h3 className="text-display-sm text-obsidian-900 mb-6 pb-4 border-b border-obsidian-900/10">
-                {t("home.availableSafaris")}
+                {t("home.featuredPrograms", "Featured Programs")}
               </h3>
-              <div className="flex flex-col gap-6">
-                {availableSafaris.map((safari) => (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {/* Classic Programs */}
+                {featuredClassic.map((prog) => (
                   <motion.div
-                    key={safari.id}
+                    key={prog.id}
                     whileHover={{
                       y: -6,
                       boxShadow: "0 0 32px rgba(245,166,35,0.22)",
                       transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
                     }}
-                    className="flex flex-col sm:flex-row bg-ivory-50 rounded-2xl overflow-hidden shadow-card hover:shadow-lg transition-shadow border border-obsidian-900/5 group"
+                    className="flex flex-col bg-ivory-50 rounded-2xl overflow-hidden shadow-card hover:shadow-lg transition-shadow border border-obsidian-900/5 group"
                   >
-                    <div className="w-full sm:w-2/5 h-40 sm:h-auto relative overflow-hidden">
+                    <div className="w-full h-40 relative overflow-hidden shrink-0">
                       <div className="absolute top-3 left-3 z-10 bg-gold-500 text-obsidian-900 text-[10px] uppercase font-bold px-2 py-1 rounded shadow-md">
-                        {t(`data.${safari.location}`, safari.location) ||
-                          safari.location}
+                        Classic
                       </div>
                       <img
-                        src={safari.images[0]}
-                        alt={safari.title}
+                        src={prog.images[0]}
+                        alt={prog.title}
                         className="w-full h-full object-cover cinematic-transition group-hover:scale-[1.06]"
                         loading="lazy"
                       />
                     </div>
-                    <div className="w-full sm:w-3/5 p-6 flex flex-col justify-between">
+                    <div className="w-full p-4 flex flex-col justify-between flex-1">
                       <div>
-                        <h4 className="text-xl font-display text-obsidian-900 mb-2 line-clamp-1 group-hover:text-gold-500 transition-colors">
-                          {t(`data.${safari.title}`, safari.title) ||
-                            safari.title}
+                        <h4 className="text-base font-display text-obsidian-900 mb-1 line-clamp-1 group-hover:text-gold-500 transition-colors">
+                          {prog.title}
                         </h4>
-                        <p className="text-sm text-obsidian-500 line-clamp-2">
-                          {t(`data.${safari.shortDesc}`, safari.shortDesc) ||
-                            safari.shortDesc}
+                        <p className="text-xs text-obsidian-500 line-clamp-2">
+                          {prog.shortDesc}
                         </p>
                       </div>
-                      <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-100">
+                      <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-100">
                         <div>
-                          <span className="block text-xs text-obsidian-300 uppercase tracking-wider">
-                            {t("home.duration")}
+                          <span className="block text-[10px] text-obsidian-300 uppercase tracking-wider">
+                            {t("tourCard.from", "from")}
                           </span>
-                          <span className="text-sm font-medium text-obsidian-700">
-                            {safari.duration
-                              ? t(`data.${safari.duration}`, safari.duration) ||
-                              safari.duration
-                              : "Full Day"}
+                          <span className="text-base font-semibold text-obsidian-900">
+                            {formatPrice(prog.price)}
                           </span>
                         </div>
-                        <Link to={`/services/safari/${safari.slug}`}>
-                          <Button
-                            variant="outline-gold"
-                            className="px-4 py-1.5 text-sm"
-                          >
-                            {t("home.viewSafari")}
+                        <Link to={`/services/classic/${prog.slug}`}>
+                          <Button variant="outline-gold" className="px-3 py-1 text-xs">
+                            {t("home.viewDetails", "View Details")}
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+
+                {/* Honeymoon Package */}
+                {honeymoonPackage.map((hny) => (
+                  <motion.div
+                    key={hny.id}
+                    whileHover={{
+                      y: -6,
+                      boxShadow: "0 0 32px rgba(245,166,35,0.22)",
+                      transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
+                    }}
+                    className="flex flex-col bg-ivory-50 rounded-2xl overflow-hidden shadow-card hover:shadow-lg transition-shadow border border-obsidian-900/5 group"
+                  >
+                    <div className="w-full h-40 relative overflow-hidden shrink-0">
+                      <div className="absolute top-3 left-3 z-10 bg-gold-500 text-obsidian-900 text-[10px] uppercase font-bold px-2 py-1 rounded shadow-md">
+                        Honeymoon
+                      </div>
+                      <img
+                        src={hny.images[0]}
+                        alt={hny.title}
+                        className="w-full h-full object-cover cinematic-transition group-hover:scale-[1.06]"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="w-full p-4 flex flex-col justify-between flex-1">
+                      <div>
+                        <h4 className="text-base font-display text-obsidian-900 mb-1 line-clamp-1 group-hover:text-gold-500 transition-colors">
+                          {hny.title}
+                        </h4>
+                        <p className="text-xs text-obsidian-500 line-clamp-2">
+                          {hny.shortDesc}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-100">
+                        <div>
+                          <span className="block text-[10px] text-obsidian-300 uppercase tracking-wider">
+                            {t("tourCard.from", "from")}
+                          </span>
+                          <span className="text-base font-semibold text-obsidian-900">
+                            {formatPrice(hny.price)}
+                          </span>
+                        </div>
+                        <Link to={`/programs/honeymooners/${hny.slug}`}>
+                          <Button variant="outline-gold" className="px-3 py-1 text-xs">
+                            {t("home.viewDetails", "View Details")}
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+
+                {/* Multi-Country Tours */}
+                {multiCountryItems.map((mc, idx) => (
+                  <motion.div
+                    key={mc.id || `mc-${idx}`}
+                    whileHover={{
+                      y: -6,
+                      boxShadow: "0 0 32px rgba(245,166,35,0.22)",
+                      transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
+                    }}
+                    className="flex flex-col bg-ivory-50 rounded-2xl overflow-hidden shadow-card hover:shadow-lg transition-shadow border border-obsidian-900/5 group"
+                  >
+                    <div className="w-full h-40 relative overflow-hidden shrink-0">
+                      <div className="absolute top-3 left-3 z-10 bg-gold-500 text-obsidian-900 text-[10px] uppercase font-bold px-2 py-1 rounded shadow-md">
+                        {mc.countries?.slice(0, 2).join(" & ") || "Multi-Country"}
+                      </div>
+                      <img
+                        src={mc.images?.[0]}
+                        alt={mc.title}
+                        className="w-full h-full object-cover cinematic-transition group-hover:scale-[1.06]"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="w-full p-4 flex flex-col justify-between flex-1">
+                      <div>
+                        <h4 className="text-base font-display text-obsidian-900 mb-1 line-clamp-1 group-hover:text-gold-500 transition-colors">
+                          {mc.title}
+                        </h4>
+                        <p className="text-xs text-obsidian-500 line-clamp-2">
+                          {mc.overview || mc.subtitle}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-100">
+                        <div>
+                          <span className="block text-[10px] text-obsidian-300 uppercase tracking-wider">
+                            {mc.duration || t("tourCard.from", "from")}
+                          </span>
+                          <span className="text-base font-semibold text-obsidian-900">
+                            {formatPrice(mc.price)}
+                          </span>
+                        </div>
+                        <Link to={`/programs/multi-country/${mc.slug}`}>
+                          <Button variant="outline-gold" className="px-3 py-1 text-xs">
+                            {t("home.viewDetails", "View Details")}
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+
+                {/* Religious Tour */}
+                {featuredReligious.map((rel) => (
+                  <motion.div
+                    key={rel.id}
+                    whileHover={{
+                      y: -6,
+                      boxShadow: "0 0 32px rgba(245,166,35,0.22)",
+                      transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
+                    }}
+                    className="flex flex-col bg-ivory-50 rounded-2xl overflow-hidden shadow-card hover:shadow-lg transition-shadow border border-obsidian-900/5 group"
+                  >
+                    <div className="w-full h-40 relative overflow-hidden shrink-0">
+                      <div className="absolute top-3 left-3 z-10 bg-gold-500 text-obsidian-900 text-[10px] uppercase font-bold px-2 py-1 rounded shadow-md">
+                        Religious
+                      </div>
+                      <img
+                        src={rel.images[0]}
+                        alt={rel.title}
+                        className="w-full h-full object-cover cinematic-transition group-hover:scale-[1.06]"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="w-full p-4 flex flex-col justify-between flex-1">
+                      <div>
+                        <h4 className="text-base font-display text-obsidian-900 mb-1 line-clamp-1 group-hover:text-gold-500 transition-colors">
+                          {rel.title}
+                        </h4>
+                        <p className="text-xs text-obsidian-500 line-clamp-2">
+                          {rel.shortDesc}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-100">
+                        <div>
+                          <span className="block text-[10px] text-obsidian-300 uppercase tracking-wider">
+                            {t("tourCard.from", "from")}
+                          </span>
+                          <span className="text-base font-semibold text-obsidian-900">
+                            {formatPrice(rel.price)}
+                          </span>
+                        </div>
+                        <Link to={`/programs/religious`}>
+                          <Button variant="outline-gold" className="px-3 py-1 text-xs">
+                            {t("home.viewDetails", "View Details")}
                           </Button>
                         </Link>
                       </div>

@@ -430,7 +430,6 @@
     "langItalian": "Italiano",
     "langEnglish": "Inglés",
     "langArabic": "Árabe",
-    "arrivalDate": "Fecha de Llegada",
     "arrivalTime": "Hora de Llegada",
     "departureTime": "Hora de Salida",
     "tabBooking": "Reservar",
@@ -2848,7 +2847,8 @@
     "close": "Cerrar",
     "processing": "Procesando...",
     "sending": "Enviando...",
-    "back": "Volver al hotel"
+    "back": "Volver al hotel",
+    "travelInfo": "Información de Viaje"
   },
   "dest": {
     "brazil": {
@@ -2992,7 +2992,24 @@
       "title": "Dubái",
       "subtitle": "El lujo moderno redefinido",
       "seoTitle": "Tours de lujo por Dubái | Dunas Travel",
-      "seoDesc": "Explora viajes de lujo por Dubái. Itinerarios personalizados próximamente."
+      "seoDesc": "Descubre la deslumbrante metrópolis de Dubái, una ciudad de rascacielos futuristas, desiertos dorados y lujo de clase mundial.",
+      "desc": "Desde el imponente Burj Khalifa hasta las doradas dunas del desierto arábigo, Dubái es una ciudad que desafía la imaginación. Disfruta de compras de clase mundial, gastronomía galardonada y atracciones espectaculares.",
+      "brief": "Dubái combina innovación futurista con la hospitalidad árabe más genuina. Ya sea explorando el histórico barrio de Al Bastakiya, surcando las dunas en 4×4 o cenando en un restaurante con estrella Michelin, cada momento en Dubái es extraordinario.",
+      "ourPrograms": "Nuestros Programas",
+      "pricingTitle": "Precios",
+      "netPrices": "PRECIOS NETOS POR PERSONA (MÍNIMO 2 PASAJEROS JUNTOS)",
+      "hotelOrSimilar": "HOTEL O SIMILAR",
+      "pricesWinter": "INVIERNO",
+      "pricesSummer": "VERANO",
+      "pricesDbl": "DBL",
+      "pricesSglSup": "SGL SUP",
+      "priceNote": "(DBL: Doble / SGL SUP: Suplemento Individual)",
+      "hotelsTitle": "Alojamiento",
+      "hotelsDesc": "Según disponibilidad, alojamiento en uno de los siguientes hoteles.",
+      "hotelTier": "Hotel",
+      "ctaLabel": "¿LISTO PARA VIAJAR A DUBAI?",
+      "ctaTitle": "Tu aventura en Dubái comienza aquí",
+      "ctaDesc": "Explora nuestros programas seleccionados en Dubái y reserva hoy tu viaje soñado."
     },
     "tunisia": {
       "title": "Túnez",

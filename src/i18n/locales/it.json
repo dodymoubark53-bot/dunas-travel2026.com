@@ -430,7 +430,6 @@
     "langItalian": "Italiano",
     "langEnglish": "Inglese",
     "langArabic": "Arabo",
-    "arrivalDate": "Data di Arrivo",
     "arrivalTime": "Ora di Arrivo",
     "departureTime": "Ora di Partenza",
     "tabBooking": "Prenota",
@@ -2811,7 +2810,8 @@
     "close": "Chiudi",
     "processing": "Elaborazione...",
     "sending": "Invio...",
-    "back": "Ritorno in albergo"
+    "back": "Ritorno in albergo",
+    "travelInfo": "Informazioni di Viaggio"
   },
   "contact": {
     "address": "75 Piazza Hossary, Spina Centrale, 6 ottobre, Giza, Egitto",
@@ -2976,7 +2976,24 @@
       "title": "Dubai",
       "subtitle": "Il lusso moderno ridefinito",
       "seoTitle": "Tour di lusso a Dubai | Dunas Travel",
-      "seoDesc": "Scopri viaggi di lusso a Dubai. Itinerari personalizzati in arrivo."
+      "seoDesc": "Scopri la splendida metropoli di Dubai, una città di grattacieli futuristici, deserti dorati e lusso senza pari.",
+      "desc": "Dall'imponente Burj Khalifa alle dorate dune del deserto arabico, Dubai è una città che sfida l'immaginazione. Goditi shopping mondiale, cucina premiata e attrazioni da record in questa metropoli abbagliante.",
+      "brief": "Dubai unisce innovazione futuristica e autentica ospitalità araba. Che tu stia esplorando il storico quartiere di Al Bastakiya, affrontando le dune nel deserto o cenando in un ristorante stellato Michelin, ogni momento a Dubai è straordinario.",
+      "ourPrograms": "I Nostri Programmi",
+      "pricingTitle": "Prezzi",
+      "netPrices": "PREZZI NETTI PER PERSONA (MINIMO 2 PASSEGGERI INSIEME)",
+      "hotelOrSimilar": "HOTEL O SIMILE",
+      "pricesWinter": "INVERNO",
+      "pricesSummer": "ESTATE",
+      "pricesDbl": "DBL",
+      "pricesSglSup": "SGL SUP",
+      "priceNote": "(DBL: Doppia / SGL SUP: Supplemento Singola)",
+      "hotelsTitle": "Alloggio",
+      "hotelsDesc": "In base alla disponibilità, sistemazione in uno dei seguenti hotel.",
+      "hotelTier": "Hotel",
+      "ctaLabel": "PRONTO A VIAGGIARE A DUBAI?",
+      "ctaTitle": "La tua avventura a Dubai inizia qui",
+      "ctaDesc": "Esplora i nostri programmi selezionati a Dubai e prenota oggi il tuo viaggio da sogno."
     },
     "tunisia": {
       "title": "Tunisia",

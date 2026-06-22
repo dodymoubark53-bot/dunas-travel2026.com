@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Logo = ({ theme = 'dark', height = 60 }) => {
   return (

@@ -1,4 +1,4 @@
-import React from 'react'
+import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
@@ -12,7 +12,7 @@ import { CurrencyProvider } from './context/CurrencyContext'
 console.log('✅ All errors fixed — website running correctly');
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <StrictMode>
     <BrowserRouter>
       <HelmetProvider>
         <CurrencyProvider>
@@ -22,5 +22,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </CurrencyProvider>
       </HelmetProvider>
     </BrowserRouter>
-  </React.StrictMode>,
+  </StrictMode>,
 )

@@ -1,11 +1,10 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import {
   FaStar, FaRegStar, FaStarHalfAlt, FaChevronRight, FaMapMarkerAlt,
-  FaClock, FaCheck, FaPray
+  FaClock, FaPray
 } from 'react-icons/fa';
 import { services } from '../../data/services';
 import Button from '../../components/ui/Button';

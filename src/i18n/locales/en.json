@@ -430,7 +430,6 @@
     "langItalian": "Italian",
     "langEnglish": "English",
     "langArabic": "Arabic",
-    "arrivalDate": "Arrival Date",
     "arrivalTime": "Arrival Time",
     "departureTime": "Departure Time",
     "tabBooking": "Book Trip",
@@ -2811,7 +2810,8 @@
     "close": "Close",
     "processing": "Processing...",
     "sending": "Sending...",
-    "back": "Back to Hotel"
+    "back": "Back to Hotel",
+    "travelInfo": "Travel Information"
   },
   "contact": {
     "address": "75 Hossary Square, Central Spine, 6 October, Giza, Egypt",
@@ -2976,7 +2976,24 @@
       "title": "Dubai",
       "subtitle": "Modern luxury redefined",
       "seoTitle": "Luxury Dubai Tours & Vacations | Dunas Travel",
-      "seoDesc": "Explore luxury journeys in Dubai. Custom itineraries coming soon."
+      "seoDesc": "Discover the dazzling metropolis of Dubai — a city of futuristic skyscrapers, golden deserts, and world-class luxury.",
+      "desc": "From the towering Burj Khalifa to the golden dunes of the Arabian Desert, Dubai is a city that defies imagination. Experience world-class shopping, award-winning cuisine, and record-breaking attractions in this dazzling metropolis.",
+      "brief": "Dubai blends futuristic innovation with timeless Arabian hospitality. Whether you are exploring the historic Al Bastakiya district, dune bashing in the desert, or dining at a Michelin-starred restaurant, every moment in Dubai is extraordinary.",
+      "ourPrograms": "Our Programs",
+      "pricingTitle": "Pricing",
+      "netPrices": "NET PRICES PER PERSON (MINIMUM 2 PASSENGERS TOGETHER)",
+      "hotelOrSimilar": "HOTEL OR SIMILAR",
+      "pricesWinter": "WINTER",
+      "pricesSummer": "SUMMER",
+      "pricesDbl": "DBL",
+      "pricesSglSup": "SGL SUP",
+      "priceNote": "(DBL: Double Room / SGL SUP: Single Supplement)",
+      "hotelsTitle": "Accommodation",
+      "hotelsDesc": "Based on availability, accommodation in one of the following hotels.",
+      "hotelTier": "Hotel",
+      "ctaLabel": "READY TO TRAVEL TO DUBAI?",
+      "ctaTitle": "Your Dubai adventure starts here",
+      "ctaDesc": "Explore our curated Dubai programs and book your dream journey today."
     },
     "tunisia": {
       "title": "Tunisia",

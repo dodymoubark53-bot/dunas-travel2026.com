@@ -99,7 +99,7 @@ const pagesWithHero = [
   { path: 'pages/Contact.jsx', alt: 'Contact Us Hero', url: getPexelsUrl(pexelsData['hero-contact']) }
 ];
 
-pagesWithHero.forEach(({ path: p, alt, url }) => {
+pagesWithHero.forEach(({ path: p, url }) => {
   // We need to replace the old URL we set earlier (which could be unsplash or AI)
   // Let's just find any <img ... src="http..." alt="..." /> that acts as hero.
   // Actually, previously we changed src="/images/hero-bg.png" to src="https://images.unsplash..."

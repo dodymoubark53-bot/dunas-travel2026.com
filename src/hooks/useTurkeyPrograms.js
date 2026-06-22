@@ -22,7 +22,6 @@ const PROGRAM_IMAGES = {
 
 const getLangValue = (obj, lang) => {
   if (!obj) return '';
-  const langs = ['ar', 'en', 'es', 'pt', 'it'];
   const available = obj[lang] || obj.en || '';
   return available;
 };

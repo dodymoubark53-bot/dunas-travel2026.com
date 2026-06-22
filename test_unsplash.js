@@ -14,7 +14,7 @@ function search(query) {
         try {
           const parsed = JSON.parse(data);
           resolve(parsed.results ? parsed.results.map(r => r.id) : []);
-        } catch(e) {
+        } catch {
           console.log('Error parsing:', data.substring(0, 100));
           resolve([]);
         }

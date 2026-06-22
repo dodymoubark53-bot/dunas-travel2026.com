@@ -1,9 +1,9 @@
-import React from 'react';
+
 import { useParams, Link, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { staggerContainer, fadeInUp, cardHover } from '../animations/variants';
+import { staggerContainer, fadeInUp } from '../animations/variants';
 import Button from '../components/ui/Button';
 import { services as allServicesData } from '../data/services';
 import { transportation } from '../data/transportation';

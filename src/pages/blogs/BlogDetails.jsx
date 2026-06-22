@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { staggerContainer, fadeInUp, cardHover } from '../../animations/variants';
+import { staggerContainer, fadeInUp } from '../../animations/variants';
 import { blogs } from '../../data/blogs';
 
 const BlogDetails = () => {

@@ -2,10 +2,8 @@
 // MULTI-COUNTRY TOURS — Catálogo de Itinerarios (9 Programas)
 // Source: Catalogo_Itinerarios_9_Viajes.docx
 // ============================================================
-import { useTranslation } from 'react-i18next';
-
 // دالة مساعدة لتفعيل الترجمة داخل المصفوفة بسلاسة
-const getLocalizedTours = (t) => [
+const getLocalizedTours = () => [
   // ─────────────────────────────────────────────────────────
   // 1. ESTRELLAS DEL MEDIO ORIENTE — 19 DÍAS
   // ─────────────────────────────────────────────────────────

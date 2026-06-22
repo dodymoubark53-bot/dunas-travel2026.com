@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const BackgroundMusic = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false);
+  const [hasInteracted, setHasInteracted] = useState(() => sessionStorage.getItem('musicPlaying') === 'true');
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [ripples, setRipples] = useState([]);
   
@@ -66,16 +66,13 @@ const BackgroundMusic = () => {
 
   // Restore session playing state on load
   useEffect(() => {
-    const storedPlaying = sessionStorage.getItem('musicPlaying') === 'true';
-    if (storedPlaying) {
-      setHasInteracted(true);
-      // Give the iframe a brief moment to load before sending play command
+    if (hasInteracted) {
       const timer = setTimeout(() => {
         playMusic();
       }, 1000);
       return () => clearTimeout(timer);
     }
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Monitor document clicks for page interaction and ripple animation
   useEffect(() => {
@@ -97,7 +94,7 @@ const BackgroundMusic = () => {
     return () => {
       document.removeEventListener('click', handleDocClick);
     };
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Monitor the WhatsApp / Social contact widget open state
   useEffect(() => {

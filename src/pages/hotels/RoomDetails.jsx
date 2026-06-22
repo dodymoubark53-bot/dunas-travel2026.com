@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
@@ -6,16 +6,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   FaWifi, FaSnowflake, FaShower, FaBeer, FaUtensils, FaBed, FaTv, FaLock,
   FaDoorOpen, FaTshirt, FaPhone, FaTimes, FaUserFriends, FaStar, FaGlobe,
-  FaFacebook, FaInstagram, FaEnvelope, FaChevronDown, FaCheckCircle,
-  FaBan, FaEye, FaArrowLeft, FaMapMarkerAlt, FaCalendarAlt
+  FaFacebook, FaInstagram, FaCheckCircle,
+  FaBan, FaEye, FaArrowLeft
 } from 'react-icons/fa';
-import { staggerContainer, fadeInUp } from '../../animations/variants';
 import { useCurrency } from '../../context/CurrencyContext';
 import Button from '../../components/ui/Button';
 
 const RoomDetails = () => {
   const { t } = useTranslation();
-  const { hotelSlug, roomSlug } = useParams();
+  const { roomSlug } = useParams();
   const location = useLocation();
   const { formatPrice } = useCurrency();
   const [activeImage, setActiveImage] = useState(null);

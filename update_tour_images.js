@@ -44,14 +44,14 @@ fs.writeFileSync(path.join(srcDir, 'data/tours.js'), toursContent);
 
 // 3. Update TourCard.jsx to remove the unsplash query params
 let cardContent = fs.readFileSync(path.join(srcDir, 'components/tour/TourCard.jsx'), 'utf8');
-cardContent = cardContent.replace(/src=\{\`\$\{tour\.images\[0\]\}\?w=600&q=80&fit=crop&crop=center\`\}/g, 'src={tour.images[0]}');
+cardContent = cardContent.replace(/src=\{`\$\{tour\.images\[0\]\}\?w=600&q=80&fit=crop&crop=center`\}/g, 'src={tour.images[0]}');
 fs.writeFileSync(path.join(srcDir, 'components/tour/TourCard.jsx'), cardContent);
 
 // 4. Update TourDetails.jsx to remove unsplash query params
 let detailsContent = fs.readFileSync(path.join(srcDir, 'pages/tours/TourDetails.jsx'), 'utf8');
-detailsContent = detailsContent.replace(/src=\{\`\$\{tour\.images\[0\]\}\?w=1600&q=90&fit=crop\`\}/g, 'src={tour.images[0]}');
-detailsContent = detailsContent.replace(/src=\{\`\$\{img\}\?w=400&q=75&fit=crop\`\}/g, 'src={img}');
-detailsContent = detailsContent.replace(/src=\{\`\$\{activeImage\}\?w=1600&q=90&fit=crop\`\}/g, 'src={activeImage}');
+detailsContent = detailsContent.replace(/src=\{`\$\{tour\.images\[0\]\}\?w=1600&q=90&fit=crop`\}/g, 'src={tour.images[0]}');
+detailsContent = detailsContent.replace(/src=\{`\$\{img\}\?w=400&q=75&fit=crop`\}/g, 'src={img}');
+detailsContent = detailsContent.replace(/src=\{`\$\{activeImage\}\?w=1600&q=90&fit=crop`\}/g, 'src={activeImage}');
 fs.writeFileSync(path.join(srcDir, 'pages/tours/TourDetails.jsx'), detailsContent);
 
 console.log('Successfully updated all trips with highly appropriate AI generated images.');

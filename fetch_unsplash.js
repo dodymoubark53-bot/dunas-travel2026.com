@@ -9,7 +9,7 @@ async function search(query) {
     try {
       const parsed = JSON.parse(text);
       return parsed.results ? parsed.results.map(r => r.id) : [];
-    } catch(e) {
+    } catch {
       console.log('Error parsing:', text.substring(0, 100));
       return [];
     }

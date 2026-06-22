@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -30,44 +30,38 @@ const TailorTour = () => {
   };
   const todayStr = getTodayString();
 
-  // Traveler counts
-  const [adults, setAdults] = useState(1);
-  const [children, setChildren] = useState(0);
-  const [infants, setInfants] = useState(0);
-
-  // Dynamic names
+  // Dynamic names & counts managed together to avoid setState in useEffect
   const [passengerNames, setPassengerNames] = useState(['']); // initially 1 adult
   const [specialRequests, setSpecialRequests] = useState('');
 
-  // Scroll to top utility for Safari/iOS and generic cross-browser support
-  const scrollToTop = () => {
-    try {
-      window.scrollTo({ top: 0, behavior: 'instant' });
-    } catch (err) {
-      window.scrollTo(0, 0);
+  const resizeNames = (names, totalCount) => {
+    const next = [...names];
+    if (next.length < totalCount) {
+      while (next.length < totalCount) {
+        next.push('');
+      }
+    } else if (next.length > totalCount) {
+      next.splice(totalCount);
     }
+    return next;
   };
 
-  // Scroll to top on step change
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [step]);
+  const [adults, _setAdults] = useState(1);
+  const [children, _setChildren] = useState(0);
+  const [infants, _setInfants] = useState(0);
 
-  // Update dynamic passenger names array size
-  useEffect(() => {
-    const totalCount = adults + children + infants;
-    setPassengerNames((prev) => {
-      const next = [...prev];
-      if (next.length < totalCount) {
-        while (next.length < totalCount) {
-          next.push('');
-        }
-      } else if (next.length > totalCount) {
-        next.splice(totalCount);
-      }
-      return next;
-    });
-  }, [adults, children, infants]);
+  const setAdults = (val) => {
+    _setAdults(val);
+    setPassengerNames((prev) => resizeNames(prev, val + children + infants));
+  };
+  const setChildren = (val) => {
+    _setChildren(val);
+    setPassengerNames((prev) => resizeNames(prev, adults + val + infants));
+  };
+  const setInfants = (val) => {
+    _setInfants(val);
+    setPassengerNames((prev) => resizeNames(prev, adults + children + val));
+  };
 
   const handlePassengerNameChange = (index, value) => {
     setPassengerNames((prev) => {
@@ -76,6 +70,20 @@ const TailorTour = () => {
       return next;
     });
   };
+
+  // Scroll to top utility for Safari/iOS and generic cross-browser support
+  const scrollToTop = () => {
+    try {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    } catch {
+      window.scrollTo(0, 0);
+    }
+  };
+
+  // Scroll to top on step change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [step]);
 
   const handleDestinationToggle = (dest) => {
     setSelectedDestinations((prev) => {

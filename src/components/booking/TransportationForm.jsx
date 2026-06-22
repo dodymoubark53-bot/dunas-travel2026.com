@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaCheckCircle } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
@@ -29,12 +29,6 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
     email: '',
     specialRequest: ''
   });
-
-  useEffect(() => {
-    if (preSelectedVehicleId) {
-      setFormData(prev => ({ ...prev, vehicleId: preSelectedVehicleId }));
-    }
-  }, [preSelectedVehicleId]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

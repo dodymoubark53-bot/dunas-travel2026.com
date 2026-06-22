@@ -3762,6 +3762,2091 @@
         "pt": "Extensão Jordânia - 4 Dias",
         "it": "Estensione Giordania - 4 Giorni"
       }
+    },
+    {
+      "id": "REG-22",
+      "duration": {
+        "ar": "2 ليالٍ / 3 أيام",
+        "en": "2 Nights / 3 Days",
+        "es": "2 Noches / 3 Días",
+        "pt": "2 Noites / 3 Dias",
+        "it": "2 Notti / 3 Giorni"
+      },
+      "minPax": {
+        "ar": "فردان",
+        "en": "2 Pax",
+        "es": "2 Pax",
+        "pt": "2 Pax",
+        "it": "2 Pax"
+      },
+      "highlights": {
+        "ar": [
+          "توقف مثالي في دبي",
+          "سفاري صحراوي مع عشاء بوفيه شرقي",
+          "مغامرة في الكثبان الرملية بسيارات 4x4"
+        ],
+        "en": [
+          "Perfect stopover in Dubai",
+          "Desert safari with oriental buffet dinner",
+          "4x4 dune bashing adventure"
+        ],
+        "es": [
+          "Escala perfecta en Dubái",
+          "Safari por el desierto con cena buffet oriental",
+          "Aventura en las dunas en 4x4"
+        ],
+        "pt": [
+          "Escala perfeita em Dubai",
+          "Safari no deserto com jantar buffet oriental",
+          "Aventura nas dunas em 4x4"
+        ],
+        "it": [
+          "Scalo perfetto a Dubai",
+          "Safari nel deserto con cena buffet orientale",
+          "Avventura tra le dune in 4x4"
+        ]
+      },
+      "code": {
+        "ar": "ST001",
+        "en": "ST001",
+        "es": "ST001",
+        "pt": "ST001",
+        "it": "ST001"
+      },
+      "includes": {
+        "ar": [
+          "الاستقبال والانتقال عند الوصول",
+          "إقامة ليلتين مع الإفطار",
+          "سفاري الصحراء مع العشاء بمخيم سياحي وسائق يتحدث الإنجليزية (سيارة مشتركة)",
+          "ضريبة القيمة المضافة 5%",
+          "الانتقال عند المغادرة"
+        ],
+        "en": [
+          "Arrival reception and transfer",
+          "02 nights accommodation with breakfast",
+          "Desert Safari with dinner at tourist camp and English-speaking driver (shared vehicle)",
+          "5% VAT tax",
+          "Departure transfer"
+        ],
+        "es": [
+          "Recepción y traslado de llegada",
+          "02 noches de alojamiento con desayuno",
+          "Safari por el desierto con cena en campamento turístico y conductor en inglés (vehículo compartido)",
+          "Impuesto VAT 5%",
+          "Traslado de salida"
+        ],
+        "pt": [
+          "Receção e transfer de chegada",
+          "02 noites de alojamento com pequeno-almoço",
+          "Safari no deserto com jantar em acampamento turístico e motorista em inglês (veículo partilhado)",
+          "Imposto IVA (VAT) 5%",
+          "Transfer de partida"
+        ],
+        "it": [
+          "Accoglienza e trasferimento all'arrivo",
+          "02 notti di soggiorno con colazione",
+          "Safari nel deserto con cena in campo turistico e autista in inglese (veicolo condiviso)",
+          "IVA (VAT) 5%",
+          "Trasferimento di partenza"
+        ]
+      },
+      "excludes": {
+        "ar": [
+          "تأشيرة الدخول (تطبق فقط على بعض الجنسيات)",
+          "الضريبة السياحية للفندق (10 دراهم للفنادق 3 نجوم، 15 درهمًا لـ 4 نجوم، 20 درهمًا لـ 5 نجوم لكل غرفة/ليلة)",
+          "المصاريف الشخصية",
+          "المياه أثناء الجولات",
+          "أي خدمة غير مذكورة"
+        ],
+        "en": [
+          "Entry visa (only applicable to certain nationalities)",
+          "Hotel tourism tax (AED 10 for 3★, AED 15 for 4★, AED 20 for 5★ per room/night)",
+          "Personal expenses",
+          "Water during tours",
+          "Any service not mentioned"
+        ],
+        "es": [
+          "Visado de entrada (solo aplicable a ciertas nacionalidades)",
+          "Impuesto de turismo del hotel (AED 10 para 3★, AED 15 para 4★, AED 20 para 5★ por habitación/noche)",
+          "Gastos personales",
+          "Agua durante las visitas",
+          "Cualquier servicio no mencionado"
+        ],
+        "pt": [
+          "Visto de entrada (aplicável apenas a certas nacionalidades)",
+          "Taxa de turismo do hotel (AED 10 para 3★, AED 15 para 4★, AED 20 para 5★ por quarto/noite)",
+          "Despesas pessoais",
+          "Água durante as visitas",
+          "Qualquer serviço não mencionado"
+        ],
+        "it": [
+          "Visto d'ingresso (applicabile solo ad alcune nazionalità)",
+          "Tassa di soggiorno dell'hotel (AED 10 per 3★, AED 15 per 4★, AED 20 per 5★ per camera/notte)",
+          "Spese personali",
+          "Acqua durante le visite",
+          "Qualsiasi servizio non menzionato"
+        ]
+      },
+      "pricing": {
+        "hotels": [
+          {
+            "ar": "إيبيس ستايل / سيتي ماكس بر دبي 3★",
+            "en": "Ibis Style / Citymax Bur Dubai 3★",
+            "es": "Ibis Style / Citymax Bur Dubai 3★",
+            "pt": "Ibis Style / Citymax Bur Dubai 3★",
+            "it": "Ibis Style / Citymax Bur Dubai 3★"
+          },
+          {
+            "ar": "سيجنيتشر البرشاء / أوركيد 4★",
+            "en": "Signature al Barsha / Orchid 4★",
+            "es": "Signature al Barsha / Orchid 4★",
+            "pt": "Signature al Barsha / Orchid 4★",
+            "it": "Signature al Barsha / Orchid 4★"
+          },
+          {
+            "ar": "ترايب باي ويندام / ميلينيوم البرشاء / فورم 4★",
+            "en": "Tryp by Wyndham / Millennium al Barsha / Form 4★",
+            "es": "Tryp by Wyndham / Millennium al Barsha / Form 4★",
+            "pt": "Tryp by Wyndham / Millennium al Barsha / Form 4★",
+            "it": "Tryp by Wyndham / Millennium al Barsha / Form 4★"
+          },
+          {
+            "ar": "إيليت بيبلوس / ميديا روتانا 5★",
+            "en": "Elite Byblos / Media Rotana 5★",
+            "es": "Elite Byblos / Media Rotana 5★",
+            "pt": "Elite Byblos / Media Rotana 5★",
+            "it": "Elite Byblos / Media Rotana 5★"
+          }
+        ],
+        "winter": [
+          {
+            "dbl": 210,
+            "sgl": 99
+          },
+          {
+            "dbl": 220,
+            "sgl": 110
+          },
+          {
+            "dbl": 235,
+            "sgl": 125
+          },
+          {
+            "dbl": 280,
+            "sgl": 170
+          }
+        ],
+        "summer": [
+          {
+            "dbl": 165,
+            "sgl": 65
+          },
+          {
+            "dbl": 175,
+            "sgl": 75
+          },
+          {
+            "dbl": 185,
+            "sgl": 85
+          },
+          {
+            "dbl": 210,
+            "sgl": 115
+          }
+        ],
+        "winterDates": "04 Jan – 30 Apr / 01 Oct – 26 Dec",
+        "summerDates": "01 May – 30 Sep"
+      },
+      "overview": {
+        "ar": "أفضل برنامج توقف في دبي لمدة قصيرة. استمتع بجولة سفاري في الصحراء مع العشاء الشرقي والعروض الترفيهية، وأقم في فندق من فئتك المختارة.",
+        "en": "The perfect short stopover program in Dubai. Enjoy a desert safari with oriental dinner and entertainment shows, staying at your chosen hotel category.",
+        "es": "El programa de escala perfecto en Dubái. Disfruta de un safari por el desierto con cena oriental y espectáculos, alojándote en la categoría de hotel que elijas.",
+        "pt": "O programa de escala perfeito no Dubai. Desfrute de um safari no deserto com jantar oriental e espetáculos, hospedando-se na categoria de hotel que escolher.",
+        "it": "Il programma di scalo perfetto a Dubai. Goditi un safari nel deserto con cena orientale e spettacoli, soggiornando nella categoria di hotel che scegli."
+      },
+      "name": {
+        "ar": "التوقف في دبي (STOP OVER DUBAI)",
+        "en": "Stop Over Dubai",
+        "es": "Stop Over Dubai",
+        "pt": "Stop Over Dubai",
+        "it": "Stop Over Dubai"
+      },
+      "days": [
+        {
+          "day": "1",
+          "meals": null,
+          "description": {
+            "ar": "الوصول إلى مطار دبي الدولي. سيكون ممثلنا في انتظارك. الانتقال إلى الفندق المختار والإقامة.",
+            "en": "Arrival at Dubai International Airport. Our representative will be waiting for you. Transfer to the chosen hotel and accommodation.",
+            "es": "Llegada al aeropuerto internacional de Dubái. Nuestro representante le estará esperando. Traslado al hotel elegido y alojamiento.",
+            "pt": "Chegada ao Aeroporto Internacional de Dubai. O nosso representante estará à sua espera. Transbordo (transfer) para o hotel escolhido e alojamento.",
+            "it": "Arrivo all'Aeroporto Internazionale di Dubai. Il nostro rappresentante vi starà aspettando. Trasferimento all'hotel scelto e sistemazione."
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "ar": "إفطار + عشاء",
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "pt": "Pequeno-almoço + Jantar",
+            "it": "Colazione + Cena"
+          },
+          "description": {
+            "ar": "الإفطار في الفندق ووقت حر في الصباح. في فترة بعد الظهر، حوالي الساعة 15:00، سننطلق بسيارات 4x4 حديثة إلى صحراء دبي للاستمتاع بجولة برية تقليدية وركوب الكثبان الرملية. بعد الغروب، نتوجه إلى المخيم حيث ينتظرنا بوفيه شرقي مع عروض ترفيهية (رقص شرقي، تنورة، عرض نار). العودة إلى الفندق.",
+            "en": "Breakfast at the hotel and free morning. In the afternoon around 15:00, depart in modern 4x4 vehicles to the Dubai desert for a traditional dune bashing adventure. After sunset, head to the camp for an oriental buffet dinner with live shows (belly dance, tanoura, fire show). Return to the hotel.",
+            "es": "Desayuno en el hotel y mañana libre. Por la tarde sobre las 15:00, salida en modernos vehículos 4x4 hacia el desierto de Dubái para una aventura de dune bashing. Después del atardecer, vamos al campamento para una cena buffet oriental con espectáculos en vivo (danza del vientre, tanoura, show de fuego). Regreso al hotel.",
+            "pt": "Pequeno-almoço no hotel e manhã livre. À tarde por volta das 15:00, partida em modernos veículos 4x4 para o deserto de Dubai para uma aventura de dune bashing. Após o anoitecer, vamos ao acampamento para um jantar buffet oriental com espetáculos ao vivo (dança do ventre, tanoura, show de fogo). Regresso ao hotel.",
+            "it": "Colazione in hotel e mattina libera. Nel pomeriggio verso le 15:00, partenza in moderni veicoli 4x4 verso il deserto di Dubai per un'avventura di dune bashing. Dopo il tramonto, ci dirigiamo al campo per una cena buffet orientale con spettacoli dal vivo (danza del ventre, tanoura, show del fuoco). Ritorno in hotel."
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار في الفندق. وفقًا لموعد رحلتك الجوية، سنغادر الفندق قبل 3 ساعات ونصف من موعد إقلاع الطائرة. (نهاية الرحلة).",
+            "en": "Breakfast at the hotel. According to your flight schedule, departure from the hotel 3.5 hours before flight time. (End of trip).",
+            "es": "Desayuno en el hotel. Según el horario de su vuelo, salida del hotel 3.5 horas antes de la hora de salida. (Fin del viaje).",
+            "pt": "Pequeno-almoço no hotel. De acordo com o horário do seu voo, saída do hotel 3.5 horas antes da hora do voo. (Fim da viagem).",
+            "it": "Colazione in hotel. Secondo l'orario del vostro volo, partenza dall'hotel 3.5 ore prima dell'orario del volo. (Fine del viaggio)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "REG-23",
+      "duration": {
+        "ar": "3 ليالٍ / 4 أيام",
+        "en": "3 Nights / 4 Days",
+        "es": "3 Noches / 4 Días",
+        "pt": "3 Noites / 4 Dias",
+        "it": "3 Notti / 4 Giorni"
+      },
+      "minPax": {
+        "ar": "فردان",
+        "en": "2 Pax",
+        "es": "2 Pax",
+        "pt": "2 Pax",
+        "it": "2 Pax"
+      },
+      "highlights": {
+        "ar": [
+          "جولة في دبي القديمة (البستكية، العبرة، أسواق الذهب والتوابل)",
+          "سفاري صحراوي مع عشاء وعروض",
+          "اكتشاف الثقافة المحلية وأبراج الرياح"
+        ],
+        "en": [
+          "Old Dubai tour (Bastakiya, Abra, Gold & Spice Souks)",
+          "Desert safari with dinner and shows",
+          "Discover local culture and wind towers"
+        ],
+        "es": [
+          "Tour por el Dubái antiguo (Bastakiya, Abra, zocos del Oro y Especias)",
+          "Safari por el desierto con cena y espectáculos",
+          "Descubre la cultura local y las torres de viento"
+        ],
+        "pt": [
+          "Visita à Dubai antiga (Bastakiya, Abra, souks do Ouro e Especiarias)",
+          "Safari no deserto com jantar e espetáculos",
+          "Descubra a cultura local e as torres de vento"
+        ],
+        "it": [
+          "Tour della Dubai antica (Bastakiya, Abra, souk dell'Oro e delle Spezie)",
+          "Safari nel deserto con cena e spettacoli",
+          "Scopri la cultura locale e le torri del vento"
+        ]
+      },
+      "code": {
+        "ar": "ICT001",
+        "en": "ICT001",
+        "es": "ICT001",
+        "pt": "ICT001",
+        "it": "ICT001"
+      },
+      "includes": {
+        "ar": [
+          "نفس خدمات البرنامج الأول",
+          "جولة نصف يوم (HD) في دبي القديمة مع دليل يتحدث الإسبانية (خدمة مشتركة)"
+        ],
+        "en": [
+          "Same services as Program 1",
+          "Half-day (HD) Old Dubai City Tour with Spanish-speaking guide (shared service)"
+        ],
+        "es": [
+          "Mismos servicios que el Programa 1",
+          "City tour de medio día (HD) por el Dubái antiguo con guía de habla hispana (servicio compartido)"
+        ],
+        "pt": [
+          "Mesmos serviços do Programa 1",
+          "City tour de meio dia (HD) pela Dubai antiga com guia de língua espanhola (serviço partilhado)"
+        ],
+        "it": [
+          "Stessi servizi del Programma 1",
+          "Tour di mezza giornata (HD) della Dubai antica con guida di lingua spagnola (servizio condiviso)"
+        ]
+      },
+      "excludes": {
+        "ar": [
+          "تأشيرة الدخول (تطبق فقط على بعض الجنسيات)",
+          "الضريبة السياحية للفندق (10 دراهم للفنادق 3 نجوم، 15 درهمًا لـ 4 نجوم، 20 درهمًا لـ 5 نجوم لكل غرفة/ليلة)",
+          "المصاريف الشخصية",
+          "المياه أثناء الجولات",
+          "أي خدمة غير مذكورة"
+        ],
+        "en": [
+          "Entry visa (only applicable to certain nationalities)",
+          "Hotel tourism tax (AED 10 for 3★, AED 15 for 4★, AED 20 for 5★ per room/night)",
+          "Personal expenses",
+          "Water during tours",
+          "Any service not mentioned"
+        ],
+        "es": [
+          "Visado de entrada (solo aplicable a ciertas nacionalidades)",
+          "Impuesto de turismo del hotel (AED 10 para 3★, AED 15 para 4★, AED 20 para 5★ por habitación/noche)",
+          "Gastos personales",
+          "Agua durante las visitas",
+          "Cualquier servicio no mencionado"
+        ],
+        "pt": [
+          "Visto de entrada (aplicável apenas a certas nacionalidades)",
+          "Taxa de turismo do hotel (AED 10 para 3★, AED 15 para 4★, AED 20 para 5★ por quarto/noite)",
+          "Despesas pessoais",
+          "Água durante as visitas",
+          "Qualquer serviço não mencionado"
+        ],
+        "it": [
+          "Visto d'ingresso (applicabile solo ad alcune nazionalità)",
+          "Tassa di soggiorno dell'hotel (AED 10 per 3★, AED 15 per 4★, AED 20 per 5★ per camera/notte)",
+          "Spese personali",
+          "Acqua durante le visite",
+          "Qualsiasi servizio non menzionato"
+        ]
+      },
+      "pricing": {
+        "hotels": [
+          {
+            "ar": "إيبيس ستايل / سيتي ماكس بر دبي 3★",
+            "en": "Ibis Style / Citymax Bur Dubai 3★",
+            "es": "Ibis Style / Citymax Bur Dubai 3★",
+            "pt": "Ibis Style / Citymax Bur Dubai 3★",
+            "it": "Ibis Style / Citymax Bur Dubai 3★"
+          },
+          {
+            "ar": "سيجنيتشر البرشاء / أوركيد 4★",
+            "en": "Signature al Barsha / Orchid 4★",
+            "es": "Signature al Barsha / Orchid 4★",
+            "pt": "Signature al Barsha / Orchid 4★",
+            "it": "Signature al Barsha / Orchid 4★"
+          },
+          {
+            "ar": "ترايب باي ويندام / ميلينيوم البرشاء 4★",
+            "en": "Tryp by Wyndham / Millennium al Barsha 4★",
+            "es": "Tryp by Wyndham / Millennium al Barsha 4★",
+            "pt": "Tryp by Wyndham / Millennium al Barsha 4★",
+            "it": "Tryp by Wyndham / Millennium al Barsha 4★"
+          },
+          {
+            "ar": "إيليت بيبلوس / ميديا روتانا 5★",
+            "en": "Elite Byblos / Media Rotana 5★",
+            "es": "Elite Byblos / Media Rotana 5★",
+            "pt": "Elite Byblos / Media Rotana 5★",
+            "it": "Elite Byblos / Media Rotana 5★"
+          }
+        ],
+        "winter": [
+          {
+            "dbl": 305,
+            "sgl": 150
+          },
+          {
+            "dbl": 325,
+            "sgl": 165
+          },
+          {
+            "dbl": 345,
+            "sgl": 189
+          },
+          {
+            "dbl": 420,
+            "sgl": 255
+          }
+        ],
+        "summer": [
+          {
+            "dbl": 245,
+            "sgl": 98
+          },
+          {
+            "dbl": 255,
+            "sgl": 113
+          },
+          {
+            "dbl": 275,
+            "sgl": 128
+          },
+          {
+            "dbl": 305,
+            "sgl": 173
+          }
+        ],
+        "winterDates": "04 Jan – 30 Apr / 01 Oct – 26 Dec",
+        "summerDates": "01 May – 30 Sep"
+      },
+      "overview": {
+        "ar": "اكتشف تاريخ دبي الغني من خلال جولة في المدينة القديمة مع زيارة البستكية وسوق الذهب، واستمتع بسفاري صحراوي لا يُنسى.",
+        "en": "Discover Dubai's rich history through an Old City tour visiting Bastakiya and the Gold Souk, and enjoy an unforgettable desert safari.",
+        "es": "Descubre la rica historia de Dubái con un tour por la ciudad antigua visitando Bastakiya y el Zoco del Oro, y disfruta de un safari inolvidable por el desierto.",
+        "pt": "Descubra a rica história de Dubai com uma visita à cidade antiga visitando Bastakiya e o Souk do Ouro, e desfrute de um safari inesquecível no deserto.",
+        "it": "Scopri la ricca storia di Dubai con un tour della città antica visitando Bastakiya e il Souk dell'Oro, e goditi un indimenticabile safari nel deserto."
+      },
+      "name": {
+        "ar": "دبي وتاريخها (DUBAI Y SU HISTORIA)",
+        "en": "Dubai and Its History",
+        "es": "Dubái y Su Historia",
+        "pt": "Dubai e a Sua História",
+        "it": "Dubai e la Sua Storia"
+      },
+      "days": [
+        {
+          "day": "1",
+          "meals": null,
+          "description": {
+            "ar": "الوصول والنقل إلى الفندق.",
+            "en": "Arrival and transfer to the hotel.",
+            "es": "Llegada y traslado al hotel.",
+            "pt": "Chegada e transfer para o hotel.",
+            "it": "Arrivo e trasferimento in hotel."
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار. جولة نصف يوم في دبي القديمة. سنزور منطقة البستكية التاريخية، وندخل أحد البيوت التقليدية للتعرف على الثقافة المحلية وأبراج الرياح. بعد ذلك، سنعبر الخور بواسطة قارب 'العبرة' التقليدي للوصول إلى سوق التوابل وسوق الذهب الشهير. العودة للفندق وبعد الظهر حر.",
+            "en": "Breakfast. Half-day tour of Old Dubai. Visit the historic Al Bastakiya district, enter a traditional house to learn about local culture and wind towers (Barjeel). Cross the creek by traditional 'Abra' boat to reach the Spice Souk and the famous Gold Souk. Return to the hotel and free afternoon.",
+            "es": "Desayuno. Visita de medio día por el Dubái antiguo. Visitaremos el histórico barrio de Al Bastakiya, entraremos en una casa tradicional para conocer la cultura local y las torres de viento. Después, cruzaremos el creek en una barca tradicional 'Abra' para llegar al zoco de las especias y al famoso zoco del oro. Regreso al hotel y tarde libre.",
+            "pt": "Pequeno-almoço. Visita de meio dia à Dubai antiga. Visitaremos o histórico bairro de Al Bastakiya, entraremos numa casa tradicional para conhecer a cultura local e as torres de vento. Depois, atravessaremos o creek num barco tradicional 'Abra' para chegar ao souk das especiarias e ao famoso souk do ouro. Regresso ao hotel e tarde livre.",
+            "it": "Colazione. Visita di mezza giornata della Dubai antica. Visiteremo il storico quartiere di Al Bastakiya, entreremo in una casa tradizionale per conoscere la cultura locale e le torri del vento. Dopo, attraverseremo il creek in barca tradizionale 'Abra' per raggiungere il souk delle spezie e il famoso souk dell'oro. Ritorno in hotel e pomeriggio libero."
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "ar": "إفطار + عشاء",
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "pt": "Pequeno-almoço + Jantar",
+            "it": "Colazione + Cena"
+          },
+          "description": {
+            "ar": "صباح حر. الساعة 15:00 نطلق بسيارات 4x4 إلى رحلة سفاري الصحراء التقليدية والعشاء الشرقي مع العروض الترفيهية. العودة للفندق.",
+            "en": "Free morning. At 15:00 depart in 4x4 vehicles for the traditional Desert Safari with oriental dinner and entertainment shows. Return to the hotel.",
+            "es": "Mañana libre. A las 15:00 salida en vehículos 4x4 hacia el safari por el desierto tradicional con cena oriental y espectáculos de entretenimiento. Regreso al hotel.",
+            "pt": "Manhã livre. Às 15:00 partida em veículos 4x4 para o safari no deserto tradicional com jantar oriental e espetáculos de entretenimento. Regresso ao hotel.",
+            "it": "Mattina libera. Alle 15:00 partenza in veicoli 4x4 per il safari nel deserto tradizionale con cena orientale e spettacoli di intrattenimento. Ritorno in hotel."
+          }
+        },
+        {
+          "day": "4",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار، والانتقال إلى المطار قبل 3.5 ساعة من موعد الطيران. (نهاية الرحلة).",
+            "en": "Breakfast, and transfer to the airport 3.5 hours before flight time. (End of trip).",
+            "es": "Desayuno y traslado al aeropuerto 3.5 horas antes del vuelo. (Fin del viaje).",
+            "pt": "Pequeno-almoço e transfer para o aeroporto 3.5 horas antes do voo. (Fim da viagem).",
+            "it": "Colazione e trasferimento all'aeroporto 3.5 ore prima del volo. (Fine del viaggio)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "REG-24",
+      "duration": {
+        "ar": "4 ليالٍ / 5 أيام",
+        "en": "4 Nights / 5 Days",
+        "es": "4 Noches / 5 Días",
+        "pt": "4 Noites / 5 Dias",
+        "it": "4 Notti / 5 Giorni"
+      },
+      "minPax": {
+        "ar": "فردان",
+        "en": "2 Pax",
+        "es": "2 Pax",
+        "pt": "2 Pax",
+        "it": "2 Pax"
+      },
+      "highlights": {
+        "ar": [
+          "زيارة متحف المستقبل",
+          "جولة في دبي القديمة",
+          "سفاري صحراوي مع عشاء بوفيه",
+          "يوم حر للأنشطة الاختيارية"
+        ],
+        "en": [
+          "Visit to the Museum of the Future",
+          "Old Dubai tour",
+          "Desert safari with buffet dinner",
+          "Free day for optional activities"
+        ],
+        "es": [
+          "Visita al Museo del Futuro",
+          "Tour por el Dubái antiguo",
+          "Safari por el desierto con cena buffet",
+          "Día libre para actividades opcionales"
+        ],
+        "pt": [
+          "Visita ao Museu do Futuro",
+          "Visita à Dubai antiga",
+          "Safari no deserto com jantar buffet",
+          "Dia livre para atividades opcionais"
+        ],
+        "it": [
+          "Visita al Museo del Futuro",
+          "Tour della Dubai antica",
+          "Safari nel deserto con cena buffet",
+          "Giornata libera per attività opzionali"
+        ]
+      },
+      "code": {
+        "ar": "ICT002",
+        "en": "ICT002",
+        "es": "ICT002",
+        "pt": "ICT002",
+        "it": "ICT002"
+      },
+      "includes": {
+        "ar": [
+          "نفس خدمات البرنامج الأول",
+          "جولة نصف يوم في دبي القديمة",
+          "زيارة متحف المستقبل"
+        ],
+        "en": [
+          "Same services as Program 1",
+          "Old Dubai half-day tour",
+          "Visit to the Museum of the Future"
+        ],
+        "es": [
+          "Mismos servicios que el Programa 1",
+          "Visita de medio día al Dubái antiguo",
+          "Visita al Museo del Futuro"
+        ],
+        "pt": [
+          "Mesmos serviços do Programa 1",
+          "Visita de meio dia à Dubai antiga",
+          "Visita ao Museu do Futuro"
+        ],
+        "it": [
+          "Stessi servizi del Programma 1",
+          "Visita di mezza giornata della Dubai antica",
+          "Visita al Museo del Futuro"
+        ]
+      },
+      "excludes": {
+        "ar": [
+          "تأشيرة الدخول (تطبق فقط على بعض الجنسيات)",
+          "الضريبة السياحية للفندق (10 دراهم للفنادق 3 نجوم، 15 درهمًا لـ 4 نجوم، 20 درهمًا لـ 5 نجوم لكل غرفة/ليلة)",
+          "المصاريف الشخصية",
+          "المياه أثناء الجولات",
+          "الانتقال من متحف المستقبل",
+          "أي خدمة غير مذكورة"
+        ],
+        "en": [
+          "Entry visa (only applicable to certain nationalities)",
+          "Hotel tourism tax (AED 10 for 3★, AED 15 for 4★, AED 20 for 5★ per room/night)",
+          "Personal expenses",
+          "Water during tours",
+          "Return transfer from Museum of the Future",
+          "Any service not mentioned"
+        ],
+        "es": [
+          "Visado de entrada (solo aplicable a ciertas nacionalidades)",
+          "Impuesto de turismo del hotel (AED 10 para 3★, AED 15 para 4★, AED 20 para 5★ por habitación/noche)",
+          "Gastos personales",
+          "Agua durante las visitas",
+          "Traslado de regreso desde el Museo del Futuro",
+          "Cualquier servicio no mencionado"
+        ],
+        "pt": [
+          "Visto de entrada (aplicável apenas a certas nacionalidades)",
+          "Taxa de turismo do hotel (AED 10 para 3★, AED 15 para 4★, AED 20 para 5★ por quarto/noite)",
+          "Despesas pessoais",
+          "Água durante as visitas",
+          "Transfer de regresso do Museu do Futuro",
+          "Qualquer serviço não mencionado"
+        ],
+        "it": [
+          "Visto d'ingresso (applicabile solo ad alcune nazionalità)",
+          "Tassa di soggiorno dell'hotel (AED 10 per 3★, AED 15 per 4★, AED 20 per 5★ per camera/notte)",
+          "Spese personali",
+          "Acqua durante le visite",
+          "Trasferimento di ritorno dal Museo del Futuro",
+          "Qualsiasi servizio non menzionato"
+        ]
+      },
+      "pricing": {
+        "hotels": [
+          {
+            "ar": "إيبيس ستايل / سيتي ماكس بر دبي 3★",
+            "en": "Ibis Style / Citymax Bur Dubai 3★",
+            "es": "Ibis Style / Citymax Bur Dubai 3★",
+            "pt": "Ibis Style / Citymax Bur Dubai 3★",
+            "it": "Ibis Style / Citymax Bur Dubai 3★"
+          },
+          {
+            "ar": "سيجنيتشر البرشاء / أوركيد 4★",
+            "en": "Signature al Barsha / Orchid 4★",
+            "es": "Signature al Barsha / Orchid 4★",
+            "pt": "Signature al Barsha / Orchid 4★",
+            "it": "Signature al Barsha / Orchid 4★"
+          },
+          {
+            "ar": "ترايب باي ويندام / ميلينيوم البرشاء 4★",
+            "en": "Tryp by Wyndham / Millennium al Barsha 4★",
+            "es": "Tryp by Wyndham / Millennium al Barsha 4★",
+            "pt": "Tryp by Wyndham / Millennium al Barsha 4★",
+            "it": "Tryp by Wyndham / Millennium al Barsha 4★"
+          },
+          {
+            "ar": "إيليت بيبلوس / ميديا روتانا 5★",
+            "en": "Elite Byblos / Media Rotana 5★",
+            "es": "Elite Byblos / Media Rotana 5★",
+            "pt": "Elite Byblos / Media Rotana 5★",
+            "it": "Elite Byblos / Media Rotana 5★"
+          }
+        ],
+        "winter": [
+          {
+            "dbl": 399,
+            "sgl": 200
+          },
+          {
+            "dbl": 425,
+            "sgl": 220
+          },
+          {
+            "dbl": 455,
+            "sgl": 252
+          },
+          {
+            "dbl": 549,
+            "sgl": 340
+          }
+        ],
+        "summer": [
+          {
+            "dbl": 315,
+            "sgl": 130
+          },
+          {
+            "dbl": 330,
+            "sgl": 150
+          },
+          {
+            "dbl": 360,
+            "sgl": 170
+          },
+          {
+            "dbl": 399,
+            "sgl": 230
+          }
+        ],
+        "winterDates": "04 Jan – 30 Apr / 01 Oct – 26 Dec",
+        "summerDates": "01 May – 30 Sep"
+      },
+      "overview": {
+        "ar": "اكتشف دبي بين الماضي والمستقبل. قم بزيارة متحف المستقبل واستمتع بجولة في المدينة القديمة وسفاري صحراوي لا يُنسى.",
+        "en": "Discover Dubai between past and future. Visit the Museum of the Future, enjoy an Old City tour, and an unforgettable desert safari.",
+        "es": "Descubre Dubái entre el pasado y el futuro. Visita el Museo del Futuro, disfruta de un tour por la ciudad antigua y un safari inolvidable por el desierto.",
+        "pt": "Descubra Dubai entre o passado e o futuro. Visite o Museu do Futuro, desfrute de uma visita à cidade antiga e de um safari inesquecível no deserto.",
+        "it": "Scopri Dubai tra passato e futuro. Visita il Museo del Futuro, goditi un tour della città antica e un indimenticabile safari nel deserto."
+      },
+      "name": {
+        "ar": "دبي، مدينة المستقبل (DUBAI, CIUDAD DEL FUTURO)",
+        "en": "Dubai, City of the Future",
+        "es": "Dubái, Ciudad del Futuro",
+        "pt": "Dubai, Cidade do Futuro",
+        "it": "Dubai, Città del Futuro"
+      },
+      "days": [
+        {
+          "day": "1",
+          "meals": null,
+          "description": {
+            "ar": "الوصول والنقل إلى الفندق.",
+            "en": "Arrival and transfer to the hotel.",
+            "es": "Llegada y traslado al hotel.",
+            "pt": "Chegada e transfer para o hotel.",
+            "it": "Arrivo e trasferimento in hotel."
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار وجولة دبي القديمة (البستكية، العبرة، سوق الذهب والتوابل). بعد ذلك، زيارة متحف المستقبل. العودة إلى الفندق تكون على حساب العميل بمفرده.",
+            "en": "Breakfast and Old Dubai tour (Bastakiya, Abra, Gold and Spice Souks). Afterwards, visit the Museum of the Future. Return to the hotel is at the client's own expense.",
+            "es": "Desayuno y visita al Dubái antiguo (Bastakiya, Abra, zocos del oro y especias). Después, visita al Museo del Futuro. El regreso al hotel corre por cuenta del cliente.",
+            "pt": "Pequeno-almoço e visita à Dubai antiga (Bastakiya, Abra, souks do ouro e especiarias). Depois, visita ao Museu do Futuro. O regresso ao hotel é por conta do cliente.",
+            "it": "Colazione e visita della Dubai antica (Bastakiya, Abra, souk dell'oro e delle spezie). Successivamente, visita al Museo del Futuro. Il ritorno in hotel è a carico del cliente."
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "ar": "إفطار + عشاء",
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "pt": "Pequeno-almoço + Jantar",
+            "it": "Colazione + Cena"
+          },
+          "description": {
+            "ar": "صباح حر. في الساعة 15:00 رحلة سفاري الصحراء مع العشاء البوفيه والعروض الفنية والعودة للفندق.",
+            "en": "Free morning. At 15:00 Desert Safari with buffet dinner and artistic shows, return to the hotel.",
+            "es": "Mañana libre. A las 15:00 Safari por el desierto con cena buffet y espectáculos artísticos, regreso al hotel.",
+            "pt": "Manhã livre. Às 15:00 Safari no deserto com jantar buffet e espetáculos artísticos, regresso ao hotel.",
+            "it": "Mattina libera. Alle 15:00 Safari nel deserto con cena buffet e spettacoli artistici, ritorno in hotel."
+          }
+        },
+        {
+          "day": "4",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "يوم حر تمامًا للأنشطة الاختيارية (مثل زيارة أبوظبي، الشارقة، أو عشاء نافورة دبي).",
+            "en": "Completely free day for optional activities (e.g. visit Abu Dhabi, Sharjah, or Dubai Fountain dinner).",
+            "es": "Día completamente libre para actividades opcionales (ej. visitar Abu Dhabi, Sharjah, o cena en la Fuente de Dubái).",
+            "pt": "Dia completamente livre para atividades opcionais (ex. visitar Abu Dhabi, Sharjah, ou jantar na Fonte de Dubai).",
+            "it": "Giornata completamente libera per attività opzionali (es. visitare Abu Dhabi, Sharjah, o cena alla Fontana di Dubai)."
+          }
+        },
+        {
+          "day": "5",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار والنقل للمطار قبل 3.5 ساعة من موعد الطيران.",
+            "en": "Breakfast and transfer to the airport 3.5 hours before flight time.",
+            "es": "Desayuno y traslado al aeropuerto 3.5 horas antes del vuelo.",
+            "pt": "Pequeno-almoço e transfer para o aeroporto 3.5 horas antes do voo.",
+            "it": "Colazione e trasferimento all'aeroporto 3.5 ore prima del volo."
+          }
+        }
+      ]
+    },
+    {
+      "id": "REG-25",
+      "duration": {
+        "ar": "5 ليالٍ / 6 أيام",
+        "en": "5 Nights / 6 Days",
+        "es": "5 Noches / 6 Días",
+        "pt": "5 Noites / 6 Dias",
+        "it": "5 Notti / 6 Giorni"
+      },
+      "minPax": {
+        "ar": "2 أشخاص",
+        "en": "2 Pax",
+        "es": "2 Pax",
+        "pt": "2 Pax",
+        "it": "2 Pax"
+      },
+      "highlights": {
+        "ar": [
+          "جولة في دبي القديمة (البستكية، العبرة، أسواق الذهب والتوابل)",
+          "رحلة يوم كامل إلى أبوظبي (مسجد الشيخ زايد، قصر الإمارات، اللوفر، عالم فيراري)",
+          "سفاري الصحراء مع العشاء والعروض",
+          "يوم حر للتسوق والأنشطة الاختيارية"
+        ],
+        "en": [
+          "Old Dubai tour (Bastakiya, Abra, Gold & Spice Souks)",
+          "Full-day Abu Dhabi tour (Sheikh Zayed Mosque, Emirates Palace, Louvre, Ferrari World)",
+          "Desert Safari with dinner and shows",
+          "Free day for shopping and optional activities"
+        ],
+        "es": [
+          "Tour por el Dubái antiguo (Bastakiya, Abra, zocos del oro y especias)",
+          "Excursión de día completo a Abu Dhabi (Mezquita Sheikh Zayed, Emirates Palace, Louvre, Ferrari World)",
+          "Safari por el desierto con cena y espectáculos",
+          "Día libre para compras y actividades opcionales"
+        ],
+        "pt": [
+          "Tour pela Dubai antiga (Bastakiya, Abra, souks do ouro e especiarias)",
+          "Excursão de dia inteiro a Abu Dhabi (Mesquita Sheikh Zayed, Emirates Palace, Louvre, Ferrari World)",
+          "Safari no deserto com jantar e espetáculos",
+          "Dia livre para compras e atividades opcionais"
+        ],
+        "it": [
+          "Tour della Dubai antica (Bastakiya, Abra, souk dell'oro e delle spezie)",
+          "Gita giornaliera ad Abu Dhabi (Moschea Sheikh Zayed, Emirates Palace, Louvre, Ferrari World)",
+          "Safari nel deserto con cena e spettacoli",
+          "Giornata libera per shopping e attività opzionali"
+        ]
+      },
+      "code": {
+        "ar": "ICT003",
+        "en": "ICT003",
+        "es": "ICT003",
+        "pt": "ICT003",
+        "it": "ICT003"
+      },
+      "includes": {
+        "ar": [
+          "استقبال ومغادرة",
+          "إقامة 5 ليالٍ في دبي مع الإفطار",
+          "جولة نصف يوم (HD) دبي القديمة مع دليل إسباني",
+          "سفاري الصحراء مع العشاء وسائق إنجليزي",
+          "جولة يوم كامل (FD) أبوظبي مع دليل إسباني",
+          "ضريبة القيمة المضافة 5%"
+        ],
+        "en": [
+          "Arrival/departure transfers",
+          "5 nights accommodation in Dubai with breakfast",
+          "HD Old Dubai tour (Spanish-speaking guide)",
+          "Desert Safari with dinner and English-speaking driver",
+          "FD Abu Dhabi tour (Spanish-speaking guide)",
+          "5% VAT"
+        ],
+        "es": [
+          "Traslados de llegada y salida",
+          "5 noches en Dubái con desayuno",
+          "HD Dubái city tour (guía en español)",
+          "Safari con cena y conductor en inglés",
+          "FD Abu Dhabi tour (guía en español)",
+          "IVA 5%"
+        ],
+        "pt": [
+          "Transfers de chegada e partida",
+          "5 noites em Dubai com café da manhã",
+          "HD Dubai city tour (guia em espanhol)",
+          "Safari com jantar e motorista em inglês",
+          "FD Abu Dhabi tour (guia em espanhol)",
+          "IVA 5%"
+        ],
+        "it": [
+          "Trasferimenti di arrivo e partenza",
+          "5 notti a Dubai con colazione",
+          "HD Dubai city tour (guida in spagnolo)",
+          "Safari con cena e autista in inglese",
+          "FD Abu Dhabi tour (guida in spagnolo)",
+          "IVA 5%"
+        ]
+      },
+      "excludes": {
+        "ar": [
+          "التأشيرة (لبوليفيا، بنما، غواتيمالا، فنزويلا)",
+          "ضريبة الفندق السياحية (10 دراهم لـ3 نجوم، 15 درهم لـ4 نجوم، 20 درهم لـ5 نجوم لكل غرفة/ليلة)",
+          "مصاريف شخصية",
+          "مياه أثناء الجولات"
+        ],
+        "en": [
+          "Entry visa (Bolivia, Panama, Guatemala, Venezuela)",
+          "Hotel tourism tax (AED 10 for 3★, AED 15 for 4★, AED 20 for 5★ per room/night)",
+          "Personal expenses",
+          "Water during tours"
+        ],
+        "es": [
+          "Visado de entrada (Bolivia, Panamá, Guatemala, Venezuela)",
+          "Impuesto de turismo hotelero (AED 10 en 3★, AED 15 en 4★, AED 20 en 5★ por noche/hab)",
+          "Gastos personales",
+          "Agua durante las visitas"
+        ],
+        "pt": [
+          "Visto de entrada (Bolívia, Panamá, Guatemala, Venezuela)",
+          "Taxa de turismo hoteleiro (AED 10 para 3★, AED 15 para 4★, AED 20 para 5★ por quarto/noite)",
+          "Despesas pessoais",
+          "Água durante as visitas"
+        ],
+        "it": [
+          "Visto d'ingresso (Bolivia, Panamá, Guatemala, Venezuela)",
+          "Tassa di soggiorno (AED 10 per 3★, AED 15 per 4★, AED 20 per 5★ a notte/camera)",
+          "Spese personali",
+          "Acqua durante le visite"
+        ]
+      },
+      "pricing": {
+        "hotels": [
+          {
+            "ar": "إيبيس ستايل / سيتي ماكس بر دبي 3★",
+            "en": "Ibis Style / Citymax Bur Dubai 3★",
+            "es": "Ibis Style / Citymax Bur Dubai 3★",
+            "pt": "Ibis Style / Citymax Bur Dubai 3★",
+            "it": "Ibis Style / Citymax Bur Dubai 3★"
+          },
+          {
+            "ar": "سيجنيتشر البرشاء / أوركيد 4★",
+            "en": "Signature al Barsha / Orchid 4★",
+            "es": "Signature al Barsha / Orchid 4★",
+            "pt": "Signature al Barsha / Orchid 4★",
+            "it": "Signature al Barsha / Orchid 4★"
+          },
+          {
+            "ar": "ترايب باي ويندام / ميلينيوم البرشاء 4★",
+            "en": "Tryp by Wyndham / Millennium al Barsha 4★",
+            "es": "Tryp by Wyndham / Millennium al Barsha 4★",
+            "pt": "Tryp by Wyndham / Millennium al Barsha 4★",
+            "it": "Tryp by Wyndham / Millennium al Barsha 4★"
+          },
+          {
+            "ar": "إيليت بيبلوس / ميديا روتانا 5★",
+            "en": "Elite Byblos / Media Rotana 5★",
+            "es": "Elite Byblos / Media Rotana 5★",
+            "pt": "Elite Byblos / Media Rotana 5★",
+            "it": "Elite Byblos / Media Rotana 5★"
+          }
+        ],
+        "winter": [
+          {
+            "dbl": 510,
+            "sgl": 250
+          },
+          {
+            "dbl": 545,
+            "sgl": 275
+          },
+          {
+            "dbl": 580,
+            "sgl": 315
+          },
+          {
+            "dbl": 699,
+            "sgl": 425
+          }
+        ],
+        "summer": [
+          {
+            "dbl": 409,
+            "sgl": 163
+          },
+          {
+            "dbl": 425,
+            "sgl": 188
+          },
+          {
+            "dbl": 480,
+            "sgl": 255
+          },
+          {
+            "dbl": 510,
+            "sgl": 288
+          }
+        ],
+        "winterDates": "04 Jan – 30 Apr / 01 Oct – 26 Dec",
+        "summerDates": "01 May – 30 Sep"
+      },
+      "overview": {
+        "ar": "استمتع بأفضل ما في دبي وأبوظبي في رحلة واحدة. جولة في المدينة القديمة، ويوم كامل في العاصمة أبوظبي، وسفاري الصحراء المثيرة.",
+        "en": "Enjoy the best of Dubai and Abu Dhabi in one trip. Explore Old Dubai, discover the capital Abu Dhabi, and experience an exciting desert safari.",
+        "es": "Disfruta de lo mejor de Dubái y Abu Dhabi en un solo viaje. Explora el Dubái antiguo, descubre la capital Abu Dhabi y vive un emocionante safari por el desierto.",
+        "pt": "Desfrute do melhor de Dubai e Abu Dhabi numa só viagem. Explore a Dubai antiga, descubra a capital Abu Dhabi e viva um safari emocionante no deserto.",
+        "it": "Goditi il meglio di Dubai e Abu Dhabi in un unico viaggio. Esplora la Dubai antica, scopri la capitale Abu Dhabi e vivi un emozionante safari nel deserto."
+      },
+      "name": {
+        "ar": "دبي وأبوظبي (DUBAI Y ABU DHABI)",
+        "en": "Dubai and Abu Dhabi",
+        "es": "Dubái y Abu Dhabi",
+        "pt": "Dubai e Abu Dhabi",
+        "it": "Dubai e Abu Dhabi"
+      },
+      "days": [
+        {
+          "day": "1",
+          "meals": null,
+          "description": {
+            "ar": "الوصول إلى مطار دبي الدولي. سيكون ممثلنا في انتظارك لنقلك إلى الفندق المختار والإقامة.",
+            "en": "Arrival at Dubai International Airport. Meet and greet by our representative. Transfer to the selected hotel and accommodation.",
+            "es": "Llegada al aeropuerto internacional de Dubái. Traslado al hotel elegido y alojamiento.",
+            "pt": "Chegada ao aeroporto internacional de Dubai. Recepção pelo nosso representante e transfer para o hotel escolhido.",
+            "it": "Arrivo all'aeroporto internazionale di Dubai. Accoglienza dal nostro rappresentante e trasferimento in hotel."
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار في الفندق. جولة نصف يوم في دبي القديمة. سنزور منطقة البستكية التاريخية (المتحف المفتوح)، ونستكشف بيوتها التقليدية ذات أبراج الرياح. بعد ذلك، سنعبر الخور بواسطة قارب \"العبرة\" التقليدي للوصول إلى سوق التوابل وسوق الذهب الشهير. العودة للفندق وبعد الظهر حر.",
+            "en": "Breakfast at the hotel. Half-day tour of Old Dubai. Visit the historic Bastakiya area with its traditional wind-tower houses. Cross the creek in an \"abra\" boat to the Spice and Gold Souks. Afternoon free.",
+            "es": "Desayuno en el hotel y medio día de visita por la parte antigua: área de Bastakeya, casas antiguas con torres de viento, cruce en \"abra\" hacia el mercado de especias y del oro. Tarde libre.",
+            "pt": "Café da manhã no hotel. Meio dia de visita (HD) à parte antiga da cidade: bairro histórico de Bastakiya, casas com torres de vento, travessia em \"abra\" até os mercados de especiarias e do ouro. Tarde livre.",
+            "it": "Colazione in hotel. Visita di mezza giornata della parte antica: quartiere di Bastakiya, case tradizionali con torri del vento, traversata in \"abra\" verso i mercati dell'oro e delle spezie. Pomeriggio libero."
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار والتوجه إلى أبوظبي (حوالي ساعة ونصف). في الطريق سنمر بميناء جبل علي (أكبر ميناء اصطناعي في العالم). عند الوصول، سنزور مسجد الشيخ زايد الكبير، وهو تحفة معمارية. سنتابع بجولة بانورامية تشمل قصور العائلة الحاكمة، ومحطة تصوير عند قصر الإمارات والقصر الرئاسي (من الخارج). نواصل عبر الكورنيش، ثم نتوقف في الجزيرة الثقافية لالتقاط صور لمتحف اللوفر أبوظبي. أخيرًا، نمر بجزيرة ياس لالتقاط الصور في عالم فيراري ثم العودة إلى دبي.",
+            "en": "Breakfast and departure to Abu Dhabi (approx. 1.5 hours). Pass by Jebel Ali Port (world's largest man-made port). Visit Sheikh Zayed Grand Mosque. Panoramic tour of Royal Family Palaces, photo stops at Emirates Palace and Presidential Palace (exterior). Continue along the Corniche, photo stop at Louvre Abu Dhabi, and Yas Island for Ferrari World photos. Return to Dubai.",
+            "es": "Desayuno y salida hacia Abu Dhabi (1h 30m). Pasaremos por el Puerto de Jebel Ali. Visita a la Mezquita de Sheik Zayed, recorrido panorámico por los palacios reales, parada fotográfica en el Palacio de los Emiratos y Palacio Presidencial (por fuera). Continuamos por la Corniche, parada en el Museo del Louvre, y recorrido por Yas Island para fotos en Ferrari World. Traslado a Dubái.",
+            "pt": "Café da manhã e saída para Abu Dhabi (1h 30m). Passagem pelo Porto de Jebel Ali. Visita à Grande Mesquita do Xeque Zayed. Tour panorâmico pelos palácios reais, paradas para fotos no Emirates Palace e Palácio Presidencial (exterior). Continuação pela Corniche, parada para fotos no Museu do Louvre e na Yas Island (Ferrari World). Retorno para Dubai.",
+            "it": "Colazione e partenza per Abu Dhabi (circa 1h 30m). Passaggio dal porto di Jebel Ali. Visita alla Grande Moschea dello Sceicco Zayed. Tour panoramico dei palazzi reali, sosta fotografica all'Emirates Palace e al Palazzo Presidenziale (esterno). Proseguimento sulla Corniche, sosta fotografica al Museo del Louvre e a Yas Island presso il Ferrari World. Trasferimento a Dubai."
+          }
+        },
+        {
+          "day": "4",
+          "meals": {
+            "ar": "إفطار + عشاء",
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "pt": "Pequeno-almoço + Jantar",
+            "it": "Colazione + Cena"
+          },
+          "description": {
+            "ar": "صباح حر. في الساعة 15:00 نطلق بسيارات 4x4 إلى رحلة سفاري الصحراء، والاستمتاع بالكثبان الرملية. يمكن للسيدات ارتداء فساتين زاهية لالتقاط صور الغروب. يتبع ذلك عشاء بوفيه شرقي في المخيم مع عروض التنورة، الرقص الشرقي، وعرض النار. العودة للفندق.",
+            "en": "Free morning. At 15:00, depart in 4x4 vehicles for a Desert Safari over the dunes. Women can wear bright-colored dresses for sunset photos. Enjoy an oriental buffet dinner at the camp with Tanoura, belly dancing, and fire shows. Return to the hotel.",
+            "es": "Mañana libre. A las 15:00, salida en autos 4x4 hacia el desierto. Fotos al atardecer (ropa vistosa recomendada). Cena buffet oriental en el campamento con shows de danza del vientre, tanura y fuego. Regreso al hotel.",
+            "pt": "Manhã livre. Às 15:00, saída em veículos 4x4 para o Safari no deserto. Fotos ao pôr do sol, jantar buffet oriental no acampamento com dança do ventre, tanoura e show de fogo. Retorno ao hotel.",
+            "it": "Mattina libera. Alle 15:00, partenza in 4x4 per il Safari nel deserto. Foto al tramonto, cena a buffet orientale nel campo con spettacoli di danza del ventre, tanoura e fuoco. Rientro in hotel."
+          }
+        },
+        {
+          "day": "5",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "إفطار في الفندق ويوم حر بالكامل في دبي للقيام بزيارات اختيارية.",
+            "en": "Breakfast at the hotel and free day in Dubai for optional excursions.",
+            "es": "Desayuno en el hotel y día libre en Dubái para visitas opcionales.",
+            "pt": "Café da manhã no hotel e dia livre em Dubai para visitas opcionais.",
+            "it": "Colazione in hotel e giornata libera a Dubai per escursioni opzionali."
+          }
+        },
+        {
+          "day": "6",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار، والانتقال إلى المطار قبل 3.5 ساعة من موعد الطيران. (نهاية الرحلة).",
+            "en": "Breakfast. Transfer to the airport 3.5 hours before flight departure. (End of trip).",
+            "es": "Desayuno y traslado al aeropuerto 3.5 horas antes del vuelo. (Fin del viaje).",
+            "pt": "Pequeno-almoço e transfer para o aeroporto 3.5 horas antes do voo. (Fim da viagem).",
+            "it": "Colazione e trasferimento all'aeroporto 3.5 ore prima del volo. (Fine del viaggio)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "REG-26",
+      "duration": {
+        "ar": "5 ليالٍ / 6 أيام",
+        "en": "5 Nights / 6 Days",
+        "es": "5 Noches / 6 Días",
+        "pt": "5 Noites / 6 Dias",
+        "it": "5 Notti / 6 Giorni"
+      },
+      "minPax": {
+        "ar": "2 أشخاص",
+        "en": "2 Pax",
+        "es": "2 Pax",
+        "pt": "2 Pax",
+        "it": "2 Pax"
+      },
+      "highlights": {
+        "ar": [
+          "إقامة ليلتين في أبوظبي",
+          "جولة في دبي القديمة",
+          "رحلة يوم كامل إلى أبوظبي",
+          "يوم حر في أبوظبي للاستمتاع بالفندق أو الأنشطة الاختيارية",
+          "سفاري الصحراء مع العشاء"
+        ],
+        "en": [
+          "Overnight stay in Abu Dhabi",
+          "Old Dubai city tour",
+          "Full-day Abu Dhabi tour",
+          "Free day in Abu Dhabi for hotel leisure or optional activities",
+          "Desert Safari with dinner"
+        ],
+        "es": [
+          "Estancia en Abu Dhabi",
+          "Tour por el Dubái antiguo",
+          "Excursión de día completo a Abu Dhabi",
+          "Día libre en Abu Dhabi para disfrutar del hotel o actividades opcionales",
+          "Safari por el desierto con cena"
+        ],
+        "pt": [
+          "Pernoite em Abu Dhabi",
+          "Tour pela Dubai antiga",
+          "Excursão de dia inteiro a Abu Dhabi",
+          "Dia livre em Abu Dhabi para lazer no hotel ou atividades opcionais",
+          "Safari no deserto com jantar"
+        ],
+        "it": [
+          "Soggiorno ad Abu Dhabi",
+          "Tour della Dubai antica",
+          "Gita giornaliera ad Abu Dhabi",
+          "Giornata libera ad Abu Dhabi per relax in hotel o attività opzionali",
+          "Safari nel deserto con cena"
+        ]
+      },
+      "code": {
+        "ar": "ICT004",
+        "en": "ICT004",
+        "es": "ICT004",
+        "pt": "ICT004",
+        "it": "ICT004"
+      },
+      "includes": {
+        "ar": [
+          "جميع انتقالات الاستقبال والمغادرة",
+          "إقامة 3 ليالٍ في دبي وليلتين في أبوظبي مع الإفطار",
+          "جولة دبي (HD) وجولة أبوظبي (FD) بدليل إسباني",
+          "سفاري الصحراء مع العشاء",
+          "الانتقال من أبوظبي إلى دبي مع سائق يتحدث الإنجليزية"
+        ],
+        "en": [
+          "All arrival/departure transfers",
+          "3 nights in Dubai and 2 nights in Abu Dhabi with breakfast",
+          "HD Dubai tour and FD Abu Dhabi tour (Spanish guide)",
+          "Desert Safari with dinner",
+          "Abu Dhabi to Dubai transfer with English-speaking driver"
+        ],
+        "es": [
+          "Todos los traslados",
+          "3 noches en Dubái y 2 noches en Abu Dhabi con desayuno",
+          "HD Dubái y FD Abu Dhabi con guía en español",
+          "Safari con cena",
+          "Traslado Abu Dhabi-Dubái con chofer en inglés"
+        ],
+        "pt": [
+          "Todos os transfers",
+          "3 noites em Dubai e 2 noites em Abu Dhabi com café da manhã",
+          "HD Dubai e FD Abu Dhabi com guia em espanhol",
+          "Safari com jantar",
+          "Transfer Abu Dhabi-Dubai com motorista em inglês"
+        ],
+        "it": [
+          "Tutti i trasferimenti",
+          "3 notti a Dubai e 2 notti ad Abu Dhabi con colazione",
+          "HD Dubai e FD Abu Dhabi (guida in spagnolo)",
+          "Safari con cena",
+          "Trasferimento Abu Dhabi-Dubai con autista in inglese"
+        ]
+      },
+      "excludes": {
+        "ar": [
+          "التأشيرة",
+          "ضريبة الفنادق السياحية (دبي: حسب الفئة / أبوظبي: 15 درهماً للغرفة/الليلة لجميع الفئات)",
+          "النفقات الشخصية",
+          "المياه"
+        ],
+        "en": [
+          "Entry visa",
+          "Tourism tax (Dubai: by category / Abu Dhabi: AED 15 per room/night for all categories)",
+          "Personal expenses",
+          "Water"
+        ],
+        "es": [
+          "Visado",
+          "Impuesto hotelero (Abu Dhabi: AED 15 por noche/hab para todas las categorías)",
+          "Extras",
+          "Agua"
+        ],
+        "pt": [
+          "Visto",
+          "Taxa hoteleira (Abu Dhabi: AED 15 por quarto/noite para todas as categorias)",
+          "Extras",
+          "Água"
+        ],
+        "it": [
+          "Visto",
+          "Tassa alberghiera (Abu Dhabi: AED 15 a notte/camera per tutte le categorie)",
+          "Extra",
+          "Acqua"
+        ]
+      },
+      "pricing": {
+        "hotels": [
+          {
+            "ar": "دوسيت دي2 كينز / ترايب 5★ + هوليداي إن داون تاون 5★",
+            "en": "Dusit D2 Kenz / Tryp 5★ + Holiday Inn Downtown 5★",
+            "es": "Dusit D2 Kenz / Tryp 5★ + Holiday Inn Downtown 5★",
+            "pt": "Dusit D2 Kenz / Tryp 5★ + Holiday Inn Downtown 5★",
+            "it": "Dusit D2 Kenz / Tryp 5★ + Holiday Inn Downtown 5★"
+          },
+          {
+            "ar": "إيليت بيبلوس / ميديا روتانا 5★ + ميلينيوم داون تاون 5★",
+            "en": "Elite Byblos / Media Rotana 5★ + Millennium Downtown 5★",
+            "es": "Elite Byblos / Media Rotana 5★ + Millennium Downtown 5★",
+            "pt": "Elite Byblos / Media Rotana 5★ + Millennium Downtown 5★",
+            "it": "Elite Byblos / Media Rotana 5★ + Millennium Downtown 5★"
+          }
+        ],
+        "winter": [
+          {
+            "dbl": 635,
+            "sgl": 315
+          },
+          {
+            "dbl": 755,
+            "sgl": 425
+          }
+        ],
+        "summer": [
+          {
+            "dbl": 515,
+            "sgl": 213
+          },
+          {
+            "dbl": 565,
+            "sgl": 288
+          }
+        ],
+        "winterDates": "04 Jan – 30 Apr / 01 Oct – 26 Dec",
+        "summerDates": "01 May – 30 Sep"
+      },
+      "overview": {
+        "ar": "اكتشف دبي وأبوظبي مع إقامة ليلتين في العاصمة. استمتع بجولة في المدينة القديمة، ويوم كامل في أبوظبي، ويوم حر للاسترخاء، وسفاري الصحراء.",
+        "en": "Discover Dubai and Abu Dhabi with an overnight stay in the capital. Enjoy Old Dubai tour, full-day Abu Dhabi excursion, a free day to relax, and a desert safari.",
+        "es": "Descubre Dubái y Abu Dhabi con estancia en la capital. Disfruta del tour por el Dubái antiguo, excursión a Abu Dhabi, día libre y safari por el desierto.",
+        "pt": "Descubra Dubai e Abu Dhabi com pernoite na capital. Desfrute do tour pela Dubai antiga, excursão a Abu Dhabi, dia livre e safari no deserto.",
+        "it": "Scopri Dubai e Abu Dhabi con pernottamento nella capitale. Goditi il tour della Dubai antica, l'escursione ad Abu Dhabi, un giorno libero e il safari nel deserto."
+      },
+      "name": {
+        "ar": "دبي مع إقامة في أبوظبي (DUBAI CON ESTANCIA EN ABU DHABI)",
+        "en": "Dubai with Overnight in Abu Dhabi",
+        "es": "Dubái con Estancia en Abu Dhabi",
+        "pt": "Dubai com Estadia em Abu Dhabi",
+        "it": "Dubai con Soggiorno ad Abu Dhabi"
+      },
+      "days": [
+        {
+          "day": "1",
+          "meals": null,
+          "description": {
+            "ar": "الوصول إلى مطار دبي الدولي والنقل إلى الفندق المختار.",
+            "en": "Arrival at Dubai International Airport and transfer to selected hotel.",
+            "es": "Llegada al aeropuerto de Dubái y traslado al hotel elegido.",
+            "pt": "Chegada ao aeroporto de Dubai e transfer para o hotel escolhido.",
+            "it": "Arrivo all'aeroporto di Dubai e trasferimento all'hotel prescelto."
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار وجولة نصف يوم في دبي القديمة (البستكية، العبرة، سوق الذهب والتوابل). بعد الظهر حر.",
+            "en": "Breakfast. Half-day Old Dubai city tour (Bastakiya, Abra, Gold & Spice Souks). Afternoon free.",
+            "es": "Desayuno. HD Dubái city tour de la parte antigua. Tarde libre.",
+            "pt": "Café da manhã. Meio dia de visita (HD) à parte antiga da cidade. Tarde livre.",
+            "it": "Colazione. HD Dubai city tour della parte antica. Pomeriggio libero."
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار وتسجيل المغادرة من الفندق. التوجه إلى أبوظبي وزيارة مسجد الشيخ زايد، قصر الإمارات والقصر الرئاسي (من الخارج)، كورنيش أبوظبي، ومتحف اللوفر (محطة تصوير)، وجزيرة ياس (عالم فيراري). التوجه إلى فندق أبوظبي وتسجيل الوصول والإقامة.",
+            "en": "Breakfast and check-out. Drive to Abu Dhabi. Visit Sheikh Zayed Mosque, Emirates Palace and Presidential Palace (exterior), Abu Dhabi Corniche, Louvre Museum (photo stop), and Yas Island (Ferrari World). Check-in at Abu Dhabi hotel.",
+            "es": "Desayuno y check-out. Traslado a Abu Dhabi. Visita a la Mezquita Sheik Zayed, palacios reales, paradas fotográficas en Emirates Palace, Palacio Presidencial, Museo del Louvre y Ferrari World. Alojamiento en hotel de Abu Dhabi.",
+            "pt": "Café da manhã e check-out. Saída para Abu Dhabi. Visita à Mesquita Xeque Zayed, palácios reais, paradas para fotos no Emirates Palace, Palácio Presidencial, Museu do Louvre e Ferrari World. Alojamento em hotel de Abu Dhabi.",
+            "it": "Colazione e check-out. Trasferimento ad Abu Dhabi. Visita alla Moschea dello Sceicco Zayed, palazzi reali, soste foto all'Emirates Palace, Palazzo Presidenziale, Museo del Louvre e Ferrari World. Sistemazione in hotel ad Abu Dhabi."
+          }
+        },
+        {
+          "day": "4",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "إفطار ويوم حر للاستمتاع بالفندق أو أنشطة اختيارية (مثل تناول الكابتشينو الذهبي في قصر الإمارات، أو زيارة قصر الوطن الرئاسي، أو قضاء اليوم في مدن الألعاب: Ferrari World أو Yas Waterworld أو Warner Bros).",
+            "en": "Breakfast. Free day to enjoy the hotel or optional activities (e.g., golden cappuccino at Emirates Palace, visit Qasr Al Watan Presidential Palace, or spend the day at Yas Island theme parks).",
+            "es": "Desayuno y día libre (opciones: cappuccino de oro en Emirates Palace, mirador de Etihad Towers, Palacio Qasr Al Watan o parques de Yas Island).",
+            "pt": "Café da manhã e dia livre (opções: cappuccino de ouro no Emirates Palace, mirante das Etihad Towers, Palácio Qasr Al Watan ou parques de Yas Island).",
+            "it": "Colazione e giornata libera (opzioni: cappuccino d'oro all'Emirates Palace, osservatorio Etihad Towers, Palazzo Qasr Al Watan o parchi di Yas Island)."
+          }
+        },
+        {
+          "day": "5",
+          "meals": {
+            "ar": "إفطار + عشاء",
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "pt": "Pequeno-almoço + Jantar",
+            "it": "Colazione + Cena"
+          },
+          "description": {
+            "ar": "الإفطار وفي الموعد المحدد النقل إلى فندق دبي. في الساعة 15:00 الانطلاق بسيارات 4x4 إلى سفاري الصحراء مع عشاء بوفيه وعروض فنية والعودة للفندق.",
+            "en": "Breakfast. At the scheduled time, transfer back to Dubai and check-in. At 15:00, 4x4 Desert Safari with buffet dinner and live entertainment shows.",
+            "es": "Desayuno, traslado de regreso a Dubái y check-in. A las 15:00, Safari en 4x4 por el desierto con cena buffet y shows.",
+            "pt": "Café da manhã, transfer de retorno para Dubai e check-in. Às 15:00, Safari 4x4 no deserto com jantar buffet e shows.",
+            "it": "Colazione, trasferimento di ritorno a Dubai e check-in. Alle 15:00, Safari in 4x4 nel deserto con cena a buffet e spettacoli."
+          }
+        },
+        {
+          "day": "6",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار والنقل للمطار قبل 3.5 ساعة من موعد الطيران. (نهاية الرحلة).",
+            "en": "Breakfast. Transfer to the airport 3.5 hours before flight departure. (End of trip).",
+            "es": "Desayuno y traslado al aeropuerto 3.5 horas antes del vuelo. (Fin del viaje).",
+            "pt": "Pequeno-almoço e transfer para o aeroporto 3.5 horas antes do voo. (Fim da viagem).",
+            "it": "Colazione e trasferimento all'aeroporto 3.5 ore prima del volo. (Fine del viaggio)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "REG-27",
+      "duration": {
+        "ar": "7 ليالٍ / 8 أيام",
+        "en": "7 Nights / 8 Days",
+        "es": "7 Noches / 8 Días",
+        "pt": "7 Noites / 8 Dias",
+        "it": "7 Notti / 8 Giorni"
+      },
+      "minPax": {
+        "ar": "2 أشخاص",
+        "en": "2 Pax",
+        "es": "2 Pax",
+        "pt": "2 Pax",
+        "it": "2 Pax"
+      },
+      "highlights": {
+        "ar": [
+          "جولة في دبي القديمة",
+          "رحلة يوم كامل إلى أبوظبي",
+          "سفاري الصحراء مع العشاء",
+          "أيام حرة متعددة للاستكشاف والتسوق"
+        ],
+        "en": [
+          "Old Dubai walking tour",
+          "Full-day Abu Dhabi excursion",
+          "Desert Safari with dinner",
+          "Multiple free days for exploration and shopping"
+        ],
+        "es": [
+          "Tour a pie por el Dubái antiguo",
+          "Excursión de día completo a Abu Dhabi",
+          "Safari por el desierto con cena",
+          "Varios días libres para explorar y comprar"
+        ],
+        "pt": [
+          "Passeio a pé pela Dubai antiga",
+          "Excursão de dia inteiro a Abu Dhabi",
+          "Safari no deserto com jantar",
+          "Vários dias livres para explorar e comprar"
+        ],
+        "it": [
+          "Tour a piedi della Dubai antica",
+          "Escursione giornaliera ad Abu Dhabi",
+          "Safari nel deserto con cena",
+          "Numerosi giorni liberi per esplorare e fare shopping"
+        ]
+      },
+      "code": {
+        "ar": "ICT005",
+        "en": "ICT005",
+        "es": "ICT005",
+        "pt": "ICT005",
+        "it": "ICT005"
+      },
+      "includes": {
+        "ar": [
+          "استقبال ومغادرة",
+          "إقامة 7 ليالٍ في دبي مع الإفطار",
+          "جولة نصف يوم (HD) دبي القديمة (دليل إسباني)",
+          "سفاري الصحراء مع العشاء وسائق إنجليزي",
+          "جولة يوم كامل (FD) أبوظبي (دليل إسباني)",
+          "ضريبة القيمة المضافة 5%"
+        ],
+        "en": [
+          "Arrival/departure transfers",
+          "7 nights in Dubai with breakfast",
+          "HD Old Dubai tour (Spanish guide)",
+          "Desert Safari with dinner and English driver",
+          "FD Abu Dhabi tour (Spanish guide)",
+          "5% VAT"
+        ],
+        "es": [
+          "Traslados de llegada y salida",
+          "7 noches en Dubái con desayuno",
+          "HD Dubái city tour (guía en español)",
+          "Safari con cena y conductor inglés",
+          "FD Abu Dhabi tour (guía en español)",
+          "IVA 5%"
+        ],
+        "pt": [
+          "Transfers de chegada e partida",
+          "7 noites em Dubai com café da manhã",
+          "HD Dubai city tour (guia em espanhol)",
+          "Safari com jantar e motorista inglês",
+          "FD Abu Dhabi tour (guia em espanhol)",
+          "IVA 5%"
+        ],
+        "it": [
+          "Trasferimenti di arrivo e partenza",
+          "7 notti a Dubai con colazione",
+          "HD Dubai city tour (guida in spagnolo)",
+          "Safari con cena e autista inglese",
+          "FD Abu Dhabi tour (guida in spagnolo)",
+          "IVA 5%"
+        ]
+      },
+      "excludes": {
+        "ar": [
+          "التأشيرة",
+          "ضريبة الفندق السياحية (10 دراهم لـ3 نجوم، 15 درهم لـ4 نجوم، 20 درهم لـ5 نجوم لكل غرفة/ليلة)",
+          "مصاريف شخصية",
+          "مياه أثناء الجولات"
+        ],
+        "en": [
+          "Entry visa",
+          "Hotel tourism tax (AED 10 for 3★, AED 15 for 4★, AED 20 for 5★ per room/night)",
+          "Personal expenses",
+          "Water during tours"
+        ],
+        "es": [
+          "Visado",
+          "Impuesto de turismo hotelero (AED 10 en 3★, AED 15 en 4★, AED 20 en 5★ por noche/hab)",
+          "Gastos personales",
+          "Agua durante las visitas"
+        ],
+        "pt": [
+          "Visto",
+          "Taxa de turismo hoteleiro (AED 10 para 3★, AED 15 para 4★, AED 20 para 5★ por quarto/noite)",
+          "Despesas pessoais",
+          "Água durante as visitas"
+        ],
+        "it": [
+          "Visto",
+          "Tassa di soggiorno (AED 10 per 3★, AED 15 per 4★, AED 20 per 5★ a notte/camera)",
+          "Spese personali",
+          "Acqua durante le visite"
+        ]
+      },
+      "pricing": {
+        "hotels": [
+          {
+            "ar": "إيبيس ستايل / سيتي ماكس بر دبي 3★",
+            "en": "Ibis Style / Citymax Bur Dubai 3★",
+            "es": "Ibis Style / Citymax Bur Dubai 3★",
+            "pt": "Ibis Style / Citymax Bur Dubai 3★",
+            "it": "Ibis Style / Citymax Bur Dubai 3★"
+          },
+          {
+            "ar": "سيجنيتشر البرشاء / أوركيد 4★",
+            "en": "Signature al Barsha / Orchid 4★",
+            "es": "Signature al Barsha / Orchid 4★",
+            "pt": "Signature al Barsha / Orchid 4★",
+            "it": "Signature al Barsha / Orchid 4★"
+          },
+          {
+            "ar": "ترايب باي ويندام / ميلينيوم البرشاء 4★",
+            "en": "Tryp by Wyndham / Millennium al Barsha 4★",
+            "es": "Tryp by Wyndham / Millennium al Barsha 4★",
+            "pt": "Tryp by Wyndham / Millennium al Barsha 4★",
+            "it": "Tryp by Wyndham / Millennium al Barsha 4★"
+          },
+          {
+            "ar": "إيليت بيبلوس / ميديا روتانا 5★",
+            "en": "Elite Byblos / Media Rotana 5★",
+            "es": "Elite Byblos / Media Rotana 5★",
+            "pt": "Elite Byblos / Media Rotana 5★",
+            "it": "Elite Byblos / Media Rotana 5★"
+          }
+        ],
+        "winter": [
+          {
+            "dbl": 610,
+            "sgl": 350
+          },
+          {
+            "dbl": 655,
+            "sgl": 385
+          },
+          {
+            "dbl": 705,
+            "sgl": 441
+          },
+          {
+            "dbl": 869,
+            "sgl": 595
+          }
+        ],
+        "summer": [
+          {
+            "dbl": 465,
+            "sgl": 228
+          },
+          {
+            "dbl": 489,
+            "sgl": 263
+          },
+          {
+            "dbl": 535,
+            "sgl": 298
+          },
+          {
+            "dbl": 609,
+            "sgl": 403
+          }
+        ],
+        "winterDates": "04 Jan – 30 Apr / 01 Oct – 26 Dec",
+        "summerDates": "01 May – 30 Sep"
+      },
+      "overview": {
+        "ar": "أسبوع كامل في دبي لاكتشاف سحر المدينة. استمتع بجولة في المدينة القديمة، ويوم في أبوظبي، وسفاري الصحراء، وأيام حرة للاستكشاف.",
+        "en": "A full week in Dubai to discover the city's magic. Enjoy Old Dubai tour, an Abu Dhabi day trip, desert safari, and free days for exploration.",
+        "es": "Una semana completa en Dubái para descubrir la magia de la ciudad. Disfruta del tour por el Dubái antiguo, excursión a Abu Dhabi, safari y días libres.",
+        "pt": "Uma semana completa em Dubai para descobrir a magia da cidade. Desfrute do tour pela Dubai antiga, excursão a Abu Dhabi, safari e dias livres.",
+        "it": "Una settimana completa a Dubai per scoprire la magia della città. Goditi il tour della Dubai antica, l'escursione ad Abu Dhabi, il safari e giorni liberi."
+      },
+      "name": {
+        "ar": "أسبوع في دبي (UNA SEMANA EN DUBAI)",
+        "en": "One Week in Dubai",
+        "es": "Una Semana en Dubái",
+        "pt": "Uma Semana em Dubai",
+        "it": "Una Settimana a Dubai"
+      },
+      "days": [
+        {
+          "day": "1",
+          "meals": null,
+          "description": {
+            "ar": "الوصول إلى مطار دبي الدولي. استقبال من ممثلنا والنقل إلى الفندق المختار والإقامة.",
+            "en": "Arrival at Dubai International Airport. Meet and greet by our representative. Transfer to the selected hotel and accommodation.",
+            "es": "Llegada al aeropuerto internacional de Dubái. Traslado al hotel elegido y alojamiento.",
+            "pt": "Chegada ao aeroporto internacional de Dubai. Recepção pelo nosso representante e transfer para o hotel escolhido.",
+            "it": "Arrivo all'aeroporto internazionale di Dubai. Accoglienza dal nostro rappresentante e trasferimento in hotel."
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار في الفندق وجولة نصف يوم في دبي القديمة: منطقة البستكية التاريخية، البيوت القديمة ذات أبراج الرياح، عبور الخور بقارب \"العبرة\" التقليدي، وزيارة سوق التوابل وسوق الذهب. العودة للفندق وبعد الظهر حر.",
+            "en": "Breakfast at the hotel. Half-day tour of Old Dubai: Bastakiya area, traditional wind-tower houses, crossing the creek in an \"abra\" boat, visiting the Spice and Gold Souks. Afternoon free.",
+            "es": "Desayuno en el hotel y medio día de visita por la parte antigua: área de Bastakeya, casas antiguas, cruce en \"abra\" hasta el mercado de especias y del oro. Tarde libre.",
+            "pt": "Café da manhã no hotel. Meio dia de visita (HD) à parte antiga: bairro de Bastakiya, casas com torres de vento, travessia em \"abra\" até os mercados de especiarias e do ouro. Tarde livre.",
+            "it": "Colazione in hotel. Visita di mezza giornata della parte antica: quartiere di Bastakiya, case con torri del vento, traversata in \"abra\" verso i mercati dell'oro e delle spezie. Pomeriggio libero."
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار والتوجه إلى أبوظبي (ساعة ونصف). المرور بميناء جبل علي، ثم زيارة مسجد الشيخ زايد الكبير. يليه جولة بانورامية تشمل قصور العائلة الحاكمة، ومحطة تصوير عند قصر الإمارات والقصر الرئاسي (من الخارج)، والكورنيش ومتحف اللوفر أبوظبي (محطة تصوير)، ثم جزيرة ياس (عالم فيراري). العودة إلى دبي.",
+            "en": "Breakfast and tour to Abu Dhabi (1.5 hrs). Pass by Jebel Ali Port, visit Sheikh Zayed Grand Mosque, panoramic tour of Royal Family Palaces, photo stops at Emirates Palace and Presidential Palace (exterior), Corniche, Louvre Museum, and Ferrari World. Return to Dubai.",
+            "es": "Desayuno y visita a Abu Dhabi. Pasaremos por el Puerto de Jebel Ali. Visita a la Mezquita de Sheik Zayed, palacios reales, paradas fotográficas en Emirates Palace, Palacio Presidencial, Corniche, Museo del Louvre y Ferrari World. Traslado a Dubái.",
+            "pt": "Café da manhã e visita a Abu Dhabi. Passagem pelo Porto de Jebel Ali, visita à Grande Mesquita do Xeque Zayed, palácios reais, paradas para fotos no Emirates Palace, Palácio Presidencial, Corniche, Museu do Louvre e Ferrari World. Retorno a Dubai.",
+            "it": "Colazione e visita ad Abu Dhabi. Passaggio dal porto di Jebel Ali, visita alla Grande Moschea dello Sceicco Zayed, palazzi reali, soste foto all'Emirates Palace, Palazzo Presidenziale, Corniche, Museo del Louvre e Ferrari World. Rientro a Dubai."
+          }
+        },
+        {
+          "day": "4",
+          "meals": {
+            "ar": "إفطار + عشاء",
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "pt": "Pequeno-almoço + Jantar",
+            "it": "Colazione + Cena"
+          },
+          "description": {
+            "ar": "الإفطار وصباح حر. في الساعة 15:00 انطلاق بسيارات 4x4 إلى سفاري الصحراء (سيارة مشتركة)، والاستمتاع بالكثبان الرملية وصور الغروب. يليه عشاء بوفيه شرقي في المخيم مع عروض التنورة، الرقص الشرقي، وعرض النار. العودة للفندق.",
+            "en": "Breakfast and free morning. At 15:00, depart in shared 4x4 vehicles for a Desert Safari over the dunes. Enjoy sunset photos and an oriental buffet dinner at the camp with Tanoura, belly dancing, and fire shows. Return to the hotel.",
+            "es": "Desayuno y mañana libre. A las 15:00, salida en autos 4x4 hacia el desierto. Paseo por las dunas, fotos al atardecer y cena buffet oriental en el campamento con shows. Regreso al hotel.",
+            "pt": "Café da manhã e manhã livre. Às 15:00, saída em veículos 4x4 partilhados para o Safari no deserto. Fotos ao pôr do sol e jantar buffet oriental no acampamento com espetáculos. Retorno ao hotel.",
+            "it": "Colazione e mattina libera. Alle 15:00, partenza in 4x4 condivisi per il Safari nel deserto. Foto al tramonto e cena buffet orientale nel campo con spettacoli. Rientro in hotel."
+          }
+        },
+        {
+          "day": "5",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار في الفندق ويوم حر في دبي للقيام بزيارات اختيارية.",
+            "en": "Breakfast at the hotel and free day in Dubai for optional excursions.",
+            "es": "Desayuno en el hotel y día libre en Dubái para visitas opcionales.",
+            "pt": "Café da manhã no hotel e dia livre em Dubai para visitas opcionais.",
+            "it": "Colazione in hotel e giornata libera a Dubai per escursioni opzionali."
+          }
+        },
+        {
+          "day": "6",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار في الفندق ويوم حر في دبي للقيام بزيارات اختيارية.",
+            "en": "Breakfast at the hotel and free day in Dubai for optional excursions.",
+            "es": "Desayuno en el hotel y día libre en Dubái para visitas opcionales.",
+            "pt": "Café da manhã no hotel e dia livre em Dubai para visitas opcionais.",
+            "it": "Colazione in hotel e giornata libera a Dubai per escursioni opzionali."
+          }
+        },
+        {
+          "day": "7",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار في الفندق ويوم حر في دبي للقيام بزيارات اختيارية.",
+            "en": "Breakfast at the hotel and free day in Dubai for optional excursions.",
+            "es": "Desayuno en el hotel y día libre en Dubái para visitas opcionales.",
+            "pt": "Café da manhã no hotel e dia livre em Dubai para visitas opcionais.",
+            "it": "Colazione in hotel e giornata libera a Dubai per escursioni opzionali."
+          }
+        },
+        {
+          "day": "8",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار، والنقل إلى المطار قبل 3.5 ساعة من موعد رحلة الطيران. (نهاية الرحلة).",
+            "en": "Breakfast. Transfer to the airport 3.5 hours before flight departure. (End of trip).",
+            "es": "Desayuno y traslado al aeropuerto 3.5 horas antes del vuelo. (Fin del viaje).",
+            "pt": "Pequeno-almoço e transfer para o aeroporto 3.5 horas antes do voo. (Fim da viagem).",
+            "it": "Colazione e trasferimento all'aeroporto 3.5 ore prima del volo. (Fine del viaggio)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "REG-28",
+      "duration": {
+        "ar": "7 ليالٍ / 8 أيام",
+        "en": "7 Nights / 8 Days",
+        "es": "7 Noches / 8 Días",
+        "pt": "7 Noites / 8 Dias",
+        "it": "7 Notti / 8 Giorni"
+      },
+      "minPax": {
+        "ar": "2 أشخاص",
+        "en": "2 Pax",
+        "es": "2 Pax",
+        "pt": "2 Pax",
+        "it": "2 Pax"
+      },
+      "highlights": {
+        "ar": [
+          "جولة في دبي القديمة",
+          "رحلة يوم كامل إلى أبوظبي",
+          "سفاري الصحراء مع العشاء",
+          "جولة في الشارقة (العاصمة الثقافية)",
+          "رحلة إلى الفجيرة مع الغداء والسباحة"
+        ],
+        "en": [
+          "Old Dubai tour",
+          "Full-day Abu Dhabi excursion",
+          "Desert Safari with dinner",
+          "Sharjah cultural tour (Cultural Capital of the Arab World)",
+          "Fujairah tour with lunch and beach time"
+        ],
+        "es": [
+          "Tour por el Dubái antiguo",
+          "Excursión a Abu Dhabi",
+          "Safari por el desierto con cena",
+          "Tour cultural por Sharjah",
+          "Excursión a Fujairah con almuerzo y playa"
+        ],
+        "pt": [
+          "Tour pela Dubai antiga",
+          "Excursão a Abu Dhabi",
+          "Safari no deserto com jantar",
+          "Tour cultural por Sharjah",
+          "Excursão a Fujairah com almoço e praia"
+        ],
+        "it": [
+          "Tour della Dubai antica",
+          "Escursione ad Abu Dhabi",
+          "Safari nel deserto con cena",
+          "Tour culturale di Sharjah",
+          "Escursione a Fujairah con pranzo e spiaggia"
+        ]
+      },
+      "code": {
+        "ar": "ICT006",
+        "en": "ICT006",
+        "es": "ICT006",
+        "pt": "ICT006",
+        "it": "ICT006"
+      },
+      "includes": {
+        "ar": [
+          "نفس خدمات البرنامج السابق",
+          "جولة نصف يوم (HD) الشارقة (بدليل إسباني)",
+          "جولة يوم كامل (FD) الفجيرة (بدليل إسباني)",
+          "وجبة الغداء في الفجيرة"
+        ],
+        "en": [
+          "Same services as previous program",
+          "HD Sharjah city tour (Spanish guide)",
+          "FD Fujairah city tour (Spanish guide)",
+          "Lunch during Fujairah tour"
+        ],
+        "es": [
+          "Mismos servicios que el programa anterior",
+          "HD Sharjah city tour (guía en español)",
+          "FD Fujairah city tour (guía en español)",
+          "Almuerzo durante el tour de Fujairah"
+        ],
+        "pt": [
+          "Mesmos serviços do programa anterior",
+          "HD Sharjah city tour (guia em espanhol)",
+          "FD Fujairah city tour (guia em espanhol)",
+          "Almoço durante o tour de Fujairah"
+        ],
+        "it": [
+          "Stessi servizi del programma precedente",
+          "HD Sharjah city tour (guida in spagnolo)",
+          "FD Fujairah city tour (guida in spagnolo)",
+          "Pranzo durante il tour di Fujairah"
+        ]
+      },
+      "excludes": {
+        "ar": [
+          "التأشيرة",
+          "الضريبة السياحية",
+          "النفقات الشخصية",
+          "المياه أثناء الزيارات"
+        ],
+        "en": [
+          "Entry visa",
+          "Tourism tax",
+          "Personal expenses",
+          "Water during tours"
+        ],
+        "es": [
+          "Visado",
+          "Impuesto turístico",
+          "Gastos personales",
+          "Agua durante las visitas"
+        ],
+        "pt": [
+          "Visto",
+          "Taxa turística",
+          "Despesas pessoais",
+          "Água durante as visitas"
+        ],
+        "it": [
+          "Visto",
+          "Tassa turistica",
+          "Spese personali",
+          "Acqua durante le visite"
+        ]
+      },
+      "pricing": {
+        "hotels": [
+          {
+            "ar": "إيبيس ستايل / سيتي ماكس بر دبي 3★",
+            "en": "Ibis Style / Citymax Bur Dubai 3★",
+            "es": "Ibis Style / Citymax Bur Dubai 3★",
+            "pt": "Ibis Style / Citymax Bur Dubai 3★",
+            "it": "Ibis Style / Citymax Bur Dubai 3★"
+          },
+          {
+            "ar": "سيجنيتشر البرشاء / أوركيد 4★",
+            "en": "Signature al Barsha / Orchid 4★",
+            "es": "Signature al Barsha / Orchid 4★",
+            "pt": "Signature al Barsha / Orchid 4★",
+            "it": "Signature al Barsha / Orchid 4★"
+          },
+          {
+            "ar": "ترايب باي ويندام / ميلينيوم البرشاء 4★",
+            "en": "Tryp by Wyndham / Millennium al Barsha 4★",
+            "es": "Tryp by Wyndham / Millennium al Barsha 4★",
+            "pt": "Tryp by Wyndham / Millennium al Barsha 4★",
+            "it": "Tryp by Wyndham / Millennium al Barsha 4★"
+          },
+          {
+            "ar": "إيليت بيبلوس / ميديا روتانا 5★",
+            "en": "Elite Byblos / Media Rotana 5★",
+            "es": "Elite Byblos / Media Rotana 5★",
+            "pt": "Elite Byblos / Media Rotana 5★",
+            "it": "Elite Byblos / Media Rotana 5★"
+          }
+        ],
+        "winter": [
+          {
+            "dbl": 940,
+            "sgl": 350
+          },
+          {
+            "dbl": 989,
+            "sgl": 385
+          },
+          {
+            "dbl": 1039,
+            "sgl": 441
+          },
+          {
+            "dbl": 1205,
+            "sgl": 595
+          }
+        ],
+        "summer": [
+          {
+            "dbl": 799,
+            "sgl": 228
+          },
+          {
+            "dbl": 820,
+            "sgl": 263
+          },
+          {
+            "dbl": 869,
+            "sgl": 298
+          },
+          {
+            "dbl": 940,
+            "sgl": 403
+          }
+        ],
+        "winterDates": "04 Jan – 30 Apr / 01 Oct – 26 Dec",
+        "summerDates": "01 May – 30 Sep"
+      },
+      "overview": {
+        "ar": "استكشف أربع إمارات في رحلة واحدة: دبي، أبوظبي، الشارقة، والفجيرة. استمتع بالمدينة القديمة، سفاري الصحراء، الثقافة الإسلامية، وشواطئ الفجيرة الخلابة.",
+        "en": "Explore four emirates in one trip: Dubai, Abu Dhabi, Sharjah, and Fujairah. Enjoy Old Dubai, desert safari, Islamic culture, and Fujairah's stunning beaches.",
+        "es": "Explora cuatro emiratos en un solo viaje: Dubái, Abu Dhabi, Sharjah y Fujairah. Disfruta del Dubái antiguo, safari, cultura islámica y las playas de Fujairah.",
+        "pt": "Explore quatro emirados numa só viagem: Dubai, Abu Dhabi, Sharjah e Fujairah. Desfrute da Dubai antiga, safari, cultura islâmica e das praias de Fujairah.",
+        "it": "Esplora quattro emirati in un unico viaggio: Dubai, Abu Dhabi, Sharjah e Fujairah. Goditi la Dubai antica, il safari, la cultura islamica e le spiagge di Fujairah."
+      },
+      "name": {
+        "ar": "الإمارات بالكامل (EMIRATOS AL COMPLETO)",
+        "en": "The Complete Emirates",
+        "es": "Emiratos al Completo",
+        "pt": "Emirados Completo",
+        "it": "Emirati Completi"
+      },
+      "days": [
+        {
+          "day": "1",
+          "meals": null,
+          "description": {
+            "ar": "الوصول إلى مطار دبي الدولي. استقبال من ممثلنا والنقل إلى الفندق المختار.",
+            "en": "Arrival at Dubai International Airport. Meet and greet by our representative. Transfer to selected hotel.",
+            "es": "Llegada al aeropuerto internacional de Dubái. Traslado al hotel elegido.",
+            "pt": "Chegada ao aeroporto internacional de Dubai. Recepção pelo nosso representante e transfer para o hotel escolhido.",
+            "it": "Arrivo all'aeroporto internazionale di Dubai. Accoglienza e trasferimento in hotel."
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار في الفندق وجولة نصف يوم في دبي القديمة: منطقة البستكية التاريخية، عبور الخور بقارب \"العبرة\"، وزيارة سوق التوابل وسوق الذهب. العودة للفندق وبعد الظهر حر.",
+            "en": "Breakfast at hotel. Half-day Old Dubai tour: Bastakiya area, crossing the creek in an \"abra\" boat, Spice and Gold Souks. Afternoon free.",
+            "es": "Desayuno y medio día de visita por la parte antigua: Bastakeya, cruce en \"abra\", mercados de especias y oro. Tarde libre.",
+            "pt": "Café da manhã e meio dia de visita pela parte antiga: Bastakiya, travessia em \"abra\", mercados de especiarias e ouro. Tarde livre.",
+            "it": "Colazione e mezza giornata di visita della parte antica: Bastakiya, traversata in \"abra\", mercati delle spezie e dell'oro. Pomeriggio libero."
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار والتوجه إلى أبوظبي. المرور بميناء جبل علي، زيارة مسجد الشيخ زايد الكبير، جولة بانورامية تشمل قصور العائلة الحاكمة، قصر الإمارات والقصر الرئاسي (من الخارج)، الكورنيش، متحف اللوفر، وجزيرة ياس (عالم فيراري). العودة إلى دبي.",
+            "en": "Breakfast and departure to Abu Dhabi. Pass by Jebel Ali Port, visit Sheikh Zayed Grand Mosque, panoramic tour of Royal Palaces, Emirates Palace, Presidential Palace, Corniche, Louvre Museum, and Ferrari World. Return to Dubai.",
+            "es": "Desayuno y salida hacia Abu Dhabi. Puerto de Jebel Ali, Mezquita Sheikh Zayed, palacios reales, Emirates Palace, Palacio Presidencial, Corniche, Museo del Louvre y Ferrari World. Regreso a Dubái.",
+            "pt": "Café da manhã e saída para Abu Dhabi. Porto de Jebel Ali, Grande Mesquita Xeque Zayed, palácios reais, Emirates Palace, Palácio Presidencial, Corniche, Museu do Louvre e Ferrari World. Retorno a Dubai.",
+            "it": "Colazione e partenza per Abu Dhabi. Porto di Jebel Ali, Grande Moschea Sceicco Zayed, palazzi reali, Emirates Palace, Palazzo Presidenziale, Corniche, Museo del Louvre e Ferrari World. Rientro a Dubai."
+          }
+        },
+        {
+          "day": "4",
+          "meals": {
+            "ar": "إفطار + عشاء",
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "pt": "Pequeno-almoço + Jantar",
+            "it": "Colazione + Cena"
+          },
+          "description": {
+            "ar": "الإفطار وصباح حر. في الساعة 15:00 انطلاق بسيارات 4x4 إلى سفاري الصحراء، والاستمتاع بالكثبان الرملية وصور الغروب. عشاء بوفيه شرقي في المخيم مع عروض التنورة، الرقص الشرقي، وعرض النار. العودة للفندق.",
+            "en": "Breakfast and free morning. At 15:00, depart in 4x4 for Desert Safari over the dunes. Sunset photos, oriental buffet dinner at camp with Tanoura, belly dancing, and fire shows. Return to hotel.",
+            "es": "Desayuno y mañana libre. A las 15:00, safari en 4x4 por el desierto. Fotos al atardecer, cena buffet oriental con shows. Regreso al hotel.",
+            "pt": "Café da manhã e manhã livre. Às 15:00, safari 4x4 no deserto. Fotos ao pôr do sol, jantar buffet oriental com espetáculos. Retorno ao hotel.",
+            "it": "Colazione e mattina libera. Alle 15:00, safari in 4x4 nel deserto. Foto al tramonto, cena buffet orientale con spettacoli. Rientro in hotel."
+          }
+        },
+        {
+          "day": "5",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار وجولة في الشارقة (العاصمة الثقافية للعالم العربي). التوقف عند ساحة الثقافة ومجسم القرآن الكريم. زيارة متحف الحضارة الإسلامية، ثم سوق العرصة التاريخي (أقدم سوق لؤلؤ مزارع)، وسوق المركزي الشهير بالمشغولات اليدوية. العودة إلى فندق دبي.",
+            "en": "Breakfast and tour of Sharjah (Cultural Capital of the Arab World). Stop at Culture Square, Quran Sculpture. Visit the Museum of Islamic Civilization, Al Arsa Souk (oldest cultured pearl market), and Al Markazi Souk (handicrafts). Return to Dubai hotel.",
+            "es": "Desayuno y visita de Sharjah (capital cultural del mundo árabe). Plaza de la Cultura, escultura del Corán, Museo de la Civilización Musulmana, zoco de Al Arsa y zoco de Al Markazi. Regreso al hotel.",
+            "pt": "Café da manhã e visita a Sharjah (capital cultural do mundo árabe). Praça da Cultura, escultura do Alcorão, Museu da Civilização Islâmica, souk de Al Arsa e Al Markazi. Retorno ao hotel.",
+            "it": "Colazione e visita di Sharjah (capitale culturale del mondo arabo). Piazza della Cultura, scultura del Corano, Museo della Civiltà Islamica, souk di Al Arsa e Al Markazi. Rientro in hotel."
+          }
+        },
+        {
+          "day": "6",
+          "meals": {
+            "ar": "إفطار + غداء",
+            "en": "Breakfast + Lunch",
+            "es": "Desayuno + Almuerzo",
+            "pt": "Pequeno-almoço + Almoço",
+            "it": "Colazione + Pranzo"
+          },
+          "description": {
+            "ar": "الإفطار والتوجه للفجيرة. المرور بسوق الجمعة التقليدي للمشغولات والفخار والسجاد. زيارة مسجد الشيخ زايد بالفجيرة (ثاني أكبر مسجد بالدولة)، ورؤية قلعة الفجيرة المجددة. الغداء في أحد المنتجعات مع وقت للسباحة في المياه الكريستالية. العودة إلى دبي.",
+            "en": "Breakfast and drive to Fujairah. Pass by the Friday Market for local crafts, pottery, and carpets. Visit Sheikh Zayed Mosque of Fujairah (second largest in the country) and its renovated fortress. Lunch at a resort with time to swim. Return to Dubai.",
+            "es": "Desayuno y salida hacia Fujairah. Mercado de los Viernes (artesanías y alfombras). Visita a la mezquita Sheik Zayed de Fujairah y su fortaleza. Almuerzo en un resort y tiempo para bañarse. Regreso a Dubái.",
+            "pt": "Café da manhã e saída para Fujairah. Mercado de Sexta-feira (artesanato e tapetes). Visita à mesquita Xeque Zayed de Fujairah e sua fortaleza. Almoço num resort com tempo para nadar. Retorno a Dubai.",
+            "it": "Colazione e partenza per Fujairah. Mercato del Venerdì (artigianato e tappeti). Visita alla moschea Sceicco Zayed di Fujairah e alla sua fortezza. Pranzo in un resort con tempo per nuotare. Rientro a Dubai."
+          }
+        },
+        {
+          "day": "7",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "إفطار ويوم حر في دبي للزيارات الاختيارية.",
+            "en": "Breakfast and free day in Dubai for optional tours.",
+            "es": "Desayuno y día libre en Dubái para visitas opcionales.",
+            "pt": "Café da manhã e dia livre em Dubai para visitas opcionais.",
+            "it": "Colazione e giornata libera a Dubai per visite opzionali."
+          }
+        },
+        {
+          "day": "8",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "pt": "Pequeno-almoço",
+            "it": "Colazione"
+          },
+          "description": {
+            "ar": "الإفطار والنقل للمطار قبل 3.5 ساعة من موعد طيرانك. (نهاية الرحلة).",
+            "en": "Breakfast and transfer to the airport 3.5 hours before flight departure. (End of trip).",
+            "es": "Desayuno y traslado al aeropuerto 3.5 horas antes del vuelo. (Fin del viaje).",
+            "pt": "Pequeno-almoço e transfer para o aeroporto 3.5 horas antes do voo. (Fim da viagem).",
+            "it": "Colazione e trasferimento all'aeroporto 3.5 ore prima del volo. (Fine del viaggio)."
+          }
+        }
+      ]
     }
   ]
 }
