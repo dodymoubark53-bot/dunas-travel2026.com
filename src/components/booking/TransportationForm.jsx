@@ -63,7 +63,7 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
   };
 
   return (
-    <div className="relative mx-auto md:mx-0 bg-ivory-50 rounded-2xl p-8 w-full shadow-card">
+    <div className="relative mx-auto md:mx-0 bg-[rgb(35,35,191)] rounded-2xl p-8 w-full shadow-card">
       <AnimatePresence mode="wait">
         {status === 'success' ? (
           <motion.div 

@@ -1057,7 +1057,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-5xl mx-auto glass-dark rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden bg-obsidian-900 border border-[rgba(245,166,35,0.2)]"
+            className="max-w-5xl mx-auto rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden bg-[rgb(35,35,191)] border border-[rgba(245,166,35,0.2)]"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-gold-500/10 rounded-full blur-[80px] -mr-32 -mt-32"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-gold-500/10 rounded-full blur-[80px] -ml-32 -mb-32"></div>
