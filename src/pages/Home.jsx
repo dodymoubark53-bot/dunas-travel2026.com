@@ -67,7 +67,7 @@ const destinationsData = [
 ];
 
 const Home = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { formatPrice } = useCurrency();
   const [activeDestination, setActiveDestination] = useState(null);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
@@ -138,20 +138,25 @@ const Home = () => {
   const JORDAN_IDS = ["REG-15","REG-16","REG-17","REG-18","REG-19","REG-20","REG-21"];
 
   const getToursForDest = (destId) => {
+    const lang = i18n.language;
+    const langMap = { pt: 'pt-BR', en: 'en', es: 'es', it: 'it', ar: 'ar' };
+    const tourLang = langMap[lang] || 'en';
     const result = [];
-    tours.filter((t) => t.destination === destId).forEach((t) => {
-      result.push({ label: t.title, url: `/tours/${t.slug}`, id: `tour-${t.slug}` });
+    const filtered = tours.filter((t) => t.destination === destId && t.language === tourLang);
+    const fallback = filtered.length === 0 ? tours.filter((t) => t.destination === destId) : [];
+    [...filtered, ...fallback].forEach((t) => {
+      result.push({ label: t(`tour.${t.id}`, t.title), url: `/tours/${t.slug}`, id: `tour-${t.slug}` });
     });
     if (destId === "turkey") {
       rawPrograms.filter((p) => TURKEY_IDS.includes(p.id)).forEach((p) => {
         const slug = slugify(p.id + "-" + p.name.en);
-        result.push({ label: p.name.en, url: `/programs/turkey/${slug}`, id: `prog-${p.id}` });
+        result.push({ label: p.name[lang] || p.name.en, url: `/programs/turkey/${slug}`, id: `prog-${p.id}` });
       });
     }
     if (destId === "jordan") {
       rawPrograms.filter((p) => JORDAN_IDS.includes(p.id)).forEach((p) => {
         const slug = slugify(p.id + "-" + p.name.en);
-        result.push({ label: p.name.en, url: `/programs/jordan/${slug}`, id: `prog-${p.id}` });
+        result.push({ label: p.name[lang] || p.name.en, url: `/programs/jordan/${slug}`, id: `prog-${p.id}` });
       });
     }
     return result;
