@@ -616,9 +616,7 @@ const Home = () => {
                     <h3 className="text-display-lg text-ivory-50 mb-2">
                       {t(`nav.${dest.id === 'holy-land' ? 'holyland' : dest.id}`, dest.name)}
                     </h3>
-                    <p className="text-body-lg text-gold-500 font-medium mb-4">
-                      {t(`dest.${dest.id === 'holy-land' ? 'holyland' : dest.id}.subtitle`, t(`data.${dest.desc}`, dest.desc))}
-                    </p>
+                    <p className="text-body-lg text-gold-500 font-medium mb-4 leading-relaxed" dangerouslySetInnerHTML={{ __html: t(`dest.${dest.id === 'holy-land' ? 'holyland' : dest.id}.subtitle`, t(`data.${dest.desc}`, dest.desc)) }} />
                     <span className="text-caption text-ivory-300 uppercase tracking-wider bg-obsidian-900/50 backdrop-blur-sm px-4 py-2 rounded-full border border-ivory-50/10">
                       {tourCount} {t("home.toursAvailable")}
                     </span>
