@@ -23,25 +23,174 @@ export const services = [
 
   // 3. EXTENSION PROGRAMS
   {
-    id: 'prog-ext-1',
+    id: 'prog-ext-2',
     category: 'extension',
-    slug: 'red-sea-luxury-extension',
-    title: 'Red Sea Resort Extension Package',
-    location: 'Hurghada & Sharm El Sheikh',
+    slug: 'sharm-el-sheikh-extension',
+    title: 'Sharm El Sheikh - 04 Days / 03 Nights',
+    location: 'Sharm El Sheikh, Egypt',
     price: 600,
     rating: 4.8,
-    images: ['/imgs/italy/Nile and Red Sea with Hurghada.jpg', '/imgs/italy/Nile and Red Sea with Sharm El Sheikh.jpg'],
-    shortDesc: 'Extend your historical tour with a relaxing beach and coral reef getaway along the beautiful Red Sea coast.',
+    images: ['/imgs/Brazil/cairo-with-cruise-sharm-el-sheikh-detail.jpg', '/imgs/Brazil/cairo-with-cruise-sharm-el-sheikh.jpg'],
+    shortDesc: 'Extend your Egyptian adventure with a relaxing beach escape in Sharm El Sheikh, with all-inclusive stays and optional excursions.',
     overview: [
-      "After exploring temples and tombs, our Extension Program offers the perfect transition to tropical relaxation. Add 3 to 4 nights of blissful coastal luxury to any core itinerary.",
-      "Unwind at an ultra-luxury all-inclusive beachfront resort where the desert mountains meet crystalline waters. Spend your days snorkeling in world-famous coral reefs or lounging by infinity pools.",
-      "This package includes seamless transition transfers from your cultural tour directly to the resort, creating a beautifully balanced holiday experience."
+      'Extend your Egyptian adventure with a 4-day beach escape to Sharm El Sheikh, the jewel of the Red Sea. Relax at an all-inclusive resort and choose from optional excursions including a night trek up Mount Sinai or a desert 4x4 safari.',
+      'With seamless airport transfers from Cairo, this extension offers the perfect balance of relaxation and adventure along the stunning Sinai coast.'
     ],
-    highlights: ['Seamless add-on to any classic tour', 'VIP beachfront resort allocation', 'Private guided boat and snorkeling safari', 'All-inclusive premium dining access'],
-    included: ['Resort accommodation', 'Private point-to-point transfers', 'Snorkeling equipment rental', 'All meals and selected beverages'],
-    excluded: ['Scuba diving certifications', 'Spa treatments']
+    highlights: [
+      'sharm-03-nights-resort',
+      'Optional Mount Sinai and St. Catherine Monastery night trek',
+      'Optional Sinai desert 4x4 sunset safari with camel ride',
+      'sharm-shared-transfers'
+    ],
+    included: [
+      '03 nights of accommodation in Sharm El Sheikh in chosen hotel category with All Inclusive system and taxes',
+      'sharm-airport-hotel-transfers'
+    ],
+    excluded: [
+      'Domestic flights in economy class: Cairo / Sharm / Cairo'
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Cairo / Sharm El Sheikh',
+        morning: 'Transfer to Cairo Airport for your flight to Sharm El Sheikh. Arrival and transfer to the chosen hotel. Rest of the day free, dinner, and overnight stay.'
+      },
+      {
+        day: 2,
+        title: 'sharm-city',
+        morning: 'Trip to Mount Sinai and St. Catherine Monastery. Departure around 22.30 towards the Sinai Peninsula, where you will do a night trek up Mount Sinai. After descending, coffee and cookies will be served, followed by a visit to St. Catherine Monastery. Return to the hotel around 02.30 the next day.'
+      },
+      {
+        day: 3,
+        title: 'sharm-city',
+        morning: 'Sinai Desert tour in a 4x4 vehicle to watch the sunset, camel ride, and arrival at a Bedouin village where you can learn about their customs and traditions, followed by a typical dinner. Round-trip hotel transfers included.'
+      },
+      {
+        day: 4,
+        title: 'Sharm El Sheikh / Cairo',
+        morning: 'Breakfast at the hotel and departure to Sharm El Sheikh Airport for your flight to Cairo International Airport. Return to your home country. End of our services.'
+      }
+    ]
   },
-
+  {
+    id: 'prog-ext-3',
+    category: 'extension',
+    slug: 'hurghada-extension',
+    title: 'Hurghada - 04 Days / 03 Nights',
+    location: 'Hurghada, Egypt',
+    price: 550,
+    rating: 4.7,
+    images: ['/imgs/italy/Nile and Red Sea with Hurghada.jpg', '/imgs/italy/Nile and Red Sea with Sharm El Sheikh.jpg'],
+    shortDesc: 'Extend your Egyptian adventure with a relaxing beach escape in Hurghada, with all-inclusive stays and optional excursions.',
+    overview: [
+      'Extend your Egyptian adventure with a 4-day beach escape to Hurghada, a premier Red Sea resort destination. Relax at an all-inclusive resort and choose from optional excursions including a desert quad bike safari or a boat trip to Giftun Island.',
+      'With seamless airport transfers from Cairo, this extension offers the perfect mix of relaxation and adventure on the stunning Red Sea coast.'
+    ],
+    highlights: [
+      '03 nights all-inclusive resort stay',
+      'Optional desert quad bike safari with Bedouin dinner',
+      'Optional boat trip to Giftun Island with snorkeling',
+      'Shared airport/hotel transfers included'
+    ],
+    included: [
+      '03 nights of accommodation in Hurghada in chosen hotel category with All Inclusive system and taxes',
+      'Airport / Hotel / Airport transfers in regular shared service'
+    ],
+    excluded: [
+      'Domestic flights in economy class: Cairo / Hurghada / Cairo'
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Cairo / Hurghada',
+        morning: 'Transfer to Cairo Airport for your flight to Hurghada. Arrival and transfer to your chosen hotel. Rest of the day free, dinner, and overnight stay.'
+      },
+      {
+        day: 2,
+        title: 'Hurghada',
+        morning: 'Desert Safari tour with a Bedouin dinner. You will drive a quad bike yourself through the desert and then continue in a 4x4 vehicle to a Bedouin village, where you can ride a camel and watch a Bedouin dance show. Round-trip hotel transfers included.'
+      },
+      {
+        day: 3,
+        title: 'Hurghada',
+        morning: 'Boat trip to Giftun Island, with a stop for snorkeling and lunch served on board. Round-trip hotel transfers included.'
+      },
+      {
+        day: 4,
+        title: 'Hurghada / Cairo',
+        morning: 'Breakfast at the hotel and departure to Hurghada Airport for your flight to Cairo International Airport. Return to your home country. End of our services.'
+      }
+    ]
+  },
+  
+  // 4. SIWA OASIS + ALEXANDRIA EXTENSION
+  {
+    id: 'prog-ext-4',
+    category: 'extension',
+    slug: 'siwa-alexandria-extension',
+    title: 'Siwa Oasis + Alexandria - 05 Days / 04 Nights',
+    location: 'Siwa & Alexandria, Egypt',
+    price: 650,
+    rating: 4.5,
+    images: ['/imgs/gallery/15.jpeg', '/imgs/gallery/20.jpeg', '/imgs/Brazil/Treasures of Egypt with Alexandria.jpg'],
+    shortDesc: 'Discover the magical Siwa Oasis and the historic city of Alexandria on this 5-day journey through Egypt\'s western desert and Mediterranean coast.',
+    overview: [
+      'Explore the breathtaking landscapes and ancient wonders of Egypt beyond the pyramids — from the serene salt lakes of Wadi El Natroun and the WWII memorials of El Alamein, to the remote Bedouin oasis of Siwa hidden in the Great Sand Sea.',
+      'Travel along the stunning Mediterranean coast to the cosmopolitan city of Alexandria, where Greco-Roman history meets modern Egyptian culture, with expert guidance and seamless transportation throughout.'
+    ],
+    highlights: [
+      'Round-trip transportation by bus or minibus between Cairo, Siwa, and Cairo',
+      '01 night in Marsa Matrouh with breakfast and dinner',
+      '03 nights in Siwa with full board',
+      '01 night in Alexandria with breakfast and dinner',
+      'Guided tours of Saint Bishoy Monastery and WWII Museum',
+      'Desert 4x4 adventure to the Great Sand Sea',
+      'All transfers in an air-conditioned vehicle',
+      'Assistance from our team throughout the trip'
+    ],
+    included: [
+      'Round-trip transportation by bus or minibus between the cities of Cairo – Siwa – Cairo',
+      '01 night of accommodation in Marsa Matrouh with breakfast and dinner (drinks not included)',
+      '03 nights of accommodation in Siwa with full board (breakfast, lunch, and dinner, drinks not included)',
+      '01 night of accommodation in Alexandria with breakfast and dinner (drinks not included)',
+      'Tour to the Saint Bishoy Monastery and the World War II Museum',
+      'Tour to the Mountain of the Dead, Temple of Amun, Cleopatra\'s Bath, Great Sand Sea, Gebel Dakrour, and sunset at Fatnas Island',
+      'All transfers mentioned in the itinerary in an air-conditioned vehicle',
+      'Assistance from a representative of our team throughout the trip'
+    ],
+    excluded: [
+      'International flights',
+      'Tipping / Gratuities',
+      'Personal travel insurance'
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Cairo / Wadi El Natroun / Marsa Matrouh',
+        morning: 'After breakfast at the hotel, early departure towards the Wadi El Natroun Valley, named after the 8 different lakes in the region where natron salt is produced. Visit to the Monastery of Anba Bishoy (116KM), the most famous monastery of the Coptic Orthodox Church of Alexandria. Continue to El Alamein (176KM) on the shores of the Mediterranean, stop for lunch at a local restaurant (excluding drinks). In the afternoon, we will visit the WWII Museum and the Commonwealth Tombs, continuing along the Mediterranean coast to Marsa Matrouh (184KM). Arrival at the Marsa Matrouh Hotel. Dinner (excluding drinks) and overnight stay.'
+      },
+      {
+        day: 2,
+        title: 'Marsa Matrouh / Siwa',
+        morning: 'After breakfast, check out from the hotel and visit Rommel\'s Cave, featuring rock paintings dating back more than 5,000 years. Continue to Siwa Oasis (307KM) crossing the Sahara Desert. Arrival and accommodation at the Siwa Shali Resort Hotel, where we will have some time to rest. Stop for lunch at a local restaurant (excluding drinks). Late afternoon, a walk through the Shali Old Village to contemplate the sunset. Return to the hotel, dinner (excluding drinks), and overnight stay.'
+      },
+      {
+        day: 3,
+        title: 'Siwa / Desert',
+        morning: 'After breakfast, we will visit the Mountain of the Dead, the Temple of Amun, and Cleopatra\'s Baths. Stop for lunch (excluding drinks). In the afternoon, we will head out in a 4x4 vehicle to the Great Sand Sea, arriving at the desert tents. Dinner (excluding drinks) and overnight stay in the camp.'
+      },
+      {
+        day: 4,
+        title: 'Siwa / Alexandria',
+        morning: 'After breakfast at the hotel, departure for Alexandria (598km). Stop in Marsa Matrouh for lunch at a local restaurant (excluding drinks). Afterwards, continue to Alexandria and check into the hotel. Dinner included (excluding drinks) and overnight stay.'
+      },
+      {
+        day: 5,
+        title: 'Alexandria / Cairo',
+        morning: 'After breakfast at the hotel, we will visit the ancient capital of Egypt for over 1,000 years, famous for the Lighthouse of Alexandria (one of the 7 wonders of the ancient world). We will visit the Kom El Shoqafa catacombs, Pompey\'s Pillar (a monument carved from a single piece of red granite weighing 396 tons), Montazah Palace, and the Qaitbay Citadel, built on the exact site of the former lighthouse. We will also visit the famous Library of Alexandria (closed on Fridays), one of the largest and most important in the world. Stop for an included lunch at a local restaurant (excluding drinks). Next, we return to Cairo (218 km) directly to the airport or your chosen hotel. End of services.'
+      }
+    ]
+  },
 
   // 5. HONEYMOONERS PACKAGE
   {
