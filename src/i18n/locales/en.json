@@ -357,7 +357,9 @@
     "searchDeparture": "Departure",
     "searchPeople": "People",
     "searchBtn": "Search",
-    "popularDests": "Popular Destinations"
+    "popularDests": "Popular Destinations",
+    "videoSectionTitle": "Join Our Beautiful Journey",
+    "videoSectionSub": "Moments to Remember"
   },
   "tourCard": {
     "reviews": "reviews",

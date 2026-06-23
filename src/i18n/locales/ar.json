@@ -357,7 +357,9 @@
     "searchDeparture": "تاريخ المغادرة",
     "searchPeople": "عدد الأشخاص",
     "searchBtn": "بحث",
-    "popularDests": "الوجهات الشهيرة"
+    "popularDests": "الوجهات الشهيرة",
+    "videoSectionTitle": "تعالي وشاركنا حياتنا الحلوة",
+    "videoSectionSub": "لحظات لا تُنسى"
   },
   "tourCard": {
     "reviews": "تقييمات",

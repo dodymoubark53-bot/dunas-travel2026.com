@@ -73,6 +73,7 @@ const Home = () => {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [activeGalleryIndex, setActiveGalleryIndex] = useState(0);
   const [isAllToursPopupOpen, setIsAllToursPopupOpen] = useState(false);
+  const [activeVideo, setActiveVideo] = useState(null);
 
   const turkeyPrograms = useTurkeyPrograms();
   const formattedTurkeyTours = turkeyPrograms.map((tp) => ({
@@ -152,9 +153,9 @@ const Home = () => {
 
   const slugify = (str) => str.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 
-  const TURKEY_IDS = ["REG-01","REG-02","REG-03","REG-04","REG-05","REG-05-B","REG-06","REG-07","REG-08","REG-09","REG-10","REG-11","REG-13","REG-14"];
-  const JORDAN_IDS = ["REG-15","REG-16","REG-17","REG-18","REG-19","REG-20","REG-21"];
-  const DUBAI_IDS = ["REG-22","REG-23","REG-24","REG-25","REG-26","REG-27","REG-28"];
+  const TURKEY_IDS = ["REG-01", "REG-02", "REG-03", "REG-04", "REG-05", "REG-05-B", "REG-06", "REG-07", "REG-08", "REG-09", "REG-10", "REG-11", "REG-13", "REG-14"];
+  const JORDAN_IDS = ["REG-15", "REG-16", "REG-17", "REG-18", "REG-19", "REG-20", "REG-21"];
+  const DUBAI_IDS = ["REG-22", "REG-23", "REG-24", "REG-25", "REG-26", "REG-27", "REG-28"];
 
   const getToursForDest = (destId) => {
     const lang = i18n.language;
@@ -297,6 +298,11 @@ const Home = () => {
     { src: "/imgs/gallery/20.jpeg", dest: "Gallery", tag: "Photo" },
     { src: "/imgs/gallery/21.jpeg", dest: "Gallery", tag: "Photo" },
     { src: "/imgs/gallery/22.jpeg", dest: "Gallery", tag: "Photo" },
+  ];
+
+  const videos = [
+    { type: 'youtube', id: '97qd-0Cpags', title: 'Video 1' },
+    { type: 'facebook', url: 'https://www.facebook.com/DunasTravelOficial/videos/907034632430477/', thumbnail: '/imgs/gallery/1.jpeg', title: 'Video 2' },
   ];
 
   const openLightbox = (index) => {
@@ -614,8 +620,8 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {destinationsData.map((dest) => {
-              const tourCount = dest.id === "turkey" 
-                ? formattedTurkeyTours.length 
+              const tourCount = dest.id === "turkey"
+                ? formattedTurkeyTours.length
                 : dest.id === "jordan"
                   ? formattedJordanTours.length
                   : dest.id === "dubai"
@@ -676,10 +682,10 @@ const Home = () => {
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {activeTours.slice(0, 6).map((tour) => (
-                      <TourCard 
-                        key={tour.id} 
-                        tour={tour} 
-                        linkBase={activeDestination === "turkey" ? "/programs/turkey" : activeDestination === "jordan" ? "/programs/jordan" : activeDestination === "dubai" ? "/programs/dubai" : "/tours"} 
+                      <TourCard
+                        key={tour.id}
+                        tour={tour}
+                        linkBase={activeDestination === "turkey" ? "/programs/turkey" : activeDestination === "jordan" ? "/programs/jordan" : activeDestination === "dubai" ? "/programs/dubai" : "/tours"}
                       />
                     ))}
                   </div>
@@ -1283,6 +1289,53 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Video Strip Section */}
+      <section className="py-16" style={{ background: 'linear-gradient(180deg, rgb(10,25,105) 0%, rgb(6,29,93) 50%, rgb(10,21,53) 100%)' }}>
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="text-gold-500 uppercase tracking-widest text-caption block mb-4">
+              {t('home.videoSectionSub', 'Moments to Remember')}
+            </span>
+            <h2 className="text-display-lg text-ivory-50 font-display">
+              {t('home.videoSectionTitle', 'Join Our Beautiful Journey')}
+            </h2>
+            <div className="w-24 h-1 bg-gold-500 mx-auto mt-6"></div>
+          </motion.div>
+
+          <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory no-scrollbar">
+            {videos.map((video, idx) => (
+              <motion.div
+                key={video.type === 'youtube' ? video.id : video.url}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                onClick={() => setActiveVideo(video)}
+                className="min-w-[300px] md:min-w-[360px] snap-center shrink-0 relative rounded-2xl overflow-hidden cursor-pointer group h-[200px] md:h-[240px]"
+              >
+                <img
+                  src={video.type === 'youtube' ? `https://img.youtube.com/vi/${video.id}/hqdefault.jpg` : video.thumbnail}
+                  alt=""
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-obsidian-900/40 group-hover:bg-obsidian-900/20 transition-colors flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-gold-500/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <svg className="w-6 h-6 text-obsidian-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section
         className="relative py-12 lg:py-16 bg-obsidian-900 bg-fixed bg-cover bg-center"
@@ -1328,6 +1381,40 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Video Lightbox */}
+      <AnimatePresence>
+        {activeVideo && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-obsidian-900/90 backdrop-blur-md flex items-center justify-center p-4"
+            onClick={() => setActiveVideo(null)}
+          >
+            <button
+              onClick={() => setActiveVideo(null)}
+              className="absolute top-6 right-6 text-ivory-50 hover:text-gold-500 z-50 text-2xl"
+            >
+              <FaTimes />
+            </button>
+            <motion.div
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+               className="w-full max-w-4xl aspect-video max-h-[75vh] rounded-lg overflow-hidden shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <iframe
+                src={activeVideo.type === 'youtube' ? `https://www.youtube.com/embed/${activeVideo.id}?autoplay=1` : `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(activeVideo.url)}&show_text=false&autoplay=true`}
+                className="w-full h-full"
+                allow="autoplay; encrypted-media; fullscreen"
+                allowFullScreen
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Lightbox Modal */}
       <AnimatePresence>
