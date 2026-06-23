@@ -11,6 +11,8 @@ const PROGRAM_IMAGES = {
   'REG-26': 'https://images.unsplash.com/photo-1566252176582-d0d1e9b36d47?auto=format&fit=crop&w=800&q=80',
   'REG-27': 'https://images.unsplash.com/photo-1599571234908-29ed5d0f5e41?auto=format&fit=crop&w=800&q=80',
   'REG-28': 'https://images.unsplash.com/photo-1513581166391-887a96ddeafd?auto=format&fit=crop&w=800&q=80',
+  'HM001': 'https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80',
+  'HM002': 'https://images.unsplash.com/photo-1580651315530-69c8e0026377?auto=format&fit=crop&w=800&q=80',
 };
 
 const getLangValue = (obj, lang) => {
@@ -21,7 +23,7 @@ const getLangValue = (obj, lang) => {
 
 const slugify = (str) => str.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 
-const DUBAI_IDS = ['REG-22', 'REG-23', 'REG-24', 'REG-25', 'REG-26', 'REG-27', 'REG-28'];
+const DUBAI_IDS = ['REG-22', 'REG-23', 'REG-24', 'REG-25', 'REG-26', 'REG-27', 'REG-28', 'HM001', 'HM002'];
 
 export const useDubaiPrograms = () => {
   const { i18n } = useTranslation();
@@ -50,6 +52,8 @@ export const useDubaiPrograms = () => {
             ...prog.pricing,
             hotels: prog.pricing.hotels.map(h => typeof h === 'object' ? getLangValue(h, activeLang) : h),
           } : null,
+          extraNightPrices: prog.extraNightPrices || null,
+          exhibitionSurcharges: prog.exhibitionSurcharges || null,
           days: prog.days.map((day) => ({
             day: day.day,
             description: getLangValue(day.description, activeLang),

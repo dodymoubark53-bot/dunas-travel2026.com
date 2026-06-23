@@ -257,6 +257,8 @@ const Home = () => {
     }
   };
 
+  const isRtl = i18n.dir() === 'rtl';
+
   const filteredVehicles =
     vehicleFilter === "all"
       ? transportation
@@ -554,7 +556,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: isRtl ? 30 : -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -580,7 +582,7 @@ const Home = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: isRtl ? -30 : 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -854,7 +856,7 @@ const Home = () => {
             <div
               className="flex gallery-strip w-max"
               style={{
-                animation: "scrollStrip 80s linear infinite",
+                animation: `${isRtl ? 'scrollStripRTL' : 'scrollStrip'} 80s linear infinite`,
                 gap: "16px",
               }}
             >
@@ -1188,6 +1190,10 @@ const Home = () => {
               0%   { transform: translateX(0); }
               100% { transform: translateX(-50%); }
             }
+            @keyframes scrollStripRTL {
+              0%   { transform: translateX(0); }
+              100% { transform: translateX(50%); }
+            }
             .gallery-strip:hover {
               animation-play-state: paused;
             }
@@ -1225,7 +1231,7 @@ const Home = () => {
           <div
             className="flex gallery-strip w-max"
             style={{
-              animation: "scrollStrip 80s linear infinite",
+              animation: `${isRtl ? 'scrollStripRTL' : 'scrollStrip'} 80s linear infinite`,
               gap: "16px",
             }}
           >
@@ -1345,8 +1351,8 @@ const Home = () => {
             </button>
 
             <button
-              className="absolute left-4 md:left-10 text-ivory-50 hover:text-gold-500 transition-colors z-[101] p-4"
-              onClick={prevImage}
+              className={`absolute ${isRtl ? 'right-4 md:right-10' : 'left-4 md:left-10'} text-ivory-50 hover:text-gold-500 transition-colors z-[101] p-4`}
+              onClick={isRtl ? nextImage : prevImage}
             >
               <FaChevronLeft size={40} />
             </button>
@@ -1364,8 +1370,8 @@ const Home = () => {
             />
 
             <button
-              className="absolute right-4 md:right-10 text-ivory-50 hover:text-gold-500 transition-colors z-[101] p-4"
-              onClick={nextImage}
+              className={`absolute ${isRtl ? 'left-4 md:left-10' : 'right-4 md:right-10'} text-ivory-50 hover:text-gold-500 transition-colors z-[101] p-4`}
+              onClick={isRtl ? prevImage : nextImage}
             >
               <FaChevronRight size={40} />
             </button>

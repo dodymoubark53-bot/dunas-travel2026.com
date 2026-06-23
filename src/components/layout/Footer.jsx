@@ -5,7 +5,8 @@ import Logo from '../ui/Logo';
 import TiT0Chat from '../ui/TiT0Chat';
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isRtl = i18n.dir() === 'rtl';
 
   return (
     <footer
@@ -48,7 +49,7 @@ const Footer = () => {
               <TiT0Chat />
             </div>
           </div>
-          <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-1 pt-2 sm:pt-8">
+          <div className={`flex flex-col items-center sm:items-start text-center ${isRtl ? 'sm:text-right' : 'sm:text-left'} gap-1 pt-2 sm:pt-8`}>
             <p className="text-white text-base sm:text-lg font-bold max-w-[280px] leading-tight">
               {t('footer.titoTagline', 'Descubre la magia de Egipto y sus monumentos históricos de la mano de los Expertos')}
             </p>

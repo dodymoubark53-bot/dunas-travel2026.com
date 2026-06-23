@@ -22,6 +22,7 @@ const Navbar = () => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const { t, i18n } = useTranslation();
   const { user, logout } = useAuth();
+  const isRtl = i18n.dir() === 'rtl';
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -145,7 +146,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Nav (Hover) */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8 flex-shrink-0">
           {navLinks.map((link) => (
             <div
               key={link.name}
@@ -154,11 +155,11 @@ const Navbar = () => {
               onMouseLeave={() => link.dropdown && setActiveDropdown(null)}
             >
               {link.dropdown ? (
-                <button className="flex items-center gap-1 text-white hover:text-[#F5A623] transition-colors text-body-md font-medium py-2 [text-shadow:0_2px_8px_rgba(0,0,0,0.9),0_1px_2px_rgba(0,0,0,0.8)]">
+                <button className="flex items-center gap-1 text-white hover:text-[#F5A623] transition-colors text-body-md font-medium py-2 whitespace-nowrap flex-shrink-0 [text-shadow:0_2px_8px_rgba(0,0,0,0.9),0_1px_2px_rgba(0,0,0,0.8)]">
                   {link.name} <FaChevronDown className={`text-xs transition-transform duration-200 ${activeDropdown === link.name ? 'rotate-180' : ''}`} />
                 </button>
               ) : (
-                <Link to={link.path} className="text-white hover:text-[#F5A623] transition-colors text-body-md font-medium py-2 [text-shadow:0_2px_8px_rgba(0,0,0,0.9),0_1px_2px_rgba(0,0,0,0.8)]">
+                <Link to={link.path} className="text-white hover:text-[#F5A623] transition-colors text-body-md font-medium py-2 whitespace-nowrap flex-shrink-0 [text-shadow:0_2px_8px_rgba(0,0,0,0.9),0_1px_2px_rgba(0,0,0,0.8)]">
                   {link.name}
                 </Link>
               )}
@@ -184,7 +185,7 @@ const Navbar = () => {
                               <span>{item.name}</span>
                               <FaChevronDown className="-rotate-90 text-[10px] opacity-40 group-hover/sub:text-[#F5A623] group-hover/sub:rotate-0 transition-transform duration-200" />
                             </Link>
-                            <div className="absolute left-full top-0 ml-0.5 hidden group-hover/sub:block w-56 bg-white border border-obsidian-200 rounded-lg overflow-hidden shadow-2xl z-[9999]">
+                            <div className={`absolute ${isRtl ? 'right-full mr-0.5' : 'left-full ml-0.5'} top-0 hidden group-hover/sub:block w-56 bg-white border border-obsidian-200 rounded-lg overflow-hidden shadow-2xl z-[9999]`}>
                               {item.subItems.map((sub) => (
                                 <Link
                                   key={sub.name}
@@ -262,7 +263,7 @@ const Navbar = () => {
                   initial="hidden"
                   animate="visible"
                   exit="exit"
-                  className="absolute top-full right-0 mt-2 w-40 bg-white border border-obsidian-200 rounded-xl overflow-hidden shadow-xl z-[10000]"
+                  className={`absolute top-full ${isRtl ? 'left-0' : 'right-0'} mt-2 w-40 bg-white border border-obsidian-200 rounded-xl overflow-hidden shadow-xl z-[10000]`}
                 >
                   {[
                     { code: 'en', label: 'English', flag: '🇬🇧' },
@@ -274,9 +275,9 @@ const Navbar = () => {
                     <button
                       key={lang.code}
                       onClick={() => changeLanguage(lang.code)}
-                      className={`w-full text-left px-4 py-3 flex items-center justify-between text-body-md border-b border-obsidian-100 last:border-0 transition-colors ${i18n.language === lang.code ? 'text-amber-600 font-semibold bg-amber-50' : 'text-obsidian-700 hover:text-amber-600 hover:bg-amber-50'}`}
+                      className={`w-full ${isRtl ? 'text-right' : 'text-left'} px-4 py-3 flex items-center justify-between text-body-md border-b border-obsidian-100 last:border-0 transition-colors ${i18n.language === lang.code ? 'text-amber-600 font-semibold bg-amber-50' : 'text-obsidian-700 hover:text-amber-600 hover:bg-amber-50'}`}
                     >
-                      <span className="flex items-center gap-2">
+                      <span className={`flex items-center gap-2 ${isRtl ? 'flex-row-reverse' : ''}`}>
                         <span className="text-lg">{lang.flag}</span>
                         <span>{lang.label}</span>
                       </span>
@@ -305,7 +306,7 @@ const Navbar = () => {
                   initial="hidden"
                   animate="visible"
                   exit="exit"
-                  className="absolute top-full right-0 mt-2 w-40 bg-white border border-obsidian-200 rounded-xl overflow-hidden shadow-xl z-[10000]"
+                  className={`absolute top-full ${isRtl ? 'left-0' : 'right-0'} mt-2 w-40 bg-white border border-obsidian-200 rounded-xl overflow-hidden shadow-xl z-[10000]`}
                 >
                   {[
                     { code: 'en', label: 'English', flag: '🇬🇧' },
@@ -317,9 +318,9 @@ const Navbar = () => {
                     <button
                       key={lang.code}
                       onClick={() => changeLanguage(lang.code)}
-                      className={`w-full text-left px-4 py-3 flex items-center justify-between text-body-md border-b border-obsidian-100 last:border-0 transition-colors ${i18n.language === lang.code ? 'text-amber-600 font-semibold bg-amber-50' : 'text-obsidian-700 hover:text-amber-600 hover:bg-amber-50'}`}
+                      className={`w-full ${isRtl ? 'text-right' : 'text-left'} px-4 py-3 flex items-center justify-between text-body-md border-b border-obsidian-100 last:border-0 transition-colors ${i18n.language === lang.code ? 'text-amber-600 font-semibold bg-amber-50' : 'text-obsidian-700 hover:text-amber-600 hover:bg-amber-50'}`}
                     >
-                      <span className="flex items-center gap-2">
+                      <span className={`flex items-center gap-2 ${isRtl ? 'flex-row-reverse' : ''}`}>
                         <span className="text-lg">{lang.flag}</span>
                         <span>{lang.label}</span>
                       </span>
@@ -354,9 +355,9 @@ const Navbar = () => {
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, x: '100%' }}
+              initial={{ opacity: 0, x: isRtl ? '-100%' : '100%' }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: '100%' }}
+              exit={{ opacity: 0, x: isRtl ? '-100%' : '100%' }}
               transition={{ type: 'tween', duration: 0.35, ease: 'easeInOut' }}
               className="fixed inset-0 bg-white z-40 flex flex-col px-8 pt-24 pb-8 overflow-y-auto lg:hidden h-screen w-screen"
             >
@@ -499,7 +500,7 @@ const Navbar = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="absolute top-full right-1 mt-5 w-48 bg-white border border-obsidian-200 rounded-xl overflow-hidden shadow-xl z-[10000]"
+              className={`absolute top-full ${isRtl ? 'left-1' : 'right-1'} mt-5 w-48 bg-white border border-obsidian-200 rounded-xl overflow-hidden shadow-xl z-[10000]`}
             >
               <div className="px-4 py-3 border-b border-obsidian-100">
                 <p className="text-caption text-obsidian-900 font-semibold">{user.name}</p>

@@ -7,7 +7,8 @@ import { staggerContainer, fadeInUp } from '../../animations/variants';
 import { blogs } from '../../data/blogs';
 
 const BlogDetails = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isRtl = i18n.dir() === 'rtl';
   const { slug } = useParams();
   const blog = blogs.find(b => b.slug === slug);
 
@@ -122,7 +123,7 @@ const BlogDetails = () => {
                     </Link>
                     <div className="mt-auto pt-4 border-t border-obsidian-900/10">
                       <Link to={`/blogs/${relBlog.slug}`} className="inline-block text-body-sm text-gold-500 hover:text-gold-700 font-semibold uppercase tracking-wider transition-colors">
-                        {t('blogs.readMore', 'Read More →')}
+                        <span className={isRtl ? 'rtl-flip' : ''}>{t('blogs.readMore', 'Read More →')}</span>
                       </Link>
                     </div>
                   </div>

@@ -70,9 +70,80 @@
   html[dir="rtl"] {
     text-align: right;
   }
+
+  /* Header must always be full width */
+  html[dir="rtl"] header.fixed.top-0 {
+    left: 0 !important;
+    right: 0 !important;
+  }
+  html[dir="rtl"] header.fixed.top-0 > div {
+    text-align: initial;
+  }
   html[dir="rtl"] .rtl-flip {
     transform: scaleX(-1);
     display: inline-block;
+  }
+
+  /* ── RTL Overrides ──────────────────────────────────────────── */
+  html[dir="rtl"] .flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+  html[dir="rtl"] .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+  }
+  html[dir="rtl"] .pl-4 {
+    padding-left: 0;
+    padding-right: 1rem;
+  }
+  html[dir="rtl"] .pr-4 {
+    padding-right: 0;
+    padding-left: 1rem;
+  }
+  html[dir="rtl"] .ml-2 {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+  html[dir="rtl"] .mr-2 {
+    margin-right: 0;
+    margin-left: 0.5rem;
+  }
+  html[dir="rtl"] .ml-1 {
+    margin-left: 0;
+    margin-right: 0.25rem;
+  }
+  html[dir="rtl"] .mr-1 {
+    margin-right: 0;
+    margin-left: 0.25rem;
+  }
+  html[dir="rtl"] .ml-3 {
+    margin-left: 0;
+    margin-right: 0.75rem;
+  }
+  html[dir="rtl"] .mr-3 {
+    margin-right: 0;
+    margin-left: 0.75rem;
+  }
+  html[dir="rtl"] .border-r {
+    border-right: 0;
+    border-left-width: 1px;
+  }
+  html[dir="rtl"] .border-l {
+    border-left: 0;
+    border-right-width: 1px;
+  }
+  html[dir="rtl"] .text-left {
+    text-align: right;
+  }
+  html[dir="rtl"] .text-right {
+    text-align: left;
+  }
+  html[dir="rtl"] .left-full {
+    left: auto;
+    right: 100%;
+  }
+  html[dir="rtl"] .right-full {
+    right: auto;
+    left: 100%;
   }
 
   *:focus-visible {
@@ -136,6 +207,17 @@
     font-size: var(--text-caption);
     line-height: var(--leading-normal);
     letter-spacing: var(--tracking-caps);
+  }
+
+    /* ── Scrollbar Utilities ─────────────────────────────────────── */
+  .no-scrollbar::-webkit-scrollbar,
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar,
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   /* ── Glassmorphism ──────────────────────────────────────────── */
@@ -239,7 +321,12 @@ footer a {
 }
 footer a:hover {
   color: var(--color-gold) !important;
+}
+html[dir="ltr"] footer a:hover {
   transform: translateX(4px);
+}
+html[dir="rtl"] footer a:hover {
+  transform: translateX(-4px);
 }
 
 /* ── Social Icons ───────────────────────────────────────────────── */

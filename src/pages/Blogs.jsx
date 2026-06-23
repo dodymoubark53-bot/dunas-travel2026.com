@@ -7,7 +7,8 @@ import Button from '../components/ui/Button';
 import { blogs } from '../data/blogs';
 
 const Blogs = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isRtl = i18n.dir() === 'rtl';
 
   return (
     <div className="w-full bg-[#F8F9FF] pb-24">
@@ -48,7 +49,7 @@ const Blogs = () => {
                   <p className="text-body-sm text-[#4A4A6E] line-clamp-3 mb-6">{t(`blogs.${blog.excerpt}`, blog.excerpt)}</p>
                   <div className="mt-auto pt-4 border-t border-gray-100">
                     <Link to={`/blogs/${blog.slug}`} className="inline-block text-body-md text-gold-500 hover:text-gold-700 hover:drop-shadow-[0_0_8px_rgba(245,166,35,0.5)] font-semibold transition-all">
-                      {t('blogs.readMore', 'Read More →')}
+                      <span className={isRtl ? 'rtl-flip' : ''}>{t('blogs.readMore', 'Read More →')}</span>
                     </Link>
                   </div>
                 </div>
@@ -59,9 +60,9 @@ const Blogs = () => {
 
         {/* Pagination */}
         <div className="flex justify-center mt-16 gap-2">
-          <Button variant="outline-gold" className="px-4 opacity-50 cursor-not-allowed">&larr;</Button>
+          <Button variant="outline-gold" className={`px-4 opacity-50 cursor-not-allowed ${isRtl ? 'rtl-flip' : ''}`}>&larr;</Button>
           <Button variant="gold-glow" className="px-5">1</Button>
-          <Button variant="outline-gold" className="px-4 opacity-50 cursor-not-allowed">&rarr;</Button>
+          <Button variant="outline-gold" className={`px-4 opacity-50 cursor-not-allowed ${isRtl ? 'rtl-flip' : ''}`}>&rarr;</Button>
         </div>
       </section>
     </div>

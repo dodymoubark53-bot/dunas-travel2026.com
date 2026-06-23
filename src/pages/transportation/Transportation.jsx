@@ -10,7 +10,8 @@ import { useCurrency } from '../../context/CurrencyContext';
 import Button from '../../components/ui/Button';
 
 const Transportation = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isRtl = i18n.dir() === 'rtl';
   const { formatPrice } = useCurrency();
   const [activeFilter, setActiveFilter] = useState('All');
   const [selectedVehicleId, setSelectedVehicleId] = useState('');
@@ -93,7 +94,7 @@ const Transportation = () => {
         </div>
 
         {/* Vehicles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24 text-left">
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24 ${isRtl ? 'text-right' : 'text-left'}`}>
           {filteredVehicles.map((vehicle, index) => (
             <motion.div 
               key={vehicle.id}
@@ -115,7 +116,7 @@ const Transportation = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <span className="text-ivory-50 font-semibold flex items-center gap-2">
-                    {t('transportation.reserveNow', 'Reserve Now')} &rarr;
+                    <span className={isRtl ? 'rtl-flip' : ''}>{t('transportation.reserveNow', 'Reserve Now')} &rarr;</span>
                   </span>
                 </div>
               </div>
@@ -171,7 +172,7 @@ const Transportation = () => {
                     onClick={() => handleReserveClick(vehicle.id)}
                     className="text-body-md font-medium text-gold-500 hover:text-gold-600 transition-colors rounded-full cursor-pointer outline-none"
                   >
-                    {t('transportation.reserveNow', 'Reserve Now')} &rarr;
+                    <span className={isRtl ? 'rtl-flip' : ''}>{t('transportation.reserveNow', 'Reserve Now')} &rarr;</span>
                   </button>
                 </div>
               </div>

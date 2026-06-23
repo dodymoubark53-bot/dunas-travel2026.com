@@ -13,7 +13,8 @@ import { useCurrency } from '../../context/CurrencyContext';
 import Button from '../../components/ui/Button';
 
 const RoomDetails = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isRtl = i18n.dir() === 'rtl';
   const { roomSlug } = useParams();
   const location = useLocation();
   const { formatPrice } = useCurrency();
@@ -225,7 +226,7 @@ const RoomDetails = () => {
         <div className="relative z-10 container mx-auto px-6 max-w-6xl flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
           <div className="text-left w-full md:w-auto">
             <Link to={`${prefix}/hotels/sol-pyramid-hotel`} className="inline-flex items-center gap-2 text-gold-500 hover:text-gold-600 font-semibold mb-4 transition-colors">
-              <FaArrowLeft /> {t('common.back', 'Back to Hotel')}
+              <span className={isRtl ? 'rtl-flip' : ''}><FaArrowLeft /></span> {t('common.back', 'Back to Hotel')}
             </Link>
             <h1 className="text-4xl md:text-6xl text-white font-display font-semibold drop-shadow-md mb-2">
               {room.name}

@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { FaCheckCircle, FaMapMarkerAlt, FaBed, FaClock, FaTag, FaChevronRight } from 'react-icons/fa';
+import { FaCheckCircle, FaMapMarkerAlt, FaBed, FaClock, FaTag, FaChevronRight, FaMoon, FaSun, FaCalendarAlt } from 'react-icons/fa';
 import { fadeInUp } from '../../animations/variants';
 import Button from '../../components/ui/Button';
 import BookingForm from '../../components/booking/BookingForm';
@@ -27,7 +27,7 @@ const DubaiProgramDetails = () => {
     );
   }
 
-  const { title, overview, duration, highlights, days, images, code, minPax, includes, excludes, pricing } = program;
+  const { title, overview, duration, highlights, days, images, code, minPax, includes, excludes, pricing, extraNightPrices, exhibitionSurcharges } = program;
 
   return (
     <div className="w-full bg-obsidian-50 min-h-screen">
@@ -308,6 +308,146 @@ const DubaiProgramDetails = () => {
                 </div>
               ))}
             </div>
+          </motion.div>
+        </section>
+      )}
+
+      {/* Extra Night Prices */}
+      {extraNightPrices && (
+        <section className="container mx-auto px-6 mt-24">
+          <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <div className="text-center mb-12">
+              <h2 className="text-display-lg text-obsidian-900" style={{ fontFamily: "'Playfair Display', serif" }}>
+                {t('dest.dubai.extraNightTitle', 'Extra Night Prices')}
+              </h2>
+              <div className="w-24 h-1 bg-gold-500 mx-auto mt-4"></div>
+              <p className="text-body-md text-obsidian-500 mt-6 max-w-2xl mx-auto">
+                {t('dest.dubai.extraNightDesc', 'Per person per night supplement for extra nights before or after the program.')}
+              </p>
+            </div>
+            <div className="overflow-x-auto rounded-xl border border-gold-500/10 max-w-5xl mx-auto">
+              <table className="w-full text-left border-collapse text-body-sm">
+                <thead>
+                  <tr className="bg-obsidian-900 text-ivory-50">
+                    <th className="px-3 py-2.5 font-semibold text-xs uppercase tracking-wider">{t('dest.dubai.hotelOrSimilar', 'HOTEL OR SIMILAR')}</th>
+                    <th className="px-3 py-2.5 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">
+                      <FaMoon className="inline mr-1 text-blue-300" size={12} />
+                      {t('dest.dubai.pricesWinter', 'WINTER')}
+                    </th>
+                    <th className="px-3 py-2.5 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">
+                      <FaSun className="inline mr-1 text-amber-400" size={12} />
+                      {t('dest.dubai.pricesSummer', 'SUMMER')}
+                      {extraNightPrices.summerDates && <span className="block font-normal text-[10px] opacity-75">{extraNightPrices.summerDates}</span>}
+                    </th>
+                    <th className="px-3 py-2.5 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">
+                      {t('dest.dubai.otherSeason', 'OTHER')}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {extraNightPrices.hotels.map((hotel, idx) => (
+                    <tr key={idx} className="border-b border-gold-500/10 even:bg-obsidian-50">
+                      <td className="px-3 py-2.5 text-obsidian-700 font-medium text-xs md:text-body-sm">{hotel}</td>
+                      <td className="px-3 py-2.5 text-obsidian-600 text-xs md:text-body-sm whitespace-nowrap">
+                        DBL: ${extraNightPrices.winter[idx].dbl}
+                        <span className="text-obsidian-400"> / SGL SUP: ${extraNightPrices.winter[idx].sgl}</span>
+                      </td>
+                      <td className="px-3 py-2.5 text-obsidian-600 text-xs md:text-body-sm whitespace-nowrap">
+                        DBL: ${extraNightPrices.summer[idx].dbl}
+                        <span className="text-obsidian-400"> / SGL SUP: ${extraNightPrices.summer[idx].sgl}</span>
+                      </td>
+                      <td className="px-3 py-2.5 text-obsidian-600 text-xs md:text-body-sm whitespace-nowrap">
+                        DBL: ${extraNightPrices.other[idx].dbl}
+                        <span className="text-obsidian-400"> / SGL SUP: ${extraNightPrices.other[idx].sgl}</span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </motion.div>
+        </section>
+      )}
+
+      {/* Exhibition Surcharges */}
+      {exhibitionSurcharges && (
+        <section className="container mx-auto px-6 mt-24">
+          <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <div className="text-center mb-12">
+              <h2 className="text-display-lg text-obsidian-900" style={{ fontFamily: "'Playfair Display', serif" }}>
+                {t('dest.dubai.exhibitionTitle', 'Exhibition Surcharges')}
+              </h2>
+              <div className="w-24 h-1 bg-gold-500 mx-auto mt-4"></div>
+              <p className="text-body-md text-obsidian-500 mt-6 max-w-2xl mx-auto">
+                {t('dest.dubai.exhibitionDesc', 'Per person per night surcharges applicable during exhibition periods.')}
+              </p>
+            </div>
+
+            {/* Dubai */}
+            {exhibitionSurcharges.dubai && (
+              <div className="mb-12 max-w-5xl mx-auto">
+                <h3 className="text-display-md text-obsidian-900 mb-6 flex items-center gap-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  <FaMapMarkerAlt className="text-gold-500 text-xl" />
+                  {t('dest.dubai.dubai', 'Dubai')}
+                </h3>
+                <div className="overflow-x-auto rounded-xl border border-gold-500/10">
+                  <table className="w-full text-left border-collapse text-body-sm">
+                    <thead>
+                      <tr className="bg-obsidian-900 text-ivory-50">
+                        <th className="px-3 py-2.5 font-semibold text-xs uppercase tracking-wider">{t('dest.dubai.event', 'Event')}</th>
+                        <th className="px-3 py-2.5 font-semibold text-xs uppercase tracking-wider">{t('dest.dubai.dates', 'Dates')}</th>
+                        <th className="px-3 py-2.5 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">3*</th>
+                        <th className="px-3 py-2.5 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">4*</th>
+                        <th className="px-3 py-2.5 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">5*</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {exhibitionSurcharges.dubai.map((item, idx) => (
+                        <tr key={idx} className="border-b border-gold-500/10 even:bg-obsidian-50">
+                          <td className="px-3 py-2.5 text-obsidian-700 font-semibold text-xs md:text-body-sm">{item.event}</td>
+                          <td className="px-3 py-2.5 text-obsidian-600 text-xs md:text-body-sm"><FaCalendarAlt className="inline mr-1 text-gold-500" size={10} />{item.dates}</td>
+                          <td className="px-3 py-2.5 text-obsidian-600 text-xs md:text-body-sm whitespace-nowrap">DBL: ${item['3star'].dbl} / SGL: ${item['3star'].sgl}</td>
+                          <td className="px-3 py-2.5 text-obsidian-600 text-xs md:text-body-sm whitespace-nowrap">DBL: ${item['4star'].dbl} / SGL: ${item['4star'].sgl}</td>
+                          <td className="px-3 py-2.5 text-obsidian-600 text-xs md:text-body-sm whitespace-nowrap">DBL: ${item['5star'].dbl} / SGL: ${item['5star'].sgl}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
+            {/* Abu Dhabi */}
+            {exhibitionSurcharges.abuDhabi && (
+              <div className="max-w-5xl mx-auto">
+                <h3 className="text-display-md text-obsidian-900 mb-6 flex items-center gap-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  <FaMapMarkerAlt className="text-gold-500 text-xl" />
+                  {t('dest.dubai.abuDhabi', 'Abu Dhabi')}
+                </h3>
+                <div className="overflow-x-auto rounded-xl border border-gold-500/10">
+                  <table className="w-full text-left border-collapse text-body-sm">
+                    <thead>
+                      <tr className="bg-obsidian-900 text-ivory-50">
+                        <th className="px-3 py-2.5 font-semibold text-xs uppercase tracking-wider">{t('dest.dubai.event', 'Event')}</th>
+                        <th className="px-3 py-2.5 font-semibold text-xs uppercase tracking-wider">{t('dest.dubai.dates', 'Dates')}</th>
+                        <th className="px-3 py-2.5 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">4*</th>
+                        <th className="px-3 py-2.5 font-semibold text-xs uppercase tracking-wider whitespace-nowrap">5*</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {exhibitionSurcharges.abuDhabi.map((item, idx) => (
+                        <tr key={idx} className="border-b border-gold-500/10 even:bg-obsidian-50">
+                          <td className="px-3 py-2.5 text-obsidian-700 font-semibold text-xs md:text-body-sm">{item.event}</td>
+                          <td className="px-3 py-2.5 text-obsidian-600 text-xs md:text-body-sm"><FaCalendarAlt className="inline mr-1 text-gold-500" size={10} />{item.dates}</td>
+                          <td className="px-3 py-2.5 text-obsidian-600 text-xs md:text-body-sm whitespace-nowrap">DBL: ${item['4star'].dbl} / SGL: ${item['4star'].sgl}</td>
+                          <td className="px-3 py-2.5 text-obsidian-600 text-xs md:text-body-sm whitespace-nowrap">DBL: ${item['5star'].dbl} / SGL: ${item['5star'].sgl}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
           </motion.div>
         </section>
       )}
