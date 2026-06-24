@@ -17,6 +17,8 @@ const PROGRAM_IMAGES = {
   'REG-11': 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=800&q=80',
   'REG-12': 'https://images.unsplash.com/photo-1593627010885-1c869c3d52b4?auto=format&fit=crop&w=800&q=80',
   'REG-05-B': 'https://images.unsplash.com/photo-1580651315530-69c8e0026377?auto=format&fit=crop&w=800&q=80',
+  'REG-13': 'https://images.unsplash.com/photo-1541432901042-2f8a9e3c2f6f?auto=format&fit=crop&w=800&q=80',
+  'REG-14': 'https://images.unsplash.com/photo-1580651315530-69c8e0026377?auto=format&fit=crop&w=800&q=80',
 };
 
 const getLangValue = (obj, lang) => {
@@ -27,7 +29,7 @@ const getLangValue = (obj, lang) => {
 
 const slugify = (str) => str.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 
-const TURKEY_IDS = ['REG-01', 'IST-01', 'REG-03', 'REG-04', 'REG-05', 'REG-05-B', 'REG-06', 'REG-07', 'REG-08', 'REG-09', 'REG-10', 'REG-11', 'REG-12'];
+const TURKEY_IDS = ['REG-01', 'IST-01', 'REG-03', 'REG-04', 'REG-05', 'REG-05-B', 'REG-06', 'REG-07', 'REG-08', 'REG-09', 'REG-10', 'REG-11', 'REG-12', 'REG-13', 'REG-14'];
 
 export const useTurkeyPrograms = () => {
   const { i18n } = useTranslation();

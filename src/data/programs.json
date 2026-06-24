@@ -7129,6 +7129,340 @@
           }
         }
       ]
+    },
+    {
+      "id": "REG-13",
+      "name": {
+        "ar": "إضافة الكنائس السبع - 3 أيام / ليلتين",
+        "en": "Extension 7 Churches - 3 Days / 2 Nights",
+        "es": "Extensión 7 Iglesias - 3 Días / 2 Noches",
+        "it": "Estensione 7 Chiese - 3 Giorni / 2 Notti",
+        "pt": "Extensão 7 Igrejas - 3 Dias / 2 Noites"
+      },
+      "duration": {
+        "ar": "3 أيام / ليلتين",
+        "en": "3 Days / 2 Nights",
+        "es": "3 Días / 2 Noches",
+        "it": "3 Giorni / 2 Notti",
+        "pt": "3 Dias / 2 Noites"
+      },
+      "highlights": {
+        "ar": "ثياتيرا | بيرغامون | سارديس | فيلادلفيا | لاوديكيا",
+        "en": "Thyatira | Pergamon | Sardis | Philadelphia | Laodicea",
+        "es": "Tiatira | Pérgamo | Sardes | Filadelfia | Laodicea",
+        "it": "Tiatira | Pergamo | Sardi | Filadelfia | Laodicea",
+        "pt": "Tiatira | Pérgamo | Sardes | Filadélfia | Laodiceia"
+      },
+      "overview": {
+        "ar": "برنامج إضافي لمدة 3 أيام لزيارة الكنائس السبع في رحلة الكتاب المقدس عبر تركيا. يشمل ثياتيرا، بيرغامون، سارديس، فيلادلفيا ولاوديكيا. مثالي كإضافة لبرنامج شغف تركيا.",
+        "en": "A 3-day extension tour visiting the Seven Churches of the Biblical tour across Turkey. Includes Thyatira, Pergamon, Sardis, Philadelphia and Laodicea. Ideal as an extension to Passion of Turkey.",
+        "es": "Un tour de extensión de 3 días visitando las Siete Iglesias del recorrido bíblico por Turquía. Incluye Tiatira, Pérgamo, Sardes, Filadelfia y Laodicea. Ideal como extensión a Pasión de Turquía.",
+        "it": "Un tour di estensione di 3 giorni che visita le Sette Chiese del percorso biblico attraverso la Turchia. Include Tiatira, Pergamo, Sardi, Filadelfia e Laodicea. Ideale come estensione a Passione di Turchia.",
+        "pt": "Um tour de extensão de 3 dias visitando as Sete Igrejas do percurso bíblico pela Turquia. Inclui Tiatira, Pérgamo, Sardes, Filadélfia e Laodiceia. Ideal como extensão à Paixão da Turquia."
+      },
+      "code": {
+        "ar": "REG-13",
+        "en": "REG-13",
+        "es": "REG-13",
+        "it": "REG-13",
+        "pt": "REG-13"
+      },
+      "minPax": {
+        "ar": "4 أشخاص",
+        "en": "4 pax",
+        "es": "4 pax",
+        "it": "4 pax",
+        "pt": "4 pax"
+      },
+      "slug": "reg-13-extension-7-churches",
+      "days": [
+        {
+          "day": "1",
+          "meals": {
+            "ar": "عشاء",
+            "en": "Dinner",
+            "es": "Cena",
+            "it": "Cena",
+            "pt": "Jantar"
+          },
+          "description": {
+            "ar": "اليوم الأول — كوشاداسي ← بيرغامون ← إزمير\nالانطلاق إلى ثياتيرا (أكهيسار)؛ مدينة تُعرف أيضاً باسم صباغات اللون الأرجواني. نزور بقايا بازيليكا من العصر البيزنطي. نتوجه إلى بيرغامون، واحدة من أغنى مدن المقاطعة الرومانية القديمة في آسيا. بين أنقاض الأكروبوليس، سنزور المسرح الأكثر انحداراً في العالم، معبد تراجان، معبد أثينا، وسنشاهد أيضاً بقايا مذبح زيوس. نواصل بزيارة البازيليكا الحمراء المعروفة بكنيسة بيرغامون.\nالوجبات: عشاء",
+            "en": "Day 1 — Kusadasi → Pergamon → Izmir\nDeparture to Thyatira (Akhisar); a city also known as The Purple Dyes. We visit the remains of a basilica from the Byzantine era. We head to Pergamon, one of the richest cities of the ancient Roman province of Asia. Among the ruins of the Acropolis, we will visit the steepest theater in the world, the Temple of Trajan, the Temple of Athena, and we also see the remains of the Altar of Zeus. We continue with a visit to the Red Basilica, known as the Church of Pergamon.\nMeals: Dinner",
+            "es": "1 Día — Kusadasi → Pérgamo → Esmirna\nSalida a Tiatira (Akhisar); ciudad también conocida como Los Tintes de Color Púrpura. Visitamos los restos de una basílica de la época bizantina. Nos dirigimos a Pérgamo, una de las ciudades más ricas de la antigua provincia romana de Asia. Entre las ruinas de la Acrópolis, visitaremos el teatro más empinado del mundo, el templo de Trajano, el templo de Atenea y también visitamos los restos del Altar de Zeus. Continuamos con la visita de la Basílica Roja que se le conoce como la Iglesia de Pérgamo.\nComidas incluidas: Cena",
+            "it": "1° Giorno — Kusadasi → Pergamo → Smirne\nPartenza per Tiatira (Akhisar); città conosciuta anche come Le Tinte di Colore Porpora. Visitiamo i resti di una basilica di epoca bizantina. Ci dirigiamo a Pergamo, una delle città più ricche dell'antica provincia romana d'Asia. Tra le rovine dell'Acropoli, visiteremo il teatro più ripido del mondo, il Tempio di Traiano, il Tempio di Atena e vedremo anche i resti dell'Altare di Zeus. Continuiamo con la visita della Basilica Rossa, conosciuta come la Chiesa di Pergamo.\nPasti inclusi: Cena",
+            "pt": "1º Dia — Kusadasi → Pérgamo → Esmirna\nSaída para Tiatira (Akhisar); cidade também conhecida como Os Tintos de Cor Púrpura. Visitamos os restos de uma basílica da época bizantina. Dirigimo-nos a Pérgamo, uma das cidades mais ricas da antiga província romana da Ásia. Entre as ruínas da Acrópole, visitaremos o teatro mais íngreme do mundo, o Templo de Trajano, o Templo de Atena e também vemos os restos do Altar de Zeus. Continuamos com a visita à Basílica Vermelha, conhecida como a Igreja de Pérgamo.\nRefeições incluídas: Jantar"
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "ar": "إفطار + عشاء",
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "it": "Colazione + Cena",
+            "pt": "Café da manhã + Jantar"
+          },
+          "description": {
+            "ar": "اليوم الثاني — إزمير ← سارديس ← فيلادلفيا ← لاوديكيا ← إزمير\nإفطار. تبدأ الجولة في إزمير، مدينة إزمير حيث استشهد القديس بوليكاربوس. نتوجه إلى سارديس (صاليهلي حالياً)، عاصمة ليديا. زيارة الأغورا، الصالة الرياضية، الكنيس، ومعبد أرتميس. نواصل إلى فيلادلفيا، زيارة كنيسة القديس يوحنا. العشاء والإقامة.\nالوجبات: إفطار وعشاء",
+            "en": "Day 2 — Izmir → Sardis → Philadelphia → Laodicea → Izmir\nBreakfast. The tour begins in Izmir, the city of Smyrna where Saint Polycarp was martyred. We head to Sardis (modern Salihli), the capital of Lydia. Visit to the Agora, the Gymnasium, the Synagogue, and the Temple of Artemis. We continue to Philadelphia, visiting the Church of Saint John. Dinner and accommodation.\nMeals: Breakfast and dinner",
+            "es": "2 Día — Esmirna → Sardes → Filadelfia → Laodicea → Esmirna\nDesayuno. El tour empieza en Esmirna, ciudad de Izmir donde San Policarpo fue martirizado. Seguimos hacia Sardes, la actual Salihli, capital de Lidia. Visita al Ágora, el Gimnasio, la Sinagoga y el Templo de Artemisa. Continuamos con Filadelfia, visitando la Iglesia de San Juan. Cena y alojamiento.\nComidas incluidas: Desayuno y cena",
+            "it": "2° Giorno — Smirne → Sardi → Filadelfia → Laodicea → Smirne\nColazione. Il tour inizia a Smirne, città dove San Policarpo fu martirizzato. Proseguiamo verso Sardi (l'odierna Salihli), capitale della Lidia. Visita all'Agorà, al Ginnasio, alla Sinagoga e al Tempio di Artemide. Continuiamo per Filadelfia, visitando la Chiesa di San Giovanni. Cena e sistemazione.\nPasti inclusi: Colazione e cena",
+            "pt": "2º Dia — Esmirna → Sardes → Filadélfia → Laodiceia → Esmirna\nCafé da manhã. O tour começa em Esmirna, cidade onde São Policarpo foi martirizado. Seguimos para Sardes (atual Salihli), capital da Lídia. Visita à Ágora, ao Ginásio, à Sinagoga e ao Templo de Ártemis. Continuamos para Filadélfia, visitando a Igreja de São João. Jantar e hospedagem.\nRefeições incluídas: Café da manhã e jantar"
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "it": "Colazione",
+            "pt": "Café da manhã"
+          },
+          "description": {
+            "ar": "اليوم الثالث — كوشاداسي ← الرحلة البحرية (أو إزمير)\nإفطار في الفندق والنقل إلى ميناء كوشاداسي للصعود إلى السفينة أو إلى مطار إزمير.\nالوجبات: إفطار",
+            "en": "Day 3 — Kusadasi → Cruise (or Izmir)\nBreakfast at the hotel and transfer to Kusadasi port to board your ship or to Izmir airport.\nMeals: Breakfast",
+            "es": "3 Día — Kusadasi → Crucero (o Esmirna)\nDesayuno en el hotel y traslado al puerto de Kuşadası para embarcar su barco o al aeropuerto de Esmirna.\nComidas incluidas: Desayuno",
+            "it": "3° Giorno — Kusadasi → Crociera (o Smirne)\nColazione in hotel e trasferimento al porto di Kuşadası per imbarcarsi sulla nave o all'aeroporto di Smirne.\nPasti inclusi: Colazione",
+            "pt": "3º Dia — Kusadasi → Cruzeiro (ou Esmirna)\nCafé da manhã no hotel e transfer para o porto de Kuşadası para embarcar no navio ou para o aeroporto de Esmirna.\nRefeições incluídas: Café da manhã"
+          }
+        }
+      ]
+    },
+    {
+      "id": "REG-14",
+      "name": {
+        "ar": "سر المعبد",
+        "en": "Secret of the Temple",
+        "es": "Secreto del Templo",
+        "it": "Segreto del Tempio",
+        "pt": "Segredo do Templo"
+      },
+      "duration": {
+        "ar": "11 يوماً / 10 ليالٍ",
+        "en": "11 days / 10 nights",
+        "es": "11 días / 10 noches",
+        "it": "11 giorni / 10 notti",
+        "pt": "11 dias / 10 noites"
+      },
+      "highlights": {
+        "ar": "إسطنبول | أنقرة | كابادوكيا | غازي عنتاب | هالفيتي | جبل نمرود | أورفا | حران | غوبكلي تبه | ماردين",
+        "en": "Istanbul | Ankara | Cappadocia | Gaziantep | Halfeti | Mount Nemrut | Urfa | Harran | Göbeklitepe | Mardin",
+        "es": "Estambul | Ankara | Capadocia | Gaziantep | Halfeti | Monte Nemrut | Urfa | Harran | Göbeklitepe | Mardin",
+        "it": "Istanbul | Ankara | Cappadocia | Gaziantep | Halfeti | Monte Nemrut | Urfa | Harran | Göbeklitepe | Mardin",
+        "pt": "Istambul | Ancara | Capadócia | Gaziantep | Halfeti | Monte Nemrut | Urfa | Harran | Göbeklitepe | Mardin"
+      },
+      "overview": {
+        "ar": "هذه ليست مجرد رحلة، بل هي بعثة استكشافية إلى بلاد الرافدين ومنطقة مهد الحضارات الإنسانية في جنوب شرق تركيا. برنامج استثنائي يبتعد عن المسارات التقليدية ليأخذ المسافرين الشغوفين إلى نقطة الصفر في التاريخ، ومزارات الأنبياء، والبلدات التي لا تزال تتحدث لغة السيد المسيح الآرامية.",
+        "en": "This is not just a trip, but an exploratory expedition to Mesopotamia and the cradle of human civilization in southeastern Turkey. An exceptional program that moves away from traditional routes to take passionate travelers to ground zero of history, the shrines of prophets, and towns that still speak the Aramaic language of Jesus Christ.",
+        "es": "Esto no es solo un viaje, sino una expedición exploratoria a Mesopotamia y la cuna de las civilizaciones humanas en el sureste de Turquía. Un programa excepcional que se aleja de las rutas tradicionales para llevar a los viajeros apasionados al punto cero de la historia, los santuarios de los profetas y los pueblos que aún hablan la lengua aramea de Jesucristo.",
+        "it": "Questo non è solo un viaggio, ma una spedizione esplorativa in Mesopotamia e nella culla delle civiltà umane nel sud-est della Turchia. Un programma eccezionale che si allontana dalle rotte tradizionali per portare i viaggiatori appassionati al punto zero della storia, ai santuari dei profeti e ai paesi che parlano ancora la lingua aramaica di Gesù Cristo.",
+        "pt": "Esta não é apenas uma viagem, mas uma expedição exploratória à Mesopotâmia e ao berço das civilizações humanas no sudeste da Turquia. Um programa excepcional que se afasta das rotas tradicionais para levar viajantes apaixonados ao ponto zero da história, aos santuários dos profetas e às cidades que ainda falam a língua aramaica de Jesus Cristo."
+      },
+      "code": {
+        "ar": "REG-14",
+        "en": "REG-14",
+        "es": "REG-14",
+        "it": "REG-14",
+        "pt": "REG-14"
+      },
+      "minPax": {
+        "ar": "4 أفراد",
+        "en": "4 Pax",
+        "es": "4 Pax",
+        "it": "4 Pax",
+        "pt": "4 Pax"
+      },
+      "slug": "reg-14-secret-of-the-temple",
+      "days": [
+        {
+          "day": "1",
+          "meals": {
+            "ar": "وجبات في الفندق",
+            "en": "Meals at hotel",
+            "es": "Comidas en el hotel",
+            "it": "Pasti in hotel",
+            "pt": "Refeições no hotel"
+          },
+          "description": {
+            "ar": "اليوم الأول - الوصول إلى إسطنبول\nالوصول والمساعدة. النقل إلى الفندق. الإقامة في الفندق.",
+            "en": "Day 1 - Arrival in Istanbul\nArrival and assistance. Transfer to the hotel. Accommodation at the hotel.",
+            "es": "1 Día - Llegada a Estambul\nLlegada y asistencia. Traslado al hotel. Alojamiento en el hotel.",
+            "it": "1° Giorno - Arrivo a Istanbul\nArrivo e assistenza. Trasferimento in hotel. Sistemazione in hotel.",
+            "pt": "1º Dia - Chegada a Istambul\nChegada e assistência. Transfer para o hotel. Hospedagem no hotel."
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "it": "Colazione",
+            "pt": "Café da manhã"
+          },
+          "description": {
+            "ar": "اليوم الثاني - إسطنبول\nإفطار في الفندق. صباحاً، الانطلاق لرؤية أسوار القسطنطينية القديمة، زيارة مسجد رستم باشا. المسجد صممه المهندس المعماري الإمبراطوري سنان آغا للصدر الأعظم رستم باشا (زوج إحدى بنات سليمان القانوني، السلطانة مهرماه). زيارة البازار المصري أو بازار التوابل الذي بُني في القرن السابع عشر في حي أمنونو التاريخي القديم في إسطنبول. ثم إمكانية القيام برحلة اختيارية \"لآلئ إسطنبول\". العودة إلى الفندق على نفقة العميل.\nالوجبات: إفطار",
+            "en": "Day 2 - Istanbul\nBreakfast at the hotel. Morning departure to see the ancient Walls of Constantinople, visit to Rüstem Pasha Mosque. The mosque was designed by the imperial architect Mimar Sinan for the Grand Vizier Damat Rüstem Pasha (husband of one of Suleiman the Magnificent's daughters, Sultan Mihrimah). Visit to the Egyptian Bazaar or Spice Bazaar built in the 17th century and located in the old historic district of Eminönü in Istanbul. Then possibility of an optional excursion \"Pearls of Istanbul\". Return to the hotel at the client's own expense.\nMeals: Breakfast",
+            "es": "2 Día - Estambul\nDesayuno en el hotel. Por la mañana salida para contemplar las antiguas Murallas de Constantinopla, visita a la Mezquita de Rüstem Pasha. La mezquita fue diseñada por el arquitecto imperial Mimar Sinan para el Gran Visir Damat Rüstem Pasha (marido de una de las hijas de Suleiman el Magnífico, la Sultana Mihrimah). Visita al Bazar Egipcio o Bazar de las Especias construido en el siglo XVII y situado en el antiguo barrio histórico de Eminönü en Estambul. Luego posibilidad de tener una excursión opcional \"Perlas de Estambul\". Regreso al hotel por cuenta del cliente.\nComidas: Desayuno",
+            "it": "2° Giorno - Istanbul\nColazione in hotel. Partenza mattutina per ammirare le antiche Mura di Costantinopoli, visita alla Moschea di Rüstem Pasha. La moschea fu progettata dall'architetto imperiale Mimar Sinan per il Gran Visir Damat Rüstem Pasha (marito di una delle figlie di Solimano il Magnifico, la Sultana Mihrimah). Visita al Bazar Egiziano o Bazar delle Spezie costruito nel XVII secolo e situato nel vecchio quartiere storico di Eminönü a Istanbul. Poi possibilità di un'escursione opzionale \"Perle di Istanbul\". Rientro in hotel a proprie spese.\nPasti: Colazione",
+            "pt": "2º Dia - Istambul\nCafé da manhã no hotel. Saída pela manhã para contemplar as antigas Muralhas de Constantinopla, visita à Mesquita de Rüstem Pasha. A mesquita foi projetada pelo arquiteto imperial Mimar Sinan para o Grão-Vizir Damat Rüstem Pasha (marido de uma das filhas de Suleiman, o Magnífico, a Sultana Mihrimah). Visita ao Bazar Egípcio ou Bazar das Especiarias construído no século XVII e situado no antigo bairro histórico de Eminönü em Istambul. Depois possibilidade de uma excursão opcional \"Pérolas de Istambul\". Retorno ao hotel por conta do cliente.\nRefeições: Café da manhã"
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "ar": "إفطار + عشاء",
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "it": "Colazione + Cena",
+            "pt": "Café da manhã + Jantar"
+          },
+          "description": {
+            "ar": "اليوم الثالث (الإثنين) - إسطنبول ← أنقرة\nإفطار في الفندق. الانطلاق إلى البازار الكبير (مغلق أيام الأحد والأعياد الدينية)، المبنى الذي يضم أكثر من 4000 متجر في داخله. وقت حر ثم الانطلاق بالحافلة إلى أنقرة، مروراً بالجسر العابر للقارات في إسطنبول. الوصول إلى عاصمة البلاد. زيارة عاصمة تركيا مع ضريح أتاتورك، المخصص لمؤسس الجمهورية التركية. العشاء والإقامة في الفندق.\nالوجبات: إفطار وعشاء",
+            "en": "Day 3 (Monday) - Istanbul → Ankara\nBreakfast at the hotel. Departure to the Grand Bazaar (closed on Sundays and religious holidays), a building housing more than 4000 shops inside. Free time and departure by coach to Ankara, passing by the intercontinental bridge of Istanbul. Arrival at the capital of the country. Visit to the capital of Turkey with the Mausoleum of Ataturk, dedicated to the founder of the Turkish Republic. Dinner and accommodation at the hotel.\nMeals: Breakfast and dinner",
+            "es": "3 Día (Lunes) - Estambul → Ankara\nDesayuno en el hotel. Salida al Gran Bazar (cerrado los domingos y fiestas religiosas), edificio que alberga más de 4000 tiendas en su interior. Tiempo libre y salida en autocar para Ankara, pasando por el puente intercontinental de Estambul. Llegada a la capital del país. Visita a la capital de Turquía con el Mausoleo de Ataturk, dedicado al fundador de la República Turca. Cena y alojamiento en el hotel.\nComidas: Desayuno y cena",
+            "it": "3° Giorno (Lunedì) - Istanbul → Ankara\nColazione in hotel. Partenza per il Gran Bazar (chiuso la domenica e nei giorni festivi religiosi), un edificio che ospita oltre 4000 negozi al suo interno. Tempo libero e partenza in pullman per Ankara, passando per il ponte intercontinentale di Istanbul. Arrivo nella capitale del paese. Visita alla capitale della Turchia con il Mausoleo di Ataturk, dedicato al fondatore della Repubblica Turca. Cena e sistemazione in hotel.\nPasti: Colazione e cena",
+            "pt": "3º Dia (Segunda-feira) - Istambul → Ancara\nCafé da manhã no hotel. Saída para o Grande Bazar (fechado aos domingos e feriados religiosos), edifício que abriga mais de 4000 lojas em seu interior. Tempo livre e saída de autocarro para Ancara, passando pela ponte intercontinental de Istambul. Chegada à capital do país. Visita à capital da Turquia com o Mausoléu de Ataturk, dedicado ao fundador da República Turca. Jantar e hospedagem no hotel.\nRefeições: Café da manhã e jantar"
+          }
+        },
+        {
+          "day": "4",
+          "meals": {
+            "ar": "إفطار + عشاء",
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "it": "Colazione + Cena",
+            "pt": "Café da manhã + Jantar"
+          },
+          "description": {
+            "ar": "اليوم الرابع - أنقرة ← كابادوكيا\nإمكانية أخذ رحلة جوية من إسطنبول/كابادوكيا * استفسر عن الأسعار. إفطار في الفندق. الانطلاق إلى كابادوكيا مروراً ببحيرة الملح. في الطريق، زيارة مدينة أوزكوناك أو سهاتلي تحت الأرض التي بنتها المجتمعات المسيحية للحماية من الهجمات العربية. تحتفظ المدينة تحت الأرض بالإسطبلات والقاعات المشتركة وقاعة الاجتماعات والغرف الصغيرة للعائلات. الوصول إلى فندق كابادوكيا. زيارة ورشة فخار وسجاد. وقت حر بعد الظهر (إمكانية القيام برحلة سفاري جميلة في كابادوكيا بسيارات 4×4). العشاء والإقامة في الفندق.\nالوجبات: إفطار وعشاء",
+            "en": "Day 4 - Ankara → Cappadocia\nPossibility of taking a flight from Istanbul/Cappadocia * check prices. Breakfast at the hotel. Departure to Cappadocia passing by Salt Lake. On the way, visit to the underground city of Ozkonak or Sehatlı built by Christian communities to protect themselves from Arab attacks. The underground city preserves stables, common rooms, meeting room and small rooms for families. Arrival at the Cappadocia hotel. Visit to a pottery and carpet workshop. Free afternoon (possibility of a beautiful 4x4 safari in Cappadocia). Dinner and accommodation at the hotel.\nMeals: Breakfast and dinner",
+            "es": "4 Día - Ankara → Capadocia\nPosibilidad de tomar vuelo de Estambul/Capadocia * consultar precios. Desayuno en el hotel. Salida para Capadocia pasando por el lago salado. En el camino, visita a la ciudad subterránea de Ozkonak o Sehatlı construidas por las comunidades cristianas para protegerse de los ataques árabes. La ciudad subterránea conserva los establos, salas comunes, sala de reuniones y pequeñas habitaciones para las familias. Llegada al hotel de Capadocia. Visita a un taller de cerámica y alfombras. Tarde libre (posibilidad de hacer un bello safari en Capadocia en 4x4). Cena y alojamiento en el hotel.\nComidas: Desayuno y cena",
+            "it": "4° Giorno - Ankara → Cappadocia\nPossibilità di prendere un volo Istanbul/Cappadocia * consultare prezzi. Colazione in hotel. Partenza per la Cappadocia passando per il Lago Salato. Durante il percorso, visita alla città sotterranea di Ozkonak o Sehatlı costruita dalle comunità cristiane per proteggersi dagli attacchi arabi. La città sotterranea conserva stalle, sale comuni, sala riunioni e piccole stanze per le famiglie. Arrivo all'hotel in Cappadocia. Visita a un laboratorio di ceramica e tappeti. Pomeriggio libero (possibilità di fare un bellissimo safari in Cappadocia in 4x4). Cena e sistemazione in hotel.\nPasti: Colazione e cena",
+            "pt": "4º Dia - Ancara → Capadócia\nPossibilidade de pegar voo Istambul/Capadócia * consultar preços. Café da manhã no hotel. Saída para a Capadócia passando pelo Lago Salgado. No caminho, visita à cidade subterrânea de Ozkonak ou Sehatlı construída pelas comunidades cristãs para se protegerem dos ataques árabes. A cidade subterrânea preserva estábulos, salas comuns, sala de reuniões e pequenos cômodos para as famílias. Chegada ao hotel da Capadócia. Visita a uma oficina de cerâmica e tapetes. Tarde livre (possibilidade de fazer um belo safari na Capadócia em 4x4). Jantar e hospedagem no hotel.\nRefeições: Café da manhã e jantar"
+          }
+        },
+        {
+          "day": "5",
+          "meals": {
+            "ar": "إفطار + عشاء",
+            "en": "Breakfast + Dinner",
+            "es": "Desayuno + Cena",
+            "it": "Colazione + Cena",
+            "pt": "Café da manhã + Jantar"
+          },
+          "description": {
+            "ar": "اليوم الخامس - كابادوكيا\nرحلة اختيارية بالمنطاد. إفطار في الفندق. يوم مخصص لزيارة هذه المنطقة الرائعة الفريدة في العالم: وادي غوريم مع كنائسه المنحوتة في الصخر برسومات من القرنين العاشر والحادي عشر؛ زيارة قرية أوتشيسار الكهفية، وادي الحب، وادي ديفرنت بتكويناته الطبيعية الغريبة، وادي أفسيلار أو وادي الصيادين، وادي الحمام ووقت لورش الحرف اليدوية مثل العقيق والأحجار شبه الكريمة. ليلاً، رحلة اختيارية لحضور عرض رقصات تقليدية من المنطقة. يشمل العرض جميع أنواع المشروبات بدون حدود مثل البيرة والنبيذ والراكي (المشروب التركي التقليدي الذي يحتوي على 40 درجة كحول ويانسون). سنتناول العشاء في الفندق قبل الذهاب إلى المكان. العودة والإقامة في الفندق.\nالوجبات: إفطار وعشاء",
+            "en": "Day 5 - Cappadocia\nOPTIONAL BALLOON EXCURSION. Breakfast at the hotel. Day dedicated to visiting this fantastic region, unique in the world: Göreme Valley with its rock-hewn churches with paintings from the 10th and 11th centuries; visit to the troglodyte village of Uçhisar, Love Valley, Devrent Valley with its curious natural formations, Avcılar Valley or Valley of the Hunters, Pigeon Valley and time for artisan workshops such as onyx and semi-precious stones. In the evening, an optional excursion is offered to attend a show of typical dances of the region. The show includes all types of unlimited drinks such as beer, wine and rakı (traditional Turkish drink containing 40 degrees of alcohol and anise). We will have dinner at the hotel before going to the venue. Return and accommodation at the hotel.\nMeals: Breakfast and dinner",
+            "es": "5 Día - Capadocia\nEXCURSIÓN OPCIONAL EN GLOBO. Desayuno en el hotel. Día dedicado a la visita de esta fantástica región, única en el mundo: Valle de Göreme, con sus iglesias rupestres, con pinturas de los siglos X y XI; visita al pueblo troglodita de Uçhisar, Valle del Amor, Valle de Devrent con sus curiosas formaciones naturales, Valle de Avcılar o Valle de los Cazadores, Valle de las Palomas y tiempo para talleres artesanales como ónix-piedras semi-preciosas. Por la noche se ofrece una excursión opcional para asistir a ver un Show de danzas típicas de la región. El espectáculo solo incluye todos los tipos de bebidas sin límite como cerveza, vino y rakı (bebida tradicional turca que contiene 40 grados de alcohol y anís). Cenaremos en el hotel antes de ir al local. Regreso y alojamiento en el hotel.\nComidas: Desayuno y cena",
+            "it": "5° Giorno - Cappadocia\nGIRO IN MONGOLFIERA OPZIONALE. Colazione in hotel. Giornata dedicata alla visita di questa fantastica regione, unica al mondo: Valle di Göreme con le sue chiese rupestri con dipinti dei secoli X e XI; visita al villaggio troglodita di Uçhisar, Valle dell'Amore, Valle di Devrent con le sue curiose formazioni naturali, Valle di Avcılar o Valle dei Cacciatori, Valle dei Piccioni e tempo per laboratori artigianali come onice e pietre semipreziose. Alla sera viene offerta un'escursione opzionale per assistere a uno spettacolo di danze tipiche della regione. Lo spettacolo include tutti i tipi di bevande illimitate come birra, vino e rakı (bevanda tradizionale turca che contiene 40 gradi di alcol e anice). Ceneremo in hotel prima di andare al locale. Rientro e sistemazione in hotel.\nPasti: Colazione e cena",
+            "pt": "5º Dia - Capadócia\nEXCURSÃO OPCIONAL DE BALÃO. Café da manhã no hotel. Dia dedicado a visitar esta fantástica região, única no mundo: Vale de Göreme com suas igrejas rupestres com pinturas dos séculos X e XI; visita à vila troglodita de Uçhisar, Vale do Amor, Vale de Devrent com suas curiosas formações naturais, Vale de Avcılar ou Vale dos Caçadores, Vale dos Pombos e tempo para oficinas artesanais como ônix e pedras semipreciosas. À noite, oferece-se uma excursão opcional para assistir a um espetáculo de danças típicas da região. O espetáculo inclui todos os tipos de bebidas ilimitadas como cerveja, vinho e rakı (bebida tradicional turca que contém 40 graus de álcool e anis). Jantaremos no hotel antes de ir ao local. Retorno e hospedagem no hotel.\nRefeições: Café da manhã e jantar"
+          }
+        },
+        {
+          "day": "6",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "it": "Colazione",
+            "pt": "Café da manhã"
+          },
+          "description": {
+            "ar": "اليوم السادس - كابادوكيا ← عنتاب\nننطلق من كابادوكيا باتجاه غازي عنتاب. سنصل إلى غازي عنتاب ونزور مباشرة متحف الفسيفساء في غازي عنتاب، أحد أغنى متاحف الفسيفساء في العالم، حيث يضم فسيفساء اكتشفت في الموقع الروماني بلقيس-زيوغما. بعد ذلك، وقت حر. النقل إلى الفندق والإقامة.\nالوجبات: إفطار",
+            "en": "Day 6 - Cappadocia → Antep\nWe depart from Cappadocia towards Gaziantep. We will arrive in Gaziantep and directly visit the Gaziantep Mosaic Museum, one of the richest mosaic museums in the world, with mosaics discovered at the Roman site of Belkıs-Zeugma. Afterwards, free time. Transfer to the hotel and accommodation.\nMeals: Breakfast",
+            "es": "6 Día - Capadocia → Antep\nPartimos desde Capadocia con destino hacia Gaziantep. Llegaremos a Gaziantep y directamente visitaremos el Museo del Mosaico de Gaziantep, uno de los museos de mosaicos más ricos del mundo, con mosaicos descubiertos en el sitio romano de Belkıs-Zeugma. Posteriormente, tiempo libre. Traslado al hotel y alojamiento.\nComidas incluidas: Desayuno",
+            "it": "6° Giorno - Cappadocia → Antep\nPartiamo dalla Cappadocia verso Gaziantep. Arriveremo a Gaziantep e visiteremo direttamente il Museo del Mosaico di Gaziantep, uno dei musei di mosaici più ricchi del mondo, con mosaici scoperti nel sito romano di Belkıs-Zeugma. Successivamente, tempo libero. Trasferimento in hotel e sistemazione.\nPasti inclusi: Colazione",
+            "pt": "6º Dia - Capadócia → Antep\nPartimos da Capadócia em direção a Gaziantep. Chegaremos a Gaziantep e visitaremos diretamente o Museu do Mosaico de Gaziantep, um dos museus de mosaicos mais ricos do mundo, com mosaicos descobertos no sítio romano de Belkıs-Zeugma. Posteriormente, tempo livre. Transfer para o hotel e hospedagem.\nRefeições incluídas: Café da manhã"
+          }
+        },
+        {
+          "day": "7",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "it": "Colazione",
+            "pt": "Café da manhã"
+          },
+          "description": {
+            "ar": "اليوم السابع - عنتاب ← هالفيتي ← نمرود\nبعد الإفطار، سنزور القلعة القديمة للمدينة والبازار، أحد أقدم وأخص أسواق تركيا. كما ستتاح لنا فرصة تذوق البقلاوة الشهيرة؛ وهي معجنات حلوة مصنوعة من طبقات من العجين المملوء بالجوز المفروم والمحلى بالقطر أو العسل (البقلاوة أصلها من غازي عنتاب). نتوجه نحو هالفيتي، المنطقة التي تنتج الورود السوداء (Karagül)، الزهرة المميزة لهالفيتي. نستمر حتى جبل نمرود. الوصول والعشاء والإقامة.\nالوجبات: إفطار",
+            "en": "Day 7 - Antep → Halfeti → Nemrut\nAfter breakfast, we will visit the ancient castle of the city and the bazaar, one of the most special and oldest bazaars in Turkey. We will also have the opportunity to taste the famous baklava; a sweet pastry made of layers of filo filled with chopped nuts and sweetened with syrup or honey (Baklava originates from Gaziantep). We will take our route towards Halfeti, the region where Black Roses (Karagül) are produced, the typical flower of Halfeti. We continue to Mount Nemrut. Arrival, dinner and accommodation.\nMeals: Breakfast",
+            "es": "7 Día - Antep → Halfeti → Nemrut\nDespués del desayuno, visitaremos el castillo antiguo de la ciudad y el bazar, uno de los bazares más especiales y más antiguos de Turquía. También tendremos la oportunidad de degustar la famosa baklava; una pasta dulce hecha de capas de filo lleno de nueces picadas y endulzado con jarabe o miel (Baklava es originario de Gaziantep). Tomaremos nuestra ruta en dirección a Halfeti, la región donde se producen las Rosas Negras (Karagül), la flor típica de Halfeti. Seguimos hasta el monte Nemrut. Llegada, cena y alojamiento.\nComidas incluidas: Desayuno",
+            "it": "7° Giorno - Antep → Halfeti → Nemrut\nDopo la colazione, visiteremo l'antico castello della città e il bazar, uno dei bazar più speciali e antichi della Turchia. Avremo anche l'opportunità di degustare il famoso baklava; una pasta dolce fatta di strati di filo ripieni di noci tritate e addolciti con sciroppo o miele (Il Baklava è originario di Gaziantep). Prenderemo la nostra rotta verso Halfeti, la regione dove vengono prodotte le Rose Nere (Karagül), il fiore tipico di Halfeti. Continuiamo fino al monte Nemrut. Arrivo, cena e sistemazione.\nPasti inclusi: Colazione",
+            "pt": "7º Dia - Antep → Halfeti → Nemrut\nApós o café da manhã, visitaremos o castelo antigo da cidade e o bazar, um dos bazares mais especiais e antigos da Turquia. Também teremos a oportunidade de degustar o famoso baklava; uma massa doce feita de camadas de filo recheadas com nozes picadas e adoçadas com xarope ou mel (Baklava é originário de Gaziantep). Seguiremos nossa rota em direção a Halfeti, a região onde são produzidas as Rosas Negras (Karagül), a flor típica de Halfeti. Continuamos até o monte Nemrut. Chegada, jantar e hospedagem.\nRefeições incluídas: Café da manhã"
+          }
+        },
+        {
+          "day": "8",
+          "meals": {
+            "ar": "إفطار صندوقي",
+            "en": "Box Breakfast",
+            "es": "Desayuno en lunch box",
+            "it": "Colazione al sacco",
+            "pt": "Café da manhã em lunch box"
+          },
+          "description": {
+            "ar": "اليوم الثامن - نمرود ← أورفة\nإفطار (بوكس). اليوم، سنصعد جبل نمرود لرؤية تلة الملك أنطيوخس من كوماجيني، مقبرة مميزة جداً بتماثيلها العملاقة التي تتناثر رؤوسها على الأرض وتعكس روعة الماضي. يقع هذا المعلم الاستثنائي على ارتفاع 8000 قدم. يتكون مجمع قمة الجبل من منطقتين مسطحتين تتناثر فيهما التماثيل ويفصل بينهما قمة زائفة من الصخور المكسرة. بنى أنطيوخس المجمع بأكمله قبل حوالي 2000 عام كنصب تذكاري لنسبه الإلهي. نتوجه نحو أورفة لزيارة القلعة (مغلقة أيام الإثنين) والأسوار التاريخية للمنطقة. سنلقي نظرة على بحيرة خليل الرحمن وأيضاً بحيرة عين زليخة، التي يقال أنها تشكلت من دموع زليخة، ابنة الملك نمرود. سنزور الكهف الذي ولد فيه إبراهيم. ثم نذهب إلى كنيسة ريجي، التي بنيت في القرن السادس تخليداً لذكرى رسولي المسيح، القديس بطرس والقديس بولس. زيارة متحف أورفة الأثري. وقت حر للتسوق في البازارات حيث توجد أشهى المأكولات الأورفية. العودة إلى الفندق، العشاء، الإقامة. اختياري: إذا رغبتم، يمكن حضور ليلة السيرة. ليلة السيرة هي عرض مع الموسيقى التقليدية لشانلي أورفة، مصحوبة بنكهات المأكولات المحلية. ليلة مليئة بالمفاجآت والمرح لضيوفنا.\nالوجبات: إفطار",
+            "en": "Day 8 - Nemrut → Urfa\nBreakfast in lunch box. Today, we will climb Mount Nemrut to see the tumulus of King Antiochus of Commagene, a very special tomb with giant statues whose heads lie scattered on the ground and reflect the splendor of the past. This extraordinary landmark rests at an elevation of 8000 feet. The mountain top complex consists of two flattened areas strewn with statues and separated by a false peak of crushed rock. Antiochus built the entire complex approximately 2000 years ago as a monument to his divine ancestry. We will continue to Urfa to visit the Citadel (closed on Mondays) and the Historical Walls of the region. We will catch a glimpse of Halil-Ül Rahman Lake and also Ayn-ı Zeliha Lake, which is said to have formed from the tears of Zeliha, the daughter of King Nemrut. We will visit the Cave where Abraham was born. Then we go to the Reji Church, built in the 6th century in memory of the two apostles of Jesus, Saint Peter and Saint Paul. Visit to the Urfa Archaeological Museum. Free time for shopping in the bazaars where the famous delicacies of Urfa are found. Return to the hotel, dinner, accommodation. Optional: If you wish, you can attend the Sira Night. The Sira Night is a presentation with traditional music of Şanlıurfa, accompanied by the flavor of local gastronomy delicacies. A night full of surprises and fun for our guests.\nMeals: Breakfast",
+            "es": "8 Día - Nemrut → Urfa\nDesayuno en lunch box. Hoy, subiremos el monte Nemrut para ver el túmulo del Rey Antíoco de Comagene, una tumba muy especial con estatuas gigantes cuyas cabezas yacen esparcidas por el suelo y reflejan el esplendor del pasado. Este extraordinario hito descansa en una elevación de 8000 pies. El complejo de la cima de la montaña se compone de dos áreas aplanadas esparcidas con estatuas y separadas por un falso pico de roca triturada. Antíoco construyó todo el complejo aproximadamente hace 2000 años como un monumento a su ascendencia divina. Seguiremos hacia Urfa para visitar la Ciudadela (cerrada los lunes) y las Murallas Históricas de la región. Echaremos un vistazo al Lago Halil-Ül Rahman y también al Lago Ayn-ı Zeliha, al cual se dice que se formó a partir de las lágrimas de Zeliha, la hija del Rey Nemrut. Visitaremos la Cueva donde nació Abraham. Después vamos a la Iglesia Reji, construida en el siglo VI en memoria de los dos apóstoles de Jesús, San Pedro y San Pablo. Visita al museo arqueológico de Urfa. Tiempo libre para hacer compras en los bazares donde se encuentran los famosos manjares de Urfa. Regreso al hotel, cena, alojamiento. Opcional: Si lo desea, se puede asistir a la Noche de Sira. La noche de Sira es una presentación con la música tradicional de Şanlıurfa, acompañada al sabor de las delicias de la gastronomía local. Una noche llena de sorpresas y diversión para nuestros invitados.\nComidas incluidas: Desayuno",
+            "it": "8° Giorno - Nemrut → Urfa\nColazione al sacco. Oggi, saliremo sul monte Nemrut per vedere il tumulo del Re Antioco di Commagene, una tomba molto speciale con statue giganti le cui teste giacciono sparse sul terreno e riflettono lo splendore del passato. Questo straordinario punto di riferimento riposa a un'altitudine di 8000 piedi. Il complesso sulla cima della montagna consiste in due aree appiattite sparse di statue e separate da un falso picco di roccia frantumata. Antioco costruì l'intero complesso circa 2000 anni fa come monumento alla sua discendenza divina. Proseguiremo verso Urfa per visitare la Cittadella (chiusa il lunedì) e le Mura Storiche della regione. Daremo un'occhiata al Lago Halil-Ül Rahman e anche al Lago Ayn-ı Zeliha, che si dice si sia formato dalle lacrime di Zeliha, la figlia del Re Nemrut. Visiteremo la Grotta dove nacque Abramo. Poi andremo alla Chiesa Reji, costruita nel VI secolo in memoria dei due apostoli di Gesù, San Pietro e San Paolo. Visita al museo archeologico di Urfa. Tempo libero per fare acquisti nei bazar dove si trovano le famose prelibatezze di Urfa. Ritorno in hotel, cena, sistemazione. Opzionale: Se lo desidera, può partecipare alla Notte di Sira. La Notte di Sira è una presentazione con la musica tradizionale di Şanlıurfa, accompagnata dal sapore delle prelibatezze della gastronomia locale. Una notte piena di sorprese e divertimento per i nostri ospiti.\nPasti inclusi: Colazione",
+            "pt": "8º Dia - Nemrut → Urfa\nCafé da manhã em lunch box. Hoje, subiremos o monte Nemrut para ver o túmulo do Rei Antíoco de Commagene, um túmulo muito especial com estátuas gigantes cujas cabeças jazem espalhadas pelo chão e refletem o esplendor do passado. Este marco extraordinário repousa a uma elevação de 8000 pés. O complexo do topo da montanha consiste em duas áreas aplainadas repletas de estátuas e separadas por um falso pico de rocha triturada. Antíoco construiu todo o complexo há aproximadamente 2000 anos como um monumento à sua ascendência divina. Seguiremos para Urfa para visitar a Cidadela (fechada às segundas-feiras) e as Muralhas Históricas da região. Daremos uma olhada no Lago Halil-Ül Rahman e também no Lago Ayn-ı Zeliha, que se diz ter sido formado a partir das lágrimas de Zeliha, a filha do Rei Nemrut. Visitaremos a Caverna onde Abraão nasceu. Depois vamos à Igreja Reji, construída no século VI em memória dos dois apóstolos de Jesus, São Pedro e São Paulo. Visita ao museu arqueológico de Urfa. Tempo livre para compras nos bazares onde se encontram as famosas iguarias de Urfa. Retorno ao hotel, jantar, hospedagem. Opcional: Se desejar, pode assistir à Noite de Sira. A Noite de Sira é uma apresentação com a música tradicional de Şanlıurfa, acompanhada pelo sabor das delícias da gastronomia local. Uma noite cheia de surpresas e diversão para nossos hóspedes.\nRefeições incluídas: Café da manhã"
+          }
+        },
+        {
+          "day": "9",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "it": "Colazione",
+            "pt": "Café da manhã"
+          },
+          "description": {
+            "ar": "اليوم التاسع - أورفة ← حران ← غوبكلي تبه ← ماردين\nبعد الإفطار، نصل إلى حران ببيوتها المقببة وثقافتها الفريدة. حران - وفقاً للكتاب المقدس - كان المكان الذي قضى فيه النبي إبراهيم بضع سنوات مع عائلته قبل الانتقال إلى إسرائيل، الأرض الموعودة. لمن يرغب، يمكن ارتداء الملابس المحلية التقليدية والتقاط الصور، أثناء زيارة بيت حران. ثم نتوجه نحو غوبكلي تبه، وهو أقدم مجمع للمباني الدينية في العالم ويوصف بأنه النقطة الصفرية لتاريخ البشرية. العمارة الأثرية المكتشفة خلال الحفريات في غوبكلي تبه فريدة من نوعها، وفي هذا السياق، أدرجت في قائمة التراث العالمي لليونسكو في عام 2011، ودخلت القائمة بشكل دائم منذ عام 2018. ما يجعل غوبكلي تبه فريداً من نوعه هو تاريخ بنائه، الذي يعود إلى حوالي اثني عشر ألف عام، حوالي 10000 قبل الميلاد. هذا المزار هو الأقدم في العالم بعمر 11500 عام. نتوجه نحو ماردين. الوصول ووقت حر. الإقامة.\nالوجبات: إفطار",
+            "en": "Day 9 - Urfa → Harran → Göbeklitepe → Mardin\nAfter breakfast, we arrive in Harran with its domed houses and unique culture. Harran - according to the Bible - was the place where the prophet Abraham spent a few years with his family before moving to Israel, the Promised Land. For those who wish, traditional local clothes can be worn and photos taken, while visiting the House of Harran. Then, we continue towards Göbeklitepe, which is the oldest cult building complex in the world and described as the Zero Point of human history. The monumental architecture discovered during excavations at Göbeklitepe is unique and in this context, it was included in the UNESCO World Heritage List in 2011, entering the permanent list in 2018. What makes Göbekli Tepe unique in its kind is the date it was built, which is approximately twelve thousand years ago, around 10,000 BC. This sanctuary is the oldest in the world at 11,500 years old. We continue towards Mardin. Arrival and free time. Accommodation.\nMeals: Breakfast",
+            "es": "9 Día - Urfa → Harran → Göbeklitepe → Mardin\nDespués del desayuno, llegamos a Harran con sus casas abovedadas y su cultura única. Harran - según la Biblia - fue el lugar donde el profeta Abraham pasó unos años con su familia antes de pasar a Israel, la Tierra Prometida. A los que desean, se puede usar ropas locales tradicionales y tomar fotos, mientras se visita la casa de Harran. Luego, seguiremos hacia Göbeklitepe, que es el complejo de edificios de culto más antiguo del mundo y descrito como el Punto Cero de la Historia de la humanidad. La arquitectura monumental descubierta durante las excavaciones en Göbeklitepe es única y en este contexto, fue incluido en la lista del Patrimonio Mundial por la UNESCO en 2011, entrando en la lista permanente desde 2018. Lo que hace que Göbekli Tepe sea único en su clase es la fecha en que fue construido, que es aproximadamente hace doce mil años, alrededor de 10.000 antes de Cristo. Este santuario es lo más antiguo del mundo con 11.500 años de edad. Seguiremos hacia Mardin. Llegada y tiempo libre. Alojamiento.\nComidas incluidas: Desayuno",
+            "it": "9° Giorno - Urfa → Harran → Göbeklitepe → Mardin\nDopo la colazione, arriviamo a Harran con le sue case a cupola e la sua cultura unica. Harran - secondo la Bibbia - fu il luogo dove il profeta Abramo trascorse alcuni anni con la sua famiglia prima di passare in Israele, la Terra Promessa. Per coloro che desiderano, si possono indossare abiti locali tradizionali e scattare foto, mentre si visita la casa di Harran. Poi, proseguiremo verso Göbeklitepe, che è il più antico complesso di edifici di culto al mondo e descritto come il Punto Zero della storia umana. L'architettura monumentale scoperta durante gli scavi a Göbeklitepe è unica e in questo contesto, è stata inclusa nella lista del Patrimonio Mondiale dell'UNESCO nel 2011, entrando nella lista permanente dal 2018. Ciò che rende Göbekli Tepe unico nel suo genere è la data in cui fu costruito, circa dodicimila anni fa, intorno al 10.000 a.C. Questo santuario è il più antico del mondo con 11.500 anni di età. Proseguiremo verso Mardin. Arrivo e tempo libero. Sistemazione.\nPasti inclusi: Colazione",
+            "pt": "9º Dia - Urfa → Harran → Göbeklitepe → Mardin\nApós o café da manhã, chegamos a Harran com suas casas abobadadas e cultura única. Harran - segundo a Bíblia - foi o lugar onde o profeta Abraão passou alguns anos com sua família antes de passar para Israel, a Terra Prometida. Para aqueles que desejam, podem-se usar roupas locais tradicionais e tirar fotos, enquanto se visita a casa de Harran. Em seguida, seguiremos para Göbeklitepe, que é o complexo de edifícios de culto mais antigo do mundo e descrito como o Ponto Zero da história humana. A arquitetura monumental descoberta durante as escavações em Göbeklitepe é única e neste contexto, foi incluída na lista do Patrimônio Mundial pela UNESCO em 2011, entrando na lista permanente desde 2018. O que torna Göbekli Tepe único em seu gênero é a data em que foi construído, que é aproximadamente doze mil anos atrás, por volta de 10.000 a.C. Este santuário é o mais antigo do mundo com 11.500 anos de idade. Seguiremos para Mardin. Chegada e tempo livre. Hospedagem.\nRefeições incluídas: Café da manhã"
+          }
+        },
+        {
+          "day": "10",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "it": "Colazione",
+            "pt": "Café da manhã"
+          },
+          "description": {
+            "ar": "اليوم العاشر - ماردين ← إسطنبول\nإفطار. الانطلاق إلى دير مار غابريال السرياني الأرثوذكسي. هو أقدم دير سرياني أرثوذكسي في العالم، أسسه القديس صموئيل والقديس سمعان في عام 397، وهو أيضاً من أكبرها. الآشوريون (سريانيس) هم شعب لديه تقاليد قديمة جداً، ولا يزالون يتحدثون بتنويع من لغة يسوع المسيح، الآرامية، وما زالوا يقيمون قداساتهم بهذه اللغة. نتوجه لزيارة مدينة دارا القديمة، المدينة القديمة التي نحتت في الصخر في عام 505 بمبادرة من الإمبراطور أناستاسيوس (491-518). هذه المدينة التاريخية القديمة، المعروفة بأفسس بلاد ما بين النهرين، هي مستوطنة مهمة على طريق الحرير. صهاريجها المذهلة تشبه القصور تحت الأرض. النقل إلى المطار لاستقلال رحلة العودة إلى إسطنبول. الوصول والنقل إلى الفندق. الإقامة.\nالوجبات: إفطار",
+            "en": "Day 10 - Mardin → Istanbul\nBreakfast. Departure to the Syriac Orthodox monastery of Mor Gabriel. It is the oldest Syriac Orthodox monastery in the world, founded by Saint Samuel and Saint Simon in the year 397, and one of the largest. The Assyrians (Süryanis) are people with very ancient traditions, still speak a variation of the language of Jesus Christ, Aramaic, and still celebrate their masses in this language. We head to visit the ancient city of Dara, the ancient city that was carved into the rock in 505 with the initiatives of Emperor Anastasius (491-518). This historical ancient city, known as the Ephesus of Mesopotamia, is an important settlement on the Silk Road. Its impressive cisterns are like underground palaces. Transfer to the airport to take the flight back to Istanbul. Arrival and transfer to the hotel. Accommodation.\nMeals: Breakfast",
+            "es": "10 Día - Mardin → Estambul\nDesayuno. Salida al monasterio sirio-ortodoxo de Mor Gabriel. Es el monasterio siríaco ortodoxo más antiguo del mundo, fundado por San Samuel y San Simón en el año 397, y uno de los más grandes. Los asirios (Süryanis) son personas que tienen tradiciones muy antiguas, todavía hablan una variación del idioma de Jesucristo, el arameo, y aún celebran sus misas en este idioma. Nos dirigimos a visitar la antigua ciudad de Dara, la antigua ciudad que fue tallada en la roca en 505 con las iniciativas del emperador Anastasio (491-518). Esta histórica ciudad antigua, conocida como Éfeso de Mesopotamia, es un asentamiento importante en la Ruta de la Seda. Sus impresionantes cisternas son como palacios subterráneos. Traslado al aeropuerto para tomar vuelo de regreso a Estambul. Llegada y traslado al hotel. Alojamiento.\nComidas incluidas: Desayuno",
+            "it": "10° Giorno - Mardin → Istanbul\nColazione. Partenza per il monastero siro-ortodosso di Mor Gabriel. È il più antico monastero siro-ortodosso del mondo, fondato da San Samuele e San Simone nell'anno 397, e uno dei più grandi. Gli assiri (Süryanis) sono persone con tradizioni molto antiche, parlano ancora una variazione della lingua di Gesù Cristo, l'aramaico, e celebrano ancora le loro messe in questa lingua. Ci dirigiamo a visitare l'antica città di Dara, l'antica città scavata nella roccia nel 505 su iniziativa dell'imperatore Anastasio (491-518). Questa storica città antica, conosciuta come l'Efeso della Mesopotamia, è un importante insediamento sulla Via della Seta. Le sue impressionanti cisterne sono come palazzi sotterranei. Trasferimento in aeroporto per prendere il volo di ritorno a Istanbul. Arrivo e trasferimento in hotel. Sistemazione.\nPasti inclusi: Colazione",
+            "pt": "10º Dia - Mardin → Istambul\nCafé da manhã. Saída para o mosteiro siríaco-ortodoxo de Mor Gabriel. É o mosteiro siríaco ortodoxo mais antigo do mundo, fundado por São Samuel e São Simão no ano 397, e um dos maiores. Os assírios (Süryanis) são pessoas com tradições muito antigas, ainda falam uma variação do idioma de Jesus Cristo, o aramaico, e ainda celebram suas missas neste idioma. Dirigimo-nos para visitar a antiga cidade de Dara, a antiga cidade que foi esculpida na rocha em 505 por iniciativa do imperador Anastácio (491-518). Esta histórica cidade antiga, conhecida como a Éfeso da Mesopotâmia, é um importante assentamento na Rota da Seda. Suas impressionantes cisternas são como palácios subterrâneos. Transfer para o aeroporto para pegar o voo de regresso a Istambul. Chegada e transfer para o hotel. Hospedagem.\nRefeições incluídas: Café da manhã"
+          }
+        },
+        {
+          "day": "11",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "it": "Colazione",
+            "pt": "Café da manhã"
+          },
+          "description": {
+            "ar": "اليوم الحادي عشر - المغادرة من إسطنبول\nإفطار في الفندق. في الوقت المتفق عليه، النقل إلى المطار.\nالوجبات: إفطار (طالما أن موعد النقل يسمح بذلك)\nنهاية خدماتنا.",
+            "en": "Day 11 - Departure from Istanbul\nBreakfast at the hotel. At the agreed time, transfer to the airport.\nMeals: Breakfast (provided the transfer schedule allows it)\nEND OF OUR SERVICES.",
+            "es": "11 Día - Salida de Estambul\nDesayuno en el hotel. En la hora combinada, traslado al aeropuerto.\nComidas: Desayuno (siempre y cuando el horario de traslado lo permita)\nFIN DE NUESTROS SERVICIOS.",
+            "it": "11° Giorno - Partenza da Istanbul\nColazione in hotel. All'orario concordato, trasferimento in aeroporto.\nPasti: Colazione (sempre che l'orario del trasferimento lo permetta)\nFINE DEI NOSTRI SERVIZI.",
+            "pt": "11º Dia - Partida de Istambul\nCafé da manhã no hotel. No horário combinado, transfer para o aeroporto.\nRefeições: Café da manhã (desde que o horário do transfer permita)\nFIM DOS NOSSOS SERVIÇOS."
+          }
+        }
+      ]
     }
   ]
 }
