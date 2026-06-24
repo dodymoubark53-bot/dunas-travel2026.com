@@ -3426,5 +3426,12 @@
   "transportation.static.destTitle": "Destinazioni popolari",
   "transportation.static.includeTitle": "I nostri servizi di trasferimento includono:",
   "transportation.static.subtitle": "Servizi di trasferimento premium",
-  "transportation.transmission": "Trasmissione"
+  "transportation.transmission": "Trasmissione",
+  "tour.highSpeedTrain": "Treno ad Alta Velocità",
+  "tour.bus": "Pullman",
+  "tour.viaGrandBazaar": "via Gran Bazar",
+  "tour.selected": "Selezionato",
+  "tour.transportNote": "Scegli il tuo trasporto preferito tra Istanbul e Ankara",
+  "tour.transportChoice": "Opzione di Trasporto Disponibile",
+  "tour.hours": "ore"
 }

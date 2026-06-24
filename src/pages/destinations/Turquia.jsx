@@ -74,6 +74,7 @@ const Turquia = () => {
               type: prog.raw?.type || 'Cultural Tour',
               code: prog.code,
               minPax: prog.minPax,
+              transportOptions: prog.transportOptions,
             };
             return (
               <TourCard

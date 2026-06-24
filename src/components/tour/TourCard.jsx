@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { variants } from '../../animations/variants';
@@ -24,6 +24,7 @@ const TourCard = ({
 }) => {
   const { t } = useTranslation();
   const { formatPrice } = useCurrency();
+  const navigate = useNavigate();
   const translatedDuration = t(`data.${tour.duration}`, tour.duration);
   const durationLabel = translatedDuration.split('/')[0].trim();
 
@@ -34,7 +35,8 @@ const TourCard = ({
 
   return (
     <motion.div
-      className="bg-white rounded-xl overflow-hidden flex flex-col h-full group shadow-[0_4px_16px_rgba(0,0,0,0.08)] border border-obsidian-200 hover:shadow-[0_12px_32px_rgba(245,166,35,0.25)] hover:border-gold-500 hover:-translate-y-2 transition-all duration-300 ease-out z-10 hover:z-20 relative"
+      onClick={() => navigate(detailUrl)}
+      className="bg-white rounded-xl overflow-hidden flex flex-col h-full group cursor-pointer shadow-[0_4px_16px_rgba(0,0,0,0.08)] border border-obsidian-200 hover:shadow-[0_12px_32px_rgba(245,166,35,0.25)] hover:border-gold-500 hover:-translate-y-2 transition-all duration-300 ease-out z-10 hover:z-20 relative"
       variants={variants.fadeInUp}
       initial="hidden"
       whileInView="visible"
@@ -90,6 +92,14 @@ const TourCard = ({
         <span className="text-caption text-gold-600 uppercase tracking-widest mb-1 block">
           {tour.code || t(`data.${tour.subtitle || tour.destination}`, tour.subtitle || tour.destination)}
         </span>
+
+        {tour.transportOptions && (
+          <div className="mb-2">
+            <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-obsidian-700 bg-gold-100 border border-gold-300 px-2.5 py-1 rounded-full">
+              {tour.transportOptions}
+            </span>
+          </div>
+        )}
 
         <Link to={detailUrl}>
           <h3 className="text-display-md text-obsidian-900 mb-3 line-clamp-2 group-hover:text-gold-700 transition-colors">

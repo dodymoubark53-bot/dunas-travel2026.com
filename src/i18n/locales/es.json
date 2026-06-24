@@ -3434,5 +3434,12 @@
   "transportation.static.destTitle": "Destinos populares",
   "transportation.static.includeTitle": "Nuestros servicios de traslado incluyen:",
   "transportation.static.subtitle": "Servicios de transferencia premium",
-  "transportation.transmission": "Transmisión"
+  "transportation.transmission": "Transmisión",
+  "tour.highSpeedTrain": "Tren de Alta Velocidad",
+  "tour.bus": "Autobús",
+  "tour.viaGrandBazaar": "vía Gran Bazar",
+  "tour.selected": "Seleccionado",
+  "tour.transportNote": "Elija su transporte preferido entre Estambul y Ankara",
+  "tour.transportChoice": "Opción de Transporte Disponible",
+  "tour.hours": "horas"
 }

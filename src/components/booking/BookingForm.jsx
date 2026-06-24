@@ -15,7 +15,7 @@ const languages = [
   { value: 'ar', flag: '🇪🇬', labelKey: 'languages.arabic', fallback: 'Arabic' },
 ];
 
-const BookingForm = ({ tourTitle }) => {
+const BookingForm = ({ tourTitle, transportChoice }) => {
   const { t } = useTranslation();
   const [tab, setTab] = useState('booking');
   const [status, setStatus] = useState('idle');
@@ -76,6 +76,12 @@ const BookingForm = ({ tourTitle }) => {
             </div>
             <h3 className="text-display-md text-ivory-50 mb-2 font-display">{t('booking.inquirySent', 'Inquiry Sent')}</h3>
             <p className="text-body-sm text-ivory-400">{t('booking.successDesc', 'Our team will contact you within 24 hours.')}</p>
+            {transportChoice && (
+              <div className="mt-4 bg-[rgba(201,162,39,0.1)] border border-gold-500/30 rounded-xl px-5 py-3">
+                <p className="text-caption text-gold-500 text-[11px] uppercase tracking-[1px] mb-1">{t('booking.transport', 'Transport')}</p>
+                <p className="text-body-md text-ivory-50">{transportChoice === 'train' ? `🚄 ${t('tour.highSpeedTrain', 'High-Speed Train')}` : `🚌 ${t('tour.bus', 'Bus')} ${t('tour.viaGrandBazaar', 'via Grand Bazaar')}`}</p>
+              </div>
+            )}
           </div>
         ) : (
           <div>
@@ -167,6 +173,17 @@ const BookingForm = ({ tourTitle }) => {
                     ))}
                   </div>
                 </div>
+
+                {/* Transport Choice */}
+                {transportChoice && (
+                  <div className="bg-[rgba(201,162,39,0.08)] border border-gold-500/20 rounded-xl px-4 py-3">
+                    <label className={labelClass}>{t('booking.transport', 'Transport')}</label>
+                    <p className="text-body-sm text-gold-300 flex items-center gap-2">
+                      <span>{transportChoice === 'train' ? `🚄 ${t('tour.highSpeedTrain', 'High-Speed Train')}` : `🚌 ${t('tour.bus', 'Bus')} ${t('tour.viaGrandBazaar', 'via Grand Bazaar')}`}</span>
+                      <span className="text-[10px] text-ivory-400">({t('booking.selected', 'selected')})</span>
+                    </p>
+                  </div>
+                )}
 
                 {/* Passenger Names */}
                 {passengerFields.length > 0 && (

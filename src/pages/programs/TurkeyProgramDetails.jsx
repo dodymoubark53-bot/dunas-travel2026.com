@@ -10,10 +10,11 @@ import BookingForm from '../../components/booking/BookingForm';
 import { useTurkeyProgram } from '../../hooks/useTurkeyPrograms';
 
 const TurkeyProgramDetails = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { programId } = useParams();
   const program = useTurkeyProgram(programId);
   const [activeImage, setActiveImage] = useState(null);
+  const [transportChoice, setTransportChoice] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -27,7 +28,7 @@ const TurkeyProgramDetails = () => {
     );
   }
 
-  const { title, overview, duration, highlights, days, images, code, minPax } = program;
+  const { title, overview, duration, highlights, days, images, code, minPax, transportOptions } = program;
 
   return (
     <div className="w-full bg-obsidian-50 min-h-screen">
@@ -111,6 +112,68 @@ const TurkeyProgramDetails = () => {
         </div>
       </div>
 
+      {/* Transport Options Selector */}
+      {transportOptions && (
+        <section className="container mx-auto px-6 pt-12">
+          <div className="bg-gradient-to-r from-gold-50 via-gold-100/50 to-gold-50 border-2 border-gold-400 rounded-2xl p-6 md:p-8 shadow-lg">
+            <div className="text-center mb-6">
+              <h3 className="text-display-md text-obsidian-900 mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
+                {program.transportOptions}
+              </h3>
+              <p className="text-body-sm text-obsidian-500">
+                {t('tour.transportNote', 'Choose your preferred transport between Istanbul and Ankara')}
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
+              <button
+                type="button"
+                onClick={() => setTransportChoice('train')}
+                className={`flex-1 p-5 rounded-2xl border-2 text-center transition-all duration-200 cursor-pointer ${
+                  transportChoice === 'train'
+                    ? 'border-gold-500 bg-gold-500/10 shadow-lg shadow-gold-500/20 scale-[1.02]'
+                    : 'border-gold-300/50 bg-white/60 hover:border-gold-400 hover:bg-gold-50/80'
+                }`}
+              >
+                <span className="text-4xl block mb-2">🚄</span>
+                <span className={`text-body-md font-bold block ${transportChoice === 'train' ? 'text-gold-700' : 'text-obsidian-700'}`}>
+                  {t('tour.highSpeedTrain', 'High-Speed Train')}
+                </span>
+                <span className={`text-caption block mt-1 ${transportChoice === 'train' ? 'text-gold-600' : 'text-obsidian-400'}`}>
+                  ~4 {t('tour.hours', 'hours')}
+                </span>
+                {transportChoice === 'train' && (
+                  <span className="inline-block mt-2 text-[11px] font-semibold text-gold-700 bg-gold-200 px-3 py-1 rounded-full">
+                    ✓ {t('tour.selected', 'Selected')}
+                  </span>
+                )}
+              </button>
+              <button
+                type="button"
+                onClick={() => setTransportChoice('bus')}
+                className={`flex-1 p-5 rounded-2xl border-2 text-center transition-all duration-200 cursor-pointer ${
+                  transportChoice === 'bus'
+                    ? 'border-gold-500 bg-gold-500/10 shadow-lg shadow-gold-500/20 scale-[1.02]'
+                    : 'border-gold-300/50 bg-white/60 hover:border-gold-400 hover:bg-gold-50/80'
+                }`}
+              >
+                <span className="text-4xl block mb-2">🚌</span>
+                <span className={`text-body-md font-bold block ${transportChoice === 'bus' ? 'text-gold-700' : 'text-obsidian-700'}`}>
+                  {t('tour.bus', 'Bus')}
+                </span>
+                <span className={`text-caption block mt-1 ${transportChoice === 'bus' ? 'text-gold-600' : 'text-obsidian-400'}`}>
+                  ~6 {t('tour.hours', 'hours')} · {t('tour.viaGrandBazaar', 'via Grand Bazaar')}
+                </span>
+                {transportChoice === 'bus' && (
+                  <span className="inline-block mt-2 text-[11px] font-semibold text-gold-700 bg-gold-200 px-3 py-1 rounded-full">
+                    ✓ {t('tour.selected', 'Selected')}
+                  </span>
+                )}
+              </button>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Content */}
       <section className="container mx-auto px-6 pt-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -154,7 +217,7 @@ const TurkeyProgramDetails = () => {
           {/* Sidebar - Booking Form */}
           <div className="lg:col-span-1">
             <div>
-              <BookingForm tourTitle={title} />
+              <BookingForm tourTitle={title} transportChoice={transportChoice} />
             </div>
           </div>
         </div>

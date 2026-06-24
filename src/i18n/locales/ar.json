@@ -3457,5 +3457,12 @@
   "transportation.static.destTitle": "الوجهات الشعبية",
   "transportation.static.includeTitle": "خدمات النقل لدينا تشمل:",
   "transportation.static.subtitle": "خدمات النقل المتميزة",
-  "transportation.transmission": "انتقال"
+  "transportation.transmission": "انتقال",
+  "tour.highSpeedTrain": "القطار السريع",
+  "tour.bus": "حافلة",
+  "tour.viaGrandBazaar": "عبر البازار الكبير",
+  "tour.selected": "مختار",
+  "tour.transportNote": "اختر وسيلة النقل المفضلة بين إسطنبول وأنقرة",
+  "tour.transportChoice": "خيار النقل متاح",
+  "tour.hours": "ساعات"
 }

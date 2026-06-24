@@ -3447,5 +3447,12 @@
   "transportation.static.destTitle": "Popular Destinations",
   "transportation.static.includeTitle": "Our transfer services include:",
   "transportation.static.subtitle": "Premium Transfer Services",
-  "transportation.transmission": "Transmission"
+  "transportation.transmission": "Transmission",
+  "tour.highSpeedTrain": "High-Speed Train",
+  "tour.bus": "Bus",
+  "tour.viaGrandBazaar": "via Grand Bazaar",
+  "tour.selected": "Selected",
+  "tour.transportNote": "Choose your preferred transport between Istanbul and Ankara",
+  "tour.transportChoice": "Transport Choice Available",
+  "tour.hours": "hours"
 }

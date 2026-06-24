@@ -3456,5 +3456,12 @@
   "transportation.static.destTitle": "Destinos populares",
   "transportation.static.includeTitle": "Nossos serviços de transferência incluem:",
   "transportation.static.subtitle": "Serviços de transferência premium",
-  "transportation.transmission": "Transmissão"
+  "transportation.transmission": "Transmissão",
+  "tour.highSpeedTrain": "Trem de Alta Velocidade",
+  "tour.bus": "Ônibus",
+  "tour.viaGrandBazaar": "via Grande Bazar",
+  "tour.selected": "Selecionado",
+  "tour.transportNote": "Escolha seu transporte preferido entre Istambul e Ancara",
+  "tour.transportChoice": "Opção de Transporte Disponível",
+  "tour.hours": "horas"
 }
