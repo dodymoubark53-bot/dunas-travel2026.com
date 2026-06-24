@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { staggerContainer, fadeInUp } from '../animations/variants';
 import Button from '../components/ui/Button';
+import ContactForms from '../components/contact/ContactForms';
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -19,7 +20,9 @@ const Contact = () => {
         </motion.div>
       </section>
 
-      <section className="container mx-auto px-6 py-24 -mt-16 relative z-20">
+      <ContactForms />
+
+      <section className="container mx-auto px-6 py-24 relative z-20">
         <div className="bg-ivory-50 rounded-2xl shadow-card overflow-hidden flex flex-col lg:flex-row">
 
           {/* Contact Info & Map placeholder */}

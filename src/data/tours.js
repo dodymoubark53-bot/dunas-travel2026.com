@@ -529,92 +529,34 @@ const baseTours = [
     },
     "hotelCategory": "Primera Clase",
     "included": [
-      "8 noches en régimen de Bed & Breakfast (2 por destino)",
-      "Tour guiado de medio día en Atenas en español: Parlamento, Plaza Síntagma, Trilogía Neoclásica, Plaza Omonia, Catedral Católica, Templo de Zeus, Arco de Adriano, Estadio Olímpico de 1896, Acrópolis (Propileos, Templo de Atenea Niké, Partenón, Erecteión) y tiempo libre en el Barrio de Plaka",
-      "Traslado aeropuerto–hotel a la llegada en Atenas",
-      "Traslado hotel–puerto del Pireo",
-      "Asistente de habla hispana en la llegada",
-      "Ferry Pireo–Mykonos (regular, asientos numerados)",
-      "Ferry rápido Mykonos–Santorini (clase economy)",
-      "Ferry rápido Santorini–Heraklion, Creta (clase economy)",
-      "Entradas a museos y yacimientos arqueológicos del tour de Atenas",
-      "Traslado hotel–aeropuerto en Heraklion al final del programa",
-      "Todos los impuestos y tasas (city tax no incluida)"
+      "gre001.incl.1",
+      "gre001.incl.2",
+      "gre001.incl.3",
+      "gre001.incl.4",
+      "gre001.incl.5",
+      "gre001.incl.6",
+      "gre001.incl.7"
     ],
+    "inclusionsTitle": "gre001.incl.title",
     "excluded": [
-      "Comidas no detalladas en el programa",
-      "Bebidas con las comidas incluidas",
-      "Gastos personales y compras",
-      "Propinas a guías y conductores",
-      "Maleteros de hotel",
-      "Seguro de viaje",
-      "Todo lo no especificado en el programa",
-      "Vuelo de conexión doméstico desde Heraklion hasta ciudad de origen"
+      "gre001.excl.1",
+      "gre001.excl.2",
+      "gre001.excl.3",
+      "gre001.excl.4",
+      "gre001.excl.5",
+      "gre001.excl.6"
     ],
+    "exclusionsTitle": "gre001.excl.title",
     "itinerary": [
-      {
-        "day": 1,
-        "title": "Llegada a Atenas",
-        "morning": "Llegada al Aeropuerto Internacional de Atenas 'Eleftherios Venizelos'. Recepción por nuestro asistente de habla hispana.",
-        "afternoon": "Traslado privado al hotel en el centro de Atenas. Check-in y tiempo libre para explorar el barrio a tu ritmo.",
-        "evening": "Tarde y noche libres. Te recomendamos el Barrio de Monastiraki para cenar con vistas a la Acrópolis iluminada."
-      },
-      {
-        "day": 2,
-        "title": "Tour de Atenas (D)",
-        "morning": "Tour guiado de medio día en español. Recorrido en autobús por Parlamento, Plaza Síntagma, Trilogía Neoclásica (Academia, Biblioteca Nacional y Universidad), Plaza Omonia, Catedral Católica, Templo de Zeus y Arco de Adriano. Visita al histórico Estadio Olímpico de 1896.",
-        "afternoon": "acropolis_climb_details",
-        "evening": "Regreso al hotel por cuenta propia. Noche libre en Atenas."
-      },
-      {
-        "day": 3,
-        "title": "Pireo → Mykonos (D)",
-        "morning": "Desayuno en el hotel. Traslado al Puerto del Pireo incluido en el programa.",
-        "afternoon": "Embarque en el ferry regular con asientos numerados con destino a Mykonos. Llegada, traslado al hotel y check-in.",
-        "evening": "Tarde libre para descubrir los famosos molinos de viento y los callejones blancos del casco histórico de Mykonos."
-      },
-      {
-        "day": 4,
-        "title": "Día Libre en Mykonos (D)",
-        "morning": "Desayuno en el hotel. Día completamente libre para explorar la isla a tu gusto.",
-        "afternoon": "mykonos_options",
-        "evening": "Mykonos es famosa por su vida nocturna. Disfruta del ambiente cosmopolita con total libertad."
-      },
-      {
-        "day": 5,
-        "title": "Mykonos → Santorini (D)",
-        "morning": "Desayuno en el hotel. Mañana libre en Mykonos para aprovechar las últimas horas.",
-        "afternoon": "Traslado al puerto. Ferry rápido de Mykonos a Santorini (clase economy). Llegada, traslado al hotel con vistas a la caldera y check-in.",
-        "evening": "Primer atardecer sobre la caldera de Santorini desde el hotel o desde el mirador de Oia. Un espectáculo incomparable."
-      },
-      {
-        "day": 6,
-        "title": "Día Libre en Santorini (D)",
-        "morning": "Desayuno en el hotel. Día libre para explorar Fira, la capital de Santorini, con sus boutiques, galerías de arte y vistas panorámicas al volcán.",
-        "afternoon": "santorini_options",
-        "evening": "Noche libre en Santorini. Te recomendamos cenar en un restaurante con vistas al caldera."
-      },
-      {
-        "day": 7,
-        "title": "Santorini → Heraklion / Creta (D)",
-        "morning": "Desayuno en el hotel. Mañana libre para disfrutar de las últimas horas en Santorini.",
-        "afternoon": "Traslado al puerto. Ferry rápido de Santorini a Heraklion, capital de Creta. Llegada, traslado al hotel y check-in.",
-        "evening": "Paseo por el Puerto Veneciano de Heraklion y cena en los restaurantes de la zona de las Armas Venecianas."
-      },
-      {
-        "day": 8,
-        "title": "Día Libre en Creta (D)",
-        "morning": "Desayuno en el hotel. Día libre para explorar Creta por cuenta propia.",
-        "afternoon": "crete_full_details",
-        "evening": "Última noche en Grecia. Cena libre con productos locales en el mercado de Heraklion."
-      },
-      {
-        "day": 9,
-        "title": "Salida (D)",
-        "morning": "Desayuno en el hotel. Mañana libre.",
-        "afternoon": "Traslado al Aeropuerto Internacional de Heraklion 'Nikos Kazantzakis' incluido. Vuelo de conexión doméstico hacia la ciudad de origen (no incluido en el programa).",
-        "evening": "Fin del programa y regreso a casa con los mejores recuerdos de Grecia."
-      }
+      { "day": 1, "title": "gre001.day1.title", "description": "gre001.day1.desc" },
+      { "day": 2, "title": "gre001.day2.title", "description": "gre001.day2.desc", "meals": "Desayuno" },
+      { "day": 3, "title": "gre001.day3.title", "description": "gre001.day3.desc", "meals": "Desayuno" },
+      { "day": 4, "title": "gre001.day4.title", "description": "gre001.day4.desc", "meals": "Desayuno" },
+      { "day": 5, "title": "gre001.day5.title", "description": "gre001.day5.desc", "meals": "Desayuno" },
+      { "day": 6, "title": "gre001.day6.title", "description": "gre001.day6.desc", "meals": "Desayuno" },
+      { "day": 7, "title": "gre001.day7.title", "description": "gre001.day7.desc", "meals": "Desayuno" },
+      { "day": 8, "title": "gre001.day8.title", "description": "gre001.day8.desc", "meals": "Desayuno" },
+      { "day": 9, "title": "gre001.day9.title", "description": "gre001.day9.desc", "meals": "Desayuno" }
     ]
   }
 ];
