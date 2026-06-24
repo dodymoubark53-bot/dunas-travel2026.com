@@ -7463,6 +7463,124 @@
           }
         }
       ]
+    },
+    {
+      "id": "REG-29",
+      "name": {
+        "ar": "شرم الشيخ – 04 أيام / 03 ليال",
+        "en": "Sharm El Sheikh – 04 Days / 03 Nights",
+        "es": "Sharm El Sheikh – 04 Días / 03 Noches",
+        "it": "Sharm El Sheikh – 04 Giorni / 03 Notti",
+        "pt": "Sharm El Sheikh – 04 Dias / 03 Noites"
+      },
+      "duration": {
+        "ar": "04 أيام / 03 ليال",
+        "en": "04 Days / 03 Nights",
+        "es": "04 Días / 03 Noches",
+        "it": "04 Giorni / 03 Notti",
+        "pt": "04 Dias / 03 Noites"
+      },
+      "highlights": {
+        "ar": "3 ليالٍ في شرم الشيخ مع نظام شامل | رحلة اختيارية إلى جبل سانت كاترين | جولة اختيارية في صحراء سيناء بسيارة 4×4 | نقل مطار / فندق / مطار",
+        "en": "03 nights in Sharm El Sheikh with all-inclusive | Optional Mount Sinai & St. Catherine Monastery tour | Optional Sinai Desert 4×4 safari | Airport / Hotel / Airport transfers",
+        "es": "03 noches en Sharm El Sheikh con todo incluido | Excursión opcional al Monte Sinaí y Monasterio de Santa Catalina | Safari opcional en 4×4 por el Desierto del Sinaí | Traslados Aeropuerto / Hotel / Aeropuerto",
+        "it": "03 notti a Sharm El Sheikh con all-inclusive | Escursione opzionale al Monte Sinai e Monastero di Santa Caterina | Safari opzionale nel Deserto del Sinai in 4×4 | Trasferimenti Aeroporto / Hotel / Aeroporto",
+        "pt": "03 noites em Sharm El Sheikh com all inclusive | Passeio opcional ao Monte Sinai e Mosteiro de Santa Catarina | Safari opcional no Deserto do Sinai em 4×4 | Traslados Aeroporto / Hotel / Aeroporto"
+      },
+      "overview": {
+        "ar": "استمتع بإجازة شاطئية استوائية لمدة 4 أيام في شرم الشيخ، جوهرة البحر الأحمر. استرخِ في منتجع شامل مع وجبات غير محدودة، واختر من بين رحلات اختيارية مثل تسلق جبل موسى ليلاً أو جولة سفاري في صحراء سيناء. مع خدمة النقل السلس من القاهرة، توفر هذه الإقامة التوازن المثالي بين الاسترخاء والمغامرة.",
+        "en": "Enjoy a 4-day beach escape to Sharm El Sheikh, the jewel of the Red Sea. Relax at an all-inclusive resort with unlimited meals and choose from optional excursions including a night trek up Mount Sinai or a desert 4×4 safari. With seamless transfers from Cairo, this stay offers the perfect balance of relaxation and adventure.",
+        "es": "Disfrute de una escapada de 4 días a la playa de Sharm El Sheikh, la joya del Mar Rojo. Relájese en un resort con todo incluido y elija entre excursiones opcionales como una caminata nocturna al Monte Sinaí o un safari en 4×4 por el desierto. Con traslados sin problemas desde El Cairo, esta estancia ofrece el equilibrio perfecto entre relajación y aventura.",
+        "it": "Godetevi una fuga al mare di 4 giorni a Sharm El Sheikh, la gemma del Mar Rosso. Rilassatevi in un resort all-inclusive e scegliete tra escursioni opzionali come un'escursione notturna sul Monte Sinai o un safari nel deserto in 4×4. Con trasferimenti senza problemi dal Cairo, questo soggiorno offre il perfetto equilibrio tra relax e avventura.",
+        "pt": "Desfrute de uma escapada de 4 dias à praia de Sharm El Sheikh, a joia do Mar Vermelho. Relaxe em um resort all inclusive com refeições ilimitadas e escolha entre passeios opcionais como uma caminhada noturna ao Monte Sinai ou um safari no deserto em 4×4. Com transfers tranquilos do Cairo, esta estadia oferece o equilíbrio perfeito entre relaxamento e aventura."
+      },
+      "code": {
+        "ar": "REG-29",
+        "en": "REG-29",
+        "es": "REG-29",
+        "it": "REG-29",
+        "pt": "REG-29"
+      },
+      "minPax": {
+        "ar": "2 شخص",
+        "en": "2 pax",
+        "es": "2 pax",
+        "it": "2 pax",
+        "pt": "2 pax"
+      },
+      "slug": "reg-29-sharm-el-sheikh",
+      "price": 600,
+      "type": "Beach & Relaxation",
+      "days": [
+        {
+          "day": "1",
+          "meals": {
+            "ar": "عشاء",
+            "en": "Dinner",
+            "es": "Cena",
+            "it": "Cena",
+            "pt": "Jantar"
+          },
+          "description": {
+            "ar": "اليوم الأول: القاهرة / شرم الشيخ. النقل إلى مطار القاهرة والصعود على متن الرحلة الجوية المتجهة إلى شرم الشيخ. الوصول والنقل إلى الفندق المختار. باقي اليوم حر، عشاء وليلة.",
+            "en": "Day 1: Cairo / Sharm El Sheikh. Transfer to Cairo Airport and boarding the flight to Sharm El Sheikh. Arrival and transfer to the chosen hotel. Rest of the day free, dinner and overnight stay.",
+            "es": "Día 1: El Cairo / Sharm El Sheikh. Traslado al Aeropuerto del Cairo y embarque en vuelo con destino a Sharm El Sheikh. Llegada y traslado al hotel seleccionado. Resto del día libre, cena y pernoctación.",
+            "it": "Giorno 1: Il Cairo / Sharm El Sheikh. Trasferimento all'Aeroporto del Cairo e imbarco sul volo per Sharm El Sheikh. Arrivo e trasferimento all'hotel scelto. Resto della giornata libero, cena e pernottamento.",
+            "pt": "1º Dia: Cairo / Sharm. Traslado ao Aeroporto do Cairo e embarque em voo com destino a Sharm El Sheikh. Chegada e traslado para o Hotel escolhido. Restante do dia livre, jantar e pernoite."
+          }
+        },
+        {
+          "day": "2",
+          "meals": {
+            "ar": "وجبات في الفندق (نظام شامل)",
+            "en": "All inclusive meals at hotel",
+            "es": "Comidas en el hotel (todo incluido)",
+            "it": "Pasti in hotel (all-inclusive)",
+            "pt": "Refeições no hotel (all inclusive)"
+          },
+          "description": {
+            "ar": "اليوم الثاني: شرم الشيخ. يوم حر وإقامة مع نظام شامل (All Inclusive). رحلة اختيارية: رحلة إلى جبل سانت كاترين ودير سانت كاترين. المغادرة حوالي الساعة 22:30 باتجاه شبه جزيرة سيناء، حيث القيام بجولة ليلية للصعود إلى جبل سانت كاترين. بعد النزول، تقديم القهوة والبسكويت، ثم زيارة دير سانت كاترين. العودة إلى الفندق حوالي الساعة 02:30 من اليوم التالي.",
+            "en": "Day 2: Sharm El Sheikh. Free day and accommodation with all-inclusive. Optional tour: Trip to Mount Sinai and St. Catherine's Monastery. Departure around 22:30 towards the Sinai Peninsula, where you will take a night hike up Mount Sinai. After descending, coffee and cookies will be served, followed by a visit to St. Catherine's Monastery. Return to the hotel around 02:30 the following day.",
+            "es": "Día 2: Sharm El Sheikh. Día libre y alojamiento en régimen de todo incluido. Excursión opcional: Paseo al Monte Sinaí y Monasterio de Santa Catalina. Salida alrededor de las 22:30 hacia la península del Sinaí, donde realizarán una caminata nocturna de ascenso al Monte Sinaí. Tras descender, serviremos café con galletas y visitaremos el Monasterio de Santa Catalina. Regreso al hotel alrededor de las 02:30 del día siguiente.",
+            "it": "Giorno 2: Sharm El Sheikh. Giorno libero e sistemazione in all-inclusive. Escursione opzionale: Gita al Monte Sinai e al Monastero di Santa Caterina. Partenza intorno alle 22:30 verso la penisola del Sinai, dove farete un'escursione notturna per salire sul Monte Sinai. Dopo la discesa, serviremo caffè e biscotti, seguiti dalla visita al Monastero di Santa Caterina. Ritorno in hotel intorno alle 02:30 del giorno successivo.",
+            "pt": "2º Dia: Sharm El Sheikh. Dia livre e hospedagem com all inclusive. Passeio opcional: Passeio ao Monte Sinai e Mosteiro de Santa Catarina, saída por volta das 22:30 com destino a península do Sinai, aonde farão uma caminhada noturna de subida ao Monte Sinai. Após descer serviremos café com cookies, visita ao Mosteiro de Santa Catarina. Retorno ao Hotel por volta das 02:30 do dia seguinte."
+          }
+        },
+        {
+          "day": "3",
+          "meals": {
+            "ar": "وجبات في الفندق (نظام شامل)",
+            "en": "All inclusive meals at hotel",
+            "es": "Comidas en el hotel (todo incluido)",
+            "it": "Pasti in hotel (all-inclusive)",
+            "pt": "Refeições no hotel (all inclusive)"
+          },
+          "description": {
+            "ar": "اليوم الثالث: شرم الشيخ. يوم حر وإقامة مع نظام شامل (All Inclusive). رحلة اختيارية: جولة في صحراء سيناء بسيارة 4×4 لمشاهدة غروب الشمس، وركوب الجمال، والوصول إلى قرية بدوية للتعرف على عاداتهم وتقاليدهم، يليها عشاء تقليدي. النقل من وإلى الفندق مشمول.",
+            "en": "Day 3: Sharm El Sheikh. Free day and accommodation with all-inclusive. Optional tour: Tour of the Sinai Desert in a 4×4 vehicle to watch the sunset, camel ride, and arrival at a Bedouin village where you can learn about their customs and traditions, followed by a typical dinner. Round-trip hotel transfers included.",
+            "es": "Día 3: Sharm El Sheikh. Día libre y alojamiento en régimen de todo incluido. Excursión opcional: Recorrido por el Desierto del Sinaí en vehículo 4×4 para ver el atardecer, paseo en camello, llegada a una aldea beduina donde podrán conocer sus costumbres y tradiciones, seguido de una cena típica. Traslados de ida y vuelta al hotel incluidos.",
+            "it": "Giorno 3: Sharm El Sheikh. Giorno libero e sistemazione in all-inclusive. Escursione opzionale: Tour del Deserto del Sinai in veicolo 4×4 per ammirare il tramonto, giro in cammello e arrivo in un villaggio beduino dove potrete conoscere usi e tradizioni, seguito da una cena tipica. Trasferimenti di andata e ritorno dall'hotel inclusi.",
+            "pt": "3º Dia: Sharm El Sheikh. Dia livre e hospedagem com all inclusive. Passeio opcional: Passeio pelo Deserto do Sinai em veículo 4X4 para ver o pôr do sol, passeio de camelo, chegada a um povoado Beduíno onde poderão conhecer seus costumes e tradições seguido de um jantar típico, traslados de ida e volta ao Hotel."
+          }
+        },
+        {
+          "day": "4",
+          "meals": {
+            "ar": "إفطار",
+            "en": "Breakfast",
+            "es": "Desayuno",
+            "it": "Colazione",
+            "pt": "Café da manhã"
+          },
+          "description": {
+            "ar": "اليوم الرابع: شرم الشيخ / القاهرة. إفطار في الفندق والمغادرة إلى مطار شرم الشيخ للصعود على متن الرحلة الجوية المتجهة إلى مطار القاهرة الدولي. العودة إلى بلدك الأصلي. نهاية خدماتنا.",
+            "en": "Day 4: Sharm El Sheikh / Cairo. Breakfast at the hotel and departure to Sharm El Sheikh Airport to board the flight to Cairo International Airport. Return to your home country. End of our services.",
+            "es": "Día 4: Sharm El Sheikh / El Cairo. Desayuno en el hotel y salida hacia el Aeropuerto de Sharm El Sheikh para embarcar en el vuelo con destino al Aeropuerto Internacional del Cairo. Regreso a su país de origen. Fin de nuestros servicios.",
+            "it": "Giorno 4: Sharm El Sheikh / Il Cairo. Colazione in hotel e partenza per l'Aeroporto di Sharm El Sheikh per imbarcarsi sul volo diretto all'Aeroporto Internazionale del Cairo. Ritorno al vostro paese d'origine. Fine dei nostri servizi.",
+            "pt": "4º Dia: Sharm El Sheikh / Cairo. Café da manhã no Hotel e saída para o Aeroporto de Sharm El Sheikh, embarque em voo com destino ao Aeroporto Internacional do Cairo. Retorno ao seu país de origem. Fim dos nossos serviços."
+          }
+        }
+      ]
     }
   ]
 }

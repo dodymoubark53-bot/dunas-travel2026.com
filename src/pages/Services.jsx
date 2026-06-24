@@ -16,6 +16,19 @@ const Services = () => {
   const location = useLocation();
   const prefix = location.pathname.startsWith('/programs') ? '/programs' : '/services';
 
+  const translateKey = (key, fallback) => {
+    if (!key) return fallback || '';
+    if (key.startsWith('trip.') || key.startsWith('tour_')) {
+      const translated = t(key);
+      if (translated !== key) return translated;
+    }
+    const translatedData = t(`data.${key}`);
+    if (translatedData !== `data.${key}`) return translatedData;
+    const translatedDirect = t(key);
+    if (translatedDirect !== key) return translatedDirect;
+    return fallback || key;
+  };
+
   const categories = [
     { id: 'hotels', title: t('nav.hotels', 'Luxury Hotels'), desc: t('data.Hand-picked 5-star accommodations offering unparalleled views and comfort.') },
     { id: 'safari', title: t('nav.safari', 'Desert Safari'), desc: t('data.Thrilling off-road adventures with premium SUVs and expert drivers.') },
@@ -180,37 +193,62 @@ const Services = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
           >
-            {filteredServices.map((item) => (
-              <motion.div
-                key={item.id}
-                variants={fadeInUp}
-                className="bg-ivory-50 rounded-2xl overflow-hidden shadow-card group h-full flex flex-col transition-all"
-              >
-                <div className="relative h-60 overflow-hidden">
-                  <div className="absolute top-4 left-4 z-10 bg-gold-500 text-obsidian-900 text-caption uppercase px-3 py-1 rounded-full shadow-md">{t(`data.${item.location}`, item.location)}</div>
-                  <img src={item.images[0]} alt={t(`data.${item.title}`, item.title)} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-                </div>
-                <div className="p-8 flex flex-col flex-grow">
-                  <div className="flex justify-between items-center mb-3">
-                    <span className="text-caption text-obsidian-300 uppercase tracking-widest">{t(`nav.${item.category}`, item.category)}</span>
-                    <div className="flex items-center text-gold-500 text-caption font-medium">
-                      <span className="mr-1">★</span> {item.rating}
+            {filteredServices.map((item) => {
+              const isSiwa = item.slug === 'siwa-oasis-alexandria';
+              return (
+                <Link
+                  key={item.id}
+                  to={['hurghada-4d3n', 'sharm-4d3n', 'siwa-oasis-alexandria'].includes(item.slug) ? `/trips/${item.slug}` : `${prefix}/${item.category}/${item.slug}`}
+                  className="group block h-full flex flex-col cursor-pointer no-underline"
+                >
+                  <motion.div
+                    variants={fadeInUp}
+                    className="bg-ivory-50 rounded-2xl overflow-hidden shadow-card group h-full flex flex-col transition-all"
+                  >
+                    <div className="relative h-60 overflow-hidden">
+                      <div className="absolute top-4 left-4 z-10 bg-gold-500 text-obsidian-900 text-caption uppercase px-3 py-1 rounded-full shadow-md">
+                        {translateKey(item.location, item.location)}
+                      </div>
+                      {isSiwa && (
+                        <div className="absolute top-4 right-4 z-10 bg-obsidian-900/80 backdrop-blur-md text-gold-500 text-caption px-3 py-1 rounded-full border border-gold-500/20 shadow-md">
+                          {translateKey('tour_siwa_duration')}
+                        </div>
+                      )}
+                      <img src={item.images[0]} alt={translateKey(item.title, item.title)} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                     </div>
-                  </div>
-                  <h3 className="text-display-md text-obsidian-900 mb-3 text-xl line-clamp-1">{t(`data.${item.title}`, item.title)}</h3>
-                  <p className="text-body-sm text-obsidian-500 line-clamp-2 mb-6">{t(`data.${item.shortDesc}`, item.shortDesc)}</p>
-                  <div className="flex justify-between items-center mt-auto pt-4 border-t border-gray-100">
-                    <div>
-                      <span className="text-caption text-obsidian-300 block">{t('tourCard.from', 'From')}</span>
-                      <span className="text-body-lg font-semibold text-obsidian-900">{formatPrice(item.price)}</span>
+                    <div className="p-8 flex flex-col flex-grow">
+                      {isSiwa ? (
+                        <>
+                          <h3 className="text-display-md text-obsidian-900 mb-3 text-xl line-clamp-1">{translateKey(item.title, item.title)}</h3>
+                          <p className="text-body-sm text-obsidian-500 line-clamp-2 mb-6">{translateKey(item.shortDesc, item.shortDesc)}</p>
+                          <div className="flex justify-end items-center mt-auto pt-4 border-t border-gray-100">
+                            <Button variant="outline-gold" className="px-4 py-2 text-sm group-hover:bg-gold-500 group-hover:text-obsidian-900 group-hover:shadow-[0_0_15px_rgba(201,162,39,0.4)] transition-all">{t('tourCard.viewDetails', 'View Details')}</Button>
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <div className="flex justify-between items-center mb-3">
+                            <span className="text-caption text-obsidian-300 uppercase tracking-widest">{t(`nav.${item.category}`, item.category)}</span>
+                            <div className="flex items-center text-gold-500 text-caption font-medium">
+                              <span className="mr-1">★</span> {item.rating}
+                            </div>
+                          </div>
+                          <h3 className="text-display-md text-obsidian-900 mb-3 text-xl line-clamp-1">{translateKey(item.title, item.title)}</h3>
+                          <p className="text-body-sm text-obsidian-500 line-clamp-2 mb-6">{translateKey(item.shortDesc, item.shortDesc)}</p>
+                          <div className="flex justify-between items-center mt-auto pt-4 border-t border-gray-100">
+                            <div>
+                              <span className="text-caption text-obsidian-300 block">{t('tourCard.from', 'From')}</span>
+                              <span className="text-body-lg font-semibold text-obsidian-900">{formatPrice(item.price)}</span>
+                            </div>
+                            <Button variant="outline-gold" className="px-4 py-2 text-sm group-hover:bg-gold-500 group-hover:text-obsidian-900 group-hover:shadow-[0_0_15px_rgba(201,162,39,0.4)] transition-all">{t('tourCard.viewDetails', 'View Details')}</Button>
+                          </div>
+                        </>
+                      )}
                     </div>
-                    <Link to={`${prefix}/${item.category}/${item.slug}`}>
-                      <Button variant="outline-gold" className="px-4 py-2 text-sm group-hover:bg-gold-500 group-hover:text-obsidian-900 group-hover:shadow-[0_0_15px_rgba(201,162,39,0.4)] transition-all">{t('tourCard.viewDetails', 'View Details')}</Button>
-                    </Link>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                  </motion.div>
+                </Link>
+              );
+            })}
           </motion.div>
         )}        {/* Transportation Section */}
         {(!service || service === 'transportation') && (

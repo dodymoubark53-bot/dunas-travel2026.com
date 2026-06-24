@@ -433,6 +433,14 @@ function App() {
                     </PageTransition>
                   }
                 />
+                <Route
+                  path="trips/:slug"
+                  element={
+                    <PageTransition>
+                      <ServiceDetails />
+                    </PageTransition>
+                  }
+                />
               </Route>
             </Routes>
           </AnimatePresence>

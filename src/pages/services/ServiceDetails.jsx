@@ -17,17 +17,24 @@ import { useCurrency } from '../../context/CurrencyContext';
 const ServiceDetails = () => {
   const { t } = useTranslation();
   const { formatPrice } = useCurrency();
-  const { category, slug } = useParams();
-  const service = services.find((s) => s.category === category && s.slug === slug);
+  const { category: urlCategory, slug } = useParams();
+  const service = services.find((s) => (urlCategory ? s.category === urlCategory : true) && s.slug === slug);
+  const category = service ? service.category : urlCategory;
   const [activeImage, setActiveImage] = useState(null);
   const [activeForm, setActiveForm] = useState(null);
 
   const translateData = (key, fallback) => {
     if (!key) return fallback || '';
+    if (key.startsWith('trip.') || key.startsWith('tour_')) {
+      const translated = t(key);
+      if (translated !== key) return translated;
+    }
     const dataObj = t('data', { returnObjects: true });
     if (dataObj && typeof dataObj === 'object' && key in dataObj) {
       return dataObj[key];
     }
+    const translatedDirect = t(key);
+    if (translatedDirect !== key) return translatedDirect;
     return fallback || key;
   };
 
@@ -218,6 +225,9 @@ const ServiceDetails = () => {
                               </div>
 
                               <div className="space-y-2">
+                                {day.body && (
+                                  <p className="text-body-sm text-obsidian-500 leading-relaxed">{translateData(day.body, day.body)}</p>
+                                )}
                                 {day.morning && (
                                   <p className="text-body-sm text-obsidian-500 leading-relaxed">{translateData(day.morning, day.morning)}</p>
                                 )}
@@ -237,33 +247,49 @@ const ServiceDetails = () => {
                 )}
 
                 {/* Included / Excluded summary */}
-                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-16 bg-ivory-50 p-8 rounded-2xl shadow-sm border border-obsidian-900/5 text-left">
-                  <h2 className="text-display-md text-obsidian-900 mb-8 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>{t('tourDetail.incExc', "What's Included & Excluded")}</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                      <h3 className="text-body-lg font-semibold text-sage-700 mb-4 flex items-center gap-2 font-display">{t('tourDetail.included', 'Included')}</h3>
-                      <ul className="space-y-3">
-                        {service.included.map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-3 text-obsidian-500">
-                            <FaCheckCircle className="text-sage-500 mt-1" />
-                            <span>{translateData(item, item)}</span>
-                          </li>
-                        ))}
-                      </ul>
+                {service.slug === 'siwa-oasis-alexandria' ? (
+                  <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-16 bg-ivory-50 p-8 rounded-2xl shadow-sm border border-obsidian-900/5 text-left">
+                    <h2 className="text-display-md text-obsidian-900 mb-6 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>
+                      {translateData(service.title, service.title)} — {translateData('tour_siwa_includes_title', 'Package Includes')}
+                    </h2>
+                    <ul className="space-y-3">
+                      {service.included.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-obsidian-500">
+                          <FaCheckCircle className="text-sage-500 mt-1 flex-shrink-0" />
+                          <span>{translateData(item, item)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ) : (
+                  <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-16 bg-ivory-50 p-8 rounded-2xl shadow-sm border border-obsidian-900/5 text-left">
+                    <h2 className="text-display-md text-obsidian-900 mb-8 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>{t('tourDetail.incExc', "What's Included & Excluded")}</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div>
+                        <h3 className="text-body-lg font-semibold text-sage-700 mb-4 flex items-center gap-2 font-display">{t('tourDetail.included', 'Included')}</h3>
+                        <ul className="space-y-3">
+                          {service.included.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-3 text-obsidian-500">
+                              <FaCheckCircle className="text-sage-500 mt-1" />
+                              <span>{translateData(item, item)}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <h3 className="text-body-lg font-semibold text-red-700 mb-4 flex items-center gap-2 font-display">{t('tourDetail.excluded', 'Not Included')}</h3>
+                        <ul className="space-y-3">
+                          {service.excluded.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-3 text-obsidian-500">
+                              <FaTimesCircle className="text-red-500 mt-1" />
+                              <span>{translateData(item, item)}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-body-lg font-semibold text-red-700 mb-4 flex items-center gap-2 font-display">{t('tourDetail.excluded', 'Not Included')}</h3>
-                      <ul className="space-y-3">
-                        {service.excluded.map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-3 text-obsidian-500">
-                            <FaTimesCircle className="text-red-500 mt-1" />
-                            <span>{translateData(item, item)}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                )}
 
                 {/* Photo Gallery */}
                 <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-16 text-left">
@@ -466,7 +492,7 @@ const ServiceDetails = () => {
                         <span className="text-caption text-obsidian-300 block">{t('tourCard.from', 'From')}</span>
                         <span className="text-body-lg font-semibold text-obsidian-900">{formatPrice(relService.price)}</span>
                       </div>
-                      <Link to={`/programs/${relService.category}/${relService.slug}`}>
+                      <Link to={['hurghada-4d3n', 'sharm-4d3n', 'siwa-oasis-alexandria'].includes(relService.slug) ? `/trips/${relService.slug}` : `/programs/${relService.category}/${relService.slug}`}>
                         <Button variant="outline-gold" className="px-4 py-2 text-sm">{t('tourCard.viewDetails', 'View Details')}</Button>
                       </Link>
                     </div>

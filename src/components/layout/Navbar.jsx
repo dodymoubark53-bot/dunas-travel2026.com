@@ -99,10 +99,10 @@ const Navbar = () => {
           ]
         },
         { name: t('nav.transportation', { defaultValue: 'Transportation' }), path: '/programs/transportation' },
-        { name: t('nav.extension', { defaultValue: 'Extension' }), path: '/programs/extension' },
         { name: t('nav.multiCountry', { defaultValue: 'Multi-Country Tours' }), path: '/programs/multi-country' },
         { name: t('nav.honeymooners', { defaultValue: 'Honeymooners Package' }), path: '/programs/honeymooners' },
         { name: t('nav.religious', { defaultValue: 'Programs Religiosos' }), path: '/programs/religious' },
+        { name: 'EXTENSION', path: '/programs/extension' },
       ]
     },
     {
