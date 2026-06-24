@@ -203,7 +203,9 @@ const ServiceDetails = () => {
                         {t('tour.stepByStep', 'SUA JORNADA PASSO A PASSO')}
                       </span>
                       <h2 className="text-display-md text-3xl text-obsidian-900 font-display font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
-                        {t('tour.detailedItinerary', 'Detailed Itinerary')}
+                        {service.slug === 'egypt-jordan-combined-14d' 
+                          ? translateData('tour_jordan_itinerary_title', 'Itinerary: Journey of the Holy Family – 10 Days – 09 Nights') 
+                          : t('tour.detailedItinerary', 'Detailed Itinerary')}
                       </h2>
                     </div>
 
@@ -247,7 +249,83 @@ const ServiceDetails = () => {
                 )}
 
                 {/* Included / Excluded summary */}
-                {service.slug === 'siwa-oasis-alexandria' ? (
+                {service.slug === 'egypt-jordan-combined-14d' ? (
+                  <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-16 bg-ivory-50 p-8 rounded-2xl shadow-sm border border-obsidian-900/5 text-left space-y-12">
+                    
+                    {/* Included Section */}
+                    <div>
+                      <h2 className="text-display-md text-obsidian-900 mb-6 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>
+                        {translateData('tour_jordan_includes_title', 'Package Includes')}
+                      </h2>
+                      <ul className="space-y-3 mb-8">
+                        {['tour_jordan_includes_1', 'tour_jordan_includes_2', 'tour_jordan_includes_3', 'tour_jordan_includes_4', 'tour_jordan_includes_5', 'tour_jordan_includes_6'].map((key, idx) => (
+                          <li key={idx} className="flex items-start gap-3 text-obsidian-500">
+                            <FaCheckCircle className="text-sage-500 mt-1 flex-shrink-0" />
+                            <span>{translateData(key, key)}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <h3 className="text-body-lg font-semibold text-sage-700 mb-4 flex items-center gap-2 font-display">
+                        {translateData('tour_jordan_visited_title', 'Included Visits')}
+                      </h3>
+                      <ul className="space-y-3">
+                        {['tour_jordan_visited_1', 'tour_jordan_visited_2', 'tour_jordan_visited_3'].map((key, idx) => (
+                          <li key={idx} className="flex items-start gap-3 text-obsidian-500">
+                            <FaMapMarkerAlt className="text-gold-500 mt-1 flex-shrink-0" />
+                            <span>{translateData(key, key)}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Excluded Section */}
+                    <div>
+                      <h2 className="text-display-md text-obsidian-900 mb-6 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>
+                        {translateData('tour_jordan_excludes_title', 'Package Does Not Include')}
+                      </h2>
+                      <ul className="space-y-3">
+                        {['tour_jordan_excludes_1', 'tour_jordan_excludes_2'].map((key, idx) => (
+                          <li key={idx} className="flex items-start gap-3 text-obsidian-500">
+                            <FaTimesCircle className="text-red-500 mt-1 flex-shrink-0" />
+                            <span>{translateData(key, key)}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Accommodations Section */}
+                    <div>
+                      <h2 className="text-display-md text-obsidian-900 mb-6 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>
+                        {translateData('tour_jordan_hotels_title', 'Previewed Hotels')}
+                      </h2>
+                      <ul className="space-y-3">
+                        {['tour_jordan_hotel_1', 'tour_jordan_hotel_2'].map((key, idx) => (
+                          <li key={idx} className="flex items-start gap-3 text-obsidian-500">
+                            <FaBed className="text-gold-500 mt-1 flex-shrink-0" />
+                            <span>{translateData(key, key)}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Price Section */}
+                    <div>
+                      <h2 className="text-display-md text-obsidian-900 mb-6 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>
+                        {translateData('tour_jordan_price_title', 'The Value (Price)')}
+                      </h2>
+                      <ul className="space-y-3">
+                        {['tour_jordan_price_double', 'tour_jordan_price_single'].map((key, idx) => (
+                          <li key={idx} className="flex items-start gap-3 text-obsidian-500">
+                            <FaTag className="text-gold-500 mt-1 flex-shrink-0" />
+                            <span>{translateData(key, key)}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                  </motion.div>
+                ) : service.slug === 'siwa-oasis-alexandria' ? (
                   <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-16 bg-ivory-50 p-8 rounded-2xl shadow-sm border border-obsidian-900/5 text-left">
                     <h2 className="text-display-md text-obsidian-900 mb-6 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>
                       {translateData(service.title, service.title)} — {translateData('tour_siwa_includes_title', 'Package Includes')}

@@ -47,7 +47,7 @@ export const services = [
     id: 'prog-rel-egypt-jordan',
     category: 'religious',
     slug: 'egypt-jordan-combined-14d',
-    title: 'Combined EGYPT with Jordan - 14 DAYS / 13 Nights',
+    title: 'tour_jordan_title',
     location: 'Egypt & Jordan',
     price: 2490,
     rating: 5.0,
@@ -60,142 +60,69 @@ export const services = [
     ],
     shortDesc: 'A premium 14-day spiritual and historical journey tracing Coptic monasteries in Egypt and the ancient wonders of Jordan.',
     overview: [
-      "Embark on an extraordinary 14-day combined tour spanning Egypt and Jordan. This carefully crafted itinerary takes you on a spiritual and historical pilgrimage, tracing the footsteps of the Holy Family through Egypt's ancient Coptic monasteries, and exploring the dramatic rose-red valleys of Petra and Wadi Rum in Jordan.",
-      "Beginning in Cairo, you will witness the majestic Giza Pyramids and the newly opened Grand Egyptian Museum. You will then trace Coptic routes through historic sites like Tell Basta, Wadi El Natrun, and the Coptic Quarter, before driving south to El Minya and Asiut to explore sacred mountaintop monasteries.",
-      "The second half of your journey takes you to Jordan, starting from Madaba's famous mosaic map and Mount Nebo to the legendary city of Petra and the Martian landscapes of Wadi Rum, finishing with premium services and absolute comfort throughout."
+      'tour_jordan_overview_1',
+      'tour_jordan_overview_2',
+      'tour_jordan_overview_3'
     ],
     highlights: [
-      'Giza Pyramids, Sphinx and the Grand Egyptian Museum (GEM)',
-      'Spiritual pilgrimage along the Coptic Route and Holy Family well',
-      'Visits to historical desert monasteries of Wadi El Natrun, Asiut, and Mount Al Tair',
-      'The Cave Church (Monastery of Saint Simon) in the Mokattam Mountain',
-      'Famous Byzantine mosaic map of Palestine in Madaba and Mount Nebo',
-      'Full-day private tour of the Rose-Red City of Petra',
-      'Stargazing and 2-hour 4x4 Jeep tour in the red sands of Wadi Rum'
-    ],
-    accommodations: [
-      { destination: 'Cairo', nights: 7, regime: 'Bed & Breakfast' },
-      { destination: 'El Minya', nights: 2, regime: 'Half Board (Breakfast & Dinner)' },
-      { destination: 'Amman', nights: 1, regime: 'Half Board (Breakfast & Dinner)' },
-      { destination: 'Petra', nights: 2, regime: 'Half Board (Breakfast & Dinner)' },
-      { destination: 'Wadi Rum', nights: 1, regime: 'Half Board (Desert Camp)' }
-    ],
-    included: [
-      'All visits, entrance fees, and transfers as per itinerary',
-      'Meet & assist at airports (arrival/departure)',
-      'Portuguese-speaking tour guide during visits (or Spanish/English depending on availability)',
-      'Land transport in modern, air-conditioned private vehicles',
-      'Entrance tickets to all mentioned archaeological sites',
-      '2-hour 4x4 Jeep tour in Wadi Rum'
-    ],
-    excluded: [
-      'International flights (Cairo – Amman / Amman – Home destination)',
-      'Mandatory entry visas for Egypt and Jordan',
-      'Lunches (except where specified in the itinerary)',
-      'All drinks during lunches and dinners (including hotel meals/cruises)',
-      'Optional tours or activities',
-      'Mandatory Port Taxes of USD 50 per person in Egypt',
-      'Recommended tips for the Guide (USD 25.00 per person) and all general tips (driver, restaurants, porters)',
-      'Personal expenses and health/travel insurance'
+      'tour_jordan_highlight_1',
+      'tour_jordan_highlight_2',
+      'tour_jordan_highlight_3',
+      'tour_jordan_highlight_4',
+      'tour_jordan_highlight_5',
+      'tour_jordan_highlight_6',
+      'tour_jordan_highlight_7'
     ],
     itinerary: [
       {
         day: 1,
-        title: 'INTERNATIONAL ARRIVAL / CAIRO',
-        morning: 'Arrival at Cairo International Airport. Reception, transfer to the hotel, and overnight.',
-        afternoon: 'Assistance through customs and transfer to your luxury hotel.',
-        evening: 'Check-in, evening briefing, and overnight stay in Cairo.'
+        title: 'tour_jordan_day1_title',
+        body: 'tour_jordan_day1_body'
       },
       {
         day: 2,
-        title: 'CAIRO / GIZA PYRAMIDS / SPHINX / GRAND EGYPTIAN MUSEUM (GEM)',
-        morning: 'Breakfast. Visit the Giza Complex (Cheops, Chephren, Mykerinus), Valley Temple, and Sphinx.',
-        afternoon: 'Lunch at a local restaurant. Visit the Grand Egyptian Museum (GEM) featuring the complete Tutankhamun collection.',
-        evening: 'Overnight in Cairo. (Note: Inside Great Pyramid entry requires an extra ticket, not included).'
+        title: 'tour_jordan_day2_title',
+        body: 'tour_jordan_day2_body'
       },
       {
         day: 3,
-        title: 'CAIRO / TELL BASTA / TANIS / ISMAILIA / CAIRO',
-        morning: 'Breakfast. Travel to Tell Basta (visit temple ruins and the Holy Family well).',
-        afternoon: 'Continue to Tanis (ancient Pi-Ramses). Move to Ismailia for lunch and a panoramic city tour.',
-        evening: 'Return to Cairo for overnight.'
+        title: 'tour_jordan_day3_title',
+        body: 'tour_jordan_day3_body'
       },
       {
         day: 4,
-        title: 'CAIRO / EL MATARYA / MOSTOROD / CAIRO',
-        morning: 'Breakfast. Visit El Matarya (Church of the Virgin and the Holy Family tree).',
-        afternoon: 'Travel to Mostorod (Church of the Virgin) and Belbeis (Church of the Virgin Mary). Lunch at a local restaurant.',
-        evening: 'Return to Cairo, free afternoon, overnight.'
+        title: 'tour_jordan_day4_title',
+        body: 'tour_jordan_day4_body'
       },
       {
         day: 5,
-        title: 'CAIRO / WADI NATRUN / CAIRO',
-        morning: 'Breakfast. Excursion to Wadi El Natrun to visit three Coptic monasteries: Deir Al Baramos, Deir Anba Bechoy, and Deir Santa Maria.',
-        afternoon: 'Lunch at a local restaurant.',
-        evening: 'Return to Cairo, free afternoon, overnight.'
+        title: 'tour_jordan_day5_title',
+        body: 'tour_jordan_day5_body'
       },
       {
         day: 6,
-        title: 'CAIRO / COPTIC QUARTER / MONASTERY OF SAINT SIMON',
-        morning: 'Breakfast. Visit the Coptic Quarter (Churches of Saint Sergius, Abu Seifein, and Santa Barbara). Lunch.',
-        afternoon: 'Afternoon visit to Al Adra Al Adawia Church (El Maadi) and the Monastery of Saint Simon (Cave Church) carved in the Mokattam mountain.',
-        evening: 'Return to hotel, overnight.'
+        title: 'tour_jordan_day6_title',
+        body: 'tour_jordan_day6_body'
       },
       {
         day: 7,
-        title: 'CAIRO / EL MINYA',
-        morning: 'Breakfast. Drive south to El Minya (250 km).',
-        afternoon: 'Visit the Monastery of the Virgin at Mount Al Tair. Lunch, dinner, and overnight at the hotel in El Minya.',
-        evening: 'Relax and settle in for the evening.'
+        title: 'tour_jordan_day7_title',
+        body: 'tour_jordan_day7_body'
       },
       {
         day: 8,
-        title: 'EL MINYA / ASIUT / EL MINYA',
-        morning: 'Breakfast. Excursion to Asiut (120 km south of El Minya) to visit the Al Moharrak Monastery (Mount Qusqam).',
-        afternoon: 'Lunch, dinner, and overnight in El Minya.',
-        evening: 'Evening devotions or rest at hotel.'
+        title: 'tour_jordan_day8_title',
+        body: 'tour_jordan_day8_body'
       },
       {
         day: 9,
-        title: 'EL MINYA / CAIRO',
-        morning: 'Breakfast. Return to Cairo via an alternative route, visiting the Holy Family Monastery at Mount Dronka.',
-        afternoon: 'Picnic lunch on the way.',
-        evening: 'Arrival in Cairo and overnight.'
+        title: 'tour_jordan_day9_title',
+        body: 'tour_jordan_day9_body'
       },
       {
         day: 10,
-        title: 'CAIRO / AMMAN AIRPORT',
-        morning: 'Breakfast. Transfer to Cairo Airport for an international flight to Amman.',
-        afternoon: 'Meeting with the driver at Queen Alia Airport, transfer to the hotel.',
-        evening: 'Dinner and overnight stay in Amman.'
-      },
-      {
-        day: 11,
-        title: 'AMMAN / MADABA / MOUNT NEBO / SHOBAK PANORAMIC / PETRA',
-        morning: 'Breakfast. Visit St. George\'s Church in Madaba (famous mosaic map of Palestine) and Mount Nebo.',
-        afternoon: 'Continue with a panoramic view of Shobak, then travel to Petra.',
-        evening: 'Dinner and overnight in Petra.'
-      },
-      {
-        day: 12,
-        title: 'PETRA TOUR',
-        morning: 'Breakfast. Full-day tour of Petra (The Rose City): Obelisk Tomb, the Siq, the Treasury, the street of facades, and the theater.',
-        afternoon: 'Climb 850 steps to the "El Deir" Monastery.',
-        evening: 'Dinner and overnight in Petra.'
-      },
-      {
-        day: 13,
-        title: 'PETRA / LITTLE PETRA / WADI RUM DESERT',
-        morning: 'Breakfast. Visit Little Petra, then proceed to the Wadi Rum Desert.',
-        afternoon: '2-hour 4x4 Jeep tour through the red sand formations.',
-        evening: 'Dinner and overnight at a Bedouin camp.'
-      },
-      {
-        day: 14,
-        title: 'WADI RUM / AMMAN AIRPORT',
-        morning: 'Breakfast at the Bedouin desert camp.',
-        afternoon: 'Scheduled transfer to Amman International Airport for departure.',
-        evening: 'End of services.'
+        title: 'tour_jordan_day10_title',
+        body: 'tour_jordan_day10_body'
       }
     ]
   },
