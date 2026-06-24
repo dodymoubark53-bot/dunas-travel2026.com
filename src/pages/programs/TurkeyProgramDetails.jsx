@@ -114,7 +114,7 @@ const TurkeyProgramDetails = () => {
 
       {/* Transport Options Selector */}
       {transportOptions && (
-        <section className="container mx-auto px-6 pt-12">
+        <section id="transport-selector" className="container mx-auto px-6 pt-12">
           <div className="bg-gradient-to-r from-gold-50 via-gold-100/50 to-gold-50 border-2 border-gold-400 rounded-2xl p-6 md:p-8 shadow-lg">
             <div className="text-center mb-6">
               <h3 className="text-display-md text-obsidian-900 mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -217,7 +217,7 @@ const TurkeyProgramDetails = () => {
           {/* Sidebar - Booking Form */}
           <div className="lg:col-span-1">
             <div>
-              <BookingForm tourTitle={title} transportChoice={transportChoice} />
+              <BookingForm tourTitle={title} transportChoice={transportChoice} requireTransportChoice={!!transportOptions} />
             </div>
           </div>
         </div>

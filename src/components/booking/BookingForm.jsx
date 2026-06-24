@@ -15,11 +15,12 @@ const languages = [
   { value: 'ar', flag: '🇪🇬', labelKey: 'languages.arabic', fallback: 'Arabic' },
 ];
 
-const BookingForm = ({ tourTitle, transportChoice }) => {
+const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => {
   const { t } = useTranslation();
   const [tab, setTab] = useState('booking');
   const [status, setStatus] = useState('idle');
   const [langOpen, setLangOpen] = useState(null);
+  const [transportAlert, setTransportAlert] = useState(false);
   const langRef = useRef(null);
 
   useEffect(() => {
@@ -57,6 +58,13 @@ const BookingForm = ({ tourTitle, transportChoice }) => {
 
   const handleBookingSubmit = (e) => {
     e.preventDefault();
+    if (requireTransportChoice && !transportChoice) {
+      setTransportAlert(true);
+      const el = document.getElementById('transport-selector');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    setTransportAlert(false);
     setStatus('submitting');
     setTimeout(() => setStatus('success'), 1500);
   };
@@ -239,6 +247,15 @@ const BookingForm = ({ tourTitle, transportChoice }) => {
 
                 {/* Notes */}
                 <textarea placeholder={t('booking.notesPlaceholder', 'Special requests...')} value={b.notes} onChange={e => updateB('notes', e.target.value)} rows="2" className={`${inputClass} resize-none`} />
+
+                {/* Transport Required Alert */}
+                {transportAlert && (
+                  <div className="bg-red-500/15 border border-red-500/40 rounded-xl px-4 py-3 text-center animate-pulse">
+                    <p className="text-body-sm text-red-400 font-semibold">
+                      {t('booking.transportRequired', 'Please select a transport option (High-Speed Train or Bus) before booking.')}
+                    </p>
+                  </div>
+                )}
 
                 {/* Submit */}
                 <button type="submit" disabled={status === 'submitting'} className="w-full py-3 bg-gradient-to-r from-gold-500 to-gold-700 text-obsidian-900 font-bold rounded-xl shadow-[0_0_25px_rgba(201,162,39,0.2)] hover:shadow-[0_0_35px_rgba(201,162,39,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-[13px] uppercase tracking-[1.5px] flex items-center justify-center gap-2">

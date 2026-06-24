@@ -167,6 +167,7 @@
   "booking.selectLanguage": "اختر لغة...",
   "booking.selectVehicle": "اختر مركبة",
   "booking.sendInquiry": "احجز الآن",
+  "booking.transportRequired": "يرجى اختيار وسيلة النقل (القطار السريع أو الحافلة) قبل إتمام الحجز.",
   "booking.specialRequestPlaceholder": "طلب خاص...",
   "booking.specialRequests": "طلبات خاصة",
   "booking.specialRequirements": "متطلبات خاصة",

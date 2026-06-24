@@ -167,6 +167,7 @@
   "booking.selectLanguage": "Select language...",
   "booking.selectVehicle": "Select Vehicle",
   "booking.sendInquiry": "Book Now",
+  "booking.transportRequired": "Please select a transport option (High-Speed Train or Bus) before booking.",
   "booking.specialRequestPlaceholder": "Special Request...",
   "booking.specialRequests": "Special Requests",
   "booking.specialRequirements": "Special Requirements",
