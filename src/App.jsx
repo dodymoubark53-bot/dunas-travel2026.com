@@ -28,6 +28,7 @@ const Transportation = lazy(
 );
 const TailorTour = lazy(() => import("./pages/TailorTour"));
 const FAQ = lazy(() => import("./pages/FAQ"));
+const Invoice = lazy(() => import("./pages/Invoice"));
 const HotelDetails = lazy(() => import("./pages/hotels/HotelDetails"));
 const RoomDetails = lazy(() => import("./pages/hotels/RoomDetails"));
 const MultiCountryTours = lazy(() => import("./pages/programs/MultiCountryTours"));
@@ -219,14 +220,6 @@ function App() {
                     }
                   />
                   <Route
-                    path="multi-country"
-                    element={
-                      <PageTransition>
-                        <MultiCountryTours />
-                      </PageTransition>
-                    }
-                  />
-                  <Route
                     path="religious"
                     element={
                       <PageTransition>
@@ -255,6 +248,14 @@ function App() {
                     element={
                       <PageTransition>
                         <DubaiProgramDetails />
+                      </PageTransition>
+                    }
+                  />
+                  <Route
+                    path="multi-country"
+                    element={
+                      <PageTransition>
+                        <MultiCountryTours />
                       </PageTransition>
                     }
                   />
@@ -430,6 +431,14 @@ function App() {
                   element={
                     <PageTransition>
                       <FAQ />
+                    </PageTransition>
+                  }
+                />
+                <Route
+                  path="invoice"
+                  element={
+                    <PageTransition>
+                      <Invoice />
                     </PageTransition>
                   }
                 />

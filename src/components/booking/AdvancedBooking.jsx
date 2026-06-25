@@ -1,18 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FaCheckCircle, FaCalendarAlt, FaPlus, FaMinus, 
   FaPaperPlane, FaLanguage, FaTimes, 
-  FaChevronDown
+  FaChevronDown, FaFileInvoiceDollar
 } from 'react-icons/fa';
 import Button from '../ui/Button';
 import { fadeInUp } from '../../animations/variants';
+import InvoiceModal from './InvoiceModal';
+
+const API = 'http://localhost:5000/api';
 
 const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 'booking' }) => {
   const { t } = useTranslation();
-  const [activeTab, setActiveTab] = useState(initialTab); // 'booking' | 'inquiry'
-  const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'success'
+  const [activeTab, setActiveTab] = useState(initialTab);
+  const [status, setStatus] = useState('idle');
+  const [bookingResult, setBookingResult] = useState(null);
+  const [showInvoice, setShowInvoice] = useState(false);
+  const [error, setError] = useState('');
   const isEgyptJordanTour = tourTitle === "Combined EGYPT with Jordan - 14 DAYS / 13 Nights" || tourTitle?.includes("Combined EGYPT with Jordan");
 
   const getTodayString = () => {
@@ -21,29 +27,32 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
   };
   const todayStr = getTodayString();
 
-  // State Fields
   const [departureDate, setDepartureDate] = useState('');
   const [language, setLanguage] = useState('es');
   
-  // Passenger Counts
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
   const [infants, setInfants] = useState(0);
 
-  // Dynamic Passenger Names
   const [adultNames, setAdultNames] = useState(['', '']);
   const [childrenNames, setChildrenNames] = useState([]);
   const [infantNames, setInfantNames] = useState([]);
 
-  // Contact Info
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
 
-  // Handle passenger count changes and dynamic name fields
+  // Billing fields
+  const [invoiceType, setInvoiceType] = useState('personal');
+  const [companyName, setCompanyName] = useState('');
+  const [taxId, setTaxId] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [country, setCountry] = useState('');
+
   const handleAdultsChange = (val) => {
-    const newVal = Math.max(1, adults + val); // min 1 adult
+    const newVal = Math.max(1, adults + val);
     setAdults(newVal);
     setAdultNames(prev => {
       if (val > 0) {
@@ -78,23 +87,58 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
     });
   };
 
-  // Pricing calculation in USD
   const basePrice = basePricePerPerson || 150;
   const calculatedTotal = basePrice * (adults + children * 0.75 + infants * 0);
 
-  const handleSubmit = (e) => {
+  const getPassengerNames = () => {
+    const names = {};
+    adultNames.forEach((name, i) => { if (name) names[`adult_${i}`] = name; });
+    childrenNames.forEach((name, i) => { if (name) names[`child_${i}`] = name; });
+    infantNames.forEach((name, i) => { if (name) names[`infant_${i}`] = name; });
+    return names;
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (departureDate && departureDate < todayStr) {
-      return;
-    }
-    
+    if (departureDate && departureDate < todayStr) return;
+    setError('');
     setStatus('submitting');
-    setTimeout(() => {
+    try {
+      const payload = {
+        type: activeTab === 'booking' ? 'booking' : 'inquiry',
+        tourTitle,
+        departureDate,
+        language,
+        adults,
+        children,
+        infants,
+        passengerNames: getPassengerNames(),
+        fullName,
+        email,
+        phone,
+        inquiryMessage: activeTab === 'inquiry' ? message : '',
+        basePricePerPerson: basePrice,
+        totalAmount: activeTab === 'booking' ? calculatedTotal : 0,
+        invoiceType,
+        companyName,
+        taxId,
+        address,
+        city,
+        country
+      };
+      const res = await fetch(`${API}/bookings`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) throw new Error('Failed to submit');
+      const data = await res.json();
+      setBookingResult(data);
       setStatus('success');
-      setTimeout(() => {
-        onClose && onClose();
-      }, isEgyptJordanTour ? 20000 : 3000);
-    }, 1500);
+    } catch (err) {
+      setError(err.message);
+      setStatus('idle');
+    }
   };
 
   return (
@@ -103,7 +147,6 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
       dir="rtl" 
       onClick={(e) => e.stopPropagation()}
     >
-      {/* Close button */}
       <button 
         onClick={onClose}
         className="absolute top-4 left-4 text-gray-400 hover:text-white transition-colors cursor-pointer"
@@ -150,12 +193,22 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
                 </button>
               </div>
             ) : (
-              <p className="text-gray-300 max-w-sm">
-                {activeTab === 'booking'
-                  ? t('booking.reservationSuccessDesc', 'Your reservation request for {{tourTitle}} has been received. Our team will contact you to finalize the payment and details.', { tourTitle: t(`data.${tourTitle}`, tourTitle) })
-                  : t('booking.inquirySuccessDesc', 'Thank you for your interest in the {{tourTitle}}. Our DUNAS TRAVEL concierges will contact you shortly.', { tourTitle: t(`data.${tourTitle}`, tourTitle) })
-                }
-              </p>
+              <>
+                <p className="text-gray-300 max-w-sm">
+                  {activeTab === 'booking'
+                    ? t('booking.reservationSuccessDesc', 'Your reservation request for {{tourTitle}} has been received. Our team will contact you to finalize the payment and details.', { tourTitle: t(`data.${tourTitle}`, tourTitle) })
+                    : t('booking.inquirySuccessDesc', 'Thank you for your interest in the {{tourTitle}}. Our DUNAS TRAVEL concierges will contact you shortly.', { tourTitle: t(`data.${tourTitle}`, tourTitle) })
+                  }
+                </p>
+                {bookingResult?.invoiceNumber && (
+                  <button
+                    onClick={() => setShowInvoice(true)}
+                    className="mt-4 px-5 py-2.5 bg-gold-500 text-obsidian-900 font-bold rounded-full hover:scale-105 transition-all text-sm flex items-center gap-2 cursor-pointer"
+                  >
+                    <FaFileInvoiceDollar /> {t('booking.viewInvoice', 'View Invoice')}
+                  </button>
+                )}
+              </>
             )}
           </motion.div>
         ) : (
@@ -167,13 +220,17 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
             onSubmit={handleSubmit}
             className="flex flex-col gap-6 w-full"
           >
-            {/* Header info */}
             <div className="text-center pb-4 border-b border-[#C9A227]/10">
               <h3 className="text-xl font-bold text-white mb-1">{t(`data.${tourTitle}`, tourTitle)}</h3>
               <p className="text-xs text-[#C9A227] tracking-wider uppercase">حجز وتأكيد الرحلة / Book Tour</p>
             </div>
 
-            {/* Tabs */}
+            {error && (
+              <div className="bg-red-500/15 border border-red-500/40 rounded-xl px-4 py-3 text-center">
+                <p className="text-sm text-red-400">{error}</p>
+              </div>
+            )}
+
             <div className="flex border-b border-[#C9A227]/20 pb-1 justify-center gap-6">
               <button
                 type="button"
@@ -203,10 +260,8 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
               </button>
             </div>
 
-            {/* Inputs Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               
-              {/* Departure Date */}
               <div className="flex flex-col gap-1.5 w-full">
                 <label className="text-sm font-semibold text-[#C9A227]">موعد الرحيل / Departure Date</label>
                 <div className="relative">
@@ -224,7 +279,6 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
                 </div>
               </div>
 
-              {/* Tour Language dropdown */}
               <div className="flex flex-col gap-1.5 w-full">
                 <label className="text-sm font-semibold text-[#C9A227]">لغة الرحلة / Tour Language</label>
                 <div className="relative">
@@ -249,13 +303,11 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
 
             </div>
 
-            {/* Passenger counters section */}
             <div className="border border-[#c9a227]/25 rounded-xl p-4 bg-[#0a1969]/40">
               <h4 className="text-sm font-semibold text-[#C9A227] border-b border-[#c9a227]/10 pb-2 mb-4">عدد المسافرين والنزلاء</h4>
               
               <div className="flex flex-col gap-4">
                 
-                {/* Adults */}
                 <div className="flex items-center justify-between">
                   <div className="flex flex-col text-right">
                     <span className="font-semibold text-white text-sm">البالغين</span>
@@ -280,7 +332,6 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
                   </div>
                 </div>
                 
-                {/* Dynamic adult fields */}
                 {adultNames.map((name, idx) => (
                   <div key={`adult-field-${idx}`} className="mr-4 transition-all">
                     <input
@@ -298,7 +349,6 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
                   </div>
                 ))}
 
-                {/* Children */}
                 <div className="flex items-center justify-between border-t border-[#c9a227]/10 pt-4">
                   <div className="flex flex-col text-right">
                     <span className="font-semibold text-white text-sm">الأطفال</span>
@@ -323,7 +373,6 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
                   </div>
                 </div>
 
-                {/* Dynamic children fields */}
                 {childrenNames.map((name, idx) => (
                   <div key={`child-field-${idx}`} className="mr-4 transition-all">
                     <input
@@ -341,7 +390,6 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
                   </div>
                 ))}
 
-                {/* Infants */}
                 <div className="flex items-center justify-between border-t border-[#c9a227]/10 pt-4">
                   <div className="flex flex-col text-right">
                     <span className="font-semibold text-white text-sm">الرضع</span>
@@ -366,7 +414,6 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
                   </div>
                 </div>
 
-                {/* Dynamic infants fields */}
                 {infantNames.map((name, idx) => (
                   <div key={`infant-field-${idx}`} className="mr-4 transition-all">
                     <input
@@ -391,7 +438,6 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
             <div className="flex flex-col gap-4">
               <h4 className="text-sm font-semibold text-[#C9A227] border-b border-[#c9a227]/10 pb-2">معلومات الاتصال</h4>
 
-              {/* Full Name */}
               <div className="flex flex-col gap-1 w-full">
                 <input
                   type="text"
@@ -404,7 +450,6 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {/* Email */}
                 <div className="flex flex-col gap-1 w-full">
                   <input
                     type="email"
@@ -415,8 +460,6 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
                     required
                   />
                 </div>
-
-                {/* Phone */}
                 <div className="flex flex-col gap-1 w-full">
                   <input
                     type="tel"
@@ -429,7 +472,64 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
                 </div>
               </div>
 
-              {/* Special message if inquiry */}
+              {/* Billing Section */}
+              {activeTab === 'booking' && (
+                <div className="border border-[#c9a227]/25 rounded-xl p-4 bg-[#0a1969]/40 mt-2">
+                  <h4 className="text-sm font-semibold text-[#C9A227] border-b border-[#c9a227]/10 pb-2 mb-4">بيانات الفاتورة</h4>
+                  <div className="space-y-3">
+                    <select
+                      value={invoiceType}
+                      onChange={(e) => setInvoiceType(e.target.value)}
+                      className="w-full p-3 rounded-lg bg-[#0d226b] text-white border border-[#c9a227]/25 focus:border-[#C9A227] outline-none text-sm text-right appearance-none cursor-pointer"
+                    >
+                      <option value="personal">شخصي</option>
+                      <option value="company">شركة</option>
+                    </select>
+                    {invoiceType === 'company' && (
+                      <>
+                        <input
+                          type="text"
+                          placeholder="اسم الشركة *"
+                          value={companyName}
+                          onChange={(e) => setCompanyName(e.target.value)}
+                          className="w-full p-3 rounded-lg bg-[#0d226b] text-white border border-[#c9a227]/25 focus:border-[#C9A227] outline-none text-sm text-right"
+                        />
+                        <input
+                          type="text"
+                          placeholder="الرقم الضريبي *"
+                          value={taxId}
+                          onChange={(e) => setTaxId(e.target.value)}
+                          className="w-full p-3 rounded-lg bg-[#0d226b] text-white border border-[#c9a227]/25 focus:border-[#C9A227] outline-none text-sm text-right"
+                        />
+                      </>
+                    )}
+                    <input
+                      type="text"
+                      placeholder="العنوان"
+                      value={address}
+                      onChange={(e) => setAddress(e.target.value)}
+                      className="w-full p-3 rounded-lg bg-[#0d226b] text-white border border-[#c9a227]/25 focus:border-[#C9A227] outline-none text-sm text-right"
+                    />
+                    <div className="grid grid-cols-2 gap-3">
+                      <input
+                        type="text"
+                        placeholder="المدينة"
+                        value={city}
+                        onChange={(e) => setCity(e.target.value)}
+                        className="w-full p-3 rounded-lg bg-[#0d226b] text-white border border-[#c9a227]/25 focus:border-[#C9A227] outline-none text-sm text-right"
+                      />
+                      <input
+                        type="text"
+                        placeholder="الدولة"
+                        value={country}
+                        onChange={(e) => setCountry(e.target.value)}
+                        className="w-full p-3 rounded-lg bg-[#0d226b] text-white border border-[#c9a227]/25 focus:border-[#C9A227] outline-none text-sm text-right"
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {activeTab === 'inquiry' && (
                 <div className="flex flex-col gap-1 w-full mt-1">
                   <textarea
@@ -443,7 +543,6 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
               )}
             </div>
 
-            {/* Estimated Total / Billing system */}
             {activeTab === 'booking' && (
               <div className="mt-2 p-4 rounded-xl bg-[#0a1969] border border-[#c9a227]/25 flex items-center justify-between text-right shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)]">
                 <span className="text-xl md:text-2xl font-bold text-[#E8C97A]">
@@ -453,7 +552,6 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
               </div>
             )}
 
-            {/* Submit Button */}
             <div className="flex justify-center mt-2 w-full">
               <Button
                 type="submit"
@@ -471,6 +569,10 @@ const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 
           </motion.form>
         )}
       </AnimatePresence>
+
+      {showInvoice && bookingResult && (
+        <InvoiceModal booking={bookingResult} onClose={() => setShowInvoice(false)} />
+      )}
     </div>
   );
 };

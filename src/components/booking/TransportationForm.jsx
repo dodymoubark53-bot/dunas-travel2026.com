@@ -1,14 +1,20 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaCheckCircle } from 'react-icons/fa';
+import { FaCheckCircle, FaFileInvoiceDollar } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import Button from '../ui/Button';
 import { fadeInUp } from '../../animations/variants';
 import { transportation } from '../../data/transportation';
+import InvoiceModal from './InvoiceModal';
+
+const API = 'http://localhost:5000/api';
 
 const TransportationForm = ({ preSelectedVehicleId = '' }) => {
   const { t } = useTranslation();
-  const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'success'
+  const [status, setStatus] = useState('idle');
+  const [bookingResult, setBookingResult] = useState(null);
+  const [showInvoice, setShowInvoice] = useState(false);
+  const [error, setError] = useState('');
 
   const getTodayString = () => {
     const d = new Date();
@@ -35,25 +41,42 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (formData.tripDate && formData.tripDate < todayStr) {
-      return;
-    }
+    if (formData.tripDate && formData.tripDate < todayStr) return;
+    setError('');
     setStatus('submitting');
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const payload = {
+        type: 'transport',
+        tourTitle: `Transport: ${formData.pickupLocation} → ${formData.dropoffLocation}`,
+        vehicleId: formData.vehicleId,
+        tripDate: formData.tripDate,
+        pickupTime: formData.pickupTime,
+        adults: parseInt(formData.adults) || 1,
+        children: parseInt(formData.children) || 0,
+        pickupLocation: formData.pickupLocation,
+        dropoffLocation: formData.dropoffLocation,
+        fullName: formData.fullName,
+        phone: formData.phone,
+        email: formData.email,
+        specialRequest: formData.specialRequest,
+        totalAmount: 0,
+        currency: 'USD'
+      };
+      const res = await fetch(`${API}/bookings`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) throw new Error('Failed to submit booking');
+      const data = await res.json();
+      setBookingResult(data);
       setStatus('success');
-      // Reset form after a delay or just leave success state
-      setTimeout(() => {
-        setStatus('idle');
-        setFormData(prev => ({
-          ...prev,
-          tripDate: '', pickupTime: '', pickupLocation: '', dropoffLocation: '',
-          fullName: '', phone: '', email: '', specialRequest: ''
-        }));
-      }, 4000);
-    }, 1500);
+    } catch (err) {
+      setError(err.message);
+      setStatus('idle');
+    }
   };
 
   return (
@@ -80,6 +103,14 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
             <p className="text-body-md text-obsidian-500">
               {t('booking.reservationSuccessDesc', 'Thank you for your booking. Our DUNAS TRAVEL concierges will contact you shortly to finalize the details.')}
             </p>
+            {bookingResult?.invoiceNumber && (
+              <button
+                onClick={() => setShowInvoice(true)}
+                className="mt-4 px-5 py-2.5 bg-gold-500 text-white font-bold rounded-full hover:scale-105 transition-all text-sm flex items-center gap-2 cursor-pointer"
+              >
+                <FaFileInvoiceDollar /> {t('booking.viewInvoice', 'View Invoice')}
+              </button>
+            )}
           </motion.div>
         ) : (
           <motion.form 
@@ -94,6 +125,12 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
               <h3 className="text-display-md text-obsidian-900 mb-2 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>{t('booking.bookYourTransfer', 'Book Your Transfer')}</h3>
               <p className="text-caption text-obsidian-500">{t('booking.transferDesc', 'Reserve your premium vehicle and professional driver.')}</p>
             </div>
+
+            {error && (
+              <div className="bg-red-500/15 border border-red-500/40 rounded-xl px-4 py-3 text-center">
+                <p className="text-body-sm text-red-400">{error}</p>
+              </div>
+            )}
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <select 
@@ -224,6 +261,10 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
           </motion.form>
         )}
       </AnimatePresence>
+
+      {showInvoice && bookingResult && (
+        <InvoiceModal booking={bookingResult} onClose={() => setShowInvoice(false)} />
+      )}
     </div>
   );
 };

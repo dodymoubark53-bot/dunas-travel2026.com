@@ -7,6 +7,7 @@ import { FaStar, FaTimes, FaChevronLeft, FaChevronRight, FaVolumeUp, FaVolumeMut
 import Button from "../components/ui/Button";
 import TourCard from "../components/tour/TourCard";
 import { tours } from "../data/tours";
+import HieroglyphicName from "../components/home/HieroglyphicName";
 import { useTurkeyPrograms } from "../hooks/useTurkeyPrograms";
 import { useJordanPrograms } from "../hooks/useJordanPrograms";
 import { useDubaiPrograms } from "../hooks/useDubaiPrograms";
@@ -802,6 +803,8 @@ const Home = () => {
       </section>
 
 
+
+      <HieroglyphicName />
 
       {/* Transportation & Transfers */}
       <section className="py-12 bg-ivory-50 relative overflow-hidden">

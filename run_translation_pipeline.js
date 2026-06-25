@@ -3,7 +3,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { tours } from './src/data/tours.js';
 import { services } from './src/data/services.js';
-import { multiCountryTours } from './src/data/multiCountryTours.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -64,37 +63,6 @@ services.forEach(service => {
   }
   if (service.itinerary) {
     service.itinerary.forEach(day => {
-      addString(day.title);
-      addString(day.morning);
-      addString(day.afternoon);
-      addString(day.evening);
-    });
-  }
-});
-
-multiCountryTours((k)=>k).forEach(tour => {
-  const lang = 'es';
-  const addString = (str) => {
-    if (str && typeof str === 'string') {
-      tourStringLangs[str] = lang;
-    }
-  };
-  addString(tour.title);
-  addString(tour.subtitle);
-  addString(tour.overview);
-  addString(tour.duration);
-  addString(tour.type);
-  if (tour.highlights) tour.highlights.forEach(addString);
-  if (tour.included) tour.included.forEach(addString);
-  if (tour.excluded) tour.excluded.forEach(addString);
-  if (tour.accommodations) {
-    tour.accommodations.forEach(acc => {
-      addString(acc.destination);
-      addString(acc.regime);
-    });
-  }
-  if (tour.itinerary) {
-    tour.itinerary.forEach(day => {
       addString(day.title);
       addString(day.morning);
       addString(day.afternoon);

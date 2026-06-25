@@ -1,0 +1,232 @@
+import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { FaFileInvoiceDollar, FaSearch, FaTimes, FaPrint, FaCheckCircle } from 'react-icons/fa';
+
+const API = 'http://localhost:5000/api';
+
+const Invoice = () => {
+  const { t, i18n } = useTranslation();
+  const isRtl = i18n.language === 'ar';
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [invoiceNum, setInvoiceNum] = useState(searchParams.get('inv') || '');
+  const [booking, setBooking] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    if (!invoiceNum.trim()) return;
+    setLoading(true);
+    setError('');
+    setBooking(null);
+    try {
+      const res = await fetch(`${API}/bookings/invoice/${invoiceNum.trim()}`);
+      if (!res.ok) {
+        if (res.status === 404) throw new Error(t('invoice.notFound', 'Invoice not found'));
+        throw new Error('Server error');
+      }
+      const data = await res.json();
+      setBooking(data);
+      setSearchParams({ inv: invoiceNum.trim() });
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handlePrint = () => window.print();
+
+  const d = booking ? new Date(booking.createdAt) : null;
+
+  const passengerList = [];
+  if (booking?.passengerNames) {
+    const names = typeof booking.passengerNames === 'object' ? booking.passengerNames : {};
+    Object.entries(names).forEach(([, name]) => {
+      if (name) passengerList.push(name);
+    });
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-50 py-12 px-4" dir={isRtl ? 'rtl' : 'ltr'}>
+      <div className="max-w-2xl mx-auto">
+        {/* Search Section */}
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+          <div className="flex items-center gap-2 mb-4">
+            <FaFileInvoiceDollar className="text-gold-600" size={20} />
+            <h1 className="text-xl font-bold text-gray-900">{t('invoice.pageTitle', 'Invoice Lookup')}</h1>
+          </div>
+          <form onSubmit={handleSearch} className="flex gap-3">
+            <input
+              type="text"
+              placeholder={t('invoice.enterInvoiceNumber', 'Enter your invoice number (e.g. INV-202506-1234)')}
+              value={invoiceNum}
+              onChange={(e) => setInvoiceNum(e.target.value)}
+              className="flex-1 p-3 border border-gray-300 rounded-xl focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none text-sm"
+            />
+            <button
+              type="submit"
+              disabled={loading || !invoiceNum.trim()}
+              className="px-5 py-3 bg-gradient-to-r from-gold-500 to-gold-700 text-white font-semibold rounded-xl hover:scale-[1.02] transition-all disabled:opacity-50 flex items-center gap-2"
+            >
+              {loading ? <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" /> : <FaSearch />}
+              {t('common.search', 'Search')}
+            </button>
+          </form>
+          {error && (
+            <div className="mt-4 bg-red-50 border border-red-200 rounded-xl px-4 py-3 flex items-center gap-2 text-sm text-red-600">
+              <FaTimes size={12} />
+              {error}
+            </div>
+          )}
+        </div>
+
+        {/* Invoice Result */}
+        {booking && (
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden print:shadow-none print:border-none">
+            {/* Print Button */}
+            <div className="p-4 border-b border-gray-100 flex justify-end print:hidden">
+              <button onClick={handlePrint} className="px-4 py-2 bg-gray-100 rounded-xl text-sm text-gray-600 hover:bg-gray-200 transition-colors flex items-center gap-2">
+                <FaPrint size={14} />
+                {t('common.print', 'Print')}
+              </button>
+            </div>
+
+            <div className="p-6 sm:p-8">
+              {/* Header */}
+              <div className="flex items-start justify-between border-b border-gray-200 pb-6 mb-6">
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <FaFileInvoiceDollar className="text-gold-600" size={20} />
+                    <h2 className="text-xl font-bold text-gray-900">{t('booking.invoice', 'Invoice')}</h2>
+                  </div>
+                  {booking.invoiceNumber && (
+                    <p className="text-sm text-gray-500 mt-1">
+                      {t('booking.invoiceNumber', 'Invoice #')}: <span className="font-mono font-semibold text-gray-700">{booking.invoiceNumber}</span>
+                    </p>
+                  )}
+                </div>
+                <div className="text-right">
+                  <p className="text-lg font-bold text-gray-900">DUNAS TRAVEL</p>
+                  <p className="text-xs text-gray-500">{t('booking.luxuryTravel', 'Luxury Travel Agency')}</p>
+                </div>
+              </div>
+
+              {/* Status & Date */}
+              <div className="flex items-center justify-between mb-6 text-sm">
+                <span className="text-gray-500">
+                  {t('booking.date', 'Date')}: {d.toLocaleDateString(i18n.language === 'ar' ? 'ar-EG' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </span>
+                <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                  booking.status === 'confirmed' ? 'bg-green-100 text-green-700' :
+                  booking.status === 'cancelled' ? 'bg-red-100 text-red-700' :
+                  booking.status === 'completed' ? 'bg-blue-100 text-blue-700' :
+                  'bg-yellow-100 text-yellow-700'
+                }`}>
+                  {booking.status === 'pending' ? t('booking.pending', 'Pending') :
+                   booking.status === 'confirmed' ? t('booking.confirmed', 'Confirmed') :
+                   booking.status === 'cancelled' ? t('booking.cancelled', 'Cancelled') :
+                   t('booking.completed', 'Completed')}
+                </span>
+              </div>
+
+              {/* Tour Info */}
+              {booking.tourTitle && (
+                <div className="bg-gray-50 rounded-xl p-4 mb-6">
+                  <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">{t('booking.tour', 'Tour')}</p>
+                  <p className="font-semibold text-gray-900">{booking.tourTitle}</p>
+                </div>
+              )}
+
+              {/* Billing Details */}
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-gray-800 mb-3 uppercase tracking-wider">{t('booking.billingInfo', 'Billing Details')}</h3>
+                <div className="bg-gray-50 rounded-xl p-4 space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">{t('booking.fullName', 'Name')}</span>
+                    <span className="font-medium text-gray-800">{booking.fullName}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">{t('booking.email', 'Email')}</span>
+                    <span className="font-medium text-gray-800">{booking.email}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">{t('booking.phone', 'Phone')}</span>
+                    <span className="font-medium text-gray-800">{booking.phone}</span>
+                  </div>
+                  {booking.invoiceType === 'company' && (
+                    <>
+                      <div className="flex justify-between">
+                        <span className="text-gray-500">{t('booking.companyName', 'Company')}</span>
+                        <span className="font-medium text-gray-800">{booking.companyName}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-500">{t('booking.taxId', 'Tax ID')}</span>
+                        <span className="font-medium text-gray-800">{booking.taxId}</span>
+                      </div>
+                    </>
+                  )}
+                  {(booking.address || booking.city || booking.country) && (
+                    <div className="flex justify-between">
+                      <span className="text-gray-500">{t('booking.address', 'Address')}</span>
+                      <span className="font-medium text-gray-800 text-right">
+                        {[booking.address, booking.city, booking.country].filter(Boolean).join(', ')}
+                      </span>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Trip Details */}
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-gray-800 mb-3 uppercase tracking-wider">{t('booking.tripDetails', 'Trip Details')}</h3>
+                <div className="bg-gray-50 rounded-xl p-4 space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">{t('booking.arrivalDate', 'Arrival')}</span>
+                    <span className="font-medium text-gray-800">{booking.arrivalDate || '—'}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">{t('booking.departureDate', 'Departure')}</span>
+                    <span className="font-medium text-gray-800">{booking.departureDate || '—'}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">{t('booking.passengers', 'Passengers')}</span>
+                    <span className="font-medium text-gray-800">
+                      {booking.adults > 0 && `${booking.adults} ${t('booking.adults', 'Adults')}`}
+                      {booking.children > 0 && `, ${booking.children} ${t('booking.children', 'Children')}`}
+                      {booking.infants > 0 && `, ${booking.infants} ${t('booking.infants', 'Infants')}`}
+                    </span>
+                  </div>
+                  {passengerList.length > 0 && (
+                    <div className="flex justify-between">
+                      <span className="text-gray-500">{t('booking.passengerNames', 'Names')}</span>
+                      <span className="font-medium text-gray-800 text-right max-w-[200px]">{passengerList.join(', ')}</span>
+                    </div>
+                  )}
+                  {booking.totalAmount > 0 && (
+                    <div className="flex justify-between pt-2 border-t border-gray-200">
+                      <span className="font-semibold text-gray-700">{t('booking.totalAmount', 'Total Amount')}</span>
+                      <span className="font-bold text-lg text-gray-900">
+                        {booking.currency === 'EUR' ? '€' : '$'}{booking.totalAmount.toLocaleString()}
+                      </span>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Footer */}
+              <div className="border-t border-gray-200 pt-6 text-center text-xs text-gray-400 space-y-1">
+                <p className="font-semibold text-gray-500">DUNAS TRAVEL</p>
+                <p>{t('booking.invoiceFooter', 'Thank you for choosing DUNAS TRAVEL. We look forward to providing you with an unforgettable experience.')}</p>
+                <p className="mt-2">{t('booking.invoiceNote', 'This is a booking confirmation invoice. Payment details will be sent separately.')}</p>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Invoice;

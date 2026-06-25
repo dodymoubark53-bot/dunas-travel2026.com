@@ -268,14 +268,29 @@ const MultiCountryTourDetails = () => {
                           )}
                         </div>
                         <div className="space-y-2">
-                          {day.morning && (
-                            <p className="text-body-sm text-obsidian-500 leading-relaxed">{t(`data.${day.morning}`, day.morning)}</p>
-                          )}
-                          {day.afternoon && (
-                            <p className="text-body-sm text-obsidian-500 leading-relaxed">{t(`data.${day.afternoon}`, day.afternoon)}</p>
-                          )}
-                          {day.evening && (
-                            <p className="text-body-sm text-obsidian-500 leading-relaxed">{t(`data.${day.evening}`, day.evening)}</p>
+                          {day.description ? (
+                            <p className="text-body-sm text-obsidian-500 leading-relaxed">{t(`data.${day.description}`, day.description)}</p>
+                          ) : (
+                            <div className="space-y-2 text-body-sm text-obsidian-500 leading-relaxed">
+                              {day.morning && (
+                                <p>
+                                  <strong className="text-gold-600 font-semibold">{t('tour.morning', 'Morning')}:</strong>{' '}
+                                  {t(`data.${day.morning}`, day.morning)}
+                                </p>
+                              )}
+                              {day.afternoon && (
+                                <p>
+                                  <strong className="text-gold-600 font-semibold">{t('tour.afternoon', 'Afternoon')}:</strong>{' '}
+                                  {t(`data.${day.afternoon}`, day.afternoon)}
+                                </p>
+                              )}
+                              {day.evening && (
+                                <p>
+                                  <strong className="text-gold-600 font-semibold">{t('tour.evening', 'Evening')}:</strong>{' '}
+                                  {t(`data.${day.evening}`, day.evening)}
+                                </p>
+                              )}
+                            </div>
                           )}
                         </div>
                       </div>

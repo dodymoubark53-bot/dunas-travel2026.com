@@ -1,6 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaPlus, FaMinus, FaCheckCircle, FaPaperPlane, FaGlobeAmericas, FaUser, FaFileInvoiceDollar, FaCalendarAlt, FaClock } from 'react-icons/fa';
+import InvoiceModal from './InvoiceModal';
+
+const API = 'http://localhost:5000/api';
 
 const inputClass = "w-full p-3 rounded-xl outline-none transition-all text-[14px] bg-[rgba(255,252,247,0.04)] text-ivory-50 placeholder:text-[rgba(245,237,214,0.3)] border border-[rgba(201,162,39,0.15)] focus:border-[rgba(201,162,39,0.5)] focus:shadow-[0_0_20px_rgba(201,162,39,0.1)] [color-scheme:dark]";
 const labelClass = "block text-caption text-gold-500 font-medium mb-1 text-[12px] uppercase tracking-[1px]";
@@ -21,6 +24,9 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
   const [status, setStatus] = useState('idle');
   const [langOpen, setLangOpen] = useState(null);
   const [transportAlert, setTransportAlert] = useState(false);
+  const [bookingResult, setBookingResult] = useState(null);
+  const [showInvoice, setShowInvoice] = useState(false);
+  const [error, setError] = useState('');
   const langRef = useRef(null);
 
   useEffect(() => {
@@ -32,7 +38,6 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
   const today = new Date();
   const todayStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
 
-  // Booking form state
   const [b, setB] = useState({
     arrivalDate: '', departureDate: '', arrivalTime: '', departureTime: '', language: '',
     adults: 1, children: 0, infants: 0,
@@ -40,9 +45,8 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
     invoiceType: 'personal', companyName: '', taxId: '', address: '', city: '', country: '',
     notes: ''
   });
-  const [, setPassengerNames] = useState({});
+  const [passengerNames, setPassengerNames] = useState({});
 
-  // Inquiry form state
   const [inq, setInq] = useState({ name: '', email: '', phone: '', language: '', message: '' });
 
   const updateB = (k, v) => {
@@ -56,8 +60,9 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
     ...Array.from({ length: b.infants }, (_, i) => ({ type: 'Infant', num: i + 1, key: `infant_${i}` })),
   ];
 
-  const handleBookingSubmit = (e) => {
+  const handleBookingSubmit = async (e) => {
     e.preventDefault();
+    setError('');
     if (requireTransportChoice && !transportChoice) {
       setTransportAlert(true);
       const el = document.getElementById('transport-selector');
@@ -66,24 +71,92 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
     }
     setTransportAlert(false);
     setStatus('submitting');
-    setTimeout(() => setStatus('success'), 1500);
+    try {
+      const payload = {
+        type: 'booking',
+        tourTitle,
+        transportChoice: transportChoice || '',
+        arrivalDate: b.arrivalDate,
+        departureDate: b.departureDate,
+        arrivalTime: b.arrivalTime,
+        departureTime: b.departureTime,
+        language: b.language,
+        adults: b.adults,
+        children: b.children,
+        infants: b.infants,
+        passengerNames: Object.fromEntries(Object.entries(passengerNames)),
+        fullName: b.fullName,
+        email: b.email,
+        phone: b.phone,
+        invoiceType: b.invoiceType,
+        companyName: b.companyName,
+        taxId: b.taxId,
+        address: b.address,
+        city: b.city,
+        country: b.country,
+        notes: b.notes
+      };
+      const res = await fetch(`${API}/bookings`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) throw new Error('Failed to submit booking');
+      const data = await res.json();
+      setBookingResult(data);
+      setStatus('success');
+    } catch (err) {
+      setError(err.message);
+      setStatus('idle');
+    }
   };
 
-  const handleInquirySubmit = (e) => {
+  const handleInquirySubmit = async (e) => {
     e.preventDefault();
+    setError('');
     setStatus('submitting');
-    setTimeout(() => setStatus('success'), 1500);
+    try {
+      const payload = {
+        type: 'inquiry',
+        tourTitle,
+        fullName: inq.name,
+        email: inq.email,
+        phone: inq.phone,
+        language: inq.language,
+        inquiryMessage: inq.message
+      };
+      const res = await fetch(`${API}/bookings`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) throw new Error('Failed to submit inquiry');
+      const data = await res.json();
+      setBookingResult(data);
+      setStatus('success');
+    } catch (err) {
+      setError(err.message);
+      setStatus('idle');
+    }
   };
 
   return (
     <div ref={langRef} className="bg-obsidian-900 text-ivory-50 rounded-2xl shadow-card border border-[rgba(201,162,39,0.15)] hover:shadow-[0_0_40px_rgba(201,162,39,0.15)] hover:border-[rgba(201,162,39,0.35)] hover:scale-[1.01] transition-all duration-300">
-      {status === 'success' ? (
+      {status === 'success' && bookingResult ? (
           <div className="flex flex-col items-center text-center py-12 px-6">
             <div className="w-14 h-14 rounded-full bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center mb-4 shadow-[0_0_25px_rgba(201,162,39,0.3)]">
               <FaCheckCircle className="text-obsidian-900 text-xl" />
             </div>
             <h3 className="text-display-md text-ivory-50 mb-2 font-display">{t('booking.inquirySent', 'Inquiry Sent')}</h3>
             <p className="text-body-sm text-ivory-400">{t('booking.successDesc', 'Our team will contact you within 24 hours.')}</p>
+            {bookingResult.type === 'booking' && bookingResult.invoiceNumber && (
+              <button
+                onClick={() => setShowInvoice(true)}
+                className="mt-4 px-6 py-2.5 bg-gradient-to-r from-gold-500 to-gold-700 text-obsidian-900 font-bold rounded-xl hover:scale-105 transition-all text-[13px] uppercase tracking-[1px] flex items-center gap-2"
+              >
+                <FaFileInvoiceDollar /> {t('booking.viewInvoice', 'View Invoice')}
+              </button>
+            )}
             {transportChoice && (
               <div className="mt-4 bg-[rgba(201,162,39,0.1)] border border-gold-500/30 rounded-xl px-5 py-3">
                 <p className="text-caption text-gold-500 text-[11px] uppercase tracking-[1px] mb-1">{t('booking.transport', 'Transport')}</p>
@@ -93,7 +166,6 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
           </div>
         ) : (
           <div>
-            {/* Tour Title */}
             <div className="px-5 pt-5 pb-3 border-b border-[rgba(201,162,39,0.1)]">
               <div className="flex items-center gap-2.5 mb-1">
                 <div className="w-7 h-7 rounded-full bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center">
@@ -104,15 +176,19 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
               <p className="text-caption text-ivory-400 truncate pl-9">{tourTitle}</p>
             </div>
 
-            {/* Tabs */}
             <div className="flex px-5 pt-3 pb-0 gap-0">
               <button type="button" onClick={() => setTab('booking')} className={tabClass(tab === 'booking')}>{t('booking.tabBooking', 'Book Trip')}</button>
               <button type="button" onClick={() => setTab('inquiry')} className={tabClass(tab === 'inquiry')}>{t('booking.tabInquiry', 'Inquiry')}</button>
             </div>
 
+            {error && (
+              <div className="mx-5 mt-3 bg-red-500/15 border border-red-500/40 rounded-xl px-4 py-3 text-center">
+                <p className="text-body-sm text-red-400">{error}</p>
+              </div>
+            )}
+
             {tab === 'booking' ? (
               <form onSubmit={handleBookingSubmit} className="px-5 py-4 space-y-3.5">
-                {/* Dates Row */}
                 <div className="grid grid-cols-2 gap-3">
                   <div>
                     <label className={labelClass}><FaCalendarAlt className="inline mr-1.5 text-gold-400" size={11} />{t('booking.arrivalDate', 'Arrival Date')}</label>
@@ -124,7 +200,6 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
                   </div>
                 </div>
 
-                {/* Times Row */}
                 <div className="grid grid-cols-2 gap-3">
                   <div>
                     <label className={labelClass}><FaClock className="inline mr-1.5 text-gold-400" size={11} />{t('booking.arrivalTime', 'Arrival Time')}</label>
@@ -136,7 +211,6 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
                   </div>
                 </div>
 
-                {/* Language */}
                 <div className="relative">
                   <label className={labelClass}><FaGlobeAmericas className="inline mr-1.5 text-gold-400" size={11} />{t('booking.preferredLanguage', 'Language')}</label>
                   <button type="button" onClick={() => setLangOpen(langOpen === 'booking' ? null : 'booking')} className={`${inputClass} text-left flex items-center gap-2`}>
@@ -161,7 +235,6 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
                   )}
                 </div>
 
-                {/* Passengers */}
                 <div>
                   <label className={labelClass}><FaUser className="inline mr-1.5 text-gold-400" size={11} />{t('booking.passengers', 'Passengers')}</label>
                   <div className="grid grid-cols-3 gap-2">
@@ -182,7 +255,6 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
                   </div>
                 </div>
 
-                {/* Transport Choice */}
                 {transportChoice && (
                   <div className="bg-[rgba(201,162,39,0.08)] border border-gold-500/20 rounded-xl px-4 py-3">
                     <label className={labelClass}>{t('booking.transport', 'Transport')}</label>
@@ -193,7 +265,6 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
                   </div>
                 )}
 
-                {/* Passenger Names */}
                 {passengerFields.length > 0 && (
                   <div className="bg-[rgba(255,252,247,0.02)] rounded-xl p-3 border border-[rgba(201,162,39,0.08)]">
                     <p className="text-caption text-gold-500 font-semibold mb-2 text-[11px] uppercase tracking-[1px]">{t('booking.passengerNames', 'Passenger Names')}</p>
@@ -208,7 +279,6 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
                   </div>
                 )}
 
-                {/* Contact */}
                 <div className="space-y-3">
                   <p className={labelClass}><FaUser className="inline mr-1.5 text-gold-400" size={11} />{t('booking.contactInfo', 'Contact')}</p>
                   <input type="text" placeholder={t('booking.fullName', 'Full Name')} value={b.fullName} onChange={e => updateB('fullName', e.target.value)} required className={inputClass} />
@@ -218,7 +288,6 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
                   </div>
                 </div>
 
-                {/* Billing (collapsible) */}
                 <div>
                   <button type="button" onClick={() => updateB('_showBilling', !b._showBilling)} className={`${labelClass} w-full text-left flex items-center justify-between ${b._showBilling ? 'text-gold-500' : ''}`}>
                     <span><FaFileInvoiceDollar className="inline mr-1.5 text-gold-400" size={11} />{t('booking.billingInfo', 'Billing')}</span>
@@ -245,10 +314,8 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
                   )}
                 </div>
 
-                {/* Notes */}
                 <textarea placeholder={t('booking.notesPlaceholder', 'Special requests...')} value={b.notes} onChange={e => updateB('notes', e.target.value)} rows="2" className={`${inputClass} resize-none`} />
 
-                {/* Transport Required Alert */}
                 {transportAlert && (
                   <div className="bg-red-500/15 border border-red-500/40 rounded-xl px-4 py-3 text-center animate-pulse">
                     <p className="text-body-sm text-red-400 font-semibold">
@@ -257,7 +324,6 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
                   </div>
                 )}
 
-                {/* Submit */}
                 <button type="submit" disabled={status === 'submitting'} className="w-full py-3 bg-gradient-to-r from-gold-500 to-gold-700 text-obsidian-900 font-bold rounded-xl shadow-[0_0_25px_rgba(201,162,39,0.2)] hover:shadow-[0_0_35px_rgba(201,162,39,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-[13px] uppercase tracking-[1.5px] flex items-center justify-center gap-2">
                   {status === 'submitting' ? <span className="flex items-center gap-2"><span className="w-4 h-4 border-2 border-obsidian-900 border-t-transparent rounded-full animate-spin" />{t('common.sending', 'Sending...')}</span> : <><FaPaperPlane size={12} />{t('booking.sendInquiry', 'Book Now')}</>}
                 </button>
@@ -311,6 +377,10 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
             )}
           </div>
         )}
+
+      {showInvoice && bookingResult && (
+        <InvoiceModal booking={bookingResult} onClose={() => setShowInvoice(false)} />
+      )}
     </div>
   );
 };
