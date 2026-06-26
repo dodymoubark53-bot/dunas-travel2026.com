@@ -207,7 +207,7 @@ const MultiCountryTourDetails = () => {
               </div>
             </motion.div>
 
-            {/* Included / Excluded */}
+            {/* Included / Excluded - Country Split (mct-006) or Legacy */}
             <motion.div
               variants={fadeInUp}
               initial="hidden"
@@ -215,35 +215,125 @@ const MultiCountryTourDetails = () => {
               viewport={{ once: true }}
               className="mt-16 max-w-4xl mx-auto"
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-display-md text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                    {tour.included && tour.included.length > 0 ? (tour.inclusionsTitle ? t(`data.${tour.inclusionsTitle}`, tour.inclusionsTitle) : t('tourDetail.included', 'What is Included')) : ''}
-                  </h3>
-                  <ul className="flex flex-col gap-3">
-                    {tour.included && tour.included.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700">
-                        <FaCheck className="text-sage-500 mt-1 flex-shrink-0" />
-                        <span>{t(`data.${item}`, item)}</span>
-                      </li>
-                    ))}
-                  </ul>
+              {tour.tunisiaIncluded ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-display-md text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                      {tour.tunisiaInclTitle ? t(`data.${tour.tunisiaInclTitle}`, tour.tunisiaInclTitle) : t('tourDetail.included', 'Included')}
+                    </h3>
+                    <ul className="flex flex-col gap-3">
+                      {tour.tunisiaIncluded.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700">
+                          <FaCheck className="text-sage-500 mt-1 flex-shrink-0" />
+                          <span>{t(`data.${item}`, item)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <h3 className="text-display-md text-2xl mt-8 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                      {tour.tunisiaExclTitle ? t(`data.${tour.tunisiaExclTitle}`, tour.tunisiaExclTitle) : t('tourDetail.excluded', 'Not Included')}
+                    </h3>
+                    <ul className="flex flex-col gap-3">
+                      {tour.tunisiaExcluded.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700">
+                          <FaTimes className="text-red-400 mt-1 flex-shrink-0" />
+                          <span>{t(`data.${item}`, item)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-display-md text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                      {tour.egyptInclTitle ? t(`data.${tour.egyptInclTitle}`, tour.egyptInclTitle) : t('tourDetail.included', 'Included')}
+                    </h3>
+                    <ul className="flex flex-col gap-3">
+                      {tour.egyptIncluded.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700">
+                          <FaCheck className="text-sage-500 mt-1 flex-shrink-0" />
+                          <span>{t(`data.${item}`, item)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <h3 className="text-display-md text-2xl mt-8 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                      {tour.egyptExclTitle ? t(`data.${tour.egyptExclTitle}`, tour.egyptExclTitle) : t('tourDetail.excluded', 'Not Included')}
+                    </h3>
+                    <ul className="flex flex-col gap-3">
+                      {tour.egyptExcluded.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700">
+                          <FaTimes className="text-red-400 mt-1 flex-shrink-0" />
+                          <span>{t(`data.${item}`, item)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-display-md text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                    {tour.excluded && tour.excluded.length > 0 ? (tour.exclusionsTitle ? t(`data.${tour.exclusionsTitle}`, tour.exclusionsTitle) : t('tourDetail.excluded', 'What is Excluded')) : ''}
-                  </h3>
-                  <ul className="flex flex-col gap-3">
-                    {tour.excluded && tour.excluded.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700">
-                        <FaTimes className="text-red-400 mt-1 flex-shrink-0" />
-                        <span>{t(`data.${item}`, item)}</span>
-                      </li>
-                    ))}
-                  </ul>
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-display-md text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                      {tour.included && tour.included.length > 0 ? (tour.inclusionsTitle ? t(`data.${tour.inclusionsTitle}`, tour.inclusionsTitle) : t('tourDetail.included', 'What is Included')) : ''}
+                    </h3>
+                    <ul className="flex flex-col gap-3">
+                      {tour.included && tour.included.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700">
+                          <FaCheck className="text-sage-500 mt-1 flex-shrink-0" />
+                          <span>{t(`data.${item}`, item)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-display-md text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                      {tour.excluded && tour.excluded.length > 0 ? (tour.exclusionsTitle ? t(`data.${tour.exclusionsTitle}`, tour.exclusionsTitle) : t('tourDetail.excluded', 'What is Excluded')) : ''}
+                    </h3>
+                    <ul className="flex flex-col gap-3">
+                      {tour.excluded && tour.excluded.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700">
+                          <FaTimes className="text-red-400 mt-1 flex-shrink-0" />
+                          <span>{t(`data.${item}`, item)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
+              )}
             </motion.div>
+
+            {/* Selected Hotels */}
+            {tour.selectedHotels && tour.selectedHotels.length > 0 && (
+              <motion.div
+                variants={fadeInUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="mt-16 max-w-4xl mx-auto"
+              >
+                <h3 className="text-display-md text-2xl mb-6 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {t('tourDetail.selectedHotels', 'Selected Hotels')}
+                </h3>
+                <div className="bg-ivory-50 rounded-2xl overflow-hidden shadow-sm border border-gold-100">
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-body-sm">
+                      <thead>
+                        <tr className="bg-gold-500 text-obsidian-900">
+                          <th className="px-6 py-4 text-left font-semibold">{t('tour.hotelCity', 'City')}</th>
+                          <th className="px-6 py-4 text-left font-semibold">{t('tour.hotelNights', 'Nights')}</th>
+                          <th className="px-6 py-4 text-left font-semibold">{t('tour.hotelName', 'Hotel')}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {tour.selectedHotels.map((hotel, idx) => (
+                          <tr key={idx} className={idx % 2 === 0 ? 'bg-ivory-50' : 'bg-obsidian-50/50'}>
+                            <td className="px-6 py-4 text-obsidian-700">{t(`data.${hotel.city}`, hotel.city)}</td>
+                            <td className="px-6 py-4 text-obsidian-700">{t(`data.${hotel.nights}`, hotel.nights)}</td>
+                            <td className="px-6 py-4 text-obsidian-900 font-medium">{t(`data.${hotel.name}`, hotel.name)}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </motion.div>
+            )}
           </div>
         </div>
       </section>
