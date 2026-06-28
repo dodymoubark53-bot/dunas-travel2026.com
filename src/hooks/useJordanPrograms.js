@@ -4,13 +4,13 @@ import rawData from '../data/programs.json';
 const rawPrograms = rawData.programs;
 
 const PROGRAM_IMAGES = {
-  'REG-15': 'https://images.unsplash.com/photo-1579606032821-4e6161c81bd3?auto=format&fit=crop&w=800&q=80',
-  'REG-16': 'https://images.unsplash.com/photo-1579606032821-4e6161c81bd3?auto=format&fit=crop&w=800&q=80',
-  'REG-17': 'https://images.unsplash.com/photo-1579606032821-4e6161c81bd3?auto=format&fit=crop&w=800&q=80',
-  'REG-18': 'https://images.unsplash.com/photo-1579606032821-4e6161c81bd3?auto=format&fit=crop&w=800&q=80',
-  'REG-19': 'https://images.unsplash.com/photo-1579606032821-4e6161c81bd3?auto=format&fit=crop&w=800&q=80',
-  'REG-20': 'https://images.unsplash.com/photo-1579606032821-4e6161c81bd3?auto=format&fit=crop&w=800&q=80',
-  'REG-21': 'https://images.unsplash.com/photo-1579606032821-4e6161c81bd3?auto=format&fit=crop&w=800&q=80',
+  'REG-15': 'https://www.urtrips.net/wp-content/uploads/2019/02/Archaeological-Sites-In-Jordan-1.jpg',
+  'REG-16': 'https://cdn.alweb.com/thumbs/jordanencyclopedia/article/fit710x532/%D8%A3%D9%83%D8%A8%D8%B1-%D9%88%D8%A7%D8%AF%D9%8A-%D9%81%D9%8A-%D8%A7%D9%84%D8%A3%D8%B1%D8%AF%D9%86.jpg',
+  'REG-17': 'https://as2.ftcdn.net/v2/jpg/01/67/01/83/1000_F_167018309_n4U66E0FtjpdX5HpidLKSNetfnbayUib.jpg',
+  'REG-18': 'https://thf.bing.com/th/id/R.163b5da11482baa539001f4a45596dcf?rik=4f9diCHlS0FjAQ&pid=ImgRaw&r=0',
+  'REG-19': 'https://i.pinimg.com/originals/ea/82/aa/ea82aa3795de28e223cefe6e8cd72ed4.jpg',
+  'REG-20': 'https://www.opreismetco.nl/wp-content/uploads/2023/05/Citadel-van-Amman-min-585x390.jpg',
+  'REG-21': 'https://png.pngtree.com/thumb_back/fh260/background/20220313/pngtree-ruins-at-amman-jordan-moyen-minaret-asia-photo-image_365536.jpg',
 };
 
 const getLangValue = (obj, lang) => {

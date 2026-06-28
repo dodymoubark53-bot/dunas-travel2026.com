@@ -7,7 +7,7 @@ import { staggerContainer, fadeInUp } from '../../animations/variants';
 import Button from '../../components/ui/Button';
 import { useJordanPrograms } from '../../hooks/useJordanPrograms';
 
-const HERO_IMG = 'https://images.unsplash.com/photo-1579606032821-4e6161c81bd3?auto=format&fit=crop&w=1920&q=80';
+const HERO_IMG = 'https://cdn.al-ain.com/lg/images/2022/11/24/62-021616-best-tourist-areas-jordan-4.jpeg';
 
 const Jordania = () => {
   const { t } = useTranslation();

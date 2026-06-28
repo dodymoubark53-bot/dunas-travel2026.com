@@ -1,5 +1,52 @@
 // تغيير اسم الـ Array ليعبر عن الهوية الجديدة للموقع
 export const services = [
+  // 1. CLASSIC PROGRAMS
+  {
+    id: 'prog-cls-3',
+    category: 'classic',
+    slug: 'classic-program',
+    title: 'classic.title',
+    location: 'classic.location',
+    price: 1890,
+    rating: 4.8,
+    reviewCount: 402,
+    images: ['/imgs/italy/Classic Program.jpg'],
+    shortDesc: 'classic.shortDesc',
+    overview: [
+      'classic.overview'
+    ],
+    highlights: [
+      'classic.highlight.1',
+      'classic.highlight.2',
+      'classic.highlight.3',
+      'classic.highlight.4',
+      'classic.highlight.5'
+    ],
+    included: [
+      'classic.included.1',
+      'classic.included.2',
+      'classic.included.3',
+      'classic.included.4',
+      'classic.included.5'
+    ],
+    excluded: [
+      'classic.excluded.1',
+      'classic.excluded.2',
+      'classic.excluded.3',
+      'classic.excluded.4'
+    ],
+    itinerary: [
+      { day: 1, title: 'classic.day1.title', body: 'classic.day1.body' },
+      { day: 2, title: 'classic.day2.title', body: 'classic.day2.body' },
+      { day: 3, title: 'classic.day3.title', body: 'classic.day3.body' },
+      { day: 4, title: 'classic.day4.title', body: 'classic.day4.body' },
+      { day: 5, title: 'classic.day5.title', body: 'classic.day5.body' },
+      { day: 6, title: 'classic.day6.title', body: 'classic.day6.body' },
+      { day: 7, title: 'classic.day7.title', body: 'classic.day7.body' },
+      { day: 8, title: 'classic.day8.title', body: 'classic.day8.body' }
+    ]
+  },
+
   // 4. HONEYMOONERS PACKAGE
   {
     id: 'prog-hon-1',
@@ -103,53 +150,6 @@ export const services = [
         title: 'tour_jordan_day10_title',
         body: 'tour_jordan_day10_body'
       }
-    ]
-  },
-
-  // 7. DUPLICATED CLASSIC PROGRAM (FROM EGYPT WATERFRONT / eg-it-001)
-  {
-    id: 'prog-cls-2',
-    category: 'classic',
-    slug: 'classic-program',
-    title: 'Programma Classico',
-    location: 'Cairo & Luxor, Egypt',
-    price: 1890,
-    rating: 4.8,
-    reviewCount: 402,
-    images: ['/imgs/italy/Classic Program.jpg'],
-    shortDesc: "L'Egitto nella sua essenza più pura. Dalle Piramidi di Giza alle colonne di Karnak, passando per la crociera sul Nilo tra Aswan e Luxor, questo itinerario di otto giorni è il modo più elegante per scoprire la civiltà dei faraoni — con guida in italiano e trasferimenti inclusi.",
-    overview: [
-      "L'Egitto nella sua essenza più pura. Dalle Piramidi di Giza alle colonne di Karnak, passando per la crociera sul Nilo tra Aswan e Luxor, questo itinerario di otto giorni è il modo più elegante per scoprire la civiltà dei faraoni — con guida in italiano e trasferimenti inclusi.",
-      "Un viaggio esclusivo curato nei minimi dettagli per il massimo comfort."
-    ],
-    highlights: [
-      "Piramidi di Giza e Sfinge",
-      "Crociera sul Nilo 5 stelle",
-      "Templi di Karnak e Luxor",
-      "Tempio di Philae ad Aswan"
-    ],
-    included: [
-      "Tutti i trasporti interni e assistenza negli aeroporti",
-      "Guida egiptologa ufficiale parlante italiano",
-      "Biglietti d'ingresso per tutti i siti menzionati",
-      "3 notti in crociera sul Nilo (Pensione Completa, bevande escluse)",
-      "4 notti al Cairo in hotel di lusso (Formula B&B)",
-      "Visto d'ingresso turistico (25€ pp)"
-    ],
-    excluded: [
-      "Mance generali obbligatorie (45€ pp)",
-      "Pasti e bevande non espressamente menzionati",
-      "Voli nazionali e internazionali"
-    ],
-    itinerary: [
-      { "day": 1, "title": "Arrivo al Cairo", "morning": "Arrivo all'Aeroporto Internazionale del Cairo, accoglienza VIP e assistenza per il visto.", "afternoon": "Trasferimento privato in hotel di lusso e sistemazione nelle camere.", "evening": "Briefing introduttivo sul viaggio e serata libera per il relax." },
-      { "day": 2, "title": "Piramidi e Sfinge", "morning": "Visita guidata all'Altopiano di Giza con le leggendarie Piramidi e l'enigmatica Sfinge.", "afternoon": "Tempo per il pranzo e visita facoltativa consigliata alle rovine storiche di Memphis e Sakkara.", "evening": "Rientro in hotel e pernottamento al Cairo." },
-      { "day": 3, "title": "Imbarco ad Aswan", "morning": "Trasferimento in aeroporto per il volo interno verso Aswan. All'arrivo, visita del bellissimo Tempio di Philae.", "afternoon": "Imbarco sulla nave da crociera ed elegatissimo pranzo a bordo. Giro in barca feluca sul Nilo.", "evening": "Cena gourmet e pernottamento a bordo ad Aswan." },
-      { "day": 4, "title": "Abu Simbel (facoltativo) e Navigazione", "morning": "Mattinata libera o escursione facoltativa ai colossali templi di Abu Simbel via terra.", "afternoon": "Rientro sulla nave e inizio della navigazione verso Kom Ombo. Visita del Tempio di Sobek.", "evening": "Proseguimento della navigazione verso Edfu. Cena a bordo e intrattenimento serale." },
-      { "day": 5, "title": "Edfu e Luxor", "morning": "Visita dello splendido Tempio di Edfu dedicato al dio Horus tramite carrozze tradizionali.", "afternoon": "Navigazione verso Luxor. All'arrivo, tour guidato dei monumentali Templi di Karnak e Luxor.", "evening": "Cena araba a bordo con sfilata in costumi tradizionali (Galabeya Party)." },
-      { "day": 6, "title": "Luxor → Il Cairo", "morning": "Sbarco. Visita della sponda occidentale: Valle dei Re, Tempio di Hatshepsut e Colossi di Memnone.", "afternoon": "Trasferimento all'aeroporto di Hurghada o Luxor per il volo interno di rientro al Cairo.", "evening": "Arrivo al Cairo, trasferimento in hotel e serata a disposizione." },
-      { "day": 7, "title": "Il Cairo Libero", "morning": "Colazione continentale in hotel.", "afternoon": "Giornata completamente libera per visite individuali, shopping o escursioni facoltative.", "evening": "Pernottamento in hotel." },
-      { "day": 8, "title": "Partenza", "morning": "Prima colazione in hotel e check-out.", "afternoon": "Trasferimento privato assistito verso l'aeroporto del Cairo per il volo di rientro.", "evening": "Fine dei nostri servizi esclusive." }
     ]
   },
 
