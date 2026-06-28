@@ -1,26 +1,5 @@
 // تغيير اسم الـ Array ليعبر عن الهوية الجديدة للموقع
 export const services = [
-  // 1. CLASSIC PROGRAMS
-  {
-    id: 'prog-cls-1',
-    category: 'classic', // تطابق تماماً الرابط الجديد في الـ Navbar
-    slug: 'pharaohs-splendor',
-    title: 'Pharaohs Splendor Classic Tour',
-    location: 'Cairo & Luxor, Egypt',
-    price: 1500,
-    rating: 5.0,
-    images: ['/imgs/italy/Classic Program.jpg', '/imgs/gallery/pharaohs & pyramid.jpg'],
-    shortDesc: 'Discover the timeless wonders of ancient Egypt with our signature classical luxury itinerary.',
-    overview: [
-      "Embark on a majestic journey through the cradle of civilization. Our Classic Program is meticulously tailored for travelers who wish to immerse themselves in the authentic history of Egypt, combining expert archeological guiding with elite 5-star accommodations.",
-      "The tour begins in Cairo with an exclusive, crowd-free morning visit to the Giza Plateau and the Grand Egyptian Museum, followed by a luxury domestic flight to Luxor to walk among the monumental pillars of Karnak and the Valley of the Kings.",
-      "Every detail, from private Egyptologist escorts to fine dining overlooking ancient monuments, is designed to give you a seamless, regal experience of Egypt's classical heritage."
-    ],
-    highlights: ['Private after-hours Giza Pyramids access', 'Expert certified Egyptologist guide', 'Luxury stay at historic properties', 'All internal private transfers included'],
-    included: ['5-star Hotel stays', 'Domestic flights', 'All entrance tickets', 'Gourmet daily breakfast'],
-    excluded: ['International flights', 'Tipping / Gratuities', 'Personal travel insurance']
-  },
-
   // 4. HONEYMOONERS PACKAGE
   {
     id: 'prog-hon-1',

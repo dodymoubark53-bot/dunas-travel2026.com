@@ -276,6 +276,14 @@ function App() {
                     }
                   />
                   <Route
+                    path="honeymooners/:id"
+                    element={
+                      <PageTransition>
+                        <HoneymoonersDetails />
+                      </PageTransition>
+                    }
+                  />
+                  <Route
                     path=":service"
                     element={
                       <PageTransition>

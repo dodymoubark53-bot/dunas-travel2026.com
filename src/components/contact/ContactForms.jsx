@@ -1,6 +1,8 @@
 import { useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const ContactForms = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('b2c'); // 'b2c' | 'b2b'
 
   // B2C Form States
@@ -590,10 +592,10 @@ const ContactForms = () => {
           
           <div className="text-center mb-12">
             <span className="text-caption text-gold-500 uppercase tracking-[4px] font-semibold block mb-3">
-              TAILOR-MADE LUXURY EXPERIENCES
+              {t('contactForms.subtitle', 'TAILOR-MADE LUXURY EXPERIENCES')}
             </span>
             <h2 className="text-display-lg text-gold-500 mb-4" style={{ fontWeight: 300, fontFamily: "'Cormorant Garamond', serif" }}>
-              Request Your Bespoke Itinerary
+              {t('contactForms.title', 'Request Your Bespoke Itinerary')}
             </h2>
             <div className="w-20 h-[1px] bg-gold-500/40 mx-auto"></div>
           </div>
@@ -609,7 +611,7 @@ const ContactForms = () => {
                 setB2bSubmitted(false);
               }}
             >
-              Individual Traveler
+              {t('contactForms.tabB2c', 'Individual Traveler')}
             </button>
             <button
               type="button"
@@ -620,7 +622,7 @@ const ContactForms = () => {
                 setB2bSubmitted(false);
               }}
             >
-              Travel Agent / Company
+              {t('contactForms.tabB2b', 'Travel Agent / Company')}
             </button>
           </div>
 
@@ -632,9 +634,9 @@ const ContactForms = () => {
                   <svg className="success-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <h3 className="text-display-md text-gold-500 mb-4">Inquiry Received</h3>
+                  <h3 className="text-display-md text-gold-500 mb-4">{t('contactForms.b2cSuccessTitle', 'Inquiry Received')}</h3>
                   <p className="text-body-md text-ivory-300 max-w-lg mx-auto">
-                    Thank you for choosing Dunas Travel. Our luxury travel consultants will contact you within 24 hours to design your bespoke journey.
+                    {t('contactForms.b2cSuccessDesc', 'Thank you for choosing Dunas Travel. Our luxury travel consultants will contact you within 24 hours to design your bespoke journey.')}
                   </p>
                   <button
                     type="button"
@@ -658,7 +660,7 @@ const ContactForms = () => {
                     }}
                     className="submit-inquiry-btn max-w-xs mx-auto mt-8 block"
                   >
-                    Submit Another Inquiry
+                    {t('contactForms.submitAnother', 'Submit Another Inquiry')}
                   </button>
                 </div>
               ) : (
@@ -667,56 +669,56 @@ const ContactForms = () => {
                   {/* Section 1: Personal Information */}
                   <div className="mb-10">
                     <h3 className="form-section-title">
-                      <span className="form-section-num">01</span> Personal Information
+                      <span className="form-section-num">01</span> {t('contactForms.secPersonalInfo', 'Personal Information')}
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="form-field-group">
-                        <label className="form-label">First Name *</label>
+                        <label className="form-label">{t('contactForms.firstName', 'First Name *')}</label>
                         <input
                           type="text"
                           name="firstName"
                           value={b2cForm.firstName}
                           onChange={handleB2cChange}
                           className={`form-input ${b2cErrors.firstName ? 'error' : ''}`}
-                          placeholder="Enter your first name"
+                          placeholder={t('contactForms.firstNamePlaceholder', 'Enter your first name')}
                           required
                         />
                       </div>
                       <div className="form-field-group">
-                        <label className="form-label">Last Name *</label>
+                        <label className="form-label">{t('contactForms.lastName', 'Last Name *')}</label>
                         <input
                           type="text"
                           name="lastName"
                           value={b2cForm.lastName}
                           onChange={handleB2cChange}
                           className={`form-input ${b2cErrors.lastName ? 'error' : ''}`}
-                          placeholder="Enter your last name"
+                          placeholder={t('contactForms.lastNamePlaceholder', 'Enter your last name')}
                           required
                         />
                       </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="form-field-group">
-                        <label className="form-label">Email Address *</label>
+                        <label className="form-label">{t('contactForms.email', 'Email Address *')}</label>
                         <input
                           type="email"
                           name="email"
                           value={b2cForm.email}
                           onChange={handleB2cChange}
                           className={`form-input ${b2cErrors.email ? 'error' : ''}`}
-                          placeholder="Enter your email address"
+                          placeholder={t('contactForms.emailPlaceholder', 'Enter your email address')}
                           required
                         />
                       </div>
                       <div className="form-field-group">
-                        <label className="form-label">Phone Number *</label>
+                        <label className="form-label">{t('contactForms.phone', 'Phone Number *')}</label>
                         <input
                           type="tel"
                           name="phone"
                           value={b2cForm.phone}
                           onChange={handleB2cChange}
                           className={`form-input ${b2cErrors.phone ? 'error' : ''}`}
-                          placeholder="Enter phone with country code (e.g. +1...)"
+                          placeholder={t('contactForms.phonePlaceholder', 'Enter phone with country code (e.g. +1...)')}
                           required
                         />
                       </div>
@@ -726,29 +728,29 @@ const ContactForms = () => {
                   {/* Section 2: Trip Details */}
                   <div className="mb-10">
                     <h3 className="form-section-title">
-                      <span className="form-section-num">02</span> Trip Details
+                      <span className="form-section-num">02</span> {t('contactForms.secTripDetails', 'Trip Details')}
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                       <div className="form-field-group">
-                        <label className="form-label">Bespoke Destination *</label>
+                        <label className="form-label">{t('contactForms.bespokeDestination', 'Bespoke Destination *')}</label>
                         <select
                           name="destination"
                           value={b2cForm.destination}
                           onChange={handleB2cChange}
                           className="form-select"
                         >
-                          <option value="egypt">Egypt & Nile Cruising</option>
-                          <option value="turkey">Turkey Heritage & Coast</option>
-                          <option value="jordan">Jordanian Petra & Desert</option>
-                          <option value="dubai">Dubai Oasis & Luxury</option>
-                          <option value="tunisia">Tunisian Sahara & Ruins</option>
-                          <option value="morocco">Moroccan Medinas & Atlas</option>
-                          <option value="greece">Greek Islands & Yachts</option>
-                          <option value="holyland">Holy Land Heritage</option>
+                          <option value="egypt">{t('contactForms.destEgypt', 'Egypt & Nile Cruising')}</option>
+                          <option value="turkey">{t('contactForms.destTurkey', 'Turkey Heritage & Coast')}</option>
+                          <option value="jordan">{t('contactForms.destJordan', 'Jordanian Petra & Desert')}</option>
+                          <option value="dubai">{t('contactForms.destDubai', 'Dubai Oasis & Luxury')}</option>
+                          <option value="tunisia">{t('contactForms.destTunisia', 'Tunisian Sahara & Ruins')}</option>
+                          <option value="morocco">{t('contactForms.destMorocco', 'Moroccan Medinas & Atlas')}</option>
+                          <option value="greece">{t('contactForms.destGreece', 'Greek Islands & Yachts')}</option>
+                          <option value="holyland">{t('contactForms.destHolyland', 'Holy Land Heritage')}</option>
                         </select>
                       </div>
                       <div className="form-field-group">
-                        <label className="form-label">Travel Date *</label>
+                        <label className="form-label">{t('contactForms.travelDate', 'Travel Date *')}</label>
                         <input
                           type="date"
                           name="date"
@@ -759,23 +761,23 @@ const ContactForms = () => {
                         />
                       </div>
                       <div className="form-field-group">
-                        <label className="form-label">Duration *</label>
+                        <label className="form-label">{t('contactForms.duration', 'Duration *')}</label>
                         <select
                           name="duration"
                           value={b2cForm.duration}
                           onChange={handleB2cChange}
                           className="form-select"
                         >
-                          <option value="1-7">1 - 7 Days (Expedition)</option>
-                          <option value="8-14">8 - 14 Days (Grand Voyage)</option>
-                          <option value="15+">15+ Days (Ultimate Leisure)</option>
+                          <option value="1-7">{t('contactForms.dur1_7', '1 - 7 Days (Expedition)')}</option>
+                          <option value="8-14">{t('contactForms.dur8_14', '8 - 14 Days (Grand Voyage)')}</option>
+                          <option value="15+">{t('contactForms.dur15plus', '15+ Days (Ultimate Leisure)')}</option>
                         </select>
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#141A3D] p-6 border border-gold-500/10">
                       <div>
-                        <label className="form-label block mb-2">Adults (Age 12+)</label>
+                        <label className="form-label block mb-2">{t('contactForms.adults', 'Adults (Age 12+)')}</label>
                         <div className="counter-container">
                           <button
                             type="button"
@@ -795,7 +797,7 @@ const ContactForms = () => {
                         </div>
                       </div>
                       <div>
-                        <label className="form-label block mb-2">Children (Age 0-11)</label>
+                        <label className="form-label block mb-2">{t('contactForms.children', 'Children (Age 0-11)')}</label>
                         <div className="counter-container">
                           <button
                             type="button"
@@ -820,39 +822,39 @@ const ContactForms = () => {
                   {/* Section 3: Preferences */}
                   <div className="mb-10">
                     <h3 className="form-section-title">
-                      <span className="form-section-num">03</span> Custom Preferences
+                      <span className="form-section-num">03</span> {t('contactForms.secPreferences', 'Custom Preferences')}
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                       <div className="form-field-group">
-                        <label className="form-label">Accommodation Style</label>
+                        <label className="form-label">{t('contactForms.accommodation', 'Accommodation Style')}</label>
                         <select
                           name="accommodation"
                           value={b2cForm.accommodation}
                           onChange={handleB2cChange}
                           className="form-select"
                         >
-                          <option value="5star">5-Star Palace & Resorts</option>
-                          <option value="boutique">Luxury Heritage Boutique</option>
-                          <option value="villa">Private Villa & Estate</option>
+                          <option value="5star">{t('contactForms.acc5star', '5-Star Palace & Resorts')}</option>
+                          <option value="boutique">{t('contactForms.accBoutique', 'Luxury Heritage Boutique')}</option>
+                          <option value="villa">{t('contactForms.accVilla', 'Private Villa & Estate')}</option>
                         </select>
                       </div>
                       <div className="form-field-group">
-                        <label className="form-label">Tour Pace</label>
+                        <label className="form-label">{t('contactForms.pace', 'Tour Pace')}</label>
                         <select
                           name="pace"
                           value={b2cForm.pace}
                           onChange={handleB2cChange}
                           className="form-select"
                         >
-                          <option value="relaxed">Relaxed (Leisure focus)</option>
-                          <option value="balanced">Balanced (Highlights & downtime)</option>
-                          <option value="active">Active (Full-day explorations)</option>
+                          <option value="relaxed">{t('contactForms.paceRelaxed', 'Relaxed (Leisure focus)')}</option>
+                          <option value="balanced">{t('contactForms.paceBalanced', 'Balanced (Highlights & downtime)')}</option>
+                          <option value="active">{t('contactForms.paceActive', 'Active (Full-day explorations)')}</option>
                         </select>
                       </div>
                     </div>
 
                     <div className="form-field-group">
-                      <label className="form-label mb-3">Preferred Guide Languages</label>
+                      <label className="form-label mb-3">{t('contactForms.languages', 'Preferred Guide Languages')}</label>
                       <div className="pills-grid">
                         {['english', 'spanish', 'portuguese', 'italian', 'arabic'].map((lang) => (
                           <button
@@ -861,7 +863,7 @@ const ContactForms = () => {
                             className={`pill-btn ${b2cLanguages.has(lang) ? 'active' : ''}`}
                             onClick={() => toggleB2cLanguage(lang)}
                           >
-                            {lang}
+                            {t(`contactForms.lang${lang.charAt(0).toUpperCase() + lang.slice(1)}`, lang)}
                           </button>
                         ))}
                       </div>
@@ -870,24 +872,22 @@ const ContactForms = () => {
 
                   {/* Pricing Summary */}
                   <div className="price-summary-panel">
-                    <span className="form-label block mb-2" style={{ color: '#D4A843' }}>Estimated Bespoke Package Price</span>
+                    <span className="form-label block mb-2" style={{ color: '#D4A843' }}>{t('contactForms.estimatedPrice', 'Estimated Bespoke Package Price')}</span>
                     <div className="flex items-baseline gap-2">
                       <span className="price-value font-display font-light text-gold-500">
                         ${getB2cPrice().toLocaleString()}
                       </span>
-                      <span className="text-body-sm text-ivory-300">USD (Estimated)</span>
+                      <span className="text-body-sm text-ivory-300">{t('contactForms.usdEstimated', 'USD (Estimated)')}</span>
                     </div>
                     <p className="text-body-sm text-gold-400 mt-2">
-                      *Estimates are calculated based on selected destinations and travel parameters. Final pricing is customized.
+                      {t('contactForms.priceNote', '*Estimates are calculated based on selected destinations and travel parameters. Final pricing is customized.')}
                     </p>
                   </div>
 
-                  {/* Urgency Alert Bar */}
                   <div className="urgency-bar">
-                    <strong>Exclusive Notice:</strong> Peak luxury season availability is highly restricted. Submitting your inquiry now reserves your consultation priority.
+                    <strong>{t('contactForms.urgencyLabel', 'Exclusive Notice:')}</strong> {t('contactForms.urgencyText', 'Peak luxury season availability is highly restricted. Submitting your inquiry now reserves your consultation priority.')}
                   </div>
 
-                  {/* Consent & Submit */}
                   <div className="mb-6">
                     <label className="flex items-start gap-3 cursor-pointer">
                       <input
@@ -899,28 +899,27 @@ const ContactForms = () => {
                         required
                       />
                       <span className="text-body-sm text-ivory-300">
-                        I authorize Dunas Travel to store and process my information in order to create my tailored holiday plan, according to the privacy policy. *
+                        {t('contactForms.consent', 'I authorize Dunas Travel to store and process my information in order to create my tailored holiday plan, according to the privacy policy. *')}
                       </span>
                     </label>
                   </div>
 
                   <button type="submit" className="submit-inquiry-btn">
-                    Send My Inquiry →
+                    {t('contactForms.sendInquiry', 'Send My Inquiry')} →
                   </button>
 
-                  {/* Secure badges row */}
                   <div className="secure-badges-row">
                     <div className="secure-badge">
                       <svg fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M2.166 4.9C2 .6 4.7 0 9.5 0h1c4.8 0 7.5.6 7.334 4.9C18 9 17.5 12 15 15c-2 2.5-4.5 4.5-5.5 5h-1c-1-.5-3.5-2.5-5.5-5-2.5-3-3-6-3.334-10.1zM9 5a1 1 0 012 0v5a1 1 0 11-2 0V5zm1 9a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" /></svg>
-                      SSL Secure Processing
+                      {t('contactForms.ssl', 'SSL Secure Processing')}
                     </div>
                     <div className="secure-badge">
                       <svg fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-                      Privacy Guaranteed
+                      {t('contactForms.privacy', 'Privacy Guaranteed')}
                     </div>
                     <div className="secure-badge">
                       <svg fill="currentColor" viewBox="0 0 20 20"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" /></svg>
-                      Verified Destination Partner
+                      {t('contactForms.verified', 'Verified Destination Partner')}
                     </div>
                   </div>
 
@@ -937,9 +936,9 @@ const ContactForms = () => {
                   <svg className="success-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <h3 className="text-display-md text-gold-500 mb-4">Partner Application Received</h3>
+                  <h3 className="text-display-md text-gold-500 mb-4">{t('contactForms.b2bSuccessTitle', 'Partner Application Received')}</h3>
                   <p className="text-body-md text-ivory-300 max-w-lg mx-auto">
-                    We appreciate your interest in partnering with Dunas Travel. Our Agency Relations manager will review your documents and active registration within 2 business days.
+                    {t('contactForms.b2bSuccessDesc', 'We appreciate your interest in partnering with Dunas Travel. Our Agency Relations manager will review your documents and active registration within 2 business days.')}
                   </p>
                   <button
                     type="button"
@@ -964,7 +963,7 @@ const ContactForms = () => {
                     }}
                     className="submit-inquiry-btn max-w-xs mx-auto mt-8 block"
                   >
-                    Submit Another Application
+                    {t('contactForms.submitAnotherApp', 'Submit Another Application')}
                   </button>
                 </div>
               ) : (
@@ -973,56 +972,56 @@ const ContactForms = () => {
                   {/* Section 1: Agent Details */}
                   <div className="mb-10">
                     <h3 className="form-section-title">
-                      <span className="form-section-num">01</span> Agent Information
+                      <span className="form-section-num">01</span> {t('contactForms.secAgentInfo', 'Agent Information')}
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="form-field-group">
-                        <label className="form-label">Full Name *</label>
+                        <label className="form-label">{t('contactForms.fullName', 'Full Name *')}</label>
                         <input
                           type="text"
                           name="agentName"
                           value={b2bForm.agentName}
                           onChange={handleB2bChange}
                           className={`form-input ${b2bErrors.agentName ? 'error' : ''}`}
-                          placeholder="Enter your name"
+                          placeholder={t('contactForms.fullNamePlaceholder', 'Enter your name')}
                           required
                         />
                       </div>
                       <div className="form-field-group">
-                        <label className="form-label">Job Title / Role *</label>
+                        <label className="form-label">{t('contactForms.jobTitle', 'Job Title / Role *')}</label>
                         <input
                           type="text"
                           name="jobTitle"
                           value={b2bForm.jobTitle}
                           onChange={handleB2bChange}
                           className={`form-input ${b2bErrors.jobTitle ? 'error' : ''}`}
-                          placeholder="e.g. Travel Consultant, Director"
+                          placeholder={t('contactForms.jobTitlePlaceholder', 'e.g. Travel Consultant, Director')}
                           required
                         />
                       </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="form-field-group">
-                        <label className="form-label">Corporate Email *</label>
+                        <label className="form-label">{t('contactForms.corpEmail', 'Corporate Email *')}</label>
                         <input
                           type="email"
                           name="agentEmail"
                           value={b2bForm.agentEmail}
                           onChange={handleB2bChange}
                           className={`form-input ${b2bErrors.agentEmail ? 'error' : ''}`}
-                          placeholder="Enter your corporate email"
+                          placeholder={t('contactForms.corpEmailPlaceholder', 'Enter your corporate email')}
                           required
                         />
                       </div>
                       <div className="form-field-group">
-                        <label className="form-label">Agent Direct Phone *</label>
+                        <label className="form-label">{t('contactForms.agentPhone', 'Agent Direct Phone *')}</label>
                         <input
                           type="tel"
                           name="agentPhone"
                           value={b2bForm.agentPhone}
                           onChange={handleB2bChange}
                           className={`form-input ${b2bErrors.agentPhone ? 'error' : ''}`}
-                          placeholder="Direct phone line"
+                          placeholder={t('contactForms.agentPhonePlaceholder', 'Direct phone line')}
                           required
                         />
                       </div>
@@ -1032,59 +1031,59 @@ const ContactForms = () => {
                   {/* Section 2: Company Details */}
                   <div className="mb-10">
                     <h3 className="form-section-title">
-                      <span className="form-section-num">02</span> Agency & Company Details
+                      <span className="form-section-num">02</span> {t('contactForms.secAgency', 'Agency & Company Details')}
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="form-field-group">
-                        <label className="form-label">Agency / Company Name *</label>
+                        <label className="form-label">{t('contactForms.agencyName', 'Agency / Company Name *')}</label>
                         <input
                           type="text"
                           name="agencyName"
                           value={b2bForm.agencyName}
                           onChange={handleB2bChange}
                           className={`form-input ${b2bErrors.agencyName ? 'error' : ''}`}
-                          placeholder="Enter legal company name"
+                          placeholder={t('contactForms.agencyNamePlaceholder', 'Enter legal company name')}
                           required
                         />
                       </div>
                       <div className="form-field-group">
-                        <label className="form-label">Agency Website</label>
+                        <label className="form-label">{t('contactForms.agencyWebsite', 'Agency Website')}</label>
                         <input
                           type="url"
                           name="website"
                           value={b2bForm.website}
                           onChange={handleB2bChange}
                           className="form-input"
-                          placeholder="https://agency-website.com (optional)"
+                          placeholder={t('contactForms.agencyWebsitePlaceholder', 'https://agency-website.com (optional)')}
                         />
                       </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="form-field-group">
-                        <label className="form-label">IATA / TRUE / CLIA Number * (8 Digits Only)</label>
+                        <label className="form-label">{t('contactForms.iata', 'IATA / TRUE / CLIA Number * (8 Digits Only)')}</label>
                         <input
                           type="text"
                           name="iataNumber"
                           value={b2bForm.iataNumber}
                           onChange={handleB2bChange}
                           className={`form-input ${b2bErrors.iataNumber ? 'error' : ''}`}
-                          placeholder="e.g. 12345678"
+                          placeholder={t('contactForms.iataPlaceholder', 'e.g. 12345678')}
                           maxLength={8}
                           required
                         />
                         {b2bErrors.iataNumber && (
-                          <span className="text-red-500 text-xs mt-1 block">Must be exactly 8 numeric digits</span>
+                          <span className="text-red-500 text-xs mt-1 block">{t('contactForms.iataError', 'Must be exactly 8 numeric digits')}</span>
                         )}
                       </div>
                       <div className="form-field-group">
-                        <label className="form-label">Office Address *</label>
+                        <label className="form-label">{t('contactForms.officeAddress', 'Office Address *')}</label>
                         <input
                           type="text"
                           name="address"
                           value={b2bForm.address}
                           onChange={handleB2bChange}
                           className={`form-input ${b2bErrors.address ? 'error' : ''}`}
-                          placeholder="Full office address"
+                          placeholder={t('contactForms.officeAddressPlaceholder', 'Full office address')}
                           required
                         />
                       </div>
@@ -1094,10 +1093,10 @@ const ContactForms = () => {
                   {/* Section 3: Partnership Scope */}
                   <div className="mb-10">
                     <h3 className="form-section-title">
-                      <span className="form-section-num">03</span> Partnership Scope
+                      <span className="form-section-num">03</span> {t('contactForms.secPartnership', 'Partnership Scope')}
                     </h3>
                     <div className="form-field-group mb-6">
-                      <label className="form-label mb-3">Target Destinations for Luxury Clients</label>
+                      <label className="form-label mb-3">{t('contactForms.targetDests', 'Target Destinations for Luxury Clients')}</label>
                       <div className="pills-grid">
                         {['egypt', 'turkey', 'jordan', 'dubai', 'tunisia', 'morocco', 'greece', 'holyland'].map((dest) => (
                           <button
@@ -1106,7 +1105,7 @@ const ContactForms = () => {
                             className={`pill-btn ${b2bDestinations.has(dest) ? 'active' : ''}`}
                             onClick={() => toggleB2bDestination(dest)}
                           >
-                            {dest === 'holyland' ? 'Holy Land' : dest}
+                            {dest === 'holyland' ? t('nav.holyland', 'Holy Land') : dest}
                           </button>
                         ))}
                       </div>
@@ -1114,27 +1113,27 @@ const ContactForms = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="form-field-group">
-                        <label className="form-label">Expected Annual Booking Volume *</label>
+                        <label className="form-label">{t('contactForms.bookingVolume', 'Expected Annual Booking Volume *')}</label>
                         <select
                           name="expectedVolume"
                           value={b2bForm.expectedVolume}
                           onChange={handleB2bChange}
                           className="form-select"
                         >
-                          <option value="under-10">Under 10 bookings per year</option>
-                          <option value="10-50">10 - 50 bookings per year</option>
-                          <option value="50+">50+ bookings per year</option>
+                          <option value="under-10">{t('contactForms.volUnder10', 'Under 10 bookings per year')}</option>
+                          <option value="10-50">{t('contactForms.vol10_50', '10 - 50 bookings per year')}</option>
+                          <option value="50+">{t('contactForms.vol50plus', '50+ bookings per year')}</option>
                         </select>
                       </div>
                       <div className="form-field-group">
-                        <label className="form-label">Main Client Source Country *</label>
+                        <label className="form-label">{t('contactForms.sourceCountry', 'Main Client Source Country *')}</label>
                         <input
                           type="text"
                           name="sourceCountry"
                           value={b2bForm.sourceCountry}
                           onChange={handleB2bChange}
                           className={`form-input ${b2bErrors.sourceCountry ? 'error' : ''}`}
-                          placeholder="e.g. USA, Spain, Mexico"
+                          placeholder={t('contactForms.sourceCountryPlaceholder', 'e.g. USA, Spain, Mexico')}
                           required
                         />
                       </div>
@@ -1143,7 +1142,7 @@ const ContactForms = () => {
 
                   {/* Section 4: Commission Preview Box */}
                   <div className="commission-preview-box">
-                    <span className="form-label block" style={{ color: '#D4A843' }}>Expected Partner Commission Tier</span>
+                    <span className="form-label block" style={{ color: '#D4A843' }}>{t('contactForms.commissionTier', 'Expected Partner Commission Tier')}</span>
                     <div className="commission-rate">{commission.tier} ({commission.rate})</div>
                     <p className="text-body-sm text-ivory-300 mt-2">{commission.desc}</p>
                   </div>
@@ -1151,11 +1150,11 @@ const ContactForms = () => {
                   {/* Section 5: Document Upload Zone */}
                   <div className="mb-10">
                     <h3 className="form-section-title">
-                      <span className="form-section-num">04</span> Credentials Verification
+                      <span className="form-section-num">04</span> {t('contactForms.secCredentials', 'Credentials Verification')}
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="form-field-group">
-                        <label className="form-label">Business Registry / Tourism License *</label>
+                        <label className="form-label">{t('contactForms.license', 'Business Registry / Tourism License *')}</label>
                         <div
                           id="license-dropzone"
                           className={`dropzone ${dragOverLicense ? 'dragover' : ''} ${b2bErrors.license ? 'error' : ''}`}
@@ -1173,20 +1172,20 @@ const ContactForms = () => {
                           />
                           {b2bFiles.license ? (
                             <div>
-                              <div className="dropzone-text" style={{ color: '#F0C96A' }}>Selected Document:</div>
+                              <div className="dropzone-text" style={{ color: '#F0C96A' }}>{t('contactForms.selectedDoc', 'Selected Document:')}</div>
                               <div className="dropzone-filename">{b2bFiles.license.name}</div>
                             </div>
                           ) : (
                             <div className="dropzone-text">
-                              Drag and drop file here or <strong>browse</strong>.<br />
-                              <span style={{ fontSize: '10px', opacity: 0.7 }}>(PDF, PNG, JPG max 5MB)</span>
+                              {t('contactForms.dropzone', 'Drag and drop file here or')} <strong>{t('contactForms.browse', 'browse')}</strong>.<br />
+                              <span style={{ fontSize: '10px', opacity: 0.7 }}>{t('contactForms.dropzoneHint', '(PDF, PNG, JPG max 5MB)')}</span>
                             </div>
                           )}
                         </div>
                       </div>
 
                       <div className="form-field-group">
-                        <label className="form-label">Tax Identification Certificate *</label>
+                        <label className="form-label">{t('contactForms.taxCert', 'Tax Identification Certificate *')}</label>
                         <div
                           id="tax-dropzone"
                           className={`dropzone ${dragOverTax ? 'dragover' : ''} ${b2bErrors.tax ? 'error' : ''}`}
@@ -1204,13 +1203,13 @@ const ContactForms = () => {
                           />
                           {b2bFiles.tax ? (
                             <div>
-                              <div className="dropzone-text" style={{ color: '#F0C96A' }}>Selected Document:</div>
+                              <div className="dropzone-text" style={{ color: '#F0C96A' }}>{t('contactForms.selectedDoc', 'Selected Document:')}</div>
                               <div className="dropzone-filename">{b2bFiles.tax.name}</div>
                             </div>
                           ) : (
                             <div className="dropzone-text">
-                              Drag and drop file here or <strong>browse</strong>.<br />
-                              <span style={{ fontSize: '10px', opacity: 0.7 }}>(PDF, PNG, JPG max 5MB)</span>
+                              {t('contactForms.dropzone', 'Drag and drop file here or')} <strong>{t('contactForms.browse', 'browse')}</strong>.<br />
+                              <span style={{ fontSize: '10px', opacity: 0.7 }}>{t('contactForms.dropzoneHint', '(PDF, PNG, JPG max 5MB)')}</span>
                             </div>
                           )}
                         </div>
@@ -1221,17 +1220,17 @@ const ContactForms = () => {
                   {/* Section 6: Additional Information */}
                   <div className="mb-10">
                     <h3 className="form-section-title">
-                      <span className="form-section-num">05</span> Additional Information
+                      <span className="form-section-num">05</span> {t('contactForms.secAdditional', 'Additional Information')}
                     </h3>
                     <div className="form-field-group">
-                      <label className="form-label">Special Scope Requests / Notes</label>
+                      <label className="form-label">{t('contactForms.specialRequests', 'Special Scope Requests / Notes')}</label>
                       <textarea
                         name="additionalInfo"
                         value={b2bForm.additionalInfo}
                         onChange={handleB2bChange}
                         rows="4"
                         className="form-textarea resize-none"
-                        placeholder="Detail any special markets, custom request volume, or dynamic itinerary setups required..."
+                        placeholder={t('contactForms.specialRequestsPlaceholder', 'Detail any special markets, custom request volume, or dynamic itinerary setups required...')}
                       />
                     </div>
                   </div>
@@ -1248,28 +1247,27 @@ const ContactForms = () => {
                         required
                       />
                       <span className="text-body-sm text-ivory-300">
-                        Our company certifies that all submitted records are authentic, and we authorize Dunas Travel to store and process this partner application. *
+                        {t('contactForms.b2bConsent', 'Our company certifies that all submitted records are authentic, and we authorize Dunas Travel to store and process this partner application. *')}
                       </span>
                     </label>
                   </div>
 
                   <button type="submit" className="submit-inquiry-btn">
-                    Submit Partner Application →
+                    {t('contactForms.submitPartner', 'Submit Partner Application')} →
                   </button>
 
-                  {/* Secure badges row */}
                   <div className="secure-badges-row">
                     <div className="secure-badge">
                       <svg fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M2.166 4.9C2 .6 4.7 0 9.5 0h1c4.8 0 7.5.6 7.334 4.9C18 9 17.5 12 15 15c-2 2.5-4.5 4.5-5.5 5h-1c-1-.5-3.5-2.5-5.5-5-2.5-3-3-6-3.334-10.1zM9 5a1 1 0 012 0v5a1 1 0 11-2 0V5zm1 9a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" /></svg>
-                      SSL Secure Processing
+                      {t('contactForms.ssl', 'SSL Secure Processing')}
                     </div>
                     <div className="secure-badge">
                       <svg fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-                      Partnership Guarantee
+                      {t('contactForms.partnershipGuarantee', 'Partnership Guarantee')}
                     </div>
                     <div className="secure-badge">
                       <svg fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" /><path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3z" clipRule="evenodd" /></svg>
-                      B2B Verified Portal
+                      {t('contactForms.b2bVerified', 'B2B Verified Portal')}
                     </div>
                   </div>
 
