@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { FaPhone, FaWhatsapp } from 'react-icons/fa';
 import { staggerContainer, fadeInUp } from '../animations/variants';
 import Button from '../components/ui/Button';
 import ContactForms from '../components/contact/ContactForms';
@@ -35,7 +36,8 @@ const Contact = () => {
                   <div>
                     <h4 className="text-caption text-gold-500 uppercase tracking-widest mb-1">{t('contact.office', 'Address')}</h4>
                     <p className="text-body-md text-ivory-300">
-                      {t('contact.address', '75 Hossary Square, Central Spine, 6 October, Giza, Egypt')}
+                      {t('contact.address', '5 Hussein Said St, Old Hadayk El Ahram First floor Flat 102 – 103')}<br />
+                      {t('contact.address2', 'Haram - Giza – Egypt')}
                     </p>
                   </div>
                 </div>
@@ -43,10 +45,16 @@ const Contact = () => {
                   <svg className="w-6 h-6 text-gold-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                   <div>
                     <h4 className="text-caption text-gold-500 uppercase tracking-widest mb-1">{t('contact.phoneLabel', 'Phone')}</h4>
-                    <div className="flex flex-col gap-1 text-body-md text-ivory-300">
-                      <a href="tel:+20233746643" className="hover:text-gold-500 transition-colors block">02 33746643</a>
-                      <a href="tel:+20233746654" className="hover:text-gold-500 transition-colors block">02 33746654</a>
-                      <a href="tel:+201149401111" className="hover:text-gold-500 transition-colors block">+20 114 940 1111</a>
+                    <div className="flex flex-col gap-2 text-body-md text-ivory-300">
+                      <a href="tel:+20233746643" className="hover:text-gold-500 transition-colors flex items-center gap-2">
+                        <FaPhone className="text-gold-500 text-sm" /> 02 33746643
+                      </a>
+                      <a href="tel:+20233746654" className="hover:text-gold-500 transition-colors flex items-center gap-2">
+                        <FaPhone className="text-gold-500 text-sm" /> 02 33746654
+                      </a>
+                      <a href="tel:+201149401111" className="hover:text-gold-500 transition-colors flex items-center gap-2">
+                        <FaWhatsapp className="text-gold-500 text-sm" /> +20 114 940 1111
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -54,9 +62,12 @@ const Contact = () => {
                   <svg className="w-6 h-6 text-gold-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                   <div>
                     <h4 className="text-caption text-gold-500 uppercase tracking-widest mb-1">{t('contact.emailLabel', 'Email')}</h4>
-                    <p className="text-body-md text-ivory-300">
-                      {t('contact.emailVal', 'info@dunas-travel.com')}
-                    </p>
+                    <div className="flex flex-col gap-1 text-body-md text-ivory-300">
+                      <a href="mailto:info@dunas-travel.com" className="hover:text-gold-500 transition-colors">info@dunas-travel.com</a>
+                      <a href="mailto:attia@dunas-travel.com" className="hover:text-gold-500 transition-colors">attia@dunas-travel.com</a>
+                      <a href="mailto:Spain@dunas-travel.com" className="hover:text-gold-500 transition-colors">Spain@dunas-travel.com</a>
+                      <a href="mailto:booking@dunas-travel.com" className="hover:text-gold-500 transition-colors">booking@dunas-travel.com</a>
+                    </div>
                   </div>
                 </div>
               </div>

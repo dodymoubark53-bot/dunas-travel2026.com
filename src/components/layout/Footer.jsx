@@ -57,9 +57,9 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Columns: Quick Links | Destinations | Contact */}
+      {/* Columns: Quick Links | Programs | Destinations | Contact */}
       <div className="relative z-10 w-full px-6 sm:px-12 lg:px-20 pt-8 pb-6">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
           {/* Quick Links (left) */}
           <div>
@@ -74,7 +74,21 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Destinations (center) */}
+          {/* Programs */}
+          <div>
+            <h4 className="text-white mb-4 text-lg font-bold">{t('nav.programs', 'Programs')}</h4>
+            <ul className="flex flex-col gap-2 text-base font-bold">
+              <li><Link to="/programs/classic" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.classic', 'Classic')}</Link></li>
+              <li><Link to="/programs/hotels" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.hotelsTab', 'Hotels')}</Link></li>
+              <li><Link to="/programs/transportation" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.transportation', 'Transportation')}</Link></li>
+              <li><Link to="/programs/honeymooners" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.honeymooners', 'Honeymooners Package')}</Link></li>
+              <li><Link to="/programs/religious" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.religious', 'Programs Religiosos')}</Link></li>
+              <li><Link to="/programs/multi-country" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.multiCountry', 'Multi-Country Tours')}</Link></li>
+              <li><Link to="/programs/extension" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.extension', 'EXTENSION')}</Link></li>
+            </ul>
+          </div>
+
+          {/* Destinations */}
           <div>
             <h4 className="text-white mb-4 text-lg font-bold">{t('nav.destinations')}</h4>
             <ul className="flex flex-col gap-2 text-base font-bold">

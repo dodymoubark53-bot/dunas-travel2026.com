@@ -172,41 +172,60 @@ const Navbar = () => {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="absolute top-full left-0 mt-2 w-56 bg-white border border-obsidian-200 rounded-lg overflow-hidden shadow-xl"
+                    className={`absolute top-full left-0 mt-2 ${link.name === t('nav.programs', { defaultValue: 'Programs' }) ? 'w-72 p-5' : 'w-56'} bg-white border border-obsidian-200 rounded-lg overflow-hidden shadow-xl`}
                   >
-                    {link.dropdown.map((item) => (
-                      <div key={item.name} className="relative group/sub">
-                        {item.subItems ? (
-                          <>
+                    {link.name === t('nav.programs', { defaultValue: 'Programs' }) ? (
+                      <>
+                        <h4 className="text-caption text-gold-600 uppercase tracking-widest mb-4 px-1 font-semibold">
+                          {link.name}
+                        </h4>
+                        <div className="flex flex-col gap-1">
+                          {link.dropdown.map((item) => (
+                            <Link
+                              key={item.name}
+                              to={item.path}
+                              className="px-4 py-2.5 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md rounded-lg"
+                            >
+                              {item.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </>
+                    ) : (
+                      link.dropdown.map((item) => (
+                        <div key={item.name} className="relative group/sub">
+                          {item.subItems ? (
+                            <>
+                              <Link
+                                to={item.path}
+                                className="px-4 py-3 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md border-b border-obsidian-100 last:border-0 flex justify-between items-center w-full"
+                              >
+                                <span>{item.name}</span>
+                                <FaChevronDown className="-rotate-90 text-[10px] opacity-40 group-hover/sub:text-[#F5A623] group-hover/sub:rotate-0 transition-transform duration-200" />
+                              </Link>
+                              <div className={`absolute ${isRtl ? 'right-full mr-0.5' : 'left-full ml-0.5'} top-0 hidden group-hover/sub:block w-56 bg-white border border-obsidian-200 rounded-lg overflow-hidden shadow-2xl z-[9999]`}>
+                                {item.subItems.map((sub) => (
+                                  <Link
+                                    key={sub.name}
+                                    to={sub.path}
+                                    className="block px-4 py-3 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md border-b border-obsidian-100 last:border-0"
+                                  >
+                                    {sub.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            </>
+                          ) : (
                             <Link
                               to={item.path}
-                              className="px-4 py-3 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md border-b border-obsidian-100 last:border-0 flex justify-between items-center w-full"
+                              className="block px-4 py-3 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md border-b border-obsidian-100 last:border-0"
                             >
-                              <span>{item.name}</span>
-                              <FaChevronDown className="-rotate-90 text-[10px] opacity-40 group-hover/sub:text-[#F5A623] group-hover/sub:rotate-0 transition-transform duration-200" />
+                              {item.name}
                             </Link>
-                            <div className={`absolute ${isRtl ? 'right-full mr-0.5' : 'left-full ml-0.5'} top-0 hidden group-hover/sub:block w-56 bg-white border border-obsidian-200 rounded-lg overflow-hidden shadow-2xl z-[9999]`}>
-                              {item.subItems.map((sub) => (
-                                <Link
-                                  key={sub.name}
-                                  to={sub.path}
-                                  className="block px-4 py-3 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md border-b border-obsidian-100 last:border-0"
-                                >
-                                  {sub.name}
-                                </Link>
-                              ))}
-                            </div>
-                          </>
-                        ) : (
-                          <Link
-                            to={item.path}
-                            className="block px-4 py-3 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md border-b border-obsidian-100 last:border-0"
-                          >
-                            {item.name}
-                          </Link>
-                        )}
-                      </div>
-                    ))}
+                          )}
+                        </div>
+                      ))
+                    )}
                   </motion.div>
                 )}
               </AnimatePresence>
