@@ -264,7 +264,7 @@ export const multiCountryTours = [
     price: 0,
     rating: 4.9,
     reviewCount: 0,
-    images: ["https://images.unsplash.com/photo-1581889477717-3d1a71a2cdc6?auto=format&fit=crop&w=800&q=80"],
+    images: ["/imgs/Stars of the Middle East .png"],
     highlights: [
       "mct005.highlight.1",
       "mct005.highlight.2",
@@ -329,7 +329,7 @@ export const multiCountryTours = [
     price: 0,
     rating: 4.9,
     reviewCount: 0,
-    images: ["https://images.unsplash.com/photo-1543191877-8dd7c2e0f05b?auto=format&fit=crop&w=800&q=80"],
+    images: ["/imgs/Treasures of Egypt and Tunisia.png"],
     highlights: [
       "mct006.highlight.1",
       "mct006.highlight.2",
@@ -411,7 +411,7 @@ export const multiCountryTours = [
     price: 0,
     rating: 4.9,
     reviewCount: 0,
-    images: ["https://images.unsplash.com/photo-1582672062674-af7922080fc9?auto=format&fit=crop&w=800&q=80"],
+    images: ["/imgs/Egypt and Dubai.png"],
     highlights: [
       "mct007.highlight.1",
       "mct007.highlight.2",
@@ -477,7 +477,7 @@ export const multiCountryTours = [
     price: 0,
     rating: 4.9,
     reviewCount: 0,
-    images: ["https://images.unsplash.com/photo-1591046583079-13d5952e3723?auto=format&fit=crop&w=800&q=80"],
+    images: ["https://th.bing.com/th/id/R.58564825c2c22ad5062b00d620ed4397?rik=XgQR%2bu8MUj6NHA&pid=ImgRaw&r=0"],
     highlights: [
       "mct008.highlight.1",
       "mct008.highlight.2",
@@ -541,7 +541,7 @@ export const multiCountryTours = [
     price: 0,
     rating: 4.9,
     reviewCount: 0,
-    images: ["https://images.unsplash.com/photo-1534809027769-b00d750a6bac?auto=format&fit=crop&w=800&q=80"],
+    images: ["https://th.bing.com/th/id/R.d4c411bd75b827b087396502b4144fe6?rik=3VllwT9EP1BvFA&pid=ImgRaw&r=0"],
     highlights: [
       "mct009.highlight.1",
       "mct009.highlight.2",

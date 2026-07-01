@@ -10,8 +10,12 @@ const Logo = ({ theme: propTheme, height = 60 }) => {
     <img
       src="/dunas-travel-logo.png"
       alt="Dunas Travel"
-      className={`flex-shrink-0 object-contain ${effectiveTheme === 'light' ? 'invert brightness-50' : ''}`}
-      style={{ height: `${height}px`, width: 'auto' }}
+      className="flex-shrink-0 object-contain"
+      style={{
+        height: `${height}px`,
+        width: 'auto',
+        filter: effectiveTheme === 'light' ? 'brightness(0) invert(1)' : 'none',
+      }}
     />
   );
 };

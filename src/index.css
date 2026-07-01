@@ -105,6 +105,96 @@ html {
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4) !important;
   }
 
+  /* About page dark mode - force ALL text light */
+  html[data-theme="dark"] .about-page {
+    --navy-deep: #1a2a4a;
+    --navy: #2a3a5a;
+    --navy-mid: #3a4a6a;
+    --cream: #16162a;
+    --ivory: #1a1a30;
+    --gold: #d4921e;
+    --gold-light: #e8cb72;
+    --gold-pale: #c0a050;
+  }
+  html[data-theme="dark"] .about-page .section-light {
+    background: #16162a !important;
+  }
+  html[data-theme="dark"] .about-page,
+  html[data-theme="dark"] .about-page * {
+    color: #e8e4e0 !important;
+  }
+  html[data-theme="dark"] .about-page .section-light .eyebrow,
+  html[data-theme="dark"] .about-page .section-dark .eyebrow {
+    color: var(--gold) !important;
+  }
+  html[data-theme="dark"] .about-page .hero h1 em {
+    color: var(--gold-light) !important;
+  }
+  html[data-theme="dark"] .about-page .hero .sub {
+    color: rgba(232, 228, 224, 0.7) !important;
+  }
+  html[data-theme="dark"] .about-page .hero-stats .lbl {
+    color: rgba(232, 228, 224, 0.5) !important;
+  }
+  html[data-theme="dark"] .about-page .stat-cell .l {
+    color: #a8a4a0 !important;
+  }
+  html[data-theme="dark"] .about-page .stat-cell .n {
+    color: var(--gold-light) !important;
+  }
+  html[data-theme="dark"] .about-page .presence-box {
+    background: #0f0f1a !important;
+  }
+  html[data-theme="dark"] .about-page .event-row {
+    background: #0f0f1a !important;
+  }
+  html[data-theme="dark"] .about-page .svc-card,
+  html[data-theme="dark"] .about-page .val-card {
+    background: #1a1a30 !important;
+  }
+  html[data-theme="dark"] .about-page .svc-card:hover {
+    background: var(--navy-deep) !important;
+  }
+  html[data-theme="dark"] .about-page .member-card {
+    background: linear-gradient(160deg, #0f2040, #060a14) !important;
+  }
+  html[data-theme="dark"] .about-page .inst-cell {
+    background: #16162a !important;
+  }
+  /* Dark mode - Included/Excluded cards */
+  html[data-theme="dark"] .bg-ivory-50 {
+    background: #1a1a30 !important;
+  }
+  html[data-theme="dark"] .bg-ivory-50 li,
+  html[data-theme="dark"] .bg-ivory-50 h3,
+  html[data-theme="dark"] .bg-ivory-50 h2,
+  html[data-theme="dark"] .bg-ivory-50 span {
+    color: #e8e4e0 !important;
+  }
+  html[data-theme="dark"] .bg-ivory-50 .text-obsidian-900,
+  html[data-theme="dark"] .bg-ivory-50 .text-obsidian-700,
+  html[data-theme="dark"] .bg-ivory-50 .text-obsidian-500 {
+    color: #e8e4e0 !important;
+  }
+  html[data-theme="dark"] .bg-ivory-50 .text-sage-500,
+  html[data-theme="dark"] .bg-ivory-50 .text-sage-700 {
+    color: #6bcc7a !important;
+  }
+  html[data-theme="dark"] .bg-ivory-50 .text-red-400,
+  html[data-theme="dark"] .bg-ivory-50 .text-red-500,
+  html[data-theme="dark"] .bg-ivory-50 .text-red-700 {
+    color: #ef7a7a !important;
+  }
+  html[data-theme="dark"] .bg-ivory-50 .bg-red-100 {
+    background: rgba(239, 122, 122, 0.2) !important;
+  }
+  html[data-theme="dark"] .border-sage-200 {
+    border-color: rgba(107, 204, 122, 0.3) !important;
+  }
+  html[data-theme="dark"] .border-red-200 {
+    border-color: rgba(239, 122, 122, 0.3) !important;
+  }
+
   html,
   body {
     @apply font-body;
