@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
@@ -8,12 +8,31 @@ import { fadeInUp } from '../../animations/variants';
 import Button from '../../components/ui/Button';
 import BookingForm from '../../components/booking/BookingForm';
 import { useDubaiProgram } from '../../hooks/useDubaiPrograms';
+import { tours } from '../../data/tours';
+import TourCard from '../../components/tour/TourCard';
 
 const DubaiProgramDetails = () => {
   const { t } = useTranslation();
   const { programId } = useParams();
   const program = useDubaiProgram(programId);
   const [activeImage, setActiveImage] = useState(null);
+  const carouselRef = useRef(null);
+
+  useEffect(() => {
+    const el = carouselRef.current;
+    if (!el) return;
+    const id = setInterval(() => {
+      const itemW = el.querySelector('.related-carousel-item')?.offsetWidth || 300;
+      const gap = 24;
+      const step = itemW + gap;
+      if (el.scrollLeft + el.clientWidth >= el.scrollWidth - 10) {
+        el.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        el.scrollBy({ left: step, behavior: 'smooth' });
+      }
+    }, 3500);
+    return () => clearInterval(id);
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -28,6 +47,8 @@ const DubaiProgramDetails = () => {
   }
 
   const { title, overview, duration, highlights, days, images, code, minPax, includes, excludes, pricing, extraNightPrices, exhibitionSurcharges } = program;
+
+  const shuffledTours = [...tours].sort(() => Math.random() - 0.5);
 
   return (
     <div className="w-full bg-obsidian-50 min-h-screen">
@@ -446,33 +467,44 @@ const DubaiProgramDetails = () => {
         </section>
       )}
 
-      <section className="relative py-24 mt-8 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${images[0]})` }} />
-        <div className="absolute inset-0 bg-obsidian-900/75" />
-        <div className="relative z-10 container mx-auto px-6 text-center max-w-3xl">
-          <span className="text-gold-500 uppercase tracking-widest text-sm font-semibold block mb-4">
-            {t('programs.customizeLabel', "DIDN'T FIND WHAT YOU'RE LOOKING FOR?")}
-          </span>
-          <h2 className="text-display-xl text-ivory-50 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            {t('programs.customizeTitle', 'Let us design your perfect Dubai journey')}
+      {/* Related Tours */}
+      <section className="container mx-auto px-6 py-24">
+        <div className="text-center mb-16">
+          <h2 className="text-display-lg text-obsidian-900 mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+            {t('tourDetail.relatedTitle', 'You May Also Like')}
           </h2>
-          <p className="text-body-lg text-ivory-300 mb-10">
-            {t('programs.customizeDesc', 'Tell us your preferences, and our expert travel designers will craft a bespoke itinerary tailored just for you.')}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/tailor-a-tour">
-              <Button variant="gold-glow" className="w-full sm:w-auto px-10 py-4">
-                {t('programs.customizeBtn', 'Customize Your Trip')}
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button variant="glass" className="w-full sm:w-auto px-10 py-4">
-                {t('nav.contact', 'Contact Us')}
-              </Button>
-            </Link>
-          </div>
+          <div className="w-24 h-1 bg-gold-500 mx-auto mb-4"></div>
+        </div>
+        <div className="related-carousel" ref={carouselRef}>
+          {shuffledTours.map((tour) => (
+            <div key={tour.id} className="related-carousel-item">
+              <TourCard tour={tour} />
+            </div>
+          ))}
         </div>
       </section>
+
+      <style>{`
+        .related-carousel {
+          display: flex;
+          overflow-x: auto;
+          gap: 24px;
+          padding-bottom: 16px;
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
+        }
+        .related-carousel-item {
+          flex: 0 0 auto;
+          width: 280px;
+          scroll-snap-align: start;
+        }
+        @media (min-width: 768px) {
+          .related-carousel-item { width: 320px; }
+        }
+        @media (min-width: 1024px) {
+          .related-carousel-item { width: 350px; }
+        }
+      `}</style>
     </div>
   );
 };

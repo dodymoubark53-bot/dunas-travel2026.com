@@ -1,9 +1,11 @@
 import { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { allTours } from '../../data/tours';
 import TourCard from '../../components/tour/TourCard';
+import Button from '../../components/ui/Button';
 
 const Tunez = () => {
   const { t, i18n } = useTranslation();
@@ -66,6 +68,34 @@ const Tunez = () => {
               <p className="text-body-lg text-obsidian-500">{t('dest.tunisia.noTours', 'Tours are currently being updated. Please check back soon.')}</p>
             </div>
           )}
+        </div>
+      </section>
+
+      <section className="relative py-24 mt-24 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://www.heritage.org/sites/default/files/styles/facebook_optimized/public/images/2017-06/Tunisia.jpg?itok=trkp0NK9')" }} />
+        <div className="absolute inset-0 bg-obsidian-900/75" />
+        <div className="relative z-10 container mx-auto px-6 text-center max-w-3xl">
+          <span className="text-gold-500 uppercase tracking-widest text-sm font-semibold block mb-4">
+            {t('dest.tunisia.ctaLabel', "DIDN'T FIND WHAT YOU'RE LOOKING FOR?")}
+          </span>
+          <h2 className="text-display-xl text-ivory-50 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+            {t('dest.tunisia.ctaTitle', 'Let us design your perfect Tunisia tour')}
+          </h2>
+          <p className="text-body-lg text-ivory-300 mb-10">
+            {t('dest.tunisia.ctaDesc', 'Tell us your preferences, and our expert travel designers will craft a bespoke itinerary tailored just for you.')}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/tailor-a-tour">
+              <Button variant="gold-glow" className="w-full sm:w-auto px-10 py-4">
+                {t('home.tailorTour', 'Tailor Your Tour')}
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button variant="glass" className="w-full sm:w-auto px-10 py-4">
+                {t('nav.contact', 'Contact Us')}
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
     </div>

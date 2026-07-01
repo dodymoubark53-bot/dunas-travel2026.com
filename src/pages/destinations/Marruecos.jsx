@@ -90,13 +90,13 @@ const Marruecos = () => {
         <div className="absolute inset-0 bg-obsidian-900/75" />
         <div className="relative z-10 container mx-auto px-6 text-center max-w-3xl">
           <span className="text-gold-500 uppercase tracking-widest text-sm font-semibold block mb-4">
-            {t('dest.morocco.ctaLabel', 'READY TO EXPLORE MOROCCO?')}
+            {t('dest.morocco.ctaLabel', "DIDN'T FIND WHAT YOU'RE LOOKING FOR?")}
           </span>
           <h2 className="text-display-xl text-ivory-50 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            {t('dest.morocco.ctaTitle', 'Your Moroccan adventure starts here')}
+            {t('dest.morocco.ctaTitle', 'Let us design your perfect Morocco tour')}
           </h2>
           <p className="text-body-lg text-ivory-300 mb-10">
-            {t('dest.morocco.ctaDesc', 'Discover our curated Morocco programs and book your dream journey today.')}
+            {t('dest.morocco.ctaDesc', 'Tell us your preferences, and our expert travel designers will craft a bespoke itinerary tailored just for you.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/tailor-a-tour">

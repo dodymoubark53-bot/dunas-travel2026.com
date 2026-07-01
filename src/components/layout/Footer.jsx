@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { FaFacebook, FaInstagram, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
@@ -7,6 +8,15 @@ import TiT0Chat from '../ui/TiT0Chat';
 const Footer = () => {
   const { t, i18n } = useTranslation();
   const isRtl = i18n.dir() === 'rtl';
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setShowBackToTop(window.scrollY > 480);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
     <footer
@@ -15,9 +25,29 @@ const Footer = () => {
     >
 
       {/* Brand & Socials + TiT0 */}
-      <style>{`@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+      <style>{`
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 @keyframes blink{50%{opacity:0}}
-@keyframes dotSlideIn{from{opacity:0;transform:translateX(30px) scale(0.15)}to{opacity:1;transform:translateX(0) scale(1)}}`}</style>
+@keyframes dotSlideIn{from{opacity:0;transform:translateX(30px) scale(0.15)}to{opacity:1;transform:translateX(0) scale(1)}}
+@keyframes arrowBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+#backToTop{
+  position:fixed;left:28px;bottom:28px;
+  width:54px;height:54px;border-radius:50%;
+  border:1px solid var(--gold,#C9A227);
+  background:var(--navy-deep,#081830);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;z-index:200;
+  opacity:0;visibility:hidden;
+  transform:translateY(16px);
+  transition:opacity .35s ease,transform .35s ease,visibility .35s ease,border-color .3s ease,background .3s ease;
+  box-shadow:0 14px 34px rgba(8,24,48,0.28);
+}
+#backToTop.show{opacity:1!important;visibility:visible!important;transform:translateY(0)!important}
+#backToTop:hover{background:var(--gold,#C9A227);border-color:var(--gold,#C9A227)}
+#backToTop svg{width:20px;height:20px;stroke:var(--gold-light,#E8CB72);transition:stroke .3s ease;animation:arrowBounce 1.6s ease-in-out infinite}
+#backToTop:hover svg{stroke:var(--navy-deep,#081830)}
+@media(max-width:640px){#backToTop{left:18px;bottom:18px;width:48px;height:48px}}
+`}</style>
       <div className="relative z-10 w-full px-6 sm:px-12 lg:px-20 pt-8 sm:pt-10 lg:pt-12 flex flex-col sm:flex-row justify-between items-start gap-6">
         <div className="max-w-lg">
           <Link to="/" className="flex items-center mb-3">
@@ -151,6 +181,14 @@ const Footer = () => {
           </p>
         </div>
       </div>
+
+      {/* Back to Top */}
+      <button id="backToTop" onClick={scrollToTop} aria-label="Back to top" className={showBackToTop ? 'show' : ''}>
+        <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 19V5"></path>
+          <path d="M5 12l7-7 7 7"></path>
+        </svg>
+      </button>
     </footer>
   );
 };

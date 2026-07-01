@@ -93,13 +93,13 @@ const Dubai = () => {
         <div className="absolute inset-0 bg-obsidian-900/75" />
         <div className="relative z-10 container mx-auto px-6 text-center max-w-3xl">
           <span className="text-gold-500 uppercase tracking-widest text-sm font-semibold block mb-4">
-            {t('dest.dubai.ctaLabel', 'READY TO TRAVEL TO DUBAI?')}
+            {t('dest.dubai.ctaLabel', "DIDN'T FIND WHAT YOU'RE LOOKING FOR?")}
           </span>
           <h2 className="text-display-xl text-ivory-50 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            {t('dest.dubai.ctaTitle', 'Your Dubai adventure starts here')}
+            {t('dest.dubai.ctaTitle', 'Let us design your perfect Dubai tour')}
           </h2>
           <p className="text-body-lg text-ivory-300 mb-10">
-            {t('dest.dubai.ctaDesc', 'Explore our curated Dubai programs and book your dream journey today.')}
+            {t('dest.dubai.ctaDesc', 'Tell us your preferences, and our expert travel designers will craft a bespoke itinerary tailored just for you.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/tailor-a-tour">

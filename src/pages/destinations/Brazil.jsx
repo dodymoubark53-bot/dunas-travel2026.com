@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { staggerContainer, fadeInUp } from '../../animations/variants';
+import Button from '../../components/ui/Button';
 import TourCard from '../../components/tour/TourCard';
 import { tours } from '../../data/tours';
 
@@ -72,6 +74,34 @@ const Brazil = () => {
             <TourCard key={tour.id} tour={tour} />
           ))}
         </motion.div>
+      </section>
+
+      <section className="relative py-24 mt-24 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=1920&q=80')" }} />
+        <div className="absolute inset-0 bg-obsidian-900/75" />
+        <div className="relative z-10 container mx-auto px-6 text-center max-w-3xl">
+          <span className="text-gold-500 uppercase tracking-widest text-sm font-semibold block mb-4">
+            {t('dest.brazil.ctaLabel', "DIDN'T FIND WHAT YOU'RE LOOKING FOR?")}
+          </span>
+          <h2 className="text-display-xl text-ivory-50 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+            {t('dest.brazil.ctaTitle', 'Let us design your perfect Brazil tour')}
+          </h2>
+          <p className="text-body-lg text-ivory-300 mb-10">
+            {t('dest.brazil.ctaDesc', 'Tell us your preferences, and our expert travel designers will craft a bespoke itinerary tailored just for you.')}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/tailor-a-tour">
+              <Button variant="gold-glow" className="w-full sm:w-auto px-10 py-4">
+                {t('home.tailorTour', 'Tailor Your Tour')}
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button variant="glass" className="w-full sm:w-auto px-10 py-4">
+                {t('nav.contact', 'Contact Us')}
+              </Button>
+            </Link>
+          </div>
+        </div>
       </section>
     </div>
   );

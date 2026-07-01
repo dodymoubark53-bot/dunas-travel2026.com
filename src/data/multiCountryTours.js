@@ -15,7 +15,7 @@ export const multiCountryTours = [
     price: 0,
     rating: 4.9,
     reviewCount: 0,
-    images: ["/imgs/gallery/ultimate jordan grand tour.webp"],
+    images: ["https://theglobetrottingdetective.com/wp-content/uploads/2022/03/best-places-in-the-middle-east-traveling-the-middle-east-cappadocia-turkey.jpg"],
     highlights: [
       "mct001.highlight.1",
       "mct001.highlight.2",
@@ -85,7 +85,7 @@ export const multiCountryTours = [
     price: 0,
     rating: 4.9,
     reviewCount: 0,
-    images: ["https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=800&q=80"],
+    images: ["https://cdn.thecollector.com/wp-content/uploads/2024/07/history-cairo-monuments.jpg"],
     highlights: [
       "mct002.highlight.1",
       "mct002.highlight.2",
@@ -139,7 +139,7 @@ export const multiCountryTours = [
     price: 0,
     rating: 4.9,
     reviewCount: 0,
-    images: ["https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=800&q=80"],
+    images: ["/imgs/Essences of Egypt and Turkey .png"],
     highlights: [
       "mct003.highlight.1",
       "mct003.highlight.2",
@@ -202,7 +202,7 @@ export const multiCountryTours = [
     price: 0,
     rating: 4.9,
     reviewCount: 0,
-    images: ["https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80"],
+    images: ["/imgs/Marvels of Dubai and Turkey.png"],
     highlights: [
       "mct004.highlight.1",
       "mct004.highlight.2",
