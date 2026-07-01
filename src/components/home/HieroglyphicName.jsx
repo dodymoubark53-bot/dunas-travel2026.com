@@ -159,6 +159,7 @@ const HieroglyphicName = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
+          dir="ltr"
           style={{
             position: 'absolute',
             top: 0,
@@ -187,7 +188,7 @@ const HieroglyphicName = () => {
         </motion.div>
 
         {/* Card overlay on the left */}
-        <div className="container mx-auto px-6 w-full relative z-10">
+        <div className="container mx-auto px-6 w-full relative z-10" dir="ltr">
           <div className="flex justify-start lg:ml-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
