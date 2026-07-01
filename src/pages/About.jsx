@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import { FaHistory, FaGlobeAmericas, FaUserTie, FaCompass, FaBuilding, FaSuitcase } from 'react-icons/fa';
 
 const styles = `
   :root {
@@ -104,6 +105,12 @@ const styles = `
     color: rgba(248, 243, 230, 0.55);
     margin-top: 6px;
   }
+  .about-page .hero-stats .stat-icon {
+    font-size: 22px;
+    color: var(--gold);
+    margin-bottom: 8px;
+    display: block;
+  }
   @media(max-width:700px) {
     .about-page .hero-stats { flex-wrap: wrap; }
     .about-page .hero-stats div { width: 50%; border-right: 1px solid var(--line); }
@@ -182,6 +189,9 @@ const styles = `
     transform: rotate(45deg);
   }
   .about-page .section-dark { position: relative; }
+  .about-page #growth {
+    background: url('/imgs/egypt.jpg.jpeg') center / cover no-repeat;
+  }
   .about-page .section-dark::before {
     content: '';
     position: absolute;
@@ -311,6 +321,14 @@ const styles = `
     text-transform: uppercase;
     color: var(--ink-soft);
   }
+  .about-page .stat-cell .stat-icon {
+    font-size: 24px;
+    color: var(--royal);
+    margin-bottom: 6px;
+    display: block;
+    transition: color .35s ease;
+  }
+  .about-page .stat-cell:hover .stat-icon { color: var(--gold); }
   @media(max-width:760px) {
     .about-page .stats-strip { grid-template-columns: repeat(2, 1fr); }
     .about-page .stat-cell { border-bottom: 1px solid rgba(14, 42, 82, .15); }
@@ -854,13 +872,14 @@ const About = () => {
 
         <div className="hero-stats">
           {[
-            { count: 17, labelKey: 'about.heroStatsYears' },
-            { count: 95654, labelKey: 'about.heroStatsTravelers' },
-            { count: 438, labelKey: 'about.heroStatsEmployees' },
-            { count: 182, labelKey: 'about.heroStatsGuides' },
-            { count: 4, labelKey: 'about.heroStatsOffices' },
+            { count: 17, icon: FaHistory, labelKey: 'about.heroStatsYears' },
+            { count: 95654, icon: FaGlobeAmericas, labelKey: 'about.heroStatsTravelers' },
+            { count: 438, icon: FaUserTie, labelKey: 'about.heroStatsEmployees' },
+            { count: 182, icon: FaCompass, labelKey: 'about.heroStatsGuides' },
+            { count: 4, icon: FaBuilding, labelKey: 'about.heroStatsOffices' },
           ].map((s, i) => (
             <div key={i}>
+              <s.icon className="stat-icon" />
               <div className="num" data-count={s.count}>0</div>
               <div className="lbl">{t(s.labelKey)}</div>
             </div>
@@ -904,13 +923,14 @@ const About = () => {
         </div>
         <div className="stats-strip reveal">
           {[
-            { count: 17, suffix: '+', labelKey: 'about.statYears' },
-            { count: 95654, suffix: '', labelKey: 'about.statTravelers' },
-            { count: 438, suffix: '', labelKey: 'about.statEmployees' },
-            { count: 182, suffix: '', labelKey: 'about.statGuides' },
-            { count: 4, suffix: '', labelKey: 'about.statOffices' },
+            { count: 17, suffix: '+', icon: FaHistory, labelKey: 'about.statYears' },
+            { count: 95654, suffix: '', icon: FaSuitcase, labelKey: 'about.statTravelers' },
+            { count: 438, suffix: '', icon: FaUserTie, labelKey: 'about.statEmployees' },
+            { count: 182, suffix: '', icon: FaCompass, labelKey: 'about.statGuides' },
+            { count: 4, suffix: '', icon: FaBuilding, labelKey: 'about.statOffices' },
           ].map((s, i) => (
             <div className="stat-cell" key={i}>
+              <s.icon className="stat-icon" />
               <div className="n" data-count={s.count} data-suffix={s.suffix}>0</div>
               <div className="l">{t(s.labelKey)}</div>
             </div>
@@ -918,7 +938,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="section-dark">
+      <section className="section-dark" id="growth">
         <div className="section-head reveal">
           <span className="eyebrow">{t('about.growthEyebrow')}</span>
           <h2 dangerouslySetInnerHTML={{ __html: t('about.growthTitle') }} />
