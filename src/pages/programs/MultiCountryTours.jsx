@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { FaChevronRight } from 'react-icons/fa';
 import TourCard from '../../components/tour/TourCard';
 import { multiCountryTours } from '../../data/multiCountryTours';
 
@@ -13,6 +15,17 @@ const MultiCountryTours = () => {
         <title>{t('programs.multiCountryTitle', 'Multi-Country Tours')} | Dunas Travel</title>
         <meta name="description" content={t('programs.multiCountryDesc', 'Multi-Country Tours')} />
       </Helmet>
+
+      {/* Breadcrumb */}
+      <div className="bg-obsidian-950 border-y border-gold-500/10 py-4 px-6 text-caption text-ivory-300">
+        <div className="container mx-auto flex items-center gap-2">
+          <Link to="/" className="hover:text-gold-500 transition-colors">{t('nav.home', 'Home')}</Link>
+          <span className="rtl-flip text-[10px] text-gold-500/50"><FaChevronRight /></span>
+          <Link to="/destinations/egypt" className="hover:text-gold-500 transition-colors">{t('dest.egypt.title', 'Egypt')}</Link>
+          <span className="rtl-flip text-[10px] text-gold-500/50"><FaChevronRight /></span>
+          <span className="text-gold-500 font-medium">{t('nav.multiCountry', 'Multi-Country Tours')}</span>
+        </div>
+      </div>
 
       <section className="relative min-h-screen bg-ivory-50 pt-32 pb-20">
         <div className="container mx-auto px-6">

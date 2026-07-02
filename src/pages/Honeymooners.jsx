@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { staggerContainer, fadeInUp } from '../animations/variants';
+import { FaChevronRight } from 'react-icons/fa';
 
 const tours = [
   {
@@ -50,6 +51,17 @@ const Honeymooners = () => {
           </motion.p>
         </motion.div>
       </section>
+
+      {/* Breadcrumb */}
+      <div className="bg-obsidian-950 border-y border-gold-500/10 py-4 px-6 text-caption text-ivory-300">
+        <div className="container mx-auto flex items-center gap-2">
+          <Link to="/" className="hover:text-gold-500 transition-colors">{t('nav.home', 'Home')}</Link>
+          <span className="rtl-flip text-[10px] text-gold-500/50"><FaChevronRight /></span>
+          <Link to="/destinations/egypt" className="hover:text-gold-500 transition-colors">{t('dest.egypt.title', 'Egypt')}</Link>
+          <span className="rtl-flip text-[10px] text-gold-500/50"><FaChevronRight /></span>
+          <span className="text-gold-500 font-medium">{t('honeymooners.title', 'Honeymooners Package')}</span>
+        </div>
+      </div>
 
       {/* Tours Grid */}
       <section className="container mx-auto px-6 py-16">

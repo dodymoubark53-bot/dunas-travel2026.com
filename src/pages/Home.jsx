@@ -1,4 +1,4 @@
-import { useState, useRef, useMemo, useEffect } from "react";
+import { useState, useRef, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
@@ -77,18 +77,9 @@ const Home = () => {
   const [activeDestination, setActiveDestination] = useState(null);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [activeGalleryIndex, setActiveGalleryIndex] = useState(0);
+  const [zoomScale, setZoomScale] = useState(1);
   const [isAllToursPopupOpen, setIsAllToursPopupOpen] = useState(false);
   const [activeVideo, setActiveVideo] = useState(null);
-  const [galleryIndex, setGalleryIndex] = useState(0);
-
-  const nextGallery = () => setGalleryIndex((prev) => (prev + 1) % galleryCarousel.length);
-  const prevGallery = () => setGalleryIndex((prev) => (prev - 1 + galleryCarousel.length) % galleryCarousel.length);
-
-  useEffect(() => {
-    const timer = setInterval(nextGallery, 4000);
-    return () => clearInterval(timer);
-  }, []);
-
   const turkeyPrograms = useTurkeyPrograms();
   const formattedTurkeyTours = turkeyPrograms.map((tp) => ({
     id: tp.id,
@@ -191,14 +182,14 @@ const Home = () => {
   const [searchPeople, setSearchPeople] = useState(1);
 
   const destinations = [
-    { id: "egypt", label: t("dest.egypt.title", "Egypt"), img: "/imgs/gallery/pharaohs & pyramid.jpg" },
-    { id: "turkey", label: t("dest.turkey.title", "Turkey"), img: "/imgs/gallery/grand tour of turkey.jpg" },
-    { id: "dubai", label: t("dest.dubai.title", "Dubai"), img: "/imgs/gallery/16.jpeg" },
-    { id: "jordan", label: t("dest.jordan.title", "Jordan"), img: "/imgs/gallery/ultimate jordan grand tour.webp" },
-    { id: "tunisia", label: t("dest.tunisia.title", "Tunisia"), img: "/imgs/gallery/3.jpeg" },
-    { id: "morocco", label: t("dest.morocco.title", "Morocco"), img: "/imgs/gallery/14.jpeg" },
-    { id: "greece", label: t("dest.greece.title", "Greece"), img: "/imgs/gallery/ephesus & the aegean coast.jpg" },
-    { id: "holyland", label: t("dest.holyland.title", "Holy Land"), img: "/imgs/gallery/20.jpeg" },
+    { id: "egypt", label: t("dest.egypt.title", "Egypt"), img: "https://tse3.mm.bing.net/th/id/OIP.SQ9E00KSa9ALEdFsXAZ3awHaE7?r=0&cb=thfvnextfalcon4&rs=1&pid=ImgDetMain&o=7&rm=3" },
+    { id: "turkey", label: t("dest.turkey.title", "Turkey"), img: "https://tse3.mm.bing.net/th/id/OIP.ACXDe8yEd0eknkCLENbIcQHaD4?r=0&cb=thfvnextfalcon4&rs=1&pid=ImgDetMain&o=7&rm=3" },
+    { id: "dubai", label: t("dest.dubai.title", "Dubai"), img: "https://tse2.mm.bing.net/th/id/OIP.FQURzfPWIc9YIW_e6oX_ZAHaDR?r=0&cb=thfvnextfalcon4&rs=1&pid=ImgDetMain&o=7&rm=3" },
+    { id: "jordan", label: t("dest.jordan.title", "Jordan"), img: "https://tse3.mm.bing.net/th/id/OIP.PxvXjR1OV2gW8_cTvGN2oQHaH8?r=0&cb=thfvnextfalcon4&w=1280&h=1374&rs=1&pid=ImgDetMain&o=7&rm=3" },
+    { id: "tunisia", label: t("dest.tunisia.title", "Tunisia"), img: "https://www.heritage.org/sites/default/files/styles/facebook_optimized/public/images/2017-06/Tunisia.jpg?itok=trkp0NK9" },
+    { id: "morocco", label: t("dest.morocco.title", "Morocco"), img: "https://tse3.mm.bing.net/th/id/OIP.ijumtXxli2BNILpXsgr7HgHaE9?r=0&cb=thfvnextfalcon4&rs=1&pid=ImgDetMain&o=7&rm=3" },
+    { id: "greece", label: t("dest.greece.title", "Greece"), img: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026773/13_wtazze.jpg" },
+    { id: "holyland", label: t("dest.holyland.title", "Holy Land"), img: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026773/17_wpxrtt.jpg" },
   ];
 
   const slugify = (str) => str.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
@@ -367,8 +358,25 @@ const Home = () => {
     { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783024062/071f261a-2ab6-48b5-a370-c47ad7889be3_immde1.jpg", dest: "Gallery", tag: "Photo" },
     { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783024072/400a841d-18b7-4915-8483-f9a3346651cf_ocdouu.jpg", dest: "Gallery", tag: "Photo" },
     { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783024090/9788c6d2-7046-4ce0-aa64-a0adcbe1a54d_omcrnc.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026771/5_upvijm.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026771/6_q4vcdg.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026771/8_mpyvu4.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026771/11_xydddd.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026771/10_t3dnh6.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026772/12_fukk6b.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026772/14_z5msnu.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026772/15_rrczuy.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026773/17_wpxrtt.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026773/18_hbfrt1.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026773/13_wtazze.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026773/20_riy2ce.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026773/19_suxy3c.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026774/21_gqrhmg.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026774/1_uidqje.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026774/2_h2krys.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026775/22_gywthx.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026775/3_rbjrys.jpg", dest: "Gallery", tag: "Photo" },
   ];
-  const galleryCarousel = galleryImages.slice(0, 8);
 
   const videos = [
     { publicId: 'Despu%C3%A9s_de_una_intensa_jornada_en_Bogot%C3%A1__en_Dunas_Travel_compartimos_una_cena_exclusiva_con_nuestros_partners_estrat%C3%A9gicos._480P_SD_sv2pei' },
@@ -385,11 +393,13 @@ const Home = () => {
 
   const openLightbox = (index) => {
     setActiveGalleryIndex(index);
+    setZoomScale(1);
     setIsLightboxOpen(true);
   };
 
   const nextImage = (e) => {
     e.stopPropagation();
+    setZoomScale(1);
     setActiveGalleryIndex((prev) =>
       prev === galleryImages.length - 1 ? 0 : prev + 1,
     );
@@ -397,6 +407,7 @@ const Home = () => {
 
   const prevImage = (e) => {
     e.stopPropagation();
+    setZoomScale(1);
     setActiveGalleryIndex((prev) =>
       prev === 0 ? galleryImages.length - 1 : prev - 1,
     );
@@ -489,48 +500,16 @@ const Home = () => {
         </button>
       </section>
 
-      {/* Search & Gallery Section */}
+      {/* Search Section */}
       <section className="relative w-full h-screen max-h-[900px] overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <AnimatePresence mode="wait">
-            <motion.img
-              key={galleryIndex}
-              src={galleryCarousel[galleryIndex].src}
-              alt=""
-              initial={{ opacity: 0, scale: 1.1 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.7, ease: 'easeInOut' }}
-              className="w-full h-full object-cover object-center"
-            />
-          </AnimatePresence>
+          <img
+            src={galleryImages[0].src}
+            alt=""
+            className="w-full h-full object-cover object-center"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-obsidian-900/30 via-obsidian-900/20 to-obsidian-900/50"></div>
-        </div>
-
-        {/* Arrows */}
-        <button
-          onClick={prevGallery}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border border-white/30 flex items-center justify-center text-obsidian-900 hover:bg-[#F5A623] hover:text-white transition-all shadow-lg"
-        >
-          <FaChevronLeft size={18} />
-        </button>
-        <button
-          onClick={nextGallery}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border border-white/30 flex items-center justify-center text-obsidian-900 hover:bg-[#F5A623] hover:text-white transition-all shadow-lg"
-        >
-          <FaChevronRight size={18} />
-        </button>
-
-        {/* Dots */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-          {galleryCarousel.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setGalleryIndex(i)}
-              className={`w-2.5 h-2.5 rounded-full transition-all ${i === galleryIndex ? 'bg-[#F5A623] w-6' : 'bg-white/60 hover:bg-white/90'}`}
-            />
-          ))}
         </div>
 
         {/* Search Content (overlay on image) */}
@@ -644,12 +623,12 @@ const Home = () => {
                 <Link
                   key={d.id}
                   to={`/destinations/${d.id}`}
-                  className="group flex items-center gap-1.5 sm:gap-2 bg-white/10 hover:bg-white/25 backdrop-blur-md border border-white/20 hover:border-[#FF6B35]/60 rounded-full px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 transition-all"
+                  className="group flex items-center gap-1.5 sm:gap-2 bg-white/25 hover:bg-white/40 backdrop-blur-md border border-white/30 hover:border-[#FF6B35] rounded-full px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 transition-all shadow-lg"
                 >
-                  <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full overflow-hidden shrink-0 ring-1 ring-white/30">
+                  <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full overflow-hidden shrink-0 ring-2 ring-white/50 shadow-md">
                     <img src={d.img} alt="" className="w-full h-full object-cover" />
                   </span>
-                  <span className="text-white/90 text-[11px] sm:text-body-sm font-medium group-hover:text-[#FF6B35] transition-colors">
+                  <span className="text-white text-[11px] sm:text-body-sm font-semibold drop-shadow-lg group-hover:text-[#FF6B35] transition-colors">
                     {d.label}
                   </span>
                 </Link>
@@ -1588,14 +1567,42 @@ const Home = () => {
             <motion.img
               key={activeGalleryIndex}
               initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
+              animate={{ opacity: 1, scale: zoomScale }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
               src={galleryImages[activeGalleryIndex].src}
               alt={galleryImages[activeGalleryIndex].dest}
-              className="max-w-[85vw] max-h-[85vh] object-contain shadow-[0_0_50px_rgba(0,0,0,0.5)] rounded-md"
+              className="max-w-[90vw] max-h-[90vh] object-contain shadow-[0_0_50px_rgba(0,0,0,0.5)] rounded-md cursor-zoom-in"
               onClick={(e) => e.stopPropagation()}
+              onWheel={(e) => {
+                e.stopPropagation();
+                const delta = e.deltaY > 0 ? -0.25 : 0.25;
+                setZoomScale((s) => Math.max(1, Math.min(4, s + delta)));
+              }}
             />
+
+            {/* Zoom Controls */}
+            <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-[101] flex gap-3 bg-obsidian-900/70 backdrop-blur-md rounded-full px-4 py-2 border border-white/10">
+              <button
+                onClick={(e) => { e.stopPropagation(); setZoomScale((s) => Math.max(1, s - 0.5)); }}
+                className="text-ivory-50 hover:text-gold-500 transition-colors w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 text-lg font-bold"
+              >
+                -
+              </button>
+              <span className="text-ivory-50 text-sm flex items-center">{Math.round(zoomScale * 100)}%</span>
+              <button
+                onClick={(e) => { e.stopPropagation(); setZoomScale((s) => Math.min(4, s + 0.5)); }}
+                className="text-ivory-50 hover:text-gold-500 transition-colors w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 text-lg font-bold"
+              >
+                +
+              </button>
+              <button
+                onClick={(e) => { e.stopPropagation(); setZoomScale(1); }}
+                className="text-gold-500 hover:text-gold-400 transition-colors text-xs font-semibold px-2"
+              >
+                RESET
+              </button>
+            </div>
 
             <button
               className={`absolute ${isRtl ? 'left-4 md:left-10' : 'right-4 md:right-10'} text-ivory-50 hover:text-gold-500 transition-colors z-[101] p-4`}

@@ -70,10 +70,19 @@ const ServiceDetails = () => {
               <div className="flex flex-wrap items-center justify-center gap-2 text-caption text-gold-500 mb-4 uppercase tracking-wider">
                 <Link to="/" className="hover:text-ivory-50 transition-colors">{t('nav.home', 'Home')}</Link>
                 <span className="rtl-flip text-[10px]"><FaChevronRight /></span>
-                <Link to={`/programs/${category}`} className="hover:text-ivory-50 transition-colors">
-                  {t(`nav.${category}`, category)}
-                </Link>
-                <span className="rtl-flip text-[10px]"><FaChevronRight /></span>
+                {category === 'classic' || category === 'extension' ? (
+                  <>
+                    <Link to="/destinations/egypt" className="hover:text-ivory-50 transition-colors">{t('dest.egypt.title', 'Egypt')}</Link>
+                    <span className="rtl-flip text-[10px]"><FaChevronRight /></span>
+                  </>
+                ) : (
+                  <>
+                    <Link to={`/programs/${category}`} className="hover:text-ivory-50 transition-colors">
+                      {t(`nav.${category}`, category)}
+                    </Link>
+                    <span className="rtl-flip text-[10px]"><FaChevronRight /></span>
+                  </>
+                )}
                 <span className="text-ivory-300">{translateData(service.title, service.title)}</span>
               </div>
               <motion.h1
