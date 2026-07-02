@@ -95,7 +95,7 @@ const ReligiousTours = () => {
         <div className="container mx-auto flex items-center gap-2">
           <Link to="/" className="hover:text-gold-500 transition-colors">{t('nav.home', 'Home')}</Link>
           <span className="rtl-flip text-[10px] text-gold-500/50"><FaChevronRight /></span>
-          <span className="hover:text-gold-500 transition-colors">{t('nav.programs', 'Programs')}</span>
+          <span className="hover:text-gold-500 transition-colors">{t('nav.services')}</span>
           <span className="rtl-flip text-[10px] text-gold-500/50"><FaChevronRight /></span>
           <span className="text-gold-500 font-medium">{t('nav.religious', 'Religious Programs')}</span>
         </div>

@@ -1,4 +1,4 @@
-import { useState, useRef, useMemo } from "react";
+import { useState, useRef, useMemo, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
@@ -79,6 +79,15 @@ const Home = () => {
   const [activeGalleryIndex, setActiveGalleryIndex] = useState(0);
   const [isAllToursPopupOpen, setIsAllToursPopupOpen] = useState(false);
   const [activeVideo, setActiveVideo] = useState(null);
+  const [galleryIndex, setGalleryIndex] = useState(0);
+
+  const nextGallery = () => setGalleryIndex((prev) => (prev + 1) % galleryCarousel.length);
+  const prevGallery = () => setGalleryIndex((prev) => (prev - 1 + galleryCarousel.length) % galleryCarousel.length);
+
+  useEffect(() => {
+    const timer = setInterval(nextGallery, 4000);
+    return () => clearInterval(timer);
+  }, []);
 
   const turkeyPrograms = useTurkeyPrograms();
   const formattedTurkeyTours = turkeyPrograms.map((tp) => ({
@@ -349,39 +358,17 @@ const Home = () => {
       : transportation.filter((v) => v.category === vehicleFilter);
 
   const galleryImages = [
-    {
-      src: "/imgs/gallery/ephesus & the aegean coast.jpg",
-      dest: "Turkey",
-      tag: "Tour",
-    },
-    {
-      src: "/imgs/gallery/grand tour of turkey.jpg",
-      dest: "Turkey",
-      tag: "Tour",
-    },
-    { src: "/imgs/gallery/1.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/2.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/3.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/4.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/5.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/6.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/7.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/8.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/9.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/10.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/11.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/12.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/13.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/14.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/15.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/16.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/17.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/18.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/19.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/20.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/21.jpeg", dest: "Gallery", tag: "Photo" },
-    { src: "/imgs/gallery/22.jpeg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783023886/3776ecde-249e-4183-9840-e9fd900ad96b_xvmumu.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783023877/2ec72126-709b-4c8d-8f7b-a592d212cc3b_czpoig.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783023865/80f6f47a-4938-4684-aaf1-b1e61d44dab6_n8vdtl.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783023927/dad14822-455c-419c-8627-32b3daebef90_akfw3l.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783024003/d34eeca3-6bc8-4a19-aa18-bf13404bb11b_n0f8zn.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783024053/66dc2b5e-f90d-424f-b9a7-4164b52f4e5a_eoqd3p.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783024062/071f261a-2ab6-48b5-a370-c47ad7889be3_immde1.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783024072/400a841d-18b7-4915-8483-f9a3346651cf_ocdouu.jpg", dest: "Gallery", tag: "Photo" },
+    { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783024090/9788c6d2-7046-4ce0-aa64-a0adcbe1a54d_omcrnc.jpg", dest: "Gallery", tag: "Photo" },
   ];
+  const galleryCarousel = galleryImages.slice(0, 8);
 
   const videos = [
     { publicId: 'Despu%C3%A9s_de_una_intensa_jornada_en_Bogot%C3%A1__en_Dunas_Travel_compartimos_una_cena_exclusiva_con_nuestros_partners_estrat%C3%A9gicos._480P_SD_sv2pei' },
@@ -492,94 +479,151 @@ const Home = () => {
           <div className="absolute inset-0 bg-obsidian-900/50"></div>
         </div>
 
-        {/* Search Form */}
-        <div className="relative z-10 container mx-auto px-3 sm:px-4 w-full max-w-5xl -mt-8 md:-mt-4">
-          <div className="bg-white/15 backdrop-blur-xl rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] p-4 sm:p-5 md:p-6 lg:p-8 border border-white/20">
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-2 sm:gap-3">
-              {/* Destination */}
-              <div className="col-span-2 md:col-span-1">
-                <label className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
-                  {t('home.searchDest', 'Destination')}
-                </label>
-                <select
-                  value={searchDest}
-                  onChange={(e) => { setSearchDest(e.target.value); setSearchTour(""); }}
-                  className="w-full px-2 sm:px-3 py-2 sm:py-2.5 rounded-lg border border-white/30 bg-white/20 backdrop-blur-sm text-white text-[13px] sm:text-body-sm focus:outline-none focus:ring-2 focus:ring-[#FF6B35] appearance-none cursor-pointer [&>option]:text-obsidian-900 [&>option]:dark:text-ivory-100 [&>option]:dark:bg-obsidian-800"
-                >
-                  <option value="all" className="text-obsidian-900 dark:text-ivory-100 dark:bg-obsidian-800">{t('home.searchAllDest', 'All Destinations')}</option>
-                  {destinations.map((d) => (
-                    <option key={d.id} value={d.id} className="text-obsidian-900 dark:text-ivory-100 dark:bg-obsidian-800">{d.label}</option>
-                  ))}
-                </select>
-              </div>
+        {/* Sound Toggle */}
+        <button
+          onClick={toggleMute}
+          className="absolute bottom-4 sm:bottom-6 md:bottom-8 right-4 sm:right-6 md:right-8 z-20 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-obsidian-900/70 backdrop-blur-md border border-gold-500/30 flex items-center justify-center text-ivory-50 hover:text-gold-500 hover:bg-obsidian-900 transition-all shadow-lg"
+          aria-label={isMuted ? 'Unmute video' : 'Mute video'}
+        >
+          {isMuted ? <FaVolumeMute size={14} /> : <FaVolumeUp size={14} />}
+        </button>
+      </section>
 
-              {/* Tour */}
-              <div className="col-span-2 md:col-span-1">
-                <label className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
-                  {t('home.searchTour', 'Tour / Program')}
-                </label>
-                <select
-                  value={searchTour}
-                  onChange={(e) => setSearchTour(e.target.value)}
-                  disabled={!searchDest}
-                  className="w-full px-2 sm:px-3 py-2 sm:py-2.5 rounded-lg border border-white/30 bg-white/20 backdrop-blur-sm text-white text-[13px] sm:text-body-sm focus:outline-none focus:ring-2 focus:ring-[#FF6B35] appearance-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed [&>option]:text-obsidian-900 [&>option]:dark:text-ivory-100 [&>option]:dark:bg-obsidian-800"
-                >
-                  <option value="" className="text-obsidian-900 dark:text-ivory-100 dark:bg-obsidian-800">{t('home.searchAllTours', 'All Tours')}</option>
-                  {destTours.map((t) => (
-                    <option key={t.id} value={t.id} className="text-obsidian-900 dark:text-ivory-100 dark:bg-obsidian-800">{t.label}</option>
-                  ))}
-                </select>
-              </div>
+      {/* Search & Gallery Section */}
+      <section className="relative w-full h-screen max-h-[900px] overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={galleryIndex}
+              src={galleryCarousel[galleryIndex].src}
+              alt=""
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.7, ease: 'easeInOut' }}
+              className="w-full h-full object-cover object-center"
+            />
+          </AnimatePresence>
+          <div className="absolute inset-0 bg-gradient-to-b from-obsidian-900/30 via-obsidian-900/20 to-obsidian-900/50"></div>
+        </div>
 
-              {/* Arrival */}
-              <div>
-                <label className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
-                  {t('home.searchArrival', 'Arrival')}
-                </label>
-                <input
-                  type="date"
-                  value={searchArrival}
-                  min={todayStr}
-                  onChange={(e) => setSearchArrival(e.target.value)}
-                  className="w-full px-2 sm:px-3 py-2 sm:py-2.5 rounded-lg border border-white/30 bg-white/20 backdrop-blur-sm text-white text-[13px] sm:text-body-sm [color-scheme:dark] focus:outline-none focus:ring-2 focus:ring-[#FF6B35]"
-                />
-              </div>
+        {/* Arrows */}
+        <button
+          onClick={prevGallery}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border border-white/30 flex items-center justify-center text-obsidian-900 hover:bg-[#F5A623] hover:text-white transition-all shadow-lg"
+        >
+          <FaChevronLeft size={18} />
+        </button>
+        <button
+          onClick={nextGallery}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border border-white/30 flex items-center justify-center text-obsidian-900 hover:bg-[#F5A623] hover:text-white transition-all shadow-lg"
+        >
+          <FaChevronRight size={18} />
+        </button>
 
-              {/* Departure */}
-              <div>
-                <label className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
-                  {t('home.searchDeparture', 'Departure')}
-                </label>
-                <input
-                  type="date"
-                  value={searchDeparture}
-                  min={todayStr}
-                  onChange={(e) => setSearchDeparture(e.target.value)}
-                  className="w-full px-2 sm:px-3 py-2 sm:py-2.5 rounded-lg border border-white/30 bg-white/20 backdrop-blur-sm text-white text-[13px] sm:text-body-sm [color-scheme:dark] focus:outline-none focus:ring-2 focus:ring-[#FF6B35]"
-                />
-              </div>
+        {/* Dots */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+          {galleryCarousel.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setGalleryIndex(i)}
+              className={`w-2.5 h-2.5 rounded-full transition-all ${i === galleryIndex ? 'bg-[#F5A623] w-6' : 'bg-white/60 hover:bg-white/90'}`}
+            />
+          ))}
+        </div>
 
-              {/* People + Search */}
-              <div className="col-span-2 md:col-span-1">
-                <label className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
-                  {t('home.searchPeople', 'People')}
-                </label>
-                <div className="flex gap-1.5 sm:gap-2">
-                  <input
-                    type="number"
-                    min="1"
-                    max="50"
-                    value={searchPeople}
-                    onChange={(e) => setSearchPeople(Math.max(1, parseInt(e.target.value) || 1))}
-                    className="w-16 sm:w-20 px-2 sm:px-3 py-2 sm:py-2.5 rounded-lg border border-white/30 bg-white/20 backdrop-blur-sm text-white text-[13px] sm:text-body-sm text-center focus:outline-none focus:ring-2 focus:ring-[#FF6B35] [color-scheme:dark]"
-                  />
-                  <button
-                    onClick={handleSearch}
-                    className="flex-1 px-3 sm:px-4 py-2 sm:py-2.5 font-semibold rounded-lg transition-all text-[13px] sm:text-body-sm whitespace-nowrap text-white"
-                    style={{ background: 'linear-gradient(135deg, #FF6B35, #1E3A8A)' }}
+        {/* Search Content (overlay on image) */}
+        <div className="relative z-10 h-full flex flex-col items-center justify-center px-4">
+          {/* Search Form */}
+          <div className="w-full max-w-5xl">
+            <div className="bg-white/10 backdrop-blur-2xl rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] p-4 sm:p-5 md:p-6 lg:p-8 border border-white/20">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-2 sm:gap-3">
+                {/* Destination */}
+                <div className="col-span-2 md:col-span-1">
+                  <label className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
+                    {t('home.searchDest', 'Destination')}
+                  </label>
+                  <select
+                    value={searchDest}
+                    onChange={(e) => { setSearchDest(e.target.value); setSearchTour(""); }}
+                    className="w-full px-2 sm:px-3 py-2 sm:py-2.5 rounded-lg border border-white/30 bg-white/20 backdrop-blur-sm text-white text-[13px] sm:text-body-sm focus:outline-none focus:ring-2 focus:ring-[#FF6B35] appearance-none cursor-pointer [&>option]:text-obsidian-900 [&>option]:dark:text-ivory-100 [&>option]:dark:bg-obsidian-800"
                   >
-                    {t('home.searchBtn', 'Search')}
-                  </button>
+                    <option value="all" className="text-obsidian-900 dark:text-ivory-100 dark:bg-obsidian-800">{t('home.searchAllDest', 'All Destinations')}</option>
+                    {destinations.map((d) => (
+                      <option key={d.id} value={d.id} className="text-obsidian-900 dark:text-ivory-100 dark:bg-obsidian-800">{d.label}</option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Tour */}
+                <div className="col-span-2 md:col-span-1">
+                  <label className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
+                    {t('home.searchTour', 'Tour / Program')}
+                  </label>
+                  <select
+                    value={searchTour}
+                    onChange={(e) => setSearchTour(e.target.value)}
+                    disabled={!searchDest}
+                    className="w-full px-2 sm:px-3 py-2 sm:py-2.5 rounded-lg border border-white/30 bg-white/20 backdrop-blur-sm text-white text-[13px] sm:text-body-sm focus:outline-none focus:ring-2 focus:ring-[#FF6B35] appearance-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed [&>option]:text-obsidian-900 [&>option]:dark:text-ivory-100 [&>option]:dark:bg-obsidian-800"
+                  >
+                    <option value="" className="text-obsidian-900 dark:text-ivory-100 dark:bg-obsidian-800">{t('home.searchAllTours', 'All Tours')}</option>
+                    {destTours.map((t) => (
+                      <option key={t.id} value={t.id} className="text-obsidian-900 dark:text-ivory-100 dark:bg-obsidian-800">{t.label}</option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Arrival */}
+                <div>
+                  <label className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
+                    {t('home.searchArrival', 'Arrival')}
+                  </label>
+                  <input
+                    type="date"
+                    value={searchArrival}
+                    min={todayStr}
+                    onChange={(e) => setSearchArrival(e.target.value)}
+                    className="w-full px-2 sm:px-3 py-2 sm:py-2.5 rounded-lg border border-white/30 bg-white/20 backdrop-blur-sm text-white text-[13px] sm:text-body-sm [color-scheme:dark] focus:outline-none focus:ring-2 focus:ring-[#FF6B35]"
+                  />
+                </div>
+
+                {/* Departure */}
+                <div>
+                  <label className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
+                    {t('home.searchDeparture', 'Departure')}
+                  </label>
+                  <input
+                    type="date"
+                    value={searchDeparture}
+                    min={todayStr}
+                    onChange={(e) => setSearchDeparture(e.target.value)}
+                    className="w-full px-2 sm:px-3 py-2 sm:py-2.5 rounded-lg border border-white/30 bg-white/20 backdrop-blur-sm text-white text-[13px] sm:text-body-sm [color-scheme:dark] focus:outline-none focus:ring-2 focus:ring-[#FF6B35]"
+                  />
+                </div>
+
+                {/* People + Search */}
+                <div className="col-span-2 md:col-span-1">
+                  <label className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
+                    {t('home.searchPeople', 'People')}
+                  </label>
+                  <div className="flex gap-1.5 sm:gap-2">
+                    <input
+                      type="number"
+                      min="1"
+                      max="50"
+                      value={searchPeople}
+                      onChange={(e) => setSearchPeople(Math.max(1, parseInt(e.target.value) || 1))}
+                      className="w-16 sm:w-20 px-2 sm:px-3 py-2 sm:py-2.5 rounded-lg border border-white/30 bg-white/20 backdrop-blur-sm text-white text-[13px] sm:text-body-sm text-center focus:outline-none focus:ring-2 focus:ring-[#FF6B35] [color-scheme:dark]"
+                    />
+                    <button
+                      onClick={handleSearch}
+                      className="flex-1 px-3 sm:px-4 py-2 sm:py-2.5 font-semibold rounded-lg transition-all text-[13px] sm:text-body-sm whitespace-nowrap text-white"
+                      style={{ background: 'linear-gradient(135deg, #FF6B35, #1E3A8A)' }}
+                    >
+                      {t('home.searchBtn', 'Search')}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -590,9 +634,9 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="mt-4 sm:mt-5 md:mt-6 text-center"
+            className="mt-5 sm:mt-6 text-center w-full max-w-5xl"
           >
-            <p className="text-gold-400/90 text-[10px] sm:text-caption uppercase tracking-widest mb-2 sm:mb-3 font-semibold drop-shadow-lg">
+            <p className="text-gold-400 text-[10px] sm:text-caption uppercase tracking-widest mb-2 sm:mb-3 font-semibold drop-shadow-lg">
               {t('home.popularDests', 'Popular Destinations')}
             </p>
             <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 md:gap-3">
@@ -617,7 +661,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="mt-5 sm:mt-6 flex flex-wrap justify-center gap-3"
+              className="mt-4 sm:mt-5 flex flex-wrap justify-center gap-3"
             >
               <Link
                 to="/tailor-a-tour"
@@ -640,15 +684,6 @@ const Home = () => {
             </motion.div>
           </motion.div>
         </div>
-
-        {/* Sound Toggle */}
-        <button
-          onClick={toggleMute}
-          className="absolute bottom-4 sm:bottom-6 md:bottom-8 right-4 sm:right-6 md:right-8 z-20 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-obsidian-900/70 backdrop-blur-md border border-gold-500/30 flex items-center justify-center text-ivory-50 hover:text-gold-500 hover:bg-obsidian-900 transition-all shadow-lg"
-          aria-label={isMuted ? 'Unmute video' : 'Mute video'}
-        >
-          {isMuted ? <FaVolumeMute size={14} /> : <FaVolumeUp size={14} />}
-        </button>
       </section>
 
       {/* About the Company */}

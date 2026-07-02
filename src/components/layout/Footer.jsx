@@ -96,7 +96,7 @@ const Footer = () => {
             <h4 className="text-white mb-4 text-lg font-bold">{t('footer.quickLinks', 'Quick Links')}</h4>
             <ul className="flex flex-col gap-2 text-base font-bold">
               <li><Link to="/about" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.about')}</Link></li>
-              <li><Link to="/programs" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.programs', 'Programs')}</Link></li>
+              <li><Link to="/programs" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.services')}</Link></li>
               <li><Link to="/blogs" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.blogs')}</Link></li>
               <li><Link to="/contact" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.contact')}</Link></li>
               <li><Link to="/faq" className="text-white hover:text-[#F5A623] transition-colors">{t('footer.faq', 'FAQs')}</Link></li>
@@ -104,17 +104,12 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Programs */}
+          {/* Services */}
           <div>
-            <h4 className="text-white mb-4 text-lg font-bold">{t('nav.programs', 'Programs')}</h4>
+            <h4 className="text-white mb-4 text-lg font-bold">{t('nav.services')}</h4>
             <ul className="flex flex-col gap-2 text-base font-bold">
-              <li><Link to="/programs/classic" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.classic', 'Classic')}</Link></li>
               <li><Link to="/programs/hotels" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.hotelsTab', 'Hotels')}</Link></li>
               <li><Link to="/programs/transportation" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.transportation', 'Transportation')}</Link></li>
-              <li><Link to="/programs/honeymooners" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.honeymooners', 'Honeymooners Package')}</Link></li>
-              <li><Link to="/programs/religious" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.religious', 'Programs Religiosos')}</Link></li>
-              <li><Link to="/programs/multi-country" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.multiCountry', 'Multi-Country Tours')}</Link></li>
-              <li><Link to="/programs/extension" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.extension', 'EXTENSION')}</Link></li>
             </ul>
           </div>
 
@@ -176,7 +171,7 @@ const Footer = () => {
 
         {/* Credits */}
         <div className="mt-6 pt-4 border-t border-white/10 text-center">
-          <p className="text-xs text-white/60">
+          <p className="text-body-md text-white font-semibold tracking-wide">
             &copy; {new Date().getFullYear()} Dunas Travel. {t('footer.rights', 'All rights reserved.')}
           </p>
         </div>

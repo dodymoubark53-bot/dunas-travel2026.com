@@ -84,15 +84,8 @@ const Navbar = () => {
     { name: t('nav.home'), path: '/' },
     { name: t('nav.blogs'), path: '/blogs' },
     {
-      name: t('nav.programs', { defaultValue: 'Programs' }),
+      name: t('nav.services'),
       dropdown: [
-        {
-          name: t('nav.classic', { defaultValue: 'Classic' }),
-          path: '/programs/classic',
-          subItems: [
-            { name: t('nav.classicProgram', { defaultValue: 'Classic Program' }), path: '/programs/classic/classic-program' }
-          ]
-        },
         {
           name: t('nav.hotelsTab', { defaultValue: 'Hotels' }),
           path: '/programs/hotels',
@@ -101,10 +94,6 @@ const Navbar = () => {
           ]
         },
         { name: t('nav.transportation', { defaultValue: 'Transportation' }), path: '/programs/transportation' },
-        { name: t('nav.honeymooners', { defaultValue: 'Honeymooners Package' }), path: '/programs/honeymooners' },
-        { name: t('nav.religious', { defaultValue: 'Programs Religiosos' }), path: '/programs/religious' },
-        { name: t('nav.multiCountry', { defaultValue: 'Multi-Country Tours' }), path: '/programs/multi-country' },
-        { name: 'EXTENSION', path: '/programs/extension' },
       ]
     },
     {
@@ -138,12 +127,12 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 h-16 lg:h-20 flex items-center bg-[url('/imgs/header.jpeg')] bg-cover bg-center bg-no-repeat ${headerVisible ? 'translate-y-0' : '-translate-y-full'} ${scrolled ? 'shadow-[0_4px_20px_rgba(0,0,0,0.12)]' : 'shadow-[0_1px_4px_rgba(0,0,0,0.06)]'
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 h-16 lg:h-20 flex items-center bg-[rgb(10,15,105)] ${headerVisible ? 'translate-y-0' : '-translate-y-full'} ${scrolled ? 'shadow-[0_4px_20px_rgba(0,0,0,0.12)]' : 'shadow-[0_1px_4px_rgba(0,0,0,0.06)]'
         }`}
     >
       <div className="container mx-auto px-6 h-full flex justify-between items-center relative z-10">
         {/* Logo */}
-        <Link to="/" className="flex items-center z-50 drop-shadow-[0_2px_8px_rgba(255,255,255,0.7)] hover:drop-shadow-[0_2px_12px_rgba(255,255,255,0.9)] transition-all" onClick={() => setMobileMenuOpen(false)}>
+        <Link to="/" className="flex items-center z-50 drop-shadow-[0_0_12px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] transition-all" onClick={() => setMobileMenuOpen(false)}>
           <Logo theme="dark" height={60} />
         </Link>
 
@@ -174,9 +163,9 @@ const Navbar = () => {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className={`absolute top-full left-0 mt-2 ${link.name === t('nav.programs', { defaultValue: 'Programs' }) ? 'w-72 p-5' : 'w-56'} bg-white border border-obsidian-200 rounded-lg overflow-hidden shadow-xl`}
+                    className={`absolute top-full left-0 mt-2 ${link.name === t('nav.services') ? 'w-72 p-5' : 'w-56'} bg-white border border-obsidian-200 rounded-lg overflow-hidden shadow-xl`}
                   >
-                    {link.name === t('nav.programs', { defaultValue: 'Programs' }) ? (
+                    {link.name === t('nav.services') ? (
                       <>
                         <h4 className="text-caption text-gold-600 uppercase tracking-widest mb-4 px-1 font-semibold">
                           {link.name}

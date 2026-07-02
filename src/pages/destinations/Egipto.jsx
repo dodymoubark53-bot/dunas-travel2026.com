@@ -76,6 +76,125 @@ const Egipto = () => {
         </motion.div>
       </section>
 
+      {/* Egypt Programs Section */}
+      <section className="container mx-auto px-6 mt-24">
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          className="text-center mb-12"
+        >
+          <motion.span variants={fadeInUp} className="inline-block font-body text-gold-500 tracking-[0.2em] uppercase text-sm mb-4">
+            {t('dest.egypt.programsSubtitle', 'Egypt Programs')}
+          </motion.span>
+          <motion.h2 variants={fadeInUp} className="text-display-lg text-obsidian-900 mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+            {t('dest.egypt.programsTitle', 'Exclusive Egypt Experiences')}
+          </motion.h2>
+          <motion.p variants={fadeInUp} className="text-body-lg text-obsidian-500 max-w-2xl mx-auto">
+            {t('dest.egypt.programsDesc', 'Discover our curated programs designed to make your Egypt journey truly unforgettable.')}
+          </motion.p>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
+          {/* Classic Program */}
+          <motion.div variants={fadeInUp} className="bg-white rounded-xl overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.08)] border border-obsidian-200 hover:shadow-[0_12px_32px_rgba(245,166,35,0.25)] hover:border-gold-500 hover:-translate-y-2 transition-all duration-300 group">
+            <Link to="/programs/classic/classic-program" className="block">
+              <div className="h-48 overflow-hidden">
+                <img src="/imgs/italy/Classic Program.jpg" alt="Classic Program" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              </div>
+              <div className="p-6">
+                <span className="text-caption text-gold-600 uppercase tracking-widest font-semibold">{t('nav.classic', 'Classic')}</span>
+                <h3 className="text-display-md text-obsidian-900 mt-1 mb-3 group-hover:text-gold-700 transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {t('nav.classicProgram', 'Classic Program')}
+                </h3>
+                <p className="text-body-sm text-obsidian-500 line-clamp-3">
+                  {t('classic.shortDesc', 'Experience the timeless beauty of Egypt with our signature classic itinerary covering all the iconic landmarks.')}
+                </p>
+              </div>
+            </Link>
+          </motion.div>
+
+          {/* Honeymooners Package */}
+          <motion.div variants={fadeInUp} className="bg-white rounded-xl overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.08)] border border-obsidian-200 hover:shadow-[0_12px_32px_rgba(245,166,35,0.25)] hover:border-gold-500 hover:-translate-y-2 transition-all duration-300 group">
+            <Link to="/programs/honeymooners" className="block">
+              <div className="h-48 overflow-hidden">
+                <img src="/imgs/gallery/15.jpeg" alt="Honeymooners" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              </div>
+              <div className="p-6">
+                <span className="text-caption text-gold-600 uppercase tracking-widest font-semibold">{t('nav.honeymooners', 'Honeymooners Package')}</span>
+                <h3 className="text-display-md text-obsidian-900 mt-1 mb-3 group-hover:text-gold-700 transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {t('nav.honeymooners', 'Honeymooners Package')}
+                </h3>
+                <p className="text-body-sm text-obsidian-500 line-clamp-3">
+                  {t('dest.egypt.honeymoonersDesc', 'Celebrate your love with intimate candlelit dinners, private yacht cruises, and unmatched romantic luxury.')}
+                </p>
+              </div>
+            </Link>
+          </motion.div>
+
+          {/* Religious Programs */}
+          <motion.div variants={fadeInUp} className="bg-white rounded-xl overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.08)] border border-obsidian-200 hover:shadow-[0_12px_32px_rgba(245,166,35,0.25)] hover:border-gold-500 hover:-translate-y-2 transition-all duration-300 group">
+            <Link to="/programs/religious" className="block">
+              <div className="h-48 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80" alt="Religious Programs" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              </div>
+              <div className="p-6">
+                <span className="text-caption text-gold-600 uppercase tracking-widest font-semibold">{t('nav.religious', 'Religious Programs')}</span>
+                <h3 className="text-display-md text-obsidian-900 mt-1 mb-3 group-hover:text-gold-700 transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {t('nav.religious', 'Religious Programs')}
+                </h3>
+                <p className="text-body-sm text-obsidian-500 line-clamp-3">
+                  {t('dest.egypt.religiousDesc', 'A spiritual journey through Egypt tracing ancient Coptic monasteries and sacred sites.')}
+                </p>
+              </div>
+            </Link>
+          </motion.div>
+
+          {/* Multi-Country Tours */}
+          <motion.div variants={fadeInUp} className="bg-white rounded-xl overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.08)] border border-obsidian-200 hover:shadow-[0_12px_32px_rgba(245,166,35,0.25)] hover:border-gold-500 hover:-translate-y-2 transition-all duration-300 group">
+            <Link to="/programs/multi-country" className="block">
+              <div className="h-48 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=80" alt="Multi-Country Tours" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              </div>
+              <div className="p-6">
+                <span className="text-caption text-gold-600 uppercase tracking-widest font-semibold">{t('nav.multiCountry', 'Multi-Country Tours')}</span>
+                <h3 className="text-display-md text-obsidian-900 mt-1 mb-3 group-hover:text-gold-700 transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {t('nav.multiCountry', 'Multi-Country Tours')}
+                </h3>
+                <p className="text-body-sm text-obsidian-500 line-clamp-3">
+                  {t('dest.egypt.multiCountryDesc', 'Explore combined itineraries spanning Egypt, Jordan, Turkey and beyond for a truly grand adventure.')}
+                </p>
+              </div>
+            </Link>
+          </motion.div>
+
+          {/* EXTENSION */}
+          <motion.div variants={fadeInUp} className="bg-white rounded-xl overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.08)] border border-obsidian-200 hover:shadow-[0_12px_32px_rgba(245,166,35,0.25)] hover:border-gold-500 hover:-translate-y-2 transition-all duration-300 group">
+            <Link to="/programs/extension" className="block">
+              <div className="h-48 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1590073242678-70ee3fc28f8e?w=600&q=80" alt="Extension" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              </div>
+              <div className="p-6">
+                <span className="text-caption text-gold-600 uppercase tracking-widest font-semibold">EXTENSION</span>
+                <h3 className="text-display-md text-obsidian-900 mt-1 mb-3 group-hover:text-gold-700 transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {t('dest.egypt.extensionTitle', 'Egypt Extensions')}
+                </h3>
+                <p className="text-body-sm text-obsidian-500 line-clamp-3">
+                  {t('dest.egypt.extensionDesc', 'Extend your Egypt journey with added destinations like Hurghada, Sharm El Sheikh, or Siwa Oasis.')}
+                </p>
+              </div>
+            </Link>
+          </motion.div>
+        </motion.div>
+      </section>
+
       <section className="relative py-24 mt-24 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(/imgs/egyothero.png)' }} />
         <div className="absolute inset-0 bg-obsidian-900/75" />
