@@ -57,13 +57,13 @@ const Footer = () => {
             {t('footer.desc', 'Curating award-winning DUNAS TRAVEL experiences across Egypt, Jordan, and Turkey since 2010.')}
           </p>
           <div className="flex items-center gap-3 mt-4">
-            <a href="https://www.facebook.com/share/1EsALYq8cg/" className="footer-social w-10 h-10 rounded-full bg-white/15 border border-white/25 flex items-center justify-center text-white hover:bg-[#F5A623] hover:text-[#1A1A2E] transition-all duration-300 hover:scale-110">
+            <a href="https://www.facebook.com/share/1EsALYq8cg/" aria-label="Visit our Facebook page" className="footer-social w-10 h-10 rounded-full bg-white/15 border border-white/25 flex items-center justify-center text-white hover:bg-[#F5A623] hover:text-[#1A1A2E] transition-all duration-300 hover:scale-110">
               <FaFacebook size={16} />
             </a>
-            <a href="https://www.instagram.com/dunas_travel?igsh=bWkyb2FhY2hoNnN" className="footer-social w-10 h-10 rounded-full bg-white/15 border border-white/25 flex items-center justify-center text-white hover:bg-[#F5A623] hover:text-[#1A1A2E] transition-all duration-300 hover:scale-110">
+            <a href="https://www.instagram.com/dunas_travel?igsh=bWkyb2FhY2hoNnN" aria-label="Visit our Instagram page" className="footer-social w-10 h-10 rounded-full bg-white/15 border border-white/25 flex items-center justify-center text-white hover:bg-[#F5A623] hover:text-[#1A1A2E] transition-all duration-300 hover:scale-110">
               <FaInstagram size={16} />
             </a>
-            <a href="tel:+3374664302" className="footer-social w-10 h-10 rounded-full bg-white/15 border border-white/25 flex items-center justify-center text-white hover:bg-[#F5A623] hover:text-[#1A1A2E] transition-all duration-300 hover:scale-110">
+            <a href="tel:+3374664302" aria-label="Call us" className="footer-social w-10 h-10 rounded-full bg-white/15 border border-white/25 flex items-center justify-center text-white hover:bg-[#F5A623] hover:text-[#1A1A2E] transition-all duration-300 hover:scale-110">
               <FaPhone size={16} />
             </a>
           </div>
@@ -71,8 +71,10 @@ const Footer = () => {
         <div className="w-full sm:w-auto flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 mt-12 sm:mt-0 shrink-0">
           <div className="relative flex flex-col items-center">
             <img
-              src="/imgs/tito-mascot.png"
+              src="/imgs/tito-mascot.webp"
               alt="TiT0"
+              width="150"
+              height="150"
               className="w-[120px] sm:w-[150px] animate-[float_3s_ease-in-out_infinite] drop-shadow-[0_10px_25px_rgba(0,0,0,0.45)]"
             />
             <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3.5 z-10">
@@ -93,7 +95,7 @@ const Footer = () => {
 
           {/* Quick Links (left) */}
           <div>
-            <h4 className="text-white mb-4 text-lg font-bold">{t('footer.quickLinks', 'Quick Links')}</h4>
+            <h3 className="text-white mb-4 text-lg font-bold">{t('footer.quickLinks', 'Quick Links')}</h3>
             <ul className="flex flex-col gap-2 text-base font-bold">
               <li><Link to="/about" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.about')}</Link></li>
               <li><Link to="/programs" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.services')}</Link></li>
@@ -106,7 +108,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-white mb-4 text-lg font-bold">{t('nav.services')}</h4>
+            <h3 className="text-white mb-4 text-lg font-bold">{t('nav.services')}</h3>
             <ul className="flex flex-col gap-2 text-base font-bold">
               <li><Link to="/programs/hotels" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.hotelsTab', 'Hotels')}</Link></li>
               <li><Link to="/programs/transportation" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.transportation', 'Transportation')}</Link></li>
@@ -115,7 +117,7 @@ const Footer = () => {
 
           {/* Destinations */}
           <div>
-            <h4 className="text-white mb-4 text-lg font-bold">{t('nav.destinations')}</h4>
+            <h3 className="text-white mb-4 text-lg font-bold">{t('nav.destinations')}</h3>
             <ul className="flex flex-col gap-2 text-base font-bold">
               {[
                 { key: 'egipto', path: '/destinations/egypt' },
@@ -136,7 +138,7 @@ const Footer = () => {
 
           {/* Contact (right) */}
           <div>
-            <h4 className="text-white mb-4 text-lg font-bold">{t('nav.contact')}</h4>
+            <h3 className="text-white mb-4 text-lg font-bold">{t('nav.contact')}</h3>
             <ul className="flex flex-col gap-2 text-base font-bold">
               <li className="flex items-start gap-2">
                 <FaMapMarkerAlt className="text-[#F5A623] mt-1 flex-shrink-0" size={14} />

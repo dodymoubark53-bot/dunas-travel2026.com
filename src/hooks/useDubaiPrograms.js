@@ -5,11 +5,11 @@ const rawPrograms = rawData.programs;
 
 const PROGRAM_IMAGES = {
   'REG-22': 'https://wallpaperaccess.com/full/222675.jpg',
-  'REG-23': 'https://tse3.mm.bing.net/th/id/OIP.S2il63MLxG0zSM8KYvrtywHaFj?r=0&cb=thfc1falcon3&w=2048&h=1536&rs=1&pid=ImgDetMain&o=7&rm=3',
+  'REG-23': '/imgs/programs/dubai-reg-23.webp',
   'REG-24': 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/cf/55/ba/caption.jpg?w=1200&h=1200&s=1',
   'REG-25': 'https://www.yasmina.com/tachyon/sites/5/2022/01/7f96899cbdde462971ae6a503d3a61cfc65f50a1.jpg',
   'REG-26': 'https://i.pinimg.com/736x/7b/a8/4e/7ba84eb916025464c345151b07fc4604.jpg',
-  'REG-27': 'https://tse4.mm.bing.net/th/id/OIP.BNdEDRHmfZhQSUQ9ekXUawHaEg?r=0&cb=thfc1falcon3&w=1200&h=730&rs=1&pid=ImgDetMain&o=7&rm=3',
+  'REG-27': '/imgs/programs/dubai-reg-27.webp',
   'REG-28': 'https://images.unsplash.com/photo-1513581166391-887a96ddeafd?auto=format&fit=crop&w=800&q=80',
   'HM001': 'https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80',
   'HM002': 'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/19/7f/2e.jpg',

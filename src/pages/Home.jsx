@@ -25,51 +25,70 @@ const destinationsData = [
     id: "egypt",
     name: "Egypt",
     desc: "Pharaohs & Wonders",
-    image: "https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=600&q=60",
   },
   {
     id: "turkey",
     name: "Turkey",
     desc: "East Meets West",
-    image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=600&q=60",
   },
   {
     id: "dubai",
     name: "Dubai",
     desc: "Luxury & Skylines",
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=60",
   },
   {
     id: "jordan",
     name: "Jordan",
     desc: "Desert & Ancient Ruins",
-    image: "https://images.unsplash.com/photo-1579606032821-4e6161c81bd3?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1579606032821-4e6161c81bd3?auto=format&fit=crop&w=600&q=60",
   },
   {
     id: "morocco",
     name: "Morocco",
     desc: "Colors & Culture",
-    image: "https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=600&q=60",
   },
   {
     id: "greece",
     name: "Greece",
     desc: "Myths & Islands",
-    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=600&q=60",
   },
   {
     id: "tunisia",
     name: "Tunisia",
     desc: "Sahara & Sea",
-    image: "https://images.unsplash.com/photo-1580502304784-8985b7eb7260?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1580502304784-8985b7eb7260?auto=format&fit=crop&w=600&q=60",
   },
   {
     id: "holy-land",
     name: "Holy Land",
     desc: "Faith & History",
-    image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=600&q=60",
   },
 ];
+
+const getOptimizedImageUrl = (url, width = 400, height = 450) => {
+  if (!url) return url;
+  if (url.includes('cloudinary.com')) {
+    return url.replace('/image/upload/', `/image/upload/w_${width},h_${height},c_fill,q_auto,f_auto/`);
+  }
+  if (url.includes('images.unsplash.com')) {
+    try {
+      const urlObj = new URL(url);
+      urlObj.searchParams.set('w', width.toString());
+      urlObj.searchParams.set('q', '60');
+      urlObj.searchParams.set('fit', 'crop');
+      return urlObj.toString();
+    } catch {
+      return url;
+    }
+  }
+  return url;
+};
 
 const Home = () => {
   const { t, i18n } = useTranslation();
@@ -182,14 +201,14 @@ const Home = () => {
   const [searchPeople, setSearchPeople] = useState(1);
 
   const destinations = [
-    { id: "egypt", label: t("dest.egypt.title", "Egypt"), img: "https://tse3.mm.bing.net/th/id/OIP.SQ9E00KSa9ALEdFsXAZ3awHaE7?r=0&cb=thfvnextfalcon4&rs=1&pid=ImgDetMain&o=7&rm=3" },
-    { id: "turkey", label: t("dest.turkey.title", "Turkey"), img: "https://tse3.mm.bing.net/th/id/OIP.ACXDe8yEd0eknkCLENbIcQHaD4?r=0&cb=thfvnextfalcon4&rs=1&pid=ImgDetMain&o=7&rm=3" },
-    { id: "dubai", label: t("dest.dubai.title", "Dubai"), img: "https://tse2.mm.bing.net/th/id/OIP.FQURzfPWIc9YIW_e6oX_ZAHaDR?r=0&cb=thfvnextfalcon4&rs=1&pid=ImgDetMain&o=7&rm=3" },
-    { id: "jordan", label: t("dest.jordan.title", "Jordan"), img: "https://tse3.mm.bing.net/th/id/OIP.PxvXjR1OV2gW8_cTvGN2oQHaH8?r=0&cb=thfvnextfalcon4&w=1280&h=1374&rs=1&pid=ImgDetMain&o=7&rm=3" },
-    { id: "tunisia", label: t("dest.tunisia.title", "Tunisia"), img: "https://www.heritage.org/sites/default/files/styles/facebook_optimized/public/images/2017-06/Tunisia.jpg?itok=trkp0NK9" },
-    { id: "morocco", label: t("dest.morocco.title", "Morocco"), img: "https://tse3.mm.bing.net/th/id/OIP.ijumtXxli2BNILpXsgr7HgHaE9?r=0&cb=thfvnextfalcon4&rs=1&pid=ImgDetMain&o=7&rm=3" },
-    { id: "greece", label: t("dest.greece.title", "Greece"), img: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026773/13_wtazze.jpg" },
-    { id: "holyland", label: t("dest.holyland.title", "Holy Land"), img: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783026773/17_wpxrtt.jpg" },
+    { id: "egypt", label: t("dest.egypt.title", "Egypt"), img: "/imgs/destinations/egypt.webp" },
+    { id: "turkey", label: t("dest.turkey.title", "Turkey"), img: "/imgs/destinations/turkey.webp" },
+    { id: "dubai", label: t("dest.dubai.title", "Dubai"), img: "/imgs/destinations/dubai.webp" },
+    { id: "jordan", label: t("dest.jordan.title", "Jordan"), img: "/imgs/destinations/jordan.webp" },
+    { id: "tunisia", label: t("dest.tunisia.title", "Tunisia"), img: "/imgs/destinations/tunisia.webp" },
+    { id: "morocco", label: t("dest.morocco.title", "Morocco"), img: "/imgs/destinations/morocco.webp" },
+    { id: "greece", label: t("dest.greece.title", "Greece"), img: "https://res.cloudinary.com/degbrq3ck/image/upload/w_100,h_100,c_fill,q_auto,f_auto/v1783026773/13_wtazze.jpg" },
+    { id: "holyland", label: t("dest.holyland.title", "Holy Land"), img: "https://res.cloudinary.com/degbrq3ck/image/upload/w_100,h_100,c_fill,q_auto,f_auto/v1783026773/17_wpxrtt.jpg" },
   ];
 
   const slugify = (str) => str.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
@@ -483,9 +502,12 @@ const Home = () => {
             muted
             playsInline
             fetchpriority="high"
+            poster="/imgs/hero-poster.webp"
             className="w-full h-full object-cover md:object-[center_30%]"
           >
+            <source src="/imgs/hero.webm" type="video/webm" />
             <source src="/imgs/hero.mp4" type="video/mp4" />
+            <track kind="captions" src="/hero-captions.vtt" srcLang="en" label="English" default />
           </video>
           <div className="absolute inset-0 bg-obsidian-900/50"></div>
         </div>
@@ -520,10 +542,11 @@ const Home = () => {
               <div className="grid grid-cols-2 md:grid-cols-5 gap-2 sm:gap-3">
                 {/* Destination */}
                 <div className="col-span-2 md:col-span-1">
-                  <label className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
+                  <label htmlFor="search-dest-input" className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
                     {t('home.searchDest', 'Destination')}
                   </label>
                   <select
+                    id="search-dest-input"
                     value={searchDest}
                     onChange={(e) => { setSearchDest(e.target.value); setSearchTour(""); }}
                     className="w-full px-2 sm:px-3 py-2 sm:py-2.5 rounded-lg border border-white/30 bg-white/20 backdrop-blur-sm text-white text-[13px] sm:text-body-sm focus:outline-none focus:ring-2 focus:ring-[#FF6B35] appearance-none cursor-pointer [&>option]:text-obsidian-900 [&>option]:dark:text-ivory-100 [&>option]:dark:bg-obsidian-800"
@@ -537,10 +560,11 @@ const Home = () => {
 
                 {/* Tour */}
                 <div className="col-span-2 md:col-span-1">
-                  <label className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
+                  <label htmlFor="search-tour-input" className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
                     {t('home.searchTour', 'Tour / Program')}
                   </label>
                   <select
+                    id="search-tour-input"
                     value={searchTour}
                     onChange={(e) => setSearchTour(e.target.value)}
                     disabled={!searchDest}
@@ -555,10 +579,11 @@ const Home = () => {
 
                 {/* Arrival */}
                 <div>
-                  <label className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
+                  <label htmlFor="search-arrival-input" className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
                     {t('home.searchArrival', 'Arrival')}
                   </label>
                   <input
+                    id="search-arrival-input"
                     type="date"
                     value={searchArrival}
                     min={todayStr}
@@ -569,10 +594,11 @@ const Home = () => {
 
                 {/* Departure */}
                 <div>
-                  <label className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
+                  <label htmlFor="search-departure-input" className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
                     {t('home.searchDeparture', 'Departure')}
                   </label>
                   <input
+                    id="search-departure-input"
                     type="date"
                     value={searchDeparture}
                     min={todayStr}
@@ -583,11 +609,12 @@ const Home = () => {
 
                 {/* People + Search */}
                 <div className="col-span-2 md:col-span-1">
-                  <label className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
+                  <label htmlFor="search-people-input" className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
                     {t('home.searchPeople', 'People')}
                   </label>
                   <div className="flex gap-1.5 sm:gap-2">
                     <input
+                      id="search-people-input"
                       type="number"
                       min="1"
                       max="50"
@@ -626,7 +653,7 @@ const Home = () => {
                   className="group flex items-center gap-1.5 sm:gap-2 bg-white/25 hover:bg-white/40 backdrop-blur-md border border-white/30 hover:border-[#FF6B35] rounded-full px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 transition-all shadow-lg"
                 >
                   <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full overflow-hidden shrink-0 ring-2 ring-white/50 shadow-md">
-                    <img src={d.img} alt="" className="w-full h-full object-cover" />
+                    <img src={d.img} alt="" className="w-full h-full object-cover" width="28" height="28" />
                   </span>
                   <span className="text-white text-[11px] sm:text-body-sm font-semibold drop-shadow-lg group-hover:text-[#FF6B35] transition-colors">
                     {d.label}
@@ -743,12 +770,22 @@ const Home = () => {
                 <motion.div
                   key={dest.id}
                   onClick={() => handleDestinationClick(dest.id)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      handleDestinationClick(dest.id);
+                    }
+                  }}
+                  role="button"
+                  tabIndex={0}
+                  aria-pressed={isActive}
+                  aria-label={`${t("home.select", "Select")} ${dest.name} ${t("nav.tours", "Tours")}`}
                   whileHover={{
                     y: -6,
                     boxShadow: "0 0 32px rgba(245,166,35,0.22)",
                     transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
                   }}
-                  className={`relative h-[300px] rounded-2xl overflow-hidden cursor-pointer group transition-all duration-500 ${isActive ? "ring-2 ring-gold-500 shadow-[0_0_20px_rgba(245,166,35,0.4)] scale-[1.02]" : "hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(245,166,35,0.2)]"}`}
+                  className={`relative h-[300px] rounded-2xl overflow-hidden cursor-pointer group transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-gold-500 ${isActive ? "ring-2 ring-gold-500 shadow-[0_0_20px_rgba(245,166,35,0.4)] scale-[1.02]" : "hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(245,166,35,0.2)]"}`}
                 >
                   <img
                     src={dest.image}
@@ -819,7 +856,7 @@ const Home = () => {
       <section className="py-12 bg-ivory-100 overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <span className="text-gold-500 uppercase tracking-widest text-caption block mb-4">
+            <span className="text-gold-600 uppercase tracking-widest text-caption block mb-4">
               {t("home.handpicked", "HANDPICKED FOR YOU")}
             </span>
             <h2 className="text-display-lg text-obsidian-900">
@@ -840,18 +877,27 @@ const Home = () => {
               onMouseEnter={e => e.currentTarget.style.animationPlayState = 'paused'}
               onMouseLeave={e => e.currentTarget.style.animationPlayState = 'running'}
             >
-            {[...allToursForMarquee, ...allToursForMarquee].map((tData, idx) => (
-              <Link
-                key={`${tData.id}-${idx}`}
-                to={tData.link}
-                className="min-w-[320px] md:min-w-[400px] shrink-0 group relative rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] transition-all duration-500 h-[450px] block"
-              >
-                <img
-                  src={tData.images[0]}
-                  alt={tData.title}
-                  className="w-full h-full object-cover cinematic-transition group-hover:scale-[1.06]"
-                  loading="lazy"
-                />
+            {(() => {
+              const sliced = allToursForMarquee.slice(0, 12);
+              return [
+                ...sliced.map(t => ({ ...t, isDuplicate: false })),
+                ...sliced.map(t => ({ ...t, isDuplicate: true }))
+              ].map((tData, idx) => (
+                <Link
+                  key={`${tData.id}-${idx}`}
+                  to={tData.link}
+                  tabIndex={tData.isDuplicate ? -1 : undefined}
+                  aria-hidden={tData.isDuplicate ? "true" : undefined}
+                  className="min-w-[320px] md:min-w-[400px] shrink-0 group relative rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] transition-all duration-500 h-[450px] block focus:outline-none focus:ring-2 focus:ring-gold-500"
+                >
+                  <img
+                    src={getOptimizedImageUrl(tData.images[0], 400, 450)}
+                    alt={tData.title}
+                    width="400"
+                    height="450"
+                    className="w-full h-full object-cover cinematic-transition group-hover:scale-[1.06]"
+                    loading="lazy"
+                  />
                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian-900/90 via-obsidian-900/20 to-transparent"></div>
 
                 <div className="absolute top-4 left-4 bg-gold-500/90 backdrop-blur-sm text-obsidian-900 text-caption font-bold px-3 py-1 rounded shadow-md uppercase">
@@ -881,14 +927,15 @@ const Home = () => {
                     </div>
 
                     <div className="block opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <Button variant="outline-gold" className="w-full py-2">
+                      <Button variant="outline-gold" tabIndex={-1} className="w-full py-2">
                         {t("home.viewTour", "View Tour")}
                       </Button>
                     </div>
                   </div>
                 </div>
               </Link>
-            ))}
+            ));
+          })()}
           </div>
         </div>
 
@@ -1109,10 +1156,11 @@ const Home = () => {
                 >
                   {/* Select Vehicle */}
                   <div className="md:col-span-2">
-                    <label className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
+                    <label htmlFor="book-vehicle-input" className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
                       {t("home.selectVehicle", "Select Vehicle *")}
                     </label>
                     <select
+                      id="book-vehicle-input"
                       required
                       value={resForm.vehicle}
                       onChange={(e) =>
@@ -1134,10 +1182,11 @@ const Home = () => {
 
                   {/* Date & Time */}
                   <div>
-                    <label className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
+                    <label htmlFor="book-date-input" className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
                       {t("home.tripDate", "Trip Date *")}
                     </label>
                     <input
+                      id="book-date-input"
                       type="date"
                       required
                       value={resForm.date}
@@ -1149,10 +1198,11 @@ const Home = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
+                    <label htmlFor="book-time-input" className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
                       {t("home.pickupTime", "Pick Up Time *")}
                     </label>
                     <input
+                      id="book-time-input"
                       type="time"
                       required
                       value={resForm.time}
@@ -1165,10 +1215,11 @@ const Home = () => {
 
                   {/* Passengers */}
                   <div>
-                    <label className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
+                    <label htmlFor="book-adults-input" className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
                       {t("home.adultsCount", "Adults *")}
                     </label>
                     <input
+                      id="book-adults-input"
                       type="number"
                       min="1"
                       max="20"
@@ -1181,10 +1232,11 @@ const Home = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
+                    <label htmlFor="book-children-input" className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
                       {t("home.childrenCount", "Children (0-20)")}
                     </label>
                     <input
+                      id="book-children-input"
                       type="number"
                       min="0"
                       max="20"
@@ -1198,10 +1250,11 @@ const Home = () => {
 
                   {/* Locations */}
                   <div>
-                    <label className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
+                    <label htmlFor="book-pickup-input" className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
                       {t("home.pickupLocation", "Pick Up Location *")}
                     </label>
                     <input
+                      id="book-pickup-input"
                       type="text"
                       required
                       placeholder={t(
@@ -1216,10 +1269,11 @@ const Home = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
+                    <label htmlFor="book-dropoff-input" className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
                       {t("home.dropoffLocation", "Drop Off Location *")}
                     </label>
                     <input
+                      id="book-dropoff-input"
                       type="text"
                       required
                       placeholder={t(
@@ -1237,10 +1291,11 @@ const Home = () => {
                   {/* Contact Info */}
                   <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div>
-                      <label className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
+                      <label htmlFor="book-name-input" className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
                         {t("contact.fullName", "Full Name *")}
                       </label>
                       <input
+                        id="book-name-input"
                         type="text"
                         required
                         placeholder="John Doe"
@@ -1252,10 +1307,11 @@ const Home = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
+                      <label htmlFor="book-phone-input" className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
                         {t("contact.phoneNumber", "Phone Number *")}
                       </label>
                       <input
+                        id="book-phone-input"
                         type="text"
                         required
                         placeholder="+1 234 567 890"
@@ -1267,10 +1323,11 @@ const Home = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
+                      <label htmlFor="book-email-input" className="block text-caption text-ivory-300 uppercase tracking-widest mb-2">
                         {t("contact.email", "Email *")}
                       </label>
                       <input
+                        id="book-email-input"
                         type="email"
                         required
                         placeholder="john@example.com"
@@ -1352,23 +1409,39 @@ const Home = () => {
               gap: "16px",
             }}
           >
-            {[...galleryImages, ...galleryImages].map((img, idx) => {
-              const originalIndex = idx % galleryImages.length;
-              return (
-                <div
-                  key={idx}
-                  className="flex-shrink-0 cursor-pointer overflow-hidden rounded-[12px] group relative transition-all duration-[350ms] ease-out hover:scale-[1.08] hover:-translate-y-[12px] hover:shadow-[0_12px_40px_rgba(245,166,35,0.35)] hover:z-10"
-                  onClick={() => openLightbox(originalIndex)}
-                >
-                  <img
-                    src={img.src}
-                    alt={img.dest}
-                    loading="lazy"
-                    className="h-[220px] md:h-[380px] w-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-              );
-            })}
+            {(() => {
+              const sliced = galleryImages.slice(0, 12);
+              return [...sliced, ...sliced].map((img, idx) => {
+                const originalIndex = galleryImages.indexOf(img);
+                const isDuplicate = idx >= sliced.length;
+                return (
+                  <div
+                    key={idx}
+                    className="flex-shrink-0 cursor-pointer overflow-hidden rounded-[12px] group relative transition-all duration-[350ms] ease-out hover:scale-[1.08] hover:-translate-y-[12px] hover:shadow-[0_12px_40px_rgba(245,166,35,0.35)] hover:z-10 focus:outline-none focus:ring-2 focus:ring-gold-500"
+                    onClick={isDuplicate ? undefined : () => openLightbox(originalIndex)}
+                    onKeyDown={isDuplicate ? undefined : (e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openLightbox(originalIndex);
+                      }
+                    }}
+                    tabIndex={isDuplicate ? -1 : 0}
+                    role={isDuplicate ? undefined : "button"}
+                    aria-label={isDuplicate ? undefined : `${t("home.viewLarger", "View larger image of")} ${img.dest}`}
+                    aria-hidden={isDuplicate ? "true" : undefined}
+                  >
+                    <img
+                      src={getOptimizedImageUrl(img.src, 400, 380)}
+                      alt={img.dest}
+                      loading="lazy"
+                      width="280"
+                      height="380"
+                      className="h-[220px] md:h-[380px] w-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                );
+              });
+            })()}
           </div>
         </div>
       </section>
@@ -1378,12 +1451,12 @@ const Home = () => {
         <div className="max-w-[1200px] mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-6">
             {[
-              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783033035/dunas-travel-logo-removebg-preview_mjfl90.png", alt: "Logo 1" },
-              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783033441/logo20_f5rfsz.png", alt: "Logo 2" },
-              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783033442/logo3_sk0tns.png", alt: "Logo 3" },
-              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783033442/logo4_tso9ey.png", alt: "Logo 4" },
-              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783033440/logo5_qpuki9.png", alt: "Logo 5" },
-              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783033441/logo6_drog9y.jpg", alt: "Logo 6" },
+              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/w_180,h_110,c_limit,q_auto,f_auto/v1783033035/dunas-travel-logo-removebg-preview_mjfl90.png", alt: "Logo 1" },
+              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/w_180,h_110,c_limit,q_auto,f_auto/v1783033441/logo20_f5rfsz.png", alt: "Logo 2" },
+              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/w_180,h_110,c_limit,q_auto,f_auto/v1783033442/logo3_sk0tns.png", alt: "Logo 3" },
+              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/w_180,h_110,c_limit,q_auto,f_auto/v1783033442/logo4_tso9ey.png", alt: "Logo 4" },
+              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/w_180,h_110,c_limit,q_auto,f_auto/v1783033440/logo5_qpuki9.png", alt: "Logo 5" },
+              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/w_180,h_110,c_limit,q_auto,f_auto/v1783033441/logo6_drog9y.jpg", alt: "Logo 6" },
             ].map((logo, idx) => (
               <div
                 key={idx}
@@ -1392,6 +1465,8 @@ const Home = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
+                  width="140"
+                  height="70"
                   className="max-h-full max-w-full object-contain transition-all duration-300"
                 />
               </div>
@@ -1427,30 +1502,43 @@ const Home = () => {
               onMouseEnter={e => e.currentTarget.style.animationPlayState = 'paused'}
               onMouseLeave={e => e.currentTarget.style.animationPlayState = 'running'}
             >
-              {[...videos, ...videos, ...videos].map((video, idx) => (
-                <motion.div
-                  key={`${video.publicId}-${idx}`}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: (idx % videos.length) * 0.1 }}
-                  onClick={() => setActiveVideo(video.publicId)}
-                  className="min-w-[300px] md:min-w-[360px] shrink-0 relative rounded-2xl overflow-hidden cursor-pointer group h-[200px] md:h-[240px]"
-                >
-                  <img
-                    src={`https://res.cloudinary.com/${cloudName}/video/upload/w_400,h_240,c_fill/${video.publicId}.jpg`}
-                    alt=""
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-obsidian-900/40 group-hover:bg-obsidian-900/20 transition-colors flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-gold-500/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                      <svg className="w-6 h-6 text-obsidian-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
+              {[...videos, ...videos, ...videos].map((video, idx) => {
+                const isDuplicate = idx >= videos.length;
+                return (
+                  <motion.div
+                    key={`${video.publicId}-${idx}`}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: (idx % videos.length) * 0.1 }}
+                    onClick={isDuplicate ? undefined : () => setActiveVideo(video.publicId)}
+                    onKeyDown={isDuplicate ? undefined : (e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        setActiveVideo(video.publicId);
+                      }
+                    }}
+                    tabIndex={isDuplicate ? -1 : 0}
+                    role={isDuplicate ? undefined : "button"}
+                    aria-label={isDuplicate ? undefined : t('home.playVideo', 'Play video clip')}
+                    aria-hidden={isDuplicate ? "true" : undefined}
+                    className="min-w-[300px] md:min-w-[360px] shrink-0 relative rounded-2xl overflow-hidden cursor-pointer group h-[200px] md:h-[240px] focus:outline-none focus:ring-2 focus:ring-gold-500"
+                  >
+                    <img
+                      src={`https://res.cloudinary.com/${cloudName}/video/upload/w_400,h_240,c_fill/${video.publicId}.jpg`}
+                      alt=""
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-obsidian-900/40 group-hover:bg-obsidian-900/20 transition-colors flex items-center justify-center">
+                      <div className="w-16 h-16 rounded-full bg-gold-500/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <svg className="w-6 h-6 text-obsidian-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </div>

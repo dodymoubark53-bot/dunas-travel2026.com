@@ -175,8 +175,10 @@ const HieroglyphicName = () => {
           }}
         >
           <img
-            src="/imgs/hero-hiero.png"
+            src="/imgs/hero-hiero.webp"
             alt="Horus"
+            width="620"
+            height="800"
             className="drop-shadow-[0_0_150px_rgba(201,168,76,0.5)]"
             style={{
               height: '98%',

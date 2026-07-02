@@ -197,29 +197,29 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
               <form onSubmit={handleBookingSubmit} className="px-5 py-4 space-y-3.5">
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className={labelClass}><FaCalendarAlt className="inline mr-1.5 text-gold-400" size={11} />{t('booking.arrivalDate', 'Arrival Date')}</label>
-                    <input type="date" value={b.arrivalDate} min={todayStr} onChange={e => updateB('arrivalDate', e.target.value)} required className={inputClass} />
+                    <label htmlFor="arrival-date-input" className={labelClass}><FaCalendarAlt className="inline mr-1.5 text-gold-400" size={11} />{t('booking.arrivalDate', 'Arrival Date')}</label>
+                    <input id="arrival-date-input" type="date" value={b.arrivalDate} min={todayStr} onChange={e => updateB('arrivalDate', e.target.value)} required className={inputClass} />
                   </div>
                   <div>
-                    <label className={labelClass}><FaCalendarAlt className="inline mr-1.5 text-gold-400" size={11} />{t('booking.departureDate', 'Departure Date')}</label>
-                    <input type="date" value={b.departureDate} min={b.arrivalDate || todayStr} onChange={e => updateB('departureDate', e.target.value)} required className={inputClass} />
+                    <label htmlFor="departure-date-input" className={labelClass}><FaCalendarAlt className="inline mr-1.5 text-gold-400" size={11} />{t('booking.departureDate', 'Departure Date')}</label>
+                    <input id="departure-date-input" type="date" value={b.departureDate} min={b.arrivalDate || todayStr} onChange={e => updateB('departureDate', e.target.value)} required className={inputClass} />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className={labelClass}><FaClock className="inline mr-1.5 text-gold-400" size={11} />{t('booking.arrivalTime', 'Arrival Time')}</label>
-                    <input type="time" value={b.arrivalTime} onChange={e => updateB('arrivalTime', e.target.value)} className={inputClass} />
+                    <label htmlFor="arrival-time-input" className={labelClass}><FaClock className="inline mr-1.5 text-gold-400" size={11} />{t('booking.arrivalTime', 'Arrival Time')}</label>
+                    <input id="arrival-time-input" type="time" value={b.arrivalTime} onChange={e => updateB('arrivalTime', e.target.value)} className={inputClass} />
                   </div>
                   <div>
-                    <label className={labelClass}><FaClock className="inline mr-1.5 text-gold-400" size={11} />{t('booking.departureTime', 'Departure Time')}</label>
-                    <input type="time" value={b.departureTime} onChange={e => updateB('departureTime', e.target.value)} className={inputClass} />
+                    <label htmlFor="departure-time-input" className={labelClass}><FaClock className="inline mr-1.5 text-gold-400" size={11} />{t('booking.departureTime', 'Departure Time')}</label>
+                    <input id="departure-time-input" type="time" value={b.departureTime} onChange={e => updateB('departureTime', e.target.value)} className={inputClass} />
                   </div>
                 </div>
 
                 <div className="relative">
-                  <label className={labelClass}><FaGlobeAmericas className="inline mr-1.5 text-gold-400" size={11} />{t('booking.preferredLanguage', 'Language')}</label>
-                  <button type="button" onClick={() => setLangOpen(langOpen === 'booking' ? null : 'booking')} className={`${inputClass} text-left flex items-center gap-2`}>
+                  <label htmlFor="language-btn" className={labelClass}><FaGlobeAmericas className="inline mr-1.5 text-gold-400" size={11} />{t('booking.preferredLanguage', 'Language')}</label>
+                  <button id="language-btn" type="button" onClick={() => setLangOpen(langOpen === 'booking' ? null : 'booking')} className={`${inputClass} text-left flex items-center gap-2`}>
                     {b.language ? (
                       <>
                         <span className="text-lg">{languages.find(l => l.value === b.language)?.flag}</span>
@@ -242,8 +242,8 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
                 </div>
 
                 <div className="relative" ref={activityRef}>
-                  <label className={labelClass}><FaStar className="inline mr-1.5 text-gold-400" size={11} />{t('booking.activityType', 'Type of Activity')}</label>
-                  <button type="button" onClick={() => setActivityOpen(!activityOpen)} className={`${inputClass} text-left flex items-center gap-2`}>
+                  <label htmlFor="activity-btn" className={labelClass}><FaStar className="inline mr-1.5 text-gold-400" size={11} />{t('booking.activityType', 'Type of Activity')}</label>
+                  <button id="activity-btn" type="button" onClick={() => setActivityOpen(!activityOpen)} className={`${inputClass} text-left flex items-center gap-2`}>
                     {b.activityType ? (
                       <span>{b.activityType === 'standard' ? t('booking.standardCategory', 'Standard Category') : t('booking.premiumCategory', 'Premium Category')}</span>
                     ) : (
@@ -263,7 +263,7 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
                 </div>
 
                 <div>
-                  <label className={labelClass}><FaUser className="inline mr-1.5 text-gold-400" size={11} />{t('booking.passengers', 'Passengers')}</label>
+                  <span className={labelClass}><FaUser className="inline mr-1.5 text-gold-400" size={11} />{t('booking.passengers', 'Passengers')}</span>
                   <div className="grid grid-cols-3 gap-2">
                     {[
                       { k: 'adults', lbl: t('booking.adults', 'Adults'), min: 1 },
@@ -273,9 +273,9 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
                       <div key={k} className="bg-[rgba(255,252,247,0.03)] rounded-xl p-2.5 border border-[rgba(201,162,39,0.08)] text-center">
                         <span className="block text-caption text-ivory-400 mb-1.5 text-[11px]">{lbl}</span>
                         <div className="flex items-center justify-center gap-1.5">
-                          <button type="button" onClick={() => updateB(k, b[k] - 1)} disabled={b[k] <= min} className={`${counterBtnClass} w-7 h-7 disabled:opacity-30 disabled:cursor-not-allowed`}><FaMinus size={10} /></button>
+                          <button type="button" onClick={() => updateB(k, b[k] - 1)} disabled={b[k] <= min} aria-label={`Decrease ${lbl}`} className={`${counterBtnClass} w-7 h-7 disabled:opacity-30 disabled:cursor-not-allowed`}><FaMinus size={10} /></button>
                           <span className="text-body-lg text-ivory-50 w-6 text-center font-semibold tabular-nums">{b[k]}</span>
-                          <button type="button" onClick={() => updateB(k, b[k] + 1)} className={`${counterBtnClass} w-7 h-7`}><FaPlus size={10} /></button>
+                          <button type="button" onClick={() => updateB(k, b[k] + 1)} aria-label={`Increase ${lbl}`} className={`${counterBtnClass} w-7 h-7`}><FaPlus size={10} /></button>
                         </div>
                       </div>
                     ))}
@@ -298,8 +298,8 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
                     <div className="space-y-2">
                       {passengerFields.map(p => (
                         <div key={p.key}>
-                          <label className="block text-caption text-ivory-400 text-[11px] mb-0.5">{p.type === 'Adult' ? '👤' : p.type === 'Child' ? '🧒' : '👶'} {t(`booking.${p.type.toLowerCase()}`, p.type)} {p.num}</label>
-                          <input type="text" placeholder={`${t('booking.fullNameOf', 'Name')}`} onChange={e => setPassengerNames(prev => ({ ...prev, [p.key]: e.target.value }))} className={`${inputClass} p-2.5 text-[13px]`} />
+                          <label htmlFor={`passenger-name-${p.key}`} className="block text-caption text-ivory-400 text-[11px] mb-0.5">{p.type === 'Adult' ? '👤' : p.type === 'Child' ? '🧒' : '👶'} {t(`booking.${p.type.toLowerCase()}`, p.type)} {p.num}</label>
+                          <input id={`passenger-name-${p.key}`} type="text" placeholder={`${t('booking.fullNameOf', 'Name')}`} onChange={e => setPassengerNames(prev => ({ ...prev, [p.key]: e.target.value }))} className={`${inputClass} p-2.5 text-[13px]`} />
                         </div>
                       ))}
                     </div>
@@ -308,10 +308,13 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
 
                 <div className="space-y-3">
                   <p className={labelClass}><FaUser className="inline mr-1.5 text-gold-400" size={11} />{t('booking.contactInfo', 'Contact')}</p>
-                  <input type="text" placeholder={t('booking.fullName', 'Full Name')} value={b.fullName} onChange={e => updateB('fullName', e.target.value)} required className={inputClass} />
+                  <label htmlFor="contact-fullname" className="sr-only">{t('booking.fullName', 'Full Name')}</label>
+                  <input id="contact-fullname" type="text" placeholder={t('booking.fullName', 'Full Name')} value={b.fullName} onChange={e => updateB('fullName', e.target.value)} required className={inputClass} />
                   <div className="grid grid-cols-2 gap-3">
-                    <input type="email" placeholder={t('booking.email', 'Email')} value={b.email} onChange={e => updateB('email', e.target.value)} required className={inputClass} />
-                    <input type="tel" placeholder={t('booking.phone', 'Phone')} value={b.phone} onChange={e => updateB('phone', e.target.value)} required className={inputClass} />
+                    <label htmlFor="contact-email" className="sr-only">{t('booking.email', 'Email')}</label>
+                    <input id="contact-email" type="email" placeholder={t('booking.email', 'Email')} value={b.email} onChange={e => updateB('email', e.target.value)} required className={inputClass} />
+                    <label htmlFor="contact-phone" className="sr-only">{t('booking.phone', 'Phone')}</label>
+                    <input id="contact-phone" type="tel" placeholder={t('booking.phone', 'Phone')} value={b.phone} onChange={e => updateB('phone', e.target.value)} required className={inputClass} />
                   </div>
                 </div>
 
@@ -322,26 +325,33 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
                   </button>
                   {b._showBilling && (
                     <div className="mt-3 space-y-3 bg-[rgba(255,252,247,0.02)] rounded-xl p-3 border border-[rgba(201,162,39,0.08)]">
-                      <select value={b.invoiceType} onChange={e => updateB('invoiceType', e.target.value)} className={`${inputClass} appearance-none`}>
+                      <label htmlFor="invoice-type-select" className="sr-only">{t('booking.invoiceType', 'Invoice Type')}</label>
+                      <select id="invoice-type-select" value={b.invoiceType} onChange={e => updateB('invoiceType', e.target.value)} className={`${inputClass} appearance-none`}>
                         <option value="personal">{t('booking.personal', 'Personal')}</option>
                         <option value="company">{t('booking.company', 'Company')}</option>
                       </select>
                       {b.invoiceType === 'company' && (
                         <>
-                          <input type="text" placeholder={t('booking.companyName', 'Company Name')} value={b.companyName} onChange={e => updateB('companyName', e.target.value)} className={inputClass} />
-                          <input type="text" placeholder={t('booking.taxId', 'Tax ID')} value={b.taxId} onChange={e => updateB('taxId', e.target.value)} className={inputClass} />
+                          <label htmlFor="company-name-input" className="sr-only">{t('booking.companyName', 'Company Name')}</label>
+                          <input id="company-name-input" type="text" placeholder={t('booking.companyName', 'Company Name')} value={b.companyName} onChange={e => updateB('companyName', e.target.value)} className={inputClass} />
+                          <label htmlFor="tax-id-input" className="sr-only">{t('booking.taxId', 'Tax ID')}</label>
+                          <input id="tax-id-input" type="text" placeholder={t('booking.taxId', 'Tax ID')} value={b.taxId} onChange={e => updateB('taxId', e.target.value)} className={inputClass} />
                         </>
                       )}
-                      <input type="text" placeholder={t('booking.address', 'Address')} value={b.address} onChange={e => updateB('address', e.target.value)} className={inputClass} />
+                      <label htmlFor="address-input" className="sr-only">{t('booking.address', 'Address')}</label>
+                      <input id="address-input" type="text" placeholder={t('booking.address', 'Address')} value={b.address} onChange={e => updateB('address', e.target.value)} className={inputClass} />
                       <div className="grid grid-cols-2 gap-3">
-                        <input type="text" placeholder={t('booking.city', 'City')} value={b.city} onChange={e => updateB('city', e.target.value)} className={inputClass} />
-                        <input type="text" placeholder={t('booking.country', 'Country')} value={b.country} onChange={e => updateB('country', e.target.value)} className={inputClass} />
+                        <label htmlFor="city-input" className="sr-only">{t('booking.city', 'City')}</label>
+                        <input id="city-input" type="text" placeholder={t('booking.city', 'City')} value={b.city} onChange={e => updateB('city', e.target.value)} className={inputClass} />
+                        <label htmlFor="country-input" className="sr-only">{t('booking.country', 'Country')}</label>
+                        <input id="country-input" type="text" placeholder={t('booking.country', 'Country')} value={b.country} onChange={e => updateB('country', e.target.value)} className={inputClass} />
                       </div>
                     </div>
                   )}
                 </div>
 
-                <textarea placeholder={t('booking.notesPlaceholder', 'Special requests...')} value={b.notes} onChange={e => updateB('notes', e.target.value)} rows="2" className={`${inputClass} resize-none`} />
+                <label htmlFor="notes-textarea" className="sr-only">{t('booking.notesPlaceholder', 'Special requests...')}</label>
+                <textarea id="notes-textarea" placeholder={t('booking.notesPlaceholder', 'Special requests...')} value={b.notes} onChange={e => updateB('notes', e.target.value)} rows="2" className={`${inputClass} resize-none`} />
 
                 {transportAlert && (
                   <div className="bg-red-500/15 border border-red-500/40 rounded-xl px-4 py-3 text-center animate-pulse">
@@ -359,20 +369,20 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
               <form onSubmit={handleInquirySubmit} className="px-5 py-4 space-y-3.5">
                 <p className="text-body-sm text-ivory-400">{t('booking.inquiryFormDesc', 'Have a question? Send us a message and we\'ll get back to you.')}</p>
                 <div>
-                  <label className={labelClass}>{t('booking.fullName', 'Full Name')}</label>
-                  <input type="text" value={inq.name} onChange={e => setInq(p => ({ ...p, name: e.target.value }))} required className={inputClass} />
+                  <label htmlFor="inquiry-name" className={labelClass}>{t('booking.fullName', 'Full Name')}</label>
+                  <input id="inquiry-name" type="text" value={inq.name} onChange={e => setInq(p => ({ ...p, name: e.target.value }))} required className={inputClass} />
                 </div>
                 <div>
-                  <label className={labelClass}>{t('booking.email', 'Email')}</label>
-                  <input type="email" value={inq.email} onChange={e => setInq(p => ({ ...p, email: e.target.value }))} required className={inputClass} />
+                  <label htmlFor="inquiry-email" className={labelClass}>{t('booking.email', 'Email')}</label>
+                  <input id="inquiry-email" type="email" value={inq.email} onChange={e => setInq(p => ({ ...p, email: e.target.value }))} required className={inputClass} />
                 </div>
                 <div>
-                  <label className={labelClass}>{t('booking.phone', 'Phone')}</label>
-                  <input type="tel" value={inq.phone} onChange={e => setInq(p => ({ ...p, phone: e.target.value }))} required className={inputClass} />
+                  <label htmlFor="inquiry-phone" className={labelClass}>{t('booking.phone', 'Phone')}</label>
+                  <input id="inquiry-phone" type="tel" value={inq.phone} onChange={e => setInq(p => ({ ...p, phone: e.target.value }))} required className={inputClass} />
                 </div>
                 <div className="relative">
-                  <label className={labelClass}><FaGlobeAmericas className="inline mr-1.5 text-gold-400" size={11} />{t('booking.preferredLanguage', 'Language')}</label>
-                  <button type="button" onClick={() => setLangOpen(langOpen === 'inquiry' ? null : 'inquiry')} className={`${inputClass} text-left flex items-center gap-2`}>
+                  <label htmlFor="inquiry-lang" className={labelClass}><FaGlobeAmericas className="inline mr-1.5 text-gold-400" size={11} />{t('booking.preferredLanguage', 'Language')}</label>
+                  <button id="inquiry-lang" type="button" onClick={() => setLangOpen(langOpen === 'inquiry' ? null : 'inquiry')} className={`${inputClass} text-left flex items-center gap-2`}>
                     {inq.language ? (
                       <>
                         <span className="text-lg">{languages.find(l => l.value === inq.language)?.flag}</span>
@@ -394,8 +404,8 @@ const BookingForm = ({ tourTitle, transportChoice, requireTransportChoice }) => 
                   )}
                 </div>
                 <div>
-                  <label className={labelClass}>{t('booking.specialRequests', 'Message')}</label>
-                  <textarea placeholder={t('booking.inquiryPlaceholder', 'Your message...')} value={inq.message} onChange={e => setInq(p => ({ ...p, message: e.target.value }))} rows="4" className={`${inputClass} resize-none`} />
+                  <label htmlFor="inquiry-msg" className={labelClass}>{t('booking.specialRequests', 'Message')}</label>
+                  <textarea id="inquiry-msg" placeholder={t('booking.inquiryPlaceholder', 'Your message...')} value={inq.message} onChange={e => setInq(p => ({ ...p, message: e.target.value }))} rows="4" className={`${inputClass} resize-none`} />
                 </div>
                 <button type="submit" disabled={status === 'submitting'} className="w-full py-3 bg-gradient-to-r from-gold-500 to-gold-700 text-obsidian-900 font-bold rounded-xl shadow-[0_0_25px_rgba(201,162,39,0.2)] hover:shadow-[0_0_35px_rgba(201,162,39,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-[13px] uppercase tracking-[1.5px] flex items-center justify-center gap-2">
                   {status === 'submitting' ? <span className="flex items-center gap-2"><span className="w-4 h-4 border-2 border-obsidian-900 border-t-transparent rounded-full animate-spin" />{t('common.sending', 'Sending...')}</span> : <><FaPaperPlane size={12} />{t('booking.sendInquiry', 'Book Now')}</>}

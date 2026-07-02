@@ -1,9 +1,21 @@
+import { useEffect } from 'react';
 import { FaTimes, FaFileInvoiceDollar, FaPrint } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
 const InvoiceModal = ({ booking, onClose }) => {
   const { t, i18n } = useTranslation();
   const isRtl = i18n.language === 'ar';
+  
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
+
   const d = new Date(booking.createdAt);
 
   const totalPax = (booking.adults || 0) + (booking.children || 0) + (booking.infants || 0);

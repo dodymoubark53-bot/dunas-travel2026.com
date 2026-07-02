@@ -246,6 +246,7 @@ const Navbar = () => {
               <>
                 <button
                   onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
+                  aria-label="User profile options"
                   className="w-9 h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm"
                 >
                   <span className="font-display font-semibold text-xs">{user.avatar}</span>
@@ -254,6 +255,7 @@ const Navbar = () => {
             ) : (
               <button
                 onClick={() => setIsLoginModalOpen(true)}
+                aria-label="Sign in"
                 className="w-9 h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm"
               >
                 <FaUserCircle size={15} />
@@ -265,6 +267,7 @@ const Navbar = () => {
           <div className="relative">
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+              aria-label="Select language"
               className="h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm gap-1.5 px-3"
             >
               <FaGlobe size={13} />
@@ -314,6 +317,7 @@ const Navbar = () => {
           <div className="relative">
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+              aria-label="Select language"
               className="w-9 h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm gap-1.5 px-2.5"
             >
               <FaGlobe size={14} />
@@ -365,6 +369,7 @@ const Navbar = () => {
           <button
             className="w-9 h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm z-50"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {mobileMenuOpen ? <FaTimes size={15} /> : <FaBars size={15} />}
           </button>
@@ -421,6 +426,7 @@ const Navbar = () => {
                                         </Link>
                                         <button
                                           onClick={() => setMobileActiveSubDropdown(mobileActiveSubDropdown === item.name ? null : item.name)}
+                                          aria-label={`Toggle sub-menu for ${item.name}`}
                                           className="p-2 -mr-2 text-obsidian-400 hover:text-[#F5A623] transition-colors"
                                         >
                                           <FaChevronDown

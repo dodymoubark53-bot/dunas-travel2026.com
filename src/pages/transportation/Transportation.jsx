@@ -122,14 +122,14 @@ const Transportation = () => {
               <div className="p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <span className="text-gold-500 uppercase tracking-widest text-[11px] font-bold block mb-1">
+                    <span className="text-gold-600 uppercase tracking-widest text-[11px] font-bold block mb-1">
                       {vehicle.category === 'bus' ? t('transportation.filter.buses', 'Buses') :
                         vehicle.category === 'coaster' ? t('transportation.filter.coasters', 'Coaster Vehicles') :
                           t('transportation.filter.private', 'Private Vehicles')}
                     </span>
                     <h3
                       onClick={() => handleReserveClick(vehicle.id)}
-                      className="text-display-md text-xl text-obsidian-900 font-display cursor-pointer hover:text-gold-500 transition-colors"
+                      className="text-display-md text-xl text-obsidian-900 font-display cursor-pointer hover:text-gold-600 transition-colors"
                       style={{ fontFamily: "'Playfair Display', serif" }}
                     >
                       {t(`data.${vehicle.name}`, vehicle.name)}
@@ -169,7 +169,7 @@ const Transportation = () => {
                   </div>
                   <button
                     onClick={() => handleReserveClick(vehicle.id)}
-                    className="text-body-md font-medium text-gold-500 hover:text-gold-600 transition-colors rounded-full cursor-pointer outline-none"
+                    className="text-body-md font-medium text-gold-600 hover:text-gold-700 transition-colors rounded-full cursor-pointer outline-none"
                   >
                     <span className={isRtl ? 'rtl-flip' : ''}>{t('transportation.reserveNow', 'Reserve Now')} &rarr;</span>
                   </button>

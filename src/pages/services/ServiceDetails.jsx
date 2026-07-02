@@ -42,6 +42,17 @@ const ServiceDetails = () => {
     window.scrollTo(0, 0);
   }, [slug]);
 
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setActiveImage(null);
+        setActiveForm(null);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   if (!service) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-obsidian-50">
@@ -97,7 +108,19 @@ const ServiceDetails = () => {
           </section>
 
           {/* Large Image Showcase */}
-          <section className="relative w-full h-[50vh] lg:h-[70vh] overflow-hidden group cursor-pointer" onClick={() => setActiveImage(service.images[0])}>
+          <section
+            className="relative w-full h-[50vh] lg:h-[70vh] overflow-hidden group cursor-pointer focus:outline-none focus:ring-2 focus:ring-gold-500"
+            onClick={() => setActiveImage(service.images[0])}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                setActiveImage(service.images[0]);
+              }
+            }}
+            tabIndex={0}
+            role="button"
+            aria-label={t('tour.clickGallery', 'Click to open gallery')}
+          >
             <motion.img
               src={service.images[0]}
               alt={translateData(service.title, service.title)}
@@ -380,8 +403,17 @@ const ServiceDetails = () => {
                     {service.images.map((img, idx) => (
                       <div
                         key={idx}
-                        className={`rounded-xl overflow-hidden cursor-pointer group relative ${idx === 0 ? 'col-span-3 h-80' : 'col-span-1 h-40'}`}
+                        className={`rounded-xl overflow-hidden cursor-pointer group relative focus:outline-none focus:ring-2 focus:ring-gold-500 ${idx === 0 ? 'col-span-3 h-80' : 'col-span-1 h-40'}`}
                         onClick={() => setActiveImage(img)}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            setActiveImage(img);
+                          }
+                        }}
+                        tabIndex={0}
+                        role="button"
+                        aria-label={`${t('tourDetail.gallery', 'Gallery')} image ${idx + 1}`}
                       >
                         <img src={img} alt={`${service.title} ${idx + 1}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300"></div>
@@ -524,8 +556,17 @@ const ServiceDetails = () => {
                   {service.images.map((img, idx) => (
                     <div
                       key={idx}
-                      className={`rounded-xl overflow-hidden cursor-pointer group relative ${idx === 0 ? 'col-span-3 h-80' : 'col-span-1 h-40'}`}
+                      className={`rounded-xl overflow-hidden cursor-pointer group relative focus:outline-none focus:ring-2 focus:ring-gold-500 ${idx === 0 ? 'col-span-3 h-80' : 'col-span-1 h-40'}`}
                       onClick={() => setActiveImage(img)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          setActiveImage(img);
+                        }
+                      }}
+                      tabIndex={0}
+                      role="button"
+                      aria-label={`${t('tourDetail.gallery', 'Gallery')} image ${idx + 1}`}
                     >
                       <img src={img} alt={`${service.title} ${idx + 1}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300"></div>

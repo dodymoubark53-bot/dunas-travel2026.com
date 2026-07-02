@@ -102,8 +102,10 @@ const Services = () => {
           ) : service === 'transportation' ? (
             <>
               <img
-                src="https://tse3.mm.bing.net/th/id/OIP._WYWHyRmdSfQ0gePUWh7_AHaEO?r=0&cb=thfc1falcon3&w=1200&h=686&rs=1&pid=ImgDetMain&o=7&rm=3"
+                src="/imgs/services/transportation-cover.webp"
                 alt="Luxury Car Scenic Road"
+                width="1200"
+                height="686"
                 className="w-full h-full object-cover object-center"
                 loading="lazy"
               />
@@ -229,7 +231,7 @@ const Services = () => {
                         <>
                           <div className="flex justify-between items-center mb-3">
                             <span className="text-caption text-obsidian-300 uppercase tracking-widest">{t(`nav.${item.category}`, item.category)}</span>
-                            <div className="flex items-center text-gold-500 text-caption font-medium">
+                            <div className="flex items-center text-gold-600 text-caption font-medium">
                               <span className="mr-1">★</span> {item.rating}
                             </div>
                           </div>
@@ -274,7 +276,7 @@ const Services = () => {
                   <div className="p-8 flex flex-col flex-grow">
                     <div className="flex justify-between items-center mb-3">
                       <span className="text-caption text-obsidian-300 uppercase tracking-widest">{t('nav.transportation', 'Transportation')}</span>
-                      <div className="flex items-center text-gold-500 text-caption font-medium">
+                    <div className="flex items-center text-gold-600 text-caption font-medium">
                         <span className="mr-1">★</span> {item.rating}
                       </div>
                     </div>

@@ -59,6 +59,7 @@ const FloatingContact = () => {
               animate="open"
               exit="closed"
               title={social.label}
+              aria-label={social.label}
               className="absolute w-12 h-12 bg-obsidian-900 border border-gold-500 rounded-full flex items-center justify-center text-gold-500 shadow-glass hover:bg-gold-500 hover:text-obsidian-900 transition-colors duration-300"
             >
               <Icon size={20} />
@@ -69,6 +70,7 @@ const FloatingContact = () => {
 
       <button
         onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? "Close contact options" : "Open contact options"}
         className="relative z-10 w-16 h-16 rounded-full flex items-center justify-center text-obsidian-900 bg-gradient-to-tr from-gold-700 via-gold-500 to-gold-300 shadow-[0_0_24px_rgba(201,162,39,0.35)] hover:shadow-[0_0_32px_rgba(201,162,39,0.5)] transition-shadow duration-300"
       >
         <motion.div

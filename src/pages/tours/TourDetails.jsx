@@ -41,6 +41,17 @@ const TourDetails = () => {
     return () => clearInterval(id);
   }, []);
 
+  useEffect(() => {
+    if (!isLightboxOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setIsLightboxOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isLightboxOpen]);
+
   return (
     <div className="w-full bg-obsidian-50 min-h-screen">
       <Helmet>
@@ -82,7 +93,19 @@ const TourDetails = () => {
       </section>
 
       {/* 2. Photo Gallery */}
-      <section className="relative w-full h-[50vh] lg:h-[70vh] overflow-hidden group cursor-pointer" onClick={() => setIsLightboxOpen(true)}>
+      <section
+        className="relative w-full h-[50vh] lg:h-[70vh] overflow-hidden group cursor-pointer focus:outline-none focus:ring-2 focus:ring-gold-500"
+        onClick={() => setIsLightboxOpen(true)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            setIsLightboxOpen(true);
+          }
+        }}
+        tabIndex={0}
+        role="button"
+        aria-label={t('tour.clickGallery', 'Click to open gallery')}
+      >
         <motion.img
           src={(tour.images && tour.images[0]) || '/images/tour-1.png'}
           alt={t(`data.${tour.title}`, tour.title)}

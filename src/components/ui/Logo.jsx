@@ -1,10 +1,16 @@
 const Logo = ({ height = 60 }) => {
+  // Dunas Travel logo is ~ 709x352 (approx 2:1 aspect ratio)
+  const width = Math.round(height * 2);
+
   return (
     <img
-      src="https://res.cloudinary.com/degbrq3ck/image/upload/v1783033035/dunas-travel-logo-removebg-preview_mjfl90.png"
+      src="https://res.cloudinary.com/degbrq3ck/image/upload/w_240,h_120,c_limit,q_auto,f_auto/v1783033035/dunas-travel-logo-removebg-preview_mjfl90.png"
       alt="Dunas Travel"
       className="flex-shrink-0 object-contain"
-      style={{ height: `${height}px`, width: 'auto' }}
+      width={width}
+      height={height}
+      fetchpriority="high"
+      style={{ height: `${height}px`, width: `${width}px` }}
     />
   );
 };

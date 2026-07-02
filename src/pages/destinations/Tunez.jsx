@@ -23,9 +23,8 @@ const Tunez = () => {
         <meta name="description" content={t('dest.tunisia.seoDesc', 'Explore luxury journeys in Tunisia. From ancient Roman ruins to the Sahara Desert, discover our exclusive travel experiences.')} />
       </Helmet>
 
-      {/* Hero Section */}
       <section className="relative pt-32 pb-16 text-center px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://www.heritage.org/sites/default/files/styles/facebook_optimized/public/images/2017-06/Tunisia.jpg?itok=trkp0NK9')" }} />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/imgs/destinations/tunisia.webp')" }} />
         <div className="absolute inset-0 bg-obsidian-900/70" />
         <div className="relative z-10 container mx-auto">
           <motion.h1
@@ -72,7 +71,7 @@ const Tunez = () => {
       </section>
 
       <section className="relative py-24 mt-24 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://www.heritage.org/sites/default/files/styles/facebook_optimized/public/images/2017-06/Tunisia.jpg?itok=trkp0NK9')" }} />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/imgs/destinations/tunisia.webp')" }} />
         <div className="absolute inset-0 bg-obsidian-900/75" />
         <div className="relative z-10 container mx-auto px-6 text-center max-w-3xl">
           <span className="text-gold-500 uppercase tracking-widest text-sm font-semibold block mb-4">

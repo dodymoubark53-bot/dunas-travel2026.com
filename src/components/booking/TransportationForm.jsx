@@ -133,7 +133,11 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
             )}
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <label htmlFor="vehicle-select" className="sr-only">
+                {t('booking.selectVehicle', 'Select Vehicle')}
+              </label>
               <select 
+                id="vehicle-select"
                 name="vehicleId" 
                 value={formData.vehicleId} 
                 onChange={handleChange}
@@ -146,7 +150,9 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
                 ))}
               </select>
 
+              <label htmlFor="trip-date" className="sr-only">{t('booking.tripDate', 'Trip Date')}</label>
               <input 
+                id="trip-date"
                 type="date" 
                 name="tripDate"
                 value={formData.tripDate}
@@ -155,7 +161,9 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
                 required
                 className="w-full p-4 border border-gray-200 rounded-lg focus:border-gold-500 outline-none transition-colors text-[16px]"
               />
+              <label htmlFor="pickup-time" className="sr-only">{t('booking.pickupTime', 'Pick Up Time')}</label>
               <input 
+                id="pickup-time"
                 type="time" 
                 name="pickupTime"
                 value={formData.pickupTime}
@@ -166,8 +174,9 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
 
               <div className="flex gap-4">
                 <div className="w-1/2">
-                  <label className="block text-caption text-obsidian-500 mb-1">{t('booking.adults', 'Adults')}</label>
+                  <label htmlFor="adults-count" className="block text-caption text-obsidian-500 mb-1">{t('booking.adults', 'Adults')}</label>
                   <input 
+                    id="adults-count"
                     type="number" 
                     name="adults"
                     min="1" max="20"
@@ -178,8 +187,9 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
                   />
                 </div>
                 <div className="w-1/2">
-                  <label className="block text-caption text-obsidian-500 mb-1">{t('booking.children', 'Children')}</label>
+                  <label htmlFor="children-count" className="block text-caption text-obsidian-500 mb-1">{t('booking.children', 'Children')}</label>
                   <input 
+                    id="children-count"
                     type="number" 
                     name="children"
                     min="0" max="20"
@@ -191,7 +201,9 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
                 </div>
               </div>
 
+              <label htmlFor="pickup-location" className="sr-only">{t('booking.pickupLocation', 'Pick Up Location')}</label>
               <input 
+                id="pickup-location"
                 type="text" 
                 name="pickupLocation"
                 placeholder={t('booking.pickupLocation', 'Pick Up Location')}
@@ -200,7 +212,9 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
                 required
                 className="w-full p-4 border border-gray-200 rounded-lg focus:border-gold-500 outline-none transition-colors text-[16px]"
               />
+              <label htmlFor="dropoff-location" className="sr-only">{t('booking.dropoffLocation', 'Drop Off Location')}</label>
               <input 
+                id="dropoff-location"
                 type="text" 
                 name="dropoffLocation"
                 placeholder={t('booking.dropoffLocation', 'Drop Off Location')}
@@ -210,7 +224,9 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
                 className="w-full p-4 border border-gray-200 rounded-lg focus:border-gold-500 outline-none transition-colors md:col-span-2 text-[16px]"
               />
 
+              <label htmlFor="full-name" className="sr-only">{t('booking.fullName', 'Full Name')}</label>
               <input 
+                id="full-name"
                 type="text" 
                 name="fullName"
                 placeholder={t('booking.fullName', 'Full Name')} 
@@ -219,7 +235,9 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
                 required
                 className="w-full p-4 border border-gray-200 rounded-lg focus:border-gold-500 outline-none transition-colors text-[16px]"
               />
+              <label htmlFor="phone-number" className="sr-only">{t('booking.phone', 'Phone Number')}</label>
               <input 
+                id="phone-number"
                 type="tel" 
                 name="phone"
                 placeholder={t('booking.phone', 'Phone Number')} 
@@ -228,7 +246,9 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
                 required
                 className="w-full p-4 border border-gray-200 rounded-lg focus:border-gold-500 outline-none transition-colors text-[16px]"
               />
+              <label htmlFor="email-address" className="sr-only">{t('booking.email', 'Email Address')}</label>
               <input 
+                id="email-address"
                 type="email" 
                 name="email"
                 placeholder={t('booking.email', 'Email Address')} 
@@ -239,7 +259,9 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
               />
             </div>
 
+            <label htmlFor="special-requests" className="sr-only">{t('booking.specialRequestPlaceholder', 'Special Request...')}</label>
             <textarea 
+              id="special-requests"
               name="specialRequest"
               placeholder={t('booking.specialRequestPlaceholder', 'Special Request...')} 
               value={formData.specialRequest}

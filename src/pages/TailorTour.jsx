@@ -676,7 +676,17 @@ const TailorTour = () => {
                         <div
                           key={dest.id}
                           onClick={() => handleDestinationToggle(dest.id)}
-                          className="relative h-[200px] rounded-xl overflow-hidden cursor-pointer group border-3 transition-all duration-300"
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault();
+                              handleDestinationToggle(dest.id);
+                            }
+                          }}
+                          role="button"
+                          tabIndex={0}
+                          aria-pressed={isSelected}
+                          aria-label={`${t("home.select", "Select")} ${dest.name}`}
+                          className="relative h-[200px] rounded-xl overflow-hidden cursor-pointer group border-3 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gold-500"
                           style={{
                             borderColor: isSelected ? 'var(--color-gold, #f5a623)' : 'rgba(26,26,46,0.1)',
                             boxShadow: isSelected ? '0 0 24px rgba(245,166,35,0.25)' : 'none',
@@ -730,10 +740,11 @@ const TailorTour = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                      <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                      <label htmlFor="tailor-fullname" className="block mb-2 font-semibold text-body-sm text-obsidian-700">
                         {t('tailor.fullName', 'Full Name *')}
                       </label>
                       <input
+                        id="tailor-fullname"
                         type="text"
                         required
                         value={fullName}
@@ -743,10 +754,11 @@ const TailorTour = () => {
                       />
                     </div>
                     <div>
-                      <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                      <label htmlFor="tailor-email" className="block mb-2 font-semibold text-body-sm text-obsidian-700">
                         {t('tailor.email', 'Email Address *')}
                       </label>
                       <input
+                        id="tailor-email"
                         type="email"
                         required
                         value={email}
@@ -759,10 +771,11 @@ const TailorTour = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                      <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                      <label htmlFor="tailor-nationality" className="block mb-2 font-semibold text-body-sm text-obsidian-700">
                         {t('tailor.nationality', 'Nationality *')}
                       </label>
                       <select
+                        id="tailor-nationality"
                         required
                         value={nationality}
                         onChange={(e) => setNationality(e.target.value)}
@@ -777,10 +790,11 @@ const TailorTour = () => {
                       </select>
                     </div>
                     <div>
-                      <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                      <label htmlFor="tailor-phone" className="block mb-2 font-semibold text-body-sm text-obsidian-700">
                         {t('tailor.phone', 'Phone Number (WhatsApp preferred) *')}
                       </label>
                       <input
+                        id="tailor-phone"
                         type="text"
                         required
                         value={phone}
@@ -793,10 +807,11 @@ const TailorTour = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                      <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                      <label htmlFor="tailor-date" className="block mb-2 font-semibold text-body-sm text-obsidian-700">
                         {t('tailor.travelDate', 'Expected Travel Date *')}
                       </label>
                       <input
+                        id="tailor-date"
                         type="date"
                         required
                         value={travelDate}
@@ -811,10 +826,11 @@ const TailorTour = () => {
                       )}
                     </div>
                     <div>
-                      <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                      <label htmlFor="tailor-budget" className="block mb-2 font-semibold text-body-sm text-obsidian-700">
                         {t('tailor.budget', 'Approximate Budget Per Person *')}
                       </label>
                       <select
+                        id="tailor-budget"
                         required
                         value={budget}
                         onChange={(e) => setBudget(e.target.value)}
@@ -831,10 +847,11 @@ const TailorTour = () => {
                   {/* Travelers Counts */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                     <div>
-                      <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                      <label htmlFor="tailor-adults" className="block mb-2 font-semibold text-body-sm text-obsidian-700">
                         {t('tailor.adults', 'Adults (+12 years)')}
                       </label>
                       <input
+                        id="tailor-adults"
                         type="number"
                         min="1"
                         value={adults}
@@ -843,10 +860,11 @@ const TailorTour = () => {
                       />
                     </div>
                     <div>
-                      <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                      <label htmlFor="tailor-children" className="block mb-2 font-semibold text-body-sm text-obsidian-700">
                         {t('tailor.children', 'Children (2 - 11 years)')}
                       </label>
                       <input
+                        id="tailor-children"
                         type="number"
                         min="0"
                         value={children}
@@ -855,10 +873,11 @@ const TailorTour = () => {
                       />
                     </div>
                     <div>
-                      <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                      <label htmlFor="tailor-infants" className="block mb-2 font-semibold text-body-sm text-obsidian-700">
                         {t('tailor.infants', 'Infants (under 2 years)')}
                       </label>
                       <input
+                        id="tailor-infants"
                         type="number"
                         min="0"
                         value={infants}
@@ -871,16 +890,20 @@ const TailorTour = () => {
                   {/* Reactive Dynamic Names */}
                   {totalPassengers > 0 && (
                     <div className="mb-6">
-                      <label className="block mb-3 font-semibold text-body-md text-obsidian-700">
+                      <span className="block mb-3 font-semibold text-body-md text-obsidian-700">
                         {t('tailor.passengerSection', 'Names of travelers and companions:')}
-                      </label>
+                      </span>
                       <div className="p-6 bg-obsidian-50/50 rounded-xl border border-dashed border-obsidian-900/20">
                         {/* Render Adults */}
                         {Array.from({ length: adults }).map((_, i) => {
                           const index = i;
                           return (
                             <div key={`adult-${i}`} className="mb-3">
+                              <label htmlFor={`tailor-passenger-adult-${i}`} className="sr-only">
+                                {t('tailor.passengerAdultPlaceholder', 'Adult {{index}} Name *').replace('{{index}}', i + 1)}
+                              </label>
                               <input
+                                id={`tailor-passenger-adult-${i}`}
                                 type="text"
                                 required
                                 value={passengerNames[index] || ''}
@@ -897,7 +920,11 @@ const TailorTour = () => {
                           const index = adults + i;
                           return (
                             <div key={`child-${i}`} className="mb-3">
+                              <label htmlFor={`tailor-passenger-child-${i}`} className="sr-only">
+                                {t('tailor.passengerChildPlaceholder', 'Child {{index}} Name *').replace('{{index}}', i + 1)}
+                              </label>
                               <input
+                                id={`tailor-passenger-child-${i}`}
                                 type="text"
                                 required
                                 value={passengerNames[index] || ''}
@@ -914,7 +941,11 @@ const TailorTour = () => {
                           const index = adults + children + i;
                           return (
                             <div key={`infant-${i}`} className="mb-3">
+                              <label htmlFor={`tailor-passenger-infant-${i}`} className="sr-only">
+                                {t('tailor.passengerInfantPlaceholder', 'Infant {{index}} Name *').replace('{{index}}', i + 1)}
+                              </label>
                               <input
+                                id={`tailor-passenger-infant-${i}`}
                                 type="text"
                                 required
                                 value={passengerNames[index] || ''}
@@ -931,10 +962,11 @@ const TailorTour = () => {
 
                   {/* Special Requests */}
                   <div className="mb-8">
-                    <label className="block mb-2 font-semibold text-body-sm text-obsidian-700">
+                    <label htmlFor="tailor-requests" className="block mb-2 font-semibold text-body-sm text-obsidian-700">
                       {t('tailor.specialRequests', 'Special details or requests')}
                     </label>
                     <textarea
+                      id="tailor-requests"
                       rows="3"
                       value={specialRequests}
                       onChange={(e) => setSpecialRequests(e.target.value)}
@@ -975,12 +1007,13 @@ const TailorTour = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   title="WhatsApp"
+                  aria-label="Contact us on WhatsApp"
                 >
                   <FaWhatsapp />
                 </a>
               </li>
               <li className="ts-phone">
-                <a href="tel:+20233746643" title={t('contact.phoneLabel', 'Phone')}>
+                <a href="tel:+20233746643" title={t('contact.phoneLabel', 'Phone')} aria-label="Call us">
                   <FaPhone />
                 </a>
               </li>
@@ -990,6 +1023,7 @@ const TailorTour = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Facebook"
+                  aria-label="Visit our Facebook page"
                 >
                   <FaFacebookF />
                 </a>
@@ -1000,6 +1034,7 @@ const TailorTour = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Instagram"
+                  aria-label="Visit our Instagram page"
                 >
                   <FaInstagram />
                 </a>

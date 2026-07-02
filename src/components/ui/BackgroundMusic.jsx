@@ -38,13 +38,19 @@ const BackgroundMusic = () => {
   };
 
   const playMusic = () => {
-    sendCommand('playVideo');
+    if (!hasInteractedRef.current) {
+      setHasInteracted(true);
+    } else {
+      sendCommand('playVideo');
+    }
     setIsPlaying(true);
     sessionStorage.setItem('musicPlaying', 'true');
   };
 
   const pauseMusic = () => {
-    sendCommand('pauseVideo');
+    if (hasInteractedRef.current) {
+      sendCommand('pauseVideo');
+    }
     setIsPlaying(false);
     sessionStorage.setItem('musicPlaying', 'false');
   };
@@ -53,11 +59,14 @@ const BackgroundMusic = () => {
     e.stopPropagation();
     if (!hasInteractedRef.current) {
       setHasInteracted(true);
-    }
-    if (isPlayingRef.current) {
-      pauseMusic();
+      setIsPlaying(true);
+      sessionStorage.setItem('musicPlaying', 'true');
     } else {
-      playMusic();
+      if (isPlayingRef.current) {
+        pauseMusic();
+      } else {
+        playMusic();
+      }
     }
   };
 
@@ -78,15 +87,19 @@ const BackgroundMusic = () => {
 
     if (isHomepage) {
       // Landed on the homepage - reset/enable autoplay
-      // Since it's the homepage, we play the music automatically.
+      // Since it's the homepage, we play the music automatically if user already interacted.
       const isInitialLoad = prevPathname === location.pathname;
       if (isInitialLoad) {
         const timer = setTimeout(() => {
-          playMusic();
+          if (hasInteractedRef.current) {
+            playMusic();
+          }
         }, 1000);
         return () => clearTimeout(timer);
       } else {
-        playMusic();
+        if (hasInteractedRef.current) {
+          playMusic();
+        }
       }
     } else {
       // Landed on a non-home page
@@ -107,7 +120,6 @@ const BackgroundMusic = () => {
       }
 
       if (isHomepage && !hasInteractedRef.current) {
-        setHasInteracted(true);
         playMusic();
       }
 
@@ -192,23 +204,25 @@ const BackgroundMusic = () => {
       ` }} />
 
       {/* Hidden YouTube Iframe */}
-      <iframe
-        ref={iframeRef}
-        id="webflow-bg-music-iframe"
-        width="1"
-        height="1"
-        src={`https://www.youtube.com/embed/QqjdVDbxz6s?enablejsapi=1&version=3&loop=1&playlist=QqjdVDbxz6s&controls=0&showinfo=0&rel=0&autoplay=${isHomepage ? '1' : '0'}`}
-        frameBorder="0"
-        allow="autoplay"
-        style={{
-          position: 'fixed',
-          bottom: '-100px',
-          left: '-100px',
-          visibility: 'hidden',
-          opacity: 0,
-          pointerEvents: 'none'
-        }}
-      />
+      {hasInteracted && (
+        <iframe
+          ref={iframeRef}
+          id="webflow-bg-music-iframe"
+          width="1"
+          height="1"
+          src={`https://www.youtube.com/embed/QqjdVDbxz6s?enablejsapi=1&version=3&loop=1&playlist=QqjdVDbxz6s&controls=0&showinfo=0&rel=0&autoplay=${isPlaying ? '1' : '0'}`}
+          frameBorder="0"
+          allow="autoplay"
+          style={{
+            position: 'fixed',
+            bottom: '-100px',
+            left: '-100px',
+            visibility: 'hidden',
+            opacity: 0,
+            pointerEvents: 'none'
+          }}
+        />
+      )}
 
       {/* Music Toggle Button */}
       <button

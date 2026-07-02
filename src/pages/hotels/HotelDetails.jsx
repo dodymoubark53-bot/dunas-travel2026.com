@@ -18,6 +18,7 @@ const HotelDetails = () => {
   const { formatPrice } = useCurrency();
   const location = useLocation();
   const [activeImage, setActiveImage] = useState(null);
+  const [playWalkthrough, setPlayWalkthrough] = useState(false);
 
 
   // Dynamic link prefix based on path (programs vs services)
@@ -475,14 +476,46 @@ const HotelDetails = () => {
           </p>
 
           <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-black">
-            <iframe
-              className="w-full h-full absolute inset-0"
-              src="https://www.youtube.com/embed/RFeQ5fjkYt8"
-              title="Sol Pyramid Hotel Cinematic Video Tour"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
+            {playWalkthrough ? (
+              <iframe
+                className="w-full h-full absolute inset-0"
+                src="https://www.youtube.com/embed/RFeQ5fjkYt8?autoplay=1"
+                title="Sol Pyramid Hotel Cinematic Video Tour"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            ) : (
+              <div
+                className="w-full h-full absolute inset-0 cursor-pointer group focus:outline-none focus:ring-2 focus:ring-gold-500"
+                onClick={() => setPlayWalkthrough(true)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setPlayWalkthrough(true);
+                  }
+                }}
+                tabIndex={0}
+                role="button"
+                aria-label="Play Sol Pyramid Hotel Cinematic Video Tour"
+              >
+                <img
+                  src="https://img.youtube.com/vi/RFeQ5fjkYt8/hqdefault.jpg"
+                  alt="Sol Pyramid Hotel Cinematic Video Tour Placeholder"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  width="800"
+                  height="450"
+                />
+                <div className="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors flex items-center justify-center">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gold-500/90 text-slate-950 flex items-center justify-center shadow-2xl transition-transform duration-300 group-hover:scale-110 group-hover:bg-gold-400">
+                    <svg className="w-8 h-8 ml-1.5 fill-current" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>

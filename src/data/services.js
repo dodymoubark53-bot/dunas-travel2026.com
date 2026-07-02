@@ -314,7 +314,7 @@ export const services = [
     location: 'tour_siwa_destination',
     price: 750,
     rating: 5.0,
-    images: ['https://tse2.mm.bing.net/th/id/OIP.swut4IYCirj6TKWnrO9PDwHaDz?r=0&cb=thfvnextfalcon4&w=1360&h=700&rs=1&pid=ImgDetMain&o=7&rm=3'],
+    images: ['/imgs/services/service-317.webp'],
     shortDesc: 'tour_siwa_summary',
     overview: [
       'tour_siwa_summary'
