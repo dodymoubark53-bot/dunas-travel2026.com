@@ -196,7 +196,7 @@ export const services = [
     location: 'trip.hurghada.title',
     price: 500,
     rating: 5.0,
-    images: ['/imgs/italy/Nile and Red Sea with Hurghada - Classic Version.jpg'],
+    images: ['https://1.bp.blogspot.com/-HqmKDzZ73hY/XgSOtrhSAOI/AAAAAAAARdc/cxtywSwZxLIaZPfw98FzQHYtiPblmzg2gCLcBGAsYHQ/w1200-h630-p-k-no-nu/%D8%A3%D9%81%D8%B6%D9%84-%D8%A7%D9%84%D8%A3%D9%86%D8%B4%D8%B7%D8%A9-%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%AD%D9%8A%D8%A9-%D9%81%D9%89-%D8%A7%D9%84%D8%BA%D8%B1%D8%AF%D9%82%D8%A9-825x510.jpg'],
     shortDesc: 'trip.hurghada.day1.desc',
     overview: [
       'trip.hurghada.day1.desc',
@@ -255,7 +255,7 @@ export const services = [
     location: 'trip.sharm.title',
     price: 600,
     rating: 5.0,
-    images: ['https://images.unsplash.com/photo-1596178060671-7a80dc8053ed?auto=format&fit=crop&w=800&q=80'],
+    images: ['https://nileholiday.com/wp-content/uploads/2019/10/sharm-el-sheikh-top-attractions-1-1920x750.jpg'],
     shortDesc: 'trip.sharm.day1.desc',
     overview: [
       'trip.sharm.day1.desc',
@@ -314,7 +314,7 @@ export const services = [
     location: 'tour_siwa_destination',
     price: 750,
     rating: 5.0,
-    images: ['https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&w=800&q=80'],
+    images: ['https://tse2.mm.bing.net/th/id/OIP.swut4IYCirj6TKWnrO9PDwHaDz?r=0&cb=thfvnextfalcon4&w=1360&h=700&rs=1&pid=ImgDetMain&o=7&rm=3'],
     shortDesc: 'tour_siwa_summary',
     overview: [
       'tour_siwa_summary'
