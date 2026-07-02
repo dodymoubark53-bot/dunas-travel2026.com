@@ -127,12 +127,12 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 h-16 lg:h-20 flex items-center bg-[rgb(10,15,105)] ${headerVisible ? 'translate-y-0' : '-translate-y-full'} ${scrolled ? 'shadow-[0_4px_20px_rgba(0,0,0,0.12)]' : 'shadow-[0_1px_4px_rgba(0,0,0,0.06)]'
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 h-16 lg:h-20 flex items-center bg-white ${headerVisible ? 'translate-y-0' : '-translate-y-full'} ${scrolled ? 'shadow-[0_4px_20px_rgba(0,0,0,0.12)]' : 'shadow-[0_1px_4px_rgba(0,0,0,0.06)]'
         }`}
     >
       <div className="container mx-auto px-6 h-full flex justify-between items-center relative z-10">
         {/* Logo */}
-        <Link to="/" className="flex items-center z-50 drop-shadow-[0_0_12px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] transition-all" onClick={() => setMobileMenuOpen(false)}>
+        <Link to="/" className="flex items-center z-50" onClick={() => setMobileMenuOpen(false)}>
           <Logo theme="dark" height={60} />
         </Link>
 
@@ -146,11 +146,11 @@ const Navbar = () => {
               onMouseLeave={() => link.dropdown && setActiveDropdown(null)}
             >
               {link.dropdown ? (
-                <button className="flex items-center gap-1 text-white hover:text-[#F5A623] transition-colors text-body-md font-medium py-2 whitespace-nowrap flex-shrink-0 [text-shadow:0_2px_8px_rgba(0,0,0,0.9),0_1px_2px_rgba(0,0,0,0.8)]">
+                <button className="flex items-center gap-1 text-obsidian-900 hover:text-[#F5A623] transition-colors text-body-md font-medium py-2 whitespace-nowrap flex-shrink-0">
                   {link.name} <FaChevronDown className={`text-xs transition-transform duration-200 ${activeDropdown === link.name ? 'rotate-180' : ''}`} />
                 </button>
               ) : (
-                <Link to={link.path} className="text-white hover:text-[#F5A623] transition-colors text-body-md font-medium py-2 whitespace-nowrap flex-shrink-0 [text-shadow:0_2px_8px_rgba(0,0,0,0.9),0_1px_2px_rgba(0,0,0,0.8)]">
+                <Link to={link.path} className="text-obsidian-900 hover:text-[#F5A623] transition-colors text-body-md font-medium py-2 whitespace-nowrap flex-shrink-0">
                   {link.name}
                 </Link>
               )}
@@ -234,7 +234,7 @@ const Navbar = () => {
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
-            className="w-9 h-9 rounded-full border border-obsidian-200 flex items-center justify-center text-white hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-obsidian-900/60 hover:bg-obsidian-900/80 shadow-[0_0_8px_rgba(0,0,0,0.5)] backdrop-blur-md"
+            className="w-9 h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm"
             aria-label="Toggle theme"
           >
             {theme === 'dark' ? <FaSun size={15} /> : <FaMoon size={15} />}
@@ -246,7 +246,7 @@ const Navbar = () => {
               <>
                 <button
                   onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
-                  className="w-9 h-9 rounded-full border border-obsidian-200 flex items-center justify-center text-white hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-obsidian-900/60 hover:bg-obsidian-900/80 shadow-[0_0_8px_rgba(0,0,0,0.5)] backdrop-blur-md"
+                  className="w-9 h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm"
                 >
                   <span className="font-display font-semibold text-xs">{user.avatar}</span>
                 </button>
@@ -254,7 +254,7 @@ const Navbar = () => {
             ) : (
               <button
                 onClick={() => setIsLoginModalOpen(true)}
-                className="w-9 h-9 rounded-full border border-obsidian-200 flex items-center justify-center text-white hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-obsidian-900/60 hover:bg-obsidian-900/80 shadow-[0_0_8px_rgba(0,0,0,0.5)] backdrop-blur-md"
+                className="w-9 h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm"
               >
                 <FaUserCircle size={15} />
               </button>
@@ -265,7 +265,7 @@ const Navbar = () => {
           <div className="relative">
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-              className="h-9 rounded-full border border-obsidian-200 flex items-center justify-center text-white hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-obsidian-900/60 hover:bg-obsidian-900/80 shadow-[0_0_8px_rgba(0,0,0,0.5)] backdrop-blur-md gap-1.5 px-3"
+              className="h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm gap-1.5 px-3"
             >
               <FaGlobe size={13} />
               <span className="text-[11px] font-semibold uppercase">
@@ -314,7 +314,7 @@ const Navbar = () => {
           <div className="relative">
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-              className="w-9 h-9 rounded-full border border-obsidian-200 flex items-center justify-center text-white hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-obsidian-900/60 hover:bg-obsidian-900/80 shadow-[0_0_8px_rgba(0,0,0,0.5)] backdrop-blur-md gap-1.5 px-2.5"
+              className="w-9 h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm gap-1.5 px-2.5"
             >
               <FaGlobe size={14} />
             </button>
@@ -352,18 +352,18 @@ const Navbar = () => {
 
           {/* Profile */}
           {!user ? (
-            <button onClick={() => setIsLoginModalOpen(true)} className="w-9 h-9 rounded-full border border-obsidian-200 flex items-center justify-center text-white hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-obsidian-900/60 hover:bg-obsidian-900/80 shadow-[0_0_8px_rgba(0,0,0,0.5)] backdrop-blur-md">
+            <button onClick={() => setIsLoginModalOpen(true)} className="w-9 h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm">
               <FaUserCircle size={15} />
             </button>
           ) : (
-            <Link to="/profile" className="w-9 h-9 rounded-full border border-obsidian-200 flex items-center justify-center text-white hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-obsidian-900/60 hover:bg-obsidian-900/80 shadow-[0_0_8px_rgba(0,0,0,0.5)] backdrop-blur-md text-xs font-semibold">
+            <Link to="/profile" className="w-9 h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm text-xs font-semibold">
               {user.avatar}
             </Link>
           )}
 
           {/* Hamburger */}
           <button
-            className="w-9 h-9 rounded-full border border-obsidian-200 flex items-center justify-center text-white hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-obsidian-900/60 hover:bg-obsidian-900/80 shadow-[0_0_8px_rgba(0,0,0,0.5)] backdrop-blur-md z-50"
+            className="w-9 h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm z-50"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <FaTimes size={15} /> : <FaBars size={15} />}

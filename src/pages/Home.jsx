@@ -1378,12 +1378,12 @@ const Home = () => {
         <div className="max-w-[1200px] mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-6">
             {[
-              { src: "/imgs/logos/logo1.jpeg", alt: "Logo 1" },
-              { src: "/imgs/logos/logo2.png", alt: "Logo 2" },
-              { src: "/imgs/logos/logo3.png", alt: "Logo 3" },
-              { src: "/imgs/logos/logo4.png", alt: "Logo 4" },
-              { src: "/imgs/logos/logo5.png", alt: "Logo 5" },
-              { src: "/imgs/logos/logo6.jpeg", alt: "Logo 6" },
+              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783033035/dunas-travel-logo-removebg-preview_mjfl90.png", alt: "Logo 1" },
+              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783033441/logo20_f5rfsz.png", alt: "Logo 2" },
+              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783033442/logo3_sk0tns.png", alt: "Logo 3" },
+              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783033442/logo4_tso9ey.png", alt: "Logo 4" },
+              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783033440/logo5_qpuki9.png", alt: "Logo 5" },
+              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783033441/logo6_drog9y.jpg", alt: "Logo 6" },
             ].map((logo, idx) => (
               <div
                 key={idx}
