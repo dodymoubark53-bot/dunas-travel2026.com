@@ -4413,5 +4413,12 @@
   "home.transportTitle": "Servicios de Transporte Premium",
   "home.transportDesc": "Vehículos de lujo y conductores profesionales — disponibles en Egipto, Jordania, Turquía y Túnez",
   "home.bookTransferDesc": "Complete los detalles a continuación y nuestro conserje confirmará su reserva.",
-  "home.ctaDesc": "Déjanos crear un viaje hecho completamente a tu medida"
+  "home.ctaDesc": "Déjanos crear un viaje hecho completamente a tu medida",
+  "home.contactSub": "Ponte en Contacto",
+  "home.contactTitle": "Estamos Aquí para Ayudar",
+  "home.servicesSub": "Nuestros Servicios",
+  "home.servicesTitle": "Servicios",
+  "home.servicesDesc": "Soluciones de viaje premium adaptadas a tus necesidades",
+  "home.servicesHotelsDesc": "Alojamientos de lujo 5 estrellas y hoteles boutique seleccionados en todos los destinos",
+  "home.servicesTransportDesc": "Vehículos de lujo privados, traslados al aeropuerto y tours con conductores expertos"
 }

@@ -89,29 +89,19 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Columns: Quick Links | Programs | Destinations | Contact */}
+      {/* Columns: Quick Links | Destinations | Contact */}
       <div className="relative z-10 w-full px-6 sm:px-12 lg:px-20 pt-8 pb-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
 
-          {/* Quick Links (left) */}
+          {/* Quick Links */}
           <div>
             <h3 className="text-white mb-4 text-lg font-bold">{t('footer.quickLinks', 'Quick Links')}</h3>
             <ul className="flex flex-col gap-2 text-base font-bold">
               <li><Link to="/about" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.about')}</Link></li>
-              <li><Link to="/programs" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.services')}</Link></li>
               <li><Link to="/blogs" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.blogs')}</Link></li>
               <li><Link to="/contact" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.contact')}</Link></li>
               <li><Link to="/faq" className="text-white hover:text-[#F5A623] transition-colors">{t('footer.faq', 'FAQs')}</Link></li>
               <li><Link to="/invoice" className="text-white hover:text-[#F5A623] transition-colors">{t('booking.invoice', 'Invoice')}</Link></li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="text-white mb-4 text-lg font-bold">{t('nav.services')}</h3>
-            <ul className="flex flex-col gap-2 text-base font-bold">
-              <li><Link to="/programs/hotels" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.hotelsTab', 'Hotels')}</Link></li>
-              <li><Link to="/programs/transportation" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.transportation', 'Transportation')}</Link></li>
             </ul>
           </div>
 

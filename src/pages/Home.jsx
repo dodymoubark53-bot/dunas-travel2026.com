@@ -1602,6 +1602,165 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section className="py-24 lg:py-32 relative overflow-hidden" style={{ background: 'linear-gradient(160deg, rgb(4,20,70) 0%, rgb(6,29,93) 50%, rgb(8,16,50) 100%)' }}>
+        {/* Decorative backdrop elements */}
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-[0.05]" 
+          style={{ 
+            background: 'radial-gradient(circle at 10% 20%, rgb(30,58,138) 0%, transparent 40%), radial-gradient(circle at 90% 80%, #F5A623 0%, transparent 40%)' 
+          }} 
+        />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/20 to-transparent" />
+        
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center mb-16 md:mb-24"
+          >
+            <span className="inline-block text-gold-600 uppercase tracking-[0.25em] text-caption mb-4 font-bold text-xs px-4 py-1.5 rounded-full bg-gold-500/5 border border-gold-500/10">
+              {t('home.servicesSub', 'Our Services')}
+            </span>
+            <h2 className="text-display-lg text-ivory-50 font-display mb-6 tracking-wide">
+              {t('home.servicesTitle', 'Services')}
+            </h2>
+            <p className="text-ivory-300 text-body-md max-w-xl mx-auto font-body">
+              {t('home.servicesDesc', 'Premium travel solutions tailored to your needs')}
+            </p>
+            <div className="w-20 h-[3px] bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto mt-8 rounded-full" />
+          </motion.div>
+
+          {/* Dynamic Expanding Panels */}
+          <div className="flex flex-col md:flex-row gap-8 w-full max-w-5xl mx-auto min-h-[500px] md:h-[550px]">
+            
+            {/* Hotels Card */}
+            <motion.a
+              href="/programs/hotels"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="relative flex-1 md:hover:grow-[1.4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group rounded-3xl overflow-hidden cursor-pointer shadow-card hover:shadow-card-lg border border-gold-200/20 flex flex-col justify-end"
+            >
+              {/* Background Image with Muted Overlay */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-out group-hover:scale-105"
+                style={{
+                  backgroundImage: "url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80')"
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-900/60 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-95" />
+              
+              {/* Golden Overlay Light Leak */}
+              <div className="absolute inset-0 bg-gold-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
+              {/* Background Motif: Arched Dome Outlines */}
+              <svg className="absolute -right-12 -bottom-12 w-64 h-64 text-gold-500/10 pointer-events-none transform group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-1000" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.5">
+                <circle cx="50" cy="50" r="40" strokeDasharray="2 2" />
+                <path d="M50 10v80M10 50h80" />
+                <path d="M22 22l56 56M22 78l56-56" />
+              </svg>
+
+              {/* Content Panel */}
+              <div className="relative z-10 p-8 md:p-10 flex flex-col md:flex-row gap-6 items-center md:items-start text-center md:text-start transform md:translate-y-6 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                {/* Custom Palace Door SVG Icon */}
+                <div className="w-16 h-16 rounded-2xl bg-gold-500/15 border border-gold-500/30 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md transition-all duration-500 group-hover:bg-gold-500 group-hover:text-obsidian-900 group-hover:scale-110">
+                  <svg className="w-9 h-9 text-gold-400 group-hover:text-obsidian-900 transition-colors duration-500" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M12 52V28C12 16.9543 20.9543 8 32 8C43.0457 8 52 16.9543 52 28V52" strokeLinecap="round"/>
+                    <path d="M6 52H58" strokeLinecap="round"/>
+                    <path d="M22 52V30C22 24.4772 26.4772 20 32 20C37.5228 20 42 24.4772 42 30V52" strokeLinecap="round"/>
+                    <circle cx="32" cy="30" r="4" fill="currentColor"/>
+                    <path d="M32 34V42" strokeLinecap="round"/>
+                    <line x1="32" y1="8" x2="32" y2="14" strokeLinecap="round"/>
+                    <path d="M28 14H36" strokeLinecap="round"/>
+                  </svg>
+                </div>
+
+                <div className="space-y-3 flex-grow">
+                  <span className="text-[10px] text-gold-400 font-bold uppercase tracking-[0.2em]">01 / Sanctuary Stay</span>
+                  <h3 className="text-2xl font-bold text-ivory-50 font-display tracking-wide">{t('nav.hotelsTab', 'Hotels')}</h3>
+                  <p className="text-ivory-300 text-sm leading-relaxed font-body max-w-sm md:opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+                    {t('home.servicesHotelsDesc', 'Luxury 5-star accommodations and handpicked boutique hotels across all destinations')}
+                  </p>
+                  
+                  {/* Action Link */}
+                  <div className="inline-flex items-center gap-2 text-xs font-bold text-gold-400 group-hover:text-gold-300 transition-colors pt-2 uppercase tracking-widest">
+                    <span>{t('services.explore', 'Explore')}</span>
+                    <FaArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1.5 transition-transform duration-300" />
+                  </div>
+                </div>
+              </div>
+            </motion.a>
+
+            {/* Transportation Card */}
+            <motion.a
+              href="/programs/transportation"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="relative flex-1 md:hover:grow-[1.4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group rounded-3xl overflow-hidden cursor-pointer shadow-card hover:shadow-card-lg border border-gold-200/20 flex flex-col justify-end"
+            >
+              {/* Background Image with Muted Overlay */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-out group-hover:scale-105"
+                style={{
+                  backgroundImage: "url('https://res.cloudinary.com/degbrq3ck/image/upload/v1783071610/bus1_lprkiy.jpg')"
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-900/60 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-95" />
+              
+              {/* Golden Overlay Light Leak */}
+              <div className="absolute inset-0 bg-gold-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
+              {/* Background Motif: Navigational Lines */}
+              <svg className="absolute -right-12 -bottom-12 w-64 h-64 text-gold-500/10 pointer-events-none transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-1000" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.5">
+                <path d="M10 90 C 20 40, 80 60, 90 10" strokeLinecap="round" />
+                <path d="M15 90 C 25 45, 75 55, 85 15" strokeLinecap="round" strokeDasharray="3 3" />
+                <circle cx="90" cy="10" r="4" fill="currentColor" />
+                <circle cx="10" cy="90" r="4" fill="currentColor" />
+              </svg>
+
+              {/* Content Panel */}
+              <div className="relative z-10 p-8 md:p-10 flex flex-col md:flex-row gap-6 items-center md:items-start text-center md:text-start transform md:translate-y-6 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                {/* Custom Windrose / Navigator SVG Icon */}
+                <div className="w-16 h-16 rounded-2xl bg-gold-500/15 border border-gold-500/30 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md transition-all duration-500 group-hover:bg-gold-500 group-hover:text-obsidian-900 group-hover:scale-110">
+                  <svg className="w-9 h-9 text-gold-400 group-hover:text-obsidian-900 transition-colors duration-500" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <circle cx="32" cy="32" r="24" strokeDasharray="4 4" strokeLinecap="round"/>
+                    <path d="M32 12L36 28L32 32L28 28Z" fill="currentColor" opacity="0.3"/>
+                    <path d="M32 52L28 36L32 32L36 36Z" fill="currentColor" opacity="0.3"/>
+                    <path d="M12 32L28 28L32 32L28 36Z" fill="currentColor" opacity="0.3"/>
+                    <path d="M52 32L36 36L32 32L36 28Z" fill="currentColor" opacity="0.3"/>
+                    <path d="M32 10V22" strokeLinecap="round"/>
+                    <path d="M30 14L32 10L34 14" strokeLinecap="round" strokeJoin="round"/>
+                    <path d="M16 48C28 48 24 24 48 20" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
+                    <circle cx="48" cy="20" r="3" fill="currentColor"/>
+                  </svg>
+                </div>
+
+                <div className="space-y-3 flex-grow">
+                  <span className="text-[10px] text-gold-400 font-bold uppercase tracking-[0.2em]">02 / Premium Voyage</span>
+                  <h3 className="text-2xl font-bold text-ivory-50 font-display tracking-wide">{t('nav.transportation', 'Transportation')}</h3>
+                  <p className="text-ivory-300 text-sm leading-relaxed font-body max-w-sm md:opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+                    {t('home.servicesTransportDesc', 'Private luxury vehicles, airport transfers, and chauffeur-driven tours with expert drivers')}
+                  </p>
+                  
+                  {/* Action Link */}
+                  <div className="inline-flex items-center gap-2 text-xs font-bold text-gold-400 group-hover:text-gold-300 transition-colors pt-2 uppercase tracking-widest">
+                    <span>{t('services.explore', 'Explore')}</span>
+                    <FaArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1.5 transition-transform duration-300" />
+                  </div>
+                </div>
+              </div>
+            </motion.a>
+
+          </div>
+        </div>
+      </section>
+
       {/* Contact Info Section */}
       <section className="py-20 lg:py-32 relative overflow-hidden bg-obsidian-900">
         {/* Glow Effects */}

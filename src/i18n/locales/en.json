@@ -4619,5 +4619,12 @@
   "home.transportTitle": "Premium Transportation Services",
   "home.transportDesc": "Luxury vehicles and professional drivers — available across Egypt, Jordan, Turkey & Tunisia",
   "home.bookTransferDesc": "Fill out the details below and our concierge will confirm your reservation.",
-  "home.ctaDesc": "Let us craft a journey tailored entirely to you"
+  "home.ctaDesc": "Let us craft a journey tailored entirely to you",
+  "home.contactSub": "Get In Touch",
+  "home.contactTitle": "We're Here to Help",
+  "home.servicesSub": "Our Services",
+  "home.servicesTitle": "Services",
+  "home.servicesDesc": "Premium travel solutions tailored to your needs",
+  "home.servicesHotelsDesc": "Luxury 5-star accommodations and handpicked boutique hotels across all destinations",
+  "home.servicesTransportDesc": "Private luxury vehicles, airport transfers, and chauffeur-driven tours with expert drivers"
 }

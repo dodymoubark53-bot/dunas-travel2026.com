@@ -4456,5 +4456,12 @@
   "home.transportTitle": "خدمات النقل الممتازة",
   "home.transportDesc": "سيارات فاخرة وسواقون محترفون — متاحة في مصر، الأردن، تركيا وتونس",
   "home.bookTransferDesc": "املأ التفاصيل أدناه وسيؤكد مستخدمنا حجزك.",
-  "home.ctaDesc": "دعنا نصمم رحلة مصممة خصيصياً لك"
+  "home.ctaDesc": "دعنا نصمم رحلة مصممة خصيصياً لك",
+  "home.contactSub": "تواصل معنا",
+  "home.contactTitle": "نحن هنا للمساعدة",
+  "home.servicesSub": "خدماتنا",
+  "home.servicesTitle": "الخدمات",
+  "home.servicesDesc": "حلول سفر فاخرة مصممة خصيصاً لاحتياجاتك",
+  "home.servicesHotelsDesc": "أجنحة فاخرة 5 نجوم وفنادق بوتيك منتقاة بعناية في جميع الوجهات",
+  "home.servicesTransportDesc": "سيارات فاخرة خاصة، خدمات نقل من وإلى المطار، وجولات بسائقين خبراء"
 }
