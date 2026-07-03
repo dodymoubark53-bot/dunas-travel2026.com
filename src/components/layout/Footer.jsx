@@ -89,14 +89,14 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Columns: Quick Links | Destinations | Contact */}
+      {/* Columns: Quick Links */}
       <div className="relative z-10 w-full px-6 sm:px-12 lg:px-20 pt-8 pb-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="max-w-md mx-auto">
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white mb-4 text-lg font-bold">{t('footer.quickLinks', 'Quick Links')}</h3>
-            <ul className="flex flex-col gap-2 text-base font-bold">
+            <h3 className="text-white mb-4 text-lg font-bold text-center">{t('footer.quickLinks', 'Quick Links')}</h3>
+            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-base font-bold">
               <li><Link to="/about" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.about')}</Link></li>
               <li><Link to="/blogs" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.blogs')}</Link></li>
               <li><Link to="/contact" className="text-white hover:text-[#F5A623] transition-colors">{t('nav.contact')}</Link></li>
@@ -105,29 +105,26 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Destinations */}
-          <div>
-            <h3 className="text-white mb-4 text-lg font-bold">{t('nav.destinations')}</h3>
-            <ul className="flex flex-col gap-2 text-base font-bold">
-              {[
-                { key: 'egipto', path: '/destinations/egypt' },
-                { key: 'turquia', path: '/destinations/turkey' },
-                { key: 'jordania', path: '/destinations/jordan' },
-                { key: 'marruecos', path: '/destinations/morocco' },
-                { key: 'grecia', path: '/destinations/greece' },
-                { key: 'dubai', path: '/destinations/dubai' },
-                { key: 'tuniz', path: '/destinations/tunisia' },
-                { key: 'tierrasanta', path: '/destinations/holyland' },
-              ].map(({ key, path }) => (
-                <li key={key}>
-                  <Link to={path} className="text-white hover:text-[#F5A623] transition-colors">{t(`nav.${key}`)}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+        </div>
 
-          {/* Contact - replaced by FloatingContact button */}
-
+        {/* Trusted Partners Logos Grid */}
+        <div className="mt-16 mb-12 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-12 lg:gap-16 px-6 items-center justify-items-center">
+          {[
+            { src: "https://res.cloudinary.com/degbrq3ck/image/upload/w_400,h_240,c_limit,q_auto,f_auto/v1783033035/dunas-travel-logo-removebg-preview_mjfl90.png", alt: "Logo 1" },
+            { src: "https://res.cloudinary.com/degbrq3ck/image/upload/w_400,h_240,c_limit,q_auto,f_auto/v1783033441/logo20_f5rfsz.png", alt: "Logo 2" },
+            { src: "https://res.cloudinary.com/degbrq3ck/image/upload/w_400,h_240,c_limit,q_auto,f_auto/v1783033442/logo3_sk0tns.png", alt: "Logo 3" },
+            { src: "https://res.cloudinary.com/degbrq3ck/image/upload/w_400,h_240,c_limit,q_auto,f_auto/v1783033442/logo4_tso9ey.png", alt: "Logo 4" },
+            { src: "https://res.cloudinary.com/degbrq3ck/image/upload/w_400,h_240,c_limit,q_auto,f_auto/v1783033440/logo5_qpuki9.png", alt: "Logo 5" },
+            { src: "https://res.cloudinary.com/degbrq3ck/image/upload/v1783074195/drilldown-removebg-preview_z9np4k.png", alt: "Logo 6" },
+          ].map((logo, idx) => (
+            <div key={idx} className="flex items-center justify-center w-full h-28 bg-transparent select-none">
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className="max-h-20 md:max-h-24 max-w-[180px] md:max-w-[220px] w-auto object-contain hover:scale-105 transition-all duration-300"
+              />
+            </div>
+          ))}
         </div>
 
         {/* Credits */}

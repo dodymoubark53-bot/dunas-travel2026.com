@@ -71,6 +71,97 @@ const destinationsData = [
   },
 ];
 
+const newDestinationsList = [
+  {
+    id: "egypt",
+    nameAr: "مصر",
+    nameEn: "Egypt",
+    tagAr: "نبض النيل والأهرامات الخالدة",
+    tagEn: "PHARAOHS & IMMORTAL TEMPLES",
+    descAr: "رحلة عبر خمسة آلاف عام من السحر والغموض، من عظمة الجيزة إلى هدوء أسوان.",
+    descEn: "A journey through five millennia of magic, from the majesty of Giza to the serenity of Aswan.",
+    image: "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=800&q=80",
+    link: "/destinations/egypt"
+  },
+  {
+    id: "turkey",
+    nameAr: "تركيا",
+    nameEn: "Turkey",
+    tagAr: "حكاية الشرق وسحر إسطنبول",
+    tagEn: "CAPPADOCIA BALLOONS & OTTOMAN LEGACY",
+    descAr: "جسور الحضارة التاريخية، وشواطئ الريفييرا التركية، ومناطيد كبادوكيا الحالمة.",
+    descEn: "Bridges of history, the sun-kissed Turkish Riviera, and the dreamlike balloon-filled skies of Cappadocia.",
+    image: "https://images.unsplash.com/photo-1527838832700-50592524df75?auto=format&fit=crop&w=800&q=80",
+    link: "/destinations/turkey"
+  },
+  {
+    id: "jordan",
+    nameAr: "الأردن",
+    nameEn: "Jordan",
+    tagAr: "مدينة الأنباط الوردية وصحراء رم",
+    tagEn: "PETRA WONDERS & BEDOUIN STARS",
+    descAr: "من روعة البتراء المنحوتة في الصخر إلى هدوء وادي رم الساحر وسحر البحر الميت.",
+    descEn: "From the pink-hued stone carvings of Petra to the starry silence of Wadi Rum.",
+    image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=800&q=80",
+    link: "/destinations/jordan"
+  },
+  {
+    id: "morocco",
+    nameAr: "المغرب",
+    nameEn: "Morocco",
+    tagAr: "ألوان مراكش وعبق الأندلس",
+    tagEn: "MEDINAS & ATLAS MOUNTAIN PALACES",
+    descAr: "دروب فاس العتيقة، وقصور مراكش الفاخرة، وحكايات الصحراء تحت النجوم.",
+    descEn: "The ancient winding streets of Fez, red palaces of Marrakech, and tales of the Sahara.",
+    image: "https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=800&q=80",
+    link: "/destinations/morocco"
+  },
+  {
+    id: "greece",
+    nameAr: "اليونان",
+    nameEn: "Greece",
+    tagAr: "أساطير بحر إيجة وجزر سانتوريني",
+    tagEn: "SANTORINI DOMES & GREEK MYTHS",
+    descAr: "قباب زرقاء ممتدة مع الأفق، ومياه فيروزية تحكي قصص الفلاسفة والآلهة.",
+    descEn: "Blue domes meeting the infinite horizon, and turquoise waters whispering ancient myths.",
+    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80",
+    link: "/destinations/greece"
+  },
+  {
+    id: "dubai",
+    nameAr: "دبي",
+    nameEn: "Dubai",
+    tagAr: "واحة المستقبل والرفاهية المطلقة",
+    tagEn: "SKY-HIGH LUXURY & SAND DUNES",
+    descAr: "ناطحات سحاب تعانق السماء، وتجارب تسوق فاخرة، وصحراء ذهبية لا تنام.",
+    descEn: "Futuristic skylines, ultra-luxury retreats, and golden desert dunes that never sleep.",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80",
+    link: "/destinations/dubai"
+  },
+  {
+    id: "tunisia",
+    nameAr: "تونس",
+    nameEn: "Tunisia",
+    tagAr: "تاريخ قرطاج وجمال سيدي بو سعيد",
+    tagEn: "CARTHAGE RUINS & MEDITERRANEAN BREEZE",
+    descAr: "نسيم البحر الأبيض المتوسط يداعب جدران الضيعات البيضاء والزرقاء وأطلال قرطاج.",
+    descEn: "Mediterranean breezes caressing whitewashed walls and the ancient columns of Carthage.",
+    image: "https://images.unsplash.com/photo-1580502304784-8985b7eb7260?auto=format&fit=crop&w=800&q=80",
+    link: "/destinations/tunisia"
+  },
+  {
+    id: "holyland",
+    nameAr: "الأراضي المقدسة",
+    nameEn: "Holy Land",
+    tagAr: "مهد الأديان وعبق التاريخ",
+    tagEn: "FAITH, HISTORY & SACRED PATHWAYS",
+    descAr: "معالم روحية وتاريخية خالدة تروي قصص الأنبياء والحضارات المتعاقبة.",
+    descEn: "Sacred spires and ancient pathways whispering stories of faith and human history.",
+    image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=800&q=80",
+    link: "/destinations/holyland"
+  }
+];
+
 const getOptimizedImageUrl = (url, width = 400, height = 450) => {
   if (!url) return url;
   if (url.includes('cloudinary.com')) {
@@ -1504,35 +1595,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Trusted Partners / Logos Section */}
-      <section className="py-[50px] px-[20px] bg-[#f8f8f8] dark:bg-[#1a1a30]">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="flex flex-wrap items-center justify-center gap-6">
-            {[
-              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/w_180,h_110,c_limit,q_auto,f_auto/v1783033035/dunas-travel-logo-removebg-preview_mjfl90.png", alt: "Logo 1" },
-              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/w_180,h_110,c_limit,q_auto,f_auto/v1783033441/logo20_f5rfsz.png", alt: "Logo 2" },
-              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/w_180,h_110,c_limit,q_auto,f_auto/v1783033442/logo3_sk0tns.png", alt: "Logo 3" },
-              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/w_180,h_110,c_limit,q_auto,f_auto/v1783033442/logo4_tso9ey.png", alt: "Logo 4" },
-              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/w_180,h_110,c_limit,q_auto,f_auto/v1783033440/logo5_qpuki9.png", alt: "Logo 5" },
-              { src: "https://res.cloudinary.com/degbrq3ck/image/upload/w_180,h_110,c_limit,q_auto,f_auto/v1783033441/logo6_drog9y.jpg", alt: "Logo 6" },
-            ].map((logo, idx) => (
-              <div
-                key={idx}
-                className="logo-oval-bg bg-white rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all flex justify-center items-center h-[110px] w-[180px] p-5 hover:-translate-y-1"
-              >
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  width="140"
-                  height="70"
-                  className="max-h-full max-w-full object-contain transition-all duration-300"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Video Strip Section */}
       <section className="py-16" style={{ background: 'linear-gradient(180deg, rgb(10,25,105) 0%, rgb(6,29,93) 50%, rgb(10,21,53) 100%)' }}>
         <div className="container mx-auto px-6">
@@ -1977,6 +2039,167 @@ const Home = () => {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* Destinations Section */}
+      <section className="py-28 lg:py-36 bg-[#FEFCF7] relative overflow-hidden" dir={isRtl ? "rtl" : "ltr"}>
+        {/* Soft Background Gradients */}
+        <div className="absolute inset-0 opacity-[0.05] pointer-events-none" 
+          style={{ 
+            background: 'radial-gradient(circle at 80% 20%, rgb(30,58,138) 0%, transparent 60%), radial-gradient(circle at 20% 80%, #F5A623 0%, transparent 60%)' 
+          }} 
+        />
+        {/* Decorative Grid Lines */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent" />
+        
+        {/* Slow-spinning background compass motif */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] opacity-[0.02] pointer-events-none z-0">
+          <svg className="w-full h-full animate-spin-slow" viewBox="0 0 100 100" fill="none" stroke="#d4af37" strokeWidth="0.25">
+            <circle cx="50" cy="50" r="45" />
+            <circle cx="50" cy="50" r="40" strokeDasharray="1 3" />
+            <circle cx="50" cy="50" r="2" fill="#d4af37" />
+            <path d="M50 5v90M5 50h90" />
+            <path d="M50 5L52 45L50 50L48 45Z" fill="#d4af37" />
+            <path d="M50 95L48 55L50 50L52 55Z" fill="#d4af37" />
+            <path d="M5 50L45 48L50 50L45 52Z" fill="#d4af37" />
+            <path d="M95 50L55 52L50 50L55 48Z" fill="#d4af37" />
+          </svg>
+        </div>
+
+        {/* Shimmer & Rotation Custom Styles */}
+        <style>
+          {`
+            @keyframes spin-slow {
+              from { transform: rotate(0deg); }
+              to { transform: rotate(360deg); }
+            }
+            .animate-spin-slow {
+              animation: spin-slow 150s linear infinite;
+            }
+            .dest-card-shimmer::after {
+              content: '';
+              position: absolute;
+              top: -50%;
+              left: -60%;
+              width: 30%;
+              height: 200%;
+              background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.15) 50%,
+                rgba(255, 255, 255, 0) 100%
+              );
+              transform: rotate(25deg);
+              transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+              pointer-events: none;
+            }
+            .group:hover .dest-card-shimmer::after {
+              left: 130%;
+            }
+          `}
+        </style>
+
+        <div className="container mx-auto px-6 relative z-10">
+          
+          {/* Section Header with Layered Watermark */}
+          <div className="relative mb-24 text-center">
+            {/* Huge watermarked text behind */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[70px] sm:text-[110px] md:text-[150px] font-display font-bold uppercase tracking-[0.15em] text-gold-500/[0.04] select-none pointer-events-none whitespace-nowrap z-0">
+              {isRtl ? "اكتشف العالم" : "EXPLORE"}
+            </div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="relative z-10 space-y-4"
+            >
+              <span className="inline-block text-gold-600 uppercase tracking-[0.25em] text-[10px] md:text-xs font-bold px-5 py-2 rounded-full bg-gold-500/5 border border-gold-500/10 backdrop-blur-sm shadow-[0_4px_20px_rgba(201,162,39,0.05)]">
+                {isRtl ? "الرحلات الحصرية لعام ٢٠٢٦" : "EXCLUSIVE VOYAGES 2026"}
+              </span>
+              <h2 className="text-display-lg text-primary-900 font-display tracking-wide leading-tight mt-2">
+                {isRtl ? "الوجهات" : t('nav.destinations', 'Destinations')}
+              </h2>
+              <p className="text-obsidian-500 text-body-md max-w-xl mx-auto font-body font-medium leading-relaxed">
+                {isRtl 
+                  ? "اكتشف عجائب الدنيا القديمة وعواصم الحداثة الفاخرة، رحلات منسقة خصيصًا لتلبي تطلعاتك."
+                  : "Discover the wonders of the ancient world and the capitals of modern luxury, curated bespoke for you."
+                }
+              </p>
+              <div className="w-24 h-[3px] bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto mt-6 rounded-full" />
+            </motion.div>
+          </div>
+
+          {/* Destinations Cinematic Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
+            {newDestinationsList.map((item, idx) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.75, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
+              >
+                <Link
+                  to={item.link}
+                  className="group relative flex flex-col justify-end h-[460px] md:h-[500px] rounded-[32px] overflow-hidden bg-obsidian-950 border border-gold-300/10 shadow-[0_12px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_24px_64px_rgba(245,166,35,0.22)] hover:border-gold-500/35 transition-all duration-[750ms] ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer text-start dest-card-shimmer"
+                >
+                  {/* Floating Recommended Badge */}
+                  <div className={`absolute top-6 ${isRtl ? 'right-6' : 'left-6'} z-20`}>
+                    <div className="px-3.5 py-1.5 rounded-full bg-black/45 backdrop-blur-md border border-white/10 text-[9px] font-bold text-gold-400 uppercase tracking-widest shadow-md">
+                      {isRtl ? "موصى به" : "RECOMMENDED"}
+                    </div>
+                  </div>
+
+                  {/* Background Image with Zoom on Hover */}
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-115"
+                    style={{ backgroundImage: `url('${item.image}')` }}
+                  />
+                  
+                  {/* Strong Dark Gradient Overlay for Readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/65 to-obsidian-950/10 transition-all duration-500" />
+                  
+                  {/* Golden Lighting Leak */}
+                  <div className="absolute inset-0 bg-gold-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
+                  {/* Card Content */}
+                  <div className={`relative z-10 p-8 flex flex-col justify-end h-full ${isRtl ? 'text-right' : 'text-left'}`}>
+                    <div className="space-y-3 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
+                      {/* Subheading / Tagline */}
+                      <span className="text-[10px] font-bold uppercase tracking-[0.2em] block transform group-hover:scale-105 origin-left transition-transform duration-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] text-gold-400">
+                        {isRtl ? item.tagAr : item.tagEn}
+                      </span>
+                      
+                      {/* Destination Name */}
+                      <h3 className="text-2xl md:text-3xl font-bold font-display tracking-wide transition-colors duration-300 leading-tight drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] text-ivory-50 group-hover:text-gold-400">
+                        {isRtl ? item.nameAr : item.nameEn}
+                      </h3>
+                      
+                      {/* Divider line that expands from 0 to 100% on hover */}
+                      <div className="w-0 group-hover:w-full h-px bg-gradient-to-r from-transparent via-gold-500/40 to-transparent transition-all duration-[800ms] ease-out mt-2" />
+
+                      {/* Description text */}
+                      <p className="text-ivory-300 text-xs md:text-sm leading-relaxed font-body font-medium opacity-0 group-hover:opacity-100 transform translate-y-3 group-hover:translate-y-0 transition-all duration-[600ms] delay-75 ease-out max-w-[280px] drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+                        {isRtl ? item.descAr : item.descEn}
+                      </p>
+                      
+                      {/* Action Explore Button */}
+                      <div className="flex items-center justify-between pt-2 mt-4 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-[600ms] delay-150 ease-out border-t border-white/5">
+                        <span className="text-[9px] font-bold uppercase tracking-widest text-gold-400">
+                          {isRtl ? "استكشف البرامج" : "Explore Programs"}
+                        </span>
+                        <FaArrowRight className={`w-3.5 h-3.5 text-gold-400 transform transition-transform duration-300 ${isRtl ? 'rotate-180 group-hover:-translate-x-1.5' : 'group-hover:translate-x-1.5'}`} />
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+
         </div>
       </section>
 
