@@ -1,4 +1,4 @@
-import { useState, useRef, useMemo, useEffect, useCallback } from "react";
+import { useState, useRef, useMemo, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,7 +9,6 @@ import TourCard from "../components/tour/TourCard";
 import { tours } from "../data/tours";
 import { turkeyTours } from "../data/turkeyTours";
 import { multiCountryTours } from "../data/multiCountryTours";
-import HieroglyphicName from "../components/home/HieroglyphicName";
 import { useTurkeyPrograms } from "../hooks/useTurkeyPrograms";
 import { useJordanPrograms } from "../hooks/useJordanPrograms";
 import { useDubaiPrograms } from "../hooks/useDubaiPrograms";
@@ -453,48 +452,6 @@ const Home = () => {
 
   useScrollAnimations();
   const isRtl = i18n.dir() === 'rtl';
-  const tourMarqueeRef = useRef(null);
-
-  useEffect(() => {
-    const el = tourMarqueeRef.current;
-    if (!el) return;
-    let rafId;
-    let paused = false;
-    const step = isRtl ? -0.4 : 0.4;
-    const animate = () => {
-      if (!paused) {
-        const maxScroll = el.scrollWidth / 2;
-        if (el.scrollLeft >= maxScroll) {
-          el.scrollLeft = 0;
-        } else if (el.scrollLeft <= 0 && isRtl) {
-          el.scrollLeft = maxScroll;
-        } else {
-          el.scrollLeft += step;
-        }
-      }
-      rafId = requestAnimationFrame(animate);
-    };
-    const onEnter = () => { paused = true; };
-    const onLeave = () => { paused = false; };
-    el.addEventListener('mouseenter', onEnter);
-    el.addEventListener('mouseleave', onLeave);
-    rafId = requestAnimationFrame(animate);
-    return () => {
-      cancelAnimationFrame(rafId);
-      el.removeEventListener('mouseenter', onEnter);
-      el.removeEventListener('mouseleave', onLeave);
-    };
-  }, [isRtl]);
-
-  const handleTourPrev = useCallback(() => {
-    const el = tourMarqueeRef.current;
-    if (el) el.scrollLeft -= 420;
-  }, []);
-
-  const handleTourNext = useCallback(() => {
-    const el = tourMarqueeRef.current;
-    if (el) el.scrollLeft += 420;
-  }, []);
 
   const filteredVehicles =
     vehicleFilter === "all"
@@ -1001,30 +958,18 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Navigation Buttons */}
-        <button
-          onClick={handleTourPrev}
-          className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-obsidian-700 hover:bg-gold-500 hover:text-white hover:shadow-xl transition-all duration-300 backdrop-blur-sm"
-          aria-label="Previous tours"
-        >
-          <FaChevronLeft size={16} />
-        </button>
-        <button
-          onClick={handleTourNext}
-          className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-obsidian-700 hover:bg-gold-500 hover:text-white hover:shadow-xl transition-all duration-300 backdrop-blur-sm"
-          aria-label="Next tours"
-        >
-          <FaChevronRight size={16} />
-        </button>
+        {/* Navigation Buttons - removed, CSS animation handles auto-scroll */}
 
           <div className="overflow-hidden w-full">
             <div
-              ref={tourMarqueeRef}
               className="flex w-max"
               style={{
                 gap: "24px",
                 paddingLeft: "24px",
+                animation: `${isRtl ? 'tourMarqueeRTL' : 'tourMarquee'} 60s linear infinite`,
               }}
+              onMouseEnter={e => e.currentTarget.style.animationPlayState = 'paused'}
+              onMouseLeave={e => e.currentTarget.style.animationPlayState = 'running'}
             >
             {(() => {
               const sliced = allToursForMarquee.slice(0, 12);
@@ -1100,8 +1045,6 @@ const Home = () => {
       </section>
 
 
-
-      <HieroglyphicName />
 
       {/* Transportation & Transfers */}
       <section className="py-12 bg-ivory-50 relative overflow-hidden">
