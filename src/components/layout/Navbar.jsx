@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBars, FaTimes, FaGlobe, FaChevronDown, FaUserCircle, FaSignOutAlt, FaBookmark, FaMoon, FaSun } from 'react-icons/fa';
+import { FaBars, FaTimes, FaGlobe, FaChevronDown, FaUserCircle, FaSignOutAlt, FaBookmark, FaMoon, FaSun, FaPlane, FaEnvelope, FaPhone, FaWhatsapp } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../context/AuthContext';
 import { useTheme } from '../../context/ThemeContext';
@@ -126,254 +126,271 @@ const Navbar = () => {
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 h-16 lg:h-20 flex items-center bg-white ${headerVisible ? 'translate-y-0' : '-translate-y-full'} ${scrolled ? 'shadow-[0_4px_20px_rgba(0,0,0,0.12)]' : 'shadow-[0_1px_4px_rgba(0,0,0,0.06)]'
-        }`}
-    >
-      <div className="container mx-auto px-6 h-full flex justify-between items-center relative z-10">
-        {/* Logo */}
-        <Link to="/" className="flex items-center z-50" onClick={() => setMobileMenuOpen(false)}>
-          <Logo theme="dark" height={60} />
-        </Link>
+    <>
+      {/* Top Bar */}
+      <div className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-500 ${headerVisible ? 'translate-y-0' : '-translate-y-full'}`} style={{ background: 'linear-gradient(135deg, rgb(4, 20, 70) 0%, rgb(6, 29, 93) 40%, rgb(10, 40, 120) 100%)' }}>
+        {/* Subtle shine overlay */}
+        <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ background: 'linear-gradient(90deg, transparent 0%, #fff 50%, transparent 100%)' }} />
+        {/* Gold accent border */}
+        <div className="absolute bottom-0 left-0 right-0 h-[1px]" style={{ background: 'linear-gradient(90deg, transparent, rgba(201,162,39,0.5), transparent)' }} />
+        <div className="container mx-auto px-4 sm:px-6 relative">
+          <div className="flex items-center justify-between h-10 sm:h-11 text-white text-[11px] sm:text-xs">
+            {/* Left: Contact Info */}
+            <div className="flex items-center gap-2 sm:gap-5 overflow-hidden">
+              <a href="mailto:info@dunas-travel.com" className="group flex items-center gap-1.5 hover:text-gold-400 transition-all duration-300 whitespace-nowrap">
+                <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-gold-500/20 group-hover:scale-110 transition-all duration-300">
+                  <FaEnvelope size={10} className="text-gold-300 group-hover:text-gold-400" />
+                </span>
+                <span className="hidden sm:inline font-light tracking-wide">info@dunas-travel.com</span>
+                <span className="sm:hidden text-[10px] font-light">Email</span>
+              </a>
+              <span className="w-px h-4 bg-gradient-to-b from-transparent via-white/30 to-transparent hidden sm:block" />
+              <a href="tel:+20233746643" className="group flex items-center gap-1.5 hover:text-gold-400 transition-all duration-300 whitespace-nowrap">
+                <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-gold-500/20 group-hover:scale-110 transition-all duration-300">
+                  <FaPhone size={9} className="text-gold-300 group-hover:text-gold-400" />
+                </span>
+                <span className="font-light tracking-wide">02 33746643</span>
+              </a>
+              <span className="w-px h-4 bg-gradient-to-b from-transparent via-white/30 to-transparent hidden sm:block" />
+              <a href="tel:+20233746654" className="group items-center gap-1.5 hover:text-gold-400 transition-all duration-300 whitespace-nowrap hidden md:flex">
+                <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-gold-500/20 group-hover:scale-110 transition-all duration-300">
+                  <FaPhone size={9} className="text-gold-300 group-hover:text-gold-400" />
+                </span>
+                <span className="font-light tracking-wide">02 33746654</span>
+              </a>
+              <span className="w-px h-4 bg-gradient-to-b from-transparent via-white/30 to-transparent hidden md:block" />
+              <a href="tel:+201149401111" className="group items-center gap-1.5 hover:text-gold-400 transition-all duration-300 whitespace-nowrap hidden lg:flex">
+                <span className="w-6 h-6 rounded-full bg-[#25D366]/20 flex items-center justify-center group-hover:bg-[#25D366]/30 group-hover:scale-110 transition-all duration-300">
+                  <FaWhatsapp size={10} className="text-[#25D366] group-hover:text-gold-400" />
+                </span>
+                <span className="font-light tracking-wide">+20 114 940 1111</span>
+              </a>
+            </div>
 
-        {/* Desktop Nav (Hover) */}
-        <nav className="hidden lg:flex items-center gap-8 flex-shrink-0">
-          {navLinks.map((link) => (
-            <div
-              key={link.name}
-              className="relative group"
-              onMouseEnter={() => link.dropdown && setActiveDropdown(link.name)}
-              onMouseLeave={() => link.dropdown && setActiveDropdown(null)}
-            >
-              {link.dropdown ? (
-                <button className="flex items-center gap-1 text-obsidian-900 hover:text-[#F5A623] transition-colors text-body-md font-medium py-2 whitespace-nowrap flex-shrink-0">
-                  {link.name} <FaChevronDown className={`text-xs transition-transform duration-200 ${activeDropdown === link.name ? 'rotate-180' : ''}`} />
-                </button>
-              ) : (
-                <Link to={link.path} className="text-obsidian-900 hover:text-[#F5A623] transition-colors text-body-md font-medium py-2 whitespace-nowrap flex-shrink-0">
-                  {link.name}
-                </Link>
-              )}
+            {/* Right: Actions (moved from main header) */}
+            <div className="flex items-center gap-1 sm:gap-1.5">
+              <button
+                onClick={toggleTheme}
+                className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/10 hover:border-gold-500/30 transition-all duration-300 hover:scale-110"
+                aria-label="Toggle theme"
+              >
+                {theme === 'dark' ? <FaSun size={10} className="text-gold-300" /> : <FaMoon size={10} className="text-gold-300" />}
+              </button>
 
-              {/* Dropdown Panel Desktop */}
-              <AnimatePresence>
-                {link.dropdown && activeDropdown === link.name && (
-                  <motion.div
-                    variants={dropdownVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                    className={`absolute top-full left-0 mt-2 ${link.name === t('nav.services') ? 'w-72 p-5' : 'w-56'} bg-white border border-obsidian-200 rounded-lg overflow-hidden shadow-xl`}
+              <div className="relative">
+                {user ? (
+                  <button
+                    onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
+                    aria-label="User profile options"
+                    className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/10 hover:border-gold-500/30 transition-all duration-300 hover:scale-110"
                   >
-                    {link.name === t('nav.services') ? (
-                      <>
-                        <h4 className="text-caption text-gold-600 uppercase tracking-widest mb-4 px-1 font-semibold">
-                          {link.name}
-                        </h4>
-                        <div className="flex flex-col gap-1">
-                          {link.dropdown.map((item) => (
-                            <Link
-                              key={item.name}
-                              to={item.path}
-                              className="px-4 py-2.5 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md rounded-lg"
-                            >
-                              {item.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </>
-                    ) : (
-                      link.dropdown.map((item) => (
-                        <div key={item.name} className="relative group/sub">
-                          {item.subItems ? (
-                            <>
+                    <span className="font-semibold text-[10px] text-gold-300">{user.avatar}</span>
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => setIsLoginModalOpen(true)}
+                    aria-label="Sign in"
+                    className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/10 hover:border-gold-500/30 transition-all duration-300 hover:scale-110"
+                  >
+                    <FaUserCircle size={11} className="text-gold-300" />
+                  </button>
+                )}
+              </div>
+
+              {/* Lang */}
+              <div className="relative">
+                <button
+                  onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+                  aria-label="Select language"
+                  className="h-7 sm:h-8 rounded-full flex items-center justify-center gap-1 px-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/10 hover:border-gold-500/30 transition-all duration-300 hover:scale-105"
+                >
+                  <FaGlobe size={9} className="text-gold-300" />
+                  <span className="text-[9px] font-semibold uppercase text-gold-200 tracking-wider">
+                    {i18n.language === 'ar' ? 'ع' :
+                      i18n.language === 'es' ? 'es' :
+                        i18n.language === 'pt' ? 'pt' :
+                          i18n.language === 'it' ? 'it' : 'en'}
+                  </span>
+                </button>
+                <AnimatePresence>
+                  {langDropdownOpen && (
+                    <motion.div
+                      variants={dropdownVariants}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      className={`absolute top-full ${isRtl ? 'left-0' : 'right-0'} mt-1 w-36 bg-white/95 backdrop-blur-xl border border-white/20 rounded-xl overflow-hidden shadow-2xl z-[10000]`}
+                    >
+                      {[
+                        { code: 'en', label: 'English', flag: '🇬🇧' },
+                        { code: 'ar', label: 'العربية', flag: '🇪🇬' },
+                        { code: 'es', label: 'Español', flag: '🇪🇸' },
+                        { code: 'pt', label: 'Português', flag: '🇧🇷' },
+                        { code: 'it', label: 'Italiano', flag: '🇮🇹' },
+                      ].map(lang => (
+                        <button
+                          key={lang.code}
+                          onClick={() => changeLanguage(lang.code)}
+                          className={`w-full ${isRtl ? 'text-right' : 'text-left'} px-3 py-2.5 flex items-center justify-between text-[13px] border-b border-obsidian-100 last:border-0 transition-colors ${i18n.language === lang.code ? 'text-amber-600 font-semibold bg-amber-50' : 'text-obsidian-700 hover:text-amber-600 hover:bg-amber-50'}`}
+                        >
+                          <span className={`flex items-center gap-2 ${isRtl ? 'flex-row-reverse' : ''}`}>
+                            <span className="text-base">{lang.flag}</span>
+                            <span>{lang.label}</span>
+                          </span>
+                        </button>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Header */}
+      <header
+        className={`fixed top-[40px] sm:top-[44px] left-0 right-0 z-[9998] transition-all duration-300 h-16 lg:h-20 flex items-center ${headerVisible ? 'translate-y-0' : '-translate-y-full'} ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.12)]' : 'bg-transparent shadow-none'
+          }`}
+      >
+        <div className="container mx-auto px-6 h-full flex justify-between items-center relative z-10">
+          {/* Logo */}
+          <Link to="/" className={`flex items-center z-50 transition-all duration-300 ${scrolled ? '' : 'drop-shadow-[0_0_12px_rgba(255,255,255,0.6)]'}`} onClick={() => setMobileMenuOpen(false)}>
+            <Logo theme={scrolled ? "dark" : "light"} height={60} />
+          </Link>
+
+          {/* Desktop Nav (Hover) */}
+          <nav className="hidden lg:flex items-center gap-8 flex-shrink-0">
+            {navLinks.map((link) => (
+              <div
+                key={link.name}
+                className="relative group"
+                onMouseEnter={() => link.dropdown && setActiveDropdown(link.name)}
+                onMouseLeave={() => link.dropdown && setActiveDropdown(null)}
+              >
+                {link.dropdown ? (
+                  <button className={`flex items-center gap-1 ${scrolled ? 'text-obsidian-900' : 'text-white'} hover:text-[#F5A623] transition-colors text-body-md font-medium py-2 whitespace-nowrap flex-shrink-0`}>
+                    {link.name} <FaChevronDown className={`text-xs transition-transform duration-200 ${activeDropdown === link.name ? 'rotate-180' : ''}`} />
+                  </button>
+                ) : (
+                  <Link to={link.path} className={`${scrolled ? 'text-obsidian-900' : 'text-white'} hover:text-[#F5A623] transition-colors text-body-md font-medium py-2 whitespace-nowrap flex-shrink-0`}>
+                    {link.name}
+                  </Link>
+                )}
+
+                {/* Dropdown Panel Desktop */}
+                <AnimatePresence>
+                  {link.dropdown && activeDropdown === link.name && (
+                    <motion.div
+                      variants={dropdownVariants}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      className={`absolute top-full left-0 mt-2 ${link.name === t('nav.services') ? 'w-72 p-5' : 'w-56'} bg-white border border-obsidian-200 rounded-lg overflow-hidden shadow-xl`}
+                    >
+                      {link.name === t('nav.services') ? (
+                        <>
+                          <h4 className="text-caption text-gold-600 uppercase tracking-widest mb-4 px-1 font-semibold">
+                            {link.name}
+                          </h4>
+                          <div className="flex flex-col gap-1">
+                            {link.dropdown.map((item) => (
+                              <Link
+                                key={item.name}
+                                to={item.path}
+                                className="px-4 py-2.5 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md rounded-lg"
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </>
+                      ) : (
+                        link.dropdown.map((item) => (
+                          <div key={item.name} className="relative group/sub">
+                            {item.subItems ? (
+                              <>
+                                <Link
+                                  to={item.path}
+                                  className="px-4 py-3 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md border-b border-obsidian-100 last:border-0 flex justify-between items-center w-full"
+                                >
+                                  <span>{item.name}</span>
+                                  <FaChevronDown className="-rotate-90 text-[10px] opacity-40 group-hover/sub:text-[#F5A623] group-hover/sub:rotate-0 transition-transform duration-200" />
+                                </Link>
+                                <div className={`absolute ${isRtl ? 'right-full mr-0.5' : 'left-full ml-0.5'} top-0 hidden group-hover/sub:block w-56 bg-white border border-obsidian-200 rounded-lg overflow-hidden shadow-2xl z-[9999]`}>
+                                  {item.subItems.map((sub) => (
+                                    <Link
+                                      key={sub.name}
+                                      to={sub.path}
+                                      className="block px-4 py-3 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md border-b border-obsidian-100 last:border-0"
+                                    >
+                                      {sub.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </>
+                            ) : (
                               <Link
                                 to={item.path}
-                                className="px-4 py-3 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md border-b border-obsidian-100 last:border-0 flex justify-between items-center w-full"
+                                className="group/link block px-4 py-3 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md border-b border-obsidian-100 last:border-0"
                               >
-                                <span>{item.name}</span>
-                                <FaChevronDown className="-rotate-90 text-[10px] opacity-40 group-hover/sub:text-[#F5A623] group-hover/sub:rotate-0 transition-transform duration-200" />
+                                <span className="flex items-center gap-2">
+                                  <FaPlane className="text-[10px] opacity-0 -ml-1 group-hover/link:opacity-100 group-hover/link:ml-0 transition-all duration-200 text-[#F5A623]" />
+                                  {item.name}
+                                </span>
                               </Link>
-                              <div className={`absolute ${isRtl ? 'right-full mr-0.5' : 'left-full ml-0.5'} top-0 hidden group-hover/sub:block w-56 bg-white border border-obsidian-200 rounded-lg overflow-hidden shadow-2xl z-[9999]`}>
-                                {item.subItems.map((sub) => (
-                                  <Link
-                                    key={sub.name}
-                                    to={sub.path}
-                                    className="block px-4 py-3 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md border-b border-obsidian-100 last:border-0"
-                                  >
-                                    {sub.name}
-                                  </Link>
-                                ))}
-                              </div>
-                            </>
-                          ) : (
-                            <Link
-                              to={item.path}
-                              className="block px-4 py-3 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md border-b border-obsidian-100 last:border-0"
-                            >
-                              {item.name}
-                            </Link>
-                          )}
-                        </div>
-                      ))
-                    )}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ))}
-        </nav>
+                            )}
+                          </div>
+                        ))
+                      )}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </nav>
 
-        {/* Currency Selector (Desktop) */}
-        <div className="hidden lg:flex items-center z-50">
-          <CurrencySelector />
-        </div>
-
-        {/* Actions (Desktop) */}
-        <div className="hidden lg:flex items-center gap-2 z-50">
-          {/* Theme Toggle */}
-          <button
-            onClick={toggleTheme}
-            className="w-9 h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm"
-            aria-label="Toggle theme"
-          >
-            {theme === 'dark' ? <FaSun size={15} /> : <FaMoon size={15} />}
-          </button>
-
-          {/* Profile */}
-          <div className="relative">
-            {user ? (
-              <>
-                <button
-                  onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
-                  aria-label="User profile options"
-                  className="w-9 h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm"
-                >
-                  <span className="font-display font-semibold text-xs">{user.avatar}</span>
-                </button>
-              </>
-            ) : (
-              <button
-                onClick={() => setIsLoginModalOpen(true)}
-                aria-label="Sign in"
-                className="w-9 h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm"
-              >
-                <FaUserCircle size={15} />
-              </button>
-            )}
-          </div>
-
-          {/* Lang (Desktop) */}
-          <div className="relative">
-            <button
-              onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-              aria-label="Select language"
-              className="h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm gap-1.5 px-3"
+          {/* Currency Selector + Tailor a Tour (Desktop) */}
+          <div className="hidden lg:flex items-center gap-3 z-50">
+            <CurrencySelector light={scrolled} />
+            <Link
+              to="/tailor-a-tour"
+              className="group relative px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-500 shadow-lg hover:shadow-xl overflow-hidden"
+              style={{
+                background: 'linear-gradient(135deg, #FF6B35, rgb(6, 29, 93))',
+                color: '#fff'
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.background = 'linear-gradient(135deg, #e85d2a, rgb(8, 39, 125))'}
+              onMouseLeave={(e) => e.currentTarget.style.background = 'linear-gradient(135deg, #FF6B35, rgb(6, 29, 93))'}
             >
-              <FaGlobe size={13} />
-              <span className="text-[11px] font-semibold uppercase">
-                {i18n.language === 'ar' ? 'ع' :
-                  i18n.language === 'es' ? 'es' :
-                    i18n.language === 'pt' ? 'pt' :
-                      i18n.language === 'it' ? 'it' : 'en'}
+              <span className="relative z-10 flex items-center gap-2">
+                <span className="inline-block group-hover:animate-bounce">✈</span>
+                Tailor a Tour
               </span>
-            </button>
-            <AnimatePresence>
-              {langDropdownOpen && (
-                <motion.div
-                  variants={dropdownVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  className={`absolute top-full ${isRtl ? 'left-0' : 'right-0'} mt-2 w-40 bg-white border border-obsidian-200 rounded-xl overflow-hidden shadow-xl z-[10000]`}
-                >
-                  {[
-                    { code: 'en', label: 'English', flag: '🇬🇧' },
-                    { code: 'ar', label: 'العربية', flag: '🇪🇬' },
-                    { code: 'es', label: 'Español', flag: '🇪🇸' },
-                    { code: 'pt', label: 'Português', flag: '🇧🇷' },
-                    { code: 'it', label: 'Italiano', flag: '🇮🇹' },
-                  ].map(lang => (
-                    <button
-                      key={lang.code}
-                      onClick={() => changeLanguage(lang.code)}
-                      className={`w-full ${isRtl ? 'text-right' : 'text-left'} px-4 py-3 flex items-center justify-between text-body-md border-b border-obsidian-100 last:border-0 transition-colors ${i18n.language === lang.code ? 'text-amber-600 font-semibold bg-amber-50' : 'text-obsidian-700 hover:text-amber-600 hover:bg-amber-50'}`}
-                    >
-                      <span className={`flex items-center gap-2 ${isRtl ? 'flex-row-reverse' : ''}`}>
-                        <span className="text-lg">{lang.flag}</span>
-                        <span>{lang.label}</span>
-                      </span>
-                    </button>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        </div>
-
-        {/* Mobile Action Buttons */}
-        <div className="lg:hidden flex items-center gap-1.5 z-50">
-          {/* Lang (Mobile) */}
-          <div className="relative">
-            <button
-              onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-              aria-label="Select language"
-              className="w-9 h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm gap-1.5 px-2.5"
-            >
-              <FaGlobe size={14} />
-            </button>
-            <AnimatePresence>
-              {langDropdownOpen && (
-                <motion.div
-                  variants={dropdownVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  className={`absolute top-full ${isRtl ? 'left-0' : 'right-0'} mt-2 w-40 bg-white border border-obsidian-200 rounded-xl overflow-hidden shadow-xl z-[10000]`}
-                >
-                  {[
-                    { code: 'en', label: 'English', flag: '🇬🇧' },
-                    { code: 'ar', label: 'العربية', flag: '🇪🇬' },
-                    { code: 'es', label: 'Español', flag: '🇪🇸' },
-                    { code: 'pt', label: 'Português', flag: '🇧🇷' },
-                    { code: 'it', label: 'Italiano', flag: '🇮🇹' },
-                  ].map(lang => (
-                    <button
-                      key={lang.code}
-                      onClick={() => changeLanguage(lang.code)}
-                      className={`w-full ${isRtl ? 'text-right' : 'text-left'} px-4 py-3 flex items-center justify-between text-body-md border-b border-obsidian-100 last:border-0 transition-colors ${i18n.language === lang.code ? 'text-amber-600 font-semibold bg-amber-50' : 'text-obsidian-700 hover:text-amber-600 hover:bg-amber-50'}`}
-                    >
-                      <span className={`flex items-center gap-2 ${isRtl ? 'flex-row-reverse' : ''}`}>
-                        <span className="text-lg">{lang.flag}</span>
-                        <span>{lang.label}</span>
-                      </span>
-                    </button>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-
-          {/* Profile */}
-          {!user ? (
-            <button onClick={() => setIsLoginModalOpen(true)} className="w-9 h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm">
-              <FaUserCircle size={15} />
-            </button>
-          ) : (
-            <Link to="/profile" className="w-9 h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm text-xs font-semibold">
-              {user.avatar}
+              <span className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
             </Link>
-          )}
+          </div>
 
-          {/* Hamburger */}
-          <button
-            className="w-9 h-9 rounded-full border border-obsidian-300 flex items-center justify-center text-obsidian-700 hover:text-[#F5A623] hover:border-[#F5A623] transition-all bg-white hover:bg-amber-50 shadow-sm z-50"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-          >
-            {mobileMenuOpen ? <FaTimes size={15} /> : <FaBars size={15} />}
-          </button>
-        </div>
+          {/* Mobile: Tailor + Hamburger */}
+          <div className="lg:hidden flex items-center gap-1.5 z-50">
+            <Link
+              to="/tailor-a-tour"
+              className="px-3 py-1.5 rounded-full text-[10px] font-semibold uppercase tracking-wider transition-all duration-300 shadow-lg whitespace-nowrap"
+              style={{
+                background: 'linear-gradient(135deg, #FF6B35, rgb(6, 29, 93))',
+                color: '#fff'
+              }}
+            >
+              ✈ Tailor
+            </Link>
+            <button
+              className={`w-9 h-9 rounded-full border flex items-center justify-center transition-all shadow-sm z-50 ${scrolled ? 'border-obsidian-300 text-obsidian-700 bg-white hover:text-[#F5A623] hover:border-[#F5A623] hover:bg-amber-50' : 'border-white/40 text-white bg-white/10 hover:bg-white/20 hover:border-white/60'}`}
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            >
+              {mobileMenuOpen ? <FaTimes size={15} /> : <FaBars size={15} />}
+            </button>
+          </div>
 
         {/* Mobile Full Screen Menu Overlay */}
         <AnimatePresence>
@@ -488,6 +505,16 @@ const Navbar = () => {
                   </div>
                 ))}
 
+                {/* Mobile Tailor a Tour */}
+                <Link
+                  to="/tailor-a-tour"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full py-4 px-5 rounded-2xl text-lg font-bold flex items-center justify-center gap-3 shadow-lg"
+                  style={{ background: 'linear-gradient(135deg, #FF6B35, rgb(6, 29, 93))', color: '#fff' }}
+                >
+                  ✈ {t('nav.tailorMade', 'Tailor Your Tour')}
+                </Link>
+
                 {/* Mobile Theme Toggle */}
                 <div className="flex items-center justify-between mt-4 pt-4 border-t border-obsidian-100">
                   <span className="text-obsidian-400 text-xs font-semibold tracking-wider uppercase">{t('nav.theme', 'Theme')}</span>
@@ -559,6 +586,7 @@ const Navbar = () => {
 
       <LoginModal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} />
     </header>
+    </>
   );
 };
 

@@ -68,10 +68,27 @@ const FloatingContact = () => {
         })}
       </AnimatePresence>
 
-      <button
+      {/* Ripple ring */}
+      {!isOpen && (
+        <motion.span
+          className="absolute inset-0 rounded-full border-2 border-gold-400"
+          animate={{ scale: [1, 1.25, 1], opacity: [0.6, 0, 0.6] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
+        />
+      )}
+      {!isOpen && (
+        <motion.span
+          className="absolute inset-0 rounded-full border border-gold-300"
+          animate={{ scale: [1, 1.45, 1], opacity: [0.4, 0, 0.4] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut', delay: 0.6 }}
+        />
+      )}
+      <motion.button
         onClick={() => setIsOpen(!isOpen)}
         aria-label={isOpen ? "Close contact options" : "Open contact options"}
         className="relative z-10 w-16 h-16 rounded-full flex items-center justify-center text-obsidian-900 bg-gradient-to-tr from-gold-700 via-gold-500 to-gold-300 shadow-[0_0_24px_rgba(201,162,39,0.35)] hover:shadow-[0_0_32px_rgba(201,162,39,0.5)] transition-shadow duration-300"
+        animate={!isOpen ? { scale: [1, 1.06, 1] } : { scale: 1 }}
+        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
       >
         <motion.div
           animate={{ rotate: isOpen ? 90 : 0, scale: isOpen ? 0.9 : 1 }}
@@ -79,7 +96,7 @@ const FloatingContact = () => {
         >
           {isOpen ? <FaTimes size={24} /> : <FaCommentDots size={28} />}
         </motion.div>
-      </button>
+      </motion.button>
     </div>
   );
 };

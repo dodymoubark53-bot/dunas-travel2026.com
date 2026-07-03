@@ -91,7 +91,7 @@ const Footer = () => {
 
       {/* Columns: Quick Links | Programs | Destinations | Contact */}
       <div className="relative z-10 w-full px-6 sm:px-12 lg:px-20 pt-8 pb-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {/* Quick Links (left) */}
           <div>
@@ -136,38 +136,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact (right) */}
-          <div>
-            <h3 className="text-white mb-4 text-lg font-bold">{t('nav.contact')}</h3>
-            <ul className="flex flex-col gap-2 text-base font-bold">
-              <li className="flex items-start gap-2">
-                <FaMapMarkerAlt className="text-[#F5A623] mt-1 flex-shrink-0" size={14} />
-                <span className="text-white leading-snug">
-                  5 Hussein Said St, Old Hadayk El Ahram, First floor, Flat 102 – 103, Haram - Giza – Egypt
-                </span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaPhone className="text-[#F5A623] flex-shrink-0" size={14} />
-                <div className="flex gap-3">
-                  <a href="tel:+20233746643" className="text-white hover:text-[#F5A623] transition-colors">02 33746643</a>
-                  <a href="tel:+20233746654" className="text-white hover:text-[#F5A623] transition-colors">02 33746654</a>
-                </div>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaEnvelope className="text-[#F5A623] flex-shrink-0" size={14} />
-                <a href="mailto:info@dunas-travel.com" className="text-white hover:text-[#F5A623] transition-colors">info@dunas-travel.com</a>
-              </li>
-            </ul>
-            <Link
-              to="/tailor-a-tour"
-              className="mt-5 inline-flex items-center gap-2 bg-gradient-to-r from-[#F5A623] to-[#C07D0A] text-[#1A1A2E] font-bold text-sm px-6 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-              </svg>
-              {t('footer.customize', 'Customize Your Trip')}
-            </Link>
-          </div>
+          {/* Contact - replaced by FloatingContact button */}
 
         </div>
 

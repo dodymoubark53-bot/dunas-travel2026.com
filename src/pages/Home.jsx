@@ -1,9 +1,9 @@
-import { useState, useRef, useMemo } from "react";
+import { useState, useRef, useMemo, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FaStar, FaTimes, FaChevronLeft, FaChevronRight, FaVolumeUp, FaVolumeMute } from "react-icons/fa";
+import { FaStar, FaTimes, FaChevronLeft, FaChevronRight, FaVolumeUp, FaVolumeMute, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaHeadset, FaWhatsapp, FaArrowRight } from "react-icons/fa";
 import Button from "../components/ui/Button";
 import TourCard from "../components/tour/TourCard";
 import { tours } from "../data/tours";
@@ -99,6 +99,7 @@ const Home = () => {
   const [zoomScale, setZoomScale] = useState(1);
   const [isAllToursPopupOpen, setIsAllToursPopupOpen] = useState(false);
   const [activeVideo, setActiveVideo] = useState(null);
+  const [tourPaused, setTourPaused] = useState(false);
   const turkeyPrograms = useTurkeyPrograms();
   const formattedTurkeyTours = turkeyPrograms.map((tp) => ({
     id: tp.id,
@@ -361,6 +362,48 @@ const Home = () => {
 
   useScrollAnimations();
   const isRtl = i18n.dir() === 'rtl';
+  const tourMarqueeRef = useRef(null);
+
+  useEffect(() => {
+    const el = tourMarqueeRef.current;
+    if (!el) return;
+    let rafId;
+    let paused = false;
+    const step = isRtl ? -0.4 : 0.4;
+    const animate = () => {
+      if (!paused) {
+        const maxScroll = el.scrollWidth / 2;
+        if (el.scrollLeft >= maxScroll) {
+          el.scrollLeft = 0;
+        } else if (el.scrollLeft <= 0 && isRtl) {
+          el.scrollLeft = maxScroll;
+        } else {
+          el.scrollLeft += step;
+        }
+      }
+      rafId = requestAnimationFrame(animate);
+    };
+    const onEnter = () => { paused = true; };
+    const onLeave = () => { paused = false; };
+    el.addEventListener('mouseenter', onEnter);
+    el.addEventListener('mouseleave', onLeave);
+    rafId = requestAnimationFrame(animate);
+    return () => {
+      cancelAnimationFrame(rafId);
+      el.removeEventListener('mouseenter', onEnter);
+      el.removeEventListener('mouseleave', onLeave);
+    };
+  }, [isRtl]);
+
+  const handleTourPrev = useCallback(() => {
+    const el = tourMarqueeRef.current;
+    if (el) el.scrollLeft -= 420;
+  }, []);
+
+  const handleTourNext = useCallback(() => {
+    const el = tourMarqueeRef.current;
+    if (el) el.scrollLeft += 420;
+  }, []);
 
   const filteredVehicles =
     vehicleFilter === "all"
@@ -492,7 +535,7 @@ const Home = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[600px] md:min-h-[700px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[50vh] min-h-[400px] sm:h-screen sm:min-h-[600px] md:min-h-[700px] flex items-center justify-center overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
           <video
@@ -501,13 +544,14 @@ const Home = () => {
             loop
             muted
             playsInline
+            preload="auto"
             fetchpriority="high"
             poster="/imgs/hero-poster.webp"
-            className="w-full h-full object-cover md:object-[center_30%]"
+            className="w-full h-full object-cover object-[center_20%] sm:object-[center_30%]"
           >
             <source src="/imgs/hero.webm" type="video/webm" />
             <source src="/imgs/hero.mp4" type="video/mp4" />
-            <track kind="captions" src="/hero-captions.vtt" srcLang="en" label="English" default />
+            <track kind="captures" src="/hero-captions.vtt" srcLang="en" label="English" default />
           </video>
           <div className="absolute inset-0 bg-obsidian-900/50"></div>
         </div>
@@ -523,11 +567,11 @@ const Home = () => {
       </section>
 
       {/* Search Section */}
-      <section className="relative w-full h-screen max-h-[900px] overflow-hidden">
+      <section className="relative w-full py-20 md:py-28 overflow-hidden mt-12">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src={galleryImages[0].src}
+            src="https://res.cloudinary.com/degbrq3ck/image/upload/v1783067135/grand_tour_of_turkey_lxb1f4.jpg"
             alt=""
             className="w-full h-full object-cover object-center"
           />
@@ -853,7 +897,7 @@ const Home = () => {
       </section>
 
       {/* All Tours Marquee */}
-      <section className="py-12 bg-ivory-100 overflow-hidden">
+      <section className="py-12 bg-ivory-100 overflow-hidden relative">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <span className="text-gold-600 uppercase tracking-widest text-caption block mb-4">
@@ -866,16 +910,30 @@ const Home = () => {
           </div>
         </div>
 
+        {/* Navigation Buttons */}
+        <button
+          onClick={handleTourPrev}
+          className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-obsidian-700 hover:bg-gold-500 hover:text-white hover:shadow-xl transition-all duration-300 backdrop-blur-sm"
+          aria-label="Previous tours"
+        >
+          <FaChevronLeft size={16} />
+        </button>
+        <button
+          onClick={handleTourNext}
+          className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-obsidian-700 hover:bg-gold-500 hover:text-white hover:shadow-xl transition-all duration-300 backdrop-blur-sm"
+          aria-label="Next tours"
+        >
+          <FaChevronRight size={16} />
+        </button>
+
           <div className="overflow-hidden w-full">
             <div
+              ref={tourMarqueeRef}
               className="flex w-max"
               style={{
-                animation: `${isRtl ? 'tourMarqueeRTL' : 'tourMarquee'} 200s linear infinite`,
                 gap: "24px",
                 paddingLeft: "24px",
               }}
-              onMouseEnter={e => e.currentTarget.style.animationPlayState = 'paused'}
-              onMouseLeave={e => e.currentTarget.style.animationPlayState = 'running'}
             >
             {(() => {
               const sliced = allToursForMarquee.slice(0, 12);
@@ -1540,6 +1598,225 @@ const Home = () => {
                 );
               })}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Info Section */}
+      <section className="py-20 lg:py-32 relative overflow-hidden bg-obsidian-900">
+        {/* Glow Effects */}
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-primary-500/10 blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-gold-500/5 blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent" />
+        
+        {/* Custom Styles for animated rings */}
+        <style>
+          {`
+            @keyframes pulse-ring {
+              0% { transform: scale(0.95); opacity: 0; }
+              50% { opacity: 0.5; }
+              100% { transform: scale(1.4); opacity: 0; }
+            }
+            .animate-ring-slow {
+              animation: pulse-ring 3s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+            }
+            .animate-ring-fast {
+              animation: pulse-ring 2s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+            }
+            .glassmorphism-card {
+              background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+              backdrop-filter: blur(20px);
+              -webkit-backdrop-filter: blur(20px);
+              border: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            .glassmorphism-card:hover {
+              border-color: rgba(245, 166, 35, 0.3);
+              box-shadow: 0 0 30px rgba(245, 166, 35, 0.08);
+            }
+            .gold-text-glow {
+              text-shadow: 0 0 20px rgba(245, 166, 35, 0.2);
+            }
+          `}
+        </style>
+
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+            
+            {/* Left Column: Visual Focal Point + Typography Heading */}
+            <div className="lg:col-span-2 space-y-8 text-center lg:text-start">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="space-y-4"
+              >
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-400 text-caption uppercase tracking-[0.2em] font-semibold text-xs mx-auto lg:mx-0">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold-500 animate-ping" />
+                  {t('home.contactSub', 'Get In Touch')}
+                </div>
+                
+                <h2 className="text-display-lg text-white font-display leading-tight tracking-wide gold-text-glow">
+                  {t('home.contactTitle', "We're Here to Help")}
+                </h2>
+                
+                <p className="text-body-md text-ivory-300 leading-relaxed font-body max-w-md mx-auto lg:mx-0">
+                  {i18n.language === 'ar' 
+                    ? "فريق مستشاري السفر الفاخر لدينا متاح دائمًا لتصميم رحلتك المخصصة والإجابة على أي استفسارات على مدار الساعة."
+                    : "Our dedicated travel advisors are standing by 24/7 to design your bespoke itinerary, answer questions, or provide support at any point of your journey."
+                  }
+                </p>
+              </motion.div>
+
+              {/* Headset Support Focal Point */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ type: "spring", stiffness: 100, delay: 0.2 }}
+                className="relative w-48 h-48 mx-auto lg:ms-0 flex items-center justify-center"
+              >
+                {/* Glowing Circles */}
+                <div className="absolute inset-0 rounded-full border border-gold-500/10 animate-ring-slow" />
+                <div className="absolute inset-4 rounded-full border border-gold-500/20 animate-ring-fast" />
+                
+                {/* Center visual box */}
+                <div className="w-28 h-28 rounded-3xl bg-gradient-to-tr from-primary-900 to-primary-500 p-0.5 shadow-gold/20 shadow-2xl relative flex items-center justify-center border border-white/10 group hover:rotate-6 transition-transform duration-500">
+                  <div className="absolute inset-[2px] bg-obsidian-900 rounded-[22px] flex items-center justify-center overflow-hidden">
+                    <div className="absolute inset-0 bg-gold-gradient opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
+                    <FaHeadset className="w-12 h-12 text-gold-500 group-hover:scale-110 transition-transform duration-500" />
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Action Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
+              >
+                <a
+                  href="https://wa.me/201149401111"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-600 to-teal-500 text-white font-semibold uppercase tracking-wider text-xs px-8 py-4 rounded-full shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 group"
+                >
+                  <FaWhatsapp className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                  {i18n.language === 'ar' ? "تحدث معنا عبر واتساب" : "Chat on WhatsApp"}
+                </a>
+                
+                <Link
+                  to="/contact"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 glassmorphism-card text-ivory-50 font-medium uppercase tracking-wider text-xs px-8 py-4 rounded-full hover:bg-white/5 transition-all duration-300"
+                >
+                  {i18n.language === 'ar' ? "صفحة الاتصال" : "Contact Page"}
+                  <FaArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </motion.div>
+            </div>
+
+            {/* Right Column: 3 Contact Cards */}
+            <div className="lg:col-span-3 space-y-6">
+              
+              {/* Card 1: Address */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                whileHover={{ y: -6 }}
+                className="glassmorphism-card rounded-2xl p-6 md:p-8 flex items-start gap-6 group transition-all duration-300 text-start"
+              >
+                <div className="w-14 h-14 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-500 group-hover:bg-gold-500 group-hover:text-obsidian-900 transition-all duration-300 shrink-0 shadow-lg">
+                  <FaMapMarkerAlt className="w-6 h-6" />
+                </div>
+                <div className="space-y-2 flex-grow">
+                  <span className="text-[10px] text-gold-400 font-bold uppercase tracking-widest block">01 / {t('contact.office', 'Address')}</span>
+                  <h4 className="text-lg font-bold text-ivory-50 tracking-wide font-display">{t('home.contactAddress', 'Our Location')}</h4>
+                  <p className="text-ivory-300 text-sm leading-relaxed font-body">
+                    5 Hussein Said St, Old Hadayk El Ahram<br />
+                    First floor, Flat 102 – 103<br />
+                    Haram - Giza – Egypt
+                  </p>
+                  <a 
+                    href="https://maps.google.com/?q=5+Hussein+Said+St,+Old+Hadayk+El+Ahram,+Haram,+Giza,+Egypt" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-gold-400 hover:text-gold-300 transition-colors pt-2 group/link"
+                  >
+                    {i18n.language === 'ar' ? "عرض على الخريطة" : "Open in Google Maps"}
+                    <FaArrowRight className="w-3 h-3 group-hover/link:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+              </motion.div>
+
+              {/* Card 2: Phone */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                whileHover={{ y: -6 }}
+                className="glassmorphism-card rounded-2xl p-6 md:p-8 flex items-start gap-6 group transition-all duration-300 text-start"
+              >
+                <div className="w-14 h-14 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-500 group-hover:bg-gold-500 group-hover:text-obsidian-900 transition-all duration-300 shrink-0 shadow-lg">
+                  <FaPhoneAlt className="w-6 h-6" />
+                </div>
+                <div className="space-y-2 flex-grow">
+                  <span className="text-[10px] text-gold-400 font-bold uppercase tracking-widest block">02 / {t('contact.phoneLabel', 'Phone')}</span>
+                  <h4 className="text-lg font-bold text-ivory-50 tracking-wide font-display">{t('home.contactPhone', 'Call Us')}</h4>
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                    <a
+                      href="tel:+20233746643"
+                      className="inline-flex items-center gap-2.5 text-ivory-300 hover:text-gold-400 text-sm font-medium transition-colors py-1 px-3 rounded-lg bg-white/5 border border-white/5 hover:border-gold-500/30 hover:bg-gold-500/5"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                      02 33746643
+                    </a>
+                    <a
+                      href="tel:+20233746654"
+                      className="inline-flex items-center gap-2.5 text-ivory-300 hover:text-gold-400 text-sm font-medium transition-colors py-1 px-3 rounded-lg bg-white/5 border border-white/5 hover:border-gold-500/30 hover:bg-gold-500/5"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                      02 33746654
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Card 3: Email */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                whileHover={{ y: -6 }}
+                className="glassmorphism-card rounded-2xl p-6 md:p-8 flex items-start gap-6 group transition-all duration-300 text-start"
+              >
+                <div className="w-14 h-14 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-500 group-hover:bg-gold-500 group-hover:text-obsidian-900 transition-all duration-300 shrink-0 shadow-lg">
+                  <FaEnvelope className="w-6 h-6" />
+                </div>
+                <div className="space-y-2 flex-grow">
+                  <span className="text-[10px] text-gold-400 font-bold uppercase tracking-widest block">03 / {t('contact.emailLabel', 'Email')}</span>
+                  <h4 className="text-lg font-bold text-ivory-50 tracking-wide font-display">{t('home.contactEmail', 'Email Us')}</h4>
+                  
+                  <div className="pt-2">
+                    <a
+                      href="mailto:info@dunas-travel.com"
+                      className="inline-flex items-center gap-2.5 text-ivory-300 hover:text-gold-400 text-sm font-medium transition-colors py-1.5 px-4 rounded-lg bg-white/5 border border-white/5 hover:border-gold-500/30 hover:bg-gold-500/5"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                      info@dunas-travel.com
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+
+            </div>
+
           </div>
         </div>
       </section>
