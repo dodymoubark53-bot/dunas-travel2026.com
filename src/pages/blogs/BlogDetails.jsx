@@ -70,50 +70,55 @@ const BlogDetails = () => {
         <meta name="description" content={t(`blogs.${blog.excerpt}`, blog.excerpt)} />
       </Helmet>
 
-      {/* Hero Section — Tours Style */}
-      <section className="relative min-h-[50vh] md:min-h-[65vh] flex items-end justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src={blog.img}
-            alt={t(`blogs.${blog.title}`, blog.title)}
-            className="w-full h-full object-cover"
-            loading="eager"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/50 to-obsidian-900/20" />
-        </div>
-
-        <div className="relative z-10 w-full">
-          <div className="container mx-auto px-6 pb-12 md:pb-20">
-            <motion.div variants={staggerContainer} initial="hidden" animate="visible">
-              <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-2 text-caption text-gold-500 mb-4 uppercase tracking-wider">
-                <Link to="/" className="hover:text-ivory-50 transition-colors">{t('nav.home', 'Home')}</Link>
-                <FaChevronRight className={`text-[10px] ${isRtl ? 'rotate-180' : ''}`} />
-                <Link to="/blogs" className="hover:text-ivory-50 transition-colors">{t('blogs.title', 'Journal')}</Link>
-                <FaChevronRight className={`text-[10px] ${isRtl ? 'rotate-180' : ''}`} />
-                <span className="text-ivory-300 truncate max-w-[200px]">{t(`blogs.${blog.title}`, blog.title)}</span>
-              </motion.div>
-
-              <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-3 md:gap-5 mb-4 text-caption text-ivory-400">
-                <span className="flex items-center gap-1.5 bg-obsidian-900/60 backdrop-blur-sm px-3 py-1 rounded-full border border-white/5">
-                  <FaCalendarAlt size={10} className="text-gold-500" />
-                  {t(`blogs.${blog.date}`, blog.date)}
-                </span>
-                <span className="flex items-center gap-1.5 bg-obsidian-900/60 backdrop-blur-sm px-3 py-1 rounded-full border border-white/5">
-                  <FaClock size={10} className="text-gold-500" />
-                  {blog.readTime || '5 min read'}
-                </span>
-                <span className="flex items-center gap-1.5 bg-obsidian-900/60 backdrop-blur-sm px-3 py-1 rounded-full border border-white/5">
-                  <FaTag size={10} className="text-gold-500" />
-                  {t(`blogs.cat.${blog.category}`, blog.category)}
-                </span>
-              </motion.div>
-
-              <motion.h1 variants={fadeInUp} className="text-display-lg md:text-display-xl text-ivory-50 mb-4 max-w-4xl leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
-                {t(`blogs.${blog.title}`, blog.title)}
-              </motion.h1>
-            </motion.div>
+      {/* 1. Breadcrumb & Title — Tours Style */}
+      <section className="pt-32 pb-10 bg-obsidian-900 text-center px-6">
+        <div className="container mx-auto">
+          <div className="flex items-center justify-center gap-2 text-caption text-gold-500 mb-4 uppercase tracking-wider">
+            <Link to="/" className="hover:text-ivory-50 transition-colors">{t('nav.home', 'Home')}</Link>
+            <FaChevronRight className={`text-[10px] ${isRtl ? 'rotate-180' : ''}`} />
+            <Link to="/blogs" className="hover:text-ivory-50 transition-colors">{t('blogs.title', 'Journal')}</Link>
+            <FaChevronRight className={`text-[10px] ${isRtl ? 'rotate-180' : ''}`} />
+            <span className="text-ivory-300 truncate max-w-[200px]">{t(`blogs.${blog.title}`, blog.title)}</span>
           </div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-display-xl text-ivory-50 mb-4"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            {t(`blogs.${blog.title}`, blog.title)}
+          </motion.h1>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="flex flex-wrap items-center justify-center gap-3 md:gap-5 mt-6 text-caption text-gold-400"
+          >
+            <span className="flex items-center gap-1.5 bg-white/5 backdrop-blur-sm px-3 py-1 rounded-full border border-white/5">
+              <FaCalendarAlt size={10} className="text-gold-500" />
+              {t(`blogs.${blog.date}`, blog.date)}
+            </span>
+            <span className="flex items-center gap-1.5 bg-white/5 backdrop-blur-sm px-3 py-1 rounded-full border border-white/5">
+              <FaClock size={10} className="text-gold-500" />
+              {blog.readTime || t('blogs.5 min read', '5 min read')}
+            </span>
+            <span className="flex items-center gap-1.5 bg-white/5 backdrop-blur-sm px-3 py-1 rounded-full border border-white/5">
+              <FaTag size={10} className="text-gold-500" />
+              {t(`blogs.cat.${blog.category}`, blog.category)}
+            </span>
+          </motion.div>
         </div>
+      </section>
+
+      {/* 2. Hero Image — Tours Style */}
+      <section className="relative w-full h-[50vh] lg:h-[70vh] overflow-hidden">
+        <img
+          src={blog.img}
+          alt={t(`blogs.${blog.title}`, blog.title)}
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-black/20"></div>
       </section>
 
       {/* Article Body */}

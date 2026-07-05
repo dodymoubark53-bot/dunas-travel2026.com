@@ -1,11 +1,11 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { staggerContainer, fadeInUp, cardHover } from '../animations/variants';
-import Button from '../components/ui/Button';
 import { blogs } from '../data/blogs';
-import { FaChevronRight, FaClock, FaCalendarAlt } from 'react-icons/fa';
+import { FaChevronRight, FaChevronLeft, FaClock, FaCalendarAlt, FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Blogs = () => {
   const { t, i18n } = useTranslation();
@@ -24,6 +24,33 @@ const Blogs = () => {
 
   const getCategoryGradient = (cat) => categoryColors[cat] || 'from-gold-500 to-amber-500';
 
+  const perPage = 6;
+  const [currentPage, setCurrentPage] = useState(1);
+  const [showHidden, setShowHidden] = useState(false);
+
+  const filteredBlogs = showHidden ? blogs : blogs.filter(blog => !blog.hidden);
+  const totalPages = Math.ceil(filteredBlogs.length / perPage);
+  const startIndex = (currentPage - 1) * perPage;
+  const currentBlogs = filteredBlogs.slice(startIndex, startIndex + perPage);
+
+  const goToPage = (page) => {
+    if (page < 1 || page > totalPages) return;
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const getPageNumbers = () => {
+    const pages = [];
+    const maxVisible = 5;
+    let start = Math.max(1, currentPage - Math.floor(maxVisible / 2));
+    let end = Math.min(totalPages, start + maxVisible - 1);
+    if (end - start + 1 < maxVisible) start = Math.max(1, end - maxVisible + 1);
+    for (let i = start; i <= end; i++) pages.push(i);
+    return pages;
+  };
+
+  const hiddenCount = blogs.filter(blog => blog.hidden).length;
+
   return (
     <div className="w-full bg-[#F8F9FF] pb-24">
       <Helmet>
@@ -31,31 +58,52 @@ const Blogs = () => {
         <meta name="description" content={t('blogs.seoDesc', 'Read our latest travel tips, stories, and guides for exploring the Middle East in pure luxury.')} />
       </Helmet>
 
-      {/* Hero Section — Tours Style */}
-      <section className="relative pt-28 pb-16 md:pt-36 md:pb-20 bg-obsidian-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at 20% 50%, rgba(245,166,35,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(212,175,55,0.1) 0%, transparent 50%)' }} />
+      {/* Main Hero */}
+      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1600&q=80"
+            alt="Blogs Hero"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-obsidian-900/60 bg-gradient-to-t from-obsidian-900 to-transparent"></div>
         </div>
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="text-center">
-            <motion.div variants={fadeInUp} className="flex items-center justify-center gap-2 text-caption text-gold-500 mb-4 uppercase tracking-wider">
-              <Link to="/" className="hover:text-ivory-50 transition-colors">{t('nav.home', 'Home')}</Link>
-              <FaChevronRight className={`text-[10px] ${isRtl ? 'rotate-180' : ''}`} />
-              <span className="text-ivory-300">{t('blogs.title', 'Travel Journal')}</span>
-            </motion.div>
-            <motion.h1 variants={fadeInUp} className="text-display-xl md:text-display-2xl text-ivory-50 mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-              {t('blogs.title', 'Travel Journal')}
-            </motion.h1>
-            <motion.p variants={fadeInUp} className="text-body-lg text-ivory-300 max-w-2xl mx-auto">
-              {t('blogs.subtitle', 'Stories, guides, and inspiration from the world of luxury travel')}
-            </motion.p>
-            <motion.div variants={fadeInUp} className="w-24 h-1 bg-gold-500 mx-auto mt-6" />
-          </motion.div>
-        </div>
+
+        <motion.div
+          className="relative z-10 container mx-auto px-6 text-center mt-12"
+          variants={staggerContainer}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.span variants={fadeInUp} className="inline-block font-body text-gold-500 tracking-[0.2em] uppercase text-sm mb-4">
+            {t('blogs.subtitle', 'Stories, guides, and inspiration from the world of luxury travel')}
+          </motion.span>
+          <motion.h1 variants={fadeInUp} className="text-display-xl text-ivory-50 mb-6">
+            {t('blogs.title', 'Travel Journal')}
+          </motion.h1>
+        </motion.div>
       </section>
 
       {/* Blog Grid */}
       <section className="container mx-auto px-6 py-16 md:py-24">
+        {/* Toggle Hidden Articles Button */}
+        {hiddenCount > 0 && (
+          <div className="flex justify-end mb-8">
+            <button
+              onClick={() => { setShowHidden(!showHidden); setCurrentPage(1); }}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
+                showHidden
+                  ? 'bg-amber-500 text-white shadow-lg shadow-amber-500/30'
+                  : 'bg-white text-obsidian-600 border border-gray-200 hover:border-amber-500 hover:text-amber-500'
+              }`}
+            >
+              {showHidden ? <FaEyeSlash size={14} /> : <FaEye size={14} />}
+              <span>{showHidden ? 'إخفاء المقالات المخفية' : `إظهار ${hiddenCount} مقال مخفي`}</span>
+            </button>
+          </div>
+        )}
+
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
           variants={staggerContainer}
@@ -63,7 +111,7 @@ const Blogs = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {blogs.map(blog => (
+          {currentBlogs.map(blog => (
             <motion.article key={blog.id} variants={fadeInUp}>
               <motion.div
                 className="bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.06)] group h-full flex flex-col border border-gray-100/50 transition-all duration-500 hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)] hover:-translate-y-1"
@@ -76,6 +124,12 @@ const Blogs = () => {
                   <div className={`absolute top-4 left-4 z-10 bg-gradient-to-r ${getCategoryGradient(blog.category)} text-white text-[10px] uppercase tracking-wider px-3 py-1.5 rounded-full shadow-lg font-semibold`}>
                     {t(`blogs.cat.${blog.category}`, blog.category)}
                   </div>
+                  {blog.hidden && showHidden && (
+                    <div className="absolute top-4 right-4 z-10 bg-amber-500 text-white text-[10px] uppercase tracking-wider px-3 py-1.5 rounded-full shadow-lg font-semibold flex items-center gap-1">
+                      <FaEyeSlash size={8} />
+                      مخفي
+                    </div>
+                  )}
                   <img
                     src={blog.img}
                     alt={t(`blogs.${blog.title}`, blog.title)}
@@ -120,14 +174,44 @@ const Blogs = () => {
         </motion.div>
 
         {/* Pagination */}
-        <div className="flex justify-center mt-16 gap-2">
-          <Button variant="outline-gold" className={`px-4 opacity-50 cursor-not-allowed ${isRtl ? 'rotate-180' : ''}`}>
-            <FaChevronRight size={12} className="rotate-180" />
-          </Button>
-          <Button variant="gold-glow" className="px-5">1</Button>
-          <Button variant="outline-gold" className={`px-4 opacity-50 cursor-not-allowed ${isRtl ? 'rotate-180' : ''}`}>
-            <FaChevronRight size={12} />
-          </Button>
+        <div className="flex justify-center items-center mt-16 gap-2">
+          <button
+            onClick={() => goToPage(currentPage - 1)}
+            disabled={currentPage === 1}
+            className={`p-3 rounded-full border transition-all duration-300 ${
+              currentPage === 1
+                ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                : 'border-gold-500/30 text-gold-500 hover:bg-gold-500 hover:text-white hover:border-gold-500'
+            } ${isRtl ? 'rotate-180' : ''}`}
+          >
+            <FaChevronLeft size={14} />
+          </button>
+
+          {getPageNumbers().map(page => (
+            <button
+              key={page}
+              onClick={() => goToPage(page)}
+              className={`w-10 h-10 rounded-full text-body-sm font-semibold transition-all duration-300 ${
+                page === currentPage
+                  ? 'bg-gold-500 text-white shadow-lg shadow-gold-500/30'
+                  : 'border border-gray-200 text-obsidian-600 hover:border-gold-500 hover:text-gold-500'
+              }`}
+            >
+              {page}
+            </button>
+          ))}
+
+          <button
+            onClick={() => goToPage(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className={`p-3 rounded-full border transition-all duration-300 ${
+              currentPage === totalPages
+                ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                : 'border-gold-500/30 text-gold-500 hover:bg-gold-500 hover:text-white hover:border-gold-500'
+            } ${isRtl ? 'rotate-180' : ''}`}
+          >
+            <FaChevronRight size={14} />
+          </button>
         </div>
       </section>
     </div>

@@ -5,6 +5,7 @@ export const blogs = [
     "title": "The Hidden Temples of Luxor",
     "category": "History",
     "date": "Oct 12, 2023",
+    "hidden": true,
     "excerpt": "Beyond Karnak and the Valley of the Kings lie incredible, lesser-known temples waiting to be explored. Discover the secrets of ancient Thebes without the crowds.",
     "img": "https://images.unsplash.com/photo-1596130535979-eedea4278d29?w=800&q=80&fit=crop",
     "content": [
@@ -65,6 +66,7 @@ export const blogs = [
     "title": "Wadi Rum Desert",
     "category": "Nature & Camping",
     "date": "Feb 14, 2024",
+    "hidden": true,
     "excerpt": "Towering sandstone mountains, crimson sands, and a sky exploding with stars. Discover why camping in Jordan's Valley of the Moon is the ultimate desert escape.",
     "img": "https://images.unsplash.com/photo-1612892483236-52d32a0e0ac1?w=800&q=80&fit=crop",
     "content": [
@@ -338,6 +340,7 @@ export const blogs = [
     "title": "The Ultimate Guide to completoEgypt.title: A Luxury Travel Itinerary",
     "category": "History",
     "date": "Jul 20, 2026",
+    "hidden": true,
     "excerpt": "Explore the luxury of our custom completoEgypt.title program in Egypt. Discover why this completoEgypt.duration itinerary is perfect for your travel dreams with",
     "img": "https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=800&q=80",
     "content": [
@@ -492,6 +495,7 @@ export const blogs = [
     "title": "The Ultimate Guide to mct005.title: A Luxury Travel Itinerary",
     "category": "Travel Guide",
     "date": "Jul 12, 2026",
+    "hidden": true,
     "excerpt": "Explore the luxury of our custom mct005.title program in Multi-country. Discover why this mct005.duration itinerary is perfect for your travel dreams with Dunas",
     "img": "/imgs/Stars of the Middle East .png",
     "content": [
@@ -514,6 +518,7 @@ export const blogs = [
     "title": "The Ultimate Guide to mct006.title: A Luxury Travel Itinerary",
     "category": "Travel Guide",
     "date": "Jul 20, 2026",
+    "hidden": true,
     "excerpt": "Explore the luxury of our custom mct006.title program in Multi-country. Discover why this mct006.duration itinerary is perfect for your travel dreams with Dunas",
     "img": "/imgs/Treasures of Egypt and Tunisia.png",
     "content": [
