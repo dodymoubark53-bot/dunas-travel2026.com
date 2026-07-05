@@ -133,7 +133,7 @@ const Navbar = () => {
         <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ background: 'linear-gradient(90deg, transparent 0%, #fff 50%, transparent 100%)' }} />
         {/* Gold accent border */}
         <div className="absolute bottom-0 left-0 right-0 h-[1px]" style={{ background: 'linear-gradient(90deg, transparent, rgba(201,162,39,0.5), transparent)' }} />
-        <div className="container mx-auto px-4 sm:px-6 relative">
+        <div className="w-full px-4 sm:px-6 relative">
           <div className="flex items-center justify-between h-10 sm:h-11 text-white text-[11px] sm:text-xs">
             {/* Left: Contact Info */}
             <div className="flex items-center gap-2 sm:gap-5 overflow-hidden">
@@ -142,28 +142,27 @@ const Navbar = () => {
                   <FaEnvelope size={10} className="text-gold-300 group-hover:text-gold-400" />
                 </span>
                 <span className="hidden sm:inline font-light tracking-wide">info@dunas-travel.com</span>
-                <span className="sm:hidden text-[10px] font-light">Email</span>
               </a>
               <span className="w-px h-4 bg-gradient-to-b from-transparent via-white/30 to-transparent hidden sm:block" />
               <a href="tel:+20233746643" className="group flex items-center gap-1.5 hover:text-gold-400 transition-all duration-300 whitespace-nowrap">
                 <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-gold-500/20 group-hover:scale-110 transition-all duration-300">
                   <FaPhone size={9} className="text-gold-300 group-hover:text-gold-400" />
                 </span>
-                <span className="font-light tracking-wide">02 33746643</span>
+                <span className="hidden sm:inline font-light tracking-wide">02 33746643</span>
               </a>
               <span className="w-px h-4 bg-gradient-to-b from-transparent via-white/30 to-transparent hidden sm:block" />
-              <a href="tel:+20233746654" className="group items-center gap-1.5 hover:text-gold-400 transition-all duration-300 whitespace-nowrap hidden md:flex">
+              <a href="tel:+20233746654" className="group items-center gap-1.5 hover:text-gold-400 transition-all duration-300 whitespace-nowrap flex">
                 <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-gold-500/20 group-hover:scale-110 transition-all duration-300">
                   <FaPhone size={9} className="text-gold-300 group-hover:text-gold-400" />
                 </span>
-                <span className="font-light tracking-wide">02 33746654</span>
+                <span className="hidden sm:inline font-light tracking-wide">02 33746654</span>
               </a>
-              <span className="w-px h-4 bg-gradient-to-b from-transparent via-white/30 to-transparent hidden md:block" />
-              <a href="tel:+201149401111" className="group items-center gap-1.5 hover:text-gold-400 transition-all duration-300 whitespace-nowrap hidden lg:flex">
+              <span className="w-px h-4 bg-gradient-to-b from-transparent via-white/30 to-transparent hidden sm:block" />
+              <a href="https://wa.me/201149401111" target="_blank" rel="noopener noreferrer" className="group items-center gap-1.5 hover:text-gold-400 transition-all duration-300 whitespace-nowrap flex">
                 <span className="w-6 h-6 rounded-full bg-[#25D366]/20 flex items-center justify-center group-hover:bg-[#25D366]/30 group-hover:scale-110 transition-all duration-300">
                   <FaWhatsapp size={10} className="text-[#25D366] group-hover:text-gold-400" />
                 </span>
-                <span className="font-light tracking-wide">+20 114 940 1111</span>
+                <span className="hidden sm:inline font-light tracking-wide">+20 114 940 1111</span>
               </a>
             </div>
 
@@ -250,7 +249,7 @@ const Navbar = () => {
 
       {/* Main Header */}
       <header
-        className={`fixed top-[40px] sm:top-[44px] left-0 right-0 z-[9998] transition-all duration-300 h-16 lg:h-20 flex items-center ${headerVisible ? 'translate-y-0' : '-translate-y-full'} ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.12)]' : 'bg-transparent shadow-none'
+        className={`fixed top-[40px] sm:top-[44px] left-0 right-0 z-[9998] transition-all duration-300 h-16 lg:h-20 flex items-center ${headerVisible ? 'translate-y-0' : '-translate-y-full'} ${scrolled ? 'bg-white/95 dark:bg-obsidian-900/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.12)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)]' : 'bg-transparent shadow-none'
           }`}
       >
         <div className="container mx-auto px-6 h-full flex justify-between items-center relative z-10">
@@ -269,11 +268,11 @@ const Navbar = () => {
                 onMouseLeave={() => link.dropdown && setActiveDropdown(null)}
               >
                 {link.dropdown ? (
-                  <button className={`flex items-center gap-1 ${scrolled ? 'text-obsidian-900' : 'text-white'} hover:text-[#F5A623] transition-colors text-body-md font-medium py-2 whitespace-nowrap flex-shrink-0`}>
+                  <button className={`flex items-center gap-1 ${scrolled ? 'text-obsidian-900 dark:text-ivory-50' : 'text-white'} hover:text-[#F5A623] transition-colors text-body-md font-medium py-2 whitespace-nowrap flex-shrink-0`}>
                     {link.name} <FaChevronDown className={`text-xs transition-transform duration-200 ${activeDropdown === link.name ? 'rotate-180' : ''}`} />
                   </button>
                 ) : (
-                  <Link to={link.path} className={`${scrolled ? 'text-obsidian-900' : 'text-white'} hover:text-[#F5A623] transition-colors text-body-md font-medium py-2 whitespace-nowrap flex-shrink-0`}>
+                  <Link to={link.path} className={`${scrolled ? 'text-obsidian-900 dark:text-ivory-50' : 'text-white'} hover:text-[#F5A623] transition-colors text-body-md font-medium py-2 whitespace-nowrap flex-shrink-0`}>
                     {link.name}
                   </Link>
                 )}
@@ -286,11 +285,11 @@ const Navbar = () => {
                       initial="hidden"
                       animate="visible"
                       exit="exit"
-                      className={`absolute top-full left-0 mt-2 ${link.name === t('nav.services') ? 'w-72 p-5' : 'w-56'} bg-white border border-obsidian-200 rounded-lg overflow-hidden shadow-xl`}
+                      className={`absolute top-full left-0 mt-2 ${link.name === t('nav.services') ? 'w-72 p-5' : 'w-56'} bg-white dark:bg-obsidian-800 border border-obsidian-200 dark:border-obsidian-700 rounded-lg overflow-hidden shadow-xl`}
                     >
                       {link.name === t('nav.services') ? (
                         <>
-                          <h4 className="text-caption text-gold-600 uppercase tracking-widest mb-4 px-1 font-semibold">
+                          <h4 className="text-caption text-gold-600 dark:text-gold-400 uppercase tracking-widest mb-4 px-1 font-semibold">
                             {link.name}
                           </h4>
                           <div className="flex flex-col gap-1">
@@ -298,7 +297,7 @@ const Navbar = () => {
                               <Link
                                 key={item.name}
                                 to={item.path}
-                                className="px-4 py-2.5 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md rounded-lg"
+                                className="px-4 py-2.5 text-obsidian-900 dark:text-ivory-200 hover:text-[#F5A623] hover:bg-amber-50 dark:hover:bg-obsidian-700 transition-colors text-body-md rounded-lg"
                               >
                                 {item.name}
                               </Link>
@@ -312,17 +311,17 @@ const Navbar = () => {
                               <>
                                 <Link
                                   to={item.path}
-                                  className="px-4 py-3 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md border-b border-obsidian-100 last:border-0 flex justify-between items-center w-full"
+                                  className="px-4 py-3 text-obsidian-900 dark:text-ivory-200 hover:text-[#F5A623] hover:bg-amber-50 dark:hover:bg-obsidian-700 transition-colors text-body-md border-b border-obsidian-100 dark:border-obsidian-700 last:border-0 flex justify-between items-center w-full"
                                 >
                                   <span>{item.name}</span>
                                   <FaChevronDown className="-rotate-90 text-[10px] opacity-40 group-hover/sub:text-[#F5A623] group-hover/sub:rotate-0 transition-transform duration-200" />
                                 </Link>
-                                <div className={`absolute ${isRtl ? 'right-full mr-0.5' : 'left-full ml-0.5'} top-0 hidden group-hover/sub:block w-56 bg-white border border-obsidian-200 rounded-lg overflow-hidden shadow-2xl z-[9999]`}>
+                                <div className={`absolute ${isRtl ? 'right-full mr-0.5' : 'left-full ml-0.5'} top-0 hidden group-hover/sub:block w-56 bg-white dark:bg-obsidian-800 border border-obsidian-200 dark:border-obsidian-700 rounded-lg overflow-hidden shadow-2xl z-[9999]`}>
                                   {item.subItems.map((sub) => (
                                     <Link
                                       key={sub.name}
                                       to={sub.path}
-                                      className="block px-4 py-3 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md border-b border-obsidian-100 last:border-0"
+                                      className="block px-4 py-3 text-obsidian-900 dark:text-ivory-200 hover:text-[#F5A623] hover:bg-amber-50 dark:hover:bg-obsidian-700 transition-colors text-body-md border-b border-obsidian-100 dark:border-obsidian-700 last:border-0"
                                     >
                                       {sub.name}
                                     </Link>
@@ -332,7 +331,7 @@ const Navbar = () => {
                             ) : (
                               <Link
                                 to={item.path}
-                                className="group/link block px-4 py-3 text-obsidian-900 hover:text-[#F5A623] hover:bg-amber-50 transition-colors text-body-md border-b border-obsidian-100 last:border-0"
+                                className="group/link block px-4 py-3 text-obsidian-900 dark:text-ivory-200 hover:text-[#F5A623] hover:bg-amber-50 dark:hover:bg-obsidian-700 transition-colors text-body-md border-b border-obsidian-100 dark:border-obsidian-700 last:border-0"
                               >
                                 <span className="flex items-center gap-2">
                                   <FaPlane className="text-[10px] opacity-0 -ml-1 group-hover/link:opacity-100 group-hover/link:ml-0 transition-all duration-200 text-[#F5A623]" />
@@ -384,7 +383,7 @@ const Navbar = () => {
               ✈ Tailor
             </Link>
             <button
-              className={`w-9 h-9 rounded-full border flex items-center justify-center transition-all shadow-sm z-50 ${scrolled ? 'border-obsidian-300 text-obsidian-700 bg-white hover:text-[#F5A623] hover:border-[#F5A623] hover:bg-amber-50' : 'border-white/40 text-white bg-white/10 hover:bg-white/20 hover:border-white/60'}`}
+              className={`w-9 h-9 rounded-full border flex items-center justify-center transition-all shadow-sm z-50 ${scrolled ? 'border-obsidian-300 dark:border-obsidian-600 text-obsidian-700 dark:text-ivory-50 bg-white dark:bg-obsidian-800 hover:text-[#F5A623] hover:border-[#F5A623] hover:bg-amber-50 dark:hover:bg-obsidian-700' : 'border-white/40 text-white bg-white/10 hover:bg-white/20 hover:border-white/60'}`}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             >
@@ -400,16 +399,16 @@ const Navbar = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: isRtl ? '-100%' : '100%' }}
               transition={{ type: 'tween', duration: 0.35, ease: 'easeInOut' }}
-              className="fixed inset-0 bg-white z-40 flex flex-col px-8 pt-24 pb-8 overflow-y-auto lg:hidden h-screen w-screen"
+              className="fixed inset-0 bg-white dark:bg-obsidian-900 z-40 flex flex-col px-8 pt-24 pb-8 overflow-y-auto lg:hidden h-screen w-screen"
             >
               <div className="flex flex-col gap-6 w-full max-w-md mx-auto">
                 {navLinks.map((link) => (
-                    <div key={link.name} className="w-full border-b border-obsidian-100 pb-4 last:border-0">
+                    <div key={link.name} className="w-full border-b border-obsidian-100 dark:border-obsidian-700 pb-4 last:border-0">
                     {link.dropdown ? (
                       <>
                         <button
                           onClick={() => handleMobileDropdownToggle(link.name)}
-                          className="w-full flex justify-between items-center text-left text-2xl text-obsidian-900 hover:text-[#F5A623] font-semibold py-2 transition-colors"
+                          className="w-full flex justify-between items-center text-left text-2xl text-obsidian-900 dark:text-ivory-50 hover:text-[#F5A623] font-semibold py-2 transition-colors"
                         >
                           <span className={mobileActiveDropdown === link.name ? 'text-[#F5A623]' : ''}>
                             {link.name}
@@ -427,13 +426,13 @@ const Navbar = () => {
                               initial="hidden"
                               animate="visible"
                               exit="exit"
-                              className="flex flex-col gap-1 pl-4 bg-obsidian-50/50 rounded-2xl overflow-hidden mt-2 border border-obsidian-100"
+                              className="flex flex-col gap-1 pl-4 bg-obsidian-50/50 dark:bg-obsidian-800/50 rounded-2xl overflow-hidden mt-2 border border-obsidian-100 dark:border-obsidian-700"
                             >
                               {link.dropdown.map(item => (
                                 <div key={item.name} className="w-full">
                                   {item.subItems ? (
                                     <>
-                                      <div className="flex justify-between items-center text-lg text-obsidian-700 py-3.5 px-4 border-b border-obsidian-100 last:border-0">
+                                      <div className="flex justify-between items-center text-lg text-obsidian-700 dark:text-ivory-300 py-3.5 px-4 border-b border-obsidian-100 dark:border-obsidian-700 last:border-0">
                                         <Link
                                           to={item.path}
                                           onClick={() => setMobileMenuOpen(false)}
@@ -444,7 +443,7 @@ const Navbar = () => {
                                         <button
                                           onClick={() => setMobileActiveSubDropdown(mobileActiveSubDropdown === item.name ? null : item.name)}
                                           aria-label={`Toggle sub-menu for ${item.name}`}
-                                          className="p-2 -mr-2 text-obsidian-400 hover:text-[#F5A623] transition-colors"
+                                          className="p-2 -mr-2 text-obsidian-400 dark:text-ivory-500 hover:text-[#F5A623] transition-colors"
                                         >
                                           <FaChevronDown
                                             className={`text-xs transition-transform duration-200 ${mobileActiveSubDropdown === item.name ? 'rotate-180 text-[#F5A623]' : ''}`}
@@ -458,7 +457,7 @@ const Navbar = () => {
                                             animate={{ height: 'auto', opacity: 1 }}
                                             exit={{ height: 0, opacity: 0 }}
                                             transition={{ duration: 0.2 }}
-                                            className="pl-4 bg-obsidian-50/30 border-l border-obsidian-200"
+                                            className="pl-4 bg-obsidian-50/30 dark:bg-obsidian-800/30 border-l border-obsidian-200 dark:border-obsidian-700"
                                           >
                                             {item.subItems.map(sub => (
                                               <Link
@@ -468,7 +467,7 @@ const Navbar = () => {
                                                   setMobileMenuOpen(false);
                                                   setMobileActiveSubDropdown(null);
                                                 }}
-                                                className="text-body-md text-obsidian-600 hover:text-[#F5A623] py-3 px-4 block transition-colors border-b border-obsidian-100 last:border-0"
+                                                className="text-body-md text-obsidian-600 dark:text-ivory-400 hover:text-[#F5A623] py-3 px-4 block transition-colors border-b border-obsidian-100 dark:border-obsidian-700 last:border-0"
                                               >
                                                 {sub.name}
                                               </Link>
@@ -482,7 +481,7 @@ const Navbar = () => {
                                       key={item.name}
                                       to={item.path}
                                       onClick={() => setMobileMenuOpen(false)}
-                                      className="text-lg text-obsidian-700 hover:text-[#F5A623] hover:bg-obsidian-50 py-3.5 px-4 block transition-all border-b border-obsidian-100 last:border-0 font-medium"
+                                      className="text-lg text-obsidian-700 dark:text-ivory-300 hover:text-[#F5A623] hover:bg-obsidian-50 dark:hover:bg-obsidian-800 py-3.5 px-4 block transition-all border-b border-obsidian-100 dark:border-obsidian-700 last:border-0 font-medium"
                                     >
                                       {item.name}
                                     </Link>
@@ -497,7 +496,7 @@ const Navbar = () => {
                       <Link
                         to={link.path}
                         onClick={() => setMobileMenuOpen(false)}
-                        className="text-2xl text-obsidian-900 block hover:text-[#F5A623] transition-colors font-semibold py-2"
+                        className="text-2xl text-obsidian-900 dark:text-ivory-50 block hover:text-[#F5A623] transition-colors font-semibold py-2"
                       >
                         {link.name}
                       </Link>
@@ -516,11 +515,11 @@ const Navbar = () => {
                 </Link>
 
                 {/* Mobile Theme Toggle */}
-                <div className="flex items-center justify-between mt-4 pt-4 border-t border-obsidian-100">
-                  <span className="text-obsidian-400 text-xs font-semibold tracking-wider uppercase">{t('nav.theme', 'Theme')}</span>
+                <div className="flex items-center justify-between mt-4 pt-4 border-t border-obsidian-100 dark:border-obsidian-700">
+                  <span className="text-obsidian-400 dark:text-ivory-500 text-xs font-semibold tracking-wider uppercase">{t('nav.theme', 'Theme')}</span>
                   <button
                     onClick={toggleTheme}
-                    className="w-10 h-10 rounded-full border border-obsidian-200 flex items-center justify-center bg-white hover:bg-obsidian-50 transition-all"
+                    className="w-10 h-10 rounded-full border border-obsidian-200 dark:border-obsidian-600 flex items-center justify-center bg-white dark:bg-obsidian-800 hover:bg-obsidian-50 dark:hover:bg-obsidian-700 transition-all"
                     aria-label="Toggle theme"
                   >
                     {theme === 'dark' ? <FaSun className="text-amber-500" size={16} /> : <FaMoon className="text-indigo-600" size={16} />}
@@ -528,8 +527,8 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Currency Selector */}
-                <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-obsidian-100">
-                  <span className="text-obsidian-400 text-xs font-semibold tracking-wider uppercase">{t('nav.currency', 'Currency')}</span>
+                <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-obsidian-100 dark:border-obsidian-700">
+                  <span className="text-obsidian-400 dark:text-ivory-500 text-xs font-semibold tracking-wider uppercase">{t('nav.currency', 'Currency')}</span>
                   <div className="flex">
                     <CurrencySelector light />
                   </div>
@@ -537,15 +536,15 @@ const Navbar = () => {
 
                   {user && (
                   <div className="flex flex-col gap-3 mt-4">
-                    <Link to="/profile" onClick={() => setMobileMenuOpen(false)} className="w-full py-3 px-4 bg-obsidian-50 text-obsidian-900 rounded-xl text-lg font-medium flex items-center gap-3 border border-obsidian-100">
+                    <Link to="/profile" onClick={() => setMobileMenuOpen(false)} className="w-full py-3 px-4 bg-obsidian-50 dark:bg-obsidian-800 text-obsidian-900 dark:text-ivory-50 rounded-xl text-lg font-medium flex items-center gap-3 border border-obsidian-100 dark:border-obsidian-700">
                       <FaUserCircle className="text-[#F5A623]" /> {t('nav.myProfile', 'My Profile')}
                     </Link>
-                    <Link to="/bookings" onClick={() => setMobileMenuOpen(false)} className="w-full py-3 px-4 bg-obsidian-50 text-obsidian-900 rounded-xl text-lg font-medium flex items-center gap-3 border border-obsidian-200">
+                    <Link to="/bookings" onClick={() => setMobileMenuOpen(false)} className="w-full py-3 px-4 bg-obsidian-50 dark:bg-obsidian-800 text-obsidian-900 dark:text-ivory-50 rounded-xl text-lg font-medium flex items-center gap-3 border border-obsidian-200 dark:border-obsidian-700">
                       <FaBookmark className="text-[#F5A623]" /> {t('nav.myBookings', 'My Bookings')}
                     </Link>
                     <button
                       onClick={() => { logout(); setMobileMenuOpen(false); }}
-                      className="w-full py-3.5 bg-red-50 text-red-600 rounded-xl text-lg font-semibold flex items-center justify-center gap-2 border border-red-200 transition-colors active:bg-red-100"
+                      className="w-full py-3.5 bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-400 rounded-xl text-lg font-semibold flex items-center justify-center gap-2 border border-red-200 dark:border-red-800 transition-colors active:bg-red-100 dark:active:bg-red-900/50"
                     >
                       <FaSignOutAlt /> {t('nav.logout', 'Logout')}
                     </button>
@@ -564,16 +563,16 @@ const Navbar = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className={`absolute top-full ${isRtl ? 'left-1' : 'right-1'} mt-5 w-48 bg-white border border-obsidian-200 rounded-xl overflow-hidden shadow-xl z-[10000]`}
+              className={`absolute top-full ${isRtl ? 'left-1' : 'right-1'} mt-5 w-48 bg-white dark:bg-obsidian-800 border border-obsidian-200 dark:border-obsidian-700 rounded-xl overflow-hidden shadow-xl z-[10000]`}
             >
-              <div className="px-4 py-3 border-b border-obsidian-100">
-                <p className="text-caption text-obsidian-900 font-semibold">{user.name}</p>
-                <p className="text-[10px] text-obsidian-400 truncate">{user.email}</p>
+              <div className="px-4 py-3 border-b border-obsidian-100 dark:border-obsidian-700">
+                <p className="text-caption text-obsidian-900 dark:text-ivory-50 font-semibold">{user.name}</p>
+                <p className="text-[10px] text-obsidian-400 dark:text-ivory-500 truncate">{user.email}</p>
               </div>
-              <Link to="/profile" onClick={() => setProfileDropdownOpen(false)} className="w-full text-left px-4 py-3 text-obsidian-700 hover:text-amber-600 hover:bg-amber-50 transition-colors text-body-md border-b border-obsidian-100 flex items-center gap-2">
+              <Link to="/profile" onClick={() => setProfileDropdownOpen(false)} className="w-full text-left px-4 py-3 text-obsidian-700 dark:text-ivory-300 hover:text-amber-600 hover:bg-amber-50 dark:hover:bg-obsidian-700 transition-colors text-body-md border-b border-obsidian-100 dark:border-obsidian-700 flex items-center gap-2">
                 <FaUserCircle className="text-amber-500" size={15} /> {t('nav.myProfile', 'My Profile')}
               </Link>
-              <Link to="/bookings" onClick={() => setProfileDropdownOpen(false)} className="w-full text-left px-4 py-3 text-obsidian-700 hover:text-amber-600 hover:bg-amber-50 transition-colors text-body-md border-b border-obsidian-100 flex items-center gap-2">
+              <Link to="/bookings" onClick={() => setProfileDropdownOpen(false)} className="w-full text-left px-4 py-3 text-obsidian-700 dark:text-ivory-300 hover:text-amber-600 hover:bg-amber-50 dark:hover:bg-obsidian-700 transition-colors text-body-md border-b border-obsidian-100 dark:border-obsidian-700 flex items-center gap-2">
                 <FaBookmark className="text-amber-500" size={15} /> {t('nav.myBookings', 'My Bookings')}
               </Link>
               <button onClick={() => { logout(); setProfileDropdownOpen(false); }} className="w-full text-left px-4 py-3 text-red-500 hover:text-white hover:bg-red-500 transition-colors text-body-md flex items-center gap-2">

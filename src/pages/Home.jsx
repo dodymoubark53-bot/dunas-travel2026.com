@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FaStar, FaTimes, FaChevronLeft, FaChevronRight, FaVolumeUp, FaVolumeMute, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaHeadset, FaWhatsapp, FaArrowRight } from "react-icons/fa";
+import { FaStar, FaTimes, FaChevronLeft, FaChevronRight, FaMicrophone, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaHeadset, FaWhatsapp, FaArrowRight } from "react-icons/fa";
 import Button from "../components/ui/Button";
 import TourCard from "../components/tour/TourCard";
 import { tours } from "../data/tours";
@@ -284,6 +284,20 @@ const Home = () => {
   const videoRef = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
 
+  // Sync muted state to video DOM element (reliable approach)
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el) return;
+    el.muted = isMuted;
+    if (!isMuted) {
+      el.play().catch(() => {});
+    }
+  }, [isMuted]);
+
+  const toggleMute = () => {
+    setIsMuted(prev => !prev);
+  };
+
   // Search Form State
   const [searchDest, setSearchDest] = useState("all");
   const [searchTour, setSearchTour] = useState("");
@@ -389,13 +403,6 @@ const Home = () => {
     }
     if (searchDest && searchDest !== "all") {
       window.location.href = `/destinations/${searchDest}`;
-    }
-  };
-
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
-      setIsMuted(videoRef.current.muted);
     }
   };
 
@@ -590,7 +597,7 @@ const Home = () => {
             ref={videoRef}
             autoPlay
             loop
-            muted
+            muted={isMuted}
             playsInline
             preload="auto"
             fetchpriority="high"
@@ -603,17 +610,15 @@ const Home = () => {
           </video>
           <div className="absolute inset-0 bg-obsidian-900/50"></div>
         </div>
-
         {/* Sound Toggle */}
         <button
           onClick={toggleMute}
           className="absolute bottom-4 sm:bottom-6 md:bottom-8 right-4 sm:right-6 md:right-8 z-20 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-obsidian-900/70 backdrop-blur-md border border-gold-500/30 flex items-center justify-center text-ivory-50 hover:text-gold-500 hover:bg-obsidian-900 transition-all shadow-lg"
           aria-label={isMuted ? 'Unmute video' : 'Mute video'}
         >
-          {isMuted ? <FaVolumeMute size={14} /> : <FaVolumeUp size={14} />}
+          {isMuted ? <FaMicrophone size={14} /> : <FaMicrophone size={14} className="text-green-500" />}
         </button>
       </section>
-
       {/* Search Section */}
       <section className="relative w-full py-20 md:py-28 overflow-hidden mt-12">
         {/* Background Image */}
@@ -2216,7 +2221,7 @@ const Home = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <iframe
-                src={`https://player.cloudinary.com/embed/?cloud_name=${cloudName}&public_id=${activeVideo}`}
+                src={`https://player.cloudinary.com/embed/?cloud_name=${cloudName}&public_id=${activeVideo}&autoplay=true&controls=true&muted=false`}
                 className="w-full h-full"
                 allow="autoplay; encrypted-media; fullscreen"
                 allowFullScreen
