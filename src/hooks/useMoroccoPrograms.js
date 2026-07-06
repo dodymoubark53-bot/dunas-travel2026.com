@@ -43,7 +43,9 @@ export const useMoroccoPrograms = () => {
   }, [activeLang]);
 };
 
-export const useMoroccoProgram = (programSlug) => {
+export const useMoroccoProgram = (programSlugOrId) => {
   const programs = useMoroccoPrograms();
-  return programs.find((p) => p.slug === programSlug) || null;
+  if (!programSlugOrId) return null;
+  const lower = programSlugOrId.toLowerCase();
+  return programs.find((p) => p.slug.toLowerCase() === lower || p.id.toLowerCase() === lower) || null;
 };

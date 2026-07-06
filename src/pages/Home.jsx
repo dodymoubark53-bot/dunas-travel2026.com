@@ -90,7 +90,7 @@ const newDestinationsList = [
     tagEn: "CAPPADOCIA BALLOONS & OTTOMAN LEGACY",
     descAr: "جسور الحضارة التاريخية، وشواطئ الريفييرا التركية، ومناطيد كبادوكيا الحالمة.",
     descEn: "Bridges of history, the sun-kissed Turkish Riviera, and the dreamlike balloon-filled skies of Cappadocia.",
-    image: "https://images.unsplash.com/photo-1527838832700-50592524df75?auto=format&fit=crop&w=800&q=80",
+    image: "https://tse1.mm.bing.net/th/id/OIP.WN9LNYmA0Y03lkD_370KxwHaEO?r=0&cb=thfvnextfalcon4&rs=1&pid=ImgDetMain&o=7&rm=3",
     link: "/destinations/turkey"
   },
   {

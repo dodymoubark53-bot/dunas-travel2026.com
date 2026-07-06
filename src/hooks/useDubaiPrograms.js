@@ -79,7 +79,9 @@ export const useDubaiPrograms = () => {
   }, [activeLang]);
 };
 
-export const useDubaiProgram = (programSlug) => {
+export const useDubaiProgram = (programSlugOrId) => {
   const programs = useDubaiPrograms();
-  return programs.find((p) => p.slug === programSlug) || null;
+  if (!programSlugOrId) return null;
+  const lower = programSlugOrId.toLowerCase();
+  return programs.find((p) => p.slug.toLowerCase() === lower || p.id.toLowerCase() === lower) || null;
 };

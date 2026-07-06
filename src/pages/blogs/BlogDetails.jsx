@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useEffect, useCallback } from 'react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -11,36 +11,49 @@ const BlogDetails = () => {
   const { t, i18n } = useTranslation();
   const isRtl = i18n.dir() === 'rtl';
   const { slug } = useParams();
+  const navigate = useNavigate();
   const blog = blogs.find(b => b.slug === slug);
 
-  const tourLinks = [
-    { names: ['Cairo Express', 'Cairo Express com Alexandria'], path: '/programs/egypt' },
-    { names: ['Egito Clássico', 'Egito Clássico II'], path: '/programs/egypt' },
-    { names: ['Egito Histórico'], path: '/programs/egypt' },
-    { names: ['O GRANDE RAMSES', 'Grande Ramses'], path: '/programs/egypt' },
-    { names: ['Tesouros do Egito com Alexandria'], path: '/programs/egypt' },
-    { names: ['Lo Mejor de Grecia'], path: '/programs/greece' },
-    { names: ['Turquía Legendaria', 'Legendary Turkey'], path: '/programs/turkey' },
-    { names: ['Tunisia 8 Days Desert & Sea'], path: '/programs/tunisia' },
-    { names: ['Estrellas del Medio Oriente'], path: '/programs/multi-country' },
-    { names: ['Cairo and Athens 11 Days'], path: '/programs/multi-country' },
-    { names: ['Essences of Egypt and Turkey'], path: '/programs/multi-country' },
-    { names: ['Marvels of Dubai and Turkey'], path: '/programs/multi-country' },
-    { names: ['Petra by Night', 'Petra'], path: '/programs/jordan' },
-    { names: ['Wadi Rum Desert'], path: '/programs/jordan' },
-    { names: ['Dead Sea Experience'], path: '/programs/jordan' },
-    { names: ['Hot Air Balloon', 'hot air balloon'], path: '/programs/turkey' },
-    { names: ['Nile Cruise', 'Nile River', 'Cruzeiro no Nilo', 'felucca'], path: '/tours/egypt' },
-    { names: ['DUNAS TRAVEL', 'DUNAS TRAVELer', 'DUNAS TRAVELers'], path: '/' },
+  const rawTourLinks = [
+    { name: 'Cairo Express com Alexandria', path: '/tours/cairo-express-alexandria-5d' },
+    { name: 'Cairo Express', path: '/tours/cairo-express-4d' },
+    { name: 'Egito Clássico II', path: '/tours/egito-classico-ii-9d' },
+    { name: 'Egito Clássico', path: '/tours/egito-classico-8d' },
+    { name: 'Egito Histórico', path: '/tours/egito-historico-10d' },
+    { name: 'O GRANDE RAMSES', path: '/tours/grande-ramses-10d' },
+    { name: 'Grande Ramses', path: '/tours/grande-ramses-10d' },
+    { name: 'Tesouros do Egito com Alexandria', path: '/tours/tesouros-egipto-9d' },
+    { name: 'Lo Mejor de Grecia', path: '/tours/lo-mejor-de-grecia-9d' },
+    { name: 'Turquía Legendaria', path: '/programs/turkey/reg-01-legendary-turkey' },
+    { name: 'Legendary Turkey', path: '/programs/turkey/reg-01-legendary-turkey' },
+    { name: 'Tunisia 8 Days Desert & Sea', path: '/destinations/tunisia' },
+    { name: 'Estrellas del Medio Oriente', path: '/programs/multi-country/estrellas-medio-oriente-19d' },
+    { name: 'Cairo and Athens 11 Days', path: '/programs/multi-country/cairo-and-athens-11-days' },
+    { name: 'Essences of Egypt and Turkey', path: '/programs/multi-country/essences-of-egypt-and-turkey-15-days' },
+    { name: 'Marvels of Dubai and Turkey', path: '/programs/multi-country/marvels-of-dubai-and-turkey-14-days' },
+    { name: 'Petra by Night', path: '/programs/jordan/reg-15-classic-jordan' },
+    { name: 'Petra', path: '/programs/jordan/reg-15-classic-jordan' },
+    { name: 'Wadi Rum Desert', path: '/programs/jordan/reg-16-jordan-with-desert' },
+    { name: 'Dead Sea Experience', path: '/programs/jordan/reg-17-jordan-with-desert-and-dead-sea' },
+    { name: 'Hot Air Balloon', path: '/programs/turkey/reg-06-heart-of-turkey' },
+    { name: 'hot air balloon', path: '/programs/turkey/reg-06-heart-of-turkey' },
+    { name: 'Nile Cruise', path: '/tours/egito-classico-8d' },
+    { name: 'Nile River', path: '/tours/egito-classico-8d' },
+    { name: 'Cruzeiro no Nilo', path: '/tours/egito-classico-8d' },
+    { name: 'felucca', path: '/tours/egito-classico-8d' },
+    { name: 'DUNAS TRAVELers', path: '/' },
+    { name: 'DUNAS TRAVELer', path: '/' },
+    { name: 'DUNAS TRAVEL', path: '/' },
   ];
+
+  // Sort from longest to shortest to prevent partial string matching issues (e.g. Cairo Express matching inside Cairo Express com Alexandria)
+  const tourLinks = [...rawTourLinks].sort((a, b) => b.name.length - a.name.length);
 
   const renderContent = (text) => {
     let result = text;
-    tourLinks.forEach(({ names, path }) => {
-      names.forEach(name => {
-        const regex = new RegExp(`(\\b${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b)`, 'gi');
-        result = result.replace(regex, `<a href="${path}" class="text-gold-500 hover:text-gold-700 font-semibold underline decoration-gold-500/30 hover:decoration-gold-500 transition-all">$1</a>`);
-      });
+    tourLinks.forEach(({ name, path }) => {
+      const regex = new RegExp(`(\\b${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b)`, 'gi');
+      result = result.replace(regex, `<a href="${path}" class="text-gold-500 hover:text-gold-700 font-semibold underline decoration-gold-500/30 hover:decoration-gold-500 transition-all">$1</a>`);
     });
     return result;
   };
@@ -48,6 +61,16 @@ const BlogDetails = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
+
+  const handleContentClick = useCallback((e) => {
+    const link = e.target.closest('a[href]');
+    if (!link) return;
+    const href = link.getAttribute('href');
+    if (href && href.startsWith('/') && !href.startsWith('//')) {
+      e.preventDefault();
+      navigate(href);
+    }
+  }, [navigate]);
 
   if (!blog) {
     return (
@@ -128,7 +151,7 @@ const BlogDetails = () => {
       </section>
 
       {/* Article Body */}
-      <section className="container mx-auto px-6 mt-12 md:mt-16 mb-24 max-w-3xl">
+      <section className="container mx-auto px-6 mt-12 md:mt-16 mb-24 max-w-3xl" onClick={handleContentClick}>
         <motion.div
           className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-obsidian-900 prose-p:text-obsidian-600 prose-p:font-body prose-a:text-gold-500 hover:prose-a:text-gold-700 prose-strong:text-obsidian-900 prose-strong:font-semibold"
           initial={{ opacity: 0, y: 20 }}

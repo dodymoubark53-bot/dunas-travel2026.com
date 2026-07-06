@@ -62,7 +62,9 @@ export const useTurkeyPrograms = () => {
   }, [activeLang]);
 };
 
-export const useTurkeyProgram = (programSlug) => {
+export const useTurkeyProgram = (programSlugOrId) => {
   const programs = useTurkeyPrograms();
-  return programs.find((p) => p.slug === programSlug) || null;
+  if (!programSlugOrId) return null;
+  const lower = programSlugOrId.toLowerCase();
+  return programs.find((p) => p.slug.toLowerCase() === lower || p.id.toLowerCase() === lower) || null;
 };

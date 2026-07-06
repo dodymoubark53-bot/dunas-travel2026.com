@@ -5,7 +5,7 @@ export const blogs = [
     "title": "The Hidden Temples of Luxor",
     "category": "History",
     "date": "Oct 12, 2023",
-    "relatedTour": {"slug":"egypt","label":"Egypt Tours","path":"/programs/egypt"},
+    "relatedTour": {"slug":"cairo-express-4d","label":"Cairo Express","path":"/tours/cairo-express-4d"},
     "hidden": true,
     "excerpt": "Beyond Karnak and the Valley of the Kings lie incredible, lesser-known temples waiting to be explored. Discover the secrets of ancient Thebes without the crowds.",
     "img": "https://images.unsplash.com/photo-1596130535979-eedea4278d29?w=800&q=80&fit=crop",
@@ -22,7 +22,7 @@ export const blogs = [
     "title": "Petra by Night",
     "category": "Travel Guide",
     "date": "Nov 05, 2023",
-    "relatedTour": {"slug":"jordan","label":"Jordan Programs","path":"/programs/jordan"},
+    "relatedTour": {"slug":"reg-15","label":"Classic Jordan","path":"/programs/jordan/reg-15"},
     "excerpt": "Experiencing the rose-red city illuminated by thousands of candles is a bucket-list event. Here is everything you need to know to plan your magical evening.",
     "img": "https://images.unsplash.com/photo-1662747974561-f2f5ea3825a6?w=800&q=80&fit=crop",
     "content": [
@@ -38,7 +38,7 @@ export const blogs = [
     "title": "Istanbul's Grand Bazaar",
     "category": "Culture & Shopping",
     "date": "Dec 18, 2023",
-    "relatedTour": {"slug":"turkey","label":"Turkey Programs","path":"/programs/turkey"},
+    "relatedTour": {"slug":"reg-01-legendary-turkey","label":"Legendary Turkey","path":"/programs/turkey/reg-01-legendary-turkey"},
     "excerpt": "Navigate the labyrinthine alleys of one of the world's oldest and largest covered markets. From Turkish delight to antique kilims, here is your ultimate shopping guide.",
     "img": "https://images.unsplash.com/photo-1547057365-90f38124c65b?w=800&q=80&fit=crop",
     "content": [
@@ -54,7 +54,7 @@ export const blogs = [
     "title": "Sailing the Nile",
     "category": "Adventure",
     "date": "Jan 22, 2024",
-    "relatedTour": {"slug":"egypt","label":"Egypt Tours","path":"/programs/egypt"},
+    "relatedTour": {"slug":"cairo-express-4d","label":"Cairo Express","path":"/tours/cairo-express-4d"},
     "excerpt": "Step away from the massive cruise ships and experience the lifeblood of Egypt on a traditional wooden felucca. A peaceful, authentic journey awaits.",
     "img": "https://images.unsplash.com/photo-1684100096410-fd39cdff91a3?w=800&q=80&fit=crop",
     "content": [
@@ -70,7 +70,7 @@ export const blogs = [
     "title": "Wadi Rum Desert",
     "category": "Nature & Camping",
     "date": "Feb 14, 2024",
-    "relatedTour": {"slug":"jordan","label":"Jordan Programs","path":"/programs/jordan"},
+    "relatedTour": {"slug":"reg-15","label":"Classic Jordan","path":"/programs/jordan/reg-15"},
     "hidden": true,
     "excerpt": "Towering sandstone mountains, crimson sands, and a sky exploding with stars. Discover why camping in Jordan's Valley of the Moon is the ultimate desert escape.",
     "img": "https://images.unsplash.com/photo-1612892483236-52d32a0e0ac1?w=800&q=80&fit=crop",
@@ -87,7 +87,7 @@ export const blogs = [
     "title": "Turkish Cuisine",
     "category": "Food & Drink",
     "date": "Mar 08, 2024",
-    "relatedTour": {"slug":"turkey","label":"Turkey Programs","path":"/programs/turkey"},
+    "relatedTour": {"slug":"reg-01-legendary-turkey","label":"Legendary Turkey","path":"/programs/turkey/reg-01-legendary-turkey"},
     "excerpt": "Turkish food is a rich fusion of Central Asian, Middle Eastern, and Mediterranean flavors. Here are the iconic dishes you absolutely must taste during your visit.",
     "img": "https://images.unsplash.com/photo-1748540459503-19efc015143b?w=800&q=80&fit=crop",
     "content": [
@@ -103,7 +103,7 @@ export const blogs = [
     "title": "Best Time to Visit Egypt",
     "category": "Travel Tips",
     "date": "Mar 25, 2024",
-    "relatedTour": {"slug":"egypt","label":"Egypt Tours","path":"/programs/egypt"},
+    "relatedTour": {"slug":"cairo-express-4d","label":"Cairo Express","path":"/tours/cairo-express-4d"},
     "excerpt": "Planning your dream trip to the Pyramids? Weather plays a crucial role. Read our comprehensive month-by-month guide to choosing the perfect season.",
     "img": "https://images.unsplash.com/photo-1623674587543-9c7564de99d1?w=800&q=80&fit=crop",
     "content": [
@@ -119,7 +119,7 @@ export const blogs = [
     "title": "Dead Sea Experience",
     "category": "Wellness",
     "date": "Apr 02, 2024",
-    "relatedTour": {"slug":"jordan","label":"Jordan Programs","path":"/programs/jordan"},
+    "relatedTour": {"slug":"reg-15","label":"Classic Jordan","path":"/programs/jordan/reg-15"},
     "excerpt": "It is the lowest point on earth and the world's largest natural spa. Discover the incredible health benefits of floating in Jordan's hypersaline lake.",
     "img": "https://images.unsplash.com/photo-1743943932415-947f79353387?w=800&q=80&fit=crop",
     "content": [
@@ -135,7 +135,7 @@ export const blogs = [
     "title": "Cappadocia Hot Air Balloons",
     "category": "Adventure",
     "date": "Apr 15, 2024",
-    "relatedTour": {"slug":"turkey","label":"Turkey Programs","path":"/programs/turkey"},
+    "relatedTour": {"slug":"reg-01-legendary-turkey","label":"Legendary Turkey","path":"/programs/turkey/reg-01-legendary-turkey"},
     "excerpt": "Drifting silently over fairy chimneys at sunrise is a transcendent experience. Here is everything you need to know about booking a balloon flight in Turkey.",
     "img": "https://images.unsplash.com/photo-1559783510-c448bd7d686b?w=800&q=80&fit=crop",
     "content": [
@@ -335,7 +335,7 @@ export const blogs = [
     "title": "The Ultimate Guide to Lo Mejor de Grecia – 09 Días: A Luxury Travel Itinerary",
     "category": "Travel Guide",
     "date": "Jul 12, 2026",
-    "relatedTour": {"slug":"greece","label":"Lo Mejor de Grecia","path":"/programs/greece"},
+    "relatedTour": {"slug":"lo-mejor-de-grecia-9d","label":"Lo Mejor de Grecia","path":"/tours/lo-mejor-de-grecia-9d"},
     "excerpt": "Explore the luxury of our custom Lo Mejor de Grecia – 09 Días program in Greece. Discover why this 9 Días / 8 Noches itinerary is perfect for your travel dreams",
     "img": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1920&q=80",
     "content": [
@@ -352,62 +352,15 @@ export const blogs = [
       "Your dream Mediterranean escape is just a message away. Book the luxury \"Lo Mejor de Grecia – 09 Días\" Greece tour with Dunas Travel. Let us handle the transfers, hotels, and tours while you relax and soak in the Aegean sun. Reach out to our design experts today to plan your personalized holiday."
     ]
   },
-  {
-    "id": "b-019",
-    "slug": "complete-egypt-8d",
-    "title": "The Ultimate Guide to completoEgypt.title: A Luxury Travel Itinerary",
-    "category": "History",
-    "date": "Jul 20, 2026",
-    "relatedTour": {"slug":"egypt","label":"Egypt Tours","path":"/programs/egypt"},
-    "hidden": true,
-    "excerpt": "Explore the luxury of our custom completoEgypt.title program in Egypt. Discover why this completoEgypt.duration itinerary is perfect for your travel dreams with",
-    "img": "https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=800&q=80",
-    "content": [
-      "Few places on earth capture the imagination quite like Egypt. From the towering heights of the Great Pyramid of Giza to the serene flow of the Nile River, this ancient land is a living testament to human history and architectural grandeur. The \"completoEgypt.title\" package by Dunas Travel offers a carefully curated completoEgypt.duration itinerary designed to immerse you in the magic of the pharaohs. Whether you are gazing at the Sphinx, exploring the subterranean tombs in the Valley of the Kings, or relaxing by the crystal-clear waters of the Red Sea, every moment of this journey promises to be extraordinary. Written in a captivating storytelling tone, this travel guide will walk you through the key experiences that make this trip a must-book experience.",
-      "## Why Visit Egypt",
-      "Egypt is a destination that transcends time. Standing before the Great Pyramid of Giza—the only surviving wonder of the ancient world—is a humbling experience that connects you directly to the dawn of civilization. Beyond the pyramids, Egypt offers a rich tapestry of history, from the temple complexes of Luxor and Karnak to the beautiful tombs of the Valley of the Kings. Traveling along the Nile on a luxury river cruise allows you to witness rural life that has remained unchanged for millennia, while the vibrant streets of Cairo offer an exciting mix of historic mosques, Coptic churches, and bustling bazaars. For those seeking relaxation, the pristine coral reefs and luxury resorts of Sharm El Sheikh and Hurghada provide world-class diving and seaside comfort. Egypt is not just a place to visit; it is a journey into the history of humanity itself.",
-      "## What is Included in This Journey",
-      "The \"completoEgypt.title\" package is designed to offer a complete, worry-free luxury travel experience. Over the course of this completoEgypt.duration journey, Dunas Travel takes care of every logistical detail. Guests will enjoy handpicked accommodation in premium 5-star hotels and luxury desert camps, private airport transfers in modern executive vehicles, and domestic flights within the destinations. Daily breakfast is included, along with select lunches and dinners featuring authentic local cuisine. Sightseeing is conducted in private or small-group settings, led by professional, certified bilingual guides who bring the history and culture of each site to life. Additionally, all entrance fees to the attractions listed in the itinerary are fully covered, and our 24/7 concierge support is always available to assist with any personal requests, reservations, or recommendations.",
-      "## Day-by-Day Highlights & Key Experiences",
-      "While the detailed day-by-day itinerary is fully customized to your travel dates and preferences, this program is anchored by several signature experiences that form the core of your journey:\n\n• **completoEgypt.highlight.1**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **completoEgypt.highlight.2**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **completoEgypt.highlight.3**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **completoEgypt.highlight.4**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **completoEgypt.highlight.5**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **completoEgypt.highlight.6**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\nEach of these experiences has been selected to provide an authentic and immersive connection to the destination, ensuring that you see both the iconic sights and the hidden gems in comfort and style.",
-      "## Practical Tips for Your Egypt Adventure",
-      "To ensure a comfortable journey through Egypt, it is best to plan your visit between October and April, when the weather is cooler and perfect for outdoor sightseeing. Pack lightweight, breathable cotton clothing to stay cool, a wide-brimmed hat, sunglasses, and high-SPF sunscreen to protect against the desert sun. Sturdy, comfortable walking shoes are essential for exploring temple ruins and dusty archaeological sites. While beach resorts are very relaxed, it is recommended to dress modestly when exploring historic Cairo or local towns (covering shoulders and knees). Always drink bottled water, carry some local currency (Egyptian Pounds) for small tips, and keep your camera charged for the incredible sights.",
-      "## Book Your Experience",
-      "Are you ready to witness the eternal wonders of Egypt? The \"completoEgypt.title\" package is the perfect blend of ancient history, cultural immersion, and modern luxury. Contact the travel designers at Dunas Travel today to book your private tour or customize this itinerary to match your specific dates and preferences. Let our expert guides show you the magic of the Nile."
-    ]
-  },
-  {
-    "id": "b-020",
-    "slug": "tunisia-8-days-desert-sea",
-    "title": "The Ultimate Guide to Tunisia 8 Days Desert & Sea: A Luxury Travel Itinerary",
-    "category": "History",
-    "date": "Aug 02, 2026",
-    "relatedTour": {"slug":"tunisia","label":"Tunisia Tours","path":"/programs/tunisia"},
-    "excerpt": "Explore the luxury of our custom Tunisia 8 Days Desert & Sea program in Tunisia. Discover why this tunisia_tour_duration itinerary is perfect for your travel dr",
-    "img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/0b/fb/1c/caption.jpg?w=1200&h=-1&s=1",
-    "content": [
-      "Tunisia, the jewel of North Africa, is a destination rich in ancient history, Mediterranean charm, and diverse landscapes. The \"Tunisia 8 Days Desert & Sea\" itinerary is a magnificent tunisia_tour_duration travel program that takes you from the historic ruins of Carthage and the blue-washed streets of Sidi Bou Said to the golden beaches of the coast and the vast expanse of the Sahara. Dunas Travel has meticulously designed this tour to offer a balanced blend of cultural exploration and premium relaxation. In this article, we highlight the unique attractions included in this tour and provide practical tips to prepare you for an unforgettable Tunisian adventure.",
-      "## Why Visit Tunisia",
-      "Tunisia is a hidden gem on the Mediterranean, boasting a history that dates back to the Phoenicians and Romans. The ancient ruins of Carthage, once a powerful rival to Rome, and the spectacular Roman amphitheater of El Jem are UNESCO World Heritage sites that rival any in Europe. The picturesque blue-and-white village of Sidi Bou Said offers winding cobblestone streets and sea views, while the holy city of Kairouan is home to the oldest mosque in North Africa. Tunisia also features beautiful sandy beaches, olive groves, and the vast dunes of the Sahara Desert, which served as the backdrop for the Star Wars movies. It is a destination of incredible depth, offering history, culture, and natural beauty without the crowds.",
-      "## What is Included in This Journey",
-      "The \"Tunisia 8 Days Desert & Sea\" package is designed to offer a complete, worry-free luxury travel experience. Over the course of this tunisia_tour_duration journey, Dunas Travel takes care of every logistical detail. Guests will enjoy handpicked accommodation in premium 5-star hotels and luxury desert camps, private airport transfers in modern executive vehicles, and domestic flights within the destinations. Daily breakfast is included, along with select lunches and dinners featuring authentic local cuisine. Sightseeing is conducted in private or small-group settings, led by professional, certified bilingual guides who bring the history and culture of each site to life. Additionally, all entrance fees to the attractions listed in the itinerary are fully covered, and our 24/7 concierge support is always available to assist with any personal requests, reservations, or recommendations.",
-      "## Day-by-Day Highlights & Key Experiences",
-      "While the detailed day-by-day itinerary is fully customized to your travel dates and preferences, this program is anchored by several signature experiences that form the core of your journey:\n\n• **tunisia_tour_highlight_0**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **tunisia_tour_highlight_1**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **tunisia_tour_highlight_2**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **tunisia_tour_highlight_3**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **tunisia_tour_highlight_4**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\nEach of these experiences has been selected to provide an authentic and immersive connection to the destination, ensuring that you see both the iconic sights and the hidden gems in comfort and style.",
-      "## Practical Tips for Your Tunisia Adventure",
-      "Tunisia is best visited between March and June, or September and November, avoiding the hot summer months. Pack comfortable clothing suitable for walking around Roman ruins and sandy desert dunes. Dress modestly when visiting mosques or traditional markets. Sunscreen, a hat, and sunglasses are highly recommended. Tap water is not recommended for drinking, so stick to bottled water. Bring local Tunisian Dinars, as cash is preferred in smaller towns and traditional souks.",
-      "## Book Your Experience",
-      "Discover the Carthage ruins, Sidi Bou Said views, and Sahara sands in comfort. Book the private \"Tunisia 8 Days Desert & Sea\" Tunisia travel package with Dunas Travel. Contact our travel planners today to tailor this program to your preferences and secure your premium Tunisian getaway."
-    ]
-  },
-  {
+{
     "id": "b-021",
     "slug": "turquia-legendaria-11d",
     "title": "The Ultimate Guide to Turquía Legendaria en Tren de Alta Velocidad: A Luxury Travel Itinerary",
     "category": "Culture & Shopping",
     "date": "Aug 18, 2026",
-    "relatedTour": {"slug":"turkey","label":"Turquía Legendaria","path":"/programs/turkey"},
+    "relatedTour": {"slug":"reg-01-legendary-turkey","label":"Turquía Legendaria","path":"/programs/turkey/reg-01-legendary-turkey"},
     "excerpt": "Explore the luxury of our custom Turquía Legendaria en Tren de ... program in Turkey. Discover why this 11 Días / 10 Noches itinerary is perfect for your travel",
-    "img": "/imgs/spain/turquia-legendaria.jpg",
+    "img": "https://images.unsplash.com/photo-1527838832702-595888506147?w=800&q=80&fit=crop",
     "content": [
       "Spanning two continents, Turkey is a vibrant mosaic of Eastern and Western cultures, ancient history, and breathtaking landscapes. The \"Turquía Legendaria en Tren de Alta Velocidad\" itinerary is a premier 11 Días / 10 Noches journey that showcases the very best this diverse country has to offer. From the minarets and bustling bazaars of historic Istanbul to the fairy chimneys of Cappadocia and the thermal travertines of Pamukkale, this package is designed to show you Turkey in style. Whether you are cruising the Bosphorus, flying high in a hot air balloon at sunrise, or walking the marble streets of ancient Ephesus, this trip is packed with bucket-list moments. Let us explore why Turkey should be your next destination and how this tour makes it unforgettable.",
       "## Why Visit Turkey",
@@ -422,222 +375,13 @@ export const blogs = [
       "From the historic streets of Istanbul to the breathtaking valleys of Cappadocia, Turkey awaits. Reserve your spot on the \"Turquía Legendaria en Tren de Alta Velocidad\" tour package with Dunas Travel today. Reach out to our travel concierges to customize your itinerary, book premium flights, and secure the best boutique cave hotels."
     ]
   },
-  {
-    "id": "b-022",
-    "slug": "estrellas-medio-oriente-19d",
-    "title": "The Ultimate Guide to Estrellas del Medio Oriente: A Luxury Travel Itinerary",
-    "category": "Travel Guide",
-    "date": "Sep 05, 2026",
-    "relatedTour": {"slug":"mct-001","label":"Estrellas del Medio Oriente","path":"/programs/multi-country/mct-001"},
-    "excerpt": "Explore the luxury of our custom Estrellas del Medio Oriente program in Multi-country. Discover why this 19 Días / 18 Noches itinerary is perfect for your trave",
-    "img": "https://theglobetrottingdetective.com/wp-content/uploads/2022/03/best-places-in-the-middle-east-traveling-the-middle-east-cappadocia-turkey.jpg",
-    "content": [
-      "Embarking on a journey across multiple borders is the ultimate travel adventure. The \"Estrellas del Medio Oriente\" tour is an exceptional 19 Días / 18 Noches multi-country package that combines the ancient wonders of Egypt, the desert landscapes of Jordan, the historic palaces of Turkey, and the futuristic skyline of Dubai. This curated program is designed for travelers who want to experience the absolute highlights of the Middle East and Mediterranean in a single, seamless vacation. Enjoy private transfers, boutique 5-star accommodations, and expert local guides at every stop. Read on to discover the incredible highlights and day-by-day experiences that await you on this grand tour.",
-      "## Why Visit Multi-country",
-      "Combining multiple countries into a single itinerary offers an unparalleled perspective on the region's history and culture. By traveling across borders, you can witness the transitions between ancient empires, compare culinary traditions, and experience the diverse landscapes that define the Middle East and Mediterranean. From the ancient pyramids of Egypt and the rose-red cliffs of Petra to the historic streets of Istanbul and the futuristic skyline of Dubai, a multi-country tour is the ultimate way to fulfill your travel dreams. Dunas Travel ensures a seamless journey, coordinating flights, private transfers, and handpicked local guides to make your multi-destination odyssey comfortable and stress-free.",
-      "## What is Included in This Journey",
-      "The \"Estrellas del Medio Oriente\" package is designed to offer a complete, worry-free luxury travel experience. Over the course of this 19 Días / 18 Noches journey, Dunas Travel takes care of every logistical detail. Guests will enjoy handpicked accommodation in premium 5-star hotels and luxury desert camps, private airport transfers in modern executive vehicles, and domestic flights within the destinations. Daily breakfast is included, along with select lunches and dinners featuring authentic local cuisine. Sightseeing is conducted in private or small-group settings, led by professional, certified bilingual guides who bring the history and culture of each site to life. Additionally, all entrance fees to the attractions listed in the itinerary are fully covered, and our 24/7 concierge support is always available to assist with any personal requests, reservations, or recommendations.",
-      "## Day-by-Day Highlights & Key Experiences",
-      "While the detailed day-by-day itinerary is fully customized to your travel dates and preferences, this program is anchored by several signature experiences that form the core of your journey:\n\n• **mct001.highlight.1**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct001.highlight.2**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct001.highlight.3**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct001.highlight.4**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct001.highlight.5**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct001.highlight.6**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\nEach of these experiences has been selected to provide an authentic and immersive connection to the destination, ensuring that you see both the iconic sights and the hidden gems in comfort and style.",
-      "## Practical Tips for Your Multi-country Adventure",
-      "When embarking on a multi-destination tour, ensure your passport has at least six months of validity and several empty pages for visas. Research the visa requirements for each country in advance, as some can be obtained online or upon arrival. Pack versatile clothing that can be layered to suit different climates, from breezy coastal cities to cool desert nights. Sturdy walking shoes, sunscreen, and adapters for different plug types are essential. Carry a mix of credit cards and local currency for each country, and always keep digital copies of your travel documents.",
-      "## Book Your Experience",
-      "Embark on the ultimate multi-country odyssey. The \"Estrellas del Medio Oriente\" package is your ticket to experiencing the world's most captivating destinations in total luxury. Contact Dunas Travel today to reserve your space, customize the route, or speak to a travel specialist about crafting your bespoke multi-border vacation."
-    ]
-  },
-  {
-    "id": "b-023",
-    "slug": "cairo-and-athens-11-days",
-    "title": "The Ultimate Guide to Cairo and Athens 11 Days: A Luxury Travel Itinerary",
-    "category": "Travel Guide",
-    "date": "May 15, 2026",
-    "relatedTour": {"slug":"mct-002","label":"Cairo and Athens 11 Days","path":"/programs/multi-country/mct-002"},
-    "excerpt": "Explore the luxury of our custom Cairo and Athens 11 Days program in Multi-country. Discover why this 11 days / 10 nights itinerary is perfect for your travel d",
-    "img": "https://cdn.thecollector.com/wp-content/uploads/2024/07/history-cairo-monuments.jpg",
-    "content": [
-      "Embarking on a journey across multiple borders is the ultimate travel adventure. The \"Cairo and Athens 11 Days\" tour is an exceptional 11 days / 10 nights multi-country package that combines the ancient wonders of Egypt, the desert landscapes of Jordan, the historic palaces of Turkey, and the futuristic skyline of Dubai. This curated program is designed for travelers who want to experience the absolute highlights of the Middle East and Mediterranean in a single, seamless vacation. Enjoy private transfers, boutique 5-star accommodations, and expert local guides at every stop. Read on to discover the incredible highlights and day-by-day experiences that await you on this grand tour.",
-      "## Why Visit Multi-country",
-      "Combining multiple countries into a single itinerary offers an unparalleled perspective on the region's history and culture. By traveling across borders, you can witness the transitions between ancient empires, compare culinary traditions, and experience the diverse landscapes that define the Middle East and Mediterranean. From the ancient pyramids of Egypt and the rose-red cliffs of Petra to the historic streets of Istanbul and the futuristic skyline of Dubai, a multi-country tour is the ultimate way to fulfill your travel dreams. Dunas Travel ensures a seamless journey, coordinating flights, private transfers, and handpicked local guides to make your multi-destination odyssey comfortable and stress-free.",
-      "## What is Included in This Journey",
-      "The \"Cairo and Athens 11 Days\" package is designed to offer a complete, worry-free luxury travel experience. Over the course of this 11 days / 10 nights journey, Dunas Travel takes care of every logistical detail. Guests will enjoy handpicked accommodation in premium 5-star hotels and luxury desert camps, private airport transfers in modern executive vehicles, and domestic flights within the destinations. Daily breakfast is included, along with select lunches and dinners featuring authentic local cuisine. Sightseeing is conducted in private or small-group settings, led by professional, certified bilingual guides who bring the history and culture of each site to life. Additionally, all entrance fees to the attractions listed in the itinerary are fully covered, and our 24/7 concierge support is always available to assist with any personal requests, reservations, or recommendations.",
-      "## Day-by-Day Highlights & Key Experiences",
-      "While the detailed day-by-day itinerary is fully customized to your travel dates and preferences, this program is anchored by several signature experiences that form the core of your journey:\n\n• **mct002.highlight.1**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct002.highlight.2**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct002.highlight.3**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct002.highlight.4**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct002.highlight.5**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\nEach of these experiences has been selected to provide an authentic and immersive connection to the destination, ensuring that you see both the iconic sights and the hidden gems in comfort and style.",
-      "## Practical Tips for Your Multi-country Adventure",
-      "When embarking on a multi-destination tour, ensure your passport has at least six months of validity and several empty pages for visas. Research the visa requirements for each country in advance, as some can be obtained online or upon arrival. Pack versatile clothing that can be layered to suit different climates, from breezy coastal cities to cool desert nights. Sturdy walking shoes, sunscreen, and adapters for different plug types are essential. Carry a mix of credit cards and local currency for each country, and always keep digital copies of your travel documents.",
-      "## Book Your Experience",
-      "Embark on the ultimate multi-country odyssey. The \"Cairo and Athens 11 Days\" package is your ticket to experiencing the world's most captivating destinations in total luxury. Contact Dunas Travel today to reserve your space, customize the route, or speak to a travel specialist about crafting your bespoke multi-border vacation."
-    ]
-  },
-  {
-    "id": "b-024",
-    "slug": "essences-of-egypt-and-turkey-15-days",
-    "title": "The Ultimate Guide to Essences of Egypt and Turkey 15 Days: A Luxury Travel Itinerary",
-    "category": "Travel Guide",
-    "date": "Jun 10, 2026",
-    "relatedTour": {"slug":"mct-003","label":"Essences of Egypt and Turkey","path":"/programs/multi-country/mct-003"},
-    "excerpt": "Explore the luxury of our custom Essences of Egypt and Turkey 1... program in Multi-country. Discover why this 15 days / 14 nights itinerary is perfect for your",
-    "img": "/imgs/Essences of Egypt and Turkey .png",
-    "content": [
-      "Embarking on a journey across multiple borders is the ultimate travel adventure. The \"Essences of Egypt and Turkey 15 Days\" tour is an exceptional 15 days / 14 nights multi-country package that combines the ancient wonders of Egypt, the desert landscapes of Jordan, the historic palaces of Turkey, and the futuristic skyline of Dubai. This curated program is designed for travelers who want to experience the absolute highlights of the Middle East and Mediterranean in a single, seamless vacation. Enjoy private transfers, boutique 5-star accommodations, and expert local guides at every stop. Read on to discover the incredible highlights and day-by-day experiences that await you on this grand tour.",
-      "## Why Visit Multi-country",
-      "Combining multiple countries into a single itinerary offers an unparalleled perspective on the region's history and culture. By traveling across borders, you can witness the transitions between ancient empires, compare culinary traditions, and experience the diverse landscapes that define the Middle East and Mediterranean. From the ancient pyramids of Egypt and the rose-red cliffs of Petra to the historic streets of Istanbul and the futuristic skyline of Dubai, a multi-country tour is the ultimate way to fulfill your travel dreams. Dunas Travel ensures a seamless journey, coordinating flights, private transfers, and handpicked local guides to make your multi-destination odyssey comfortable and stress-free.",
-      "## What is Included in This Journey",
-      "The \"Essences of Egypt and Turkey 15 Days\" package is designed to offer a complete, worry-free luxury travel experience. Over the course of this 15 days / 14 nights journey, Dunas Travel takes care of every logistical detail. Guests will enjoy handpicked accommodation in premium 5-star hotels and luxury desert camps, private airport transfers in modern executive vehicles, and domestic flights within the destinations. Daily breakfast is included, along with select lunches and dinners featuring authentic local cuisine. Sightseeing is conducted in private or small-group settings, led by professional, certified bilingual guides who bring the history and culture of each site to life. Additionally, all entrance fees to the attractions listed in the itinerary are fully covered, and our 24/7 concierge support is always available to assist with any personal requests, reservations, or recommendations.",
-      "## Day-by-Day Highlights & Key Experiences",
-      "While the detailed day-by-day itinerary is fully customized to your travel dates and preferences, this program is anchored by several signature experiences that form the core of your journey:\n\n• **mct003.highlight.1**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct003.highlight.2**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct003.highlight.3**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct003.highlight.4**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct003.highlight.5**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\nEach of these experiences has been selected to provide an authentic and immersive connection to the destination, ensuring that you see both the iconic sights and the hidden gems in comfort and style.",
-      "## Practical Tips for Your Multi-country Adventure",
-      "When embarking on a multi-destination tour, ensure your passport has at least six months of validity and several empty pages for visas. Research the visa requirements for each country in advance, as some can be obtained online or upon arrival. Pack versatile clothing that can be layered to suit different climates, from breezy coastal cities to cool desert nights. Sturdy walking shoes, sunscreen, and adapters for different plug types are essential. Carry a mix of credit cards and local currency for each country, and always keep digital copies of your travel documents.",
-      "## Book Your Experience",
-      "Embark on the ultimate multi-country odyssey. The \"Essences of Egypt and Turkey 15 Days\" package is your ticket to experiencing the world's most captivating destinations in total luxury. Contact Dunas Travel today to reserve your space, customize the route, or speak to a travel specialist about crafting your bespoke multi-border vacation."
-    ]
-  },
-  {
-    "id": "b-025",
-    "slug": "marvels-of-dubai-and-turkey-14-days",
-    "title": "The Ultimate Guide to Marvels of Dubai and Turkey: A Luxury Travel Itinerary",
-    "category": "Travel Guide",
-    "date": "Jul 05, 2026",
-    "relatedTour": {"slug":"mct-004","label":"Marvels of Dubai and Turkey","path":"/programs/multi-country/mct-004"},
-    "excerpt": "Explore the luxury of our custom Marvels of Dubai and Turkey program in Multi-country. Discover why this 14 days / 13 nights itinerary is perfect for your trave",
-    "img": "/imgs/Marvels of Dubai and Turkey.png",
-    "content": [
-      "Embarking on a journey across multiple borders is the ultimate travel adventure. The \"Marvels of Dubai and Turkey\" tour is an exceptional 14 days / 13 nights multi-country package that combines the ancient wonders of Egypt, the desert landscapes of Jordan, the historic palaces of Turkey, and the futuristic skyline of Dubai. This curated program is designed for travelers who want to experience the absolute highlights of the Middle East and Mediterranean in a single, seamless vacation. Enjoy private transfers, boutique 5-star accommodations, and expert local guides at every stop. Read on to discover the incredible highlights and day-by-day experiences that await you on this grand tour.",
-      "## Why Visit Multi-country",
-      "Combining multiple countries into a single itinerary offers an unparalleled perspective on the region's history and culture. By traveling across borders, you can witness the transitions between ancient empires, compare culinary traditions, and experience the diverse landscapes that define the Middle East and Mediterranean. From the ancient pyramids of Egypt and the rose-red cliffs of Petra to the historic streets of Istanbul and the futuristic skyline of Dubai, a multi-country tour is the ultimate way to fulfill your travel dreams. Dunas Travel ensures a seamless journey, coordinating flights, private transfers, and handpicked local guides to make your multi-destination odyssey comfortable and stress-free.",
-      "## What is Included in This Journey",
-      "The \"Marvels of Dubai and Turkey\" package is designed to offer a complete, worry-free luxury travel experience. Over the course of this 14 days / 13 nights journey, Dunas Travel takes care of every logistical detail. Guests will enjoy handpicked accommodation in premium 5-star hotels and luxury desert camps, private airport transfers in modern executive vehicles, and domestic flights within the destinations. Daily breakfast is included, along with select lunches and dinners featuring authentic local cuisine. Sightseeing is conducted in private or small-group settings, led by professional, certified bilingual guides who bring the history and culture of each site to life. Additionally, all entrance fees to the attractions listed in the itinerary are fully covered, and our 24/7 concierge support is always available to assist with any personal requests, reservations, or recommendations.",
-      "## Day-by-Day Highlights & Key Experiences",
-      "While the detailed day-by-day itinerary is fully customized to your travel dates and preferences, this program is anchored by several signature experiences that form the core of your journey:\n\n• **mct004.highlight.1**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct004.highlight.2**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct004.highlight.3**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct004.highlight.4**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct004.highlight.5**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\nEach of these experiences has been selected to provide an authentic and immersive connection to the destination, ensuring that you see both the iconic sights and the hidden gems in comfort and style.",
-      "## Practical Tips for Your Multi-country Adventure",
-      "When embarking on a multi-destination tour, ensure your passport has at least six months of validity and several empty pages for visas. Research the visa requirements for each country in advance, as some can be obtained online or upon arrival. Pack versatile clothing that can be layered to suit different climates, from breezy coastal cities to cool desert nights. Sturdy walking shoes, sunscreen, and adapters for different plug types are essential. Carry a mix of credit cards and local currency for each country, and always keep digital copies of your travel documents.",
-      "## Book Your Experience",
-      "Embark on the ultimate multi-country odyssey. The \"Marvels of Dubai and Turkey\" package is your ticket to experiencing the world's most captivating destinations in total luxury. Contact Dunas Travel today to reserve your space, customize the route, or speak to a travel specialist about crafting your bespoke multi-border vacation."
-    ]
-  },
-  {
-    "id": "b-026",
-    "slug": "stars-of-the-middle-east-16-days",
-    "title": "The Ultimate Guide to mct005.title: A Luxury Travel Itinerary",
-    "category": "Travel Guide",
-    "date": "Jul 12, 2026",
-    "relatedTour": {"slug":"mct-005","label":"Stars of the Middle East","path":"/programs/multi-country/mct-005"},
-    "hidden": true,
-    "excerpt": "Explore the luxury of our custom mct005.title program in Multi-country. Discover why this mct005.duration itinerary is perfect for your travel dreams with Dunas",
-    "img": "/imgs/Stars of the Middle East .png",
-    "content": [
-      "Embarking on a journey across multiple borders is the ultimate travel adventure. The \"mct005.title\" tour is an exceptional mct005.duration multi-country package that combines the ancient wonders of Egypt, the desert landscapes of Jordan, the historic palaces of Turkey, and the futuristic skyline of Dubai. This curated program is designed for travelers who want to experience the absolute highlights of the Middle East and Mediterranean in a single, seamless vacation. Enjoy private transfers, boutique 5-star accommodations, and expert local guides at every stop. Read on to discover the incredible highlights and day-by-day experiences that await you on this grand tour.",
-      "## Why Visit Multi-country",
-      "Combining multiple countries into a single itinerary offers an unparalleled perspective on the region's history and culture. By traveling across borders, you can witness the transitions between ancient empires, compare culinary traditions, and experience the diverse landscapes that define the Middle East and Mediterranean. From the ancient pyramids of Egypt and the rose-red cliffs of Petra to the historic streets of Istanbul and the futuristic skyline of Dubai, a multi-country tour is the ultimate way to fulfill your travel dreams. Dunas Travel ensures a seamless journey, coordinating flights, private transfers, and handpicked local guides to make your multi-destination odyssey comfortable and stress-free.",
-      "## What is Included in This Journey",
-      "The \"mct005.title\" package is designed to offer a complete, worry-free luxury travel experience. Over the course of this mct005.duration journey, Dunas Travel takes care of every logistical detail. Guests will enjoy handpicked accommodation in premium 5-star hotels and luxury desert camps, private airport transfers in modern executive vehicles, and domestic flights within the destinations. Daily breakfast is included, along with select lunches and dinners featuring authentic local cuisine. Sightseeing is conducted in private or small-group settings, led by professional, certified bilingual guides who bring the history and culture of each site to life. Additionally, all entrance fees to the attractions listed in the itinerary are fully covered, and our 24/7 concierge support is always available to assist with any personal requests, reservations, or recommendations.",
-      "## Day-by-Day Highlights & Key Experiences",
-      "While the detailed day-by-day itinerary is fully customized to your travel dates and preferences, this program is anchored by several signature experiences that form the core of your journey:\n\n• **mct005.highlight.1**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct005.highlight.2**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct005.highlight.3**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct005.highlight.4**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct005.highlight.5**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\nEach of these experiences has been selected to provide an authentic and immersive connection to the destination, ensuring that you see both the iconic sights and the hidden gems in comfort and style.",
-      "## Practical Tips for Your Multi-country Adventure",
-      "When embarking on a multi-destination tour, ensure your passport has at least six months of validity and several empty pages for visas. Research the visa requirements for each country in advance, as some can be obtained online or upon arrival. Pack versatile clothing that can be layered to suit different climates, from breezy coastal cities to cool desert nights. Sturdy walking shoes, sunscreen, and adapters for different plug types are essential. Carry a mix of credit cards and local currency for each country, and always keep digital copies of your travel documents.",
-      "## Book Your Experience",
-      "Embark on the ultimate multi-country odyssey. The \"mct005.title\" package is your ticket to experiencing the world's most captivating destinations in total luxury. Contact Dunas Travel today to reserve your space, customize the route, or speak to a travel specialist about crafting your bespoke multi-border vacation."
-    ]
-  },
-  {
-    "id": "b-027",
-    "slug": "treasures-of-egypt-and-tunisia-16-days",
-    "title": "The Ultimate Guide to mct006.title: A Luxury Travel Itinerary",
-    "category": "Travel Guide",
-    "date": "Jul 20, 2026",
-    "relatedTour": {"slug":"mct-006","label":"Treasures of Egypt and Tunisia","path":"/programs/multi-country/mct-006"},
-    "hidden": true,
-    "excerpt": "Explore the luxury of our custom mct006.title program in Multi-country. Discover why this mct006.duration itinerary is perfect for your travel dreams with Dunas",
-    "img": "/imgs/Treasures of Egypt and Tunisia.png",
-    "content": [
-      "Embarking on a journey across multiple borders is the ultimate travel adventure. The \"mct006.title\" tour is an exceptional mct006.duration multi-country package that combines the ancient wonders of Egypt, the desert landscapes of Jordan, the historic palaces of Turkey, and the futuristic skyline of Dubai. This curated program is designed for travelers who want to experience the absolute highlights of the Middle East and Mediterranean in a single, seamless vacation. Enjoy private transfers, boutique 5-star accommodations, and expert local guides at every stop. Read on to discover the incredible highlights and day-by-day experiences that await you on this grand tour.",
-      "## Why Visit Multi-country",
-      "Combining multiple countries into a single itinerary offers an unparalleled perspective on the region's history and culture. By traveling across borders, you can witness the transitions between ancient empires, compare culinary traditions, and experience the diverse landscapes that define the Middle East and Mediterranean. From the ancient pyramids of Egypt and the rose-red cliffs of Petra to the historic streets of Istanbul and the futuristic skyline of Dubai, a multi-country tour is the ultimate way to fulfill your travel dreams. Dunas Travel ensures a seamless journey, coordinating flights, private transfers, and handpicked local guides to make your multi-destination odyssey comfortable and stress-free.",
-      "## What is Included in This Journey",
-      "The \"mct006.title\" package is designed to offer a complete, worry-free luxury travel experience. Over the course of this mct006.duration journey, Dunas Travel takes care of every logistical detail. Guests will enjoy handpicked accommodation in premium 5-star hotels and luxury desert camps, private airport transfers in modern executive vehicles, and domestic flights within the destinations. Daily breakfast is included, along with select lunches and dinners featuring authentic local cuisine. Sightseeing is conducted in private or small-group settings, led by professional, certified bilingual guides who bring the history and culture of each site to life. Additionally, all entrance fees to the attractions listed in the itinerary are fully covered, and our 24/7 concierge support is always available to assist with any personal requests, reservations, or recommendations.",
-      "## Day-by-Day Highlights & Key Experiences",
-      "While the detailed day-by-day itinerary is fully customized to your travel dates and preferences, this program is anchored by several signature experiences that form the core of your journey:\n\n• **mct006.highlight.1**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct006.highlight.2**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct006.highlight.3**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct006.highlight.4**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct006.highlight.5**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\nEach of these experiences has been selected to provide an authentic and immersive connection to the destination, ensuring that you see both the iconic sights and the hidden gems in comfort and style.",
-      "## Practical Tips for Your Multi-country Adventure",
-      "When embarking on a multi-destination tour, ensure your passport has at least six months of validity and several empty pages for visas. Research the visa requirements for each country in advance, as some can be obtained online or upon arrival. Pack versatile clothing that can be layered to suit different climates, from breezy coastal cities to cool desert nights. Sturdy walking shoes, sunscreen, and adapters for different plug types are essential. Carry a mix of credit cards and local currency for each country, and always keep digital copies of your travel documents.",
-      "## Book Your Experience",
-      "Embark on the ultimate multi-country odyssey. The \"mct006.title\" package is your ticket to experiencing the world's most captivating destinations in total luxury. Contact Dunas Travel today to reserve your space, customize the route, or speak to a travel specialist about crafting your bespoke multi-border vacation."
-    ]
-  },
-  {
-    "id": "b-028",
-    "slug": "egypt-and-dubai-13-days",
-    "title": "The Ultimate Guide to mct007.title: A Luxury Travel Itinerary",
-    "category": "Travel Guide",
-    "date": "Aug 02, 2026",
-    "relatedTour": {"slug":"mct-007","label":"Egypt and Dubai","path":"/programs/multi-country/mct-007"},
-    "excerpt": "Explore the luxury of our custom mct007.title program in Multi-country. Discover why this mct007.duration itinerary is perfect for your travel dreams with Dunas",
-    "img": "/imgs/Egypt and Dubai.png",
-    "content": [
-      "Embarking on a journey across multiple borders is the ultimate travel adventure. The \"mct007.title\" tour is an exceptional mct007.duration multi-country package that combines the ancient wonders of Egypt, the desert landscapes of Jordan, the historic palaces of Turkey, and the futuristic skyline of Dubai. This curated program is designed for travelers who want to experience the absolute highlights of the Middle East and Mediterranean in a single, seamless vacation. Enjoy private transfers, boutique 5-star accommodations, and expert local guides at every stop. Read on to discover the incredible highlights and day-by-day experiences that await you on this grand tour.",
-      "## Why Visit Multi-country",
-      "Combining multiple countries into a single itinerary offers an unparalleled perspective on the region's history and culture. By traveling across borders, you can witness the transitions between ancient empires, compare culinary traditions, and experience the diverse landscapes that define the Middle East and Mediterranean. From the ancient pyramids of Egypt and the rose-red cliffs of Petra to the historic streets of Istanbul and the futuristic skyline of Dubai, a multi-country tour is the ultimate way to fulfill your travel dreams. Dunas Travel ensures a seamless journey, coordinating flights, private transfers, and handpicked local guides to make your multi-destination odyssey comfortable and stress-free.",
-      "## What is Included in This Journey",
-      "The \"mct007.title\" package is designed to offer a complete, worry-free luxury travel experience. Over the course of this mct007.duration journey, Dunas Travel takes care of every logistical detail. Guests will enjoy handpicked accommodation in premium 5-star hotels and luxury desert camps, private airport transfers in modern executive vehicles, and domestic flights within the destinations. Daily breakfast is included, along with select lunches and dinners featuring authentic local cuisine. Sightseeing is conducted in private or small-group settings, led by professional, certified bilingual guides who bring the history and culture of each site to life. Additionally, all entrance fees to the attractions listed in the itinerary are fully covered, and our 24/7 concierge support is always available to assist with any personal requests, reservations, or recommendations.",
-      "## Day-by-Day Highlights & Key Experiences",
-      "While the detailed day-by-day itinerary is fully customized to your travel dates and preferences, this program is anchored by several signature experiences that form the core of your journey:\n\n• **mct007.highlight.1**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct007.highlight.2**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct007.highlight.3**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct007.highlight.4**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct007.highlight.5**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\nEach of these experiences has been selected to provide an authentic and immersive connection to the destination, ensuring that you see both the iconic sights and the hidden gems in comfort and style.",
-      "## Practical Tips for Your Multi-country Adventure",
-      "When embarking on a multi-destination tour, ensure your passport has at least six months of validity and several empty pages for visas. Research the visa requirements for each country in advance, as some can be obtained online or upon arrival. Pack versatile clothing that can be layered to suit different climates, from breezy coastal cities to cool desert nights. Sturdy walking shoes, sunscreen, and adapters for different plug types are essential. Carry a mix of credit cards and local currency for each country, and always keep digital copies of your travel documents.",
-      "## Book Your Experience",
-      "Embark on the ultimate multi-country odyssey. The \"mct007.title\" package is your ticket to experiencing the world's most captivating destinations in total luxury. Contact Dunas Travel today to reserve your space, customize the route, or speak to a travel specialist about crafting your bespoke multi-border vacation."
-    ]
-  },
-  {
-    "id": "b-029",
-    "slug": "spices-of-egypt-and-morocco",
-    "title": "The Ultimate Guide to mct008.title: A Luxury Travel Itinerary",
-    "category": "Travel Guide",
-    "date": "Aug 18, 2026",
-    "relatedTour": {"slug":"mct-008","label":"Spices of Egypt and Morocco","path":"/programs/multi-country/mct-008"},
-    "excerpt": "Explore the luxury of our custom mct008.title program in Multi-country. Discover why this mct008.duration itinerary is perfect for your travel dreams with Dunas",
-    "img": "https://th.bing.com/th/id/R.58564825c2c22ad5062b00d620ed4397?rik=XgQR%2bu8MUj6NHA&pid=ImgRaw&r=0",
-    "content": [
-      "Embarking on a journey across multiple borders is the ultimate travel adventure. The \"mct008.title\" tour is an exceptional mct008.duration multi-country package that combines the ancient wonders of Egypt, the desert landscapes of Jordan, the historic palaces of Turkey, and the futuristic skyline of Dubai. This curated program is designed for travelers who want to experience the absolute highlights of the Middle East and Mediterranean in a single, seamless vacation. Enjoy private transfers, boutique 5-star accommodations, and expert local guides at every stop. Read on to discover the incredible highlights and day-by-day experiences that await you on this grand tour.",
-      "## Why Visit Multi-country",
-      "Combining multiple countries into a single itinerary offers an unparalleled perspective on the region's history and culture. By traveling across borders, you can witness the transitions between ancient empires, compare culinary traditions, and experience the diverse landscapes that define the Middle East and Mediterranean. From the ancient pyramids of Egypt and the rose-red cliffs of Petra to the historic streets of Istanbul and the futuristic skyline of Dubai, a multi-country tour is the ultimate way to fulfill your travel dreams. Dunas Travel ensures a seamless journey, coordinating flights, private transfers, and handpicked local guides to make your multi-destination odyssey comfortable and stress-free.",
-      "## What is Included in This Journey",
-      "The \"mct008.title\" package is designed to offer a complete, worry-free luxury travel experience. Over the course of this mct008.duration journey, Dunas Travel takes care of every logistical detail. Guests will enjoy handpicked accommodation in premium 5-star hotels and luxury desert camps, private airport transfers in modern executive vehicles, and domestic flights within the destinations. Daily breakfast is included, along with select lunches and dinners featuring authentic local cuisine. Sightseeing is conducted in private or small-group settings, led by professional, certified bilingual guides who bring the history and culture of each site to life. Additionally, all entrance fees to the attractions listed in the itinerary are fully covered, and our 24/7 concierge support is always available to assist with any personal requests, reservations, or recommendations.",
-      "## Day-by-Day Highlights & Key Experiences",
-      "While the detailed day-by-day itinerary is fully customized to your travel dates and preferences, this program is anchored by several signature experiences that form the core of your journey:\n\n• **mct008.highlight.1**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct008.highlight.2**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct008.highlight.3**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct008.highlight.4**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct008.highlight.5**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\nEach of these experiences has been selected to provide an authentic and immersive connection to the destination, ensuring that you see both the iconic sights and the hidden gems in comfort and style.",
-      "## Practical Tips for Your Multi-country Adventure",
-      "When embarking on a multi-destination tour, ensure your passport has at least six months of validity and several empty pages for visas. Research the visa requirements for each country in advance, as some can be obtained online or upon arrival. Pack versatile clothing that can be layered to suit different climates, from breezy coastal cities to cool desert nights. Sturdy walking shoes, sunscreen, and adapters for different plug types are essential. Carry a mix of credit cards and local currency for each country, and always keep digital copies of your travel documents.",
-      "## Book Your Experience",
-      "Embark on the ultimate multi-country odyssey. The \"mct008.title\" package is your ticket to experiencing the world's most captivating destinations in total luxury. Contact Dunas Travel today to reserve your space, customize the route, or speak to a travel specialist about crafting your bespoke multi-border vacation."
-    ]
-  },
-  {
-    "id": "b-030",
-    "slug": "jewels-of-egypt-and-jordan-11-days",
-    "title": "The Ultimate Guide to mct009.title: A Luxury Travel Itinerary",
-    "category": "Travel Guide",
-    "date": "Sep 05, 2026",
-    "relatedTour": {"slug":"mct-009","label":"Jewels of Egypt and Jordan","path":"/programs/multi-country/mct-009"},
-    "excerpt": "Explore the luxury of our custom mct009.title program in Multi-country. Discover why this mct009.duration itinerary is perfect for your travel dreams with Dunas",
-    "img": "https://th.bing.com/th/id/R.d4c411bd75b827b087396502b4144fe6?rik=3VllwT9EP1BvFA&pid=ImgRaw&r=0",
-    "content": [
-      "Embarking on a journey across multiple borders is the ultimate travel adventure. The \"mct009.title\" tour is an exceptional mct009.duration multi-country package that combines the ancient wonders of Egypt, the desert landscapes of Jordan, the historic palaces of Turkey, and the futuristic skyline of Dubai. This curated program is designed for travelers who want to experience the absolute highlights of the Middle East and Mediterranean in a single, seamless vacation. Enjoy private transfers, boutique 5-star accommodations, and expert local guides at every stop. Read on to discover the incredible highlights and day-by-day experiences that await you on this grand tour.",
-      "## Why Visit Multi-country",
-      "Combining multiple countries into a single itinerary offers an unparalleled perspective on the region's history and culture. By traveling across borders, you can witness the transitions between ancient empires, compare culinary traditions, and experience the diverse landscapes that define the Middle East and Mediterranean. From the ancient pyramids of Egypt and the rose-red cliffs of Petra to the historic streets of Istanbul and the futuristic skyline of Dubai, a multi-country tour is the ultimate way to fulfill your travel dreams. Dunas Travel ensures a seamless journey, coordinating flights, private transfers, and handpicked local guides to make your multi-destination odyssey comfortable and stress-free.",
-      "## What is Included in This Journey",
-      "The \"mct009.title\" package is designed to offer a complete, worry-free luxury travel experience. Over the course of this mct009.duration journey, Dunas Travel takes care of every logistical detail. Guests will enjoy handpicked accommodation in premium 5-star hotels and luxury desert camps, private airport transfers in modern executive vehicles, and domestic flights within the destinations. Daily breakfast is included, along with select lunches and dinners featuring authentic local cuisine. Sightseeing is conducted in private or small-group settings, led by professional, certified bilingual guides who bring the history and culture of each site to life. Additionally, all entrance fees to the attractions listed in the itinerary are fully covered, and our 24/7 concierge support is always available to assist with any personal requests, reservations, or recommendations.",
-      "## Day-by-Day Highlights & Key Experiences",
-      "While the detailed day-by-day itinerary is fully customized to your travel dates and preferences, this program is anchored by several signature experiences that form the core of your journey:\n\n• **mct009.highlight.1**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct009.highlight.2**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct009.highlight.3**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct009.highlight.4**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\n• **mct009.highlight.5**: Explore this remarkable highlight in detail, experiencing its historical importance and scenic beauty.\n\nEach of these experiences has been selected to provide an authentic and immersive connection to the destination, ensuring that you see both the iconic sights and the hidden gems in comfort and style.",
-      "## Practical Tips for Your Multi-country Adventure",
-      "When embarking on a multi-destination tour, ensure your passport has at least six months of validity and several empty pages for visas. Research the visa requirements for each country in advance, as some can be obtained online or upon arrival. Pack versatile clothing that can be layered to suit different climates, from breezy coastal cities to cool desert nights. Sturdy walking shoes, sunscreen, and adapters for different plug types are essential. Carry a mix of credit cards and local currency for each country, and always keep digital copies of your travel documents.",
-      "## Book Your Experience",
-      "Embark on the ultimate multi-country odyssey. The \"mct009.title\" package is your ticket to experiencing the world's most captivating destinations in total luxury. Contact Dunas Travel today to reserve your space, customize the route, or speak to a travel specialist about crafting your bespoke multi-border vacation."
-    ]
-  },
-  {
+{
     "id": "b-031",
     "slug": "reg-01-legendary-turkey",
     "title": "The Ultimate Guide to Legendary Turkey: A Luxury Travel Itinerary",
     "category": "Culture & Shopping",
     "date": "May 15, 2026",
-    "relatedTour": {"slug":"reg-01","label":"Legendary Turkey","path":"/programs/turkey/reg-01"},
+    "relatedTour": {"slug":"reg-01-legendary-turkey","label":"Legendary Turkey","path":"/programs/turkey/reg-01-legendary-turkey"},
     "excerpt": "Explore the luxury of our custom Legendary Turkey program in Turkey. Discover why this 11 days / 10 nights itinerary is perfect for your travel dreams with Duna",
     "img": "https://images.unsplash.com/photo-1527838832702-595888506147?w=800&q=80&fit=crop",
     "content": [
@@ -660,7 +404,7 @@ export const blogs = [
     "title": "The Ultimate Guide to Legendary Cappadocia: A Luxury Travel Itinerary",
     "category": "Culture & Shopping",
     "date": "Jun 10, 2026",
-    "relatedTour": {"slug":"reg-04","label":"Legendary Cappadocia","path":"/programs/turkey/reg-04"},
+    "relatedTour": {"slug":"reg-04-legendary-cappadocia","label":"Legendary Cappadocia","path":"/programs/turkey/reg-04-legendary-cappadocia"},
     "excerpt": "Explore the luxury of our custom Legendary Cappadocia program in Turkey. Discover why this 8 days / 7 nights itinerary is perfect for your travel dreams with Du",
     "img": "https://images.unsplash.com/photo-1527838832702-595888506147?w=800&q=80&fit=crop",
     "content": [
@@ -683,7 +427,7 @@ export const blogs = [
     "title": "The Ultimate Guide to Best of Istanbul: A Luxury Travel Itinerary",
     "category": "Culture & Shopping",
     "date": "Jul 05, 2026",
-    "relatedTour": {"slug":"ist-01","label":"Best of Istanbul","path":"/programs/turkey/ist-01"},
+    "relatedTour": {"slug":"ist-01-best-of-istanbul","label":"Best of Istanbul","path":"/programs/turkey/ist-01-best-of-istanbul"},
     "excerpt": "Explore the luxury of our custom Best of Istanbul program in Turkey. Discover why this 4 days / 3 nights itinerary is perfect for your travel dreams with Dunas ",
     "img": "https://images.unsplash.com/photo-1527838832702-595888506147?w=800&q=80&fit=crop",
     "content": [
@@ -706,7 +450,7 @@ export const blogs = [
     "title": "The Ultimate Guide to Passion of Turkey: A Luxury Travel Itinerary",
     "category": "Culture & Shopping",
     "date": "Jul 12, 2026",
-    "relatedTour": {"slug":"reg-03","label":"Passion of Turkey","path":"/programs/turkey/reg-03"},
+    "relatedTour": {"slug":"reg-03-passion-of-turkey","label":"Passion of Turkey","path":"/programs/turkey/reg-03-passion-of-turkey"},
     "excerpt": "Explore the luxury of our custom Passion of Turkey program in Turkey. Discover why this 8 days / 7 nights itinerary is perfect for your travel dreams with Dunas",
     "img": "https://images.unsplash.com/photo-1527838832702-595888506147?w=800&q=80&fit=crop",
     "content": [
@@ -1097,7 +841,7 @@ export const blogs = [
     "title": "The Ultimate Guide to Admirable Turkey: A Luxury Travel Itinerary",
     "category": "Culture & Shopping",
     "date": "Jul 20, 2026",
-    "relatedTour": {"slug":"reg-05","label":"Admirable Turkey","path":"/programs/turkey/reg-05"},
+    "relatedTour": {"slug":"reg-05-admirable-turkey","label":"Admirable Turkey","path":"/programs/turkey/reg-05-admirable-turkey"},
     "excerpt": "Explore the luxury of our custom Admirable Turkey program in Turkey. Discover why this 10 days / 9 nights itinerary is perfect for your travel dreams with Dunas",
     "img": "https://images.unsplash.com/photo-1527838832702-595888506147?w=800&q=80&fit=crop",
     "content": [
@@ -1120,7 +864,7 @@ export const blogs = [
     "title": "The Ultimate Guide to Heart of Turkey - Istanbul with Cappadocia: A Luxury Travel Itinerary",
     "category": "Culture & Shopping",
     "date": "Aug 02, 2026",
-    "relatedTour": {"slug":"reg-06","label":"Heart of Turkey","path":"/programs/turkey/reg-06"},
+    "relatedTour": {"slug":"reg-06-heart-of-turkey","label":"Heart of Turkey","path":"/programs/turkey/reg-06-heart-of-turkey"},
     "excerpt": "Explore the luxury of our custom Heart of Turkey - Istanbul wit... program in Turkey. Discover why this 7 days / 6 nights itinerary is perfect for your travel d",
     "img": "https://images.unsplash.com/photo-1527838832702-595888506147?w=800&q=80&fit=crop",
     "content": [
@@ -1143,7 +887,7 @@ export const blogs = [
     "title": "The Ultimate Guide to Turkish Riviera: A Luxury Travel Itinerary",
     "category": "Culture & Shopping",
     "date": "Aug 18, 2026",
-    "relatedTour": {"slug":"reg-07","label":"Turkish Riviera","path":"/programs/turkey/reg-07"},
+    "relatedTour": {"slug":"reg-07-turkish-riviera","label":"Turkish Riviera","path":"/programs/turkey/reg-07-turkish-riviera"},
     "excerpt": "Explore the luxury of our custom Turkish Riviera program in Turkey. Discover why this 12 Days / 11 Nights itinerary is perfect for your travel dreams with Dunas",
     "img": "https://images.unsplash.com/photo-1527838832702-595888506147?w=800&q=80&fit=crop",
     "content": [
@@ -1166,7 +910,7 @@ export const blogs = [
     "title": "The Ultimate Guide to Stop Over — Stop in Istanbul: A Luxury Travel Itinerary",
     "category": "Culture & Shopping",
     "date": "Sep 05, 2026",
-    "relatedTour": {"slug":"reg-08","label":"Stop Over Istanbul","path":"/programs/turkey/reg-08"},
+    "relatedTour": {"slug":"reg-08-stop-over","label":"Stop Over Istanbul","path":"/programs/turkey/reg-08-stop-over"},
     "excerpt": "Explore the luxury of our custom Stop Over — Stop in Istanbul program in Turkey. Discover why this 3 Days / 2 Nights itinerary is perfect for your travel dreams",
     "img": "https://images.unsplash.com/photo-1527838832702-595888506147?w=800&q=80&fit=crop",
     "content": [

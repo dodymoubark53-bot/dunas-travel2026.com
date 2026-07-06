@@ -40,8 +40,12 @@ const DubaiProgramDetails = () => {
 
   if (!program) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-obsidian-50">
-        <h1 className="text-display-lg text-obsidian-900">{t('programs.notFound', 'Program not found')}</h1>
+      <div className="min-h-screen flex flex-col items-center justify-center bg-obsidian-50 dark:bg-[#0f0f1a] px-6">
+        <h1 className="text-display-lg text-obsidian-900 dark:text-ivory-100 mb-4">{t('programs.notFound', 'Trip no longer available')}</h1>
+        <p className="text-body-md text-obsidian-500 dark:text-obsidian-300 mb-8">{t('programs.notFoundDesc', 'The trip you are looking for does not exist or has been removed.')}</p>
+        <Link to="/destinations/dubai" className="bg-gold-500 hover:bg-gold-600 text-obsidian-900 px-6 py-3 rounded-full font-semibold transition-colors">
+          {t('programs.viewAllDubaiTours', 'View All Dubai Tours')}
+        </Link>
       </div>
     );
   }
