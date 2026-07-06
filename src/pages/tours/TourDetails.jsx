@@ -356,7 +356,7 @@ const TourDetails = () => {
                   </h3>
                   <ul className="flex flex-col gap-3">
                     {tour.included && tour.included.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-[#e8e4e0]">
+                      <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-gold-300">
                         <FaCheck className="text-sage-500 dark:text-green-400 mt-1 flex-shrink-0" />
                         <span>{t(`data.${item}`, item)}</span>
                       </li>
@@ -369,7 +369,7 @@ const TourDetails = () => {
                   </h3>
                   <ul className="flex flex-col gap-3">
                     {tour.excluded && tour.excluded.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-[#e8e4e0]">
+                      <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-gold-300">
                         <FaTimes className="text-red-400 dark:text-red-300 mt-1 flex-shrink-0" />
                         <span>{t(`data.${item}`, item)}</span>
                       </li>
@@ -383,7 +383,7 @@ const TourDetails = () => {
                     </h3>
                     <ul className="flex flex-col gap-3">
                       {tour.excursions.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700">
+                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-gold-300">
                           <FaCheck className="text-gold-500 mt-1 flex-shrink-0" />
                           <span>{t(`data.${item}`, item)}</span>
                         </li>

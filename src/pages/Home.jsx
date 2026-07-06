@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FaStar, FaTimes, FaChevronLeft, FaChevronRight, FaMicrophone, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaHeadset, FaWhatsapp, FaArrowRight } from "react-icons/fa";
+import { FaStar, FaTimes, FaChevronLeft, FaChevronRight, FaMicrophone, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaHeadset, FaWhatsapp, FaArrowRight, FaCalendarAlt, FaSuitcase, FaUsers, FaMapMarkedAlt, FaGlobe } from "react-icons/fa";
 import Button from "../components/ui/Button";
 import TourCard from "../components/tour/TourCard";
 import { tours } from "../data/tours";
@@ -833,6 +833,42 @@ const Home = () => {
                 loading="lazy"
               />
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Counter Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0c1428] via-[#141e3c] to-[#0c1428]"></div>
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23d4a843\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'}}></div>
+        <div className="relative z-10 container mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-4">
+            {[
+              { count: 17, icon: FaCalendarAlt, labelKey: 'about.heroStatsYears', prefix: '', suffix: '' },
+              { count: 95654, icon: FaSuitcase, labelKey: 'about.heroStatsTravelers', prefix: '', suffix: '' },
+              { count: 438, icon: FaUsers, labelKey: 'about.heroStatsEmployees', prefix: '', suffix: '' },
+              { count: 182, icon: FaMapMarkedAlt, labelKey: 'about.heroStatsGuides', prefix: '', suffix: '' },
+              { count: 4, icon: FaGlobe, labelKey: 'about.heroStatsOffices', prefix: '', suffix: '' },
+            ].map((s, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="flex flex-col items-center text-center group"
+              >
+                <div className="w-16 h-16 rounded-full bg-gold-500/10 border border-gold-500/20 flex items-center justify-center mb-4 group-hover:bg-gold-500/20 group-hover:border-gold-500/40 transition-all duration-300">
+                  <s.icon className="text-gold-500 text-2xl" />
+                </div>
+                <div className="gsap-count text-4xl md:text-5xl font-bold text-white font-display" data-count={s.count}>
+                  0
+                </div>
+                <div className="text-white text-sm mt-2 tracking-wide uppercase">
+                  {t(s.labelKey)}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

@@ -202,12 +202,12 @@ const MoroccoProgramDetails = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {Array.isArray(includes) && includes.length > 0 && (
               <div className="bg-ivory-50 dark:bg-[#1a1a30] rounded-xl p-6 shadow-sm border border-sage-200 dark:border-sage-700">
-                <h3 className="text-display-sm text-obsidian-900 dark:text-[#e8e4e0] mb-4 flex items-center gap-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="text-display-sm text-obsidian-900 dark:text-gold-300 mb-4 flex items-center gap-2" style={{ fontFamily: "'Playfair Display', serif" }}>
                   <FaCheckCircle className="text-sage-500 dark:text-green-400" /> {t('tourDetail.included', 'Included')}
                 </h3>
                 <ul className="space-y-2">
                   {includes.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-body-sm text-obsidian-700 dark:text-[#e8e4e0]">
+                    <li key={idx} className="flex items-start gap-2 text-body-sm text-obsidian-700 dark:text-gold-300">
                       <span className="w-1.5 h-1.5 rounded-full bg-sage-500 dark:bg-green-400 mt-2 shrink-0" />
                       <span>{item}</span>
                     </li>
@@ -217,12 +217,12 @@ const MoroccoProgramDetails = () => {
             )}
             {Array.isArray(excludes) && excludes.length > 0 && (
               <div className="bg-ivory-50 dark:bg-[#1a1a30] rounded-xl p-6 shadow-sm border border-red-200 dark:border-red-700">
-                <h3 className="text-display-sm text-obsidian-900 dark:text-[#e8e4e0] mb-4 flex items-center gap-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="text-display-sm text-obsidian-900 dark:text-gold-300 mb-4 flex items-center gap-2" style={{ fontFamily: "'Playfair Display', serif" }}>
                   <span className="w-5 h-5 rounded-full bg-red-100 dark:bg-red-900/40 text-red-500 dark:text-red-300 flex items-center justify-center text-xs font-bold">&#10005;</span> {t('tourDetail.excluded', 'Not Included')}
                 </h3>
                 <ul className="space-y-2">
                   {excludes.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-body-sm text-obsidian-700 dark:text-[#e8e4e0]">
+                    <li key={idx} className="flex items-start gap-2 text-body-sm text-obsidian-700 dark:text-gold-300">
                       <span className="w-1.5 h-1.5 rounded-full bg-red-400 dark:bg-red-300 mt-2 shrink-0" />
                       <span>{item}</span>
                     </li>

@@ -175,12 +175,12 @@ html {
   .dark .bg-ivory-50 h3,
   .dark .bg-ivory-50 h2,
   .dark .bg-ivory-50 span {
-    color: #e8e4e0 !important;
+    color: #d4a843 !important;
   }
   .dark .bg-ivory-50 .text-obsidian-900,
   .dark .bg-ivory-50 .text-obsidian-700,
   .dark .bg-ivory-50 .text-obsidian-500 {
-    color: #e8e4e0 !important;
+    color: #d4a843 !important;
   }
   .dark .bg-ivory-50 .text-sage-500,
   .dark .bg-ivory-50 .text-sage-700 {
@@ -189,6 +189,12 @@ html {
   .dark .bg-ivory-50 .text-red-400,
   .dark .bg-ivory-50 .text-red-500,
   .dark .bg-ivory-50 .text-red-700 {
+    color: #ef7a7a !important;
+  }
+  .dark .bg-ivory-50 .dark\:text-green-400 {
+    color: #6bcc7a !important;
+  }
+  .dark .bg-ivory-50 .dark\:text-red-300 {
     color: #ef7a7a !important;
   }
   .dark .bg-ivory-50 .bg-red-100 {

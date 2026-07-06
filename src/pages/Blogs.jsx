@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { staggerContainer, fadeInUp, cardHover } from '../animations/variants';
 import { blogs } from '../data/blogs';
-import { FaChevronRight, FaChevronLeft, FaClock, FaCalendarAlt, FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaChevronRight, FaChevronLeft, FaClock, FaCalendarAlt, FaPlane } from 'react-icons/fa';
 
 const Blogs = () => {
   const { t, i18n } = useTranslation();
@@ -24,11 +24,10 @@ const Blogs = () => {
 
   const getCategoryGradient = (cat) => categoryColors[cat] || 'from-gold-500 to-amber-500';
 
-  const perPage = 6;
+  const perPage = 12;
   const [currentPage, setCurrentPage] = useState(1);
-  const [showHidden, setShowHidden] = useState(false);
 
-  const filteredBlogs = showHidden ? blogs : blogs.filter(blog => !blog.hidden);
+  const filteredBlogs = blogs.filter(blog => !blog.draft && blog.status !== 'draft');
   const totalPages = Math.ceil(filteredBlogs.length / perPage);
   const startIndex = (currentPage - 1) * perPage;
   const currentBlogs = filteredBlogs.slice(startIndex, startIndex + perPage);
@@ -49,10 +48,8 @@ const Blogs = () => {
     return pages;
   };
 
-  const hiddenCount = blogs.filter(blog => blog.hidden).length;
-
   return (
-    <div className="w-full bg-[#F8F9FF] pb-24">
+    <div className="w-full bg-[#F8F9FF] dark:bg-[#0f0f1a] pb-24">
       <Helmet>
         <title>{t('blogs.seoTitle', 'Travel Journal & Blogs | Dunas Travel')}</title>
         <meta name="description" content={t('blogs.seoDesc', 'Read our latest travel tips, stories, and guides for exploring the Middle East in pure luxury.')} />
@@ -87,29 +84,17 @@ const Blogs = () => {
 
       {/* Blog Grid */}
       <section className="container mx-auto px-6 py-16 md:py-24">
-        {/* Toggle Hidden Articles Button */}
-        {hiddenCount > 0 && (
-          <div className="flex justify-end mb-8">
-            <button
-              onClick={() => { setShowHidden(!showHidden); setCurrentPage(1); }}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                showHidden
-                  ? 'bg-amber-500 text-white shadow-lg shadow-amber-500/30'
-                  : 'bg-white text-obsidian-600 border border-gray-200 hover:border-amber-500 hover:text-amber-500'
-              }`}
-            >
-              {showHidden ? <FaEyeSlash size={14} /> : <FaEye size={14} />}
-              <span>{showHidden ? 'إخفاء المقالات المخفية' : `إظهار ${hiddenCount} مقال مخفي`}</span>
-            </button>
-          </div>
-        )}
+        <div className="flex justify-between items-center mb-8 border-b border-gray-200/50 dark:border-obsidian-800 pb-4">
+          <p className="text-body-sm text-gray-500 dark:text-gray-400 font-medium">
+            {t('blogs.showingCount', 'Showing {{count}} travel articles', { count: filteredBlogs.length })}
+          </p>
+        </div>
 
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
           variants={staggerContainer}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          animate="visible"
         >
           {currentBlogs.map(blog => (
             <motion.article key={blog.id} variants={fadeInUp}>
@@ -124,12 +109,13 @@ const Blogs = () => {
                   <div className={`absolute top-4 left-4 z-10 bg-gradient-to-r ${getCategoryGradient(blog.category)} text-white text-[10px] uppercase tracking-wider px-3 py-1.5 rounded-full shadow-lg font-semibold`}>
                     {t(`blogs.cat.${blog.category}`, blog.category)}
                   </div>
-                  {blog.hidden && showHidden && (
-                    <div className="absolute top-4 right-4 z-10 bg-amber-500 text-white text-[10px] uppercase tracking-wider px-3 py-1.5 rounded-full shadow-lg font-semibold flex items-center gap-1">
-                      <FaEyeSlash size={8} />
-                      مخفي
-                    </div>
+                  {blog.relatedTour && (
+                    <Link to={blog.relatedTour.path} onClick={(e) => e.stopPropagation()} className="absolute top-4 right-4 z-10 bg-gold-500/90 backdrop-blur-sm text-obsidian-900 text-[10px] uppercase tracking-wider px-3 py-1.5 rounded-full shadow-lg font-semibold flex items-center gap-1 hover:bg-gold-500 transition-colors">
+                      <FaPlane size={8} />
+                      {blog.relatedTour.label}
+                    </Link>
                   )}
+
                   <img
                     src={blog.img}
                     alt={t(`blogs.${blog.title}`, blog.title)}

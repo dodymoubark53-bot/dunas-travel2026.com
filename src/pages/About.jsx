@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
-import { FaHistory, FaGlobeAmericas, FaUserTie, FaCompass, FaBuilding, FaSuitcase } from 'react-icons/fa';
+import { FaCalendarAlt, FaSuitcase, FaUsers, FaMapMarkedAlt, FaGlobe } from 'react-icons/fa';
 
 const styles = `
   :root {
@@ -96,13 +96,13 @@ const styles = `
     font-family: var(--mono);
     font-weight: 600;
     font-size: clamp(22px, 3vw, 32px);
-    color: var(--gold-light);
+    color: #ffffff;
   }
   .about-page .hero-stats .lbl {
     font-size: 10.5px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: rgba(248, 243, 230, 0.55);
+    color: #ffffff;
     margin-top: 6px;
   }
   .about-page .hero-stats .stat-icon {
@@ -872,11 +872,11 @@ const About = () => {
 
         <div className="hero-stats">
           {[
-            { count: 17, icon: FaHistory, labelKey: 'about.heroStatsYears' },
-            { count: 95654, icon: FaGlobeAmericas, labelKey: 'about.heroStatsTravelers' },
-            { count: 438, icon: FaUserTie, labelKey: 'about.heroStatsEmployees' },
-            { count: 182, icon: FaCompass, labelKey: 'about.heroStatsGuides' },
-            { count: 4, icon: FaBuilding, labelKey: 'about.heroStatsOffices' },
+            { count: 17, icon: FaCalendarAlt, labelKey: 'about.heroStatsYears' },
+            { count: 95654, icon: FaSuitcase, labelKey: 'about.heroStatsTravelers' },
+            { count: 438, icon: FaUsers, labelKey: 'about.heroStatsEmployees' },
+            { count: 182, icon: FaMapMarkedAlt, labelKey: 'about.heroStatsGuides' },
+            { count: 4, icon: FaGlobe, labelKey: 'about.heroStatsOffices' },
           ].map((s, i) => (
             <div key={i}>
               <s.icon className="stat-icon" />
@@ -923,11 +923,11 @@ const About = () => {
         </div>
         <div className="stats-strip reveal">
           {[
-            { count: 17, suffix: '+', icon: FaHistory, labelKey: 'about.statYears' },
+            { count: 17, suffix: '+', icon: FaCalendarAlt, labelKey: 'about.statYears' },
             { count: 95654, suffix: '', icon: FaSuitcase, labelKey: 'about.statTravelers' },
-            { count: 438, suffix: '', icon: FaUserTie, labelKey: 'about.statEmployees' },
-            { count: 182, suffix: '', icon: FaCompass, labelKey: 'about.statGuides' },
-            { count: 4, suffix: '', icon: FaBuilding, labelKey: 'about.statOffices' },
+            { count: 438, suffix: '', icon: FaUsers, labelKey: 'about.statEmployees' },
+            { count: 182, suffix: '', icon: FaMapMarkedAlt, labelKey: 'about.statGuides' },
+            { count: 4, suffix: '', icon: FaGlobe, labelKey: 'about.statOffices' },
           ].map((s, i) => (
             <div className="stat-cell" key={i}>
               <s.icon className="stat-icon" />

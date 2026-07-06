@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { staggerContainer, fadeInUp } from '../../animations/variants';
 import { blogs } from '../../data/blogs';
-import { FaChevronRight, FaCalendarAlt, FaClock, FaTag, FaShareAlt } from 'react-icons/fa';
+import { FaChevronRight, FaCalendarAlt, FaClock, FaTag, FaShareAlt, FaPlane, FaArrowRight } from 'react-icons/fa';
 
 const BlogDetails = () => {
   const { t, i18n } = useTranslation();
@@ -106,6 +106,12 @@ const BlogDetails = () => {
               <FaTag size={10} className="text-gold-500" />
               {t(`blogs.cat.${blog.category}`, blog.category)}
             </span>
+            {blog.relatedTour && (
+              <Link to={blog.relatedTour.path} className="flex items-center gap-1.5 bg-gold-500/20 backdrop-blur-sm px-3 py-1 rounded-full border border-gold-500/30 hover:bg-gold-500/30 transition-colors">
+                <FaPlane size={10} className="text-gold-400" />
+                <span className="text-gold-400 font-medium">{blog.relatedTour.label}</span>
+              </Link>
+            )}
           </motion.div>
         </div>
       </section>
@@ -150,6 +156,35 @@ const BlogDetails = () => {
             );
           })}
         </motion.div>
+
+        {/* Related Trip CTA */}
+        {blog.relatedTour && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-10 p-6 bg-gradient-to-r from-gold-500/10 via-gold-500/5 to-gold-500/10 rounded-2xl border border-gold-500/20"
+          >
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-gold-500/20 flex items-center justify-center">
+                  <FaPlane className="text-gold-500 text-lg" />
+                </div>
+                <div>
+                  <p className="text-caption text-obsidian-500 uppercase tracking-wider">{t('blogs.relatedTrip', 'Related Trip')}</p>
+                  <p className="text-body-lg font-semibold text-obsidian-900">{blog.relatedTour.label}</p>
+                </div>
+              </div>
+              <Link
+                to={blog.relatedTour.path}
+                className="inline-flex items-center gap-2 bg-gold-500 text-obsidian-900 px-6 py-3 rounded-full font-semibold text-body-sm hover:bg-gold-600 transition-colors shadow-lg shadow-gold-500/20"
+              >
+                {t('blogs.viewTrip', 'View Trip')}
+                <FaArrowRight className={`text-xs ${isRtl ? 'rtl-flip' : ''}`} />
+              </Link>
+            </div>
+          </motion.div>
+        )}
 
         {/* Share / Tags */}
         <div className="mt-12 pt-8 border-t border-obsidian-900/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
