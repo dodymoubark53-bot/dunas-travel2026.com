@@ -794,13 +794,15 @@ const About = () => {
       const input = frame.querySelector('input[type="file"]');
       const avatar = frame.querySelector('.avatar');
       const img = avatar.querySelector('img');
-      frame.addEventListener('click', () => input.click());
-      input.addEventListener('change', (e) => {
-        const file = e.target.files[0];
-        if (!file) return;
-        img.src = URL.createObjectURL(file);
-        avatar.classList.add('has-photo');
-      });
+      if (input) {
+        frame.addEventListener('click', () => input.click());
+        input.addEventListener('change', (e) => {
+          const file = e.target.files[0];
+          if (!file) return;
+          img.src = URL.createObjectURL(file);
+          avatar.classList.add('has-photo');
+        });
+      }
     });
 
     return () => {
@@ -876,7 +878,7 @@ const About = () => {
             { count: 95654, icon: FaSuitcase, labelKey: 'about.heroStatsTravelers' },
             { count: 438, icon: FaUsers, labelKey: 'about.heroStatsEmployees' },
             { count: 182, icon: FaMapMarkedAlt, labelKey: 'about.heroStatsGuides' },
-            { count: 4, icon: FaGlobe, labelKey: 'about.heroStatsOffices' },
+            { count: 5, icon: FaGlobe, labelKey: 'about.heroStatsOffices' },
           ].map((s, i) => (
             <div key={i}>
               <s.icon className="stat-icon" />
@@ -927,7 +929,7 @@ const About = () => {
             { count: 95654, suffix: '', icon: FaSuitcase, labelKey: 'about.statTravelers' },
             { count: 438, suffix: '', icon: FaUsers, labelKey: 'about.statEmployees' },
             { count: 182, suffix: '', icon: FaMapMarkedAlt, labelKey: 'about.statGuides' },
-            { count: 4, suffix: '', icon: FaGlobe, labelKey: 'about.statOffices' },
+            { count: 5, suffix: '', icon: FaGlobe, labelKey: 'about.statOffices' },
           ].map((s, i) => (
             <div className="stat-cell" key={i}>
               <s.icon className="stat-icon" />
@@ -1086,18 +1088,22 @@ const About = () => {
         <div className="team-grid">
           {[
             { initials: 'MS', name: 'Miguel Selma', roleKey: 'about.roleGeneralDirector', country: '\uD83C\uDDEA\uD83C\uDDF8 Spain', offset: '0px', delay: '.05s' },
-            { initials: 'GF', name: 'Giovanni Fiore', roleKey: 'about.roleCommercialDirector', country: '\uD83C\uDDEE\uD83C\uDDF9 Italy', offset: '38px', delay: '.1s' },
+            { initials: 'GF', name: 'Giovanni Fiore', roleKey: 'about.roleCommercialDirector', country: '\uD83C\uDDEE\uD83C\uDDF9 Italy', offset: '38px', delay: '.1s', img: 'https://res.cloudinary.com/tibx70zb/image/upload/v1783333028/WhatsApp_Image_2026-07-01_at_12.03.27_AM_rj6uko.jpg' },
             { initials: 'VB', name: 'Vinicius Barcellos', roleKey: 'about.roleCommercialDirector', country: '\uD83C\uDDE7\uD83C\uDDF7 Brazil', offset: '8px', delay: '.15s' },
             { initials: 'SM', name: 'Sonia Melo', roleKey: 'about.roleSalesDirector', country: '\uD83C\uDDE7\uD83C\uDDF7 Brazil', offset: '46px', delay: '.2s' },
-            { initials: 'LR', name: 'Luciana Rovaroto', roleKey: 'about.roleCustomerService', country: '\uD83C\uDDE7\uD83C\uDDF7 Brazil', offset: '2px', delay: '.25s' },
+            { initials: 'LR', name: 'Luciana Rovaroto', roleKey: 'about.roleCustomerService', country: '\uD83C\uDDE7\uD83C\uDDF7 Brazil', offset: '2px', delay: '.25s', img: 'https://res.cloudinary.com/tibx70zb/image/upload/v1783332881/WhatsApp_Image_2026-07-01_at_12.03.27_AM_1_i6suvb.jpg' },
             { initials: 'RP', name: 'Ramiro Poggi', roleKey: 'about.roleCommercialDirector', country: '\uD83C\uDDE6\uD83C\uDDF7 Argentina', offset: '32px', delay: '.3s' },
             { initials: 'EC', name: 'Edgar Ca\u00F1\u00F3n', roleKey: 'about.roleCommercialDirector', country: '\uD83C\uDDE8\uD83C\uDDF4 Colombia', offset: '14px', delay: '.35s' },
           ].map((m, i) => (
             <div className="team-card reveal" key={i} style={{ '--offset': m.offset, transitionDelay: m.delay }}>
               <div className="avatar-frame">
                 <div className="avatar-ring"></div>
-                <div className="avatar"><span className="initials">{m.initials}</span><img alt="" /><span className="plus">+</span></div>
-                <input type="file" accept="image/*" />
+                <div className={`avatar${m.img ? ' has-photo' : ''}`}>
+                  <span className="initials" style={m.img ? { display: 'none' } : {}}>{m.initials}</span>
+                  {m.img ? <img src={m.img} alt={m.name} /> : <img alt="" />}
+                  {!m.img && <span className="plus">+</span>}
+                </div>
+                {!m.img && <input type="file" accept="image/*" />}
               </div>
               <p className="member-name">{m.name}</p>
               <p className="member-role" dangerouslySetInnerHTML={{ __html: t(m.roleKey) }} />

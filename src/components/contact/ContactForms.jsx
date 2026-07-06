@@ -870,20 +870,6 @@ const ContactForms = () => {
                     </div>
                   </div>
 
-                  {/* Pricing Summary */}
-                  <div className="price-summary-panel">
-                    <span className="form-label block mb-2" style={{ color: '#D4A843' }}>{t('contactForms.estimatedPrice', 'Estimated Bespoke Package Price')}</span>
-                    <div className="flex items-baseline gap-2">
-                      <span className="price-value font-display font-light text-gold-500">
-                        ${getB2cPrice().toLocaleString()}
-                      </span>
-                      <span className="text-body-sm text-ivory-300">{t('contactForms.usdEstimated', 'USD (Estimated)')}</span>
-                    </div>
-                    <p className="text-body-sm text-gold-400 mt-2">
-                      {t('contactForms.priceNote', '*Estimates are calculated based on selected destinations and travel parameters. Final pricing is customized.')}
-                    </p>
-                  </div>
-
                   <div className="urgency-bar">
                     <strong>{t('contactForms.urgencyLabel', 'Exclusive Notice:')}</strong> {t('contactForms.urgencyText', 'Peak luxury season availability is highly restricted. Submitting your inquiry now reserves your consultation priority.')}
                   </div>
@@ -1140,14 +1126,7 @@ const ContactForms = () => {
                     </div>
                   </div>
 
-                  {/* Section 4: Commission Preview Box */}
-                  <div className="commission-preview-box">
-                    <span className="form-label block" style={{ color: '#D4A843' }}>{t('contactForms.commissionTier', 'Expected Partner Commission Tier')}</span>
-                    <div className="commission-rate">{commission.tier} ({commission.rate})</div>
-                    <p className="text-body-sm text-ivory-300 mt-2">{commission.desc}</p>
-                  </div>
-
-                  {/* Section 5: Document Upload Zone */}
+                  {/* Section 4: Document Upload Zone */}
                   <div className="mb-10">
                     <h3 className="form-section-title">
                       <span className="form-section-num">04</span> {t('contactForms.secCredentials', 'Credentials Verification')}

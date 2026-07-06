@@ -134,35 +134,35 @@ const Navbar = () => {
         {/* Gold accent border */}
         <div className="absolute bottom-0 left-0 right-0 h-[1px]" style={{ background: 'linear-gradient(90deg, transparent, rgba(201,162,39,0.5), transparent)' }} />
         <div className="w-full px-4 sm:px-6 relative">
-          <div className="flex items-center justify-between h-10 sm:h-11 text-white text-[11px] sm:text-xs">
+          <div className="flex items-center justify-between h-10 sm:h-11 text-white text-[11px] sm:text-xs font-semibold">
             {/* Left: Contact Info */}
             <div className="flex items-center gap-2 sm:gap-5 overflow-hidden">
-              <a href="mailto:info@dunas-travel.com" className="group flex items-center gap-1.5 hover:text-gold-400 transition-all duration-300 whitespace-nowrap">
-                <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-gold-500/20 group-hover:scale-110 transition-all duration-300">
-                  <FaEnvelope size={10} className="text-gold-300 group-hover:text-gold-400" />
+              <a href="mailto:info@dunas-travel.com" className="group flex items-center gap-1.5 hover:text-[#F5A623] transition-all duration-300 whitespace-nowrap">
+                <span className="w-6 h-6 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-[#F5A623]/25 group-hover:scale-110 transition-all duration-300">
+                  <FaEnvelope size={10} className="text-[#F5A623]" />
                 </span>
-                <span className="hidden sm:inline font-light tracking-wide">info@dunas-travel.com</span>
+                <span className="hidden sm:inline font-semibold tracking-wide">info@dunas-travel.com</span>
               </a>
               <span className="w-px h-4 bg-gradient-to-b from-transparent via-white/30 to-transparent hidden sm:block" />
-              <a href="tel:+20233746643" className="group flex items-center gap-1.5 hover:text-gold-400 transition-all duration-300 whitespace-nowrap">
-                <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-gold-500/20 group-hover:scale-110 transition-all duration-300">
-                  <FaPhone size={9} className="text-gold-300 group-hover:text-gold-400" />
+              <a href="tel:+20233746643" className="group flex items-center gap-1.5 hover:text-[#F5A623] transition-all duration-300 whitespace-nowrap">
+                <span className="w-6 h-6 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-[#F5A623]/25 group-hover:scale-110 transition-all duration-300">
+                  <FaPhone size={9} className="text-[#F5A623]" />
                 </span>
-                <span className="hidden sm:inline font-light tracking-wide">02 33746643</span>
+                <span className="hidden sm:inline font-semibold tracking-wide">02 33746643</span>
               </a>
               <span className="w-px h-4 bg-gradient-to-b from-transparent via-white/30 to-transparent hidden sm:block" />
-              <a href="tel:+20233746654" className="group items-center gap-1.5 hover:text-gold-400 transition-all duration-300 whitespace-nowrap flex">
-                <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-gold-500/20 group-hover:scale-110 transition-all duration-300">
-                  <FaPhone size={9} className="text-gold-300 group-hover:text-gold-400" />
+              <a href="tel:+20233746654" className="group items-center gap-1.5 hover:text-[#F5A623] transition-all duration-300 whitespace-nowrap flex">
+                <span className="w-6 h-6 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-[#F5A623]/25 group-hover:scale-110 transition-all duration-300">
+                  <FaPhone size={9} className="text-[#F5A623]" />
                 </span>
-                <span className="hidden sm:inline font-light tracking-wide">02 33746654</span>
+                <span className="hidden sm:inline font-semibold tracking-wide">02 33746654</span>
               </a>
               <span className="w-px h-4 bg-gradient-to-b from-transparent via-white/30 to-transparent hidden sm:block" />
-              <a href="https://wa.me/201149401111" target="_blank" rel="noopener noreferrer" className="group items-center gap-1.5 hover:text-gold-400 transition-all duration-300 whitespace-nowrap flex">
-                <span className="w-6 h-6 rounded-full bg-[#25D366]/20 flex items-center justify-center group-hover:bg-[#25D366]/30 group-hover:scale-110 transition-all duration-300">
-                  <FaWhatsapp size={10} className="text-[#25D366] group-hover:text-gold-400" />
+              <a href="https://wa.me/201149401111" target="_blank" rel="noopener noreferrer" className="group items-center gap-1.5 hover:text-[#F5A623] transition-all duration-300 whitespace-nowrap flex">
+                <span className="w-6 h-6 rounded-full bg-[#25D366]/20 flex items-center justify-center group-hover:bg-[#25D366]/35 group-hover:scale-110 transition-all duration-300">
+                  <FaWhatsapp size={10} className="text-[#25D366]" />
                 </span>
-                <span className="hidden sm:inline font-light tracking-wide">+20 114 940 1111</span>
+                <span className="hidden sm:inline font-semibold tracking-wide">+20 114 940 1111</span>
               </a>
             </div>
 
@@ -170,10 +170,10 @@ const Navbar = () => {
             <div className="flex items-center gap-1 sm:gap-1.5">
               <button
                 onClick={toggleTheme}
-                className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/10 hover:border-gold-500/30 transition-all duration-300 hover:scale-110"
+                className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/20 hover:border-[#F5A623]/40 transition-all duration-300 hover:scale-110"
                 aria-label="Toggle theme"
               >
-                {theme === 'dark' ? <FaSun size={10} className="text-gold-300" /> : <FaMoon size={10} className="text-gold-300" />}
+                {theme === 'dark' ? <FaSun size={10} className="text-[#F5A623]" /> : <FaMoon size={10} className="text-[#F5A623]" />}
               </button>
 
               <div className="relative">
@@ -181,17 +181,17 @@ const Navbar = () => {
                   <button
                     onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
                     aria-label="User profile options"
-                    className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/10 hover:border-gold-500/30 transition-all duration-300 hover:scale-110"
+                    className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/20 hover:border-[#F5A623]/40 transition-all duration-300 hover:scale-110"
                   >
-                    <span className="font-semibold text-[10px] text-gold-300">{user.avatar}</span>
+                    <span className="font-bold text-[10px] text-[#F5A623]">{user.avatar}</span>
                   </button>
                 ) : (
                   <button
                     onClick={() => setIsLoginModalOpen(true)}
                     aria-label="Sign in"
-                    className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/10 hover:border-gold-500/30 transition-all duration-300 hover:scale-110"
+                    className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/20 hover:border-[#F5A623]/40 transition-all duration-300 hover:scale-110"
                   >
-                    <FaUserCircle size={11} className="text-gold-300" />
+                    <FaUserCircle size={11} className="text-[#F5A623]" />
                   </button>
                 )}
               </div>
@@ -201,10 +201,10 @@ const Navbar = () => {
                 <button
                   onClick={() => setLangDropdownOpen(!langDropdownOpen)}
                   aria-label="Select language"
-                  className="h-7 sm:h-8 rounded-full flex items-center justify-center gap-1 px-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/10 hover:border-gold-500/30 transition-all duration-300 hover:scale-105"
+                  className="h-7 sm:h-8 rounded-full flex items-center justify-center gap-1 px-2 bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/20 hover:border-[#F5A623]/40 transition-all duration-300 hover:scale-105"
                 >
-                  <FaGlobe size={9} className="text-gold-300" />
-                  <span className="text-[9px] font-semibold uppercase text-gold-200 tracking-wider">
+                  <FaGlobe size={9} className="text-[#F5A623]" />
+                  <span className="text-[9px] font-bold uppercase text-white tracking-wider">
                     {i18n.language === 'ar' ? 'ع' :
                       i18n.language === 'es' ? 'es' :
                         i18n.language === 'pt' ? 'pt' :
@@ -249,13 +249,12 @@ const Navbar = () => {
 
       {/* Main Header */}
       <header
-        className={`fixed top-[40px] sm:top-[44px] left-0 right-0 z-[9998] transition-all duration-300 h-16 lg:h-20 flex items-center ${headerVisible ? 'translate-y-0' : '-translate-y-full'} ${scrolled ? 'bg-white/95 dark:bg-obsidian-900/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.12)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)]' : 'bg-transparent shadow-none'
-          }`}
+        className={`fixed top-[40px] sm:top-[44px] left-0 right-0 z-[9998] transition-all duration-300 h-16 lg:h-20 flex items-center ${headerVisible ? 'translate-y-0' : '-translate-y-full'} bg-white/95 dark:bg-obsidian-900/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.12)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)]`}
       >
         <div className="container mx-auto px-6 h-full flex justify-between items-center relative z-10">
           {/* Logo */}
-          <Link to="/" className={`flex items-center z-50 transition-all duration-300 ${scrolled ? '' : 'drop-shadow-[0_0_12px_rgba(255,255,255,0.6)]'}`} onClick={() => setMobileMenuOpen(false)}>
-            <Logo theme={scrolled ? "dark" : "light"} height={60} />
+          <Link to="/" className="flex items-center z-50 transition-all duration-300" onClick={() => setMobileMenuOpen(false)}>
+            <Logo theme="dark" height={60} />
           </Link>
 
           {/* Desktop Nav (Hover) */}
@@ -268,11 +267,11 @@ const Navbar = () => {
                 onMouseLeave={() => link.dropdown && setActiveDropdown(null)}
               >
                 {link.dropdown ? (
-                  <button className={`flex items-center gap-1 ${scrolled ? 'text-obsidian-900 dark:text-ivory-50' : 'text-white'} hover:text-[#F5A623] transition-colors text-body-md font-medium py-2 whitespace-nowrap flex-shrink-0`}>
+                  <button className="flex items-center gap-1 text-obsidian-900 dark:text-ivory-50 hover:text-[#C9A227] transition-colors text-body-md font-bold py-2 whitespace-nowrap flex-shrink-0">
                     {link.name} <FaChevronDown className={`text-xs transition-transform duration-200 ${activeDropdown === link.name ? 'rotate-180' : ''}`} />
                   </button>
                 ) : (
-                  <Link to={link.path} className={`${scrolled ? 'text-obsidian-900 dark:text-ivory-50' : 'text-white'} hover:text-[#F5A623] transition-colors text-body-md font-medium py-2 whitespace-nowrap flex-shrink-0`}>
+                  <Link to={link.path} className="text-obsidian-900 dark:text-ivory-50 hover:text-[#C9A227] transition-colors text-body-md font-bold py-2 whitespace-nowrap flex-shrink-0">
                     {link.name}
                   </Link>
                 )}
@@ -351,7 +350,7 @@ const Navbar = () => {
 
           {/* Currency Selector + Tailor a Tour (Desktop) */}
           <div className="hidden lg:flex items-center gap-3 z-50">
-            <CurrencySelector light={scrolled} />
+            <CurrencySelector light />
             <Link
               to="/tailor-a-tour"
               className="group relative px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-500 shadow-lg hover:shadow-xl overflow-hidden"
@@ -383,7 +382,7 @@ const Navbar = () => {
               ✈ Tailor
             </Link>
             <button
-              className={`w-9 h-9 rounded-full border flex items-center justify-center transition-all shadow-sm z-50 ${scrolled ? 'border-obsidian-300 dark:border-obsidian-600 text-obsidian-700 dark:text-ivory-50 bg-white dark:bg-obsidian-800 hover:text-[#F5A623] hover:border-[#F5A623] hover:bg-amber-50 dark:hover:bg-obsidian-700' : 'border-white/40 text-white bg-white/10 hover:bg-white/20 hover:border-white/60'}`}
+              className={`w-9 h-9 rounded-full border flex items-center justify-center transition-all shadow-sm z-50 border-obsidian-300 dark:border-obsidian-600 text-obsidian-700 dark:text-ivory-50 bg-white dark:bg-obsidian-800 hover:text-[#C9A227] hover:border-[#C9A227] hover:bg-amber-50 dark:hover:bg-obsidian-700`}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             >

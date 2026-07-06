@@ -848,7 +848,7 @@ const Home = () => {
               { count: 95654, icon: FaSuitcase, labelKey: 'about.heroStatsTravelers', prefix: '', suffix: '' },
               { count: 438, icon: FaUsers, labelKey: 'about.heroStatsEmployees', prefix: '', suffix: '' },
               { count: 182, icon: FaMapMarkedAlt, labelKey: 'about.heroStatsGuides', prefix: '', suffix: '' },
-              { count: 4, icon: FaGlobe, labelKey: 'about.heroStatsOffices', prefix: '', suffix: '' },
+              { count: 5, icon: FaGlobe, labelKey: 'about.heroStatsOffices', prefix: '', suffix: '' },
             ].map((s, i) => (
               <motion.div
                 key={i}
