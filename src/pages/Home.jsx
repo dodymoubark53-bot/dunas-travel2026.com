@@ -301,8 +301,6 @@ const Home = () => {
   // Search Form State
   const [searchDest, setSearchDest] = useState("all");
   const [searchTour, setSearchTour] = useState("");
-  const [searchArrival, setSearchArrival] = useState("");
-  const [searchDeparture, setSearchDeparture] = useState("");
   const [searchPeople, setSearchPeople] = useState(1);
 
   const destinations = [
@@ -636,7 +634,7 @@ const Home = () => {
           {/* Search Form */}
           <div className="w-full max-w-5xl">
             <div className="bg-white/10 backdrop-blur-2xl rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] p-4 sm:p-5 md:p-6 lg:p-8 border border-white/20">
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-2 sm:gap-3">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
                 {/* Destination */}
                 <div className="col-span-2 md:col-span-1">
                   <label htmlFor="search-dest-input" className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
@@ -672,36 +670,6 @@ const Home = () => {
                       <option key={t.id} value={t.id} className="text-obsidian-900 dark:text-ivory-100 dark:bg-obsidian-800">{t.label}</option>
                     ))}
                   </select>
-                </div>
-
-                {/* Arrival */}
-                <div>
-                  <label htmlFor="search-arrival-input" className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
-                    {t('home.searchArrival', 'Arrival')}
-                  </label>
-                  <input
-                    id="search-arrival-input"
-                    type="date"
-                    value={searchArrival}
-                    min={todayStr}
-                    onChange={(e) => setSearchArrival(e.target.value)}
-                    className="w-full px-2 sm:px-3 py-2 sm:py-2.5 rounded-lg border border-white/30 bg-white/20 backdrop-blur-sm text-white text-[13px] sm:text-body-sm [color-scheme:dark] focus:outline-none focus:ring-2 focus:ring-[#FF6B35]"
-                  />
-                </div>
-
-                {/* Departure */}
-                <div>
-                  <label htmlFor="search-departure-input" className="block text-[10px] sm:text-caption text-gold-400 uppercase tracking-wider mb-1 font-semibold">
-                    {t('home.searchDeparture', 'Departure')}
-                  </label>
-                  <input
-                    id="search-departure-input"
-                    type="date"
-                    value={searchDeparture}
-                    min={todayStr}
-                    onChange={(e) => setSearchDeparture(e.target.value)}
-                    className="w-full px-2 sm:px-3 py-2 sm:py-2.5 rounded-lg border border-white/30 bg-white/20 backdrop-blur-sm text-white text-[13px] sm:text-body-sm [color-scheme:dark] focus:outline-none focus:ring-2 focus:ring-[#FF6B35]"
-                  />
                 </div>
 
                 {/* People + Search */}
@@ -2103,10 +2071,10 @@ const Home = () => {
               <span className="inline-block text-gold-600 uppercase tracking-[0.25em] text-[10px] md:text-xs font-bold px-5 py-2 rounded-full bg-gold-500/5 border border-gold-500/10 backdrop-blur-sm shadow-[0_4px_20px_rgba(201,162,39,0.05)]">
                 {isRtl ? "الرحلات الحصرية لعام ٢٠٢٦" : "EXCLUSIVE VOYAGES 2026"}
               </span>
-              <h2 className="text-display-lg text-primary-900 font-display tracking-wide leading-tight mt-2">
+              <h2 className="text-display-lg text-black dark:text-black font-display tracking-wide leading-tight mt-2">
                 {isRtl ? "الوجهات" : t('nav.destinations', 'Destinations')}
               </h2>
-              <p className="text-obsidian-500 text-body-md max-w-xl mx-auto font-body font-medium leading-relaxed">
+              <p className="text-black dark:text-black text-body-md max-w-xl mx-auto font-body font-medium leading-relaxed">
                 {isRtl 
                   ? "اكتشف عجائب الدنيا القديمة وعواصم الحداثة الفاخرة، رحلات منسقة خصيصًا لتلبي تطلعاتك."
                   : "Discover the wonders of the ancient world and the capitals of modern luxury, curated bespoke for you."
