@@ -157,17 +157,17 @@ const HoneymoonersDetails = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div className="lg:col-span-2">
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-display-lg text-obsidian-900 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <h2 className="text-display-lg text-obsidian-900 dark:text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
                 {t('honeymooners.overviewTitle', 'Overview')}
               </h2>
-              <p className="text-body-lg text-obsidian-500 leading-relaxed">
+              <p className="text-body-lg text-obsidian-500 dark:text-gray-300 leading-relaxed">
                 {t('honeymooners.overviewDesc', 'A perfect trip to celebrate your love, combining the grandeur of ancient Egypt with the serene beauty of the Red Sea. From the majestic Pyramids of Giza to the tranquil beaches of Hurghada, every moment is designed for romance and discovery. Sail the timeless Nile, explore magnificent temples, and relax in luxury resorts — all crafted to create unforgettable memories for you and your loved one.')}
               </p>
             </motion.div>
 
             {/* Itinerary */}
             <motion.div variants={fadeInUp}>
-              <h3 className="text-display-md text-obsidian-900 mb-8 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <h3 className="text-display-md text-obsidian-900 dark:text-white mb-8 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
                 {t('honeymooners.itinerary', 'Itinerary')}
               </h3>
               <div className="relative">
@@ -182,13 +182,13 @@ const HoneymoonersDetails = () => {
                       <div className="absolute left-[0.1rem] top-1 w-8 h-8 rounded-full bg-gold-500 text-white flex items-center justify-center text-sm font-bold shadow-md z-10">
                         {d.day}
                       </div>
-                      <div className="bg-ivory-50 rounded-2xl p-6 shadow-sm border border-gold-100 hover:shadow-md transition-shadow">
+                      <div className="bg-ivory-50 dark:bg-[#1a1a30] rounded-2xl p-6 shadow-sm border border-gold-100 dark:border-gold-900/50 hover:shadow-md transition-shadow">
                         <div className="flex items-center gap-3 mb-3">
-                          <h4 className="text-display-md text-obsidian-900 text-lg" style={{ fontFamily: "'Playfair Display', serif" }}>
+                          <h4 className="text-display-md text-obsidian-900 dark:text-white text-lg" style={{ fontFamily: "'Playfair Display', serif" }}>
                             {t(d.titleKey, d.titleDefault)}
                           </h4>
                         </div>
-                        <p className="text-body-md text-obsidian-500 leading-relaxed">
+                        <p className="text-body-md text-obsidian-500 dark:text-gray-300 leading-relaxed">
                           {t(d.descKey, d.descDefault)}
                         </p>
                       </div>
@@ -208,14 +208,14 @@ const HoneymoonersDetails = () => {
 
         {/* Includes */}
         <motion.div variants={fadeInUp} className="mt-16 max-w-4xl mx-auto">
-          <h3 className="text-display-md text-obsidian-900 dark:text-gold-300 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h3 className="text-display-md text-obsidian-900 dark:text-black mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             {t('honeymooners.includes', 'Includes')}
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {includes.map((inc, i) => (
               <div key={i} className="flex items-center gap-3 bg-ivory-50 dark:bg-[#1a1a30] rounded-xl p-4 shadow-sm">
                 <FaCheckCircle className="text-gold-500 shrink-0" size={18} />
-                <span className="text-body-md text-obsidian-700 dark:text-gold-300 font-medium">{t(inc.key, inc.default)}</span>
+                <span className="text-body-md text-obsidian-700 dark:text-black font-medium">{t(inc.key, inc.default)}</span>
               </div>
             ))}
           </div>
@@ -223,12 +223,12 @@ const HoneymoonersDetails = () => {
 
         {/* CTA */}
         <motion.div variants={fadeInUp} className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-rose-50 to-gold-50 rounded-3xl p-10 shadow-lg border border-rose-200">
+          <div className="bg-gradient-to-r from-rose-50 to-gold-50 dark:from-[#2a1a2e] dark:to-[#1a1a30] rounded-3xl p-10 shadow-lg border border-rose-200 dark:border-rose-900/50">
             <FaHeart className="text-rose-400 text-4xl mx-auto mb-4" />
-            <h3 className="text-display-md text-obsidian-900 mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h3 className="text-display-md text-obsidian-900 dark:text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
               {t('honeymooners.ctaTitle', 'Ready to Celebrate Your Love?')}
             </h3>
-            <p className="text-body-md text-obsidian-500 mb-6 max-w-lg mx-auto">
+            <p className="text-body-md text-obsidian-500 dark:text-gray-300 mb-6 max-w-lg mx-auto">
               {t('honeymooners.ctaDesc', 'Let our expert travel designers craft the perfect romantic getaway tailored just for you.')}
             </p>
             <Link

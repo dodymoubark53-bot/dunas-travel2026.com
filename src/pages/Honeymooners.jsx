@@ -85,7 +85,7 @@ const Honeymooners = () => {
             <motion.div
               key={item.id}
               variants={fadeInUp}
-              className="bg-ivory-50 rounded-2xl overflow-hidden shadow-card group h-full flex flex-col transition-all md:col-span-2 lg:col-span-3 max-w-2xl mx-auto"
+              className="bg-ivory-50 dark:bg-[#1a1a30] rounded-2xl overflow-hidden shadow-card group h-full flex flex-col transition-all md:col-span-2 lg:col-span-3 max-w-2xl mx-auto"
             >
               <div className="relative h-72 overflow-hidden">
                 <div className="absolute top-4 left-4 z-10 bg-gold-500 text-obsidian-900 text-sm uppercase px-4 py-1.5 rounded-full shadow-md font-bold">
@@ -102,17 +102,17 @@ const Honeymooners = () => {
                 <div className="mb-3">
                   <span className="text-sm text-gold-500 uppercase tracking-widest font-semibold">{item.duration}</span>
                 </div>
-                <h3 className="text-2xl text-obsidian-900 mb-2 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="text-2xl text-obsidian-900 dark:text-white mb-2 font-display" style={{ fontFamily: "'Playfair Display', serif" }}>
                   {t(item.titleKey, item.titleDefault)}
                 </h3>
-                <p className="text-sm text-obsidian-400 mb-3 font-medium">{item.destinations}</p>
-                <p className="text-body-sm text-obsidian-500 mb-6 leading-relaxed">
+                <p className="text-sm text-obsidian-400 dark:text-gray-300 mb-3 font-medium">{item.destinations}</p>
+                <p className="text-body-sm text-obsidian-500 dark:text-gray-300 mb-6 leading-relaxed">
                   {t(item.taglineKey, item.taglineDefault)}
                 </p>
                 <div className="flex justify-between items-center mt-auto pt-4 border-t border-gray-100">
                   <Link
                     to={`/programs/honeymooners/${item.id}`}
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-gold-500 to-gold-600 text-obsidian-900 font-bold px-6 py-3 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-gold-500 to-gold-600 text-obsidian-900 gold-btn-text font-bold px-6 py-3 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 shadow-md border-2 border-gold-400"
                   >
                     {t('honeymooners.viewDetails', 'View Details')}
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

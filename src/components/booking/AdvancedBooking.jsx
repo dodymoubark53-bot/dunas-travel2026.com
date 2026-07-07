@@ -10,7 +10,7 @@ import Button from '../ui/Button';
 import { fadeInUp } from '../../animations/variants';
 import InvoiceModal from './InvoiceModal';
 
-const API = 'http://localhost:5000/api';
+const API = import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api` : 'http://localhost:5000/api';
 
 const AdvancedBooking = ({ onClose, tourTitle, basePricePerPerson, initialTab = 'booking' }) => {
   const { t } = useTranslation();

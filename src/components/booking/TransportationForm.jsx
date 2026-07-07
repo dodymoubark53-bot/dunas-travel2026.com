@@ -7,7 +7,7 @@ import { fadeInUp } from '../../animations/variants';
 import { transportation } from '../../data/transportation';
 import InvoiceModal from './InvoiceModal';
 
-const API = 'http://localhost:5000/api';
+const API = import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api` : 'http://localhost:5000/api';
 
 const TransportationForm = ({ preSelectedVehicleId = '' }) => {
   const { t } = useTranslation();

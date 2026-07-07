@@ -84,7 +84,7 @@ export const services = [
       'https://images.unsplash.com/photo-1509822929464-92b5d5e8827b?w=1200&q=80',
       'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=80'
     ],
-    shortDesc: 'A premium 14-day spiritual and historical journey tracing Coptic monasteries in Egypt and the ancient wonders of Jordan.',
+    shortDesc: 'tour_jordan_shortDesc',
     overview: [
       'tour_jordan_overview_1',
       'tour_jordan_overview_2',

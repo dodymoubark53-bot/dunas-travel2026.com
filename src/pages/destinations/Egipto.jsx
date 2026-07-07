@@ -58,7 +58,7 @@ const Egipto = () => {
       {/* Destination Brief & Tours Grid */}
       <section className="container mx-auto px-6 mt-16">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <p className="text-body-lg text-obsidian-500 leading-relaxed">
+          <p className="text-body-lg text-obsidian-500 dark:text-black leading-relaxed">
             {t('dest.egypt.brief', 'A civilisation that has captivated the world for millennia. Egypt blends monumental history with warm hospitality and breathtaking landscapes — from the iconic Pyramids and the Nile cruise to the coral reefs of the Red Sea. Every itinerary is crafted to deliver maximum comfort, luxury and authentic cultural immersion.')}
           </p>
         </div>
@@ -88,10 +88,10 @@ const Egipto = () => {
           <motion.span variants={fadeInUp} className="inline-block font-body text-gold-500 tracking-[0.2em] uppercase text-sm mb-4">
             {t('dest.egypt.programsSubtitle', 'Egypt Programs')}
           </motion.span>
-          <motion.h2 variants={fadeInUp} className="text-display-lg text-obsidian-900 mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <motion.h2 variants={fadeInUp} className="text-display-lg text-obsidian-900 dark:text-black mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
             {t('dest.egypt.programsTitle', 'Exclusive Egypt Experiences')}
           </motion.h2>
-          <motion.p variants={fadeInUp} className="text-body-lg text-obsidian-500 max-w-2xl mx-auto">
+          <motion.p variants={fadeInUp} className="text-body-lg text-obsidian-500 dark:text-black max-w-2xl mx-auto">
             {t('dest.egypt.programsDesc', 'Discover our curated programs designed to make your Egypt journey truly unforgettable.')}
           </motion.p>
         </motion.div>
@@ -111,11 +111,11 @@ const Egipto = () => {
             <div className="p-6 flex flex-col flex-grow">
               <span className="text-caption text-gold-600 uppercase tracking-widest font-semibold mb-1">{t('nav.classic', 'Classic')}</span>
               <Link to="/programs/classic/classic-program">
-                <h3 className="text-display-md text-obsidian-900 mt-1 mb-3 group-hover:text-gold-700 transition-colors line-clamp-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="text-display-md text-obsidian-900 dark:text-black mt-1 mb-3 group-hover:text-gold-700 transition-colors line-clamp-2" style={{ fontFamily: "'Playfair Display', serif" }}>
                   {t('nav.classicProgram', 'Classic Program')}
                 </h3>
               </Link>
-              <p className="text-body-sm text-obsidian-500 line-clamp-3 mb-4 flex-grow">
+              <p className="text-body-sm text-obsidian-500 dark:text-black line-clamp-3 mb-4 flex-grow">
                 {t('classic.shortDesc', 'Experience the timeless beauty of Egypt with our signature classic itinerary covering all the iconic landmarks.')}
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-gold-500/10 mt-auto">
@@ -137,11 +137,11 @@ const Egipto = () => {
             <div className="p-6 flex flex-col flex-grow">
               <span className="text-caption text-gold-600 uppercase tracking-widest font-semibold mb-1">{t('nav.honeymooners', 'Honeymooners Package')}</span>
               <Link to="/programs/honeymooners">
-                <h3 className="text-display-md text-obsidian-900 mt-1 mb-3 group-hover:text-gold-700 transition-colors line-clamp-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="text-display-md text-obsidian-900 dark:text-black mt-1 mb-3 group-hover:text-gold-700 transition-colors line-clamp-2" style={{ fontFamily: "'Playfair Display', serif" }}>
                   {t('nav.honeymooners', 'Honeymooners Package')}
                 </h3>
               </Link>
-              <p className="text-body-sm text-obsidian-500 line-clamp-3 mb-4 flex-grow">
+              <p className="text-body-sm text-obsidian-500 dark:text-black line-clamp-3 mb-4 flex-grow">
                 {t('dest.egypt.honeymoonersDesc', 'Celebrate your love with intimate candlelit dinners, private yacht cruises, and unmatched romantic luxury.')}
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-gold-500/10 mt-auto">
@@ -163,11 +163,11 @@ const Egipto = () => {
             <div className="p-6 flex flex-col flex-grow">
               <span className="text-caption text-gold-600 uppercase tracking-widest font-semibold mb-1">{t('nav.religious', 'Religious Programs')}</span>
               <Link to="/programs/religious">
-                <h3 className="text-display-md text-obsidian-900 mt-1 mb-3 group-hover:text-gold-700 transition-colors line-clamp-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="text-display-md text-obsidian-900 dark:text-black mt-1 mb-3 group-hover:text-gold-700 transition-colors line-clamp-2" style={{ fontFamily: "'Playfair Display', serif" }}>
                   {t('nav.religious', 'Religious Programs')}
                 </h3>
               </Link>
-              <p className="text-body-sm text-obsidian-500 line-clamp-3 mb-4 flex-grow">
+              <p className="text-body-sm text-obsidian-500 dark:text-black line-clamp-3 mb-4 flex-grow">
                 {t('dest.egypt.religiousDesc', 'A spiritual journey through Egypt tracing ancient Coptic monasteries and sacred sites.')}
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-gold-500/10 mt-auto">
@@ -189,11 +189,11 @@ const Egipto = () => {
             <div className="p-6 flex flex-col flex-grow">
               <span className="text-caption text-gold-600 uppercase tracking-widest font-semibold mb-1">{t('nav.multiCountry', 'Multi-Country Tours')}</span>
               <Link to="/programs/multi-country">
-                <h3 className="text-display-md text-obsidian-900 mt-1 mb-3 group-hover:text-gold-700 transition-colors line-clamp-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="text-display-md text-obsidian-900 dark:text-black mt-1 mb-3 group-hover:text-gold-700 transition-colors line-clamp-2" style={{ fontFamily: "'Playfair Display', serif" }}>
                   {t('nav.multiCountry', 'Multi-Country Tours')}
                 </h3>
               </Link>
-              <p className="text-body-sm text-obsidian-500 line-clamp-3 mb-4 flex-grow">
+              <p className="text-body-sm text-obsidian-500 dark:text-black line-clamp-3 mb-4 flex-grow">
                 {t('dest.egypt.multiCountryDesc', 'Explore combined itineraries spanning Egypt, Jordan, Turkey and beyond for a truly grand adventure.')}
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-gold-500/10 mt-auto">
@@ -215,11 +215,11 @@ const Egipto = () => {
             <div className="p-6 flex flex-col flex-grow">
               <span className="text-caption text-gold-600 uppercase tracking-widest font-semibold mb-1">EXTENSION</span>
               <Link to="/programs/extension">
-                <h3 className="text-display-md text-obsidian-900 mt-1 mb-3 group-hover:text-gold-700 transition-colors line-clamp-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="text-display-md text-obsidian-900 dark:text-black mt-1 mb-3 group-hover:text-gold-700 transition-colors line-clamp-2" style={{ fontFamily: "'Playfair Display', serif" }}>
                   {t('dest.egypt.extensionTitle', 'Egypt Extensions')}
                 </h3>
               </Link>
-              <p className="text-body-sm text-obsidian-500 line-clamp-3 mb-4 flex-grow">
+              <p className="text-body-sm text-obsidian-500 dark:text-black line-clamp-3 mb-4 flex-grow">
                 {t('dest.egypt.extensionDesc', 'Extend your Egypt journey with added destinations like Hurghada, Sharm El Sheikh, or Siwa Oasis.')}
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-gold-500/10 mt-auto">

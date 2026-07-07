@@ -188,7 +188,7 @@ const ReligiousTours = () => {
                 {/* Card Body */}
                 <div className="p-6 flex flex-col flex-grow">
                   <span className="text-caption text-gold-600 uppercase tracking-widest mb-1 block">
-                    {t(`data.${tour.location}`, tour.location)}
+                    {tour.location}
                   </span>
 
                   <Link to={`/services/religious/${tour.slug}`}>
@@ -196,12 +196,12 @@ const ReligiousTours = () => {
                       className="text-display-md text-obsidian-900 mb-3 line-clamp-2 group-hover:text-gold-700 transition-colors"
                       style={{ fontFamily: "'Playfair Display', serif" }}
                     >
-                      {t(`data.${tour.title}`, tour.title)}
+                      {t(tour.title, tour.title)}
                     </h3>
                   </Link>
 
                   <p className="text-body-sm text-obsidian-500 line-clamp-3 mb-4 flex-grow">
-                    {t(`data.${tour.shortDesc}`, tour.shortDesc)}
+                    {t(tour.shortDesc, tour.shortDesc)}
                   </p>
 
                   {/* Star Rating */}
@@ -224,7 +224,7 @@ const ReligiousTours = () => {
                         {tour.highlights.slice(0, 3).map((hl, idx) => (
                           <li key={idx} className="text-[12px] text-obsidian-500 flex items-start gap-1.5">
                             <span className="w-1.5 h-1.5 rounded-full bg-gold-500 shrink-0 mt-1.5 flex-shrink-0"></span>
-                            <span className="line-clamp-1">{t(`data.${hl}`, hl)}</span>
+                            <span className="line-clamp-1">{t(hl, hl)}</span>
                           </li>
                         ))}
                       </ul>

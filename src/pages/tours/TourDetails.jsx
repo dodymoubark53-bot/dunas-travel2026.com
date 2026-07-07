@@ -13,6 +13,7 @@ import TourCard from '../../components/tour/TourCard';
 import { fadeInUp } from '../../animations/variants';
 import BookingForm from '../../components/booking/BookingForm';
 import { useCurrency } from '../../context/CurrencyContext';
+import IncludedNotIncluded from '../../components/tour/IncludedNotIncluded';
 
 const TourDetails = () => {
   const { t } = useTranslation();
@@ -350,61 +351,16 @@ const TourDetails = () => {
         </div>
 
         <div className="relative mt-24 mb-8">
-          <div className="absolute inset-0 bg-gradient-to-r from-obsidian-50 via-gold-50/30 to-obsidian-50 rounded-3xl"></div>
           <div className="relative z-10 px-4 md:px-12 py-16">
 
             {/* Included / Excluded */}
-            <motion.div
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="mt-16 max-w-4xl mx-auto"
-            >
-              <div className={`grid grid-cols-1 md:grid-cols-${tour.excursions && tour.excursions.length > 0 ? '3' : '2'} gap-8`}>
-                <div>
-                  <h3 className="text-display-md text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                    {tour.included && tour.included.length > 0 ? (tour.inclusionsTitle ? t(`data.${tour.inclusionsTitle}`, tour.inclusionsTitle) : t('tourDetail.included', 'What is Included')) : ''}
-                  </h3>
-                  <ul className="flex flex-col gap-3">
-                    {tour.included && tour.included.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-gold-300">
-                        <FaCheck className="text-sage-500 dark:text-green-400 mt-1 flex-shrink-0" />
-                        <span>{t(`data.${item}`, item)}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-display-md text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                    {tour.excluded && tour.excluded.length > 0 ? (tour.exclusionsTitle ? t(`data.${tour.exclusionsTitle}`, tour.exclusionsTitle) : t('tourDetail.excluded', 'What is Excluded')) : ''}
-                  </h3>
-                  <ul className="flex flex-col gap-3">
-                    {tour.excluded && tour.excluded.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-gold-300">
-                        <FaTimes className="text-red-400 dark:text-red-300 mt-1 flex-shrink-0" />
-                        <span>{t(`data.${item}`, item)}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                {tour.excursions && tour.excursions.length > 0 && (
-                  <div>
-                    <h3 className="text-display-md text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                      {t('tour.optionalExcursions', 'Optional Excursions')}
-                    </h3>
-                    <ul className="flex flex-col gap-3">
-                      {tour.excursions.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-gold-300">
-                          <FaCheck className="text-gold-500 mt-1 flex-shrink-0" />
-                          <span>{t(`data.${item}`, item)}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            </motion.div>
+            <IncludedNotIncluded
+              includedItems={tour.included}
+              excludedItems={tour.excluded}
+              excursionsItems={tour.excursions}
+              inclusionsTitle={tour.inclusionsTitle ? t(`data.${tour.inclusionsTitle}`, tour.inclusionsTitle) : undefined}
+              exclusionsTitle={tour.exclusionsTitle ? t(`data.${tour.exclusionsTitle}`, tour.exclusionsTitle) : undefined}
+            />
 
             {/* Hotels */}
             {tour.hotels && (
@@ -462,7 +418,7 @@ const TourDetails = () => {
       {/* Related Tours */}
       <section className="container mx-auto px-6 py-24">
         <div className="text-center mb-16">
-          <h2 className="text-display-lg text-obsidian-900 mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="text-display-lg text-obsidian-900 dark:text-black mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
             {t('tourDetail.relatedTitle', 'You May Also Like')}
           </h2>
           <div className="w-24 h-1 bg-gold-500 mx-auto mb-4"></div>

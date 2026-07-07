@@ -452,7 +452,7 @@ export const blogs = [
     "date": "Dec 3, 2026",
     "relatedTour": {"slug":"reg-03-passion-of-turkey","label":"Passion of Turkey","path":"/programs/turkey/reg-03-passion-of-turkey"},
     "excerpt": "Explore the luxury of our custom Passion of Turkey program in Turkey. Discover why this 8 days / 7 nights itinerary is perfect for your travel dreams with Dunas",
-    "img": "https://images.unsplash.com/photo-1503822723932-d0f4d049f755?w=800&q=80&fit=crop",
+    "img": "https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=800&q=80&fit=crop",
     "content": [
       "Spanning two continents, Turkey is a vibrant mosaic of Eastern and Western cultures, ancient history, and breathtaking landscapes. The \"Passion of Turkey\" itinerary is a premier 8 days / 7 nights journey that showcases the very best this diverse country has to offer. From the minarets and bustling bazaars of historic Istanbul to the fairy chimneys of Cappadocia and the thermal travertines of Pamukkale, this package is designed to show you Turkey in style. Whether you are cruising the Bosphorus, flying high in a hot air balloon at sunrise, or walking the marble streets of ancient Ephesus, this trip is packed with bucket-list moments. Let us explore why Turkey should be your next destination and how this tour makes it unforgettable.",
       "## Why Visit Turkey",
@@ -843,7 +843,7 @@ export const blogs = [
     "date": "Jul 20, 2026",
     "relatedTour": {"slug":"reg-05-admirable-turkey","label":"Admirable Turkey","path":"/programs/turkey/reg-05-admirable-turkey"},
     "excerpt": "Explore the luxury of our custom Admirable Turkey program in Turkey. Discover why this 10 days / 9 nights itinerary is perfect for your travel dreams with Dunas",
-    "img": "https://images.unsplash.com/photo-1527838832702-595888506147?w=800&q=80&fit=crop",
+    "img": "https://images.unsplash.com/photo-1655832975303-9c474a06ed56?w=800&q=80&fit=crop",
     "content": [
       "Spanning two continents, Turkey is a vibrant mosaic of Eastern and Western cultures, ancient history, and breathtaking landscapes. The \"Admirable Turkey\" itinerary is a premier 10 days / 9 nights journey that showcases the very best this diverse country has to offer. From the minarets and bustling bazaars of historic Istanbul to the fairy chimneys of Cappadocia and the thermal travertines of Pamukkale, this package is designed to show you Turkey in style. Whether you are cruising the Bosphorus, flying high in a hot air balloon at sunrise, or walking the marble streets of ancient Ephesus, this trip is packed with bucket-list moments. Let us explore why Turkey should be your next destination and how this tour makes it unforgettable.",
       "## Why Visit Turkey",
@@ -866,7 +866,7 @@ export const blogs = [
     "date": "Aug 02, 2026",
     "relatedTour": {"slug":"reg-06-heart-of-turkey","label":"Heart of Turkey","path":"/programs/turkey/reg-06-heart-of-turkey"},
     "excerpt": "Explore the luxury of our custom Heart of Turkey - Istanbul wit... program in Turkey. Discover why this 7 days / 6 nights itinerary is perfect for your travel d",
-    "img": "https://images.unsplash.com/photo-1527838832702-595888506147?w=800&q=80&fit=crop",
+    "img": "https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=800&q=80&fit=crop",
     "content": [
       "Spanning two continents, Turkey is a vibrant mosaic of Eastern and Western cultures, ancient history, and breathtaking landscapes. The \"Heart of Turkey - Istanbul with Cappadocia\" itinerary is a premier 7 days / 6 nights journey that showcases the very best this diverse country has to offer. From the minarets and bustling bazaars of historic Istanbul to the fairy chimneys of Cappadocia and the thermal travertines of Pamukkale, this package is designed to show you Turkey in style. Whether you are cruising the Bosphorus, flying high in a hot air balloon at sunrise, or walking the marble streets of ancient Ephesus, this trip is packed with bucket-list moments. Let us explore why Turkey should be your next destination and how this tour makes it unforgettable.",
       "## Why Visit Turkey",
@@ -889,7 +889,7 @@ export const blogs = [
     "date": "Aug 18, 2026",
     "relatedTour": {"slug":"reg-07-turkish-riviera","label":"Turkish Riviera","path":"/programs/turkey/reg-07-turkish-riviera"},
     "excerpt": "Explore the luxury of our custom Turkish Riviera program in Turkey. Discover why this 12 Days / 11 Nights itinerary is perfect for your travel dreams with Dunas",
-    "img": "https://images.unsplash.com/photo-1527838832702-595888506147?w=800&q=80&fit=crop",
+    "img": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80&fit=crop",
     "content": [
       "Spanning two continents, Turkey is a vibrant mosaic of Eastern and Western cultures, ancient history, and breathtaking landscapes. The \"Turkish Riviera\" itinerary is a premier 12 Days / 11 Nights journey that showcases the very best this diverse country has to offer. From the minarets and bustling bazaars of historic Istanbul to the fairy chimneys of Cappadocia and the thermal travertines of Pamukkale, this package is designed to show you Turkey in style. Whether you are cruising the Bosphorus, flying high in a hot air balloon at sunrise, or walking the marble streets of ancient Ephesus, this trip is packed with bucket-list moments. Let us explore why Turkey should be your next destination and how this tour makes it unforgettable.",
       "## Why Visit Turkey",

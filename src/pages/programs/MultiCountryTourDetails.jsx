@@ -255,23 +255,23 @@ const MultiCountryTourDetails = () => {
               {tour.tunisiaIncluded ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-display-md text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    <h3 className="text-display-md text-2xl text-obsidian-900 dark:text-black mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
                       {tour.tunisiaInclTitle ? t(`data.${tour.tunisiaInclTitle}`, tour.tunisiaInclTitle) : t('tourDetail.included', 'Included')}
                     </h3>
                     <ul className="flex flex-col gap-3">
                       {tour.tunisiaIncluded.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-gold-300">
+                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-black">
                           <FaCheck className="text-sage-500 dark:text-green-400 mt-1 flex-shrink-0" />
                           <span>{t(`data.${item}`, item)}</span>
                         </li>
                       ))}
                     </ul>
-                    <h3 className="text-display-md text-2xl mt-8 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    <h3 className="text-display-md text-2xl text-obsidian-900 dark:text-black mt-8 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
                       {tour.tunisiaExclTitle ? t(`data.${tour.tunisiaExclTitle}`, tour.tunisiaExclTitle) : t('tourDetail.excluded', 'Not Included')}
                     </h3>
                     <ul className="flex flex-col gap-3">
                       {tour.tunisiaExcluded.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-gold-300">
+                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-black">
                           <FaTimes className="text-red-400 dark:text-red-300 mt-1 flex-shrink-0" />
                           <span>{t(`data.${item}`, item)}</span>
                         </li>
@@ -279,23 +279,23 @@ const MultiCountryTourDetails = () => {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-display-md text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    <h3 className="text-display-md text-2xl text-obsidian-900 dark:text-black mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
                       {tour.egyptInclTitle ? t(`data.${tour.egyptInclTitle}`, tour.egyptInclTitle) : t('tourDetail.included', 'Included')}
                     </h3>
                     <ul className="flex flex-col gap-3">
                       {tour.egyptIncluded.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-gold-300">
+                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-black">
                           <FaCheck className="text-sage-500 dark:text-green-400 mt-1 flex-shrink-0" />
                           <span>{t(`data.${item}`, item)}</span>
                         </li>
                       ))}
                     </ul>
-                    <h3 className="text-display-md text-2xl mt-8 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    <h3 className="text-display-md text-2xl text-obsidian-900 dark:text-black mt-8 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
                       {tour.egyptExclTitle ? t(`data.${tour.egyptExclTitle}`, tour.egyptExclTitle) : t('tourDetail.excluded', 'Not Included')}
                     </h3>
                     <ul className="flex flex-col gap-3">
                       {tour.egyptExcluded.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-gold-300">
+                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-black">
                           <FaTimes className="text-red-400 dark:text-red-300 mt-1 flex-shrink-0" />
                           <span>{t(`data.${item}`, item)}</span>
                         </li>
@@ -306,12 +306,12 @@ const MultiCountryTourDetails = () => {
               ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-display-md text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    <h3 className="text-display-md text-2xl text-obsidian-900 dark:text-black mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
                       {tour.included && tour.included.length > 0 ? (tour.inclusionsTitle ? t(`data.${tour.inclusionsTitle}`, tour.inclusionsTitle) : t('tourDetail.included', 'What is Included')) : ''}
                     </h3>
                     <ul className="flex flex-col gap-3">
                       {tour.included && tour.included.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-gold-300">
+                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-black">
                           <FaCheck className="text-sage-500 dark:text-green-400 mt-1 flex-shrink-0" />
                           <span>{t(`data.${item}`, item)}</span>
                         </li>
@@ -319,12 +319,12 @@ const MultiCountryTourDetails = () => {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-display-md text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    <h3 className="text-display-md text-2xl text-obsidian-900 dark:text-black mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
                       {tour.excluded && tour.excluded.length > 0 ? (tour.exclusionsTitle ? t(`data.${tour.exclusionsTitle}`, tour.exclusionsTitle) : t('tourDetail.excluded', 'What is Excluded')) : ''}
                     </h3>
                     <ul className="flex flex-col gap-3">
                       {tour.excluded && tour.excluded.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-gold-300">
+                        <li key={idx} className="flex items-start gap-3 text-body-md text-obsidian-700 dark:text-black">
                           <FaTimes className="text-red-400 dark:text-red-300 mt-1 flex-shrink-0" />
                           <span>{t(`data.${item}`, item)}</span>
                         </li>
@@ -378,7 +378,7 @@ const MultiCountryTourDetails = () => {
       {/* Related Tours */}
       <section className="container mx-auto px-6 py-24">
         <div className="text-center mb-16">
-          <h2 className="text-display-lg text-obsidian-900 mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="text-display-lg text-obsidian-900 dark:text-black mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
             {t('tourDetail.relatedTitle', 'You May Also Like')}
           </h2>
           <div className="w-24 h-1 bg-gold-500 mx-auto mb-4"></div>

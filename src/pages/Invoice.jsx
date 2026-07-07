@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { FaFileInvoiceDollar, FaSearch, FaTimes, FaPrint, FaCheckCircle } from 'react-icons/fa';
 
-const API = 'http://localhost:5000/api';
+const API = import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api` : 'http://localhost:5000/api';
 
 const Invoice = () => {
   const { t, i18n } = useTranslation();
