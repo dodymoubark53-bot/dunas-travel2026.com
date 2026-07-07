@@ -570,20 +570,20 @@ const Home = () => {
         <title>
           {t(
             "home.metaTitle",
-            "Dunas Travel | Award-Winning Experiences in Egypt, Jordan, Turkey & Tunisia",
+            "Dunas Travel | Award-Winning Experiences in Egypt, Jordan, Turkey, Tunisia, Greece, Holy Land, Morocco & Dubai",
           )}
         </title>
         <meta
           name="description"
           content={t(
             "home.metaDesc",
-            "Experience true luxury with Dunas Travel — curated journeys through the timeless wonders of Egypt, Jordan, Turkey, and Tunisia.",
+            "Experience true luxury with Dunas Travel — curated journeys through the timeless wonders of Egypt, Jordan, Turkey, Tunisia, Greece, the Holy Land, Morocco, and Dubai.",
           )}
         />
         <meta property="og:title" content="Dunas Travel" />
         <meta
           property="og:description"
-          content="Premium luxury travel agency — Egypt, Jordan, Turkey & Tunisia"
+          content="Premium luxury travel agency — Egypt, Jordan, Turkey, Tunisia, Greece, Holy Land, Morocco & Dubai"
         />
         <meta property="og:image" content="/dunas-travel-logo.png" />
         <link rel="icon" type="image/png" href="/dunas-travel-logo.png" />
@@ -743,7 +743,7 @@ const Home = () => {
               {t('home.popularDests', 'Popular Destinations')}
             </p>
             <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 md:gap-3">
-              {destinations.slice(0, 6).map((d) => (
+              {destinations.map((d) => (
                 <Link
                   key={d.id}
                   to={`/destinations/${d.id}`}
@@ -809,7 +809,7 @@ const Home = () => {
               <p className="text-body-lg text-obsidian-700 mb-8 leading-relaxed">
                 {t(
                   "home.aboutDesc",
-                  "Dunas Travel is a premium luxury travel agency specializing in Egypt, Jordan, Turkey, and Tunisia. Our passion is crafting highly curated tours, exclusive safaris, boutique cruises, and hand-picked hotel experiences for discerning travelers who seek the extraordinary. Let us transform your travel dreams into timeless memories.",
+                  "Dunas Travel is a premium luxury travel agency specializing in Egypt, Jordan, Turkey, Tunisia, Greece, the Holy Land, Morocco, and Dubai. Our passion is crafting highly curated tours, exclusive safaris, boutique cruises, and hand-picked hotel experiences for discerning travelers who seek the extraordinary. Let us transform your travel dreams into timeless memories.",
                 )}
               </p>
               <Link to="/about">

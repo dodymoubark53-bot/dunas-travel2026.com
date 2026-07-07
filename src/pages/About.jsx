@@ -1090,7 +1090,7 @@ const About = () => {
             { initials: 'MS', name: 'Miguel Selma', roleKey: 'about.roleGeneralDirector', country: '\uD83C\uDDEA\uD83C\uDDF8 Spain', offset: '0px', delay: '.05s' },
             { initials: 'GF', name: 'Giovanni Fiore', roleKey: 'about.roleCommercialDirector', country: '\uD83C\uDDEE\uD83C\uDDF9 Italy', offset: '38px', delay: '.1s', img: 'https://res.cloudinary.com/tibx70zb/image/upload/v1783333028/WhatsApp_Image_2026-07-01_at_12.03.27_AM_rj6uko.jpg' },
             { initials: 'VB', name: 'Vinicius Barcellos', roleKey: 'about.roleCommercialDirector', country: '\uD83C\uDDE7\uD83C\uDDF7 Brazil', offset: '8px', delay: '.15s' },
-            { initials: 'SM', name: 'Sonia Melo', roleKey: 'about.roleSalesDirector', country: '\uD83C\uDDE7\uD83C\uDDF7 Brazil', offset: '46px', delay: '.2s' },
+            { initials: 'SM', name: 'Sonia Melo', roleKey: 'about.roleSalesDirector', country: '\uD83C\uDDE7\uD83C\uDDF7 Brazil', offset: '46px', delay: '.2s', img: 'https://res.cloudinary.com/tibx70zb/image/upload/v1783409905/24b2188b-b23a-41ba-9321-dd9ac33de3cd_iylkgt.jpg' },
             { initials: 'LR', name: 'Luciana Rovaroto', roleKey: 'about.roleCustomerService', country: '\uD83C\uDDE7\uD83C\uDDF7 Brazil', offset: '2px', delay: '.25s', img: 'https://res.cloudinary.com/tibx70zb/image/upload/v1783332881/WhatsApp_Image_2026-07-01_at_12.03.27_AM_1_i6suvb.jpg' },
             { initials: 'RP', name: 'Ramiro Poggi', roleKey: 'about.roleCommercialDirector', country: '\uD83C\uDDE6\uD83C\uDDF7 Argentina', offset: '32px', delay: '.3s' },
             { initials: 'EC', name: 'Edgar Ca\u00F1\u00F3n', roleKey: 'about.roleCommercialDirector', country: '\uD83C\uDDE8\uD83C\uDDF4 Colombia', offset: '14px', delay: '.35s' },
