@@ -1,9 +1,22 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// Custom plugin to convert render-blocking CSS link tags to preloaded async link tags
+function asyncCssPlugin() {
+  return {
+    name: 'async-css',
+    transformIndexHtml(html) {
+      return html.replace(
+        /<link rel="stylesheet"([^>]*?)href="([^"]+)"([^>]*?)>/g,
+        '<link rel="preload" $1href="$2"$3 as="style" onload="this.onload=null;this.rel=\'stylesheet\'"><noscript><link rel="stylesheet" $1href="$2"$3></noscript>'
+      );
+    }
+  };
+}
+
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), asyncCssPlugin()],
   base: '/',
   build: {
     rollupOptions: {

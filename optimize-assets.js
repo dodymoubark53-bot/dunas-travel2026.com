@@ -194,13 +194,13 @@ const main = async () => {
         console.error('Failed to extract poster frame, generating from placeholder...', err);
       }
 
-      // Re-encode to MP4: 960x540 (or 1280x720), CRF 30, slow, no audio
-      console.log('Encoding optimized MP4 video (960x540, CRF 28, -an)...');
-      execSync(`"${ffmpegPath}" -y -i "${videoInPath}" -vf scale=960:-2 -vcodec libx264 -crf 28 -preset slow -an "${videoOutMp4Temp}"`, { stdio: 'inherit' });
+      // Re-encode to MP4: 960x540, CRF 28, with AAC audio
+      console.log('Encoding optimized MP4 video (960x540, CRF 28)...');
+      execSync(`"${ffmpegPath}" -y -i "${videoInPath}" -vf scale=960:-2 -vcodec libx264 -crf 28 -preset slow -c:a aac -b:a 128k "${videoOutMp4Temp}"`, { stdio: 'inherit' });
       
-      // Re-encode to WebM: 960x540, VP9 (crf 36, -an)
+      // Re-encode to WebM: 960x540, VP9 (crf 36), with Opus audio
       console.log('Encoding optimized WebM video (960x540, VP9)...');
-      execSync(`"${ffmpegPath}" -y -i "${videoInPath}" -vf scale=960:-2 -vcodec libvpx-vp9 -crf 36 -b:v 0 -deadline good -cpu-used 2 -an "${videoOutWebm}"`, { stdio: 'inherit' });
+      execSync(`"${ffmpegPath}" -y -i "${videoInPath}" -vf scale=960:-2 -vcodec libvpx-vp9 -crf 36 -b:v 0 -deadline good -cpu-used 2 -c:a libopus -b:a 96k "${videoOutWebm}"`, { stdio: 'inherit' });
 
       // Overwrite original MP4 with compressed version
       fs.copyFileSync(videoOutMp4Temp, videoInPath);

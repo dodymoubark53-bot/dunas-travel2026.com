@@ -90,7 +90,7 @@ const newDestinationsList = [
     tagEn: "CAPPADOCIA BALLOONS & OTTOMAN LEGACY",
     descAr: "جسور الحضارة التاريخية، وشواطئ الريفييرا التركية، ومناطيد كبادوكيا الحالمة.",
     descEn: "Bridges of history, the sun-kissed Turkish Riviera, and the dreamlike balloon-filled skies of Cappadocia.",
-    image: "https://tse1.mm.bing.net/th/id/OIP.WN9LNYmA0Y03lkD_370KxwHaEO?r=0&cb=thfvnextfalcon4&rs=1&pid=ImgDetMain&o=7&rm=3",
+    image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=800&q=80",
     link: "/destinations/turkey"
   },
   {
@@ -622,7 +622,7 @@ const Home = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://res.cloudinary.com/degbrq3ck/image/upload/v1783067135/grand_tour_of_turkey_lxb1f4.jpg"
+            src="https://res.cloudinary.com/degbrq3ck/image/upload/w_1200,q_auto,f_auto/v1783067135/grand_tour_of_turkey_lxb1f4.jpg"
             alt=""
             className="w-full h-full object-cover object-center"
           />
@@ -662,10 +662,12 @@ const Home = () => {
                     id="search-tour-input"
                     value={searchTour}
                     onChange={(e) => setSearchTour(e.target.value)}
-                    disabled={!searchDest}
+                    disabled={!searchDest || searchDest === "all"}
                     className="w-full px-2 sm:px-3 py-2 sm:py-2.5 rounded-lg border border-white/30 bg-white/20 backdrop-blur-sm text-white text-[13px] sm:text-body-sm focus:outline-none focus:ring-2 focus:ring-[#FF6B35] appearance-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed [&>option]:text-obsidian-900 [&>option]:dark:text-ivory-100 [&>option]:dark:bg-obsidian-800"
                   >
-                    <option value="" className="text-obsidian-900 dark:text-ivory-100 dark:bg-obsidian-800">{t('home.searchAllTours', 'All Tours')}</option>
+                    <option value="" className="text-obsidian-900 dark:text-ivory-100 dark:bg-obsidian-800">
+                      {searchDest === "all" ? t('home.selectDestFirst', 'Select a destination first') : t('home.searchAllTours', 'All Tours')}
+                    </option>
                     {destTours.map((t) => (
                       <option key={t.id} value={t.id} className="text-obsidian-900 dark:text-ivory-100 dark:bg-obsidian-800">{t.label}</option>
                     ))}
@@ -795,10 +797,9 @@ const Home = () => {
               className="w-full lg:w-1/2"
             >
               <img
-                src="/images/crafting-journeys.jpg"
+                src="/images/crafting-journeys.webp"
                 alt="Crafting Journeys"
                 className="w-full h-[300px] lg:h-[480px] object-cover rounded-[16px] shadow-[0_0_40px_rgba(245,166,35,0.25)] transition-transform duration-400 ease hover:-translate-y-[8px]"
-                loading="lazy"
               />
             </motion.div>
           </div>
@@ -1722,7 +1723,7 @@ const Home = () => {
               <div 
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-out group-hover:scale-105"
                 style={{
-                  backgroundImage: "url('https://res.cloudinary.com/degbrq3ck/image/upload/v1783071610/bus1_lprkiy.jpg')"
+                  backgroundImage: "url('https://res.cloudinary.com/degbrq3ck/image/upload/w_800,q_auto,f_auto/v1783071610/bus1_lprkiy.jpg')"
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-900/60 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-95" />

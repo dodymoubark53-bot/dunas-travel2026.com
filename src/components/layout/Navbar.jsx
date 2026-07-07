@@ -218,7 +218,8 @@ const Navbar = () => {
                       initial="hidden"
                       animate="visible"
                       exit="exit"
-                      className={`absolute top-full ${isRtl ? 'left-0' : 'right-0'} mt-1 w-36 bg-white/95 backdrop-blur-xl border border-white/20 rounded-xl overflow-hidden shadow-2xl z-[10000]`}
+                      style={{ backgroundColor: 'white' }}
+                      className={`absolute top-full ${isRtl ? 'left-0' : 'right-0'} mt-1 w-36 backdrop-blur-xl border border-gray-200 rounded-xl overflow-hidden shadow-2xl z-[10000]`}
                     >
                       {[
                         { code: 'en', label: 'English', flag: '🇬🇧' },
@@ -230,7 +231,7 @@ const Navbar = () => {
                         <button
                           key={lang.code}
                           onClick={() => changeLanguage(lang.code)}
-                          className={`w-full ${isRtl ? 'text-right' : 'text-left'} px-3 py-2.5 flex items-center justify-between text-[13px] border-b border-obsidian-100 last:border-0 transition-colors ${i18n.language === lang.code ? 'text-amber-600 font-semibold bg-amber-50' : 'text-obsidian-700 hover:text-amber-600 hover:bg-amber-50'}`}
+                          className={`w-full ${isRtl ? 'text-right' : 'text-left'} px-3 py-2.5 flex items-center justify-between text-[13px] border-b border-gray-200 last:border-0 transition-colors ${i18n.language === lang.code ? 'text-amber-600 font-semibold bg-amber-50' : 'text-black hover:text-amber-600 hover:bg-amber-50'}`}
                         >
                           <span className={`flex items-center gap-2 ${isRtl ? 'flex-row-reverse' : ''}`}>
                             <span className="text-base">{lang.flag}</span>
