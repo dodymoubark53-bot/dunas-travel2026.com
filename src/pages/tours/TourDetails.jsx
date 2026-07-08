@@ -1,14 +1,13 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  FaChevronRight, FaClock, FaUserFriends, FaGlobe, FaTag,
-  FaCheck, FaTimes, FaMapMarkerAlt, FaBed, FaCheckCircle
+  FaChevronRight, FaClock, FaUserFriends, FaTag,
+  FaMapMarkerAlt, FaBed, FaCheckCircle
 } from 'react-icons/fa';
 import { tours } from '../../data/tours';
-import Button from '../../components/ui/Button';
 import TourCard from '../../components/tour/TourCard';
 import { fadeInUp } from '../../animations/variants';
 import BookingForm from '../../components/booking/BookingForm';
@@ -21,7 +20,7 @@ const TourDetails = () => {
   const { slug } = useParams();
 
   const tour = tours.find(t => t.slug === slug);
-  const shuffledTours = [...tours].sort(() => Math.random() - 0.5);
+  const shuffledTours = useMemo(() => [...tours].sort(() => Math.random() - 0.5), []);
 
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const carouselRef = useRef(null);

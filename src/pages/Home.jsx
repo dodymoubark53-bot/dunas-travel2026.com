@@ -588,9 +588,9 @@ const Home = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative h-[50vh] min-h-[400px] sm:h-screen sm:min-h-[600px] md:min-h-[700px] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full aspect-video flex items-center justify-center overflow-hidden bg-black">
         {/* Video Background */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 flex items-center justify-center bg-black">
           <video
             ref={videoRef}
             autoPlay
@@ -600,13 +600,13 @@ const Home = () => {
             preload="auto"
             fetchpriority="high"
             poster="/imgs/hero-poster.webp"
-            className="w-full h-full object-cover object-[center_20%] sm:object-[center_30%]"
+            className="w-full h-full object-contain"
           >
             <source src="/imgs/hero.webm" type="video/webm" />
             <source src="/imgs/hero.mp4" type="video/mp4" />
             <track kind="captures" src="/hero-captions.vtt" srcLang="en" label="English" default />
           </video>
-          <div className="absolute inset-0 bg-obsidian-900/50"></div>
+          <div className="absolute inset-0 bg-obsidian-900/50 pointer-events-none"></div>
         </div>
         {/* Sound Toggle */}
         <button
