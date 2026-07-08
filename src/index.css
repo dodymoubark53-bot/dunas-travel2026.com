@@ -103,6 +103,63 @@ html {
     color: #1a1a2e !important;
   }
 
+  /* Tailor form - fixed light mode design, unaffected by dark mode */
+  .dark .tailor-fixed {
+    background: #f8f6f0 !important;
+    border-color: rgba(26, 26, 46, 0.05) !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08) !important;
+  }
+  .dark .tailor-fixed,
+  .dark .tailor-fixed * {
+    color: #1a1a2e !important;
+  }
+  .dark .tailor-fixed .text-obsidian-300 {
+    color: #9ca3af !important;
+  }
+  .dark .tailor-fixed .text-obsidian-500 {
+    color: #6b7280 !important;
+  }
+  .dark .tailor-fixed .text-obsidian-700 {
+    color: #374151 !important;
+  }
+  .dark .tailor-fixed .bg-white {
+    background: #ffffff !important;
+  }
+  .dark .tailor-fixed .bg-obsidian-50\/50 {
+    background: rgba(26, 26, 46, 0.05) !important;
+  }
+  .dark .tailor-fixed input,
+  .dark .tailor-fixed select,
+  .dark .tailor-fixed textarea {
+    background: #ffffff !important;
+    color: #1a1a2e !important;
+    border-color: rgba(26, 26, 46, 0.1) !important;
+  }
+  .dark .tailor-fixed .border-obsidian-900\/10 {
+    border-color: rgba(26, 26, 46, 0.1) !important;
+  }
+  .dark .tailor-fixed .border-obsidian-900\/20 {
+    border-color: rgba(26, 26, 46, 0.2) !important;
+  }
+  .dark .tailor-fixed .hover\:bg-obsidian-900\/5:hover {
+    background: rgba(26, 26, 46, 0.05) !important;
+  }
+  .dark .tailor-fixed .border-t {
+    border-color: rgba(26, 26, 46, 0.1) !important;
+  }
+  .dark .tailor-fixed button.btn-3d-glow {
+    background-color: #1e3a8a !important;
+    border-color: #f5a623 !important;
+    color: #ffffff !important;
+  }
+  .dark .tailor-fixed .text-gold-500 {
+    color: #d4921e !important;
+  }
+  .dark .tailor-fixed .bg-gold-500 {
+    background-color: #d4921e !important;
+    color: #1a1a2e !important;
+  }
+
   .dark .text-obsidian-300 {
     color: #a8a4a0 !important;
   }

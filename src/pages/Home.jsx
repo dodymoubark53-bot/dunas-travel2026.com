@@ -588,7 +588,7 @@ const Home = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative w-full aspect-video flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative w-full aspect-video flex items-center justify-center overflow-hidden bg-black mt-[104px] sm:mt-[108px] lg:mt-[124px]">
         {/* Video Background */}
         <div className="absolute inset-0 z-0 flex items-center justify-center bg-black">
           <video

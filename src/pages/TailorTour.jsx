@@ -243,29 +243,34 @@ const TailorTour = () => {
           border-top: 3px dashed #b1c1ce;
           z-index: 0;
         }
-        .plane-icon {
+        .plane-icon,
+        .dark .tailor-fixed .plane-icon,
+        .dark .tailor-fixed .plane-icon svg,
+        .dark .tailor-fixed .plane-icon svg path,
+        .dark .tailor-fixed .plane-icon * {
           position: absolute;
           top: 8px;
           font-size: 28px;
-          color: var(--color-gold, #f5a623);
+          color: var(--color-gold, #f5a623) !important;
+          fill: var(--color-gold, #f5a623) !important;
           z-index: 10;
         }
 
         /* Default parked states */
         .plane-parked-1-ltr {
-          left: 11%;
+          left: 14%;
           transform: translateY(0) rotate(0deg) scaleX(1);
         }
         .plane-parked-2-ltr {
-          left: 83%;
+          left: 80%;
           transform: translateY(0) rotate(0deg) scaleX(1);
         }
         .plane-parked-1-rtl {
-          right: 11%;
+          right: 14%;
           transform: translateY(0) rotate(0deg) scaleX(-1);
         }
         .plane-parked-2-rtl {
-          right: 83%;
+          right: 80%;
           transform: translateY(0) rotate(0deg) scaleX(-1);
         }
 
@@ -288,7 +293,7 @@ const TailorTour = () => {
         /* Keyframes for flight trajectories */
         @keyframes flyForwardLTR {
           0% {
-            left: 11%;
+            left: 14%;
             transform: translateY(0) rotate(0deg) scaleX(1);
           }
           30% {
@@ -302,14 +307,14 @@ const TailorTour = () => {
             transform: translateY(-35px) rotate(15deg) scaleX(1);
           }
           100% {
-            left: 83%;
+            left: 80%;
             transform: translateY(0) rotate(0deg) scaleX(1);
           }
         }
 
         @keyframes flyBackwardLTR {
           0% {
-            left: 83%;
+            left: 80%;
             transform: translateY(0) rotate(0deg) scaleX(-1);
           }
           30% {
@@ -323,14 +328,14 @@ const TailorTour = () => {
             transform: translateY(-35px) rotate(-15deg) scaleX(-1);
           }
           100% {
-            left: 11%;
+            left: 14%;
             transform: translateY(0) rotate(0deg) scaleX(-1);
           }
         }
 
         @keyframes flyForwardRTL {
           0% {
-            right: 11%;
+            right: 14%;
             transform: translateY(0) rotate(0deg) scaleX(-1);
           }
           30% {
@@ -344,14 +349,14 @@ const TailorTour = () => {
             transform: translateY(-35px) rotate(-15deg) scaleX(-1);
           }
           100% {
-            right: 83%;
+            right: 80%;
             transform: translateY(0) rotate(0deg) scaleX(-1);
           }
         }
 
         @keyframes flyBackwardRTL {
           0% {
-            right: 83%;
+            right: 80%;
             transform: translateY(0) rotate(0deg) scaleX(1);
           }
           30% {
@@ -365,7 +370,7 @@ const TailorTour = () => {
             transform: translateY(-35px) rotate(15deg) scaleX(1);
           }
           100% {
-            right: 11%;
+            right: 14%;
             transform: translateY(0) rotate(0deg) scaleX(1);
           }
         }
@@ -583,7 +588,7 @@ const TailorTour = () => {
       ` }} />
 
       {/* Banner Section */}
-      <section className="relative h-[40vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[40vh] pt-24 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-obsidian-900"></div>
         <div className="absolute inset-0 bg-hero-overlay"></div>
         <div className="relative z-10 text-center">
@@ -599,7 +604,7 @@ const TailorTour = () => {
 
       {/* Content Form Section */}
       <section className="container mx-auto px-6 py-12 -mt-16 relative z-20 max-w-5xl">
-        <div className="bg-ivory-50 rounded-xl shadow-card p-6 md:p-12 border border-obsidian-900/5">
+        <div className="tailor-fixed bg-[#faf9f6] rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-6 md:p-12 border border-obsidian-900/5">
           {/* Stepper Header */}
           <div className="stepper-container">
             <div className="progress-line"></div>
