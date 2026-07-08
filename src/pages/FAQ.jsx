@@ -32,7 +32,7 @@ const FAQ = () => {
       const q = t(`faq.${catId}.q${i}`, '');
       const a = t(`faq.${catId}.a${i}`, '');
       if (q && a) {
-        items.push({ id: `${catId}-${i}`, question: q, answer: a });
+        items.push({ id: `${catId}-${i}`, question: q, answer: a, catId });
       }
     }
     return items;
@@ -41,7 +41,7 @@ const FAQ = () => {
   return (
     <div className="w-full min-h-screen bg-ivory-50 pb-24 font-body">
       {/* Header Banner */}
-      <section className="relative min-h-[50vh] pt-64 pb-16 flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[30vh] pt-32 pb-12 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-obsidian-900"></div>
         <div className="absolute inset-0 bg-hero-overlay"></div>
         <motion.div
@@ -59,7 +59,27 @@ const FAQ = () => {
       </section>
 
       {/* FAQ Content */}
-      <section className="container mx-auto px-6 py-20 max-w-4xl">
+      <section className="container mx-auto px-6 py-12 max-w-4xl">
+        {/* Category Navigation */}
+        <div className="mb-12">
+          <div className="flex flex-wrap justify-center gap-3">
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => {
+                  setTimeout(() => {
+                    const el = document.getElementById(`cat-${cat.id}`);
+                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }, 100);
+                }}
+                className="px-5 py-2.5 rounded-full border transition-all duration-300 font-medium tracking-wide text-sm bg-[#1A1A2E] text-gold-500 border-obsidian-700 hover:bg-gold-500 hover:text-[#1A1A2E] hover:border-gold-500 shadow-sm"
+              >
+                {cat.title}
+              </button>
+            ))}
+          </div>
+        </div>
+
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -72,7 +92,7 @@ const FAQ = () => {
 
             return (
               <motion.div key={cat.id} variants={fadeInUp}>
-                <h2 className="text-display-md text-obsidian-900 font-display mb-8 pb-3 border-b-2 border-gold-500">
+                <h2 id={`cat-${cat.id}`} className="text-display-md text-obsidian-900 font-display mb-8 pb-3 border-b-2 border-gold-500">
                   {cat.title}
                 </h2>
                 <div className="flex flex-col gap-4">
@@ -81,6 +101,7 @@ const FAQ = () => {
                     return (
                       <div
                         key={item.id}
+                        id={`faq-${item.id}`}
                         className="bg-[#1A1A2E] rounded-xl overflow-hidden border border-obsidian-800 transition-all duration-300"
                       >
                         <button
