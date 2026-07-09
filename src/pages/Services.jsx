@@ -89,7 +89,7 @@ const Services = () => {
           ) : service === 'hotels' ? (
             <>
               <img
-                src="/imgs/gallery/14.jpeg"
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/0d/4e/68/henann-park-resort.jpg?w=600&h=600&s=1"
                 alt="Luxury Hotel Exterior"
                 className="w-full h-full object-cover object-center"
                 loading="lazy"

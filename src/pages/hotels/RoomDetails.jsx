@@ -206,14 +206,14 @@ const RoomDetails = () => {
   };
 
   return (
-    <div className="w-full bg-[#FAF9F5] pb-24 text-slate-800 leading-relaxed font-body">
+    <div className="w-full bg-[#FAF9F5] dark:bg-obsidian-900 pb-24 text-slate-800 dark:text-slate-200 leading-relaxed font-body">
       <Helmet>
         <title>{`${room.name} | Sol Pyramid Hotel | Dunas Travel`}</title>
         <meta name="description" content={`Book the elegant ${room.name} at Sol Pyramid Hotel. Enjoy premium Giza amenities, 100% Egyptian cotton linen, direct pyramid views, and luxury concierge support.`} />
       </Helmet>
 
       {/* Hero Banner */}
-      <section className="relative h-[60vh] min-h-[400px] flex items-end justify-center overflow-hidden pb-16">
+      <section className="relative min-h-[100svh] md:h-[60vh] md:min-h-[400px] flex items-end justify-center overflow-hidden pb-12 pt-32 md:pb-16 md:pt-0">
         <div className="absolute inset-0 z-0">
           <img
             src={room.image}
@@ -223,22 +223,22 @@ const RoomDetails = () => {
           <div className="absolute inset-0 bg-slate-900/60 bg-gradient-to-t from-[#FAF9F5] via-slate-900/40 to-transparent"></div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-6 max-w-6xl flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+        <div className="relative z-10 container mx-auto px-6 max-w-6xl flex flex-col md:flex-row justify-between items-start md:items-end gap-6 w-full">
           <div className="text-left w-full md:w-auto">
             <Link to={`${prefix}/hotels/sol-pyramid-hotel`} className="inline-flex items-center gap-2 text-gold-500 hover:text-gold-600 font-semibold mb-4 transition-colors">
               <span className={isRtl ? 'rtl-flip' : ''}><FaArrowLeft /></span> {t('common.back', 'Back to Hotel')}
             </Link>
-            <h1 className="text-4xl md:text-6xl text-white font-display font-semibold drop-shadow-md mb-2">
+            <h1 className="text-4xl md:text-6xl text-white font-display font-semibold drop-shadow-md mb-2 leading-tight">
               {room.name}
             </h1>
-            <p className="text-white/95 text-lg font-medium flex items-center gap-2">
-              <span className="flex items-center gap-1 text-gold-500"><FaBed /> {room.bed}</span>
-              <span>•</span>
-              <span className="flex items-center gap-1 text-gold-500"><FaUserFriends /> {room.capacity}</span>
+            <p className="text-white/95 text-base md:text-lg font-medium flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span className="flex items-center gap-1 text-gold-500"><FaBed className="shrink-0" /> {room.bed}</span>
+              <span className="hidden sm:inline">•</span>
+              <span className="flex items-center gap-1 text-gold-500"><FaUserFriends className="shrink-0" /> {room.capacity}</span>
               {room.view && (
                 <>
-                  <span>•</span>
-                  <span className="text-gold-500">{room.view}</span>
+                  <span className="hidden sm:inline">•</span>
+                  <span className="text-gold-500 w-full sm:w-auto">{room.view}</span>
                 </>
               )}
             </p>
@@ -262,44 +262,44 @@ const RoomDetails = () => {
           {/* Left Column: Room Specs, Amenities, and Gallery */}
           <div className="lg:col-span-2 space-y-12">
             {/* Quick Specs Grid */}
-            <div className="bg-white p-5 md:p-8 rounded-2xl shadow-sm border border-slate-200/60 grid grid-cols-2 sm:grid-cols-3 gap-6">
+            <div className="bg-white dark:bg-obsidian-800 p-5 md:p-8 rounded-2xl shadow-sm border border-slate-200/60 dark:border-obsidian-700 grid grid-cols-2 sm:grid-cols-3 gap-6">
               <div>
-                <span className="text-xs uppercase tracking-wider text-slate-400 block mb-1">{t('hotel.room.priceLabel', 'Price')}</span>
-                <span className="text-lg font-bold text-slate-900">{formatPrice(room.price)} / {t('hotel.night', 'night')}</span>
+                <span className="text-xs uppercase tracking-wider text-slate-400 dark:text-white block mb-1">{t('hotel.room.priceLabel', 'Price')}</span>
+                <span className="text-lg font-bold text-slate-900 dark:text-white">{formatPrice(room.price)} / {t('hotel.night', 'night')}</span>
               </div>
               <div>
-                <span className="text-xs uppercase tracking-wider text-slate-400 block mb-1">{t('hotel.room.capacityLabel', 'Capacity')}</span>
-                <span className="text-lg font-bold text-slate-900">{room.capacity}</span>
+                <span className="text-xs uppercase tracking-wider text-slate-400 dark:text-white block mb-1">{t('hotel.room.capacityLabel', 'Capacity')}</span>
+                <span className="text-lg font-bold text-slate-900 dark:text-white">{room.capacity}</span>
               </div>
               <div>
-                <span className="text-xs uppercase tracking-wider text-slate-400 block mb-1">{t('hotel.room.bedTypeLabel', 'Bed Type')}</span>
-                <span className="text-lg font-bold text-slate-900">{room.bed}</span>
+                <span className="text-xs uppercase tracking-wider text-slate-400 dark:text-white block mb-1">{t('hotel.room.bedTypeLabel', 'Bed Type')}</span>
+                <span className="text-lg font-bold text-slate-900 dark:text-white">{room.bed}</span>
               </div>
               {room.view && (
                 <div>
-                  <span className="text-xs uppercase tracking-wider text-slate-400 block mb-1">{t('hotel.room.viewLabel', 'View')}</span>
-                  <span className="text-lg font-bold text-slate-900">{room.view}</span>
+                  <span className="text-xs uppercase tracking-wider text-slate-400 dark:text-white block mb-1">{t('hotel.room.viewLabel', 'View')}</span>
+                  <span className="text-lg font-bold text-slate-900 dark:text-white">{room.view}</span>
                 </div>
               )}
               <div>
-                <span className="text-xs uppercase tracking-wider text-slate-400 block mb-1">{t('hotel.room.smokingLabel', 'Smoking')}</span>
-                <span className="text-lg font-bold text-slate-955 flex items-center gap-1.5"><FaBan className="text-red-500 text-sm" /> {t('hotel.room.notAllowed', 'Not allowed')}</span>
+                <span className="text-xs uppercase tracking-wider text-slate-400 dark:text-white block mb-1">{t('hotel.room.smokingLabel', 'Smoking')}</span>
+                <span className="text-lg font-bold text-slate-955 dark:text-white flex items-center gap-1.5"><FaBan className="text-red-500 text-sm" /> {t('hotel.room.notAllowed', 'Not allowed')}</span>
               </div>
               <div>
-                <span className="text-xs uppercase tracking-wider text-slate-400 block mb-1">{t('hotel.room.petsLabel', 'Pets')}</span>
-                <span className="text-lg font-bold text-slate-955 flex items-center gap-1.5"><FaBan className="text-red-500 text-sm" /> {t('hotel.room.notAllowed', 'Not allowed')}</span>
+                <span className="text-xs uppercase tracking-wider text-slate-400 dark:text-white block mb-1">{t('hotel.room.petsLabel', 'Pets')}</span>
+                <span className="text-lg font-bold text-slate-955 dark:text-white flex items-center gap-1.5"><FaBan className="text-red-500 text-sm" /> {t('hotel.room.notAllowed', 'Not allowed')}</span>
               </div>
             </div>
 
             {/* Room Amenities Section */}
-            <div className="bg-white p-5 md:p-8 rounded-2xl shadow-sm border border-slate-200/60">
-              <h2 className="text-2xl font-display font-semibold text-slate-900 mb-6 pb-3 border-b border-slate-100 flex items-center gap-3">
+            <div className="bg-white dark:bg-obsidian-800 p-5 md:p-8 rounded-2xl shadow-sm border border-slate-200/60 dark:border-obsidian-700">
+              <h2 className="text-2xl font-display font-semibold text-slate-900 dark:text-white mb-6 pb-3 border-b border-slate-100 dark:border-obsidian-700 flex items-center gap-3">
                 <span className="w-1.5 h-6 bg-gold-500 rounded-full"></span>
                 {t('hotel.room.amenities', 'Room Amenities')}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {amenitiesList.map((amenity, idx) => (
-                  <div key={idx} className="flex items-start gap-3.5 py-1 text-slate-800">
+                  <div key={idx} className="flex items-start gap-3.5 py-1 text-slate-800 dark:text-white">
                     <div className="w-9 h-9 rounded-lg bg-gold-500/10 flex items-center justify-center shrink-0">
                       {amenity.icon}
                     </div>
@@ -310,8 +310,8 @@ const RoomDetails = () => {
             </div>
 
             {/* Room Image Gallery */}
-            <div className="bg-white p-5 md:p-8 rounded-2xl shadow-sm border border-slate-200/60">
-              <h2 className="text-2xl font-display font-semibold text-slate-900 mb-6 pb-3 border-b border-slate-100 flex items-center gap-3">
+            <div className="bg-white dark:bg-obsidian-800 p-5 md:p-8 rounded-2xl shadow-sm border border-slate-200/60 dark:border-obsidian-700">
+              <h2 className="text-2xl font-display font-semibold text-slate-900 dark:text-white mb-6 pb-3 border-b border-slate-100 dark:border-obsidian-700 flex items-center gap-3">
                 <span className="w-1.5 h-6 bg-gold-500 rounded-full"></span>
                 {t('hotel.room.galleryTitle', 'Room Gallery')}
               </h2>
@@ -332,8 +332,8 @@ const RoomDetails = () => {
             </div>
 
             {/* Room Reviews Block */}
-            <div className="bg-white p-5 md:p-8 rounded-2xl shadow-sm border border-slate-200/60">
-              <h2 className="text-2xl font-display font-semibold text-slate-900 mb-6 pb-3 border-b border-slate-100 flex items-center gap-3">
+            <div className="bg-white dark:bg-obsidian-800 p-5 md:p-8 rounded-2xl shadow-sm border border-slate-200/60 dark:border-obsidian-700">
+              <h2 className="text-2xl font-display font-semibold text-slate-900 dark:text-white mb-6 pb-3 border-b border-slate-100 dark:border-obsidian-700 flex items-center gap-3">
                 <span className="w-1.5 h-6 bg-gold-500 rounded-full"></span>
                 {t('hotel.room.reviewsTitle', 'Room Reviews')}
               </h2>
@@ -341,24 +341,24 @@ const RoomDetails = () => {
               {/* Submitted Reviews list */}
               <div className="space-y-6 mb-10">
                 {reviews.map((rev, idx) => (
-                  <div key={idx} className="p-6 bg-slate-50 rounded-xl border border-slate-100 text-left">
+                  <div key={idx} className="p-6 bg-slate-50 dark:bg-obsidian-700/50 rounded-xl border border-slate-100 dark:border-obsidian-600 text-left">
                     <div className="flex justify-between items-center mb-3">
-                      <h4 className="font-semibold text-slate-900">{rev.name}</h4>
-                      <span className="text-xs text-slate-400">{rev.date}</span>
+                      <h4 className="font-semibold text-slate-900 dark:text-white">{rev.name}</h4>
+                      <span className="text-xs text-slate-400 dark:text-white">{rev.date}</span>
                     </div>
                     <div className="flex gap-1 mb-3 text-gold-500">
                       {[...Array(5)].map((_, i) => (
                         <FaStar key={i} className={i < rev.rating ? 'fill-gold-500' : 'text-slate-200'} />
                       ))}
                     </div>
-                    <p className="text-[14px] text-slate-700 leading-relaxed">{rev.text}</p>
+                    <p className="text-[14px] text-slate-700 dark:text-white leading-relaxed">{rev.text}</p>
                   </div>
                 ))}
               </div>
 
               {/* Write a review form */}
-              <form onSubmit={handleReviewSubmit} className="bg-slate-50 p-6 rounded-xl border border-slate-200/60 text-left">
-                <h3 className="text-lg font-semibold text-slate-900 mb-4">{t('tour.leaveReview', 'Write a Review')}</h3>
+              <form onSubmit={handleReviewSubmit} className="bg-slate-50 dark:bg-obsidian-700/50 p-6 rounded-xl border border-slate-200/60 dark:border-obsidian-600 text-left">
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">{t('tour.leaveReview', 'Write a Review')}</h3>
                 {reviewSuccess && (
                   <div className="mb-4 p-3 bg-green-100 text-green-700 rounded-lg text-sm font-medium flex items-center gap-2">
                     <FaCheckCircle /> {t('hotel.room.reviewSuccess', 'Review submitted successfully!')}
@@ -366,22 +366,22 @@ const RoomDetails = () => {
                 )}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label className="block text-xs uppercase tracking-wider text-slate-500 mb-1.5 font-bold">{t('booking.fullName', 'Name')}</label>
+                    <label className="block text-xs uppercase tracking-wider text-slate-500 dark:text-white mb-1.5 font-bold">{t('booking.fullName', 'Name')}</label>
                     <input
                       type="text"
                       required
                       placeholder={t('booking.fullName', 'Name')}
                       value={newReview.name}
                       onChange={(e) => setNewReview(prev => ({ ...prev, name: e.target.value }))}
-                      className="w-full p-3 rounded-lg border border-slate-300 text-slate-900 text-sm bg-white outline-none"
+                      className="w-full p-3 rounded-lg border border-slate-300 dark:border-obsidian-600 text-slate-900 dark:text-white text-sm bg-white dark:bg-obsidian-700 outline-none"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs uppercase tracking-wider text-slate-500 mb-1.5 font-bold">{t('hotel.room.ratingLabel', 'Rating')}</label>
+                    <label className="block text-xs uppercase tracking-wider text-slate-500 dark:text-white mb-1.5 font-bold">{t('hotel.room.ratingLabel', 'Rating')}</label>
                     <select
                       value={newReview.rating}
                       onChange={(e) => setNewReview(prev => ({ ...prev, rating: e.target.value }))}
-                      className="w-full p-3 rounded-lg border border-slate-300 text-slate-900 text-sm bg-white outline-none"
+                      className="w-full p-3 rounded-lg border border-slate-300 dark:border-obsidian-600 text-slate-900 dark:text-white text-sm bg-white dark:bg-obsidian-700 outline-none"
                     >
                       <option value="5">{t('hotel.room.starsOption5', '⭐⭐⭐⭐⭐ (5 Stars)')}</option>
                       <option value="4">{t('hotel.room.starsOption4', '⭐⭐⭐⭐ (4 Stars)')}</option>
@@ -392,15 +392,15 @@ const RoomDetails = () => {
                   </div>
                 </div>
                 <div className="mb-4">
-                  <label className="block text-xs uppercase tracking-wider text-slate-500 mb-1.5 font-bold">{t('hotel.room.commentLabel', 'Comment')}</label>
-                  <textarea
-                    required
-                    rows="3"
-                    placeholder={t('hotel.room.commentPlaceholder', 'Share your experience with this room...')}
-                    value={newReview.text}
-                    onChange={(e) => setNewReview(prev => ({ ...prev, text: e.target.value }))}
-                    className="w-full p-3 rounded-lg border border-slate-300 text-slate-900 text-sm bg-white outline-none resize-none"
-                  ></textarea>
+                    <label className="block text-xs uppercase tracking-wider text-slate-500 dark:text-white mb-1.5 font-bold">{t('hotel.room.commentLabel', 'Comment')}</label>
+                    <textarea
+                      required
+                      rows="3"
+                      placeholder={t('hotel.room.commentPlaceholder', 'Share your experience with this room...')}
+                      value={newReview.text}
+                      onChange={(e) => setNewReview(prev => ({ ...prev, text: e.target.value }))}
+                      className="w-full p-3 rounded-lg border border-slate-300 dark:border-obsidian-600 text-slate-900 dark:text-white text-sm bg-white dark:bg-obsidian-700 outline-none resize-none"
+                    ></textarea>
                 </div>
                 <Button type="submit" variant="gold-glow" className="px-5 py-2 text-sm uppercase font-semibold">
                   {t('tour.submitReview', 'Submit Review')}

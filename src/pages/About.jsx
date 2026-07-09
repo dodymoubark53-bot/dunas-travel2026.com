@@ -1079,8 +1079,7 @@ const About = () => {
           <span className="team-badge">{'🇪🇬'} {t('about.teamLeadBadge')}</span>
           <div className="avatar-frame">
             <div className="avatar-ring"></div>
-            <div className="avatar"><span className="initials">AY</span><img alt="" /><span className="plus">+</span></div>
-            <input type="file" accept="image/*" />
+            <div className="avatar has-photo"><span className="initials" style={{display:'none'}}>AY</span><img src="https://res.cloudinary.com/tibx70zb/image/upload/v1783625666/9014b7ab-2eb3-4158-bc0b-246329a06c9b_n48ymc.jpg" alt="Attia Yamany" /></div>
           </div>
           <p className="member-name lead-name">{t('about.leadName')}</p>
           <p className="member-role" dangerouslySetInnerHTML={{ __html: t('about.leadRole') }} />

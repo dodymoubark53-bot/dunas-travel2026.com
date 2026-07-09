@@ -82,7 +82,7 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
   return (
     <div 
       className="relative mx-auto md:mx-0 rounded-2xl p-8 w-full"
-      style={{ background: 'linear-gradient(180deg, rgb(10,25,105) 0%, rgb(6,29,93) 50%, rgb(10,21,53) 100%)', boxShadow: '0 0 40px rgba(10,25,105, 0.8)' }}
+      style={{ background: 'linear-gradient(135deg, rgb(4, 20, 70) 0%, rgb(6, 29, 93) 40%, rgb(10, 40, 120) 100%)', boxShadow: '0 0 40px rgba(10,25,105, 0.8)' }}
     >
       <AnimatePresence mode="wait">
         {status === 'success' ? (
@@ -275,7 +275,7 @@ const TransportationForm = ({ preSelectedVehicleId = '' }) => {
                 type="submit"
                 disabled={status === 'submitting'}
                 className="w-full py-4 text-lg rounded-full text-white hover:scale-105 transition-transform"
-                style={{ background: 'linear-gradient(180deg, rgb(10,25,105) 0%, rgb(6,29,93) 50%, rgb(10,21,53) 100%)', boxShadow: '0 0 20px rgba(10,25,105, 0.6)', border: '1px solid rgba(255,255,255,0.1)' }}
+                style={{ background: 'linear-gradient(135deg, rgb(4, 20, 70) 0%, rgb(6, 29, 93) 40%, rgb(10, 40, 120) 100%)', boxShadow: '0 0 20px rgba(10,25,105, 0.6)', border: '1px solid rgba(255,255,255,0.1)' }}
               >
                 {status === 'submitting' ? t('common.processing', 'Processing...') : t('transportation.reserveNow', 'Reserve Now')}
               </Button>
