@@ -12,6 +12,8 @@ import TourCard from '../../components/tour/TourCard';
 import { fadeInUp } from '../../animations/variants';
 import BookingForm from '../../components/booking/BookingForm';
 import IncludedNotIncluded from '../../components/tour/IncludedNotIncluded';
+import ReviewsMap from '../../components/tour/ReviewsMap';
+import RouteMap from '../../components/tour/RouteMap';
 
 const MultiCountryTourDetails = () => {
   const { t } = useTranslation();
@@ -228,6 +230,7 @@ const MultiCountryTourDetails = () => {
                 </div>
               </div>
             </motion.div>
+            <RouteMap itinerary={tour.itinerary} />
           </div>
 
           {/* Sidebar - Booking Form */}
@@ -382,6 +385,24 @@ const MultiCountryTourDetails = () => {
         </div>
       </section>
 
+      <ReviewsMap />
+
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {isLightboxOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-obsidian-900/95 flex items-center justify-center backdrop-blur-sm"
+            onClick={() => setIsLightboxOpen(false)}
+          >
+            <button className="absolute top-6 right-6 text-ivory-50 hover:text-gold-500 z-[101]"><FaTimes size={32} /></button>
+            <img src={tour.images[0]} alt={t(`data.${tour.title}`, tour.title)} className="max-w-[90vw] max-h-[90vh] object-contain" onClick={e => e.stopPropagation()} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Related Tours */}
       <section className="container mx-auto px-6 py-24">
         <div className="text-center mb-16">
@@ -425,22 +446,6 @@ const MultiCountryTourDetails = () => {
           .related-carousel-item { width: 350px; }
         }
       `}</style>
-
-      {/* Lightbox Modal */}
-      <AnimatePresence>
-        {isLightboxOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-obsidian-900/95 flex items-center justify-center backdrop-blur-sm"
-            onClick={() => setIsLightboxOpen(false)}
-          >
-            <button className="absolute top-6 right-6 text-ivory-50 hover:text-gold-500 z-[101]"><FaTimes size={32} /></button>
-            <img src={tour.images[0]} alt={t(`data.${tour.title}`, tour.title)} className="max-w-[90vw] max-h-[90vh] object-contain" onClick={e => e.stopPropagation()} />
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 };

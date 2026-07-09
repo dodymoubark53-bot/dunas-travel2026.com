@@ -5032,5 +5032,22 @@
   "faq.dubai.q1": "Includete il safari nel deserto e il tour della città?",
   "faq.dubai.a1": "Sì.",
   "faq.dubai.q2": "Posso combinare Dubai con Abu Dhabi?",
-  "faq.dubai.a2": "Sì"
+  "faq.dubai.a2": "Sì",
+  "reviews.title": "Recensioni degli Ospiti",
+  "reviews.location": "Posizione del Tour",
+  "reviews.count": "Basato su {{count}} recensioni",
+  "reviews.yourName": "Il Tuo Nome",
+  "reviews.country": "Paese",
+  "reviews.rating": "Valutazione",
+  "reviews.reviewText": "La Tua Recensione",
+  "reviews.reviewSuccess": "Recensione inviata con successo!",
+  "reviews.r1": "Un'esperienza assolutamente indimenticabile. L'organizzazione è stata impeccabile e ogni dettaglio è stato curato. Tornerò sicuramente!",
+  "reviews.r2": "Un'esperienza meravigliosa! Le guide erano molto competenti e l'itinerario era perfettamente bilanciato tra avventura e relax.",
+  "reviews.r3": "Viaggio incredibile! Ha superato tutte le mie aspettative. I paesaggi sono mozzafiato e il servizio di prima classe.",
+  "reviews.r4": "Un'esperienza unica e indimenticabile. Il servizio clienti è stato eccellente e ogni momento è stato magico. Altamente consigliato!",
+  "reviews.r5": "Un viaggio spettacolare! Tutto perfettamente organizzato, dai trasferimenti ai tour. Una vera esperienza di lusso.",
+  "reviews.r6": "Esperienza incredibile! Il team è stato molto attento e l'itinerario era semplicemente perfetto. Vale ogni centesimo!",
+  "reviews.r7": "Un'esperienza di livello mondiale dall'inizio alla fine. L'attenzione ai dettagli e il servizio personalizzato hanno reso questo viaggio davvero speciale.",
+  "reviews.r8": "Assolutamente brillante! Il miglior tour in cui sia mai stato. I luoghi erano stupendi e le guide locali fantastiche.",
+  "data.checkout.departure": "Colazione in hotel e partenza per l'aeroporto per il volo internazionale di ritorno al proprio paese d'origine. Fine dei nostri servizi."
 }

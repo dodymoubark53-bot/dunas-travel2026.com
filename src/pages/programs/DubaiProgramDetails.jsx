@@ -8,6 +8,8 @@ import { fadeInUp } from '../../animations/variants';
 import Button from '../../components/ui/Button';
 import BookingForm from '../../components/booking/BookingForm';
 import { useDubaiProgram } from '../../hooks/useDubaiPrograms';
+import ReviewsMap from '../../components/tour/ReviewsMap';
+import RouteMap from '../../components/tour/RouteMap';
 import { tours } from '../../data/tours';
 import TourCard from '../../components/tour/TourCard';
 
@@ -218,6 +220,7 @@ const DubaiProgramDetails = () => {
                 </div>
               </div>
             </motion.div>
+            <RouteMap itinerary={days} />
           </div>
 
           {/* Sidebar - Booking Form */}
@@ -482,6 +485,8 @@ const DubaiProgramDetails = () => {
           </motion.div>
         </section>
       )}
+
+      <ReviewsMap />
 
       {/* Related Tours */}
       <section className="container mx-auto px-6 py-24">

@@ -5205,5 +5205,22 @@
   "faq.dubai.q1": "Do you include a desert safari and city tour?",
   "faq.dubai.a1": "Yes.",
   "faq.dubai.q2": "Can I combine Dubai with Abu Dhabi?",
-  "faq.dubai.a2": "Yes"
+  "faq.dubai.a2": "Yes",
+  "reviews.title": "Guest Reviews",
+  "reviews.location": "Tour Location",
+  "reviews.count": "Based on {{count}} reviews",
+  "reviews.yourName": "Your Name",
+  "reviews.country": "Country",
+  "reviews.rating": "Rating",
+  "reviews.reviewText": "Your Review",
+  "reviews.reviewSuccess": "Review submitted successfully!",
+  "reviews.r1": "An absolutely unforgettable experience. The organization was flawless and every detail was taken care of. I will definitely be coming back!",
+  "reviews.r2": "A wonderful experience! The guides were knowledgeable and the itinerary was perfectly balanced between adventure and relaxation.",
+  "reviews.r3": "Incredible trip! It exceeded all my expectations. The landscapes are stunning and the service is first-class.",
+  "reviews.r4": "A unique and unforgettable experience. The customer service was excellent and every moment was magical. Highly recommended!",
+  "reviews.r5": "A spectacular trip! Everything was perfectly organized, from transfers to tours. A true luxury experience.",
+  "reviews.r6": "Incredible experience! The team was very attentive and the itinerary was simply perfect. Worth every penny!",
+  "reviews.r7": "A world-class experience from start to finish. The attention to detail and personalized service made this trip truly special.",
+  "reviews.r8": "Absolutely brilliant! The best tour I have ever been on. The locations were stunning and the local guides were fantastic.",
+  "data.checkout.departure": "Breakfast at the hotel and departure to the airport for the international flight returning to your home country. End of our services."
 }

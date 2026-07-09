@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { FaChevronRight, FaCheckCircle, FaHeart } from 'react-icons/fa';
 import { staggerContainer, fadeInUp } from '../animations/variants';
 import BookingForm from '../components/booking/BookingForm';
+import RouteMap from '../components/tour/RouteMap';
 
 const days = [
   {
@@ -197,6 +198,7 @@ const HoneymoonersDetails = () => {
                 </div>
               </div>
             </motion.div>
+            <RouteMap itinerary={days} />
           </div>
 
           <motion.div variants={fadeInUp} className="lg:col-span-1">

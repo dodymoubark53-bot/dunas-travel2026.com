@@ -13,6 +13,8 @@ import { fadeInUp } from '../../animations/variants';
 import BookingForm from '../../components/booking/BookingForm';
 import { useCurrency } from '../../context/CurrencyContext';
 import IncludedNotIncluded from '../../components/tour/IncludedNotIncluded';
+import ReviewsMap from '../../components/tour/ReviewsMap';
+import RouteMap from '../../components/tour/RouteMap';
 
 const TourDetails = () => {
   const { t } = useTranslation();
@@ -253,6 +255,7 @@ const TourDetails = () => {
                 </div>
               </div>
             </motion.div>
+            <RouteMap itinerary={tour.itinerary} />
 
             {/* Pricing Tiers */}
             {tour.pricingTiers && (
@@ -413,6 +416,8 @@ const TourDetails = () => {
           </div>
         </div>
       </section>
+
+      <ReviewsMap />
 
       {/* Related Tours */}
       <section className="container mx-auto px-6 py-24">

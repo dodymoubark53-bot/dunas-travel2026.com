@@ -5062,5 +5062,22 @@
   "faq.dubai.q1": "Incluem safari no deserto e tour pela cidade?",
   "faq.dubai.a1": "Sim.",
   "faq.dubai.q2": "Posso combinar Dubai com Abu Dhabi?",
-  "faq.dubai.a2": "Sim."
+  "faq.dubai.a2": "Sim.",
+  "reviews.title": "Avaliações dos Hóspedes",
+  "reviews.location": "Localização do Tour",
+  "reviews.count": "Baseado em {{count}} avaliações",
+  "reviews.yourName": "Seu Nome",
+  "reviews.country": "País",
+  "reviews.rating": "Avaliação",
+  "reviews.reviewText": "Sua Avaliação",
+  "reviews.reviewSuccess": "Avaliação enviada com sucesso!",
+  "reviews.r1": "Uma experiência absolutamente inesquecível. A organização foi impecável e cada detalhe foi cuidado. Com certeza voltarei!",
+  "reviews.r2": "Uma experiência maravilhosa! Os guias eram muito conhecedores e o roteiro estava perfeitamente equilibrado entre aventura e relaxamento.",
+  "reviews.r3": "Viagem incrível! Superou todas as minhas expectativas. As paisagens são deslumbrantes e o serviço de primeira classe.",
+  "reviews.r4": "Uma experiência única e inesquecível. O atendimento ao cliente foi excelente e cada momento foi mágico. Altamente recomendado!",
+  "reviews.r5": "Uma viagem espetacular! Tudo perfeitamente organizado, desde os transfers até os passeios. Uma verdadeira experiência de luxo.",
+  "reviews.r6": "Experiência incrível! A equipe foi muito atenciosa e o roteiro foi simplesmente perfeito. Valeu cada centavo!",
+  "reviews.r7": "Uma experiência de classe mundial do início ao fim. A atenção aos detalhes e o serviço personalizado tornaram esta viagem verdadeiramente especial.",
+  "reviews.r8": "Absolutamente brilhante! O melhor tour que já fiz. Os locais eram deslumbrantes e os guias locais foram fantásticos.",
+  "data.checkout.departure": "Café da manhã no hotel e saída para o aeroporto para o voo internacional de retorno ao seu país de origem. Fim de nossos serviços."
 }

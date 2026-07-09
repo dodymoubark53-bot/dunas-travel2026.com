@@ -13,6 +13,7 @@ import { services } from '../../data/services';
 import BookingForm from '../../components/booking/BookingForm';
 import AdvancedBooking from '../../components/booking/AdvancedBooking';
 import { useCurrency } from '../../context/CurrencyContext';
+import RouteMap from '../../components/tour/RouteMap';
 
 const ServiceDetails = () => {
   const { t } = useTranslation();
@@ -224,7 +225,8 @@ const ServiceDetails = () => {
 
                 {/* Itinerary Section */}
                 {service.itinerary && (
-                  <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-16">
+                  <>
+                    <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-16">
                     <div className="mb-10">
                       <span className="text-caption text-gold-500 uppercase tracking-widest font-semibold block mb-2">
                         {t('tour.stepByStep', 'SUA JORNADA PASSO A PASSO')}
@@ -273,6 +275,8 @@ const ServiceDetails = () => {
                       </div>
                     </div>
                   </motion.div>
+                  <RouteMap itinerary={service.itinerary} />
+                </>
                 )}
 
                 {/* Included / Excluded summary */}

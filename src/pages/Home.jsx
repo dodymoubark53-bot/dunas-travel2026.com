@@ -2,7 +2,7 @@ import { useState, useRef, useMemo, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaStar, FaTimes, FaChevronLeft, FaChevronRight, FaMicrophone, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaHeadset, FaWhatsapp, FaArrowRight, FaCalendarAlt, FaSuitcase, FaUsers, FaMapMarkedAlt, FaGlobe } from "react-icons/fa";
 import Button from "../components/ui/Button";
 import TourCard from "../components/tour/TourCard";
@@ -68,6 +68,44 @@ const destinationsData = [
     desc: "Faith & History",
     image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=600&q=60",
   },
+];
+
+const packagesData = [
+  {
+    id: "classic-program",
+    name: "Classic Program",
+    desc: "Timeless Wonders",
+    image: "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=600&q=60",
+    link: "/programs/classic/classic-program"
+  },
+  {
+    id: "honeymooners",
+    name: "Honeymooners Package",
+    desc: "Romantic Escapes",
+    image: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=600&q=60",
+    link: "/programs/honeymooners"
+  },
+  {
+    id: "religious",
+    name: "Religious Programs",
+    desc: "Spiritual Journeys",
+    image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=600&q=60",
+    link: "/programs/religious"
+  },
+  {
+    id: "multi-country",
+    name: "Multi-Country Tours",
+    desc: "Beyond Borders",
+    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=60",
+    link: "/programs/multi-country"
+  },
+  {
+    id: "extension",
+    name: "Egypt Extensions",
+    desc: "Expand Your Adventure",
+    image: "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=600&q=60",
+    link: "/programs/extension"
+  }
 ];
 
 const newDestinationsList = [
@@ -183,6 +221,7 @@ const getOptimizedImageUrl = (url, width = 400, height = 450) => {
 const Home = () => {
   const { t, i18n } = useTranslation();
   const { formatPrice } = useCurrency();
+  const navigate = useNavigate();
   const [activeDestination, setActiveDestination] = useState(null);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [activeGalleryIndex, setActiveGalleryIndex] = useState(0);
@@ -279,6 +318,27 @@ const Home = () => {
     turkeyTours.forEach(tour => combined.push({ ...tour, description: tour.overview, link: `/tours/${tour.slug}` }));
     return combined;
   }, [tours, formattedTurkeyTours, formattedJordanTours, formattedDubaiTours, formattedMoroccoTours]);
+
+  const packagesToursForMarquee = useMemo(() => {
+    const combined = [];
+    tours.forEach(tour => combined.push({ ...tour, description: tour.overview, link: `/tours/${tour.slug}` }));
+    multiCountryTours.forEach(tour => combined.push({
+      id: tour.id, slug: tour.slug, destination: tour.destination || "multi-country",
+      title: tour.title, description: tour.overview || tour.description,
+      duration: tour.duration, price: tour.price, rating: tour.rating,
+      reviewCount: tour.reviewCount, images: tour.images, type: tour.type,
+      link: `/programs/multi-country/${tour.slug}`,
+    }));
+    rawPrograms.filter(p => p.id && p.id.startsWith("HM")).forEach(p => combined.push({
+      id: p.id, slug: p.id, destination: "honeymooners",
+      title: p.name.en || p.name, description: p.overview?.en || p.overview || "",
+      duration: "Various", price: p.price || 1200, rating: 4.9,
+      reviewCount: 150, images: p.images && p.images.length ? p.images : ["/imgs/placeholder.jpg"], type: "Honeymooners",
+      link: `/programs/honeymooners/${p.id}`,
+    }));
+    return combined;
+  }, [tours, multiCountryTours, rawPrograms]);
+
 
   // Hero Video State
   const videoRef = useRef(null);
@@ -561,6 +621,114 @@ const Home = () => {
   const handleDestinationClick = (id) => {
     setActiveDestination((prev) => (prev === id ? null : id));
   };
+
+  const [activePackage, setActivePackage] = useState(null);
+
+  const handlePackageClick = (id) => {
+    setActivePackage((prev) => (prev === id ? null : id));
+  };
+
+  const activePackageTours = useMemo(() => {
+    if (!activePackage) return [];
+    if (activePackage === "classic-program") {
+      return [{
+        id: "classic-prog-1",
+        slug: "classic-program",
+        destination: "egypt",
+        title: "Classic Egypt Programme",
+        description: "Experience the timeless wonders of Egypt.",
+        duration: "Classic",
+        price: 890,
+        rating: 5,
+        reviewCount: 312,
+        images: ["https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=600&q=60"],
+        linkBase: "/programs/classic"
+      }];
+    }
+    if (activePackage === "honeymooners") {
+      return [{
+        id: "hm-prog-1",
+        slug: "honeymooners",
+        destination: "egypt",
+        title: "Honeymoon in Egypt",
+        description: "A romantic escape across the magical landscapes of Egypt.",
+        duration: "Honeymoon",
+        price: 1500,
+        rating: 5,
+        reviewCount: 150,
+        images: ["https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=600&q=60"],
+        linkBase: "/programs"
+      }];
+    }
+    if (activePackage === "religious") {
+      return [{
+        id: "rel-prog-1",
+        slug: "religious",
+        destination: "egypt",
+        title: "JOURNEY OF THE HOLY FAMILY – 10 DAYS – 09 NIGHTS",
+        description: "Spiritual journey tracing the steps of the Holy Family in Egypt.",
+        duration: "10 Days / 9 Nights",
+        price: 1350,
+        rating: 5,
+        reviewCount: 110,
+        images: ["https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=600&q=60"],
+        linkBase: "/programs"
+      }];
+    }
+    if (activePackage === "multi-country") {
+      return multiCountryTours.map(tour => ({
+        id: tour.id, slug: tour.slug, destination: tour.destination || "multi-country",
+        title: tour.title, description: tour.overview || tour.description,
+        duration: tour.duration, price: tour.price, rating: tour.rating,
+        reviewCount: tour.reviewCount, images: tour.images, type: tour.type,
+        linkBase: "/programs/multi-country"
+      }));
+    }
+    if (activePackage === "extension") {
+      return [
+        {
+          id: "ext-hurghada",
+          slug: "hurghada-4d3n",
+          destination: "egypt",
+          title: "Hurghada",
+          description: "Transfer to Cairo Airport and board your flight to Hurghada. Arrival and transfer to...",
+          duration: "4 Days / 3 Nights",
+          price: 450,
+          rating: 4.8,
+          reviewCount: 95,
+          images: ["https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=600&q=60"],
+          linkBase: "/trips"
+        },
+        {
+          id: "ext-sharm",
+          slug: "sharm-4d3n",
+          destination: "egypt",
+          title: "Sharm El Sheikh",
+          description: "Transfer to Cairo Airport and boarding the flight to Sharm El Sheikh. Arrival and transfer...",
+          duration: "4 Days / 3 Nights",
+          price: 500,
+          rating: 4.7,
+          reviewCount: 105,
+          images: ["https://images.unsplash.com/photo-1580502304784-8985b7eb7260?auto=format&fit=crop&w=600&q=60"],
+          linkBase: "/trips"
+        },
+        {
+          id: "ext-siwa",
+          slug: "siwa-oasis-alexandria",
+          destination: "egypt",
+          title: "Oasis Siwa + Alexandria",
+          description: "Cairo → Wadi El Natroun → Marsa Matruh → Siwa → Alexandria → Cairo",
+          duration: "Various",
+          price: 600,
+          rating: 4.9,
+          reviewCount: 88,
+          images: ["https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=600&q=60"],
+          linkBase: "/trips"
+        }
+      ];
+    }
+    return [];
+  }, [activePackage, multiCountryTours]);
 
   return (
     <div className="w-full">
@@ -1053,6 +1221,194 @@ const Home = () => {
           </Button>
         </div>
       </section>
+
+      {/* Packages Section */}
+      <section className="py-10" style={{ background: "linear-gradient(135deg, rgb(4, 20, 70) 0%, rgb(6, 29, 93) 40%, rgb(10, 40, 120) 100%)" }}>
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-8">
+            <span className="text-gold-500 uppercase tracking-widest text-caption block mb-4">
+              {t("home.ourPackages", "Discover Our Packages")}
+            </span>
+            <h2 className="text-display-lg text-ivory-50">
+              {t("home.packagesTitle", "Curated Programs & Experiences")}
+            </h2>
+            <div className="w-24 h-1 bg-gold-500 mx-auto mt-6"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+            {packagesData.map((pkg) => {
+              const isActive = activePackage === pkg.id;
+              return (
+                <motion.div
+                  key={pkg.id}
+                  onClick={() => handlePackageClick(pkg.id)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      handlePackageClick(pkg.id);
+                    }
+                  }}
+                  role="button"
+                  tabIndex={0}
+                  aria-pressed={isActive}
+                  aria-label={`View ${pkg.name}`}
+                  whileHover={{
+                    y: -6,
+                    boxShadow: "0 0 32px rgba(245,166,35,0.22)",
+                    transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
+                  }}
+                  className={`relative h-[300px] rounded-2xl overflow-hidden cursor-pointer group transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-gold-500 block ${isActive ? "ring-2 ring-gold-500 shadow-[0_0_20px_rgba(245,166,35,0.4)] scale-[1.02]" : "hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(245,166,35,0.2)]"}`}
+                >
+                  <img
+                    src={pkg.image}
+                    alt={pkg.name}
+                    className="w-full h-full object-cover cinematic-transition group-hover:scale-[1.06]"
+                    loading="lazy"
+                  />
+                  <div className={`absolute inset-0 transition-colors duration-500 ${isActive ? "bg-obsidian-900/40" : "bg-obsidian-900/60 group-hover:bg-obsidian-900/40"}`}></div>
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
+                    <h3 className="text-display-lg text-ivory-50 mb-2">
+                      {t(`packages.${pkg.id}.name`, pkg.name)}
+                    </h3>
+                    <p className="text-body-lg text-gold-500 font-medium mb-4 leading-relaxed">
+                      {t(`packages.${pkg.id}.desc`, pkg.desc)}
+                    </p>
+                    <span className="text-caption text-ivory-300 uppercase tracking-wider bg-obsidian-900/50 backdrop-blur-sm px-4 py-2 rounded-full border border-ivory-50/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      {t("home.explorePackage", "Explore Package")}
+                    </span>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          <AnimatePresence>
+            {activePackage && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+                <div className="pt-12">
+                  <h3 className="text-display-md text-ivory-50 mb-8 text-center capitalize">
+                    {t(`packages.${activePackage}.name`, packagesData.find(p => p.id === activePackage)?.name)}{" "}
+                    {t("nav.tours", "Tours")}
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {activePackageTours.slice(0, 6).map((tour) => (
+                      <TourCard
+                        key={tour.id}
+                        tour={tour}
+                        linkBase={tour.linkBase || "/tours"}
+                      />
+                    ))}
+                  </div>
+                  {activePackageTours.length > 6 && (
+                    <div className="flex justify-center mt-8">
+                      <Link to={packagesData.find(p => p.id === activePackage)?.link || "/tours"}>
+                        <Button variant="outline-gold">
+                          {t("home.viewAllTours", "View All Tours")}
+                        </Button>
+                      </Link>
+                    </div>
+                  )}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </section>
+
+      {/* Packages Tours Marquee */}
+      <section className="py-12 bg-ivory-100 overflow-hidden relative">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <span className="text-gold-600 uppercase tracking-widest text-caption block mb-4">
+              {t("home.packageTripsSub", "FEATURED TRIPS")}
+            </span>
+            <h2 className="text-display-lg text-obsidian-900">
+              {t("home.packageTripsTitle", "Trips From Our Packages")}
+            </h2>
+            <div className="w-24 h-1 bg-gold-500 mx-auto mt-6"></div>
+          </div>
+        </div>
+
+        <div className="overflow-hidden w-full">
+          <div
+            className="flex w-max"
+            style={{
+              gap: "24px",
+              paddingLeft: "24px",
+              animation: `${isRtl ? 'tourMarqueeRTL' : 'tourMarquee'} 60s linear infinite`,
+            }}
+            onMouseEnter={e => e.currentTarget.style.animationPlayState = 'paused'}
+            onMouseLeave={e => e.currentTarget.style.animationPlayState = 'running'}
+          >
+            {(() => {
+              const sliced = packagesToursForMarquee.slice(0, 15);
+              return [
+                ...sliced.map(t => ({ ...t, isDuplicate: false })),
+                ...sliced.map(t => ({ ...t, isDuplicate: true }))
+              ].map((tData, idx) => (
+                <Link
+                  key={`pkg-${tData.id}-${idx}`}
+                  to={tData.link}
+                  tabIndex={tData.isDuplicate ? -1 : undefined}
+                  aria-hidden={tData.isDuplicate ? "true" : undefined}
+                  className="min-w-[320px] md:min-w-[400px] shrink-0 group relative rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] transition-all duration-500 h-[450px] block focus:outline-none focus:ring-2 focus:ring-gold-500"
+                >
+                  <img
+                    src={getOptimizedImageUrl(tData.images && tData.images.length > 0 ? tData.images[0] : "", 400, 450)}
+                    alt={tData.title}
+                    width="400"
+                    height="450"
+                    className="w-full h-full object-cover cinematic-transition group-hover:scale-[1.06]"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-obsidian-900/90 via-obsidian-900/20 to-transparent"></div>
+                  
+                  <div className="absolute top-4 left-4 bg-gold-500/90 backdrop-blur-sm text-obsidian-900 text-caption font-bold px-3 py-1 rounded shadow-md uppercase">
+                    {t(`nav.${tData.destination === 'holy-land' ? 'holyland' : (tData.destination || 'tour')}`, tData.destination || 'tour')}
+                  </div>
+
+                  <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col justify-end h-full">
+                    <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <h3 className="text-display-md text-ivory-50 mb-2 leading-tight">
+                        {t(`data.${tData.title}`, tData.title)}
+                      </h3>
+
+                      <div className="flex items-center justify-between text-caption text-ivory-300 mb-4">
+                        <span>{t(`data.${tData.duration}`, tData.duration)}</span>
+                        <span className="text-gold-500 font-semibold">
+                          {formatPrice(tData.price)}
+                        </span>
+                      </div>
+
+                      <div className="flex items-center gap-1 text-gold-500 mb-4">
+                        {[...Array(Math.floor(tData.rating || 5))].map((_, i) => (
+                          <FaStar key={i} size={12} />
+                        ))}
+                        <span className="text-ivory-50 ml-1 text-xs">
+                          ({tData.reviewCount || 100})
+                        </span>
+                      </div>
+
+                      <div className="block opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <Button variant="outline-gold" tabIndex={-1} className="w-full py-2">
+                          {t("home.viewTour", "View Tour")}
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ));
+            })()}
+          </div>
+        </div>
+      </section>
+
 
 
 
