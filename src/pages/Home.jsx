@@ -319,25 +319,115 @@ const Home = () => {
     return combined;
   }, [tours, formattedTurkeyTours, formattedJordanTours, formattedDubaiTours, formattedMoroccoTours]);
 
+  const packagesToursMap = useMemo(() => {
+    return {
+      "classic-program": [{
+        id: "classic-prog-1",
+        slug: "classic-program",
+        destination: "egypt",
+        title: "Classic Egypt Programme",
+        description: "Experience the timeless wonders of Egypt.",
+        duration: "Classic",
+        price: 890,
+        rating: 5,
+        reviewCount: 312,
+        images: ["https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=600&q=60"],
+        linkBase: "/programs/classic"
+      }],
+      "honeymooners": [{
+        id: "hm-prog-1",
+        slug: "honeymooners",
+        destination: "egypt",
+        title: "Honeymoon in Egypt",
+        description: "A romantic escape across the magical landscapes of Egypt.",
+        duration: "Honeymoon",
+        price: 1500,
+        rating: 5,
+        reviewCount: 150,
+        images: ["https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=600&q=60"],
+        linkBase: "/programs"
+      }],
+      "religious": [{
+        id: "rel-prog-1",
+        slug: "religious",
+        destination: "egypt",
+        title: "JOURNEY OF THE HOLY FAMILY – 10 DAYS – 09 NIGHTS",
+        description: "Spiritual journey tracing the steps of the Holy Family in Egypt.",
+        duration: "10 Days / 9 Nights",
+        price: 1350,
+        rating: 5,
+        reviewCount: 110,
+        images: ["https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=600&q=60"],
+        linkBase: "/programs"
+      }],
+      "multi-country": multiCountryTours.map(tour => ({
+        id: tour.id, slug: tour.slug, destination: tour.destination || "multi-country",
+        title: tour.title, description: tour.overview || tour.description,
+        duration: tour.duration, price: tour.price, rating: tour.rating,
+        reviewCount: tour.reviewCount, images: tour.images, type: tour.type,
+        linkBase: "/programs/multi-country"
+      })),
+      "extension": [
+        {
+          id: "ext-hurghada",
+          slug: "hurghada-4d3n",
+          destination: "egypt",
+          title: "Hurghada",
+          description: "Transfer to Cairo Airport and board your flight to Hurghada. Arrival and transfer to...",
+          duration: "4 Days / 3 Nights",
+          price: 450,
+          rating: 4.8,
+          reviewCount: 95,
+          images: ["https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=600&q=60"],
+          linkBase: "/trips"
+        },
+        {
+          id: "ext-sharm",
+          slug: "sharm-4d3n",
+          destination: "egypt",
+          title: "Sharm El Sheikh",
+          description: "Transfer to Cairo Airport and boarding the flight to Sharm El Sheikh. Arrival and transfer...",
+          duration: "4 Days / 3 Nights",
+          price: 500,
+          rating: 4.7,
+          reviewCount: 105,
+          images: ["https://images.unsplash.com/photo-1580502304784-8985b7eb7260?auto=format&fit=crop&w=600&q=60"],
+          linkBase: "/trips"
+        },
+        {
+          id: "ext-siwa",
+          slug: "siwa-oasis-alexandria",
+          destination: "egypt",
+          title: "Oasis Siwa + Alexandria",
+          description: "Cairo → Wadi El Natroun → Marsa Matruh → Siwa → Alexandria → Cairo",
+          duration: "Various",
+          price: 600,
+          rating: 4.9,
+          reviewCount: 88,
+          images: ["https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=600&q=60"],
+          linkBase: "/trips"
+        }
+      ]
+    };
+  }, [multiCountryTours]);
+
   const packagesToursForMarquee = useMemo(() => {
     const combined = [];
-    tours.forEach(tour => combined.push({ ...tour, description: tour.overview, link: `/tours/${tour.slug}` }));
-    multiCountryTours.forEach(tour => combined.push({
-      id: tour.id, slug: tour.slug, destination: tour.destination || "multi-country",
-      title: tour.title, description: tour.overview || tour.description,
-      duration: tour.duration, price: tour.price, rating: tour.rating,
-      reviewCount: tour.reviewCount, images: tour.images, type: tour.type,
-      link: `/programs/multi-country/${tour.slug}`,
-    }));
-    rawPrograms.filter(p => p.id && p.id.startsWith("HM")).forEach(p => combined.push({
-      id: p.id, slug: p.id, destination: "honeymooners",
-      title: p.name.en || p.name, description: p.overview?.en || p.overview || "",
-      duration: "Various", price: p.price || 1200, rating: 4.9,
-      reviewCount: 150, images: p.images && p.images.length ? p.images : ["/imgs/placeholder.jpg"], type: "Honeymooners",
-      link: `/programs/honeymooners/${p.id}`,
-    }));
+    const seen = new Set();
+
+    Object.values(packagesToursMap).flat().forEach(t => {
+      const link = `${t.linkBase}/${t.slug}`;
+      if (!seen.has(link)) {
+        seen.add(link);
+        combined.push({
+          ...t,
+          link
+        });
+      }
+    });
+
     return combined;
-  }, [tours, multiCountryTours, rawPrograms]);
+  }, [packagesToursMap]);
 
 
   // Hero Video State
@@ -630,105 +720,8 @@ const Home = () => {
 
   const activePackageTours = useMemo(() => {
     if (!activePackage) return [];
-    if (activePackage === "classic-program") {
-      return [{
-        id: "classic-prog-1",
-        slug: "classic-program",
-        destination: "egypt",
-        title: "Classic Egypt Programme",
-        description: "Experience the timeless wonders of Egypt.",
-        duration: "Classic",
-        price: 890,
-        rating: 5,
-        reviewCount: 312,
-        images: ["https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=600&q=60"],
-        linkBase: "/programs/classic"
-      }];
-    }
-    if (activePackage === "honeymooners") {
-      return [{
-        id: "hm-prog-1",
-        slug: "honeymooners",
-        destination: "egypt",
-        title: "Honeymoon in Egypt",
-        description: "A romantic escape across the magical landscapes of Egypt.",
-        duration: "Honeymoon",
-        price: 1500,
-        rating: 5,
-        reviewCount: 150,
-        images: ["https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=600&q=60"],
-        linkBase: "/programs"
-      }];
-    }
-    if (activePackage === "religious") {
-      return [{
-        id: "rel-prog-1",
-        slug: "religious",
-        destination: "egypt",
-        title: "JOURNEY OF THE HOLY FAMILY – 10 DAYS – 09 NIGHTS",
-        description: "Spiritual journey tracing the steps of the Holy Family in Egypt.",
-        duration: "10 Days / 9 Nights",
-        price: 1350,
-        rating: 5,
-        reviewCount: 110,
-        images: ["https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=600&q=60"],
-        linkBase: "/programs"
-      }];
-    }
-    if (activePackage === "multi-country") {
-      return multiCountryTours.map(tour => ({
-        id: tour.id, slug: tour.slug, destination: tour.destination || "multi-country",
-        title: tour.title, description: tour.overview || tour.description,
-        duration: tour.duration, price: tour.price, rating: tour.rating,
-        reviewCount: tour.reviewCount, images: tour.images, type: tour.type,
-        linkBase: "/programs/multi-country"
-      }));
-    }
-    if (activePackage === "extension") {
-      return [
-        {
-          id: "ext-hurghada",
-          slug: "hurghada-4d3n",
-          destination: "egypt",
-          title: "Hurghada",
-          description: "Transfer to Cairo Airport and board your flight to Hurghada. Arrival and transfer to...",
-          duration: "4 Days / 3 Nights",
-          price: 450,
-          rating: 4.8,
-          reviewCount: 95,
-          images: ["https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=600&q=60"],
-          linkBase: "/trips"
-        },
-        {
-          id: "ext-sharm",
-          slug: "sharm-4d3n",
-          destination: "egypt",
-          title: "Sharm El Sheikh",
-          description: "Transfer to Cairo Airport and boarding the flight to Sharm El Sheikh. Arrival and transfer...",
-          duration: "4 Days / 3 Nights",
-          price: 500,
-          rating: 4.7,
-          reviewCount: 105,
-          images: ["https://images.unsplash.com/photo-1580502304784-8985b7eb7260?auto=format&fit=crop&w=600&q=60"],
-          linkBase: "/trips"
-        },
-        {
-          id: "ext-siwa",
-          slug: "siwa-oasis-alexandria",
-          destination: "egypt",
-          title: "Oasis Siwa + Alexandria",
-          description: "Cairo → Wadi El Natroun → Marsa Matruh → Siwa → Alexandria → Cairo",
-          duration: "Various",
-          price: 600,
-          rating: 4.9,
-          reviewCount: 88,
-          images: ["https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=600&q=60"],
-          linkBase: "/trips"
-        }
-      ];
-    }
-    return [];
-  }, [activePackage, multiCountryTours]);
+    return packagesToursMap[activePackage] || [];
+  }, [activePackage, packagesToursMap]);
 
   return (
     <div className="w-full">
@@ -1011,7 +1004,7 @@ const Home = () => {
       </section>
 
       {/* Destinations & Their Tours */}
-      <section className="py-10 bg-[#1d1da3]">
+      <section className="py-10" style={{ background: 'linear-gradient(135deg, rgb(4, 20, 70) 0%, rgb(6, 29, 93) 40%, rgb(10, 40, 120) 100%)' }}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-8">
             <span className="text-gold-500 uppercase tracking-widest text-caption block mb-4">
@@ -1458,8 +1451,10 @@ const Home = () => {
                 key={tab}
                 onClick={() => setVehicleFilter(tab)}
                 className={`px-6 py-2 rounded-full border transition-all duration-300 font-medium tracking-wide ${vehicleFilter === tab
-                  ? "bg-gold-500 text-obsidian-900 border-gold-500 shadow-[0_0_15px_rgba(245,166,35,0.4)]"
-                  : "bg-transparent text-obsidian-700 border-obsidian-900/20 hover:border-gold-500 hover:text-gold-500"
+                  ? tab === "all"
+                    ? "bg-obsidian-900/80 text-white border-gold-500"
+                    : "bg-gold-500 text-obsidian-900 border-gold-500 shadow-[0_0_15px_rgba(245,166,35,0.4)]"
+                  : "bg-obsidian-900/80 text-white border-obsidian-900/80"
                   }`}
               >
                 {tab === "all"
@@ -1507,7 +1502,7 @@ const Home = () => {
                       <h3 className="font-display text-xl text-ivory-50 mb-1 drop-shadow-md">
                         {vehicle.name}
                       </h3>
-                      <div className="flex items-center text-xs text-ivory-300 mb-3 gap-1">
+                      <div className="flex items-center text-xs text-white mb-3 gap-1">
                         <svg
                           className="w-4 h-4 text-gold-500"
                           fill="none"
@@ -1526,12 +1521,12 @@ const Home = () => {
                       </div>
 
                       <div className="flex items-center justify-between mb-4 border-t border-ivory-50/20 pt-3 mt-1">
-                        <span className="text-xs text-ivory-300 uppercase tracking-wider">
+                        <span className="text-xs text-white uppercase tracking-wider">
                           {t("tourCard.from", "From")}
                         </span>
                         <span className="text-lg font-semibold text-gold-500">
                           {formatPrice(vehicle.pricePerDay)}
-                          <span className="text-xs text-ivory-300 font-normal">
+                          <span className="text-xs text-white font-normal">
                             {" "}
                             / {t("transportation.day", "day")}
                           </span>
@@ -1540,7 +1535,7 @@ const Home = () => {
 
                       <button
                         onClick={() => handleHomeReserveClick(vehicle.id)}
-                        className="w-full py-2 text-sm font-semibold text-gold-500 hover:text-obsidian-900 hover:bg-gold-500 transition-colors border border-gold-500 rounded-lg flex items-center justify-center bg-obsidian-900/40 backdrop-blur-sm cursor-pointer outline-none"
+                        className="w-full py-2 text-sm font-semibold text-white transition-colors border border-gold-500 rounded-lg flex items-center justify-center bg-obsidian-900/40 backdrop-blur-sm cursor-pointer outline-none"
                       >
                         {t("transportation.reserveNow", "Reserve Now")}
                       </button>

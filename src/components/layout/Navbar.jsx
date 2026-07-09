@@ -196,6 +196,11 @@ const Navbar = () => {
                 )}
               </div>
 
+              {/* Currency */}
+              <div className="flex">
+                <CurrencySelector />
+              </div>
+
               {/* Lang */}
               <div className="relative">
                 <button
@@ -351,7 +356,6 @@ const Navbar = () => {
 
           {/* Currency Selector + Tailor a Tour (Desktop) */}
           <div className="hidden lg:flex items-center gap-3 z-50">
-            <CurrencySelector light />
             <Link
               to="/tailor-a-tour"
               className="group relative px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-500 shadow-lg hover:shadow-xl overflow-hidden"
@@ -524,14 +528,6 @@ const Navbar = () => {
                   >
                     {theme === 'dark' ? <FaSun className="text-amber-500" size={16} /> : <FaMoon className="text-indigo-600" size={16} />}
                   </button>
-                </div>
-
-                {/* Mobile Currency Selector */}
-                <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-obsidian-100 dark:border-obsidian-700">
-                  <span className="text-obsidian-400 dark:text-ivory-500 text-xs font-semibold tracking-wider uppercase">{t('nav.currency', 'Currency')}</span>
-                  <div className="flex">
-                    <CurrencySelector light />
-                  </div>
                 </div>
 
                   {user && (

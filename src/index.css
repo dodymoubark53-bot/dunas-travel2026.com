@@ -199,6 +199,13 @@ html {
   .dark .reviews-section button.bg-gradient-to-r {
     color: #1a1a2e !important;
   }
+  .dark .reviews-section .text-gold-500,
+  .dark .reviews-section .reviews-star {
+    color: #f5a623 !important;
+  }
+  .dark .reviews-section .review-text {
+    color: #f5a623 !important;
+  }
 
   .dark .text-obsidian-300 {
     color: #a8a4a0 !important;
@@ -548,8 +555,8 @@ a.bg-primary-500,
 a.bg-gold-500 {
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1) !important;
 }
-button:hover,
-.btn:hover,
+button:not(.currency-btn):hover,
+.btn:not(.currency-btn):hover,
 a.bg-primary-500:hover,
 a.bg-gold-500:hover {
   transform: scale(1.03);

@@ -26,9 +26,9 @@ const StarRating = ({ rating, onRate, readonly }) => (
         className={`${readonly ? 'cursor-default' : 'cursor-pointer hover:scale-110'} transition-transform`}
       >
         {star <= rating ? (
-          <FaStar className="w-5 h-5 text-gold-500" />
+          <FaStar className="w-5 h-5 text-gold-500 reviews-star" />
         ) : (
-          <FaRegStar className="w-5 h-5 text-gray-300 hover:text-gold-400" />
+          <FaRegStar className="w-5 h-5 text-gold-500 reviews-star" />
         )}
       </button>
     ))}
@@ -64,7 +64,7 @@ const ReviewsMap = () => {
             </h2>
             <div className="flex items-center justify-center gap-3 mb-2">
               <StarRating rating={Math.round(parseFloat(avgRating))} readonly />
-              <span className="text-display-sm text-gold-500 font-bold">{avgRating}</span>
+              <span className="text-display-sm text-gold-500 reviews-star font-bold">{avgRating}</span>
             </div>
             <p className="text-obsidian-500 text-body-md">
               {t('reviews.count', 'Based on {{count}} reviews', { count: reviews.length })}
@@ -89,7 +89,7 @@ const ReviewsMap = () => {
                   </div>
                   <StarRating rating={rev.rating} readonly />
                 </div>
-                <p className="text-obsidian-700 text-body-md leading-relaxed italic font-light">"{rev.textKey ? t(rev.textKey) : rev.text}"</p>
+                <p className="review-text text-obsidian-700 text-body-md leading-relaxed italic font-light">"{rev.textKey ? t(rev.textKey) : rev.text}"</p>
               </motion.div>
             ))}
           </div>
