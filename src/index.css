@@ -200,8 +200,11 @@ html {
     color: #1a1a2e !important;
   }
   .dark .reviews-section .text-gold-500,
-  .dark .reviews-section .reviews-star {
+  .dark .reviews-section .reviews-star,
+  .dark .reviews-section .reviews-star path,
+  .dark .reviews-section .reviews-star svg {
     color: #f5a623 !important;
+    fill: #f5a623 !important;
   }
   .dark .reviews-section .review-text {
     color: #f5a623 !important;
