@@ -17,7 +17,6 @@ import { transportation } from "../data/transportation";
 import useScrollAnimations from "../hooks/useScrollAnimations";
 import { useCurrency } from "../context/CurrencyContext";
 import rawProgramData from "../data/programs.json";
-import InteractiveJourneyMap from "../components/home/InteractiveJourneyMap";
 const rawPrograms = rawProgramData.programs;
 
 const destinationsData = [
@@ -1402,9 +1401,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Interactive Journey Map */}
-      <InteractiveJourneyMap />
 
       {/* Transportation & Transfers */}
       <section className="py-12 bg-ivory-50 relative overflow-hidden">
