@@ -137,28 +137,28 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-10 sm:h-11 text-white text-[11px] sm:text-xs font-semibold">
             {/* Left: Contact Info */}
             <div className="flex items-center gap-2 sm:gap-5 overflow-hidden">
-              <a href="mailto:info@dunas-travel.com" className="group flex items-center gap-1.5 hover:text-[#F5A623] transition-all duration-300 whitespace-nowrap">
+              <a href="mailto:info@dunas-travel.com" aria-label="Email us at info@dunas-travel.com" className="group flex items-center gap-1.5 hover:text-[#F5A623] transition-all duration-300 whitespace-nowrap">
                 <span className="w-6 h-6 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-[#F5A623]/25 group-hover:scale-110 transition-all duration-300">
                   <FaEnvelope size={10} className="text-[#F5A623]" />
                 </span>
                 <span className="hidden sm:inline font-semibold tracking-wide">info@dunas-travel.com</span>
               </a>
               <span className="w-px h-4 bg-gradient-to-b from-transparent via-white/30 to-transparent hidden sm:block" />
-              <a href="tel:+20233746643" className="group flex items-center gap-1.5 hover:text-[#F5A623] transition-all duration-300 whitespace-nowrap">
+              <a href="tel:+20233746643" aria-label="Call us at +20 2 3374 6643" className="group flex items-center gap-1.5 hover:text-[#F5A623] transition-all duration-300 whitespace-nowrap">
                 <span className="w-6 h-6 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-[#F5A623]/25 group-hover:scale-110 transition-all duration-300">
                   <FaPhone size={9} className="text-[#F5A623]" />
                 </span>
                 <span className="hidden sm:inline font-semibold tracking-wide">02 33746643</span>
               </a>
               <span className="w-px h-4 bg-gradient-to-b from-transparent via-white/30 to-transparent hidden sm:block" />
-              <a href="tel:+20233746654" className="group items-center gap-1.5 hover:text-[#F5A623] transition-all duration-300 whitespace-nowrap flex">
+              <a href="tel:+20233746654" aria-label="Call us at +20 2 3374 6654" className="group items-center gap-1.5 hover:text-[#F5A623] transition-all duration-300 whitespace-nowrap flex">
                 <span className="w-6 h-6 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-[#F5A623]/25 group-hover:scale-110 transition-all duration-300">
                   <FaPhone size={9} className="text-[#F5A623]" />
                 </span>
                 <span className="hidden sm:inline font-semibold tracking-wide">02 33746654</span>
               </a>
               <span className="w-px h-4 bg-gradient-to-b from-transparent via-white/30 to-transparent hidden sm:block" />
-              <a href="https://wa.me/201149401111" target="_blank" rel="noopener noreferrer" className="group items-center gap-1.5 hover:text-[#F5A623] transition-all duration-300 whitespace-nowrap flex">
+              <a href="https://wa.me/201149401111" aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener noreferrer" className="group items-center gap-1.5 hover:text-[#F5A623] transition-all duration-300 whitespace-nowrap flex">
                 <span className="w-6 h-6 rounded-full bg-[#25D366]/20 flex items-center justify-center group-hover:bg-[#25D366]/35 group-hover:scale-110 transition-all duration-300">
                   <FaWhatsapp size={10} className="text-[#25D366]" />
                 </span>

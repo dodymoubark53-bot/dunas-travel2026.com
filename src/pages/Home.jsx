@@ -765,7 +765,7 @@ const Home = () => {
           >
             <source src="/imgs/hero.webm" type="video/webm" />
             <source src="/imgs/hero.mp4" type="video/mp4" />
-            <track kind="captures" src="/hero-captions.vtt" srcLang="en" label="English" default />
+            <track kind="captions" src="/hero-captions.vtt" srcLang="en" label="English" default />
           </video>
           <div className="absolute inset-0 bg-obsidian-900/50 pointer-events-none"></div>
         </div>
@@ -2256,7 +2256,7 @@ const Home = () => {
                 </div>
                 <div className="space-y-2 flex-grow">
                   <span className="text-[10px] text-gold-400 font-bold uppercase tracking-widest block">01 / {t('contact.office', 'Address')}</span>
-                  <h4 className="text-lg font-bold text-ivory-50 tracking-wide font-display">{t('home.contactAddress', 'Our Location')}</h4>
+                  <h3 className="text-lg font-bold text-ivory-50 tracking-wide font-display">{t('home.contactAddress', 'Our Location')}</h3>
                   <p className="text-ivory-300 text-sm leading-relaxed font-body">
                     5 Hussein Said St, Old Hadayk El Ahram<br />
                     First floor, Flat 102 – 103<br />
@@ -2288,7 +2288,7 @@ const Home = () => {
                 </div>
                 <div className="space-y-2 flex-grow">
                   <span className="text-[10px] text-gold-400 font-bold uppercase tracking-widest block">02 / {t('contact.phoneLabel', 'Phone')}</span>
-                  <h4 className="text-lg font-bold text-ivory-50 tracking-wide font-display">{t('home.contactPhone', 'Call Us')}</h4>
+                  <h3 className="text-lg font-bold text-ivory-50 tracking-wide font-display">{t('home.contactPhone', 'Call Us')}</h3>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                     <a
@@ -2323,11 +2323,12 @@ const Home = () => {
                 </div>
                 <div className="space-y-2 flex-grow">
                   <span className="text-[10px] text-gold-400 font-bold uppercase tracking-widest block">03 / {t('contact.emailLabel', 'Email')}</span>
-                  <h4 className="text-lg font-bold text-ivory-50 tracking-wide font-display">{t('home.contactEmail', 'Email Us')}</h4>
+                  <h3 className="text-lg font-bold text-ivory-50 tracking-wide font-display">{t('home.contactEmail', 'Email Us')}</h3>
                   
                   <div className="pt-2">
                     <a
                       href="mailto:info@dunas-travel.com"
+                      aria-label="Send us an email at info@dunas-travel.com"
                       className="inline-flex items-center gap-2.5 text-ivory-300 hover:text-gold-400 text-sm font-medium transition-colors py-1.5 px-4 rounded-lg bg-white/5 border border-white/5 hover:border-gold-500/30 hover:bg-gold-500/5"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />

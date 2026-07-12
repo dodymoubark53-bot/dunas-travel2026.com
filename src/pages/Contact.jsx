@@ -63,10 +63,10 @@ const Contact = () => {
                   <div>
                     <h4 className="text-caption text-gold-500 uppercase tracking-widest mb-1">{t('contact.emailLabel', 'Email')}</h4>
                     <div className="flex flex-col gap-1 text-body-md text-ivory-300">
-                      <a href="mailto:info@dunas-travel.com" className="hover:text-gold-500 transition-colors">info@dunas-travel.com</a>
-                      <a href="mailto:attia@dunas-travel.com" className="hover:text-gold-500 transition-colors">attia@dunas-travel.com</a>
-                      <a href="mailto:Spain@dunas-travel.com" className="hover:text-gold-500 transition-colors">Spain@dunas-travel.com</a>
-                      <a href="mailto:booking@dunas-travel.com" className="hover:text-gold-500 transition-colors">booking@dunas-travel.com</a>
+                      <a href="mailto:info@dunas-travel.com" aria-label="Send us an email at info@dunas-travel.com" className="hover:text-gold-500 transition-colors">info@dunas-travel.com</a>
+                      <a href="mailto:attia@dunas-travel.com" aria-label="Send us an email at attia@dunas-travel.com" className="hover:text-gold-500 transition-colors">attia@dunas-travel.com</a>
+                      <a href="mailto:Spain@dunas-travel.com" aria-label="Send us an email at Spain@dunas-travel.com" className="hover:text-gold-500 transition-colors">Spain@dunas-travel.com</a>
+                      <a href="mailto:booking@dunas-travel.com" aria-label="Send us an email at booking@dunas-travel.com" className="hover:text-gold-500 transition-colors">booking@dunas-travel.com</a>
                     </div>
                   </div>
                 </div>
