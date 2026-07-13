@@ -4,11 +4,13 @@ import { useTranslation } from 'react-i18next';
 import { FaFacebook, FaInstagram, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import Logo from '../ui/Logo';
 import TiT0Chat from '../ui/TiT0Chat';
+import { useJaiderChat } from '../../context/JaiderChatContext';
 
 const Footer = () => {
   const { t, i18n } = useTranslation();
   const isRtl = i18n.dir() === 'rtl';
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const { isOpen, setIsOpen } = useJaiderChat();
 
   useEffect(() => {
     const handleScroll = () => setShowBackToTop(window.scrollY > 480);
@@ -69,20 +71,29 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-full sm:w-auto flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 mt-12 sm:mt-0 shrink-0">
-          <div className="relative flex flex-col items-center">
+          <div
+            onClick={() => setIsOpen(prev => !prev)}
+            className="relative flex flex-col items-center cursor-pointer transition-transform duration-300 hover:scale-105 active:scale-95 group"
+            title="Chat with Jaider"
+          >
             <img
               src="/imgs/tito-mascot.webp"
-              alt="TiT0"
+              alt="Jaider Mascot"
               width="150"
               height="150"
-              className="w-[120px] sm:w-[150px] animate-[float_3s_ease-in-out_infinite] drop-shadow-[0_10px_25px_rgba(0,0,0,0.45)]"
+              className="w-[120px] sm:w-[150px] animate-[float_3s_ease-in-out_infinite] drop-shadow-[0_10px_25px_rgba(0,0,0,0.45)] group-hover:drop-shadow-[0_12px_30px_rgba(245,166,35,0.4)]"
             />
-            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3.5 z-10">
-              <TiT0Chat />
-            </div>
+            {!isOpen && (
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3.5 z-10 pointer-events-none">
+                <TiT0Chat />
+              </div>
+            )}
           </div>
-          <div className={`flex flex-col items-center sm:items-start text-center ${isRtl ? 'sm:text-right' : 'sm:text-left'} gap-1 pt-2 sm:pt-8`}>
-            <p className="text-white text-base sm:text-lg font-bold max-w-[280px] leading-tight">
+          <div
+            onClick={() => setIsOpen(prev => !prev)}
+            className={`flex flex-col items-center sm:items-start text-center ${isRtl ? 'sm:text-right' : 'sm:text-left'} gap-1 pt-2 sm:pt-8 cursor-pointer group`}
+          >
+            <p className="text-white text-base sm:text-lg font-bold max-w-[280px] leading-tight group-hover:text-gold-400 transition-colors">
               {t('footer.titoTagline', 'Descubre la magia de Egipto y sus monumentos históricos de la mano de los Expertos')}
             </p>
           </div>

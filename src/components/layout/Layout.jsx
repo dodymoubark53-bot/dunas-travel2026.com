@@ -4,20 +4,25 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import FloatingContact from './FloatingContact';
 import BackgroundMusic from '../ui/BackgroundMusic';
+import { JaiderChatProvider } from '../../context/JaiderChatContext';
+import JaiderChatWindow from '../ui/JaiderChatWindow';
 
 const Layout = () => {
   const { t } = useTranslation();
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-      <main className="flex-grow">
-        <Outlet />
-      </main>
+    <JaiderChatProvider>
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow">
+          <Outlet />
+        </main>
 
-      <Footer />
-      <FloatingContact />
-      <BackgroundMusic />
-    </div>
+        <Footer />
+        <FloatingContact />
+        <BackgroundMusic />
+        <JaiderChatWindow />
+      </div>
+    </JaiderChatProvider>
   );
 };
 
