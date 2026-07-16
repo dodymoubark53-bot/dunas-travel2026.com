@@ -212,6 +212,8 @@ className={`
                   src="/imgs/tito-mascot.webp"
                   alt="Jaider"
                   className="w-9 h-9 sm:w-10 sm:h-10 object-contain bg-white/10 rounded-full p-0.5 border border-gold-500/30"
+                  width="40"
+                  height="40"
                 />
                 <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-500 border-2 border-[#061d5d] flex items-center justify-center">
                   <span className="absolute w-full h-full rounded-full bg-emerald-400 animate-ping opacity-75" />
@@ -274,6 +276,8 @@ className={`
                       src="/imgs/tito-mascot.webp"
                       alt="Jaider"
                       className="w-6 h-6 sm:w-7 sm:h-7 object-contain bg-white/20 rounded-full p-0.5 border border-gold-500/20 shrink-0 self-end mb-1"
+                      width="28"
+                      height="28"
                     />
                   )}
                   <div className="flex flex-col">
@@ -344,6 +348,8 @@ className={`
                 src="/imgs/tito-mascot.webp"
                 alt="Jaider"
                 className="w-6 h-6 sm:w-7 sm:h-7 object-contain bg-white/20 rounded-full p-0.5 border border-gold-500/20 shrink-0 self-end mb-1"
+                width="28"
+                height="28"
               />
               <div className="px-4 py-3 rounded-2xl bg-white dark:bg-obsidian-900 border border-black/[0.04] dark:border-white/5 rounded-bl-sm flex gap-1.5 items-center">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#1e3a8a] dark:bg-gold-500 animate-bounce" style={{ animationDelay: '0ms' }} />
