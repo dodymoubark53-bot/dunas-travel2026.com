@@ -32,3 +32,6 @@ dist-ssr
 .env.test
 .env*.local
 *.env
+
+# server configuration
+server.cjs
