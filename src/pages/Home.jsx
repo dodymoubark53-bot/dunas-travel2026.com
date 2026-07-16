@@ -22,50 +22,50 @@ const rawPrograms = rawProgramData.programs;
 const destinationsData = [
   {
     id: "egypt",
-    name: "Egypt",
-    desc: "Pharaohs & Wonders",
+    nameKey: "nav.egypt",
+    descKey: "home.destEgyptDesc",
     image: "https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=600&q=60",
   },
   {
     id: "turkey",
-    name: "Turkey",
-    desc: "East Meets West",
+    nameKey: "nav.turkey",
+    descKey: "home.destTurkeyDesc",
     image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=600&q=60",
   },
   {
     id: "dubai",
-    name: "Dubai",
-    desc: "Luxury & Skylines",
+    nameKey: "nav.dubai",
+    descKey: "home.destDubaiDesc",
     image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=60",
   },
   {
     id: "jordan",
-    name: "Jordan",
-    desc: "Desert & Ancient Ruins",
+    nameKey: "nav.jordan",
+    descKey: "home.destJordanDesc",
     image: "https://images.unsplash.com/photo-1579606032821-4e6161c81bd3?auto=format&fit=crop&w=600&q=60",
   },
   {
     id: "morocco",
-    name: "Morocco",
-    desc: "Colors & Culture",
+    nameKey: "nav.morocco",
+    descKey: "home.destMoroccoDesc",
     image: "https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=600&q=60",
   },
   {
     id: "greece",
-    name: "Greece",
-    desc: "Myths & Islands",
+    nameKey: "nav.greece",
+    descKey: "home.destGreeceDesc",
     image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=600&q=60",
   },
   {
     id: "tunisia",
-    name: "Tunisia",
-    desc: "Sahara & Sea",
+    nameKey: "nav.tunisia",
+    descKey: "home.destTunisiaDesc",
     image: "https://images.unsplash.com/photo-1580502304784-8985b7eb7260?auto=format&fit=crop&w=600&q=60",
   },
   {
     id: "holy-land",
-    name: "Holy Land",
-    desc: "Faith & History",
+    nameKey: "nav.holyland",
+    descKey: "home.destHolyLandDesc",
     image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=600&q=60",
   },
 ];
@@ -765,7 +765,6 @@ const Home = () => {
           >
             <source src="/imgs/hero.webm" type="video/webm" />
             <source src="/imgs/hero.mp4" type="video/mp4" />
-            <track kind="captions" src="/hero-captions.vtt" srcLang="en" label="English" default />
           </video>
           <div className="absolute inset-0 bg-obsidian-900/50 pointer-events-none"></div>
         </div>
@@ -932,15 +931,15 @@ const Home = () => {
               className="w-full lg:w-1/2"
             >
               <span className="text-gold-500 uppercase tracking-widest text-caption block mb-4">
-                {t("home.whoWeAre", "WHO WE ARE")}
+                {t("home.whoWeAre", "QUIÉNES SOMOS")}
               </span>
               <h2 className="text-display-lg text-obsidian-900 mb-6">
-                {t("home.aboutTitle", "Crafting Journeys, Creating Memories")}
+                {t("home.aboutTitle", "Experiencias exclusivas, diseñadas a medida")}
               </h2>
               <p className="text-body-lg text-obsidian-700 mb-8 leading-relaxed">
                 {t(
                   "home.aboutDesc",
-                  "Dunas Travel is a premium luxury travel agency specializing in Egypt, Jordan, Turkey, Tunisia, Greece, the Holy Land, Morocco, and Dubai. Our passion is crafting highly curated tours, exclusive safaris, boutique cruises, and hand-picked hotel experiences for discerning travelers who seek the extraordinary. Let us transform your travel dreams into timeless memories.",
+                  "En Dunas Travel diseñamos experiencias exclusivas por los destinos más fascinantes de Oriente Medio y el Mediterráneo. Con un profundo conocimiento de cada destino y una cuidada selección de hoteles, cruceros boutique y experiencias privadas, creamos itinerarios a medida donde la excelencia, la autenticidad y la atención personalizada convierten cada viaje en una experiencia verdaderamente inolvidable."
                 )}
               </p>
               <Link to="/about">
@@ -1042,7 +1041,7 @@ const Home = () => {
                   role="button"
                   tabIndex={0}
                   aria-pressed={isActive}
-                  aria-label={`${t("home.select", "Select")} ${dest.name} ${t("nav.tours", "Tours")}`}
+                  aria-label={`${t("home.select", "Select")} ${t(dest.nameKey, dest.nameKey)} ${t("nav.tours", "Tours")}`}
                   whileHover={{
                     y: -6,
                     boxShadow: "0 0 32px rgba(245,166,35,0.22)",
@@ -1052,7 +1051,7 @@ const Home = () => {
                 >
                   <img
                     src={dest.image}
-                    alt={dest.name}
+                    alt={t(dest.nameKey, dest.nameKey)}
                     className="w-full h-full object-cover cinematic-transition group-hover:scale-[1.06]"
                     loading="lazy"
                   />
@@ -1061,9 +1060,9 @@ const Home = () => {
                   ></div>
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
                     <h3 className="text-display-lg text-ivory-50 mb-2">
-                      {t(`nav.${dest.id === 'holy-land' ? 'holyland' : dest.id}`, dest.name)}
+                      {t(dest.nameKey, dest.nameKey)}
                     </h3>
-                    <p className="text-body-lg text-gold-500 font-medium mb-4 leading-relaxed" dangerouslySetInnerHTML={{ __html: t(`dest.${dest.id === 'holy-land' ? 'holyland' : dest.id}.subtitle`, t(`data.${dest.desc}`, dest.desc)) }} />
+                    <p className="text-body-lg text-gold-500 font-medium mb-4 leading-relaxed" dangerouslySetInnerHTML={{ __html: t(dest.descKey, dest.descKey) }} />
                     <span className="text-caption text-ivory-300 uppercase tracking-wider bg-obsidian-900/50 backdrop-blur-sm px-4 py-2 rounded-full border border-ivory-50/10">
                       {tourCount} {t("home.toursAvailable")}
                     </span>
