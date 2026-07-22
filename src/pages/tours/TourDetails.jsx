@@ -417,7 +417,7 @@ const TourDetails = () => {
         </div>
       </section>
 
-      <ReviewsMap />
+      <ReviewsMap tourId={tour.slug} />
 
       {/* Related Tours */}
       <section className="container mx-auto px-6 py-24">

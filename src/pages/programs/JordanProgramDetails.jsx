@@ -232,7 +232,7 @@ const JordanProgramDetails = () => {
         </div>
       </section>
 
-      <ReviewsMap />
+      <ReviewsMap tourId={programId} />
 
       {/* Related Tours */}
       <section className="container mx-auto px-6 py-24">

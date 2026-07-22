@@ -40,6 +40,8 @@ const DubaiProgramDetails = lazy(() => import("./pages/programs/DubaiProgramDeta
 const MoroccoProgramDetails = lazy(() => import("./pages/programs/MoroccoProgramDetails"));
 const Honeymooners = lazy(() => import("./pages/Honeymooners"));
 const HoneymoonersDetails = lazy(() => import("./pages/HoneymoonersDetails"));
+const MediaGallery = lazy(() => import("./pages/MediaGallery"));
+
 
 const PageTransition = ({ children }) => (
   <motion.div
@@ -140,6 +142,14 @@ function App() {
                   element={
                     <PageTransition>
                       <Home />
+                    </PageTransition>
+                  }
+                />
+                <Route
+                  path="media-gallery"
+                  element={
+                    <PageTransition>
+                      <MediaGallery />
                     </PageTransition>
                   }
                 />
